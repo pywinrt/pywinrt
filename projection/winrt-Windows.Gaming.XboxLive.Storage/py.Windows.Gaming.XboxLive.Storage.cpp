@@ -2140,6 +2140,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_xboxlive_storage(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2153,61 +2159,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_xboxlive_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GameSaveBlobGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobGetResult, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveBlobGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobGetResult, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveBlobGetResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameSaveBlobInfo_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfo, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveBlobInfo_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfo, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveBlobInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameSaveBlobInfoGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfoGetResult, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveBlobInfoGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfoGetResult, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveBlobInfoGetResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameSaveBlobInfoQuery_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfoQuery, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveBlobInfoQuery_type{py::register_python_type(module.get(), &type_spec_GameSaveBlobInfoQuery, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveBlobInfoQuery_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameSaveContainer_type{py::register_python_type(module.get(), &type_spec_GameSaveContainer, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveContainer_type{py::register_python_type(module.get(), &type_spec_GameSaveContainer, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveContainer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameSaveContainerInfo_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfo, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveContainerInfo_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfo, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveContainerInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameSaveContainerInfoGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfoGetResult, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveContainerInfoGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfoGetResult, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveContainerInfoGetResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameSaveContainerInfoQuery_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfoQuery, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveContainerInfoQuery_type{py::register_python_type(module.get(), &type_spec_GameSaveContainerInfoQuery, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveContainerInfoQuery_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameSaveOperationResult_type{py::register_python_type(module.get(), &type_spec_GameSaveOperationResult, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveOperationResult_type{py::register_python_type(module.get(), &type_spec_GameSaveOperationResult, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveOperationResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GameSaveProvider_Static{PyType_FromSpec(&type_spec_GameSaveProvider_Static)};
+    py::pyobj_handle GameSaveProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GameSaveProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GameSaveProvider_Static{PyType_FromSpecWithBases(&type_spec_GameSaveProvider_Static, GameSaveProvider_Static_bases.get())};
     if (!type_GameSaveProvider_Static)
     {
         return nullptr;
@@ -2219,7 +2231,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_xboxlive_storage(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GameSaveProviderGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveProviderGetResult, object_bases.get(), nullptr)};
+    py::pytype_handle GameSaveProviderGetResult_type{py::register_python_type(module.get(), &type_spec_GameSaveProviderGetResult, object_bases.get(), inspectable_meta_type)};
     if (!GameSaveProviderGetResult_type)
     {
         return nullptr;

@@ -13,7 +13,7 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 @typing.final
-class BackgroundEnergyDiagnostics_Static(type):
+class BackgroundEnergyDiagnostics_Static(winrt._winrt.IInspectable_Static):
     # System.UInt64 Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics::ComputeTotalEnergyUsage()
     # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...
@@ -29,7 +29,7 @@ class BackgroundEnergyDiagnostics(winrt.system.Object, metaclass=BackgroundEnerg
     pass
 
 @typing.final
-class ForegroundEnergyDiagnostics_Static(type):
+class ForegroundEnergyDiagnostics_Static(winrt._winrt.IInspectable_Static):
     # System.UInt64 Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics::ComputeTotalEnergyUsage()
     # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...

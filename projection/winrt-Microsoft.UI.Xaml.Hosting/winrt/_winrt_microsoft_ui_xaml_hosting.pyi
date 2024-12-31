@@ -21,7 +21,7 @@ from winrt.microsoft.ui.xaml.hosting import XamlSourceFocusNavigationReason
 
 Self = typing.TypeVar('Self')
 
-class DesktopWindowXamlSource_Static(type):
+class DesktopWindowXamlSource_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class DesktopWindowXamlSource(winrt.system.Object, windows_foundation.IClosable, metaclass=DesktopWindowXamlSource_Static):
@@ -91,7 +91,7 @@ class DesktopWindowXamlSourceTakeFocusRequestedEventArgs(winrt.system.Object):
     def request(self) -> XamlSourceFocusNavigationRequest: ...
 
 @typing.final
-class ElementCompositionPreview_Static(type):
+class ElementCompositionPreview_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Composition.Visual Microsoft.UI.Xaml.Hosting.ElementCompositionPreview::GetElementChildVisual(Microsoft.UI.Xaml.UIElement)
     def get_element_child_visual(cls, element: microsoft_ui_xaml.UIElement, /) -> microsoft_ui_composition.Visual: ...
     # Microsoft.UI.Composition.Visual Microsoft.UI.Xaml.Hosting.ElementCompositionPreview::GetElementVisual(Microsoft.UI.Xaml.UIElement)
@@ -114,7 +114,7 @@ class ElementCompositionPreview(winrt.system.Object, metaclass=ElementCompositio
     pass
 
 @typing.final
-class WindowsXamlManager_Static(type):
+class WindowsXamlManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Hosting.WindowsXamlManager Microsoft.UI.Xaml.Hosting.WindowsXamlManager::GetForCurrentThread()
     def get_for_current_thread(cls) -> WindowsXamlManager: ...
     # Microsoft.UI.Xaml.Hosting.WindowsXamlManager Microsoft.UI.Xaml.Hosting.WindowsXamlManager::InitializeForCurrentThread()

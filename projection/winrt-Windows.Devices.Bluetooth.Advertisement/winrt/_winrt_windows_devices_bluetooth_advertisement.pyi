@@ -92,7 +92,7 @@ class BluetoothLEAdvertisementDataSection(winrt.system.Object):
     def data(self, value: windows_storage_streams.IBuffer) -> None: ...
 
 @typing.final
-class BluetoothLEAdvertisementDataTypes_Static(type):
+class BluetoothLEAdvertisementDataTypes_Static(winrt._winrt.IInspectable_Static):
     # System.Byte Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes::get_AdvertisingInterval()
     @_property
     def advertising_interval(cls) -> winrt.system.UInt8: ...

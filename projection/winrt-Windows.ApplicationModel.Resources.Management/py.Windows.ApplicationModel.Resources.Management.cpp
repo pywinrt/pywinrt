@@ -611,6 +611,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_management(void)
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -624,19 +630,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_management(void)
         return nullptr;
     }
 
-    py::pytype_handle IndexedResourceCandidate_type{py::register_python_type(module.get(), &type_spec_IndexedResourceCandidate, object_bases.get(), nullptr)};
+    py::pytype_handle IndexedResourceCandidate_type{py::register_python_type(module.get(), &type_spec_IndexedResourceCandidate, object_bases.get(), inspectable_meta_type)};
     if (!IndexedResourceCandidate_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IndexedResourceQualifier_type{py::register_python_type(module.get(), &type_spec_IndexedResourceQualifier, object_bases.get(), nullptr)};
+    py::pytype_handle IndexedResourceQualifier_type{py::register_python_type(module.get(), &type_spec_IndexedResourceQualifier, object_bases.get(), inspectable_meta_type)};
     if (!IndexedResourceQualifier_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ResourceIndexer_type{py::register_python_type(module.get(), &type_spec_ResourceIndexer, object_bases.get(), nullptr)};
+    py::pytype_handle ResourceIndexer_type{py::register_python_type(module.get(), &type_spec_ResourceIndexer, object_bases.get(), inspectable_meta_type)};
     if (!ResourceIndexer_type)
     {
         return nullptr;

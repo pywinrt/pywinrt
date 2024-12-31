@@ -3118,6 +3118,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3173,7 +3179,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Ellipse_type{py::register_python_type(module.get(), &type_spec_Ellipse, Ellipse_bases.get(), nullptr)};
+    py::pytype_handle Ellipse_type{py::register_python_type(module.get(), &type_spec_Ellipse, Ellipse_bases.get(), inspectable_meta_type)};
     if (!Ellipse_type)
     {
         return nullptr;

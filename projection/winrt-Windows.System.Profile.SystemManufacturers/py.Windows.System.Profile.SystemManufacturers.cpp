@@ -694,6 +694,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -707,13 +713,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    py::pytype_handle OemSupportInfo_type{py::register_python_type(module.get(), &type_spec_OemSupportInfo, object_bases.get(), nullptr)};
+    py::pytype_handle OemSupportInfo_type{py::register_python_type(module.get(), &type_spec_OemSupportInfo, object_bases.get(), inspectable_meta_type)};
     if (!OemSupportInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SmbiosInformation_Static{PyType_FromSpec(&type_spec_SmbiosInformation_Static)};
+    py::pyobj_handle SmbiosInformation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmbiosInformation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmbiosInformation_Static{PyType_FromSpecWithBases(&type_spec_SmbiosInformation_Static, SmbiosInformation_Static_bases.get())};
     if (!type_SmbiosInformation_Static)
     {
         return nullptr;
@@ -725,13 +737,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
         return nullptr;
     }
 
-    py::pytype_handle SystemSupportDeviceInfo_type{py::register_python_type(module.get(), &type_spec_SystemSupportDeviceInfo, object_bases.get(), nullptr)};
+    py::pytype_handle SystemSupportDeviceInfo_type{py::register_python_type(module.get(), &type_spec_SystemSupportDeviceInfo, object_bases.get(), inspectable_meta_type)};
     if (!SystemSupportDeviceInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemSupportInfo_Static{PyType_FromSpec(&type_spec_SystemSupportInfo_Static)};
+    py::pyobj_handle SystemSupportInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SystemSupportInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemSupportInfo_Static{PyType_FromSpecWithBases(&type_spec_SystemSupportInfo_Static, SystemSupportInfo_Static_bases.get())};
     if (!type_SystemSupportInfo_Static)
     {
         return nullptr;

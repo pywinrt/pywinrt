@@ -7952,6 +7952,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -7965,19 +7971,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AccessibilitySettings_type{py::register_python_type(module.get(), &type_spec_AccessibilitySettings, object_bases.get(), nullptr)};
+    py::pytype_handle AccessibilitySettings_type{py::register_python_type(module.get(), &type_spec_AccessibilitySettings, object_bases.get(), inspectable_meta_type)};
     if (!AccessibilitySettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ActivationViewSwitcher_type{py::register_python_type(module.get(), &type_spec_ActivationViewSwitcher, object_bases.get(), nullptr)};
+    py::pytype_handle ActivationViewSwitcher_type{py::register_python_type(module.get(), &type_spec_ActivationViewSwitcher, object_bases.get(), inspectable_meta_type)};
     if (!ActivationViewSwitcher_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ApplicationView_Static{PyType_FromSpec(&type_spec_ApplicationView_Static)};
+    py::pyobj_handle ApplicationView_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ApplicationView_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ApplicationView_Static{PyType_FromSpecWithBases(&type_spec_ApplicationView_Static, ApplicationView_Static_bases.get())};
     if (!type_ApplicationView_Static)
     {
         return nullptr;
@@ -7989,13 +8001,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ApplicationViewConsolidatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ApplicationViewConsolidatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ApplicationViewConsolidatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ApplicationViewConsolidatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ApplicationViewConsolidatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ApplicationViewScaling_Static{PyType_FromSpec(&type_spec_ApplicationViewScaling_Static)};
+    py::pyobj_handle ApplicationViewScaling_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ApplicationViewScaling_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ApplicationViewScaling_Static{PyType_FromSpecWithBases(&type_spec_ApplicationViewScaling_Static, ApplicationViewScaling_Static_bases.get())};
     if (!type_ApplicationViewScaling_Static)
     {
         return nullptr;
@@ -8007,7 +8025,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ApplicationViewSwitcher_Static{PyType_FromSpec(&type_spec_ApplicationViewSwitcher_Static)};
+    py::pyobj_handle ApplicationViewSwitcher_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ApplicationViewSwitcher_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ApplicationViewSwitcher_Static{PyType_FromSpecWithBases(&type_spec_ApplicationViewSwitcher_Static, ApplicationViewSwitcher_Static_bases.get())};
     if (!type_ApplicationViewSwitcher_Static)
     {
         return nullptr;
@@ -8019,13 +8043,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ApplicationViewTitleBar_type{py::register_python_type(module.get(), &type_spec_ApplicationViewTitleBar, object_bases.get(), nullptr)};
+    py::pytype_handle ApplicationViewTitleBar_type{py::register_python_type(module.get(), &type_spec_ApplicationViewTitleBar, object_bases.get(), inspectable_meta_type)};
     if (!ApplicationViewTitleBar_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ApplicationViewTransferContext_Static{PyType_FromSpec(&type_spec_ApplicationViewTransferContext_Static)};
+    py::pyobj_handle ApplicationViewTransferContext_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ApplicationViewTransferContext_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ApplicationViewTransferContext_Static{PyType_FromSpecWithBases(&type_spec_ApplicationViewTransferContext_Static, ApplicationViewTransferContext_Static_bases.get())};
     if (!type_ApplicationViewTransferContext_Static)
     {
         return nullptr;
@@ -8037,7 +8067,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_InputPane_Static{PyType_FromSpec(&type_spec_InputPane_Static)};
+    py::pyobj_handle InputPane_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!InputPane_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputPane_Static{PyType_FromSpecWithBases(&type_spec_InputPane_Static, InputPane_Static_bases.get())};
     if (!type_InputPane_Static)
     {
         return nullptr;
@@ -8049,13 +8085,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InputPaneVisibilityEventArgs_type{py::register_python_type(module.get(), &type_spec_InputPaneVisibilityEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InputPaneVisibilityEventArgs_type{py::register_python_type(module.get(), &type_spec_InputPaneVisibilityEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!InputPaneVisibilityEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ProjectionManager_Static{PyType_FromSpec(&type_spec_ProjectionManager_Static)};
+    py::pyobj_handle ProjectionManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ProjectionManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ProjectionManager_Static{PyType_FromSpecWithBases(&type_spec_ProjectionManager_Static, ProjectionManager_Static_bases.get())};
     if (!type_ProjectionManager_Static)
     {
         return nullptr;
@@ -8067,7 +8109,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StatusBar_Static{PyType_FromSpec(&type_spec_StatusBar_Static)};
+    py::pyobj_handle StatusBar_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StatusBar_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StatusBar_Static{PyType_FromSpecWithBases(&type_spec_StatusBar_Static, StatusBar_Static_bases.get())};
     if (!type_StatusBar_Static)
     {
         return nullptr;
@@ -8079,37 +8127,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StatusBarProgressIndicator_type{py::register_python_type(module.get(), &type_spec_StatusBarProgressIndicator, object_bases.get(), nullptr)};
+    py::pytype_handle StatusBarProgressIndicator_type{py::register_python_type(module.get(), &type_spec_StatusBarProgressIndicator, object_bases.get(), inspectable_meta_type)};
     if (!StatusBarProgressIndicator_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UISettings_type{py::register_python_type(module.get(), &type_spec_UISettings, object_bases.get(), nullptr)};
+    py::pytype_handle UISettings_type{py::register_python_type(module.get(), &type_spec_UISettings, object_bases.get(), inspectable_meta_type)};
     if (!UISettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UISettingsAnimationsEnabledChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsAnimationsEnabledChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UISettingsAnimationsEnabledChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsAnimationsEnabledChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UISettingsAnimationsEnabledChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UISettingsAutoHideScrollBarsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsAutoHideScrollBarsChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UISettingsAutoHideScrollBarsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsAutoHideScrollBarsChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UISettingsAutoHideScrollBarsChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UISettingsMessageDurationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsMessageDurationChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UISettingsMessageDurationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsMessageDurationChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UISettingsMessageDurationChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UIViewSettings_Static{PyType_FromSpec(&type_spec_UIViewSettings_Static)};
+    py::pyobj_handle UIViewSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UIViewSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UIViewSettings_Static{PyType_FromSpecWithBases(&type_spec_UIViewSettings_Static, UIViewSettings_Static_bases.get())};
     if (!type_UIViewSettings_Static)
     {
         return nullptr;
@@ -8121,7 +8175,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ViewModePreferences_Static{PyType_FromSpec(&type_spec_ViewModePreferences_Static)};
+    py::pyobj_handle ViewModePreferences_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ViewModePreferences_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ViewModePreferences_Static{PyType_FromSpecWithBases(&type_spec_ViewModePreferences_Static, ViewModePreferences_Static_bases.get())};
     if (!type_ViewModePreferences_Static)
     {
         return nullptr;

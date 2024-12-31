@@ -12812,6 +12812,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -12825,7 +12831,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ApplicationLanguages_Static{PyType_FromSpec(&type_spec_ApplicationLanguages_Static)};
+    py::pyobj_handle ApplicationLanguages_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ApplicationLanguages_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ApplicationLanguages_Static{PyType_FromSpecWithBases(&type_spec_ApplicationLanguages_Static, ApplicationLanguages_Static_bases.get())};
     if (!type_ApplicationLanguages_Static)
     {
         return nullptr;
@@ -12837,13 +12849,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Calendar_type{py::register_python_type(module.get(), &type_spec_Calendar, object_bases.get(), nullptr)};
+    py::pytype_handle Calendar_type{py::register_python_type(module.get(), &type_spec_Calendar, object_bases.get(), inspectable_meta_type)};
     if (!Calendar_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CalendarIdentifiers_Static{PyType_FromSpec(&type_spec_CalendarIdentifiers_Static)};
+    py::pyobj_handle CalendarIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CalendarIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CalendarIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_CalendarIdentifiers_Static, CalendarIdentifiers_Static_bases.get())};
     if (!type_CalendarIdentifiers_Static)
     {
         return nullptr;
@@ -12855,7 +12873,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ClockIdentifiers_Static{PyType_FromSpec(&type_spec_ClockIdentifiers_Static)};
+    py::pyobj_handle ClockIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ClockIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ClockIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_ClockIdentifiers_Static, ClockIdentifiers_Static_bases.get())};
     if (!type_ClockIdentifiers_Static)
     {
         return nullptr;
@@ -12867,13 +12891,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CurrencyAmount_type{py::register_python_type(module.get(), &type_spec_CurrencyAmount, object_bases.get(), nullptr)};
+    py::pytype_handle CurrencyAmount_type{py::register_python_type(module.get(), &type_spec_CurrencyAmount, object_bases.get(), inspectable_meta_type)};
     if (!CurrencyAmount_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CurrencyIdentifiers_Static{PyType_FromSpec(&type_spec_CurrencyIdentifiers_Static)};
+    py::pyobj_handle CurrencyIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CurrencyIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CurrencyIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_CurrencyIdentifiers_Static, CurrencyIdentifiers_Static_bases.get())};
     if (!type_CurrencyIdentifiers_Static)
     {
         return nullptr;
@@ -12885,7 +12915,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GeographicRegion_Static{PyType_FromSpec(&type_spec_GeographicRegion_Static)};
+    py::pyobj_handle GeographicRegion_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GeographicRegion_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GeographicRegion_Static{PyType_FromSpecWithBases(&type_spec_GeographicRegion_Static, GeographicRegion_Static_bases.get())};
     if (!type_GeographicRegion_Static)
     {
         return nullptr;
@@ -12897,13 +12933,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle JapanesePhoneme_type{py::register_python_type(module.get(), &type_spec_JapanesePhoneme, object_bases.get(), nullptr)};
+    py::pytype_handle JapanesePhoneme_type{py::register_python_type(module.get(), &type_spec_JapanesePhoneme, object_bases.get(), inspectable_meta_type)};
     if (!JapanesePhoneme_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_JapanesePhoneticAnalyzer_Static{PyType_FromSpec(&type_spec_JapanesePhoneticAnalyzer_Static)};
+    py::pyobj_handle JapanesePhoneticAnalyzer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!JapanesePhoneticAnalyzer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_JapanesePhoneticAnalyzer_Static{PyType_FromSpecWithBases(&type_spec_JapanesePhoneticAnalyzer_Static, JapanesePhoneticAnalyzer_Static_bases.get())};
     if (!type_JapanesePhoneticAnalyzer_Static)
     {
         return nullptr;
@@ -12915,7 +12957,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Language_Static{PyType_FromSpec(&type_spec_Language_Static)};
+    py::pyobj_handle Language_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Language_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Language_Static{PyType_FromSpecWithBases(&type_spec_Language_Static, Language_Static_bases.get())};
     if (!type_Language_Static)
     {
         return nullptr;
@@ -12927,7 +12975,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_NumeralSystemIdentifiers_Static{PyType_FromSpec(&type_spec_NumeralSystemIdentifiers_Static)};
+    py::pyobj_handle NumeralSystemIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!NumeralSystemIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NumeralSystemIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_NumeralSystemIdentifiers_Static, NumeralSystemIdentifiers_Static_bases.get())};
     if (!type_NumeralSystemIdentifiers_Static)
     {
         return nullptr;

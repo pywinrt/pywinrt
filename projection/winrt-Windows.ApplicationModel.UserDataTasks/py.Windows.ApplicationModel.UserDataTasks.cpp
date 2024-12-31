@@ -4343,6 +4343,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks(void) noexce
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4356,37 +4362,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle UserDataTask_type{py::register_python_type(module.get(), &type_spec_UserDataTask, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTask_type{py::register_python_type(module.get(), &type_spec_UserDataTask, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTask_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskBatch_type{py::register_python_type(module.get(), &type_spec_UserDataTaskBatch, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskBatch_type{py::register_python_type(module.get(), &type_spec_UserDataTaskBatch, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskBatch_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskList_type{py::register_python_type(module.get(), &type_spec_UserDataTaskList, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskList_type{py::register_python_type(module.get(), &type_spec_UserDataTaskList, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskList_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListLimitedWriteOperations_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListLimitedWriteOperations, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListLimitedWriteOperations_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListLimitedWriteOperations, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListLimitedWriteOperations_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListSyncManager_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManager, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListSyncManager_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManager, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListSyncManager_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UserDataTaskManager_Static{PyType_FromSpec(&type_spec_UserDataTaskManager_Static)};
+    py::pyobj_handle UserDataTaskManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserDataTaskManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserDataTaskManager_Static{PyType_FromSpecWithBases(&type_spec_UserDataTaskManager_Static, UserDataTaskManager_Static_bases.get())};
     if (!type_UserDataTaskManager_Static)
     {
         return nullptr;
@@ -4398,31 +4410,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskQueryOptions_type{py::register_python_type(module.get(), &type_spec_UserDataTaskQueryOptions, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskQueryOptions_type{py::register_python_type(module.get(), &type_spec_UserDataTaskQueryOptions, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskQueryOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskReader_type{py::register_python_type(module.get(), &type_spec_UserDataTaskReader, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskReader_type{py::register_python_type(module.get(), &type_spec_UserDataTaskReader, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskRecurrenceProperties_type{py::register_python_type(module.get(), &type_spec_UserDataTaskRecurrenceProperties, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskRecurrenceProperties_type{py::register_python_type(module.get(), &type_spec_UserDataTaskRecurrenceProperties, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskRecurrenceProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskRegenerationProperties_type{py::register_python_type(module.get(), &type_spec_UserDataTaskRegenerationProperties, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskRegenerationProperties_type{py::register_python_type(module.get(), &type_spec_UserDataTaskRegenerationProperties, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskRegenerationProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskStore_type{py::register_python_type(module.get(), &type_spec_UserDataTaskStore, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskStore_type{py::register_python_type(module.get(), &type_spec_UserDataTaskStore, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskStore_type)
     {
         return nullptr;

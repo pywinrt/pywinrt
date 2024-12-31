@@ -20,7 +20,7 @@ from winrt.windows.media.streaming.adaptive import AdaptiveMediaSourceCreationSt
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AdaptiveMediaSource_Static(type):
+class AdaptiveMediaSource_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Uri,System.String)
     def create_from_stream_async(cls, stream: windows_storage_streams.IInputStream, uri: windows_foundation.Uri, content_type: str, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Uri,System.String,Windows.Web.Http.HttpClient)

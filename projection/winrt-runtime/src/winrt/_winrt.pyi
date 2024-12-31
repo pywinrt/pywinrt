@@ -75,7 +75,10 @@ _TObject = TypeVar("_TObject", bound=IInspectable)
 
 # these classes don't actually exist but are just used to simplify type checking
 
-class IInspectable:
+class IInspectable_Static(type):
+    def __instancecheck__(self, instance: Any) -> bool: ...
+
+class IInspectable(metaclass=IInspectable_Static):
     @abstractmethod
     def as_(self, type: Type[_TObject], /) -> _TObject: ...
     @property

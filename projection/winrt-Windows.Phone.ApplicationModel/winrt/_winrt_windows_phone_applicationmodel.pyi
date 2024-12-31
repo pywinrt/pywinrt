@@ -15,7 +15,7 @@ from winrt.windows.phone.applicationmodel import ApplicationProfileModes
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ApplicationProfile_Static(type):
+class ApplicationProfile_Static(winrt._winrt.IInspectable_Static):
     # Windows.Phone.ApplicationModel.ApplicationProfileModes Windows.Phone.ApplicationModel.ApplicationProfile::get_Modes()
     @_property
     def modes(cls) -> ApplicationProfileModes: ...

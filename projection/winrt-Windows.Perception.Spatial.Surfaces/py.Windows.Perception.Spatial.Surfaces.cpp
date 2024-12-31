@@ -1590,6 +1590,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_surfaces(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1603,25 +1609,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_surfaces(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SpatialSurfaceInfo_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceInfo, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialSurfaceInfo_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceInfo, object_bases.get(), inspectable_meta_type)};
     if (!SpatialSurfaceInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialSurfaceMesh_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceMesh, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialSurfaceMesh_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceMesh, object_bases.get(), inspectable_meta_type)};
     if (!SpatialSurfaceMesh_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialSurfaceMeshBuffer_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceMeshBuffer, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialSurfaceMeshBuffer_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceMeshBuffer, object_bases.get(), inspectable_meta_type)};
     if (!SpatialSurfaceMeshBuffer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SpatialSurfaceMeshOptions_Static{PyType_FromSpec(&type_spec_SpatialSurfaceMeshOptions_Static)};
+    py::pyobj_handle SpatialSurfaceMeshOptions_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SpatialSurfaceMeshOptions_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpatialSurfaceMeshOptions_Static{PyType_FromSpecWithBases(&type_spec_SpatialSurfaceMeshOptions_Static, SpatialSurfaceMeshOptions_Static_bases.get())};
     if (!type_SpatialSurfaceMeshOptions_Static)
     {
         return nullptr;
@@ -1633,7 +1645,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_surfaces(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SpatialSurfaceObserver_Static{PyType_FromSpec(&type_spec_SpatialSurfaceObserver_Static)};
+    py::pyobj_handle SpatialSurfaceObserver_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SpatialSurfaceObserver_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpatialSurfaceObserver_Static{PyType_FromSpecWithBases(&type_spec_SpatialSurfaceObserver_Static, SpatialSurfaceObserver_Static_bases.get())};
     if (!type_SpatialSurfaceObserver_Static)
     {
         return nullptr;

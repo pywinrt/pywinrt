@@ -797,6 +797,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors_custom(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -810,7 +816,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors_custom(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CustomSensor_Static{PyType_FromSpec(&type_spec_CustomSensor_Static)};
+    py::pyobj_handle CustomSensor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CustomSensor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CustomSensor_Static{PyType_FromSpecWithBases(&type_spec_CustomSensor_Static, CustomSensor_Static_bases.get())};
     if (!type_CustomSensor_Static)
     {
         return nullptr;
@@ -822,13 +834,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CustomSensorReading_type{py::register_python_type(module.get(), &type_spec_CustomSensorReading, object_bases.get(), nullptr)};
+    py::pytype_handle CustomSensorReading_type{py::register_python_type(module.get(), &type_spec_CustomSensorReading, object_bases.get(), inspectable_meta_type)};
     if (!CustomSensorReading_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CustomSensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CustomSensorReadingChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CustomSensorReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_CustomSensorReadingChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CustomSensorReadingChangedEventArgs_type)
     {
         return nullptr;

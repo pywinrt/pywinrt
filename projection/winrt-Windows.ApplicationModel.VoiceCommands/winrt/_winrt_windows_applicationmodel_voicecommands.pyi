@@ -108,7 +108,7 @@ class VoiceCommandDefinition(winrt.system.Object):
     def name(self) -> str: ...
 
 @typing.final
-class VoiceCommandDefinitionManager_Static(type):
+class VoiceCommandDefinitionManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager::InstallCommandDefinitionsFromStorageFileAsync(Windows.Storage.StorageFile)
     def install_command_definitions_from_storage_file_async(cls, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition> Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager::get_InstalledCommandDefinitions()
@@ -126,7 +126,7 @@ class VoiceCommandDisambiguationResult(winrt.system.Object):
     def selected_item(self) -> VoiceCommandContentTile: ...
 
 @typing.final
-class VoiceCommandResponse_Static(type):
+class VoiceCommandResponse_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponse(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage)
     def create_response(cls, user_message: VoiceCommandUserMessage, /) -> VoiceCommandResponse: ...
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::CreateResponseForPrompt(Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage,Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage)
@@ -164,7 +164,7 @@ class VoiceCommandResponse(winrt.system.Object, metaclass=VoiceCommandResponse_S
     def voice_command_content_tiles(self) -> typing.MutableSequence[VoiceCommandContentTile]: ...
 
 @typing.final
-class VoiceCommandServiceConnection_Static(type):
+class VoiceCommandServiceConnection_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::FromAppServiceTriggerDetails(Windows.ApplicationModel.AppService.AppServiceTriggerDetails)
     def from_app_service_trigger_details(cls, trigger_details: windows_applicationmodel_appservice.AppServiceTriggerDetails, /) -> VoiceCommandServiceConnection: ...
 

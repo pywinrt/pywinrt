@@ -20,7 +20,7 @@ from winrt.windows.applicationmodel.appservice import AppServiceClosedStatus, Ap
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AppServiceCatalog_Static(type):
+class AppServiceCatalog_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppInfo>> Windows.ApplicationModel.AppService.AppServiceCatalog::FindAppServiceProvidersAsync(System.String)
     def find_app_service_providers_async(cls, app_service_name: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel.AppInfo]]: ...
 
@@ -35,7 +35,7 @@ class AppServiceClosedEventArgs(winrt.system.Object):
     def status(self) -> AppServiceClosedStatus: ...
 
 @typing.final
-class AppServiceConnection_Static(type):
+class AppServiceConnection_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.StatelessAppServiceResponse> Windows.ApplicationModel.AppService.AppServiceConnection::SendStatelessMessageAsync(Windows.ApplicationModel.AppService.AppServiceConnection,Windows.System.RemoteSystems.RemoteSystemConnectionRequest,Windows.Foundation.Collections.ValueSet)
     def send_stateless_message_async(cls, connection: AppServiceConnection, connection_request: windows_system_remotesystems.RemoteSystemConnectionRequest, message: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[StatelessAppServiceResponse]: ...
 

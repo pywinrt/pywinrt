@@ -15,7 +15,7 @@ import winrt.windows.foundation as windows_foundation
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CoreUserActivityManager_Static(type):
+class CoreUserActivityManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.UserActivities.UserActivitySession Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager::CreateUserActivitySessionInBackground(Windows.ApplicationModel.UserActivities.UserActivity)
     def create_user_activity_session_in_background(cls, activity: windows_applicationmodel_useractivities.UserActivity, /) -> windows_applicationmodel_useractivities.UserActivitySession: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager::DeleteUserActivitySessionsInTimeRangeAsync(Windows.ApplicationModel.UserActivities.UserActivityChannel,Windows.Foundation.DateTime,Windows.Foundation.DateTime)

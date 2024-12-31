@@ -19,7 +19,7 @@ from winrt.microsoft.windows.storage import ApplicationDataCreateDisposition, Ap
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ApplicationData_Static(type):
+class ApplicationData_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.Storage.ApplicationData Microsoft.Windows.Storage.ApplicationData::GetDefault()
     def get_default(cls) -> ApplicationData: ...
     # Microsoft.Windows.Storage.ApplicationData Microsoft.Windows.Storage.ApplicationData::GetForPackageFamily(System.String)

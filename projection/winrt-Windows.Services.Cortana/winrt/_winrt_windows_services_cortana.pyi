@@ -20,7 +20,7 @@ from winrt.windows.services.cortana import CortanaPermission, CortanaPermissions
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CortanaActionableInsights_Static(type):
+class CortanaActionableInsights_Static(winrt._winrt.IInspectable_Static):
     # Windows.Services.Cortana.CortanaActionableInsights Windows.Services.Cortana.CortanaActionableInsights::GetDefault()
     # @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaActionableInsights: ...
@@ -72,7 +72,7 @@ class CortanaActionableInsightsOptions(winrt.system.Object):
     def content_source_web_link(self, value: windows_foundation.Uri) -> None: ...
 
 @typing.final
-class CortanaPermissionsManager_Static(type):
+class CortanaPermissionsManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Services.Cortana.CortanaPermissionsManager Windows.Services.Cortana.CortanaPermissionsManager::GetDefault()
     # @deprecated("ICortanaPermissionsManagerStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaPermissionsManager: ...
@@ -93,7 +93,7 @@ class CortanaPermissionsManager(winrt.system.Object, metaclass=CortanaPermission
     def revoke_permissions_async(self, permissions: typing.Iterable[CortanaPermission], /) -> windows_foundation.IAsyncOperation[CortanaPermissionsChangeResult]: ...
 
 @typing.final
-class CortanaSettings_Static(type):
+class CortanaSettings_Static(winrt._winrt.IInspectable_Static):
     # Windows.Services.Cortana.CortanaSettings Windows.Services.Cortana.CortanaSettings::GetDefault()
     # @deprecated("ICortanaSettingsStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaSettings: ...

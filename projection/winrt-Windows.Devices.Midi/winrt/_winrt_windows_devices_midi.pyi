@@ -86,7 +86,7 @@ class MidiControlChangeMessage(winrt.system.Object, IMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiInPort_Static(type):
+class MidiInPort_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.MidiInPort> Windows.Devices.Midi.MidiInPort::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[MidiInPort]: ...
     # System.String Windows.Devices.Midi.MidiInPort::GetDeviceSelector()
@@ -157,7 +157,7 @@ class MidiNoteOnMessage(winrt.system.Object, IMidiMessage):
     def velocity(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class MidiOutPort_Static(type):
+class MidiOutPort_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.IMidiOutPort> Windows.Devices.Midi.MidiOutPort::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[IMidiOutPort]: ...
     # System.String Windows.Devices.Midi.MidiOutPort::GetDeviceSelector()
@@ -296,7 +296,7 @@ class MidiStopMessage(winrt.system.Object, IMidiMessage):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiSynthesizer_Static(type):
+class MidiSynthesizer_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.MidiSynthesizer> Windows.Devices.Midi.MidiSynthesizer::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[MidiSynthesizer]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.MidiSynthesizer> Windows.Devices.Midi.MidiSynthesizer::CreateAsync(Windows.Devices.Enumeration.DeviceInformation)

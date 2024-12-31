@@ -247,7 +247,7 @@ class CompositionAnimationGroup(CompositionObject, ICompositionAnimationBase):
     def count(self) -> winrt.system.Int32: ...
 
 @typing.final
-class CompositionApiInformation_Static(type):
+class CompositionApiInformation_Static(winrt._winrt.IInspectable_Static):
     # System.UInt64 Microsoft.UI.Composition.CompositionApiInformation::get_ApiVersion()
     @_property
     def api_version(cls) -> winrt.system.UInt64: ...
@@ -818,7 +818,7 @@ class CompositionNineGridBrush(CompositionBrush):
     @bottom_inset.setter
     def bottom_inset(self, value: winrt.system.Single) -> None: ...
 
-class CompositionObject_Static(type):
+class CompositionObject_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.UI.Composition.CompositionObject::StartAnimationGroupWithIAnimationObject(Microsoft.UI.Composition.IAnimationObject,Microsoft.UI.Composition.ICompositionAnimationBase)
     def start_animation_group_with_ianimation_object(cls, target: IAnimationObject, animation: ICompositionAnimationBase, /) -> None: ...
     # System.Void Microsoft.UI.Composition.CompositionObject::StartAnimationWithIAnimationObject(Microsoft.UI.Composition.IAnimationObject,System.String,Microsoft.UI.Composition.CompositionAnimation)
@@ -1466,7 +1466,7 @@ class CompositionVisualSurface(CompositionObject, ICompositionSurface):
     def source_offset(self, value: windows_foundation_numerics.Vector2) -> None: ...
 
 @typing.final
-class Compositor_Static(type):
+class Compositor_Static(winrt._winrt.IInspectable_Static):
     # System.Single Microsoft.UI.Composition.Compositor::get_MaxGlobalPlaybackRate()
     @_property
     def max_global_playback_rate(cls) -> winrt.system.Single: ...

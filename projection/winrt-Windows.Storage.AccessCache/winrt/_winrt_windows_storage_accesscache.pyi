@@ -52,7 +52,7 @@ class ItemRemovedEventArgs(winrt.system.Object):
     def removed_entry(self) -> AccessListEntry: ...
 
 @typing.final
-class StorageApplicationPermissions_Static(type):
+class StorageApplicationPermissions_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.AccessCache.StorageItemAccessList Windows.Storage.AccessCache.StorageApplicationPermissions::GetFutureAccessListForUser(Windows.System.User)
     def get_future_access_list_for_user(cls, user: windows_system.User, /) -> StorageItemAccessList: ...
     # Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList Windows.Storage.AccessCache.StorageApplicationPermissions::GetMostRecentlyUsedListForUser(Windows.System.User)

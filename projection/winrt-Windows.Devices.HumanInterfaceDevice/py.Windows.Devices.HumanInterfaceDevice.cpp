@@ -3827,6 +3827,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_humaninterfacedevice(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3840,25 +3846,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_humaninterfacedevice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HidBooleanControl_type{py::register_python_type(module.get(), &type_spec_HidBooleanControl, object_bases.get(), nullptr)};
+    py::pytype_handle HidBooleanControl_type{py::register_python_type(module.get(), &type_spec_HidBooleanControl, object_bases.get(), inspectable_meta_type)};
     if (!HidBooleanControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HidBooleanControlDescription_type{py::register_python_type(module.get(), &type_spec_HidBooleanControlDescription, object_bases.get(), nullptr)};
+    py::pytype_handle HidBooleanControlDescription_type{py::register_python_type(module.get(), &type_spec_HidBooleanControlDescription, object_bases.get(), inspectable_meta_type)};
     if (!HidBooleanControlDescription_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HidCollection_type{py::register_python_type(module.get(), &type_spec_HidCollection, object_bases.get(), nullptr)};
+    py::pytype_handle HidCollection_type{py::register_python_type(module.get(), &type_spec_HidCollection, object_bases.get(), inspectable_meta_type)};
     if (!HidCollection_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HidDevice_Static{PyType_FromSpec(&type_spec_HidDevice_Static)};
+    py::pyobj_handle HidDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HidDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HidDevice_Static{PyType_FromSpecWithBases(&type_spec_HidDevice_Static, HidDevice_Static_bases.get())};
     if (!type_HidDevice_Static)
     {
         return nullptr;
@@ -3870,37 +3882,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_humaninterfacedevice(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HidFeatureReport_type{py::register_python_type(module.get(), &type_spec_HidFeatureReport, object_bases.get(), nullptr)};
+    py::pytype_handle HidFeatureReport_type{py::register_python_type(module.get(), &type_spec_HidFeatureReport, object_bases.get(), inspectable_meta_type)};
     if (!HidFeatureReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HidInputReport_type{py::register_python_type(module.get(), &type_spec_HidInputReport, object_bases.get(), nullptr)};
+    py::pytype_handle HidInputReport_type{py::register_python_type(module.get(), &type_spec_HidInputReport, object_bases.get(), inspectable_meta_type)};
     if (!HidInputReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HidInputReportReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_HidInputReportReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HidInputReportReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_HidInputReportReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HidInputReportReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HidNumericControl_type{py::register_python_type(module.get(), &type_spec_HidNumericControl, object_bases.get(), nullptr)};
+    py::pytype_handle HidNumericControl_type{py::register_python_type(module.get(), &type_spec_HidNumericControl, object_bases.get(), inspectable_meta_type)};
     if (!HidNumericControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HidNumericControlDescription_type{py::register_python_type(module.get(), &type_spec_HidNumericControlDescription, object_bases.get(), nullptr)};
+    py::pytype_handle HidNumericControlDescription_type{py::register_python_type(module.get(), &type_spec_HidNumericControlDescription, object_bases.get(), inspectable_meta_type)};
     if (!HidNumericControlDescription_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HidOutputReport_type{py::register_python_type(module.get(), &type_spec_HidOutputReport, object_bases.get(), nullptr)};
+    py::pytype_handle HidOutputReport_type{py::register_python_type(module.get(), &type_spec_HidOutputReport, object_bases.get(), inspectable_meta_type)};
     if (!HidOutputReport_type)
     {
         return nullptr;

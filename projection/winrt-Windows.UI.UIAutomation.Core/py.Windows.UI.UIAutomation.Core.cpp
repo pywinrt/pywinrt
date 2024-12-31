@@ -2609,6 +2609,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2622,13 +2628,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AutomationRemoteOperationResult_type{py::register_python_type(module.get(), &type_spec_AutomationRemoteOperationResult, object_bases.get(), nullptr)};
+    py::pytype_handle AutomationRemoteOperationResult_type{py::register_python_type(module.get(), &type_spec_AutomationRemoteOperationResult, object_bases.get(), inspectable_meta_type)};
     if (!AutomationRemoteOperationResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreAutomationRegistrar_Static{PyType_FromSpec(&type_spec_CoreAutomationRegistrar_Static)};
+    py::pyobj_handle CoreAutomationRegistrar_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreAutomationRegistrar_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreAutomationRegistrar_Static{PyType_FromSpecWithBases(&type_spec_CoreAutomationRegistrar_Static, CoreAutomationRegistrar_Static_bases.get())};
     if (!type_CoreAutomationRegistrar_Static)
     {
         return nullptr;
@@ -2640,37 +2652,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreAutomationRemoteOperation_type{py::register_python_type(module.get(), &type_spec_CoreAutomationRemoteOperation, object_bases.get(), nullptr)};
+    py::pytype_handle CoreAutomationRemoteOperation_type{py::register_python_type(module.get(), &type_spec_CoreAutomationRemoteOperation, object_bases.get(), inspectable_meta_type)};
     if (!CoreAutomationRemoteOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreAutomationRemoteOperationContext_type{py::register_python_type(module.get(), &type_spec_CoreAutomationRemoteOperationContext, object_bases.get(), nullptr)};
+    py::pytype_handle CoreAutomationRemoteOperationContext_type{py::register_python_type(module.get(), &type_spec_CoreAutomationRemoteOperationContext, object_bases.get(), inspectable_meta_type)};
     if (!CoreAutomationRemoteOperationContext_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RemoteAutomationClientSession_type{py::register_python_type(module.get(), &type_spec_RemoteAutomationClientSession, object_bases.get(), nullptr)};
+    py::pytype_handle RemoteAutomationClientSession_type{py::register_python_type(module.get(), &type_spec_RemoteAutomationClientSession, object_bases.get(), inspectable_meta_type)};
     if (!RemoteAutomationClientSession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RemoteAutomationConnectionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteAutomationConnectionRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle RemoteAutomationConnectionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteAutomationConnectionRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RemoteAutomationConnectionRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RemoteAutomationDisconnectedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteAutomationDisconnectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle RemoteAutomationDisconnectedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteAutomationDisconnectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RemoteAutomationDisconnectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RemoteAutomationServer_Static{PyType_FromSpec(&type_spec_RemoteAutomationServer_Static)};
+    py::pyobj_handle RemoteAutomationServer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RemoteAutomationServer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RemoteAutomationServer_Static{PyType_FromSpecWithBases(&type_spec_RemoteAutomationServer_Static, RemoteAutomationServer_Static_bases.get())};
     if (!type_RemoteAutomationServer_Static)
     {
         return nullptr;
@@ -2682,7 +2700,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RemoteAutomationWindow_type{py::register_python_type(module.get(), &type_spec_RemoteAutomationWindow, object_bases.get(), nullptr)};
+    py::pytype_handle RemoteAutomationWindow_type{py::register_python_type(module.get(), &type_spec_RemoteAutomationWindow, object_bases.get(), inspectable_meta_type)};
     if (!RemoteAutomationWindow_type)
     {
         return nullptr;
@@ -2694,7 +2712,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICoreAutomationConnectionBoundObjectProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreAutomationConnectionBoundObjectProvider, nullptr))};
+    py::pytype_handle ImplementsICoreAutomationConnectionBoundObjectProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsICoreAutomationConnectionBoundObjectProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsICoreAutomationConnectionBoundObjectProvider_type)
     {
         return nullptr;
@@ -2711,7 +2729,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICoreAutomationRemoteOperationExtensionProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreAutomationRemoteOperationExtensionProvider, nullptr))};
+    py::pytype_handle ImplementsICoreAutomationRemoteOperationExtensionProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsICoreAutomationRemoteOperationExtensionProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsICoreAutomationRemoteOperationExtensionProvider_type)
     {
         return nullptr;

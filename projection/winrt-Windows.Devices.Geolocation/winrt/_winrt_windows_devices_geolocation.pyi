@@ -43,7 +43,7 @@ class CivicAddress(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class GeoboundingBox_Static(type):
+class GeoboundingBox_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Devices.Geolocation.GeoboundingBox::TryCompute(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.BasicGeoposition>)
     def try_compute(cls, positions: typing.Iterable[BasicGeoposition], /) -> GeoboundingBox: ...
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Devices.Geolocation.GeoboundingBox::TryCompute(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.BasicGeoposition>,Windows.Devices.Geolocation.AltitudeReferenceSystem)
@@ -169,7 +169,7 @@ class GeocoordinateSatelliteData(winrt.system.Object):
     def time_dilution_of_precision(self) -> typing.Optional[winrt.system.Double]: ...
 
 @typing.final
-class Geolocator_Static(type):
+class Geolocator_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geoposition>> Windows.Devices.Geolocation.Geolocator::GetGeopositionHistoryAsync(Windows.Foundation.DateTime)
     def get_geoposition_history_async(cls, start_time: datetime.datetime, /) -> windows_foundation.IAsyncOperation[typing.Sequence[Geoposition]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geoposition>> Windows.Devices.Geolocation.Geolocator::GetGeopositionHistoryAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
@@ -298,7 +298,7 @@ class Geovisit(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class GeovisitMonitor_Static(type):
+class GeovisitMonitor_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.Geovisit> Windows.Devices.Geolocation.GeovisitMonitor::GetLastReportAsync()
     def get_last_report_async(cls) -> windows_foundation.IAsyncOperation[Geovisit]: ...
 

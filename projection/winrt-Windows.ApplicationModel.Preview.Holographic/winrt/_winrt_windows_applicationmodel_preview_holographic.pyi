@@ -16,7 +16,7 @@ import winrt.windows.perception.spatial as windows_perception_spatial
 Self = typing.TypeVar('Self')
 
 @typing.final
-class HolographicApplicationPreview_Static(type):
+class HolographicApplicationPreview_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview::IsCurrentViewPresentedOnHolographicDisplay()
     def is_current_view_presented_on_holographic_display(cls) -> bool: ...
     # System.Boolean Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview::IsHolographicActivation(Windows.ApplicationModel.Activation.IActivatedEventArgs)
@@ -27,7 +27,7 @@ class HolographicApplicationPreview(winrt.system.Object, metaclass=HolographicAp
     pass
 
 @typing.final
-class HolographicKeyboardPlacementOverridePreview_Static(type):
+class HolographicKeyboardPlacementOverridePreview_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::GetForCurrentView()
     # @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def get_for_current_view(cls) -> HolographicKeyboardPlacementOverridePreview: ...

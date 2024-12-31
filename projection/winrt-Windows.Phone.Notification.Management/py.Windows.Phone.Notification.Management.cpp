@@ -8895,6 +8895,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_notification_management(void) noexcep
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8908,7 +8914,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_notification_management(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_AccessoryManager_Static{PyType_FromSpec(&type_spec_AccessoryManager_Static)};
+    py::pyobj_handle AccessoryManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AccessoryManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AccessoryManager_Static{PyType_FromSpecWithBases(&type_spec_AccessoryManager_Static, AccessoryManager_Static_bases.get())};
     if (!type_AccessoryManager_Static)
     {
         return nullptr;
@@ -8920,115 +8932,115 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_notification_management(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle AlarmNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_AlarmNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle AlarmNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_AlarmNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!AlarmNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppNotificationInfo_type{py::register_python_type(module.get(), &type_spec_AppNotificationInfo, object_bases.get(), nullptr)};
+    py::pytype_handle AppNotificationInfo_type{py::register_python_type(module.get(), &type_spec_AppNotificationInfo, object_bases.get(), inspectable_meta_type)};
     if (!AppNotificationInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BinaryId_type{py::register_python_type(module.get(), &type_spec_BinaryId, object_bases.get(), nullptr)};
+    py::pytype_handle BinaryId_type{py::register_python_type(module.get(), &type_spec_BinaryId, object_bases.get(), inspectable_meta_type)};
     if (!BinaryId_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CalendarChangedNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_CalendarChangedNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle CalendarChangedNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_CalendarChangedNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!CalendarChangedNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CortanaTileNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_CortanaTileNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle CortanaTileNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_CortanaTileNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!CortanaTileNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailAccountInfo_type{py::register_python_type(module.get(), &type_spec_EmailAccountInfo, object_bases.get(), nullptr)};
+    py::pytype_handle EmailAccountInfo_type{py::register_python_type(module.get(), &type_spec_EmailAccountInfo, object_bases.get(), inspectable_meta_type)};
     if (!EmailAccountInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailFolderInfo_type{py::register_python_type(module.get(), &type_spec_EmailFolderInfo, object_bases.get(), nullptr)};
+    py::pytype_handle EmailFolderInfo_type{py::register_python_type(module.get(), &type_spec_EmailFolderInfo, object_bases.get(), inspectable_meta_type)};
     if (!EmailFolderInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_EmailNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle EmailNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_EmailNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!EmailNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailReadNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_EmailReadNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle EmailReadNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_EmailReadNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!EmailReadNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaControlsTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MediaControlsTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle MediaControlsTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MediaControlsTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!MediaControlsTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaMetadata_type{py::register_python_type(module.get(), &type_spec_MediaMetadata, object_bases.get(), nullptr)};
+    py::pytype_handle MediaMetadata_type{py::register_python_type(module.get(), &type_spec_MediaMetadata, object_bases.get(), inspectable_meta_type)};
     if (!MediaMetadata_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneCallDetails_type{py::register_python_type(module.get(), &type_spec_PhoneCallDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneCallDetails_type{py::register_python_type(module.get(), &type_spec_PhoneCallDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneCallDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneLineDetails_type{py::register_python_type(module.get(), &type_spec_PhoneLineDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneLineDetails_type{py::register_python_type(module.get(), &type_spec_PhoneLineDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneLineDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ReminderNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ReminderNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle ReminderNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ReminderNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!ReminderNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpeedDialEntry_type{py::register_python_type(module.get(), &type_spec_SpeedDialEntry, object_bases.get(), nullptr)};
+    py::pytype_handle SpeedDialEntry_type{py::register_python_type(module.get(), &type_spec_SpeedDialEntry, object_bases.get(), inspectable_meta_type)};
     if (!SpeedDialEntry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextResponse_type{py::register_python_type(module.get(), &type_spec_TextResponse, object_bases.get(), nullptr)};
+    py::pytype_handle TextResponse_type{py::register_python_type(module.get(), &type_spec_TextResponse, object_bases.get(), inspectable_meta_type)};
     if (!TextResponse_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToastNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ToastNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle ToastNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ToastNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!ToastNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VolumeInfo_type{py::register_python_type(module.get(), &type_spec_VolumeInfo, object_bases.get(), nullptr)};
+    py::pytype_handle VolumeInfo_type{py::register_python_type(module.get(), &type_spec_VolumeInfo, object_bases.get(), inspectable_meta_type)};
     if (!VolumeInfo_type)
     {
         return nullptr;
@@ -9040,7 +9052,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_notification_management(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAccessoryNotificationTriggerDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAccessoryNotificationTriggerDetails, nullptr))};
+    py::pytype_handle ImplementsIAccessoryNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ImplementsIAccessoryNotificationTriggerDetails, nullptr, inspectable_meta_type)};
     if (!ImplementsIAccessoryNotificationTriggerDetails_type)
     {
         return nullptr;

@@ -86,7 +86,7 @@ class ControlChannelTrigger(winrt.system.Object, windows_foundation.IClosable):
     def is_wake_from_low_power_supported(self) -> bool: ...
 
 @typing.final
-class DatagramSocket_Static(type):
+class DatagramSocket_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.EndpointPair>> Windows.Networking.Sockets.DatagramSocket::GetEndpointPairsAsync(Windows.Networking.HostName,System.String)
     def get_endpoint_pairs_async(cls, remote_host_name: windows_networking.HostName, remote_service_name: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_networking.EndpointPair]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.EndpointPair>> Windows.Networking.Sockets.DatagramSocket::GetEndpointPairsAsync(Windows.Networking.HostName,System.String,Windows.Networking.HostNameSortOptions)
@@ -430,7 +430,7 @@ class SocketActivityContext(winrt.system.Object):
     def data(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
-class SocketActivityInformation_Static(type):
+class SocketActivityInformation_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Networking.Sockets.SocketActivityInformation> Windows.Networking.Sockets.SocketActivityInformation::get_AllSockets()
     @_property
     def all_sockets(cls) -> typing.Mapping[str, SocketActivityInformation]: ...
@@ -469,7 +469,7 @@ class SocketActivityTriggerDetails(winrt.system.Object):
     def socket_information(self) -> SocketActivityInformation: ...
 
 @typing.final
-class SocketError_Static(type):
+class SocketError_Static(winrt._winrt.IInspectable_Static):
     # Windows.Networking.Sockets.SocketErrorStatus Windows.Networking.Sockets.SocketError::GetStatus(System.Int32)
     def get_status(cls, hresult: winrt.system.Int32, /) -> SocketErrorStatus: ...
 
@@ -478,7 +478,7 @@ class SocketError(winrt.system.Object, metaclass=SocketError_Static):
     pass
 
 @typing.final
-class StreamSocket_Static(type):
+class StreamSocket_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.EndpointPair>> Windows.Networking.Sockets.StreamSocket::GetEndpointPairsAsync(Windows.Networking.HostName,System.String)
     def get_endpoint_pairs_async(cls, remote_host_name: windows_networking.HostName, remote_service_name: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_networking.EndpointPair]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.EndpointPair>> Windows.Networking.Sockets.StreamSocket::GetEndpointPairsAsync(Windows.Networking.HostName,System.String,Windows.Networking.HostNameSortOptions)
@@ -824,7 +824,7 @@ class WebSocketClosedEventArgs(winrt.system.Object):
     def reason(self) -> str: ...
 
 @typing.final
-class WebSocketError_Static(type):
+class WebSocketError_Static(winrt._winrt.IInspectable_Static):
     # Windows.Web.WebErrorStatus Windows.Networking.Sockets.WebSocketError::GetStatus(System.Int32)
     def get_status(cls, hresult: winrt.system.Int32, /) -> windows_web.WebErrorStatus: ...
 

@@ -32,7 +32,7 @@ class AdcChannel(winrt.system.Object, windows_foundation.IClosable):
     def controller(self) -> AdcController: ...
 
 @typing.final
-class AdcController_Static(type):
+class AdcController_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Adc.AdcController>> Windows.Devices.Adc.AdcController::GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)
     def get_controllers_async(cls, provider: windows_devices_adc_provider.IAdcProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[AdcController]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Adc.AdcController> Windows.Devices.Adc.AdcController::GetDefaultAsync()

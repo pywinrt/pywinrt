@@ -3410,7 +3410,7 @@ class ControlTemplate(windows_ui_xaml.FrameworkTemplate):
     @target_type.setter
     def target_type(self, value: windows_ui_xaml_interop.TypeName) -> None: ...
 
-class DataTemplateSelector_Static(type):
+class DataTemplateSelector_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class DataTemplateSelector(winrt.system.Object, windows_ui_xaml.IElementFactory, metaclass=DataTemplateSelector_Static):
@@ -4202,7 +4202,7 @@ class GroupItem_Static(ContentControl_Static):
 class GroupItem(ContentControl, metaclass=GroupItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
-class GroupStyle_Static(type):
+class GroupStyle_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class GroupStyle(winrt.system.Object, windows_ui_xaml_data.INotifyPropertyChanged, metaclass=GroupStyle_Static):
@@ -4263,7 +4263,7 @@ class GroupStyle(winrt.system.Object, windows_ui_xaml_data.INotifyPropertyChange
     @typing.final
     def header_container_style(self, value: windows_ui_xaml.Style) -> None: ...
 
-class GroupStyleSelector_Static(type):
+class GroupStyleSelector_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class GroupStyleSelector(winrt.system.Object, metaclass=GroupStyleSelector_Static):
@@ -5464,7 +5464,7 @@ class ListViewHeaderItem(ListViewBaseHeaderItem, metaclass=ListViewHeaderItem_St
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 @typing.final
-class ListViewPersistenceHelper_Static(type):
+class ListViewPersistenceHelper_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.Xaml.Controls.ListViewPersistenceHelper::GetRelativeScrollPosition(Windows.UI.Xaml.Controls.ListViewBase,Windows.UI.Xaml.Controls.ListViewItemToKeyHandler)
     def get_relative_scroll_position(cls, list_view_base: ListViewBase, item_to_key_handler: ListViewItemToKeyHandler, /) -> str: ...
     # Windows.Foundation.IAsyncAction Windows.UI.Xaml.Controls.ListViewPersistenceHelper::SetRelativeScrollPositionAsync(Windows.UI.Xaml.Controls.ListViewBase,System.String,Windows.UI.Xaml.Controls.ListViewKeyToItemHandler)
@@ -6307,7 +6307,7 @@ class MediaTransportControls(Control, metaclass=MediaTransportControls_Static):
     def is_compact_overlay_button_visible(self, value: bool) -> None: ...
 
 @typing.final
-class MediaTransportControlsHelper_Static(type):
+class MediaTransportControlsHelper_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IReference`1<System.Int32> Windows.UI.Xaml.Controls.MediaTransportControlsHelper::GetDropoutOrder(Windows.UI.Xaml.UIElement)
     def get_dropout_order(cls, element: windows_ui_xaml.UIElement, /) -> typing.Optional[winrt.system.Int32]: ...
     # System.Void Windows.UI.Xaml.Controls.MediaTransportControlsHelper::SetDropoutOrder(Windows.UI.Xaml.UIElement,Windows.Foundation.IReference`1<System.Int32>)
@@ -9968,7 +9968,7 @@ class SearchBoxSuggestionsRequestedEventArgs(winrt.system.Object):
     @_property
     def request(self) -> windows_applicationmodel_search.SearchSuggestionsRequest: ...
 
-class SectionsInViewChangedEventArgs_Static(type):
+class SectionsInViewChangedEventArgs_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class SectionsInViewChangedEventArgs(winrt.system.Object, metaclass=SectionsInViewChangedEventArgs_Static):
@@ -10491,7 +10491,7 @@ class StackPanel(Panel, IInsertionPanel, windows_ui_xaml_controls_primitives.ISc
     @typing.final
     def are_vertical_snap_points_regular(self) -> bool: ...
 
-class StyleSelector_Static(type):
+class StyleSelector_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class StyleSelector(winrt.system.Object, metaclass=StyleSelector_Static):
@@ -11968,7 +11968,7 @@ class ToolTip(ContentControl, metaclass=ToolTip_Static):
     def placement_rect(self, value: typing.Optional[windows_foundation.Rect]) -> None: ...
 
 @typing.final
-class ToolTipService_Static(type):
+class ToolTipService_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Xaml.Controls.Primitives.PlacementMode Windows.UI.Xaml.Controls.ToolTipService::GetPlacement(Windows.UI.Xaml.DependencyObject)
     def get_placement(cls, element: windows_ui_xaml.DependencyObject, /) -> windows_ui_xaml_controls_primitives.PlacementMode: ...
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.ToolTipService::GetPlacementTarget(Windows.UI.Xaml.DependencyObject)

@@ -6591,6 +6591,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -6604,31 +6610,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HolographicCamera_type{py::register_python_type(module.get(), &type_spec_HolographicCamera, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicCamera_type{py::register_python_type(module.get(), &type_spec_HolographicCamera, object_bases.get(), inspectable_meta_type)};
     if (!HolographicCamera_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicCameraPose_type{py::register_python_type(module.get(), &type_spec_HolographicCameraPose, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicCameraPose_type{py::register_python_type(module.get(), &type_spec_HolographicCameraPose, object_bases.get(), inspectable_meta_type)};
     if (!HolographicCameraPose_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicCameraRenderingParameters_type{py::register_python_type(module.get(), &type_spec_HolographicCameraRenderingParameters, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicCameraRenderingParameters_type{py::register_python_type(module.get(), &type_spec_HolographicCameraRenderingParameters, object_bases.get(), inspectable_meta_type)};
     if (!HolographicCameraRenderingParameters_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicCameraViewportParameters_type{py::register_python_type(module.get(), &type_spec_HolographicCameraViewportParameters, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicCameraViewportParameters_type{py::register_python_type(module.get(), &type_spec_HolographicCameraViewportParameters, object_bases.get(), inspectable_meta_type)};
     if (!HolographicCameraViewportParameters_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HolographicDisplay_Static{PyType_FromSpec(&type_spec_HolographicDisplay_Static)};
+    py::pyobj_handle HolographicDisplay_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HolographicDisplay_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HolographicDisplay_Static{PyType_FromSpecWithBases(&type_spec_HolographicDisplay_Static, HolographicDisplay_Static_bases.get())};
     if (!type_HolographicDisplay_Static)
     {
         return nullptr;
@@ -6640,61 +6652,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HolographicFrame_type{py::register_python_type(module.get(), &type_spec_HolographicFrame, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicFrame_type{py::register_python_type(module.get(), &type_spec_HolographicFrame, object_bases.get(), inspectable_meta_type)};
     if (!HolographicFrame_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicFramePrediction_type{py::register_python_type(module.get(), &type_spec_HolographicFramePrediction, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicFramePrediction_type{py::register_python_type(module.get(), &type_spec_HolographicFramePrediction, object_bases.get(), inspectable_meta_type)};
     if (!HolographicFramePrediction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicFramePresentationMonitor_type{py::register_python_type(module.get(), &type_spec_HolographicFramePresentationMonitor, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicFramePresentationMonitor_type{py::register_python_type(module.get(), &type_spec_HolographicFramePresentationMonitor, object_bases.get(), inspectable_meta_type)};
     if (!HolographicFramePresentationMonitor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicFramePresentationReport_type{py::register_python_type(module.get(), &type_spec_HolographicFramePresentationReport, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicFramePresentationReport_type{py::register_python_type(module.get(), &type_spec_HolographicFramePresentationReport, object_bases.get(), inspectable_meta_type)};
     if (!HolographicFramePresentationReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicFrameRenderingReport_type{py::register_python_type(module.get(), &type_spec_HolographicFrameRenderingReport, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicFrameRenderingReport_type{py::register_python_type(module.get(), &type_spec_HolographicFrameRenderingReport, object_bases.get(), inspectable_meta_type)};
     if (!HolographicFrameRenderingReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicFrameScanoutMonitor_type{py::register_python_type(module.get(), &type_spec_HolographicFrameScanoutMonitor, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicFrameScanoutMonitor_type{py::register_python_type(module.get(), &type_spec_HolographicFrameScanoutMonitor, object_bases.get(), inspectable_meta_type)};
     if (!HolographicFrameScanoutMonitor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicFrameScanoutReport_type{py::register_python_type(module.get(), &type_spec_HolographicFrameScanoutReport, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicFrameScanoutReport_type{py::register_python_type(module.get(), &type_spec_HolographicFrameScanoutReport, object_bases.get(), inspectable_meta_type)};
     if (!HolographicFrameScanoutReport_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicQuadLayer_type{py::register_python_type(module.get(), &type_spec_HolographicQuadLayer, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicQuadLayer_type{py::register_python_type(module.get(), &type_spec_HolographicQuadLayer, object_bases.get(), inspectable_meta_type)};
     if (!HolographicQuadLayer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicQuadLayerUpdateParameters_type{py::register_python_type(module.get(), &type_spec_HolographicQuadLayerUpdateParameters, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicQuadLayerUpdateParameters_type{py::register_python_type(module.get(), &type_spec_HolographicQuadLayerUpdateParameters, object_bases.get(), inspectable_meta_type)};
     if (!HolographicQuadLayerUpdateParameters_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HolographicSpace_Static{PyType_FromSpec(&type_spec_HolographicSpace_Static)};
+    py::pyobj_handle HolographicSpace_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HolographicSpace_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HolographicSpace_Static{PyType_FromSpecWithBases(&type_spec_HolographicSpace_Static, HolographicSpace_Static_bases.get())};
     if (!type_HolographicSpace_Static)
     {
         return nullptr;
@@ -6706,19 +6724,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HolographicSpaceCameraAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_HolographicSpaceCameraAddedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicSpaceCameraAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_HolographicSpaceCameraAddedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HolographicSpaceCameraAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicSpaceCameraRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_HolographicSpaceCameraRemovedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicSpaceCameraRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_HolographicSpaceCameraRemovedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HolographicSpaceCameraRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HolographicViewConfiguration_type{py::register_python_type(module.get(), &type_spec_HolographicViewConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle HolographicViewConfiguration_type{py::register_python_type(module.get(), &type_spec_HolographicViewConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!HolographicViewConfiguration_type)
     {
         return nullptr;

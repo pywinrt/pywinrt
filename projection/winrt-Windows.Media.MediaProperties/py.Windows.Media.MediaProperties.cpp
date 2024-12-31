@@ -9342,6 +9342,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -9355,7 +9361,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AudioEncodingProperties_Static{PyType_FromSpec(&type_spec_AudioEncodingProperties_Static)};
+    py::pyobj_handle AudioEncodingProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AudioEncodingProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AudioEncodingProperties_Static{PyType_FromSpecWithBases(&type_spec_AudioEncodingProperties_Static, AudioEncodingProperties_Static_bases.get())};
     if (!type_AudioEncodingProperties_Static)
     {
         return nullptr;
@@ -9367,7 +9379,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Av1ProfileIds_Static{PyType_FromSpec(&type_spec_Av1ProfileIds_Static)};
+    py::pyobj_handle Av1ProfileIds_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Av1ProfileIds_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Av1ProfileIds_Static{PyType_FromSpecWithBases(&type_spec_Av1ProfileIds_Static, Av1ProfileIds_Static_bases.get())};
     if (!type_Av1ProfileIds_Static)
     {
         return nullptr;
@@ -9379,13 +9397,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContainerEncodingProperties_type{py::register_python_type(module.get(), &type_spec_ContainerEncodingProperties, object_bases.get(), nullptr)};
+    py::pytype_handle ContainerEncodingProperties_type{py::register_python_type(module.get(), &type_spec_ContainerEncodingProperties, object_bases.get(), inspectable_meta_type)};
     if (!ContainerEncodingProperties_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_H264ProfileIds_Static{PyType_FromSpec(&type_spec_H264ProfileIds_Static)};
+    py::pyobj_handle H264ProfileIds_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!H264ProfileIds_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_H264ProfileIds_Static{PyType_FromSpecWithBases(&type_spec_H264ProfileIds_Static, H264ProfileIds_Static_bases.get())};
     if (!type_H264ProfileIds_Static)
     {
         return nullptr;
@@ -9397,7 +9421,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_HevcProfileIds_Static{PyType_FromSpec(&type_spec_HevcProfileIds_Static)};
+    py::pyobj_handle HevcProfileIds_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HevcProfileIds_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HevcProfileIds_Static{PyType_FromSpecWithBases(&type_spec_HevcProfileIds_Static, HevcProfileIds_Static_bases.get())};
     if (!type_HevcProfileIds_Static)
     {
         return nullptr;
@@ -9409,7 +9439,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ImageEncodingProperties_Static{PyType_FromSpec(&type_spec_ImageEncodingProperties_Static)};
+    py::pyobj_handle ImageEncodingProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ImageEncodingProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ImageEncodingProperties_Static{PyType_FromSpecWithBases(&type_spec_ImageEncodingProperties_Static, ImageEncodingProperties_Static_bases.get())};
     if (!type_ImageEncodingProperties_Static)
     {
         return nullptr;
@@ -9421,7 +9457,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MediaEncodingProfile_Static{PyType_FromSpec(&type_spec_MediaEncodingProfile_Static)};
+    py::pyobj_handle MediaEncodingProfile_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MediaEncodingProfile_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MediaEncodingProfile_Static{PyType_FromSpecWithBases(&type_spec_MediaEncodingProfile_Static, MediaEncodingProfile_Static_bases.get())};
     if (!type_MediaEncodingProfile_Static)
     {
         return nullptr;
@@ -9433,7 +9475,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MediaEncodingSubtypes_Static{PyType_FromSpec(&type_spec_MediaEncodingSubtypes_Static)};
+    py::pyobj_handle MediaEncodingSubtypes_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MediaEncodingSubtypes_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MediaEncodingSubtypes_Static{PyType_FromSpecWithBases(&type_spec_MediaEncodingSubtypes_Static, MediaEncodingSubtypes_Static_bases.get())};
     if (!type_MediaEncodingSubtypes_Static)
     {
         return nullptr;
@@ -9445,19 +9493,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MediaPropertySet_type{py::register_python_type(module.get(), &type_spec_MediaPropertySet, object_bases.get(), nullptr)};
+    py::pytype_handle MediaPropertySet_type{py::register_python_type(module.get(), &type_spec_MediaPropertySet, object_bases.get(), inspectable_meta_type)};
     if (!MediaPropertySet_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaRatio_type{py::register_python_type(module.get(), &type_spec_MediaRatio, object_bases.get(), nullptr)};
+    py::pytype_handle MediaRatio_type{py::register_python_type(module.get(), &type_spec_MediaRatio, object_bases.get(), inspectable_meta_type)};
     if (!MediaRatio_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Mpeg2ProfileIds_Static{PyType_FromSpec(&type_spec_Mpeg2ProfileIds_Static)};
+    py::pyobj_handle Mpeg2ProfileIds_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Mpeg2ProfileIds_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Mpeg2ProfileIds_Static{PyType_FromSpecWithBases(&type_spec_Mpeg2ProfileIds_Static, Mpeg2ProfileIds_Static_bases.get())};
     if (!type_Mpeg2ProfileIds_Static)
     {
         return nullptr;
@@ -9469,7 +9523,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TimedMetadataEncodingProperties_Static{PyType_FromSpec(&type_spec_TimedMetadataEncodingProperties_Static)};
+    py::pyobj_handle TimedMetadataEncodingProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TimedMetadataEncodingProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TimedMetadataEncodingProperties_Static{PyType_FromSpecWithBases(&type_spec_TimedMetadataEncodingProperties_Static, TimedMetadataEncodingProperties_Static_bases.get())};
     if (!type_TimedMetadataEncodingProperties_Static)
     {
         return nullptr;
@@ -9481,7 +9541,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_VideoEncodingProperties_Static{PyType_FromSpec(&type_spec_VideoEncodingProperties_Static)};
+    py::pyobj_handle VideoEncodingProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!VideoEncodingProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VideoEncodingProperties_Static{PyType_FromSpecWithBases(&type_spec_VideoEncodingProperties_Static, VideoEncodingProperties_Static_bases.get())};
     if (!type_VideoEncodingProperties_Static)
     {
         return nullptr;
@@ -9493,7 +9559,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Vp9ProfileIds_Static{PyType_FromSpec(&type_spec_Vp9ProfileIds_Static)};
+    py::pyobj_handle Vp9ProfileIds_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Vp9ProfileIds_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Vp9ProfileIds_Static{PyType_FromSpecWithBases(&type_spec_Vp9ProfileIds_Static, Vp9ProfileIds_Static_bases.get())};
     if (!type_Vp9ProfileIds_Static)
     {
         return nullptr;
@@ -9511,7 +9583,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMediaEncodingProperties_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMediaEncodingProperties, nullptr))};
+    py::pytype_handle ImplementsIMediaEncodingProperties_type{py::register_python_type(module.get(), &type_spec_ImplementsIMediaEncodingProperties, nullptr, inspectable_meta_type)};
     if (!ImplementsIMediaEncodingProperties_type)
     {
         return nullptr;

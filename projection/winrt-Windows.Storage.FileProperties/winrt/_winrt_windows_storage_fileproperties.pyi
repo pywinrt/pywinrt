@@ -66,7 +66,7 @@ class DocumentProperties(winrt.system.Object, IStorageItemExtraProperties):
     def keywords(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
-class GeotagHelper_Static(type):
+class GeotagHelper_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.Geopoint> Windows.Storage.FileProperties.GeotagHelper::GetGeotagAsync(Windows.Storage.IStorageFile)
     def get_geotag_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[windows_devices_geolocation.Geopoint]: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.GeotagHelper::SetGeotagAsync(Windows.Storage.IStorageFile,Windows.Devices.Geolocation.Geopoint)

@@ -609,6 +609,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system_userprofile_gameservices_core(
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -622,7 +628,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system_userprofile_gameservices_core(
         return nullptr;
     }
 
-    py::pyobj_handle type_GameService_Static{PyType_FromSpec(&type_spec_GameService_Static)};
+    py::pyobj_handle GameService_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GameService_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GameService_Static{PyType_FromSpecWithBases(&type_spec_GameService_Static, GameService_Static_bases.get())};
     if (!type_GameService_Static)
     {
         return nullptr;
@@ -634,7 +646,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system_userprofile_gameservices_core(
         return nullptr;
     }
 
-    py::pytype_handle GameServicePropertyCollection_type{py::register_python_type(module.get(), &type_spec_GameServicePropertyCollection, object_bases.get(), nullptr)};
+    py::pytype_handle GameServicePropertyCollection_type{py::register_python_type(module.get(), &type_spec_GameServicePropertyCollection, object_bases.get(), inspectable_meta_type)};
     if (!GameServicePropertyCollection_type)
     {
         return nullptr;

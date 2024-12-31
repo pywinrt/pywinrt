@@ -1872,6 +1872,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1885,13 +1891,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreIncrementalInkStroke_type{py::register_python_type(module.get(), &type_spec_CoreIncrementalInkStroke, object_bases.get(), nullptr)};
+    py::pytype_handle CoreIncrementalInkStroke_type{py::register_python_type(module.get(), &type_spec_CoreIncrementalInkStroke, object_bases.get(), inspectable_meta_type)};
     if (!CoreIncrementalInkStroke_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreInkIndependentInputSource_Static{PyType_FromSpec(&type_spec_CoreInkIndependentInputSource_Static)};
+    py::pyobj_handle CoreInkIndependentInputSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreInkIndependentInputSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreInkIndependentInputSource_Static{PyType_FromSpecWithBases(&type_spec_CoreInkIndependentInputSource_Static, CoreInkIndependentInputSource_Static_bases.get())};
     if (!type_CoreInkIndependentInputSource_Static)
     {
         return nullptr;
@@ -1903,19 +1915,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreInkPresenterHost_type{py::register_python_type(module.get(), &type_spec_CoreInkPresenterHost, object_bases.get(), nullptr)};
+    py::pytype_handle CoreInkPresenterHost_type{py::register_python_type(module.get(), &type_spec_CoreInkPresenterHost, object_bases.get(), inspectable_meta_type)};
     if (!CoreInkPresenterHost_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreWetStrokeUpdateEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWetStrokeUpdateEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreWetStrokeUpdateEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWetStrokeUpdateEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreWetStrokeUpdateEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreWetStrokeUpdateSource_Static{PyType_FromSpec(&type_spec_CoreWetStrokeUpdateSource_Static)};
+    py::pyobj_handle CoreWetStrokeUpdateSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreWetStrokeUpdateSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreWetStrokeUpdateSource_Static{PyType_FromSpecWithBases(&type_spec_CoreWetStrokeUpdateSource_Static, CoreWetStrokeUpdateSource_Static_bases.get())};
     if (!type_CoreWetStrokeUpdateSource_Static)
     {
         return nullptr;

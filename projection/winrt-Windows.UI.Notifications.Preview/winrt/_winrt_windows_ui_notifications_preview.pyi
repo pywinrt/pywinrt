@@ -14,7 +14,7 @@ import winrt.windows.ui as windows_ui
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ToastOcclusionManagerPreview_Static(type):
+class ToastOcclusionManagerPreview_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.Notifications.Preview.ToastOcclusionManagerPreview::SetToastWindowMargin(Windows.UI.WindowId,System.Double)
     def set_toast_window_margin(cls, app_window_id: windows_ui.WindowId, margin: winrt.system.Double, /) -> None: ...
 

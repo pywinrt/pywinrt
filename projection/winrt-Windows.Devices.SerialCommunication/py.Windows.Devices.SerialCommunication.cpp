@@ -1659,6 +1659,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_serialcommunication(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1672,19 +1678,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_serialcommunication(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ErrorReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_ErrorReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ErrorReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_ErrorReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ErrorReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PinChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PinChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PinChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PinChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PinChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SerialDevice_Static{PyType_FromSpec(&type_spec_SerialDevice_Static)};
+    py::pyobj_handle SerialDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SerialDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SerialDevice_Static{PyType_FromSpecWithBases(&type_spec_SerialDevice_Static, SerialDevice_Static_bases.get())};
     if (!type_SerialDevice_Static)
     {
         return nullptr;

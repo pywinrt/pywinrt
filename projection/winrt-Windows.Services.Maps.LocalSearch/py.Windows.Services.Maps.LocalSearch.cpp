@@ -1330,6 +1330,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_localsearch(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1343,7 +1349,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_localsearch(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LocalCategories_Static{PyType_FromSpec(&type_spec_LocalCategories_Static)};
+    py::pyobj_handle LocalCategories_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LocalCategories_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LocalCategories_Static{PyType_FromSpecWithBases(&type_spec_LocalCategories_Static, LocalCategories_Static_bases.get())};
     if (!type_LocalCategories_Static)
     {
         return nullptr;
@@ -1355,13 +1367,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_localsearch(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LocalLocation_type{py::register_python_type(module.get(), &type_spec_LocalLocation, object_bases.get(), nullptr)};
+    py::pytype_handle LocalLocation_type{py::register_python_type(module.get(), &type_spec_LocalLocation, object_bases.get(), inspectable_meta_type)};
     if (!LocalLocation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LocalLocationFinder_Static{PyType_FromSpec(&type_spec_LocalLocationFinder_Static)};
+    py::pyobj_handle LocalLocationFinder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LocalLocationFinder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LocalLocationFinder_Static{PyType_FromSpecWithBases(&type_spec_LocalLocationFinder_Static, LocalLocationFinder_Static_bases.get())};
     if (!type_LocalLocationFinder_Static)
     {
         return nullptr;
@@ -1373,25 +1391,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_localsearch(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LocalLocationFinderResult_type{py::register_python_type(module.get(), &type_spec_LocalLocationFinderResult, object_bases.get(), nullptr)};
+    py::pytype_handle LocalLocationFinderResult_type{py::register_python_type(module.get(), &type_spec_LocalLocationFinderResult, object_bases.get(), inspectable_meta_type)};
     if (!LocalLocationFinderResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LocalLocationHoursOfOperationItem_type{py::register_python_type(module.get(), &type_spec_LocalLocationHoursOfOperationItem, object_bases.get(), nullptr)};
+    py::pytype_handle LocalLocationHoursOfOperationItem_type{py::register_python_type(module.get(), &type_spec_LocalLocationHoursOfOperationItem, object_bases.get(), inspectable_meta_type)};
     if (!LocalLocationHoursOfOperationItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LocalLocationRatingInfo_type{py::register_python_type(module.get(), &type_spec_LocalLocationRatingInfo, object_bases.get(), nullptr)};
+    py::pytype_handle LocalLocationRatingInfo_type{py::register_python_type(module.get(), &type_spec_LocalLocationRatingInfo, object_bases.get(), inspectable_meta_type)};
     if (!LocalLocationRatingInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PlaceInfoHelper_Static{PyType_FromSpec(&type_spec_PlaceInfoHelper_Static)};
+    py::pyobj_handle PlaceInfoHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PlaceInfoHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PlaceInfoHelper_Static{PyType_FromSpecWithBases(&type_spec_PlaceInfoHelper_Static, PlaceInfoHelper_Static_bases.get())};
     if (!type_PlaceInfoHelper_Static)
     {
         return nullptr;

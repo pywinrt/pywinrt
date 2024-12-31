@@ -3115,6 +3115,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifidirect_services(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3128,7 +3134,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifidirect_services(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_WiFiDirectService_Static{PyType_FromSpec(&type_spec_WiFiDirectService_Static)};
+    py::pyobj_handle WiFiDirectService_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WiFiDirectService_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WiFiDirectService_Static{PyType_FromSpecWithBases(&type_spec_WiFiDirectService_Static, WiFiDirectService_Static_bases.get())};
     if (!type_WiFiDirectService_Static)
     {
         return nullptr;
@@ -3140,49 +3152,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifidirect_services(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WiFiDirectServiceAdvertiser_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceAdvertiser, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiDirectServiceAdvertiser_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceAdvertiser, object_bases.get(), inspectable_meta_type)};
     if (!WiFiDirectServiceAdvertiser_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiDirectServiceAutoAcceptSessionConnectedEventArgs_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiDirectServiceAutoAcceptSessionConnectedEventArgs_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WiFiDirectServiceAutoAcceptSessionConnectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiDirectServiceProvisioningInfo_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceProvisioningInfo, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiDirectServiceProvisioningInfo_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceProvisioningInfo, object_bases.get(), inspectable_meta_type)};
     if (!WiFiDirectServiceProvisioningInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiDirectServiceRemotePortAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiDirectServiceRemotePortAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WiFiDirectServiceRemotePortAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiDirectServiceSession_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSession, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiDirectServiceSession_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSession, object_bases.get(), inspectable_meta_type)};
     if (!WiFiDirectServiceSession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiDirectServiceSessionDeferredEventArgs_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionDeferredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiDirectServiceSessionDeferredEventArgs_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionDeferredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WiFiDirectServiceSessionDeferredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiDirectServiceSessionRequest_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionRequest, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiDirectServiceSessionRequest_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionRequest, object_bases.get(), inspectable_meta_type)};
     if (!WiFiDirectServiceSessionRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiDirectServiceSessionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiDirectServiceSessionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WiFiDirectServiceSessionRequestedEventArgs_type)
     {
         return nullptr;

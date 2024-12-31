@@ -1022,6 +1022,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applifecycle(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1035,7 +1041,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applifecycle(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ActivationRegistrationManager_Static{PyType_FromSpec(&type_spec_ActivationRegistrationManager_Static)};
+    py::pyobj_handle ActivationRegistrationManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ActivationRegistrationManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ActivationRegistrationManager_Static{PyType_FromSpecWithBases(&type_spec_ActivationRegistrationManager_Static, ActivationRegistrationManager_Static_bases.get())};
     if (!type_ActivationRegistrationManager_Static)
     {
         return nullptr;
@@ -1047,13 +1059,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applifecycle(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AppActivationArguments_type{py::register_python_type(module.get(), &type_spec_AppActivationArguments, object_bases.get(), nullptr)};
+    py::pytype_handle AppActivationArguments_type{py::register_python_type(module.get(), &type_spec_AppActivationArguments, object_bases.get(), inspectable_meta_type)};
     if (!AppActivationArguments_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppInstance_Static{PyType_FromSpec(&type_spec_AppInstance_Static)};
+    py::pyobj_handle AppInstance_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppInstance_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppInstance_Static{PyType_FromSpecWithBases(&type_spec_AppInstance_Static, AppInstance_Static_bases.get())};
     if (!type_AppInstance_Static)
     {
         return nullptr;

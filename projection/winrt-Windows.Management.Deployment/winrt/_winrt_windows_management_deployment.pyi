@@ -127,7 +127,7 @@ class AddPackageOptions(winrt.system.Object):
     def expected_digests(self) -> typing.MutableMapping[windows_foundation.Uri, str]: ...
 
 @typing.final
-class AppInstallerManager_Static(type):
+class AppInstallerManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Management.Deployment.AppInstallerManager Windows.Management.Deployment.AppInstallerManager::GetDefault()
     def get_default(cls) -> AppInstallerManager: ...
     # Windows.Management.Deployment.AppInstallerManager Windows.Management.Deployment.AppInstallerManager::GetForSystem()
@@ -143,7 +143,7 @@ class AppInstallerManager(winrt.system.Object, metaclass=AppInstallerManager_Sta
     def set_auto_update_settings(self, package_family_name: str, app_installer_info: AutoUpdateSettingsOptions, /) -> None: ...
 
 @typing.final
-class AutoUpdateSettingsOptions_Static(type):
+class AutoUpdateSettingsOptions_Static(winrt._winrt.IInspectable_Static):
     # Windows.Management.Deployment.AutoUpdateSettingsOptions Windows.Management.Deployment.AutoUpdateSettingsOptions::CreateFromAppInstallerInfo(Windows.ApplicationModel.AppInstallerInfo)
     def create_from_app_installer_info(cls, app_installer_info: windows_applicationmodel.AppInstallerInfo, /) -> AutoUpdateSettingsOptions: ...
 
@@ -649,7 +649,7 @@ class SharedPackageContainer(winrt.system.Object):
     def name(self) -> str: ...
 
 @typing.final
-class SharedPackageContainerManager_Static(type):
+class SharedPackageContainerManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Management.Deployment.SharedPackageContainerManager Windows.Management.Deployment.SharedPackageContainerManager::GetDefault()
     def get_default(cls) -> SharedPackageContainerManager: ...
     # Windows.Management.Deployment.SharedPackageContainerManager Windows.Management.Deployment.SharedPackageContainerManager::GetForProvisioning()

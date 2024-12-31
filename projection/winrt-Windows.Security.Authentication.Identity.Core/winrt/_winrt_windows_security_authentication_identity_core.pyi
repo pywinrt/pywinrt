@@ -17,7 +17,7 @@ from winrt.windows.security.authentication.identity.core import MicrosoftAccount
 Self = typing.TypeVar('Self')
 
 @typing.final
-class MicrosoftAccountMultiFactorAuthenticationManager_Static(type):
+class MicrosoftAccountMultiFactorAuthenticationManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::get_Current()
     @_property
     def current(cls) -> MicrosoftAccountMultiFactorAuthenticationManager: ...

@@ -17,7 +17,7 @@ from winrt.windows.media.closedcaptioning import ClosedCaptionColor, ClosedCapti
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ClosedCaptionProperties_Static(type):
+class ClosedCaptionProperties_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Media.ClosedCaptioning.ClosedCaptionProperties::add_PropertiesChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_properties_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.ClosedCaptioning.ClosedCaptionProperties::remove_PropertiesChanged(Windows.Foundation.EventRegistrationToken)

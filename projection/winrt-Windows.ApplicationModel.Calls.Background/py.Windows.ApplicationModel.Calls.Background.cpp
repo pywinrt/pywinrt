@@ -1015,6 +1015,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_background(void) noe
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1028,37 +1034,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_background(void) noe
         return nullptr;
     }
 
-    py::pytype_handle PhoneCallBlockedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneCallBlockedTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneCallBlockedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneCallBlockedTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneCallBlockedTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneCallOriginDataRequestTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneCallOriginDataRequestTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneCallOriginDataRequestTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneCallOriginDataRequestTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneCallOriginDataRequestTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneIncomingCallDismissedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneIncomingCallDismissedTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneIncomingCallDismissedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneIncomingCallDismissedTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneIncomingCallDismissedTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneIncomingCallNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneIncomingCallNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneIncomingCallNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneIncomingCallNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneIncomingCallNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneLineChangedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneLineChangedTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneLineChangedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneLineChangedTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneLineChangedTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneNewVoicemailMessageTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneNewVoicemailMessageTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneNewVoicemailMessageTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PhoneNewVoicemailMessageTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PhoneNewVoicemailMessageTriggerDetails_type)
     {
         return nullptr;

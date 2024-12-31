@@ -26,7 +26,7 @@ class PerceptionTimestamp(winrt.system.Object):
     def system_relative_target_time(self) -> datetime.timedelta: ...
 
 @typing.final
-class PerceptionTimestampHelper_Static(type):
+class PerceptionTimestampHelper_Static(winrt._winrt.IInspectable_Static):
     # Windows.Perception.PerceptionTimestamp Windows.Perception.PerceptionTimestampHelper::FromHistoricalTargetTime(Windows.Foundation.DateTime)
     def from_historical_target_time(cls, target_time: datetime.datetime, /) -> PerceptionTimestamp: ...
     # Windows.Perception.PerceptionTimestamp Windows.Perception.PerceptionTimestampHelper::FromSystemRelativeTargetTime(Windows.Foundation.TimeSpan)

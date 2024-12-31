@@ -18,7 +18,7 @@ from winrt.windows.applicationmodel.store.licensemanagement import LicenseRefres
 Self = typing.TypeVar('Self')
 
 @typing.final
-class LicenseManager_Static(type):
+class LicenseManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::AddLicenseAsync(Windows.Storage.Streams.IBuffer)
     def add_license_async(cls, license: windows_storage_streams.IBuffer, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult> Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::GetSatisfactionInfosAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>)

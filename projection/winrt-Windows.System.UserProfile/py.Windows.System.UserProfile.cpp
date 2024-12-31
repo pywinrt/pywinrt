@@ -3033,6 +3033,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3046,7 +3052,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AdvertisingManager_Static{PyType_FromSpec(&type_spec_AdvertisingManager_Static)};
+    py::pyobj_handle AdvertisingManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AdvertisingManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AdvertisingManager_Static{PyType_FromSpecWithBases(&type_spec_AdvertisingManager_Static, AdvertisingManager_Static_bases.get())};
     if (!type_AdvertisingManager_Static)
     {
         return nullptr;
@@ -3058,13 +3070,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AdvertisingManagerForUser_type{py::register_python_type(module.get(), &type_spec_AdvertisingManagerForUser, object_bases.get(), nullptr)};
+    py::pytype_handle AdvertisingManagerForUser_type{py::register_python_type(module.get(), &type_spec_AdvertisingManagerForUser, object_bases.get(), inspectable_meta_type)};
     if (!AdvertisingManagerForUser_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AssignedAccessSettings_Static{PyType_FromSpec(&type_spec_AssignedAccessSettings_Static)};
+    py::pyobj_handle AssignedAccessSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AssignedAccessSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AssignedAccessSettings_Static{PyType_FromSpecWithBases(&type_spec_AssignedAccessSettings_Static, AssignedAccessSettings_Static_bases.get())};
     if (!type_AssignedAccessSettings_Static)
     {
         return nullptr;
@@ -3076,7 +3094,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DiagnosticsSettings_Static{PyType_FromSpec(&type_spec_DiagnosticsSettings_Static)};
+    py::pyobj_handle DiagnosticsSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DiagnosticsSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DiagnosticsSettings_Static{PyType_FromSpecWithBases(&type_spec_DiagnosticsSettings_Static, DiagnosticsSettings_Static_bases.get())};
     if (!type_DiagnosticsSettings_Static)
     {
         return nullptr;
@@ -3088,7 +3112,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FirstSignInSettings_Static{PyType_FromSpec(&type_spec_FirstSignInSettings_Static)};
+    py::pyobj_handle FirstSignInSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FirstSignInSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FirstSignInSettings_Static{PyType_FromSpecWithBases(&type_spec_FirstSignInSettings_Static, FirstSignInSettings_Static_bases.get())};
     if (!type_FirstSignInSettings_Static)
     {
         return nullptr;
@@ -3100,7 +3130,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GlobalizationPreferences_Static{PyType_FromSpec(&type_spec_GlobalizationPreferences_Static)};
+    py::pyobj_handle GlobalizationPreferences_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GlobalizationPreferences_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GlobalizationPreferences_Static{PyType_FromSpecWithBases(&type_spec_GlobalizationPreferences_Static, GlobalizationPreferences_Static_bases.get())};
     if (!type_GlobalizationPreferences_Static)
     {
         return nullptr;
@@ -3112,13 +3148,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GlobalizationPreferencesForUser_type{py::register_python_type(module.get(), &type_spec_GlobalizationPreferencesForUser, object_bases.get(), nullptr)};
+    py::pytype_handle GlobalizationPreferencesForUser_type{py::register_python_type(module.get(), &type_spec_GlobalizationPreferencesForUser, object_bases.get(), inspectable_meta_type)};
     if (!GlobalizationPreferencesForUser_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LockScreen_Static{PyType_FromSpec(&type_spec_LockScreen_Static)};
+    py::pyobj_handle LockScreen_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LockScreen_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LockScreen_Static{PyType_FromSpecWithBases(&type_spec_LockScreen_Static, LockScreen_Static_bases.get())};
     if (!type_LockScreen_Static)
     {
         return nullptr;
@@ -3130,7 +3172,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_UserInformation_Static{PyType_FromSpec(&type_spec_UserInformation_Static)};
+    py::pyobj_handle UserInformation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserInformation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserInformation_Static{PyType_FromSpecWithBases(&type_spec_UserInformation_Static, UserInformation_Static_bases.get())};
     if (!type_UserInformation_Static)
     {
         return nullptr;
@@ -3142,7 +3190,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_UserProfilePersonalizationSettings_Static{PyType_FromSpec(&type_spec_UserProfilePersonalizationSettings_Static)};
+    py::pyobj_handle UserProfilePersonalizationSettings_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UserProfilePersonalizationSettings_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UserProfilePersonalizationSettings_Static{PyType_FromSpecWithBases(&type_spec_UserProfilePersonalizationSettings_Static, UserProfilePersonalizationSettings_Static_bases.get())};
     if (!type_UserProfilePersonalizationSettings_Static)
     {
         return nullptr;

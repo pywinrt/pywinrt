@@ -15,7 +15,7 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CustomSensor_Static(type):
+class CustomSensor_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Custom.CustomSensor> Windows.Devices.Sensors.Custom.CustomSensor::FromIdAsync(System.String)
     def from_id_async(cls, sensor_id: str, /) -> windows_foundation.IAsyncOperation[CustomSensor]: ...
     # System.String Windows.Devices.Sensors.Custom.CustomSensor::GetDeviceSelector(System.Guid)

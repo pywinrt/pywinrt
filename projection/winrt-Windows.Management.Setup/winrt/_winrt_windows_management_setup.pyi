@@ -171,7 +171,7 @@ class DevicePreparationExecutionContext(winrt.system.Object):
     def context(self) -> str: ...
 
 @typing.final
-class MachineProvisioningProgressReporter_Static(type):
+class MachineProvisioningProgressReporter_Static(winrt._winrt.IInspectable_Static):
     # Windows.Management.Setup.MachineProvisioningProgressReporter Windows.Management.Setup.MachineProvisioningProgressReporter::GetForLaunchUri(Windows.Foundation.Uri,Windows.Management.Setup.DeploymentSessionHeartbeatRequested)
     def get_for_launch_uri(cls, launch_uri: windows_foundation.Uri, heartbeat_handler: DeploymentSessionHeartbeatRequested, /) -> MachineProvisioningProgressReporter: ...
 

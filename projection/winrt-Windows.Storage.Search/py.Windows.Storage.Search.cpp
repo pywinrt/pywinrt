@@ -7664,6 +7664,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_search(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -7677,7 +7683,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_search(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ContentIndexer_Static{PyType_FromSpec(&type_spec_ContentIndexer_Static)};
+    py::pyobj_handle ContentIndexer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ContentIndexer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContentIndexer_Static{PyType_FromSpecWithBases(&type_spec_ContentIndexer_Static, ContentIndexer_Static_bases.get())};
     if (!type_ContentIndexer_Static)
     {
         return nullptr;
@@ -7689,61 +7701,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_search(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContentIndexerQuery_type{py::register_python_type(module.get(), &type_spec_ContentIndexerQuery, object_bases.get(), nullptr)};
+    py::pytype_handle ContentIndexerQuery_type{py::register_python_type(module.get(), &type_spec_ContentIndexerQuery, object_bases.get(), inspectable_meta_type)};
     if (!ContentIndexerQuery_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IndexableContent_type{py::register_python_type(module.get(), &type_spec_IndexableContent, object_bases.get(), nullptr)};
+    py::pytype_handle IndexableContent_type{py::register_python_type(module.get(), &type_spec_IndexableContent, object_bases.get(), inspectable_meta_type)};
     if (!IndexableContent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle QueryOptions_type{py::register_python_type(module.get(), &type_spec_QueryOptions, object_bases.get(), nullptr)};
+    py::pytype_handle QueryOptions_type{py::register_python_type(module.get(), &type_spec_QueryOptions, object_bases.get(), inspectable_meta_type)};
     if (!QueryOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SortEntryVector_type{py::register_python_type(module.get(), &type_spec_SortEntryVector, object_bases.get(), nullptr)};
+    py::pytype_handle SortEntryVector_type{py::register_python_type(module.get(), &type_spec_SortEntryVector, object_bases.get(), inspectable_meta_type)};
     if (!SortEntryVector_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageFileQueryResult_type{py::register_python_type(module.get(), &type_spec_StorageFileQueryResult, object_bases.get(), nullptr)};
+    py::pytype_handle StorageFileQueryResult_type{py::register_python_type(module.get(), &type_spec_StorageFileQueryResult, object_bases.get(), inspectable_meta_type)};
     if (!StorageFileQueryResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageFolderQueryResult_type{py::register_python_type(module.get(), &type_spec_StorageFolderQueryResult, object_bases.get(), nullptr)};
+    py::pytype_handle StorageFolderQueryResult_type{py::register_python_type(module.get(), &type_spec_StorageFolderQueryResult, object_bases.get(), inspectable_meta_type)};
     if (!StorageFolderQueryResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageItemQueryResult_type{py::register_python_type(module.get(), &type_spec_StorageItemQueryResult, object_bases.get(), nullptr)};
+    py::pytype_handle StorageItemQueryResult_type{py::register_python_type(module.get(), &type_spec_StorageItemQueryResult, object_bases.get(), inspectable_meta_type)};
     if (!StorageItemQueryResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageLibraryChangeTrackerTriggerDetails_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeTrackerTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle StorageLibraryChangeTrackerTriggerDetails_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeTrackerTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!StorageLibraryChangeTrackerTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageLibraryContentChangedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_StorageLibraryContentChangedTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle StorageLibraryContentChangedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_StorageLibraryContentChangedTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!StorageLibraryContentChangedTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ValueAndLanguage_type{py::register_python_type(module.get(), &type_spec_ValueAndLanguage, object_bases.get(), nullptr)};
+    py::pytype_handle ValueAndLanguage_type{py::register_python_type(module.get(), &type_spec_ValueAndLanguage, object_bases.get(), inspectable_meta_type)};
     if (!ValueAndLanguage_type)
     {
         return nullptr;
@@ -7755,7 +7767,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_search(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIIndexableContent_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIIndexableContent, nullptr))};
+    py::pytype_handle ImplementsIIndexableContent_type{py::register_python_type(module.get(), &type_spec_ImplementsIIndexableContent, nullptr, inspectable_meta_type)};
     if (!ImplementsIIndexableContent_type)
     {
         return nullptr;
@@ -7772,7 +7784,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_search(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageFolderQueryOperations_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageFolderQueryOperations, nullptr))};
+    py::pytype_handle ImplementsIStorageFolderQueryOperations_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageFolderQueryOperations, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageFolderQueryOperations_type)
     {
         return nullptr;
@@ -7789,7 +7801,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_search(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageQueryResultBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageQueryResultBase, nullptr))};
+    py::pytype_handle ImplementsIStorageQueryResultBase_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageQueryResultBase, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageQueryResultBase_type)
     {
         return nullptr;

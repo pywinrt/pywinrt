@@ -21,7 +21,7 @@ from winrt.windows.devices.wifidirect.services import WiFiDirectServiceAdvertise
 Self = typing.TypeVar('Self')
 
 @typing.final
-class WiFiDirectService_Static(type):
+class WiFiDirectService_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectService> Windows.Devices.WiFiDirect.Services.WiFiDirectService::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectService]: ...
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetSelector(System.String)

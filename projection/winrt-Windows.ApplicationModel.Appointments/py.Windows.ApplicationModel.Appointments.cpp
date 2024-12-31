@@ -10717,6 +10717,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments(void) noexcep
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -10730,43 +10736,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle Appointment_type{py::register_python_type(module.get(), &type_spec_Appointment, object_bases.get(), nullptr)};
+    py::pytype_handle Appointment_type{py::register_python_type(module.get(), &type_spec_Appointment, object_bases.get(), inspectable_meta_type)};
     if (!Appointment_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendar_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendar, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendar_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendar, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendar_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarSyncManager_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarSyncManager, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarSyncManager_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarSyncManager, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarSyncManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentConflictResult_type{py::register_python_type(module.get(), &type_spec_AppointmentConflictResult, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentConflictResult_type{py::register_python_type(module.get(), &type_spec_AppointmentConflictResult, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentConflictResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentException_type{py::register_python_type(module.get(), &type_spec_AppointmentException, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentException_type{py::register_python_type(module.get(), &type_spec_AppointmentException, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentException_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentInvitee_type{py::register_python_type(module.get(), &type_spec_AppointmentInvitee, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentInvitee_type{py::register_python_type(module.get(), &type_spec_AppointmentInvitee, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentInvitee_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppointmentManager_Static{PyType_FromSpec(&type_spec_AppointmentManager_Static)};
+    py::pyobj_handle AppointmentManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppointmentManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppointmentManager_Static{PyType_FromSpecWithBases(&type_spec_AppointmentManager_Static, AppointmentManager_Static_bases.get())};
     if (!type_AppointmentManager_Static)
     {
         return nullptr;
@@ -10778,19 +10790,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle AppointmentManagerForUser_type{py::register_python_type(module.get(), &type_spec_AppointmentManagerForUser, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentManagerForUser_type{py::register_python_type(module.get(), &type_spec_AppointmentManagerForUser, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentManagerForUser_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentOrganizer_type{py::register_python_type(module.get(), &type_spec_AppointmentOrganizer, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentOrganizer_type{py::register_python_type(module.get(), &type_spec_AppointmentOrganizer, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentOrganizer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppointmentProperties_Static{PyType_FromSpec(&type_spec_AppointmentProperties_Static)};
+    py::pyobj_handle AppointmentProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AppointmentProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppointmentProperties_Static{PyType_FromSpecWithBases(&type_spec_AppointmentProperties_Static, AppointmentProperties_Static_bases.get())};
     if (!type_AppointmentProperties_Static)
     {
         return nullptr;
@@ -10802,55 +10820,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle AppointmentRecurrence_type{py::register_python_type(module.get(), &type_spec_AppointmentRecurrence, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentRecurrence_type{py::register_python_type(module.get(), &type_spec_AppointmentRecurrence, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentRecurrence_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentStore_type{py::register_python_type(module.get(), &type_spec_AppointmentStore, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentStore_type{py::register_python_type(module.get(), &type_spec_AppointmentStore, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentStore_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentStoreChange_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChange, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentStoreChange_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChange, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentStoreChange_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentStoreChangeReader_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChangeReader, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentStoreChangeReader_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChangeReader, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentStoreChangeReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentStoreChangeTracker_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChangeTracker, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentStoreChangeTracker_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChangeTracker, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentStoreChangeTracker_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentStoreChangedDeferral_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChangedDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentStoreChangedDeferral_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChangedDeferral, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentStoreChangedDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentStoreChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentStoreChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentStoreChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentStoreNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentStoreNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentStoreNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FindAppointmentsOptions_type{py::register_python_type(module.get(), &type_spec_FindAppointmentsOptions, object_bases.get(), nullptr)};
+    py::pytype_handle FindAppointmentsOptions_type{py::register_python_type(module.get(), &type_spec_FindAppointmentsOptions, object_bases.get(), inspectable_meta_type)};
     if (!FindAppointmentsOptions_type)
     {
         return nullptr;
@@ -10862,7 +10880,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAppointmentParticipant_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAppointmentParticipant, nullptr))};
+    py::pytype_handle ImplementsIAppointmentParticipant_type{py::register_python_type(module.get(), &type_spec_ImplementsIAppointmentParticipant, nullptr, inspectable_meta_type)};
     if (!ImplementsIAppointmentParticipant_type)
     {
         return nullptr;

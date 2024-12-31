@@ -925,6 +925,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_contentrestrictions(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -938,19 +944,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_contentrestrictions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContentRestrictionsBrowsePolicy_type{py::register_python_type(module.get(), &type_spec_ContentRestrictionsBrowsePolicy, object_bases.get(), nullptr)};
+    py::pytype_handle ContentRestrictionsBrowsePolicy_type{py::register_python_type(module.get(), &type_spec_ContentRestrictionsBrowsePolicy, object_bases.get(), inspectable_meta_type)};
     if (!ContentRestrictionsBrowsePolicy_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RatedContentDescription_type{py::register_python_type(module.get(), &type_spec_RatedContentDescription, object_bases.get(), nullptr)};
+    py::pytype_handle RatedContentDescription_type{py::register_python_type(module.get(), &type_spec_RatedContentDescription, object_bases.get(), inspectable_meta_type)};
     if (!RatedContentDescription_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RatedContentRestrictions_type{py::register_python_type(module.get(), &type_spec_RatedContentRestrictions, object_bases.get(), nullptr)};
+    py::pytype_handle RatedContentRestrictions_type{py::register_python_type(module.get(), &type_spec_RatedContentRestrictions, object_bases.get(), inspectable_meta_type)};
     if (!RatedContentRestrictions_type)
     {
         return nullptr;

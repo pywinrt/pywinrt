@@ -60,7 +60,7 @@ class CastingConnectionErrorOccurredEventArgs(winrt.system.Object):
     def message(self) -> str: ...
 
 @typing.final
-class CastingDevice_Static(type):
+class CastingDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.Casting.CastingDevice::DeviceInfoSupportsCastingAsync(Windows.Devices.Enumeration.DeviceInformation)
     def device_info_supports_casting_async(cls, device: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Casting.CastingDevice> Windows.Media.Casting.CastingDevice::FromIdAsync(System.String)

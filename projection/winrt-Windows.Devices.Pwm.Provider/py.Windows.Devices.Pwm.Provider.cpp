@@ -1018,6 +1018,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm_provider(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1037,7 +1043,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPwmControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPwmControllerProvider, nullptr))};
+    py::pytype_handle ImplementsIPwmControllerProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIPwmControllerProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIPwmControllerProvider_type)
     {
         return nullptr;
@@ -1054,7 +1060,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPwmProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPwmProvider, nullptr))};
+    py::pytype_handle ImplementsIPwmProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIPwmProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIPwmProvider_type)
     {
         return nullptr;

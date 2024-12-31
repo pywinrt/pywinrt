@@ -6576,6 +6576,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_spatial(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -6589,55 +6595,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_spatial(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SpatialGestureRecognizer_type{py::register_python_type(module.get(), &type_spec_SpatialGestureRecognizer, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialGestureRecognizer_type{py::register_python_type(module.get(), &type_spec_SpatialGestureRecognizer, object_bases.get(), inspectable_meta_type)};
     if (!SpatialGestureRecognizer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialHoldCanceledEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialHoldCanceledEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialHoldCanceledEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialHoldCanceledEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialHoldCanceledEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialHoldCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialHoldCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialHoldCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialHoldCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialHoldCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialHoldStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialHoldStartedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialHoldStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialHoldStartedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialHoldStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteraction_type{py::register_python_type(module.get(), &type_spec_SpatialInteraction, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteraction_type{py::register_python_type(module.get(), &type_spec_SpatialInteraction, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteraction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteractionController_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionController, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteractionController_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionController, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteractionController_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteractionControllerProperties_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionControllerProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteractionControllerProperties_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionControllerProperties, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteractionControllerProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteractionDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionDetectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteractionDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionDetectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteractionDetectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SpatialInteractionManager_Static{PyType_FromSpec(&type_spec_SpatialInteractionManager_Static)};
+    py::pyobj_handle SpatialInteractionManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SpatialInteractionManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpatialInteractionManager_Static{PyType_FromSpecWithBases(&type_spec_SpatialInteractionManager_Static, SpatialInteractionManager_Static_bases.get())};
     if (!type_SpatialInteractionManager_Static)
     {
         return nullptr;
@@ -6649,97 +6661,103 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_spatial(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteractionSource_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSource, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteractionSource_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSource, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteractionSource_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteractionSourceEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSourceEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteractionSourceEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSourceEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteractionSourceEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteractionSourceLocation_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSourceLocation, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteractionSourceLocation_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSourceLocation, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteractionSourceLocation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteractionSourceProperties_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSourceProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteractionSourceProperties_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSourceProperties, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteractionSourceProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialInteractionSourceState_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSourceState, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialInteractionSourceState_type{py::register_python_type(module.get(), &type_spec_SpatialInteractionSourceState, object_bases.get(), inspectable_meta_type)};
     if (!SpatialInteractionSourceState_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialManipulationCanceledEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationCanceledEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialManipulationCanceledEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationCanceledEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialManipulationCanceledEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialManipulationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialManipulationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialManipulationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialManipulationDelta_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationDelta, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialManipulationDelta_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationDelta, object_bases.get(), inspectable_meta_type)};
     if (!SpatialManipulationDelta_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialManipulationStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationStartedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialManipulationStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationStartedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialManipulationStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialManipulationUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialManipulationUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialManipulationUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialManipulationUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialNavigationCanceledEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialNavigationCanceledEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialNavigationCanceledEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialNavigationCanceledEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialNavigationCanceledEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialNavigationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialNavigationCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialNavigationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialNavigationCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialNavigationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialNavigationStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialNavigationStartedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialNavigationStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialNavigationStartedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialNavigationStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialNavigationUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialNavigationUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialNavigationUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialNavigationUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialNavigationUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialPointerInteractionSourcePose_type{py::register_python_type(module.get(), &type_spec_SpatialPointerInteractionSourcePose, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialPointerInteractionSourcePose_type{py::register_python_type(module.get(), &type_spec_SpatialPointerInteractionSourcePose, object_bases.get(), inspectable_meta_type)};
     if (!SpatialPointerInteractionSourcePose_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SpatialPointerPose_Static{PyType_FromSpec(&type_spec_SpatialPointerPose_Static)};
+    py::pyobj_handle SpatialPointerPose_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SpatialPointerPose_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpatialPointerPose_Static{PyType_FromSpecWithBases(&type_spec_SpatialPointerPose_Static, SpatialPointerPose_Static_bases.get())};
     if (!type_SpatialPointerPose_Static)
     {
         return nullptr;
@@ -6751,19 +6769,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_spatial(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SpatialRecognitionEndedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialRecognitionEndedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialRecognitionEndedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialRecognitionEndedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialRecognitionEndedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialRecognitionStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialRecognitionStartedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialRecognitionStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialRecognitionStartedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialRecognitionStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpatialTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialTappedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SpatialTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpatialTappedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SpatialTappedEventArgs_type)
     {
         return nullptr;

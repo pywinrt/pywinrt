@@ -15,7 +15,7 @@ import winrt.windows.foundation as windows_foundation
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ThemeSettings_Static(type):
+class ThemeSettings_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.System.ThemeSettings Microsoft.UI.System.ThemeSettings::CreateForWindowId(Microsoft.UI.WindowId)
     def create_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> ThemeSettings: ...
 

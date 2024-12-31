@@ -33,7 +33,7 @@ class UserDataBufferUnprotectResult(winrt.system.Object):
     def unprotected_buffer(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
-class UserDataProtectionManager_Static(type):
+class UserDataProtectionManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.DataProtection.UserDataProtectionManager Windows.Security.DataProtection.UserDataProtectionManager::TryGetDefault()
     def try_get_default(cls) -> typing.Optional[UserDataProtectionManager]: ...
     # Windows.Security.DataProtection.UserDataProtectionManager Windows.Security.DataProtection.UserDataProtectionManager::TryGetForUser(Windows.System.User)

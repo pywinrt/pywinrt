@@ -29,7 +29,7 @@ class PrintPageDescription:
     def __init__(self, page_size: windows_foundation.Size = windows_foundation.Size(), imageable_rect: windows_foundation.Rect = windows_foundation.Rect(), dpi_x: winrt.system.UInt32 = 0, dpi_y: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
-class PrintManager_Static(type):
+class PrintManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Graphics.Printing.PrintManager Windows.Graphics.Printing.PrintManager::GetForCurrentView()
     def get_for_current_view(cls) -> PrintManager: ...
     # System.Boolean Windows.Graphics.Printing.PrintManager::IsSupported()
@@ -301,7 +301,7 @@ class PrintTaskSourceRequestedDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 @typing.final
-class StandardPrintTaskOptions_Static(type):
+class StandardPrintTaskOptions_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Graphics.Printing.StandardPrintTaskOptions::get_Copies()
     @_property
     def copies(cls) -> str: ...

@@ -1549,6 +1549,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration_pnp(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1562,7 +1568,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration_pnp(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PnpObject_Static{PyType_FromSpec(&type_spec_PnpObject_Static)};
+    py::pyobj_handle PnpObject_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PnpObject_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PnpObject_Static{PyType_FromSpecWithBases(&type_spec_PnpObject_Static, PnpObject_Static_bases.get())};
     if (!type_PnpObject_Static)
     {
         return nullptr;
@@ -1574,19 +1586,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration_pnp(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PnpObjectCollection_type{py::register_python_type(module.get(), &type_spec_PnpObjectCollection, object_bases.get(), nullptr)};
+    py::pytype_handle PnpObjectCollection_type{py::register_python_type(module.get(), &type_spec_PnpObjectCollection, object_bases.get(), inspectable_meta_type)};
     if (!PnpObjectCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PnpObjectUpdate_type{py::register_python_type(module.get(), &type_spec_PnpObjectUpdate, object_bases.get(), nullptr)};
+    py::pytype_handle PnpObjectUpdate_type{py::register_python_type(module.get(), &type_spec_PnpObjectUpdate, object_bases.get(), inspectable_meta_type)};
     if (!PnpObjectUpdate_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PnpObjectWatcher_type{py::register_python_type(module.get(), &type_spec_PnpObjectWatcher, object_bases.get(), nullptr)};
+    py::pytype_handle PnpObjectWatcher_type{py::register_python_type(module.get(), &type_spec_PnpObjectWatcher, object_bases.get(), inspectable_meta_type)};
     if (!PnpObjectWatcher_type)
     {
         return nullptr;

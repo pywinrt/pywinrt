@@ -7342,6 +7342,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -7355,13 +7361,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DeviceAccessChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeviceAccessChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceAccessChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeviceAccessChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DeviceAccessChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DeviceAccessInformation_Static{PyType_FromSpec(&type_spec_DeviceAccessInformation_Static)};
+    py::pyobj_handle DeviceAccessInformation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DeviceAccessInformation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DeviceAccessInformation_Static{PyType_FromSpecWithBases(&type_spec_DeviceAccessInformation_Static, DeviceAccessInformation_Static_bases.get())};
     if (!type_DeviceAccessInformation_Static)
     {
         return nullptr;
@@ -7373,19 +7385,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DeviceConnectionChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_DeviceConnectionChangeTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceConnectionChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_DeviceConnectionChangeTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!DeviceConnectionChangeTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceDisconnectButtonClickedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeviceDisconnectButtonClickedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceDisconnectButtonClickedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeviceDisconnectButtonClickedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DeviceDisconnectButtonClickedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DeviceInformation_Static{PyType_FromSpec(&type_spec_DeviceInformation_Static)};
+    py::pyobj_handle DeviceInformation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DeviceInformation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DeviceInformation_Static{PyType_FromSpecWithBases(&type_spec_DeviceInformation_Static, DeviceInformation_Static_bases.get())};
     if (!type_DeviceInformation_Static)
     {
         return nullptr;
@@ -7397,19 +7415,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DeviceInformationCollection_type{py::register_python_type(module.get(), &type_spec_DeviceInformationCollection, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceInformationCollection_type{py::register_python_type(module.get(), &type_spec_DeviceInformationCollection, object_bases.get(), inspectable_meta_type)};
     if (!DeviceInformationCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceInformationCustomPairing_type{py::register_python_type(module.get(), &type_spec_DeviceInformationCustomPairing, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceInformationCustomPairing_type{py::register_python_type(module.get(), &type_spec_DeviceInformationCustomPairing, object_bases.get(), inspectable_meta_type)};
     if (!DeviceInformationCustomPairing_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DeviceInformationPairing_Static{PyType_FromSpec(&type_spec_DeviceInformationPairing_Static)};
+    py::pyobj_handle DeviceInformationPairing_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DeviceInformationPairing_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DeviceInformationPairing_Static{PyType_FromSpecWithBases(&type_spec_DeviceInformationPairing_Static, DeviceInformationPairing_Static_bases.get())};
     if (!type_DeviceInformationPairing_Static)
     {
         return nullptr;
@@ -7421,85 +7445,85 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DeviceInformationUpdate_type{py::register_python_type(module.get(), &type_spec_DeviceInformationUpdate, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceInformationUpdate_type{py::register_python_type(module.get(), &type_spec_DeviceInformationUpdate, object_bases.get(), inspectable_meta_type)};
     if (!DeviceInformationUpdate_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DevicePairingRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePairingRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePairingRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePairingRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DevicePairingRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DevicePairingResult_type{py::register_python_type(module.get(), &type_spec_DevicePairingResult, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePairingResult_type{py::register_python_type(module.get(), &type_spec_DevicePairingResult, object_bases.get(), inspectable_meta_type)};
     if (!DevicePairingResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DevicePairingSetMembersRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePairingSetMembersRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePairingSetMembersRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePairingSetMembersRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DevicePairingSetMembersRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DevicePicker_type{py::register_python_type(module.get(), &type_spec_DevicePicker, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePicker_type{py::register_python_type(module.get(), &type_spec_DevicePicker, object_bases.get(), inspectable_meta_type)};
     if (!DevicePicker_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DevicePickerAppearance_type{py::register_python_type(module.get(), &type_spec_DevicePickerAppearance, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePickerAppearance_type{py::register_python_type(module.get(), &type_spec_DevicePickerAppearance, object_bases.get(), inspectable_meta_type)};
     if (!DevicePickerAppearance_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DevicePickerFilter_type{py::register_python_type(module.get(), &type_spec_DevicePickerFilter, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePickerFilter_type{py::register_python_type(module.get(), &type_spec_DevicePickerFilter, object_bases.get(), inspectable_meta_type)};
     if (!DevicePickerFilter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeviceSelectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceSelectedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeviceSelectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DeviceSelectedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceThumbnail_type{py::register_python_type(module.get(), &type_spec_DeviceThumbnail, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceThumbnail_type{py::register_python_type(module.get(), &type_spec_DeviceThumbnail, object_bases.get(), inspectable_meta_type)};
     if (!DeviceThumbnail_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceUnpairingResult_type{py::register_python_type(module.get(), &type_spec_DeviceUnpairingResult, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceUnpairingResult_type{py::register_python_type(module.get(), &type_spec_DeviceUnpairingResult, object_bases.get(), inspectable_meta_type)};
     if (!DeviceUnpairingResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceWatcher_type{py::register_python_type(module.get(), &type_spec_DeviceWatcher, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceWatcher_type{py::register_python_type(module.get(), &type_spec_DeviceWatcher, object_bases.get(), inspectable_meta_type)};
     if (!DeviceWatcher_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceWatcherEvent_type{py::register_python_type(module.get(), &type_spec_DeviceWatcherEvent, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceWatcherEvent_type{py::register_python_type(module.get(), &type_spec_DeviceWatcherEvent, object_bases.get(), inspectable_meta_type)};
     if (!DeviceWatcherEvent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceWatcherTriggerDetails_type{py::register_python_type(module.get(), &type_spec_DeviceWatcherTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceWatcherTriggerDetails_type{py::register_python_type(module.get(), &type_spec_DeviceWatcherTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!DeviceWatcherTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EnclosureLocation_type{py::register_python_type(module.get(), &type_spec_EnclosureLocation, object_bases.get(), nullptr)};
+    py::pytype_handle EnclosureLocation_type{py::register_python_type(module.get(), &type_spec_EnclosureLocation, object_bases.get(), inspectable_meta_type)};
     if (!EnclosureLocation_type)
     {
         return nullptr;
@@ -7511,7 +7535,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIDeviceEnumerationSettings_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDeviceEnumerationSettings, nullptr))};
+    py::pytype_handle ImplementsIDeviceEnumerationSettings_type{py::register_python_type(module.get(), &type_spec_ImplementsIDeviceEnumerationSettings, nullptr, inspectable_meta_type)};
     if (!ImplementsIDeviceEnumerationSettings_type)
     {
         return nullptr;
@@ -7528,7 +7552,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIDevicePairingSettings_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDevicePairingSettings, nullptr))};
+    py::pytype_handle ImplementsIDevicePairingSettings_type{py::register_python_type(module.get(), &type_spec_ImplementsIDevicePairingSettings, nullptr, inspectable_meta_type)};
     if (!ImplementsIDevicePairingSettings_type)
     {
         return nullptr;

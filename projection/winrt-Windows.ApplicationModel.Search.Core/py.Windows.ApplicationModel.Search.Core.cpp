@@ -1235,6 +1235,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1248,25 +1254,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RequestingFocusOnKeyboardInputEventArgs_type{py::register_python_type(module.get(), &type_spec_RequestingFocusOnKeyboardInputEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle RequestingFocusOnKeyboardInputEventArgs_type{py::register_python_type(module.get(), &type_spec_RequestingFocusOnKeyboardInputEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RequestingFocusOnKeyboardInputEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchSuggestion_type{py::register_python_type(module.get(), &type_spec_SearchSuggestion, object_bases.get(), nullptr)};
+    py::pytype_handle SearchSuggestion_type{py::register_python_type(module.get(), &type_spec_SearchSuggestion, object_bases.get(), inspectable_meta_type)};
     if (!SearchSuggestion_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchSuggestionManager_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionManager, object_bases.get(), nullptr)};
+    py::pytype_handle SearchSuggestionManager_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionManager, object_bases.get(), inspectable_meta_type)};
     if (!SearchSuggestionManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SearchSuggestionsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SearchSuggestionsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SearchSuggestionsRequestedEventArgs_type)
     {
         return nullptr;

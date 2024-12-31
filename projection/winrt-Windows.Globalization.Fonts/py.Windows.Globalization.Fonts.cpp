@@ -682,6 +682,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_fonts(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -695,13 +701,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_fonts(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LanguageFont_type{py::register_python_type(module.get(), &type_spec_LanguageFont, object_bases.get(), nullptr)};
+    py::pytype_handle LanguageFont_type{py::register_python_type(module.get(), &type_spec_LanguageFont, object_bases.get(), inspectable_meta_type)};
     if (!LanguageFont_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LanguageFontGroup_type{py::register_python_type(module.get(), &type_spec_LanguageFontGroup, object_bases.get(), nullptr)};
+    py::pytype_handle LanguageFontGroup_type{py::register_python_type(module.get(), &type_spec_LanguageFontGroup, object_bases.get(), inspectable_meta_type)};
     if (!LanguageFontGroup_type)
     {
         return nullptr;

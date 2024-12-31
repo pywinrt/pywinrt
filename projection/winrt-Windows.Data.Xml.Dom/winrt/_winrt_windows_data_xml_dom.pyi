@@ -492,7 +492,7 @@ class XmlComment(winrt.system.Object, IXmlCharacterData, IXmlNode, IXmlNodeSeria
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class XmlDocument_Static(type):
+class XmlDocument_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromFileAsync(Windows.Storage.IStorageFile)
     def load_from_file_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromFileAsync(Windows.Storage.IStorageFile,Windows.Data.Xml.Dom.XmlLoadSettings)

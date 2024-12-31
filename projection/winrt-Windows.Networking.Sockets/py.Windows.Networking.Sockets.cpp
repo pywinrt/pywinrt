@@ -15184,6 +15184,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -15197,13 +15203,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ControlChannelTrigger_type{py::register_python_type(module.get(), &type_spec_ControlChannelTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ControlChannelTrigger_type{py::register_python_type(module.get(), &type_spec_ControlChannelTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ControlChannelTrigger_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DatagramSocket_Static{PyType_FromSpec(&type_spec_DatagramSocket_Static)};
+    py::pyobj_handle DatagramSocket_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DatagramSocket_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DatagramSocket_Static{PyType_FromSpecWithBases(&type_spec_DatagramSocket_Static, DatagramSocket_Static_bases.get())};
     if (!type_DatagramSocket_Static)
     {
         return nullptr;
@@ -15215,85 +15227,91 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DatagramSocketControl_type{py::register_python_type(module.get(), &type_spec_DatagramSocketControl, object_bases.get(), nullptr)};
+    py::pytype_handle DatagramSocketControl_type{py::register_python_type(module.get(), &type_spec_DatagramSocketControl, object_bases.get(), inspectable_meta_type)};
     if (!DatagramSocketControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DatagramSocketInformation_type{py::register_python_type(module.get(), &type_spec_DatagramSocketInformation, object_bases.get(), nullptr)};
+    py::pytype_handle DatagramSocketInformation_type{py::register_python_type(module.get(), &type_spec_DatagramSocketInformation, object_bases.get(), inspectable_meta_type)};
     if (!DatagramSocketInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DatagramSocketMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_DatagramSocketMessageReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DatagramSocketMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_DatagramSocketMessageReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DatagramSocketMessageReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MessageWebSocket_type{py::register_python_type(module.get(), &type_spec_MessageWebSocket, object_bases.get(), nullptr)};
+    py::pytype_handle MessageWebSocket_type{py::register_python_type(module.get(), &type_spec_MessageWebSocket, object_bases.get(), inspectable_meta_type)};
     if (!MessageWebSocket_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MessageWebSocketControl_type{py::register_python_type(module.get(), &type_spec_MessageWebSocketControl, object_bases.get(), nullptr)};
+    py::pytype_handle MessageWebSocketControl_type{py::register_python_type(module.get(), &type_spec_MessageWebSocketControl, object_bases.get(), inspectable_meta_type)};
     if (!MessageWebSocketControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MessageWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_MessageWebSocketInformation, object_bases.get(), nullptr)};
+    py::pytype_handle MessageWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_MessageWebSocketInformation, object_bases.get(), inspectable_meta_type)};
     if (!MessageWebSocketInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MessageWebSocketMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MessageWebSocketMessageReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MessageWebSocketMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MessageWebSocketMessageReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MessageWebSocketMessageReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ServerMessageWebSocket_type{py::register_python_type(module.get(), &type_spec_ServerMessageWebSocket, object_bases.get(), nullptr)};
+    py::pytype_handle ServerMessageWebSocket_type{py::register_python_type(module.get(), &type_spec_ServerMessageWebSocket, object_bases.get(), inspectable_meta_type)};
     if (!ServerMessageWebSocket_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ServerMessageWebSocketControl_type{py::register_python_type(module.get(), &type_spec_ServerMessageWebSocketControl, object_bases.get(), nullptr)};
+    py::pytype_handle ServerMessageWebSocketControl_type{py::register_python_type(module.get(), &type_spec_ServerMessageWebSocketControl, object_bases.get(), inspectable_meta_type)};
     if (!ServerMessageWebSocketControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ServerMessageWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_ServerMessageWebSocketInformation, object_bases.get(), nullptr)};
+    py::pytype_handle ServerMessageWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_ServerMessageWebSocketInformation, object_bases.get(), inspectable_meta_type)};
     if (!ServerMessageWebSocketInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ServerStreamWebSocket_type{py::register_python_type(module.get(), &type_spec_ServerStreamWebSocket, object_bases.get(), nullptr)};
+    py::pytype_handle ServerStreamWebSocket_type{py::register_python_type(module.get(), &type_spec_ServerStreamWebSocket, object_bases.get(), inspectable_meta_type)};
     if (!ServerStreamWebSocket_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ServerStreamWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_ServerStreamWebSocketInformation, object_bases.get(), nullptr)};
+    py::pytype_handle ServerStreamWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_ServerStreamWebSocketInformation, object_bases.get(), inspectable_meta_type)};
     if (!ServerStreamWebSocketInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SocketActivityContext_type{py::register_python_type(module.get(), &type_spec_SocketActivityContext, object_bases.get(), nullptr)};
+    py::pytype_handle SocketActivityContext_type{py::register_python_type(module.get(), &type_spec_SocketActivityContext, object_bases.get(), inspectable_meta_type)};
     if (!SocketActivityContext_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SocketActivityInformation_Static{PyType_FromSpec(&type_spec_SocketActivityInformation_Static)};
+    py::pyobj_handle SocketActivityInformation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SocketActivityInformation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SocketActivityInformation_Static{PyType_FromSpecWithBases(&type_spec_SocketActivityInformation_Static, SocketActivityInformation_Static_bases.get())};
     if (!type_SocketActivityInformation_Static)
     {
         return nullptr;
@@ -15305,13 +15323,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SocketActivityTriggerDetails_type{py::register_python_type(module.get(), &type_spec_SocketActivityTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle SocketActivityTriggerDetails_type{py::register_python_type(module.get(), &type_spec_SocketActivityTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!SocketActivityTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SocketError_Static{PyType_FromSpec(&type_spec_SocketError_Static)};
+    py::pyobj_handle SocketError_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SocketError_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SocketError_Static{PyType_FromSpecWithBases(&type_spec_SocketError_Static, SocketError_Static_bases.get())};
     if (!type_SocketError_Static)
     {
         return nullptr;
@@ -15323,7 +15347,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StreamSocket_Static{PyType_FromSpec(&type_spec_StreamSocket_Static)};
+    py::pyobj_handle StreamSocket_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StreamSocket_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StreamSocket_Static{PyType_FromSpecWithBases(&type_spec_StreamSocket_Static, StreamSocket_Static_bases.get())};
     if (!type_StreamSocket_Static)
     {
         return nullptr;
@@ -15335,67 +15365,73 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StreamSocketControl_type{py::register_python_type(module.get(), &type_spec_StreamSocketControl, object_bases.get(), nullptr)};
+    py::pytype_handle StreamSocketControl_type{py::register_python_type(module.get(), &type_spec_StreamSocketControl, object_bases.get(), inspectable_meta_type)};
     if (!StreamSocketControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamSocketInformation_type{py::register_python_type(module.get(), &type_spec_StreamSocketInformation, object_bases.get(), nullptr)};
+    py::pytype_handle StreamSocketInformation_type{py::register_python_type(module.get(), &type_spec_StreamSocketInformation, object_bases.get(), inspectable_meta_type)};
     if (!StreamSocketInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamSocketListener_type{py::register_python_type(module.get(), &type_spec_StreamSocketListener, object_bases.get(), nullptr)};
+    py::pytype_handle StreamSocketListener_type{py::register_python_type(module.get(), &type_spec_StreamSocketListener, object_bases.get(), inspectable_meta_type)};
     if (!StreamSocketListener_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamSocketListenerConnectionReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_StreamSocketListenerConnectionReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle StreamSocketListenerConnectionReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_StreamSocketListenerConnectionReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!StreamSocketListenerConnectionReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamSocketListenerControl_type{py::register_python_type(module.get(), &type_spec_StreamSocketListenerControl, object_bases.get(), nullptr)};
+    py::pytype_handle StreamSocketListenerControl_type{py::register_python_type(module.get(), &type_spec_StreamSocketListenerControl, object_bases.get(), inspectable_meta_type)};
     if (!StreamSocketListenerControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamSocketListenerInformation_type{py::register_python_type(module.get(), &type_spec_StreamSocketListenerInformation, object_bases.get(), nullptr)};
+    py::pytype_handle StreamSocketListenerInformation_type{py::register_python_type(module.get(), &type_spec_StreamSocketListenerInformation, object_bases.get(), inspectable_meta_type)};
     if (!StreamSocketListenerInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamWebSocket_type{py::register_python_type(module.get(), &type_spec_StreamWebSocket, object_bases.get(), nullptr)};
+    py::pytype_handle StreamWebSocket_type{py::register_python_type(module.get(), &type_spec_StreamWebSocket, object_bases.get(), inspectable_meta_type)};
     if (!StreamWebSocket_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamWebSocketControl_type{py::register_python_type(module.get(), &type_spec_StreamWebSocketControl, object_bases.get(), nullptr)};
+    py::pytype_handle StreamWebSocketControl_type{py::register_python_type(module.get(), &type_spec_StreamWebSocketControl, object_bases.get(), inspectable_meta_type)};
     if (!StreamWebSocketControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreamWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_StreamWebSocketInformation, object_bases.get(), nullptr)};
+    py::pytype_handle StreamWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_StreamWebSocketInformation, object_bases.get(), inspectable_meta_type)};
     if (!StreamWebSocketInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebSocketClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebSocketClosedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WebSocketClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebSocketClosedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WebSocketClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_WebSocketError_Static{PyType_FromSpec(&type_spec_WebSocketError_Static)};
+    py::pyobj_handle WebSocketError_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WebSocketError_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WebSocketError_Static{PyType_FromSpecWithBases(&type_spec_WebSocketError_Static, WebSocketError_Static_bases.get())};
     if (!type_WebSocketError_Static)
     {
         return nullptr;
@@ -15407,13 +15443,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WebSocketKeepAlive_type{py::register_python_type(module.get(), &type_spec_WebSocketKeepAlive, object_bases.get(), nullptr)};
+    py::pytype_handle WebSocketKeepAlive_type{py::register_python_type(module.get(), &type_spec_WebSocketKeepAlive, object_bases.get(), inspectable_meta_type)};
     if (!WebSocketKeepAlive_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebSocketServerCustomValidationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebSocketServerCustomValidationRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WebSocketServerCustomValidationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebSocketServerCustomValidationRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WebSocketServerCustomValidationRequestedEventArgs_type)
     {
         return nullptr;
@@ -15425,7 +15461,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIControlChannelTriggerEventDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIControlChannelTriggerEventDetails, nullptr))};
+    py::pytype_handle ImplementsIControlChannelTriggerEventDetails_type{py::register_python_type(module.get(), &type_spec_ImplementsIControlChannelTriggerEventDetails, nullptr, inspectable_meta_type)};
     if (!ImplementsIControlChannelTriggerEventDetails_type)
     {
         return nullptr;
@@ -15442,7 +15478,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIControlChannelTriggerResetEventDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIControlChannelTriggerResetEventDetails, nullptr))};
+    py::pytype_handle ImplementsIControlChannelTriggerResetEventDetails_type{py::register_python_type(module.get(), &type_spec_ImplementsIControlChannelTriggerResetEventDetails, nullptr, inspectable_meta_type)};
     if (!ImplementsIControlChannelTriggerResetEventDetails_type)
     {
         return nullptr;
@@ -15459,7 +15495,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebSocket_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocket, nullptr))};
+    py::pytype_handle ImplementsIWebSocket_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebSocket, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebSocket_type)
     {
         return nullptr;
@@ -15476,7 +15512,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebSocketControl_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocketControl, nullptr))};
+    py::pytype_handle ImplementsIWebSocketControl_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebSocketControl, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebSocketControl_type)
     {
         return nullptr;
@@ -15493,7 +15529,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebSocketControl2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocketControl2, nullptr))};
+    py::pytype_handle ImplementsIWebSocketControl2_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebSocketControl2, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebSocketControl2_type)
     {
         return nullptr;
@@ -15510,7 +15546,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebSocketInformation_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocketInformation, nullptr))};
+    py::pytype_handle ImplementsIWebSocketInformation_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebSocketInformation, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebSocketInformation_type)
     {
         return nullptr;
@@ -15527,7 +15563,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWebSocketInformation2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWebSocketInformation2, nullptr))};
+    py::pytype_handle ImplementsIWebSocketInformation2_type{py::register_python_type(module.get(), &type_spec_ImplementsIWebSocketInformation2, nullptr, inspectable_meta_type)};
     if (!ImplementsIWebSocketInformation2_type)
     {
         return nullptr;

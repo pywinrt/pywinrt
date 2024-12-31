@@ -18,7 +18,7 @@ from winrt.windows.security.authorization.appcapabilityaccess import AppCapabili
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AppCapability_Static(type):
+class AppCapability_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Authorization.AppCapabilityAccess.AppCapability Windows.Security.Authorization.AppCapabilityAccess.AppCapability::Create(System.String)
     def create(cls, capability_name: str, /) -> AppCapability: ...
     # Windows.Security.Authorization.AppCapabilityAccess.AppCapability Windows.Security.Authorization.AppCapabilityAccess.AppCapability::CreateWithProcessIdForUser(Windows.System.User,System.String,System.UInt32)

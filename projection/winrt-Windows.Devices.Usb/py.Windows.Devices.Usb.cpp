@@ -6131,6 +6131,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -6144,37 +6150,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle UsbBulkInEndpointDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbBulkInEndpointDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle UsbBulkInEndpointDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbBulkInEndpointDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!UsbBulkInEndpointDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbBulkInPipe_type{py::register_python_type(module.get(), &type_spec_UsbBulkInPipe, object_bases.get(), nullptr)};
+    py::pytype_handle UsbBulkInPipe_type{py::register_python_type(module.get(), &type_spec_UsbBulkInPipe, object_bases.get(), inspectable_meta_type)};
     if (!UsbBulkInPipe_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbBulkOutEndpointDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbBulkOutEndpointDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle UsbBulkOutEndpointDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbBulkOutEndpointDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!UsbBulkOutEndpointDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbBulkOutPipe_type{py::register_python_type(module.get(), &type_spec_UsbBulkOutPipe, object_bases.get(), nullptr)};
+    py::pytype_handle UsbBulkOutPipe_type{py::register_python_type(module.get(), &type_spec_UsbBulkOutPipe, object_bases.get(), inspectable_meta_type)};
     if (!UsbBulkOutPipe_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbConfiguration_type{py::register_python_type(module.get(), &type_spec_UsbConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle UsbConfiguration_type{py::register_python_type(module.get(), &type_spec_UsbConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!UsbConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UsbConfigurationDescriptor_Static{PyType_FromSpec(&type_spec_UsbConfigurationDescriptor_Static)};
+    py::pyobj_handle UsbConfigurationDescriptor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UsbConfigurationDescriptor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UsbConfigurationDescriptor_Static{PyType_FromSpecWithBases(&type_spec_UsbConfigurationDescriptor_Static, UsbConfigurationDescriptor_Static_bases.get())};
     if (!type_UsbConfigurationDescriptor_Static)
     {
         return nullptr;
@@ -6186,19 +6198,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle UsbControlRequestType_type{py::register_python_type(module.get(), &type_spec_UsbControlRequestType, object_bases.get(), nullptr)};
+    py::pytype_handle UsbControlRequestType_type{py::register_python_type(module.get(), &type_spec_UsbControlRequestType, object_bases.get(), inspectable_meta_type)};
     if (!UsbControlRequestType_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle UsbDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!UsbDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UsbDevice_Static{PyType_FromSpec(&type_spec_UsbDevice_Static)};
+    py::pyobj_handle UsbDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UsbDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UsbDevice_Static{PyType_FromSpecWithBases(&type_spec_UsbDevice_Static, UsbDevice_Static_bases.get())};
     if (!type_UsbDevice_Static)
     {
         return nullptr;
@@ -6210,13 +6228,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle UsbDeviceClass_type{py::register_python_type(module.get(), &type_spec_UsbDeviceClass, object_bases.get(), nullptr)};
+    py::pytype_handle UsbDeviceClass_type{py::register_python_type(module.get(), &type_spec_UsbDeviceClass, object_bases.get(), inspectable_meta_type)};
     if (!UsbDeviceClass_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UsbDeviceClasses_Static{PyType_FromSpec(&type_spec_UsbDeviceClasses_Static)};
+    py::pyobj_handle UsbDeviceClasses_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UsbDeviceClasses_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UsbDeviceClasses_Static{PyType_FromSpecWithBases(&type_spec_UsbDeviceClasses_Static, UsbDeviceClasses_Static_bases.get())};
     if (!type_UsbDeviceClasses_Static)
     {
         return nullptr;
@@ -6228,13 +6252,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle UsbDeviceDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbDeviceDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle UsbDeviceDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbDeviceDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!UsbDeviceDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UsbEndpointDescriptor_Static{PyType_FromSpec(&type_spec_UsbEndpointDescriptor_Static)};
+    py::pyobj_handle UsbEndpointDescriptor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UsbEndpointDescriptor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UsbEndpointDescriptor_Static{PyType_FromSpecWithBases(&type_spec_UsbEndpointDescriptor_Static, UsbEndpointDescriptor_Static_bases.get())};
     if (!type_UsbEndpointDescriptor_Static)
     {
         return nullptr;
@@ -6246,13 +6276,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle UsbInterface_type{py::register_python_type(module.get(), &type_spec_UsbInterface, object_bases.get(), nullptr)};
+    py::pytype_handle UsbInterface_type{py::register_python_type(module.get(), &type_spec_UsbInterface, object_bases.get(), inspectable_meta_type)};
     if (!UsbInterface_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UsbInterfaceDescriptor_Static{PyType_FromSpec(&type_spec_UsbInterfaceDescriptor_Static)};
+    py::pyobj_handle UsbInterfaceDescriptor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UsbInterfaceDescriptor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UsbInterfaceDescriptor_Static{PyType_FromSpecWithBases(&type_spec_UsbInterfaceDescriptor_Static, UsbInterfaceDescriptor_Static_bases.get())};
     if (!type_UsbInterfaceDescriptor_Static)
     {
         return nullptr;
@@ -6264,43 +6300,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle UsbInterfaceSetting_type{py::register_python_type(module.get(), &type_spec_UsbInterfaceSetting, object_bases.get(), nullptr)};
+    py::pytype_handle UsbInterfaceSetting_type{py::register_python_type(module.get(), &type_spec_UsbInterfaceSetting, object_bases.get(), inspectable_meta_type)};
     if (!UsbInterfaceSetting_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbInterruptInEndpointDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbInterruptInEndpointDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle UsbInterruptInEndpointDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbInterruptInEndpointDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!UsbInterruptInEndpointDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbInterruptInEventArgs_type{py::register_python_type(module.get(), &type_spec_UsbInterruptInEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UsbInterruptInEventArgs_type{py::register_python_type(module.get(), &type_spec_UsbInterruptInEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UsbInterruptInEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbInterruptInPipe_type{py::register_python_type(module.get(), &type_spec_UsbInterruptInPipe, object_bases.get(), nullptr)};
+    py::pytype_handle UsbInterruptInPipe_type{py::register_python_type(module.get(), &type_spec_UsbInterruptInPipe, object_bases.get(), inspectable_meta_type)};
     if (!UsbInterruptInPipe_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbInterruptOutEndpointDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbInterruptOutEndpointDescriptor, object_bases.get(), nullptr)};
+    py::pytype_handle UsbInterruptOutEndpointDescriptor_type{py::register_python_type(module.get(), &type_spec_UsbInterruptOutEndpointDescriptor, object_bases.get(), inspectable_meta_type)};
     if (!UsbInterruptOutEndpointDescriptor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbInterruptOutPipe_type{py::register_python_type(module.get(), &type_spec_UsbInterruptOutPipe, object_bases.get(), nullptr)};
+    py::pytype_handle UsbInterruptOutPipe_type{py::register_python_type(module.get(), &type_spec_UsbInterruptOutPipe, object_bases.get(), inspectable_meta_type)};
     if (!UsbInterruptOutPipe_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UsbSetupPacket_type{py::register_python_type(module.get(), &type_spec_UsbSetupPacket, object_bases.get(), nullptr)};
+    py::pytype_handle UsbSetupPacket_type{py::register_python_type(module.get(), &type_spec_UsbSetupPacket, object_bases.get(), inspectable_meta_type)};
     if (!UsbSetupPacket_type)
     {
         return nullptr;

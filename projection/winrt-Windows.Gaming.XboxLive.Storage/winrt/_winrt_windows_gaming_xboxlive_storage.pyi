@@ -116,7 +116,7 @@ class GameSaveOperationResult(winrt.system.Object):
     def status(self) -> GameSaveErrorStatus: ...
 
 @typing.final
-class GameSaveProvider_Static(type):
+class GameSaveProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult> Windows.Gaming.XboxLive.Storage.GameSaveProvider::GetForUserAsync(Windows.System.User,System.String)
     def get_for_user_async(cls, user: windows_system.User, service_config_id: str, /) -> windows_foundation.IAsyncOperation[GameSaveProviderGetResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult> Windows.Gaming.XboxLive.Storage.GameSaveProvider::GetSyncOnDemandForUserAsync(Windows.System.User,System.String)

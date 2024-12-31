@@ -18,7 +18,7 @@ from winrt.windows.devices.pwm import PwmPulsePolarity
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PwmController_Static(type):
+class PwmController_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Pwm.PwmController> Windows.Devices.Pwm.PwmController::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[PwmController]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Pwm.PwmController>> Windows.Devices.Pwm.PwmController::GetControllersAsync(Windows.Devices.Pwm.Provider.IPwmProvider)

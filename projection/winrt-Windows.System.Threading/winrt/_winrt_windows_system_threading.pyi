@@ -17,7 +17,7 @@ from winrt.windows.system.threading import TimerDestroyedHandler, TimerElapsedHa
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ThreadPool_Static(type):
+class ThreadPool_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler)
     def run_async(cls, handler: WorkItemHandler, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler,Windows.System.Threading.WorkItemPriority,Windows.System.Threading.WorkItemOptions)
@@ -30,7 +30,7 @@ class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):
     pass
 
 @typing.final
-class ThreadPoolTimer_Static(type):
+class ThreadPoolTimer_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan)
     def create_periodic_timer(cls, handler: TimerElapsedHandler, period: datetime.timedelta, /) -> ThreadPoolTimer: ...
     # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan,Windows.System.Threading.TimerDestroyedHandler)

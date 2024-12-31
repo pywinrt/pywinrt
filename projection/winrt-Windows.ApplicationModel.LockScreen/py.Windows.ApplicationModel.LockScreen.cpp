@@ -1194,6 +1194,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_lockscreen(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1207,7 +1213,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_lockscreen(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_LockApplicationHost_Static{PyType_FromSpec(&type_spec_LockApplicationHost_Static)};
+    py::pyobj_handle LockApplicationHost_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LockApplicationHost_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LockApplicationHost_Static{PyType_FromSpecWithBases(&type_spec_LockApplicationHost_Static, LockApplicationHost_Static_bases.get())};
     if (!type_LockApplicationHost_Static)
     {
         return nullptr;
@@ -1219,25 +1231,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_lockscreen(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LockScreenBadge_type{py::register_python_type(module.get(), &type_spec_LockScreenBadge, object_bases.get(), nullptr)};
+    py::pytype_handle LockScreenBadge_type{py::register_python_type(module.get(), &type_spec_LockScreenBadge, object_bases.get(), inspectable_meta_type)};
     if (!LockScreenBadge_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LockScreenInfo_type{py::register_python_type(module.get(), &type_spec_LockScreenInfo, object_bases.get(), nullptr)};
+    py::pytype_handle LockScreenInfo_type{py::register_python_type(module.get(), &type_spec_LockScreenInfo, object_bases.get(), inspectable_meta_type)};
     if (!LockScreenInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LockScreenUnlockingDeferral_type{py::register_python_type(module.get(), &type_spec_LockScreenUnlockingDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle LockScreenUnlockingDeferral_type{py::register_python_type(module.get(), &type_spec_LockScreenUnlockingDeferral, object_bases.get(), inspectable_meta_type)};
     if (!LockScreenUnlockingDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LockScreenUnlockingEventArgs_type{py::register_python_type(module.get(), &type_spec_LockScreenUnlockingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle LockScreenUnlockingEventArgs_type{py::register_python_type(module.get(), &type_spec_LockScreenUnlockingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!LockScreenUnlockingEventArgs_type)
     {
         return nullptr;

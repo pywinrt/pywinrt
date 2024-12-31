@@ -19,7 +19,7 @@ from winrt.windows.applicationmodel.store import LicenseChangedEventHandler
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CurrentApp_Static(type):
+class CurrentApp_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::GetAppPurchaseCampaignIdAsync()
     def get_app_purchase_campaign_id_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::GetAppReceiptAsync()
@@ -66,7 +66,7 @@ class CurrentApp(winrt.system.Object, metaclass=CurrentApp_Static):
     pass
 
 @typing.final
-class CurrentAppSimulator_Static(type):
+class CurrentAppSimulator_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::GetAppPurchaseCampaignIdAsync()
     def get_app_purchase_campaign_id_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::GetAppReceiptAsync()

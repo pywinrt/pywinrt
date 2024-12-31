@@ -24,7 +24,7 @@ class IsolatedWindowsEnvironmentCreateProgress:
     def __init__(self, state: IsolatedWindowsEnvironmentProgressState = IsolatedWindowsEnvironmentProgressState(0), percent_complete: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
-class IsolatedWindowsEnvironment_Static(type):
+class IsolatedWindowsEnvironment_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> Windows.Security.Isolation.IsolatedWindowsEnvironment::CreateAsync(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions)
     # @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def create_async(cls, options: IsolatedWindowsEnvironmentOptions, /) -> windows_foundation.IAsyncOperationWithProgress[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]: ...
@@ -126,7 +126,7 @@ class IsolatedWindowsEnvironmentFile(winrt.system.Object):
     def is_read_only(self) -> bool: ...
 
 @typing.final
-class IsolatedWindowsEnvironmentHost_Static(type):
+class IsolatedWindowsEnvironmentHost_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> Windows.Security.Isolation.IsolatedWindowsEnvironmentHost::get_HostErrors()
     @_property
     def host_errors(cls) -> typing.Sequence[IsolatedWindowsEnvironmentHostError]: ...
@@ -230,7 +230,7 @@ class IsolatedWindowsEnvironmentOptions(winrt.system.Object):
     def allowed_clipboard_formats_to_environment(self, value: IsolatedWindowsEnvironmentAllowedClipboardFormats) -> None: ...
 
 @typing.final
-class IsolatedWindowsEnvironmentOwnerRegistration_Static(type):
+class IsolatedWindowsEnvironmentOwnerRegistration_Static(winrt._winrt.IInspectable_Static):
     # Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration::Register(System.String,Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData)
     # @deprecated("IsolatedWindowsEnvironmentOwnerRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def register(cls, owner_name: str, owner_registration_data: IsolatedWindowsEnvironmentOwnerRegistrationData, /) -> IsolatedWindowsEnvironmentOwnerRegistrationResult: ...
@@ -373,7 +373,7 @@ class IsolatedWindowsEnvironmentUserInfo(winrt.system.Object):
     def environment_user_sid(self) -> str: ...
 
 @typing.final
-class IsolatedWindowsHostMessenger_Static(type):
+class IsolatedWindowsHostMessenger_Static(winrt._winrt.IInspectable_Static):
     # System.Guid Windows.Security.Isolation.IsolatedWindowsHostMessenger::GetFileId(System.String)
     # @deprecated("IsolatedWindowsHostMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_file_id(cls, file_path: str, /) -> _uuid.UUID: ...

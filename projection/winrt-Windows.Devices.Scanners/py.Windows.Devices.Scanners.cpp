@@ -6431,6 +6431,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -6444,7 +6450,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ImageScanner_Static{PyType_FromSpec(&type_spec_ImageScanner_Static)};
+    py::pyobj_handle ImageScanner_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ImageScanner_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ImageScanner_Static{PyType_FromSpecWithBases(&type_spec_ImageScanner_Static, ImageScanner_Static_bases.get())};
     if (!type_ImageScanner_Static)
     {
         return nullptr;
@@ -6456,31 +6468,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImageScannerAutoConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerAutoConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle ImageScannerAutoConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerAutoConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!ImageScannerAutoConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImageScannerFeederConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerFeederConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle ImageScannerFeederConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerFeederConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!ImageScannerFeederConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImageScannerFlatbedConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerFlatbedConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle ImageScannerFlatbedConfiguration_type{py::register_python_type(module.get(), &type_spec_ImageScannerFlatbedConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!ImageScannerFlatbedConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImageScannerPreviewResult_type{py::register_python_type(module.get(), &type_spec_ImageScannerPreviewResult, object_bases.get(), nullptr)};
+    py::pytype_handle ImageScannerPreviewResult_type{py::register_python_type(module.get(), &type_spec_ImageScannerPreviewResult, object_bases.get(), inspectable_meta_type)};
     if (!ImageScannerPreviewResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImageScannerScanResult_type{py::register_python_type(module.get(), &type_spec_ImageScannerScanResult, object_bases.get(), nullptr)};
+    py::pytype_handle ImageScannerScanResult_type{py::register_python_type(module.get(), &type_spec_ImageScannerScanResult, object_bases.get(), inspectable_meta_type)};
     if (!ImageScannerScanResult_type)
     {
         return nullptr;
@@ -6492,7 +6504,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIImageScannerFormatConfiguration_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIImageScannerFormatConfiguration, nullptr))};
+    py::pytype_handle ImplementsIImageScannerFormatConfiguration_type{py::register_python_type(module.get(), &type_spec_ImplementsIImageScannerFormatConfiguration, nullptr, inspectable_meta_type)};
     if (!ImplementsIImageScannerFormatConfiguration_type)
     {
         return nullptr;
@@ -6509,7 +6521,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIImageScannerSourceConfiguration_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIImageScannerSourceConfiguration, nullptr))};
+    py::pytype_handle ImplementsIImageScannerSourceConfiguration_type{py::register_python_type(module.get(), &type_spec_ImplementsIImageScannerSourceConfiguration, nullptr, inspectable_meta_type)};
     if (!ImplementsIImageScannerSourceConfiguration_type)
     {
         return nullptr;

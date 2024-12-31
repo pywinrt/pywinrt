@@ -4336,6 +4336,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_analysis(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4349,67 +4355,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_analysis(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisInkBullet_type{py::register_python_type(module.get(), &type_spec_InkAnalysisInkBullet, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisInkBullet_type{py::register_python_type(module.get(), &type_spec_InkAnalysisInkBullet, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisInkBullet_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisInkDrawing_type{py::register_python_type(module.get(), &type_spec_InkAnalysisInkDrawing, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisInkDrawing_type{py::register_python_type(module.get(), &type_spec_InkAnalysisInkDrawing, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisInkDrawing_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisInkWord_type{py::register_python_type(module.get(), &type_spec_InkAnalysisInkWord, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisInkWord_type{py::register_python_type(module.get(), &type_spec_InkAnalysisInkWord, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisInkWord_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisLine_type{py::register_python_type(module.get(), &type_spec_InkAnalysisLine, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisLine_type{py::register_python_type(module.get(), &type_spec_InkAnalysisLine, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisLine_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisListItem_type{py::register_python_type(module.get(), &type_spec_InkAnalysisListItem, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisListItem_type{py::register_python_type(module.get(), &type_spec_InkAnalysisListItem, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisListItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisNode_type{py::register_python_type(module.get(), &type_spec_InkAnalysisNode, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisNode_type{py::register_python_type(module.get(), &type_spec_InkAnalysisNode, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisNode_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisParagraph_type{py::register_python_type(module.get(), &type_spec_InkAnalysisParagraph, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisParagraph_type{py::register_python_type(module.get(), &type_spec_InkAnalysisParagraph, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisParagraph_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisResult_type{py::register_python_type(module.get(), &type_spec_InkAnalysisResult, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisResult_type{py::register_python_type(module.get(), &type_spec_InkAnalysisResult, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisRoot_type{py::register_python_type(module.get(), &type_spec_InkAnalysisRoot, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisRoot_type{py::register_python_type(module.get(), &type_spec_InkAnalysisRoot, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisRoot_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalysisWritingRegion_type{py::register_python_type(module.get(), &type_spec_InkAnalysisWritingRegion, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalysisWritingRegion_type{py::register_python_type(module.get(), &type_spec_InkAnalysisWritingRegion, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalysisWritingRegion_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkAnalyzer_type{py::register_python_type(module.get(), &type_spec_InkAnalyzer, object_bases.get(), nullptr)};
+    py::pytype_handle InkAnalyzer_type{py::register_python_type(module.get(), &type_spec_InkAnalyzer, object_bases.get(), inspectable_meta_type)};
     if (!InkAnalyzer_type)
     {
         return nullptr;
@@ -4421,7 +4427,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_analysis(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIInkAnalysisNode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkAnalysisNode, nullptr))};
+    py::pytype_handle ImplementsIInkAnalysisNode_type{py::register_python_type(module.get(), &type_spec_ImplementsIInkAnalysisNode, nullptr, inspectable_meta_type)};
     if (!ImplementsIInkAnalysisNode_type)
     {
         return nullptr;
@@ -4438,7 +4444,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_analysis(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIInkAnalyzerFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInkAnalyzerFactory, nullptr))};
+    py::pytype_handle ImplementsIInkAnalyzerFactory_type{py::register_python_type(module.get(), &type_spec_ImplementsIInkAnalyzerFactory, nullptr, inspectable_meta_type)};
     if (!ImplementsIInkAnalyzerFactory_type)
     {
         return nullptr;

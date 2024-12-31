@@ -3184,6 +3184,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3197,7 +3203,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownPerceptionFrameKind_Static{PyType_FromSpec(&type_spec_KnownPerceptionFrameKind_Static)};
+    py::pyobj_handle KnownPerceptionFrameKind_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownPerceptionFrameKind_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownPerceptionFrameKind_Static{PyType_FromSpecWithBases(&type_spec_KnownPerceptionFrameKind_Static, KnownPerceptionFrameKind_Static_bases.get())};
     if (!type_KnownPerceptionFrameKind_Static)
     {
         return nullptr;
@@ -3209,43 +3221,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PerceptionControlGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionControlGroup, object_bases.get(), nullptr)};
+    py::pytype_handle PerceptionControlGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionControlGroup, object_bases.get(), inspectable_meta_type)};
     if (!PerceptionControlGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PerceptionCorrelation_type{py::register_python_type(module.get(), &type_spec_PerceptionCorrelation, object_bases.get(), nullptr)};
+    py::pytype_handle PerceptionCorrelation_type{py::register_python_type(module.get(), &type_spec_PerceptionCorrelation, object_bases.get(), inspectable_meta_type)};
     if (!PerceptionCorrelation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PerceptionCorrelationGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionCorrelationGroup, object_bases.get(), nullptr)};
+    py::pytype_handle PerceptionCorrelationGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionCorrelationGroup, object_bases.get(), inspectable_meta_type)};
     if (!PerceptionCorrelationGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PerceptionFaceAuthenticationGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionFaceAuthenticationGroup, object_bases.get(), nullptr)};
+    py::pytype_handle PerceptionFaceAuthenticationGroup_type{py::register_python_type(module.get(), &type_spec_PerceptionFaceAuthenticationGroup, object_bases.get(), inspectable_meta_type)};
     if (!PerceptionFaceAuthenticationGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PerceptionFrame_type{py::register_python_type(module.get(), &type_spec_PerceptionFrame, object_bases.get(), nullptr)};
+    py::pytype_handle PerceptionFrame_type{py::register_python_type(module.get(), &type_spec_PerceptionFrame, object_bases.get(), inspectable_meta_type)};
     if (!PerceptionFrame_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PerceptionFrameProviderInfo_type{py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderInfo, object_bases.get(), nullptr)};
+    py::pytype_handle PerceptionFrameProviderInfo_type{py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderInfo, object_bases.get(), inspectable_meta_type)};
     if (!PerceptionFrameProviderInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PerceptionFrameProviderManagerService_Static{PyType_FromSpec(&type_spec_PerceptionFrameProviderManagerService_Static)};
+    py::pyobj_handle PerceptionFrameProviderManagerService_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PerceptionFrameProviderManagerService_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PerceptionFrameProviderManagerService_Static{PyType_FromSpecWithBases(&type_spec_PerceptionFrameProviderManagerService_Static, PerceptionFrameProviderManagerService_Static_bases.get())};
     if (!type_PerceptionFrameProviderManagerService_Static)
     {
         return nullptr;
@@ -3257,13 +3275,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PerceptionPropertyChangeRequest_type{py::register_python_type(module.get(), &type_spec_PerceptionPropertyChangeRequest, object_bases.get(), nullptr)};
+    py::pytype_handle PerceptionPropertyChangeRequest_type{py::register_python_type(module.get(), &type_spec_PerceptionPropertyChangeRequest, object_bases.get(), inspectable_meta_type)};
     if (!PerceptionPropertyChangeRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PerceptionVideoFrameAllocator_type{py::register_python_type(module.get(), &type_spec_PerceptionVideoFrameAllocator, object_bases.get(), nullptr)};
+    py::pytype_handle PerceptionVideoFrameAllocator_type{py::register_python_type(module.get(), &type_spec_PerceptionVideoFrameAllocator, object_bases.get(), inspectable_meta_type)};
     if (!PerceptionVideoFrameAllocator_type)
     {
         return nullptr;
@@ -3275,7 +3293,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPerceptionFrameProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPerceptionFrameProvider, nullptr))};
+    py::pytype_handle ImplementsIPerceptionFrameProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIPerceptionFrameProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIPerceptionFrameProvider_type)
     {
         return nullptr;
@@ -3292,7 +3310,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPerceptionFrameProviderManager_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPerceptionFrameProviderManager, nullptr))};
+    py::pytype_handle ImplementsIPerceptionFrameProviderManager_type{py::register_python_type(module.get(), &type_spec_ImplementsIPerceptionFrameProviderManager, nullptr, inspectable_meta_type)};
     if (!ImplementsIPerceptionFrameProviderManager_type)
     {
         return nullptr;

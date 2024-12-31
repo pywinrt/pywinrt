@@ -17,7 +17,7 @@ from winrt.microsoft.ui.xaml.interop import BindableVectorChangedEventHandler, N
 
 Self = typing.TypeVar('Self')
 
-class NotifyCollectionChangedEventArgs_Static(type):
+class NotifyCollectionChangedEventArgs_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyCollectionChangedEventArgs_Static):

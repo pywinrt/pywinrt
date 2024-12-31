@@ -12953,6 +12953,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -12966,31 +12972,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SyndicationAttribute_type{py::register_python_type(module.get(), &type_spec_SyndicationAttribute, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationAttribute_type{py::register_python_type(module.get(), &type_spec_SyndicationAttribute, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationAttribute_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationCategory_type{py::register_python_type(module.get(), &type_spec_SyndicationCategory, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationCategory_type{py::register_python_type(module.get(), &type_spec_SyndicationCategory, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationCategory_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationClient_type{py::register_python_type(module.get(), &type_spec_SyndicationClient, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationClient_type{py::register_python_type(module.get(), &type_spec_SyndicationClient, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationClient_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationContent_type{py::register_python_type(module.get(), &type_spec_SyndicationContent, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationContent_type{py::register_python_type(module.get(), &type_spec_SyndicationContent, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationContent_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SyndicationError_Static{PyType_FromSpec(&type_spec_SyndicationError_Static)};
+    py::pyobj_handle SyndicationError_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SyndicationError_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SyndicationError_Static{PyType_FromSpecWithBases(&type_spec_SyndicationError_Static, SyndicationError_Static_bases.get())};
     if (!type_SyndicationError_Static)
     {
         return nullptr;
@@ -13002,43 +13014,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SyndicationFeed_type{py::register_python_type(module.get(), &type_spec_SyndicationFeed, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationFeed_type{py::register_python_type(module.get(), &type_spec_SyndicationFeed, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationFeed_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationGenerator_type{py::register_python_type(module.get(), &type_spec_SyndicationGenerator, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationGenerator_type{py::register_python_type(module.get(), &type_spec_SyndicationGenerator, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationGenerator_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationItem_type{py::register_python_type(module.get(), &type_spec_SyndicationItem, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationItem_type{py::register_python_type(module.get(), &type_spec_SyndicationItem, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationLink_type{py::register_python_type(module.get(), &type_spec_SyndicationLink, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationLink_type{py::register_python_type(module.get(), &type_spec_SyndicationLink, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationLink_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationNode_type{py::register_python_type(module.get(), &type_spec_SyndicationNode, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationNode_type{py::register_python_type(module.get(), &type_spec_SyndicationNode, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationNode_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationPerson_type{py::register_python_type(module.get(), &type_spec_SyndicationPerson, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationPerson_type{py::register_python_type(module.get(), &type_spec_SyndicationPerson, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationPerson_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SyndicationText_type{py::register_python_type(module.get(), &type_spec_SyndicationText, object_bases.get(), nullptr)};
+    py::pytype_handle SyndicationText_type{py::register_python_type(module.get(), &type_spec_SyndicationText, object_bases.get(), inspectable_meta_type)};
     if (!SyndicationText_type)
     {
         return nullptr;
@@ -13050,7 +13062,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISyndicationClient_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISyndicationClient, nullptr))};
+    py::pytype_handle ImplementsISyndicationClient_type{py::register_python_type(module.get(), &type_spec_ImplementsISyndicationClient, nullptr, inspectable_meta_type)};
     if (!ImplementsISyndicationClient_type)
     {
         return nullptr;
@@ -13067,7 +13079,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISyndicationNode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISyndicationNode, nullptr))};
+    py::pytype_handle ImplementsISyndicationNode_type{py::register_python_type(module.get(), &type_spec_ImplementsISyndicationNode, nullptr, inspectable_meta_type)};
     if (!ImplementsISyndicationNode_type)
     {
         return nullptr;
@@ -13084,7 +13096,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISyndicationText_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISyndicationText, nullptr))};
+    py::pytype_handle ImplementsISyndicationText_type{py::register_python_type(module.get(), &type_spec_ImplementsISyndicationText, nullptr, inspectable_meta_type)};
     if (!ImplementsISyndicationText_type)
     {
         return nullptr;

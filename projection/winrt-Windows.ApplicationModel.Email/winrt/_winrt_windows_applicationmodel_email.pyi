@@ -741,7 +741,7 @@ class EmailMailboxSyncManager(winrt.system.Object):
     def last_attempted_sync_time(self, value: datetime.datetime) -> None: ...
 
 @typing.final
-class EmailManager_Static(type):
+class EmailManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.Email.EmailManagerForUser Windows.ApplicationModel.Email.EmailManager::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> EmailManagerForUser: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Email.EmailStore> Windows.ApplicationModel.Email.EmailManager::RequestStoreAsync(Windows.ApplicationModel.Email.EmailStoreAccessType)

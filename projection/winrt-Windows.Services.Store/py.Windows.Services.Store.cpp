@@ -9272,6 +9272,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_store(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -9285,43 +9291,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_store(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StoreAcquireLicenseResult_type{py::register_python_type(module.get(), &type_spec_StoreAcquireLicenseResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreAcquireLicenseResult_type{py::register_python_type(module.get(), &type_spec_StoreAcquireLicenseResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreAcquireLicenseResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreAppLicense_type{py::register_python_type(module.get(), &type_spec_StoreAppLicense, object_bases.get(), nullptr)};
+    py::pytype_handle StoreAppLicense_type{py::register_python_type(module.get(), &type_spec_StoreAppLicense, object_bases.get(), inspectable_meta_type)};
     if (!StoreAppLicense_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreAvailability_type{py::register_python_type(module.get(), &type_spec_StoreAvailability, object_bases.get(), nullptr)};
+    py::pytype_handle StoreAvailability_type{py::register_python_type(module.get(), &type_spec_StoreAvailability, object_bases.get(), inspectable_meta_type)};
     if (!StoreAvailability_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreCanAcquireLicenseResult_type{py::register_python_type(module.get(), &type_spec_StoreCanAcquireLicenseResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreCanAcquireLicenseResult_type{py::register_python_type(module.get(), &type_spec_StoreCanAcquireLicenseResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreCanAcquireLicenseResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreCollectionData_type{py::register_python_type(module.get(), &type_spec_StoreCollectionData, object_bases.get(), nullptr)};
+    py::pytype_handle StoreCollectionData_type{py::register_python_type(module.get(), &type_spec_StoreCollectionData, object_bases.get(), inspectable_meta_type)};
     if (!StoreCollectionData_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreConsumableResult_type{py::register_python_type(module.get(), &type_spec_StoreConsumableResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreConsumableResult_type{py::register_python_type(module.get(), &type_spec_StoreConsumableResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreConsumableResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StoreContext_Static{PyType_FromSpec(&type_spec_StoreContext_Static)};
+    py::pyobj_handle StoreContext_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StoreContext_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StoreContext_Static{PyType_FromSpecWithBases(&type_spec_StoreContext_Static, StoreContext_Static_bases.get())};
     if (!type_StoreContext_Static)
     {
         return nullptr;
@@ -9333,115 +9345,121 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_store(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StoreImage_type{py::register_python_type(module.get(), &type_spec_StoreImage, object_bases.get(), nullptr)};
+    py::pytype_handle StoreImage_type{py::register_python_type(module.get(), &type_spec_StoreImage, object_bases.get(), inspectable_meta_type)};
     if (!StoreImage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreLicense_type{py::register_python_type(module.get(), &type_spec_StoreLicense, object_bases.get(), nullptr)};
+    py::pytype_handle StoreLicense_type{py::register_python_type(module.get(), &type_spec_StoreLicense, object_bases.get(), inspectable_meta_type)};
     if (!StoreLicense_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorePackageInstallOptions_type{py::register_python_type(module.get(), &type_spec_StorePackageInstallOptions, object_bases.get(), nullptr)};
+    py::pytype_handle StorePackageInstallOptions_type{py::register_python_type(module.get(), &type_spec_StorePackageInstallOptions, object_bases.get(), inspectable_meta_type)};
     if (!StorePackageInstallOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorePackageLicense_type{py::register_python_type(module.get(), &type_spec_StorePackageLicense, object_bases.get(), nullptr)};
+    py::pytype_handle StorePackageLicense_type{py::register_python_type(module.get(), &type_spec_StorePackageLicense, object_bases.get(), inspectable_meta_type)};
     if (!StorePackageLicense_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorePackageUpdate_type{py::register_python_type(module.get(), &type_spec_StorePackageUpdate, object_bases.get(), nullptr)};
+    py::pytype_handle StorePackageUpdate_type{py::register_python_type(module.get(), &type_spec_StorePackageUpdate, object_bases.get(), inspectable_meta_type)};
     if (!StorePackageUpdate_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorePackageUpdateResult_type{py::register_python_type(module.get(), &type_spec_StorePackageUpdateResult, object_bases.get(), nullptr)};
+    py::pytype_handle StorePackageUpdateResult_type{py::register_python_type(module.get(), &type_spec_StorePackageUpdateResult, object_bases.get(), inspectable_meta_type)};
     if (!StorePackageUpdateResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorePrice_type{py::register_python_type(module.get(), &type_spec_StorePrice, object_bases.get(), nullptr)};
+    py::pytype_handle StorePrice_type{py::register_python_type(module.get(), &type_spec_StorePrice, object_bases.get(), inspectable_meta_type)};
     if (!StorePrice_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreProduct_type{py::register_python_type(module.get(), &type_spec_StoreProduct, object_bases.get(), nullptr)};
+    py::pytype_handle StoreProduct_type{py::register_python_type(module.get(), &type_spec_StoreProduct, object_bases.get(), inspectable_meta_type)};
     if (!StoreProduct_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreProductOptions_type{py::register_python_type(module.get(), &type_spec_StoreProductOptions, object_bases.get(), nullptr)};
+    py::pytype_handle StoreProductOptions_type{py::register_python_type(module.get(), &type_spec_StoreProductOptions, object_bases.get(), inspectable_meta_type)};
     if (!StoreProductOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreProductPagedQueryResult_type{py::register_python_type(module.get(), &type_spec_StoreProductPagedQueryResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreProductPagedQueryResult_type{py::register_python_type(module.get(), &type_spec_StoreProductPagedQueryResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreProductPagedQueryResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreProductQueryResult_type{py::register_python_type(module.get(), &type_spec_StoreProductQueryResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreProductQueryResult_type{py::register_python_type(module.get(), &type_spec_StoreProductQueryResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreProductQueryResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreProductResult_type{py::register_python_type(module.get(), &type_spec_StoreProductResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreProductResult_type{py::register_python_type(module.get(), &type_spec_StoreProductResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreProductResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorePurchaseProperties_type{py::register_python_type(module.get(), &type_spec_StorePurchaseProperties, object_bases.get(), nullptr)};
+    py::pytype_handle StorePurchaseProperties_type{py::register_python_type(module.get(), &type_spec_StorePurchaseProperties, object_bases.get(), inspectable_meta_type)};
     if (!StorePurchaseProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorePurchaseResult_type{py::register_python_type(module.get(), &type_spec_StorePurchaseResult, object_bases.get(), nullptr)};
+    py::pytype_handle StorePurchaseResult_type{py::register_python_type(module.get(), &type_spec_StorePurchaseResult, object_bases.get(), inspectable_meta_type)};
     if (!StorePurchaseResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreQueueItem_type{py::register_python_type(module.get(), &type_spec_StoreQueueItem, object_bases.get(), nullptr)};
+    py::pytype_handle StoreQueueItem_type{py::register_python_type(module.get(), &type_spec_StoreQueueItem, object_bases.get(), inspectable_meta_type)};
     if (!StoreQueueItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreQueueItemCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_StoreQueueItemCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle StoreQueueItemCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_StoreQueueItemCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!StoreQueueItemCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreQueueItemStatus_type{py::register_python_type(module.get(), &type_spec_StoreQueueItemStatus, object_bases.get(), nullptr)};
+    py::pytype_handle StoreQueueItemStatus_type{py::register_python_type(module.get(), &type_spec_StoreQueueItemStatus, object_bases.get(), inspectable_meta_type)};
     if (!StoreQueueItemStatus_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreRateAndReviewResult_type{py::register_python_type(module.get(), &type_spec_StoreRateAndReviewResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreRateAndReviewResult_type{py::register_python_type(module.get(), &type_spec_StoreRateAndReviewResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreRateAndReviewResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StoreRequestHelper_Static{PyType_FromSpec(&type_spec_StoreRequestHelper_Static)};
+    py::pyobj_handle StoreRequestHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StoreRequestHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StoreRequestHelper_Static{PyType_FromSpecWithBases(&type_spec_StoreRequestHelper_Static, StoreRequestHelper_Static_bases.get())};
     if (!type_StoreRequestHelper_Static)
     {
         return nullptr;
@@ -9453,31 +9471,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_store(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StoreSendRequestResult_type{py::register_python_type(module.get(), &type_spec_StoreSendRequestResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreSendRequestResult_type{py::register_python_type(module.get(), &type_spec_StoreSendRequestResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreSendRequestResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreSku_type{py::register_python_type(module.get(), &type_spec_StoreSku, object_bases.get(), nullptr)};
+    py::pytype_handle StoreSku_type{py::register_python_type(module.get(), &type_spec_StoreSku, object_bases.get(), inspectable_meta_type)};
     if (!StoreSku_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreSubscriptionInfo_type{py::register_python_type(module.get(), &type_spec_StoreSubscriptionInfo, object_bases.get(), nullptr)};
+    py::pytype_handle StoreSubscriptionInfo_type{py::register_python_type(module.get(), &type_spec_StoreSubscriptionInfo, object_bases.get(), inspectable_meta_type)};
     if (!StoreSubscriptionInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreUninstallStorePackageResult_type{py::register_python_type(module.get(), &type_spec_StoreUninstallStorePackageResult, object_bases.get(), nullptr)};
+    py::pytype_handle StoreUninstallStorePackageResult_type{py::register_python_type(module.get(), &type_spec_StoreUninstallStorePackageResult, object_bases.get(), inspectable_meta_type)};
     if (!StoreUninstallStorePackageResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StoreVideo_type{py::register_python_type(module.get(), &type_spec_StoreVideo, object_bases.get(), nullptr)};
+    py::pytype_handle StoreVideo_type{py::register_python_type(module.get(), &type_spec_StoreVideo, object_bases.get(), inspectable_meta_type)};
     if (!StoreVideo_type)
     {
         return nullptr;

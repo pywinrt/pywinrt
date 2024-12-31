@@ -17,7 +17,7 @@ from winrt.windows.security.authentication.web import TokenBindingKeyType, WebAu
 Self = typing.TypeVar('Self')
 
 @typing.final
-class WebAuthenticationBroker_Static(type):
+class WebAuthenticationBroker_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.Security.Authentication.Web.WebAuthenticationBroker::AuthenticateAndContinue(Windows.Foundation.Uri)
     def authenticate_and_continue(cls, request_uri: windows_foundation.Uri, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.WebAuthenticationResult> Windows.Security.Authentication.Web.WebAuthenticationBroker::AuthenticateSilentlyAsync(Windows.Foundation.Uri)

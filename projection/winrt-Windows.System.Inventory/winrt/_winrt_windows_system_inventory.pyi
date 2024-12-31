@@ -15,7 +15,7 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 Self = typing.TypeVar('Self')
 
 @typing.final
-class InstalledDesktopApp_Static(type):
+class InstalledDesktopApp_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.Inventory.InstalledDesktopApp>> Windows.System.Inventory.InstalledDesktopApp::GetInventoryAsync()
     def get_inventory_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[InstalledDesktopApp]]: ...
 

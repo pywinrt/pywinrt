@@ -3917,6 +3917,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_accesscache(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3930,19 +3936,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_accesscache(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AccessListEntryView_type{py::register_python_type(module.get(), &type_spec_AccessListEntryView, object_bases.get(), nullptr)};
+    py::pytype_handle AccessListEntryView_type{py::register_python_type(module.get(), &type_spec_AccessListEntryView, object_bases.get(), inspectable_meta_type)};
     if (!AccessListEntryView_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_ItemRemovedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ItemRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_ItemRemovedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ItemRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StorageApplicationPermissions_Static{PyType_FromSpec(&type_spec_StorageApplicationPermissions_Static)};
+    py::pyobj_handle StorageApplicationPermissions_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StorageApplicationPermissions_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StorageApplicationPermissions_Static{PyType_FromSpecWithBases(&type_spec_StorageApplicationPermissions_Static, StorageApplicationPermissions_Static_bases.get())};
     if (!type_StorageApplicationPermissions_Static)
     {
         return nullptr;
@@ -3954,13 +3966,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_accesscache(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StorageItemAccessList_type{py::register_python_type(module.get(), &type_spec_StorageItemAccessList, object_bases.get(), nullptr)};
+    py::pytype_handle StorageItemAccessList_type{py::register_python_type(module.get(), &type_spec_StorageItemAccessList, object_bases.get(), inspectable_meta_type)};
     if (!StorageItemAccessList_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageItemMostRecentlyUsedList_type{py::register_python_type(module.get(), &type_spec_StorageItemMostRecentlyUsedList, object_bases.get(), nullptr)};
+    py::pytype_handle StorageItemMostRecentlyUsedList_type{py::register_python_type(module.get(), &type_spec_StorageItemMostRecentlyUsedList, object_bases.get(), inspectable_meta_type)};
     if (!StorageItemMostRecentlyUsedList_type)
     {
         return nullptr;
@@ -3972,7 +3984,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_accesscache(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStorageItemAccessList_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStorageItemAccessList, nullptr))};
+    py::pytype_handle ImplementsIStorageItemAccessList_type{py::register_python_type(module.get(), &type_spec_ImplementsIStorageItemAccessList, nullptr, inspectable_meta_type)};
     if (!ImplementsIStorageItemAccessList_type)
     {
         return nullptr;

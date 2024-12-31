@@ -296,14 +296,14 @@ class ConnectedAnimation(winrt.system.Object):
     @configuration.setter
     def configuration(self, value: ConnectedAnimationConfiguration) -> None: ...
 
-class ConnectedAnimationConfiguration_Static(type):
+class ConnectedAnimationConfiguration_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ConnectedAnimationConfiguration(winrt.system.Object, metaclass=ConnectedAnimationConfiguration_Static):
     pass
 
 @typing.final
-class ConnectedAnimationService_Static(type):
+class ConnectedAnimationService_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationService Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationService::GetForCurrentView()
     def get_for_current_view(cls) -> ConnectedAnimationService: ...
 
@@ -945,7 +945,7 @@ class KeySpline(microsoft_ui_xaml.DependencyObject):
     def control_point1(self, value: windows_foundation.Point) -> None: ...
 
 @typing.final
-class KeyTimeHelper_Static(type):
+class KeyTimeHelper_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Media.Animation.KeyTime Microsoft.UI.Xaml.Media.Animation.KeyTimeHelper::FromTimeSpan(Windows.Foundation.TimeSpan)
     def from_time_span(cls, time_span: datetime.timedelta, /) -> KeyTime: ...
 
@@ -1378,7 +1378,7 @@ class ReorderThemeTransition(Transition):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 @typing.final
-class RepeatBehaviorHelper_Static(type):
+class RepeatBehaviorHelper_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Microsoft.UI.Xaml.Media.Animation.RepeatBehaviorHelper::Equals(Microsoft.UI.Xaml.Media.Animation.RepeatBehavior,Microsoft.UI.Xaml.Media.Animation.RepeatBehavior)
     def equals(cls, target: RepeatBehavior, value: RepeatBehavior, /) -> bool: ...
     # Microsoft.UI.Xaml.Media.Animation.RepeatBehavior Microsoft.UI.Xaml.Media.Animation.RepeatBehaviorHelper::FromCount(System.Double)

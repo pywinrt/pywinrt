@@ -9385,6 +9385,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_smartcards(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -9398,19 +9404,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_smartcards(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CardAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_CardAddedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CardAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_CardAddedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CardAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CardRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_CardRemovedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CardRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_CardRemovedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CardRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownSmartCardAppletIds_Static{PyType_FromSpec(&type_spec_KnownSmartCardAppletIds_Static)};
+    py::pyobj_handle KnownSmartCardAppletIds_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownSmartCardAppletIds_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownSmartCardAppletIds_Static{PyType_FromSpecWithBases(&type_spec_KnownSmartCardAppletIds_Static, KnownSmartCardAppletIds_Static_bases.get())};
     if (!type_KnownSmartCardAppletIds_Static)
     {
         return nullptr;
@@ -9422,13 +9434,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_smartcards(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SmartCard_type{py::register_python_type(module.get(), &type_spec_SmartCard, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCard_type{py::register_python_type(module.get(), &type_spec_SmartCard, object_bases.get(), inspectable_meta_type)};
     if (!SmartCard_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SmartCardAppletIdGroup_Static{PyType_FromSpec(&type_spec_SmartCardAppletIdGroup_Static)};
+    py::pyobj_handle SmartCardAppletIdGroup_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmartCardAppletIdGroup_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmartCardAppletIdGroup_Static{PyType_FromSpecWithBases(&type_spec_SmartCardAppletIdGroup_Static, SmartCardAppletIdGroup_Static_bases.get())};
     if (!type_SmartCardAppletIdGroup_Static)
     {
         return nullptr;
@@ -9440,31 +9458,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_smartcards(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SmartCardAppletIdGroupRegistration_type{py::register_python_type(module.get(), &type_spec_SmartCardAppletIdGroupRegistration, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardAppletIdGroupRegistration_type{py::register_python_type(module.get(), &type_spec_SmartCardAppletIdGroupRegistration, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardAppletIdGroupRegistration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardAutomaticResponseApdu_type{py::register_python_type(module.get(), &type_spec_SmartCardAutomaticResponseApdu, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardAutomaticResponseApdu_type{py::register_python_type(module.get(), &type_spec_SmartCardAutomaticResponseApdu, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardAutomaticResponseApdu_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardChallengeContext_type{py::register_python_type(module.get(), &type_spec_SmartCardChallengeContext, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardChallengeContext_type{py::register_python_type(module.get(), &type_spec_SmartCardChallengeContext, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardChallengeContext_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardConnection_type{py::register_python_type(module.get(), &type_spec_SmartCardConnection, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardConnection_type{py::register_python_type(module.get(), &type_spec_SmartCardConnection, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardConnection_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SmartCardCryptogramGenerator_Static{PyType_FromSpec(&type_spec_SmartCardCryptogramGenerator_Static)};
+    py::pyobj_handle SmartCardCryptogramGenerator_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmartCardCryptogramGenerator_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmartCardCryptogramGenerator_Static{PyType_FromSpecWithBases(&type_spec_SmartCardCryptogramGenerator_Static, SmartCardCryptogramGenerator_Static_bases.get())};
     if (!type_SmartCardCryptogramGenerator_Static)
     {
         return nullptr;
@@ -9476,61 +9500,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_smartcards(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramMaterialCharacteristics_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramMaterialCharacteristics, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramMaterialCharacteristics_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramMaterialCharacteristics, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramMaterialCharacteristics_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramMaterialPackageCharacteristics_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramMaterialPackageCharacteristics, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramMaterialPackageCharacteristics_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramMaterialPackageCharacteristics, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramMaterialPackageCharacteristics_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramMaterialPossessionProof_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramMaterialPossessionProof, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramMaterialPossessionProof_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramMaterialPossessionProof, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramMaterialPossessionProof_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramPlacementStep_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramPlacementStep, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramPlacementStep_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramPlacementStep, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramPlacementStep_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramStorageKeyCharacteristics_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramStorageKeyCharacteristics, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramStorageKeyCharacteristics_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramStorageKeyCharacteristics, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramStorageKeyCharacteristics_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardCryptogramStorageKeyInfo_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramStorageKeyInfo, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardCryptogramStorageKeyInfo_type{py::register_python_type(module.get(), &type_spec_SmartCardCryptogramStorageKeyInfo, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardCryptogramStorageKeyInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SmartCardEmulator_Static{PyType_FromSpec(&type_spec_SmartCardEmulator_Static)};
+    py::pyobj_handle SmartCardEmulator_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmartCardEmulator_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmartCardEmulator_Static{PyType_FromSpecWithBases(&type_spec_SmartCardEmulator_Static, SmartCardEmulator_Static_bases.get())};
     if (!type_SmartCardEmulator_Static)
     {
         return nullptr;
@@ -9542,43 +9572,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_smartcards(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SmartCardEmulatorApduReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_SmartCardEmulatorApduReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardEmulatorApduReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_SmartCardEmulatorApduReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardEmulatorApduReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardEmulatorConnectionDeactivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_SmartCardEmulatorConnectionDeactivatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardEmulatorConnectionDeactivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_SmartCardEmulatorConnectionDeactivatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardEmulatorConnectionDeactivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardEmulatorConnectionProperties_type{py::register_python_type(module.get(), &type_spec_SmartCardEmulatorConnectionProperties, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardEmulatorConnectionProperties_type{py::register_python_type(module.get(), &type_spec_SmartCardEmulatorConnectionProperties, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardEmulatorConnectionProperties_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardPinPolicy_type{py::register_python_type(module.get(), &type_spec_SmartCardPinPolicy, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardPinPolicy_type{py::register_python_type(module.get(), &type_spec_SmartCardPinPolicy, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardPinPolicy_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardPinResetDeferral_type{py::register_python_type(module.get(), &type_spec_SmartCardPinResetDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardPinResetDeferral_type{py::register_python_type(module.get(), &type_spec_SmartCardPinResetDeferral, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardPinResetDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardPinResetRequest_type{py::register_python_type(module.get(), &type_spec_SmartCardPinResetRequest, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardPinResetRequest_type{py::register_python_type(module.get(), &type_spec_SmartCardPinResetRequest, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardPinResetRequest_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SmartCardProvisioning_Static{PyType_FromSpec(&type_spec_SmartCardProvisioning_Static)};
+    py::pyobj_handle SmartCardProvisioning_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmartCardProvisioning_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmartCardProvisioning_Static{PyType_FromSpecWithBases(&type_spec_SmartCardProvisioning_Static, SmartCardProvisioning_Static_bases.get())};
     if (!type_SmartCardProvisioning_Static)
     {
         return nullptr;
@@ -9590,7 +9626,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_smartcards(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SmartCardReader_Static{PyType_FromSpec(&type_spec_SmartCardReader_Static)};
+    py::pyobj_handle SmartCardReader_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmartCardReader_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmartCardReader_Static{PyType_FromSpecWithBases(&type_spec_SmartCardReader_Static, SmartCardReader_Static_bases.get())};
     if (!type_SmartCardReader_Static)
     {
         return nullptr;
@@ -9602,7 +9644,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_smartcards(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SmartCardTriggerDetails_type{py::register_python_type(module.get(), &type_spec_SmartCardTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardTriggerDetails_type{py::register_python_type(module.get(), &type_spec_SmartCardTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardTriggerDetails_type)
     {
         return nullptr;

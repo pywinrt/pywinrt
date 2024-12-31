@@ -918,6 +918,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo_provider(void) 
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -931,19 +937,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo_provider(void) 
         return nullptr;
     }
 
-    py::pytype_handle SocialDashboardItemUpdater_type{py::register_python_type(module.get(), &type_spec_SocialDashboardItemUpdater, object_bases.get(), nullptr)};
+    py::pytype_handle SocialDashboardItemUpdater_type{py::register_python_type(module.get(), &type_spec_SocialDashboardItemUpdater, object_bases.get(), inspectable_meta_type)};
     if (!SocialDashboardItemUpdater_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SocialFeedUpdater_type{py::register_python_type(module.get(), &type_spec_SocialFeedUpdater, object_bases.get(), nullptr)};
+    py::pytype_handle SocialFeedUpdater_type{py::register_python_type(module.get(), &type_spec_SocialFeedUpdater, object_bases.get(), inspectable_meta_type)};
     if (!SocialFeedUpdater_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SocialInfoProviderManager_Static{PyType_FromSpec(&type_spec_SocialInfoProviderManager_Static)};
+    py::pyobj_handle SocialInfoProviderManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SocialInfoProviderManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SocialInfoProviderManager_Static{PyType_FromSpecWithBases(&type_spec_SocialInfoProviderManager_Static, SocialInfoProviderManager_Static_bases.get())};
     if (!type_SocialInfoProviderManager_Static)
     {
         return nullptr;

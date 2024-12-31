@@ -73,7 +73,7 @@ class AudioEffectDefinition(winrt.system.Object, IAudioEffectDefinition):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class AudioEffectsManager_Static(type):
+class AudioEffectsManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Media.Effects.AudioCaptureEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioCaptureEffectsManager(System.String,Windows.Media.Capture.MediaCategory)
     def create_audio_capture_effects_manager(cls, device_id: str, category: windows_media_capture.MediaCategory, /) -> AudioCaptureEffectsManager: ...
     # Windows.Media.Effects.AudioCaptureEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioCaptureEffectsManager(System.String,Windows.Media.Capture.MediaCategory,Windows.Media.AudioProcessing)

@@ -15548,6 +15548,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_email(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -15561,133 +15567,139 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_email(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle EmailAttachment_type{py::register_python_type(module.get(), &type_spec_EmailAttachment, object_bases.get(), nullptr)};
+    py::pytype_handle EmailAttachment_type{py::register_python_type(module.get(), &type_spec_EmailAttachment, object_bases.get(), inspectable_meta_type)};
     if (!EmailAttachment_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailConversation_type{py::register_python_type(module.get(), &type_spec_EmailConversation, object_bases.get(), nullptr)};
+    py::pytype_handle EmailConversation_type{py::register_python_type(module.get(), &type_spec_EmailConversation, object_bases.get(), inspectable_meta_type)};
     if (!EmailConversation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailConversationBatch_type{py::register_python_type(module.get(), &type_spec_EmailConversationBatch, object_bases.get(), nullptr)};
+    py::pytype_handle EmailConversationBatch_type{py::register_python_type(module.get(), &type_spec_EmailConversationBatch, object_bases.get(), inspectable_meta_type)};
     if (!EmailConversationBatch_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailConversationReader_type{py::register_python_type(module.get(), &type_spec_EmailConversationReader, object_bases.get(), nullptr)};
+    py::pytype_handle EmailConversationReader_type{py::register_python_type(module.get(), &type_spec_EmailConversationReader, object_bases.get(), inspectable_meta_type)};
     if (!EmailConversationReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailFolder_type{py::register_python_type(module.get(), &type_spec_EmailFolder, object_bases.get(), nullptr)};
+    py::pytype_handle EmailFolder_type{py::register_python_type(module.get(), &type_spec_EmailFolder, object_bases.get(), inspectable_meta_type)};
     if (!EmailFolder_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailIrmInfo_type{py::register_python_type(module.get(), &type_spec_EmailIrmInfo, object_bases.get(), nullptr)};
+    py::pytype_handle EmailIrmInfo_type{py::register_python_type(module.get(), &type_spec_EmailIrmInfo, object_bases.get(), inspectable_meta_type)};
     if (!EmailIrmInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailIrmTemplate_type{py::register_python_type(module.get(), &type_spec_EmailIrmTemplate, object_bases.get(), nullptr)};
+    py::pytype_handle EmailIrmTemplate_type{py::register_python_type(module.get(), &type_spec_EmailIrmTemplate, object_bases.get(), inspectable_meta_type)};
     if (!EmailIrmTemplate_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailItemCounts_type{py::register_python_type(module.get(), &type_spec_EmailItemCounts, object_bases.get(), nullptr)};
+    py::pytype_handle EmailItemCounts_type{py::register_python_type(module.get(), &type_spec_EmailItemCounts, object_bases.get(), inspectable_meta_type)};
     if (!EmailItemCounts_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailbox_type{py::register_python_type(module.get(), &type_spec_EmailMailbox, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailbox_type{py::register_python_type(module.get(), &type_spec_EmailMailbox, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailbox_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxAction_type{py::register_python_type(module.get(), &type_spec_EmailMailboxAction, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxAction_type{py::register_python_type(module.get(), &type_spec_EmailMailboxAction, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxAction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxAutoReply_type{py::register_python_type(module.get(), &type_spec_EmailMailboxAutoReply, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxAutoReply_type{py::register_python_type(module.get(), &type_spec_EmailMailboxAutoReply, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxAutoReply_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxAutoReplySettings_type{py::register_python_type(module.get(), &type_spec_EmailMailboxAutoReplySettings, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxAutoReplySettings_type{py::register_python_type(module.get(), &type_spec_EmailMailboxAutoReplySettings, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxAutoReplySettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxCapabilities_type{py::register_python_type(module.get(), &type_spec_EmailMailboxCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxCapabilities_type{py::register_python_type(module.get(), &type_spec_EmailMailboxCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxChange_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChange, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxChange_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChange, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxChange_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxChangeReader_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChangeReader, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxChangeReader_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChangeReader, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxChangeReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxChangeTracker_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChangeTracker, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxChangeTracker_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChangeTracker, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxChangeTracker_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxChangedDeferral_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChangedDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxChangedDeferral_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChangedDeferral, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxChangedDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxCreateFolderResult_type{py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderResult, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxCreateFolderResult_type{py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderResult, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxCreateFolderResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxPolicies_type{py::register_python_type(module.get(), &type_spec_EmailMailboxPolicies, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxPolicies_type{py::register_python_type(module.get(), &type_spec_EmailMailboxPolicies, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxPolicies_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMailboxSyncManager_type{py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManager, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMailboxSyncManager_type{py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManager, object_bases.get(), inspectable_meta_type)};
     if (!EmailMailboxSyncManager_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EmailManager_Static{PyType_FromSpec(&type_spec_EmailManager_Static)};
+    py::pyobj_handle EmailManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!EmailManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EmailManager_Static{PyType_FromSpecWithBases(&type_spec_EmailManager_Static, EmailManager_Static_bases.get())};
     if (!type_EmailManager_Static)
     {
         return nullptr;
@@ -15699,67 +15711,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_email(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle EmailManagerForUser_type{py::register_python_type(module.get(), &type_spec_EmailManagerForUser, object_bases.get(), nullptr)};
+    py::pytype_handle EmailManagerForUser_type{py::register_python_type(module.get(), &type_spec_EmailManagerForUser, object_bases.get(), inspectable_meta_type)};
     if (!EmailManagerForUser_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMeetingInfo_type{py::register_python_type(module.get(), &type_spec_EmailMeetingInfo, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMeetingInfo_type{py::register_python_type(module.get(), &type_spec_EmailMeetingInfo, object_bases.get(), inspectable_meta_type)};
     if (!EmailMeetingInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMessage_type{py::register_python_type(module.get(), &type_spec_EmailMessage, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMessage_type{py::register_python_type(module.get(), &type_spec_EmailMessage, object_bases.get(), inspectable_meta_type)};
     if (!EmailMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMessageBatch_type{py::register_python_type(module.get(), &type_spec_EmailMessageBatch, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMessageBatch_type{py::register_python_type(module.get(), &type_spec_EmailMessageBatch, object_bases.get(), inspectable_meta_type)};
     if (!EmailMessageBatch_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailMessageReader_type{py::register_python_type(module.get(), &type_spec_EmailMessageReader, object_bases.get(), nullptr)};
+    py::pytype_handle EmailMessageReader_type{py::register_python_type(module.get(), &type_spec_EmailMessageReader, object_bases.get(), inspectable_meta_type)};
     if (!EmailMessageReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailQueryOptions_type{py::register_python_type(module.get(), &type_spec_EmailQueryOptions, object_bases.get(), nullptr)};
+    py::pytype_handle EmailQueryOptions_type{py::register_python_type(module.get(), &type_spec_EmailQueryOptions, object_bases.get(), inspectable_meta_type)};
     if (!EmailQueryOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailQueryTextSearch_type{py::register_python_type(module.get(), &type_spec_EmailQueryTextSearch, object_bases.get(), nullptr)};
+    py::pytype_handle EmailQueryTextSearch_type{py::register_python_type(module.get(), &type_spec_EmailQueryTextSearch, object_bases.get(), inspectable_meta_type)};
     if (!EmailQueryTextSearch_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailRecipient_type{py::register_python_type(module.get(), &type_spec_EmailRecipient, object_bases.get(), nullptr)};
+    py::pytype_handle EmailRecipient_type{py::register_python_type(module.get(), &type_spec_EmailRecipient, object_bases.get(), inspectable_meta_type)};
     if (!EmailRecipient_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailRecipientResolutionResult_type{py::register_python_type(module.get(), &type_spec_EmailRecipientResolutionResult, object_bases.get(), nullptr)};
+    py::pytype_handle EmailRecipientResolutionResult_type{py::register_python_type(module.get(), &type_spec_EmailRecipientResolutionResult, object_bases.get(), inspectable_meta_type)};
     if (!EmailRecipientResolutionResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailStore_type{py::register_python_type(module.get(), &type_spec_EmailStore, object_bases.get(), nullptr)};
+    py::pytype_handle EmailStore_type{py::register_python_type(module.get(), &type_spec_EmailStore, object_bases.get(), inspectable_meta_type)};
     if (!EmailStore_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailStoreNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_EmailStoreNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle EmailStoreNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_EmailStoreNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!EmailStoreNotificationTriggerDetails_type)
     {
         return nullptr;

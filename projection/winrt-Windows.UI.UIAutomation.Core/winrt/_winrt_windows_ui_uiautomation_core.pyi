@@ -44,7 +44,7 @@ class AutomationRemoteOperationResult(winrt.system.Object):
     def status(self) -> AutomationRemoteOperationStatus: ...
 
 @typing.final
-class CoreAutomationRegistrar_Static(type):
+class CoreAutomationRegistrar_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration Windows.UI.UIAutomation.Core.CoreAutomationRegistrar::RegisterAnnotationType(System.Guid)
     def register_annotation_type(cls, guid: _uuid.UUID, /) -> AutomationAnnotationTypeRegistration: ...
     # System.Void Windows.UI.UIAutomation.Core.CoreAutomationRegistrar::UnregisterAnnotationType(Windows.UI.UIAutomation.Core.AutomationAnnotationTypeRegistration)
@@ -119,7 +119,7 @@ class RemoteAutomationDisconnectedEventArgs(winrt.system.Object):
     def local_pipe_name(self) -> str: ...
 
 @typing.final
-class RemoteAutomationServer_Static(type):
+class RemoteAutomationServer_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.UIAutomation.Core.RemoteAutomationServer::ReportSession(System.Guid)
     def report_session(cls, session_id: _uuid.UUID, /) -> None: ...
 

@@ -145,7 +145,7 @@ class StoreConsumableResult(winrt.system.Object):
     def tracking_id(self) -> _uuid.UUID: ...
 
 @typing.final
-class StoreContext_Static(type):
+class StoreContext_Static(winrt._winrt.IInspectable_Static):
     # Windows.Services.Store.StoreContext Windows.Services.Store.StoreContext::GetDefault()
     def get_default(cls) -> StoreContext: ...
     # Windows.Services.Store.StoreContext Windows.Services.Store.StoreContext::GetForUser(Windows.System.User)
@@ -540,7 +540,7 @@ class StoreRateAndReviewResult(winrt.system.Object):
     def was_updated(self) -> bool: ...
 
 @typing.final
-class StoreRequestHelper_Static(type):
+class StoreRequestHelper_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreSendRequestResult> Windows.Services.Store.StoreRequestHelper::SendRequestAsync(Windows.Services.Store.StoreContext,System.UInt32,System.String)
     def send_request_async(cls, context: StoreContext, request_kind: winrt.system.UInt32, parameters_as_json: str, /) -> windows_foundation.IAsyncOperation[StoreSendRequestResult]: ...
 

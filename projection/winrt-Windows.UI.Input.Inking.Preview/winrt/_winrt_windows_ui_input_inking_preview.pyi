@@ -15,7 +15,7 @@ import winrt.windows.ui.composition as windows_ui_composition
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PalmRejectionDelayZonePreview_Static(type):
+class PalmRejectionDelayZonePreview_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview::CreateForVisual(Windows.UI.Composition.Visual,Windows.Foundation.Rect)
     def create_for_visual(cls, input_panel_visual: windows_ui_composition.Visual, input_panel_rect: windows_foundation.Rect, /) -> PalmRejectionDelayZonePreview: ...
     # Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview::CreateForVisual(Windows.UI.Composition.Visual,Windows.Foundation.Rect,Windows.UI.Composition.Visual,Windows.Foundation.Rect)

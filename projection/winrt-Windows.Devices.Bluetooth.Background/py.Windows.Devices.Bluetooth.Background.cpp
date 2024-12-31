@@ -1441,6 +1441,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_background(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1454,25 +1460,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementPublisherTriggerDetails_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementPublisherTriggerDetails_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementPublisherTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementWatcherTriggerDetails_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementWatcherTriggerDetails_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementWatcherTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattCharacteristicNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_GattCharacteristicNotificationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle GattCharacteristicNotificationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_GattCharacteristicNotificationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!GattCharacteristicNotificationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattServiceProviderConnection_Static{PyType_FromSpec(&type_spec_GattServiceProviderConnection_Static)};
+    py::pyobj_handle GattServiceProviderConnection_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattServiceProviderConnection_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattServiceProviderConnection_Static{PyType_FromSpecWithBases(&type_spec_GattServiceProviderConnection_Static, GattServiceProviderConnection_Static_bases.get())};
     if (!type_GattServiceProviderConnection_Static)
     {
         return nullptr;
@@ -1484,25 +1496,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GattServiceProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle GattServiceProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!GattServiceProviderTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RfcommConnectionTriggerDetails_type{py::register_python_type(module.get(), &type_spec_RfcommConnectionTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle RfcommConnectionTriggerDetails_type{py::register_python_type(module.get(), &type_spec_RfcommConnectionTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!RfcommConnectionTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RfcommInboundConnectionInformation_type{py::register_python_type(module.get(), &type_spec_RfcommInboundConnectionInformation, object_bases.get(), nullptr)};
+    py::pytype_handle RfcommInboundConnectionInformation_type{py::register_python_type(module.get(), &type_spec_RfcommInboundConnectionInformation, object_bases.get(), inspectable_meta_type)};
     if (!RfcommInboundConnectionInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RfcommOutboundConnectionInformation_type{py::register_python_type(module.get(), &type_spec_RfcommOutboundConnectionInformation, object_bases.get(), nullptr)};
+    py::pytype_handle RfcommOutboundConnectionInformation_type{py::register_python_type(module.get(), &type_spec_RfcommOutboundConnectionInformation, object_bases.get(), inspectable_meta_type)};
     if (!RfcommOutboundConnectionInformation_type)
     {
         return nullptr;

@@ -15,7 +15,7 @@ from winrt.windows.system.diagnostics.telemetry import PlatformTelemetryRegistra
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PlatformTelemetryClient_Static(type):
+class PlatformTelemetryClient_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String)
     def register(cls, id: str, /) -> PlatformTelemetryRegistrationResult: ...
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String,Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings)

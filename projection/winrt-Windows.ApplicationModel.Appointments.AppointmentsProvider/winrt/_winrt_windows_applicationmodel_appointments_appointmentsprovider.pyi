@@ -32,7 +32,7 @@ class AddAppointmentOperation(winrt.system.Object):
     def source_package_family_name(self) -> str: ...
 
 @typing.final
-class AppointmentsProviderLaunchActionVerbs_Static(type):
+class AppointmentsProviderLaunchActionVerbs_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs::get_AddAppointment()
     @_property
     def add_appointment(cls) -> str: ...

@@ -18,7 +18,7 @@ from winrt.windows.devices.enumeration.pnp import PnpObjectType
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PnpObject_Static(type):
+class PnpObject_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.Pnp.PnpObject> Windows.Devices.Enumeration.Pnp.PnpObject::CreateFromIdAsync(Windows.Devices.Enumeration.Pnp.PnpObjectType,System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def create_from_id_async(cls, type: PnpObjectType, id: str, requested_properties: typing.Iterable[str], /) -> windows_foundation.IAsyncOperation[PnpObject]: ...
     # Windows.Devices.Enumeration.Pnp.PnpObjectWatcher Windows.Devices.Enumeration.Pnp.PnpObject::CreateWatcher(Windows.Devices.Enumeration.Pnp.PnpObjectType,Windows.Foundation.Collections.IIterable`1<System.String>)

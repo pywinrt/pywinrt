@@ -21,7 +21,7 @@ from winrt.windows.system.userprofile import AccountPictureKind, SetAccountPictu
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AdvertisingManager_Static(type):
+class AdvertisingManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.UserProfile.AdvertisingManagerForUser Windows.System.UserProfile.AdvertisingManager::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> AdvertisingManagerForUser: ...
     # System.String Windows.System.UserProfile.AdvertisingManager::get_AdvertisingId()
@@ -42,7 +42,7 @@ class AdvertisingManagerForUser(winrt.system.Object):
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class AssignedAccessSettings_Static(type):
+class AssignedAccessSettings_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.UserProfile.AssignedAccessSettings Windows.System.UserProfile.AssignedAccessSettings::GetDefault()
     def get_default(cls) -> AssignedAccessSettings: ...
     # Windows.System.UserProfile.AssignedAccessSettings Windows.System.UserProfile.AssignedAccessSettings::GetForUser(Windows.System.User)
@@ -61,7 +61,7 @@ class AssignedAccessSettings(winrt.system.Object, metaclass=AssignedAccessSettin
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class DiagnosticsSettings_Static(type):
+class DiagnosticsSettings_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.UserProfile.DiagnosticsSettings Windows.System.UserProfile.DiagnosticsSettings::GetDefault()
     def get_default(cls) -> DiagnosticsSettings: ...
     # Windows.System.UserProfile.DiagnosticsSettings Windows.System.UserProfile.DiagnosticsSettings::GetForUser(Windows.System.User)
@@ -77,7 +77,7 @@ class DiagnosticsSettings(winrt.system.Object, metaclass=DiagnosticsSettings_Sta
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class FirstSignInSettings_Static(type):
+class FirstSignInSettings_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.UserProfile.FirstSignInSettings Windows.System.UserProfile.FirstSignInSettings::GetDefault()
     def get_default(cls) -> FirstSignInSettings: ...
 
@@ -100,7 +100,7 @@ class FirstSignInSettings(winrt.system.Object, winrt._winrt.Mapping[str, winrt.s
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class GlobalizationPreferences_Static(type):
+class GlobalizationPreferences_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.UserProfile.GlobalizationPreferencesForUser Windows.System.UserProfile.GlobalizationPreferences::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> GlobalizationPreferencesForUser: ...
     # System.Boolean Windows.System.UserProfile.GlobalizationPreferences::TrySetHomeGeographicRegion(System.String)
@@ -155,7 +155,7 @@ class GlobalizationPreferencesForUser(winrt.system.Object):
     def week_starts_on(self) -> windows_globalization.DayOfWeek: ...
 
 @typing.final
-class LockScreen_Static(type):
+class LockScreen_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.Streams.IRandomAccessStream Windows.System.UserProfile.LockScreen::GetImageStream()
     def get_image_stream(cls) -> windows_storage_streams.IRandomAccessStream: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetImageFeedResult> Windows.System.UserProfile.LockScreen::RequestSetImageFeedAsync(Windows.Foundation.Uri)
@@ -175,7 +175,7 @@ class LockScreen(winrt.system.Object, metaclass=LockScreen_Static):
     pass
 
 @typing.final
-class UserInformation_Static(type):
+class UserInformation_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.IStorageFile Windows.System.UserProfile.UserInformation::GetAccountPicture(Windows.System.UserProfile.AccountPictureKind)
     # @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
     def get_account_picture(cls, kind: AccountPictureKind, /) -> windows_storage.IStorageFile: ...
@@ -227,7 +227,7 @@ class UserInformation(winrt.system.Object, metaclass=UserInformation_Static):
     pass
 
 @typing.final
-class UserProfilePersonalizationSettings_Static(type):
+class UserProfilePersonalizationSettings_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.System.UserProfile.UserProfilePersonalizationSettings::IsSupported()
     def is_supported(cls) -> bool: ...
     # Windows.System.UserProfile.UserProfilePersonalizationSettings Windows.System.UserProfile.UserProfilePersonalizationSettings::get_Current()

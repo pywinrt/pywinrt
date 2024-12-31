@@ -2253,6 +2253,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks_dataprovider
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2266,73 +2272,73 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks_dataprovider
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskDataProviderConnection_type{py::register_python_type(module.get(), &type_spec_UserDataTaskDataProviderConnection, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskDataProviderConnection_type{py::register_python_type(module.get(), &type_spec_UserDataTaskDataProviderConnection, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskDataProviderConnection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskDataProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_UserDataTaskDataProviderTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskDataProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_UserDataTaskDataProviderTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskDataProviderTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListCompleteTaskRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListCompleteTaskRequest, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListCompleteTaskRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListCompleteTaskRequest, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListCompleteTaskRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListCompleteTaskRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListCompleteTaskRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListCompleteTaskRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListCompleteTaskRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListCompleteTaskRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListCreateOrUpdateTaskRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListCreateOrUpdateTaskRequest, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListCreateOrUpdateTaskRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListCreateOrUpdateTaskRequest, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListCreateOrUpdateTaskRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListCreateOrUpdateTaskRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListCreateOrUpdateTaskRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListCreateOrUpdateTaskRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListDeleteTaskRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListDeleteTaskRequest, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListDeleteTaskRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListDeleteTaskRequest, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListDeleteTaskRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListDeleteTaskRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListDeleteTaskRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListDeleteTaskRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListDeleteTaskRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListDeleteTaskRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListSkipOccurrenceRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSkipOccurrenceRequest, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListSkipOccurrenceRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSkipOccurrenceRequest, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListSkipOccurrenceRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListSkipOccurrenceRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListSkipOccurrenceRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListSkipOccurrenceRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListSyncManagerSyncRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManagerSyncRequest, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListSyncManagerSyncRequest_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManagerSyncRequest, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListSyncManagerSyncRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserDataTaskListSyncManagerSyncRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UserDataTaskListSyncManagerSyncRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UserDataTaskListSyncManagerSyncRequestEventArgs_type)
     {
         return nullptr;

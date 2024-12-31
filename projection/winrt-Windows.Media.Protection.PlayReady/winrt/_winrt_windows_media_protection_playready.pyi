@@ -200,7 +200,7 @@ class PlayReadyContentHeader(winrt.system.Object):
     def key_ids(self) -> _uuid.UUID: ...
 
 @typing.final
-class PlayReadyContentResolver_Static(type):
+class PlayReadyContentResolver_Static(winrt._winrt.IInspectable_Static):
     # Windows.Media.Protection.PlayReady.IPlayReadyServiceRequest Windows.Media.Protection.PlayReady.PlayReadyContentResolver::ServiceRequest(Windows.Media.Protection.PlayReady.PlayReadyContentHeader)
     def service_request(cls, content_header: PlayReadyContentHeader, /) -> IPlayReadyServiceRequest: ...
 
@@ -494,7 +494,7 @@ class PlayReadyLicenseIterator(winrt.system.Object, windows_foundation_collectio
     def has_current(self) -> bool: ...
 
 @typing.final
-class PlayReadyLicenseManagement_Static(type):
+class PlayReadyLicenseManagement_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.Media.Protection.PlayReady.PlayReadyLicenseManagement::DeleteLicenses(Windows.Media.Protection.PlayReady.PlayReadyContentHeader)
     def delete_licenses(cls, content_header: PlayReadyContentHeader, /) -> windows_foundation.IAsyncAction: ...
 
@@ -669,7 +669,7 @@ class PlayReadySoapMessage(winrt.system.Object):
     def uri(self) -> windows_foundation.Uri: ...
 
 @typing.final
-class PlayReadyStatics_Static(type):
+class PlayReadyStatics_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Media.Protection.PlayReady.PlayReadyStatics::CheckSupportedHardware(Windows.Media.Protection.PlayReady.PlayReadyHardwareDRMFeatures)
     def check_supported_hardware(cls, hwdrm_feature: PlayReadyHardwareDRMFeatures, /) -> bool: ...
     # System.Void Windows.Media.Protection.PlayReady.PlayReadyStatics::ResetHardwareDRMDisabled()

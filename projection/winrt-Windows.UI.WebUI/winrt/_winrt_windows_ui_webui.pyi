@@ -167,7 +167,7 @@ class SuspendingOperation(winrt.system.Object, windows_applicationmodel.ISuspend
     def deadline(self) -> datetime.datetime: ...
 
 @typing.final
-class WebUIApplication_Static(type):
+class WebUIApplication_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.WebUI.WebUIApplication::EnablePrelaunch(System.Boolean)
     def enable_prelaunch(cls, value: bool, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Core.AppRestartFailureReason> Windows.UI.WebUI.WebUIApplication::RequestRestartAsync(System.String)
@@ -341,7 +341,7 @@ class WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs(winrt.system.Obje
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIBackgroundTaskInstance_Static(type):
+class WebUIBackgroundTaskInstance_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.WebUI.IWebUIBackgroundTaskInstance Windows.UI.WebUI.WebUIBackgroundTaskInstance::get_Current()
     @_property
     def current(cls) -> IWebUIBackgroundTaskInstance: ...
@@ -1255,7 +1255,7 @@ class WebUIUserDataAccountProviderActivatedEventArgs(winrt.system.Object, IActiv
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIView_Static(type):
+class WebUIView_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.WebUI.WebUIView> Windows.UI.WebUI.WebUIView::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[WebUIView]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.WebUI.WebUIView> Windows.UI.WebUI.WebUIView::CreateAsync(Windows.Foundation.Uri)

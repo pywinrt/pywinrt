@@ -4158,6 +4158,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4171,7 +4177,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GameControllerFactoryManager_Static{PyType_FromSpec(&type_spec_GameControllerFactoryManager_Static)};
+    py::pyobj_handle GameControllerFactoryManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GameControllerFactoryManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GameControllerFactoryManager_Static{PyType_FromSpecWithBases(&type_spec_GameControllerFactoryManager_Static, GameControllerFactoryManager_Static_bases.get())};
     if (!type_GameControllerFactoryManager_Static)
     {
         return nullptr;
@@ -4183,25 +4195,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GipFirmwareUpdateResult_type{py::register_python_type(module.get(), &type_spec_GipFirmwareUpdateResult, object_bases.get(), nullptr)};
+    py::pytype_handle GipFirmwareUpdateResult_type{py::register_python_type(module.get(), &type_spec_GipFirmwareUpdateResult, object_bases.get(), inspectable_meta_type)};
     if (!GipFirmwareUpdateResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GipGameControllerProvider_type{py::register_python_type(module.get(), &type_spec_GipGameControllerProvider, object_bases.get(), nullptr)};
+    py::pytype_handle GipGameControllerProvider_type{py::register_python_type(module.get(), &type_spec_GipGameControllerProvider, object_bases.get(), inspectable_meta_type)};
     if (!GipGameControllerProvider_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HidGameControllerProvider_type{py::register_python_type(module.get(), &type_spec_HidGameControllerProvider, object_bases.get(), nullptr)};
+    py::pytype_handle HidGameControllerProvider_type{py::register_python_type(module.get(), &type_spec_HidGameControllerProvider, object_bases.get(), inspectable_meta_type)};
     if (!HidGameControllerProvider_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XusbGameControllerProvider_type{py::register_python_type(module.get(), &type_spec_XusbGameControllerProvider, object_bases.get(), nullptr)};
+    py::pytype_handle XusbGameControllerProvider_type{py::register_python_type(module.get(), &type_spec_XusbGameControllerProvider, object_bases.get(), inspectable_meta_type)};
     if (!XusbGameControllerProvider_type)
     {
         return nullptr;
@@ -4213,7 +4225,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICustomGameControllerFactory_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICustomGameControllerFactory, nullptr))};
+    py::pytype_handle ImplementsICustomGameControllerFactory_type{py::register_python_type(module.get(), &type_spec_ImplementsICustomGameControllerFactory, nullptr, inspectable_meta_type)};
     if (!ImplementsICustomGameControllerFactory_type)
     {
         return nullptr;
@@ -4230,7 +4242,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGameControllerInputSink_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameControllerInputSink, nullptr))};
+    py::pytype_handle ImplementsIGameControllerInputSink_type{py::register_python_type(module.get(), &type_spec_ImplementsIGameControllerInputSink, nullptr, inspectable_meta_type)};
     if (!ImplementsIGameControllerInputSink_type)
     {
         return nullptr;
@@ -4247,7 +4259,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGameControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGameControllerProvider, nullptr))};
+    py::pytype_handle ImplementsIGameControllerProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIGameControllerProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIGameControllerProvider_type)
     {
         return nullptr;
@@ -4264,7 +4276,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGipGameControllerInputSink_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGipGameControllerInputSink, nullptr))};
+    py::pytype_handle ImplementsIGipGameControllerInputSink_type{py::register_python_type(module.get(), &type_spec_ImplementsIGipGameControllerInputSink, nullptr, inspectable_meta_type)};
     if (!ImplementsIGipGameControllerInputSink_type)
     {
         return nullptr;
@@ -4281,7 +4293,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIHidGameControllerInputSink_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIHidGameControllerInputSink, nullptr))};
+    py::pytype_handle ImplementsIHidGameControllerInputSink_type{py::register_python_type(module.get(), &type_spec_ImplementsIHidGameControllerInputSink, nullptr, inspectable_meta_type)};
     if (!ImplementsIHidGameControllerInputSink_type)
     {
         return nullptr;
@@ -4298,7 +4310,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIXusbGameControllerInputSink_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXusbGameControllerInputSink, nullptr))};
+    py::pytype_handle ImplementsIXusbGameControllerInputSink_type{py::register_python_type(module.get(), &type_spec_ImplementsIXusbGameControllerInputSink, nullptr, inspectable_meta_type)};
     if (!ImplementsIXusbGameControllerInputSink_type)
     {
         return nullptr;

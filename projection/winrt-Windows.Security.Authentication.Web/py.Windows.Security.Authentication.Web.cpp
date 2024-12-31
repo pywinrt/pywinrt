@@ -594,6 +594,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -607,7 +613,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_WebAuthenticationBroker_Static{PyType_FromSpec(&type_spec_WebAuthenticationBroker_Static)};
+    py::pyobj_handle WebAuthenticationBroker_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WebAuthenticationBroker_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WebAuthenticationBroker_Static{PyType_FromSpecWithBases(&type_spec_WebAuthenticationBroker_Static, WebAuthenticationBroker_Static_bases.get())};
     if (!type_WebAuthenticationBroker_Static)
     {
         return nullptr;
@@ -619,7 +631,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WebAuthenticationResult_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationResult, object_bases.get(), nullptr)};
+    py::pytype_handle WebAuthenticationResult_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationResult, object_bases.get(), inspectable_meta_type)};
     if (!WebAuthenticationResult_type)
     {
         return nullptr;

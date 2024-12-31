@@ -1087,6 +1087,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1106,7 +1112,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIDirect3DDevice_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDirect3DDevice, nullptr))};
+    py::pytype_handle ImplementsIDirect3DDevice_type{py::register_python_type(module.get(), &type_spec_ImplementsIDirect3DDevice, nullptr, inspectable_meta_type)};
     if (!ImplementsIDirect3DDevice_type)
     {
         return nullptr;
@@ -1123,7 +1129,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIDirect3DSurface_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDirect3DSurface, nullptr))};
+    py::pytype_handle ImplementsIDirect3DSurface_type{py::register_python_type(module.get(), &type_spec_ImplementsIDirect3DSurface, nullptr, inspectable_meta_type)};
     if (!ImplementsIDirect3DSurface_type)
     {
         return nullptr;

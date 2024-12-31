@@ -505,6 +505,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -518,25 +524,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AutomationConnection_type{py::register_python_type(module.get(), &type_spec_AutomationConnection, object_bases.get(), nullptr)};
+    py::pytype_handle AutomationConnection_type{py::register_python_type(module.get(), &type_spec_AutomationConnection, object_bases.get(), inspectable_meta_type)};
     if (!AutomationConnection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AutomationConnectionBoundObject_type{py::register_python_type(module.get(), &type_spec_AutomationConnectionBoundObject, object_bases.get(), nullptr)};
+    py::pytype_handle AutomationConnectionBoundObject_type{py::register_python_type(module.get(), &type_spec_AutomationConnectionBoundObject, object_bases.get(), inspectable_meta_type)};
     if (!AutomationConnectionBoundObject_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AutomationElement_type{py::register_python_type(module.get(), &type_spec_AutomationElement, object_bases.get(), nullptr)};
+    py::pytype_handle AutomationElement_type{py::register_python_type(module.get(), &type_spec_AutomationElement, object_bases.get(), inspectable_meta_type)};
     if (!AutomationElement_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AutomationTextRange_type{py::register_python_type(module.get(), &type_spec_AutomationTextRange, object_bases.get(), nullptr)};
+    py::pytype_handle AutomationTextRange_type{py::register_python_type(module.get(), &type_spec_AutomationTextRange, object_bases.get(), inspectable_meta_type)};
     if (!AutomationTextRange_type)
     {
         return nullptr;

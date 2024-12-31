@@ -1958,6 +1958,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1971,13 +1977,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SpeechSynthesisStream_type{py::register_python_type(module.get(), &type_spec_SpeechSynthesisStream, object_bases.get(), nullptr)};
+    py::pytype_handle SpeechSynthesisStream_type{py::register_python_type(module.get(), &type_spec_SpeechSynthesisStream, object_bases.get(), inspectable_meta_type)};
     if (!SpeechSynthesisStream_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SpeechSynthesizer_Static{PyType_FromSpec(&type_spec_SpeechSynthesizer_Static)};
+    py::pyobj_handle SpeechSynthesizer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SpeechSynthesizer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpeechSynthesizer_Static{PyType_FromSpecWithBases(&type_spec_SpeechSynthesizer_Static, SpeechSynthesizer_Static_bases.get())};
     if (!type_SpeechSynthesizer_Static)
     {
         return nullptr;
@@ -1989,13 +2001,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SpeechSynthesizerOptions_type{py::register_python_type(module.get(), &type_spec_SpeechSynthesizerOptions, object_bases.get(), nullptr)};
+    py::pytype_handle SpeechSynthesizerOptions_type{py::register_python_type(module.get(), &type_spec_SpeechSynthesizerOptions, object_bases.get(), inspectable_meta_type)};
     if (!SpeechSynthesizerOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VoiceInformation_type{py::register_python_type(module.get(), &type_spec_VoiceInformation, object_bases.get(), nullptr)};
+    py::pytype_handle VoiceInformation_type{py::register_python_type(module.get(), &type_spec_VoiceInformation, object_bases.get(), inspectable_meta_type)};
     if (!VoiceInformation_type)
     {
         return nullptr;

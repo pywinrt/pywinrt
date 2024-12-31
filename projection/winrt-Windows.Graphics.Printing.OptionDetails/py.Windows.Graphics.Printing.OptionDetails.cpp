@@ -12452,6 +12452,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -12465,115 +12471,121 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle PrintBindingOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintBindingOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintBindingOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintBindingOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintBindingOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintBorderingOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintBorderingOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintBorderingOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintBorderingOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintBorderingOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintCollationOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCollationOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintCollationOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCollationOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintCollationOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintColorModeOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintColorModeOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintColorModeOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintColorModeOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintColorModeOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintCopiesOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCopiesOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintCopiesOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCopiesOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintCopiesOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintCustomItemDetails_type{py::register_python_type(module.get(), &type_spec_PrintCustomItemDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintCustomItemDetails_type{py::register_python_type(module.get(), &type_spec_PrintCustomItemDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintCustomItemDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintCustomItemListOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCustomItemListOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintCustomItemListOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCustomItemListOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintCustomItemListOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintCustomTextOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCustomTextOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintCustomTextOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCustomTextOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintCustomTextOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintCustomToggleOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCustomToggleOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintCustomToggleOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintCustomToggleOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintCustomToggleOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintDuplexOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintDuplexOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintDuplexOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintDuplexOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintDuplexOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintHolePunchOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintHolePunchOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintHolePunchOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintHolePunchOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintHolePunchOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintMediaSizeOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintMediaSizeOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintMediaSizeOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintMediaSizeOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintMediaSizeOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintMediaTypeOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintMediaTypeOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintMediaTypeOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintMediaTypeOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintMediaTypeOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintOrientationOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintOrientationOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintOrientationOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintOrientationOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintOrientationOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintPageRangeOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintPageRangeOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintPageRangeOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintPageRangeOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintPageRangeOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintQualityOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintQualityOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintQualityOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintQualityOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintQualityOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintStapleOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintStapleOptionDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PrintStapleOptionDetails_type{py::register_python_type(module.get(), &type_spec_PrintStapleOptionDetails, object_bases.get(), inspectable_meta_type)};
     if (!PrintStapleOptionDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PrintTaskOptionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintTaskOptionChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PrintTaskOptionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintTaskOptionChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PrintTaskOptionChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PrintTaskOptionDetails_Static{PyType_FromSpec(&type_spec_PrintTaskOptionDetails_Static)};
+    py::pyobj_handle PrintTaskOptionDetails_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PrintTaskOptionDetails_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PrintTaskOptionDetails_Static{PyType_FromSpecWithBases(&type_spec_PrintTaskOptionDetails_Static, PrintTaskOptionDetails_Static_bases.get())};
     if (!type_PrintTaskOptionDetails_Static)
     {
         return nullptr;
@@ -12591,7 +12603,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPrintCustomOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintCustomOptionDetails, nullptr))};
+    py::pytype_handle ImplementsIPrintCustomOptionDetails_type{py::register_python_type(module.get(), &type_spec_ImplementsIPrintCustomOptionDetails, nullptr, inspectable_meta_type)};
     if (!ImplementsIPrintCustomOptionDetails_type)
     {
         return nullptr;
@@ -12608,7 +12620,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPrintItemListOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintItemListOptionDetails, nullptr))};
+    py::pytype_handle ImplementsIPrintItemListOptionDetails_type{py::register_python_type(module.get(), &type_spec_ImplementsIPrintItemListOptionDetails, nullptr, inspectable_meta_type)};
     if (!ImplementsIPrintItemListOptionDetails_type)
     {
         return nullptr;
@@ -12625,7 +12637,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPrintNumberOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintNumberOptionDetails, nullptr))};
+    py::pytype_handle ImplementsIPrintNumberOptionDetails_type{py::register_python_type(module.get(), &type_spec_ImplementsIPrintNumberOptionDetails, nullptr, inspectable_meta_type)};
     if (!ImplementsIPrintNumberOptionDetails_type)
     {
         return nullptr;
@@ -12642,7 +12654,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPrintOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintOptionDetails, nullptr))};
+    py::pytype_handle ImplementsIPrintOptionDetails_type{py::register_python_type(module.get(), &type_spec_ImplementsIPrintOptionDetails, nullptr, inspectable_meta_type)};
     if (!ImplementsIPrintOptionDetails_type)
     {
         return nullptr;
@@ -12659,7 +12671,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPrintTextOptionDetails_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPrintTextOptionDetails, nullptr))};
+    py::pytype_handle ImplementsIPrintTextOptionDetails_type{py::register_python_type(module.get(), &type_spec_ImplementsIPrintTextOptionDetails, nullptr, inspectable_meta_type)};
     if (!ImplementsIPrintTextOptionDetails_type)
     {
         return nullptr;

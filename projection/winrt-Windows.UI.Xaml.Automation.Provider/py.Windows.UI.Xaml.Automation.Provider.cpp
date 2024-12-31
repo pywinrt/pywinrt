@@ -15269,6 +15269,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -15300,7 +15306,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IRawElementProviderSimple_type{py::register_python_type(module.get(), &type_spec_IRawElementProviderSimple, IRawElementProviderSimple_bases.get(), nullptr)};
+    py::pytype_handle IRawElementProviderSimple_type{py::register_python_type(module.get(), &type_spec_IRawElementProviderSimple, IRawElementProviderSimple_bases.get(), inspectable_meta_type)};
     if (!IRawElementProviderSimple_type)
     {
         return nullptr;
@@ -15312,7 +15318,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAnnotationProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAnnotationProvider, nullptr))};
+    py::pytype_handle ImplementsIAnnotationProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIAnnotationProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIAnnotationProvider_type)
     {
         return nullptr;
@@ -15329,7 +15335,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICustomNavigationProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICustomNavigationProvider, nullptr))};
+    py::pytype_handle ImplementsICustomNavigationProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsICustomNavigationProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsICustomNavigationProvider_type)
     {
         return nullptr;
@@ -15346,7 +15352,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIDockProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDockProvider, nullptr))};
+    py::pytype_handle ImplementsIDockProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIDockProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIDockProvider_type)
     {
         return nullptr;
@@ -15363,7 +15369,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIDragProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDragProvider, nullptr))};
+    py::pytype_handle ImplementsIDragProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIDragProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIDragProvider_type)
     {
         return nullptr;
@@ -15380,7 +15386,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIDropTargetProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIDropTargetProvider, nullptr))};
+    py::pytype_handle ImplementsIDropTargetProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIDropTargetProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIDropTargetProvider_type)
     {
         return nullptr;
@@ -15397,7 +15403,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIExpandCollapseProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIExpandCollapseProvider, nullptr))};
+    py::pytype_handle ImplementsIExpandCollapseProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIExpandCollapseProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIExpandCollapseProvider_type)
     {
         return nullptr;
@@ -15414,7 +15420,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGridItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGridItemProvider, nullptr))};
+    py::pytype_handle ImplementsIGridItemProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIGridItemProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIGridItemProvider_type)
     {
         return nullptr;
@@ -15431,7 +15437,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGridProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGridProvider, nullptr))};
+    py::pytype_handle ImplementsIGridProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIGridProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIGridProvider_type)
     {
         return nullptr;
@@ -15448,7 +15454,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIInvokeProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInvokeProvider, nullptr))};
+    py::pytype_handle ImplementsIInvokeProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIInvokeProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIInvokeProvider_type)
     {
         return nullptr;
@@ -15465,7 +15471,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIItemContainerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIItemContainerProvider, nullptr))};
+    py::pytype_handle ImplementsIItemContainerProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIItemContainerProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIItemContainerProvider_type)
     {
         return nullptr;
@@ -15482,7 +15488,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIMultipleViewProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIMultipleViewProvider, nullptr))};
+    py::pytype_handle ImplementsIMultipleViewProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIMultipleViewProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIMultipleViewProvider_type)
     {
         return nullptr;
@@ -15499,7 +15505,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIObjectModelProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIObjectModelProvider, nullptr))};
+    py::pytype_handle ImplementsIObjectModelProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIObjectModelProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIObjectModelProvider_type)
     {
         return nullptr;
@@ -15516,7 +15522,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIRangeValueProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIRangeValueProvider, nullptr))};
+    py::pytype_handle ImplementsIRangeValueProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIRangeValueProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIRangeValueProvider_type)
     {
         return nullptr;
@@ -15533,7 +15539,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIScrollItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIScrollItemProvider, nullptr))};
+    py::pytype_handle ImplementsIScrollItemProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIScrollItemProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIScrollItemProvider_type)
     {
         return nullptr;
@@ -15550,7 +15556,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIScrollProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIScrollProvider, nullptr))};
+    py::pytype_handle ImplementsIScrollProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIScrollProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIScrollProvider_type)
     {
         return nullptr;
@@ -15567,7 +15573,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISelectionItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISelectionItemProvider, nullptr))};
+    py::pytype_handle ImplementsISelectionItemProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsISelectionItemProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsISelectionItemProvider_type)
     {
         return nullptr;
@@ -15584,7 +15590,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISelectionProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISelectionProvider, nullptr))};
+    py::pytype_handle ImplementsISelectionProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsISelectionProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsISelectionProvider_type)
     {
         return nullptr;
@@ -15601,7 +15607,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISpreadsheetItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpreadsheetItemProvider, nullptr))};
+    py::pytype_handle ImplementsISpreadsheetItemProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsISpreadsheetItemProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsISpreadsheetItemProvider_type)
     {
         return nullptr;
@@ -15618,7 +15624,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISpreadsheetProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISpreadsheetProvider, nullptr))};
+    py::pytype_handle ImplementsISpreadsheetProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsISpreadsheetProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsISpreadsheetProvider_type)
     {
         return nullptr;
@@ -15635,7 +15641,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIStylesProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIStylesProvider, nullptr))};
+    py::pytype_handle ImplementsIStylesProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIStylesProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIStylesProvider_type)
     {
         return nullptr;
@@ -15652,7 +15658,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISynchronizedInputProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISynchronizedInputProvider, nullptr))};
+    py::pytype_handle ImplementsISynchronizedInputProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsISynchronizedInputProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsISynchronizedInputProvider_type)
     {
         return nullptr;
@@ -15669,7 +15675,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITableItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITableItemProvider, nullptr))};
+    py::pytype_handle ImplementsITableItemProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsITableItemProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsITableItemProvider_type)
     {
         return nullptr;
@@ -15686,7 +15692,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITableProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITableProvider, nullptr))};
+    py::pytype_handle ImplementsITableProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsITableProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsITableProvider_type)
     {
         return nullptr;
@@ -15703,7 +15709,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextChildProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextChildProvider, nullptr))};
+    py::pytype_handle ImplementsITextChildProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsITextChildProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsITextChildProvider_type)
     {
         return nullptr;
@@ -15720,7 +15726,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextEditProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextEditProvider, nullptr))};
+    py::pytype_handle ImplementsITextEditProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsITextEditProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsITextEditProvider_type)
     {
         return nullptr;
@@ -15737,7 +15743,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextProvider, nullptr))};
+    py::pytype_handle ImplementsITextProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsITextProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsITextProvider_type)
     {
         return nullptr;
@@ -15754,7 +15760,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextProvider2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextProvider2, nullptr))};
+    py::pytype_handle ImplementsITextProvider2_type{py::register_python_type(module.get(), &type_spec_ImplementsITextProvider2, nullptr, inspectable_meta_type)};
     if (!ImplementsITextProvider2_type)
     {
         return nullptr;
@@ -15771,7 +15777,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextRangeProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextRangeProvider, nullptr))};
+    py::pytype_handle ImplementsITextRangeProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsITextRangeProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsITextRangeProvider_type)
     {
         return nullptr;
@@ -15788,7 +15794,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITextRangeProvider2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITextRangeProvider2, nullptr))};
+    py::pytype_handle ImplementsITextRangeProvider2_type{py::register_python_type(module.get(), &type_spec_ImplementsITextRangeProvider2, nullptr, inspectable_meta_type)};
     if (!ImplementsITextRangeProvider2_type)
     {
         return nullptr;
@@ -15805,7 +15811,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIToggleProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIToggleProvider, nullptr))};
+    py::pytype_handle ImplementsIToggleProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIToggleProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIToggleProvider_type)
     {
         return nullptr;
@@ -15822,7 +15828,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITransformProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITransformProvider, nullptr))};
+    py::pytype_handle ImplementsITransformProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsITransformProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsITransformProvider_type)
     {
         return nullptr;
@@ -15839,7 +15845,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsITransformProvider2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsITransformProvider2, nullptr))};
+    py::pytype_handle ImplementsITransformProvider2_type{py::register_python_type(module.get(), &type_spec_ImplementsITransformProvider2, nullptr, inspectable_meta_type)};
     if (!ImplementsITransformProvider2_type)
     {
         return nullptr;
@@ -15856,7 +15862,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIValueProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIValueProvider, nullptr))};
+    py::pytype_handle ImplementsIValueProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIValueProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIValueProvider_type)
     {
         return nullptr;
@@ -15873,7 +15879,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIVirtualizedItemProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVirtualizedItemProvider, nullptr))};
+    py::pytype_handle ImplementsIVirtualizedItemProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIVirtualizedItemProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIVirtualizedItemProvider_type)
     {
         return nullptr;
@@ -15890,7 +15896,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIWindowProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIWindowProvider, nullptr))};
+    py::pytype_handle ImplementsIWindowProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIWindowProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIWindowProvider_type)
     {
         return nullptr;

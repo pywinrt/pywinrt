@@ -844,6 +844,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_deviceportal(void) noexc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -857,7 +863,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_deviceportal(void) noexc
         return nullptr;
     }
 
-    py::pyobj_handle type_DevicePortalConnection_Static{PyType_FromSpec(&type_spec_DevicePortalConnection_Static)};
+    py::pyobj_handle DevicePortalConnection_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DevicePortalConnection_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DevicePortalConnection_Static{PyType_FromSpecWithBases(&type_spec_DevicePortalConnection_Static, DevicePortalConnection_Static_bases.get())};
     if (!type_DevicePortalConnection_Static)
     {
         return nullptr;
@@ -869,13 +881,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_deviceportal(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle DevicePortalConnectionClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePortalConnectionClosedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePortalConnectionClosedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePortalConnectionClosedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DevicePortalConnectionClosedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DevicePortalConnectionRequestReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePortalConnectionRequestReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DevicePortalConnectionRequestReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePortalConnectionRequestReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DevicePortalConnectionRequestReceivedEventArgs_type)
     {
         return nullptr;

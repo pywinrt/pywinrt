@@ -8644,6 +8644,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8657,7 +8663,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_Clipboard_Static{PyType_FromSpec(&type_spec_Clipboard_Static)};
+    py::pyobj_handle Clipboard_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Clipboard_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Clipboard_Static{PyType_FromSpecWithBases(&type_spec_Clipboard_Static, Clipboard_Static_bases.get())};
     if (!type_Clipboard_Static)
     {
         return nullptr;
@@ -8669,85 +8681,91 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ClipboardContentOptions_type{py::register_python_type(module.get(), &type_spec_ClipboardContentOptions, object_bases.get(), nullptr)};
+    py::pytype_handle ClipboardContentOptions_type{py::register_python_type(module.get(), &type_spec_ClipboardContentOptions, object_bases.get(), inspectable_meta_type)};
     if (!ClipboardContentOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClipboardHistoryChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClipboardHistoryChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ClipboardHistoryChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClipboardHistoryChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ClipboardHistoryChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClipboardHistoryItem_type{py::register_python_type(module.get(), &type_spec_ClipboardHistoryItem, object_bases.get(), nullptr)};
+    py::pytype_handle ClipboardHistoryItem_type{py::register_python_type(module.get(), &type_spec_ClipboardHistoryItem, object_bases.get(), inspectable_meta_type)};
     if (!ClipboardHistoryItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClipboardHistoryItemsResult_type{py::register_python_type(module.get(), &type_spec_ClipboardHistoryItemsResult, object_bases.get(), nullptr)};
+    py::pytype_handle ClipboardHistoryItemsResult_type{py::register_python_type(module.get(), &type_spec_ClipboardHistoryItemsResult, object_bases.get(), inspectable_meta_type)};
     if (!ClipboardHistoryItemsResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataPackage_type{py::register_python_type(module.get(), &type_spec_DataPackage, object_bases.get(), nullptr)};
+    py::pytype_handle DataPackage_type{py::register_python_type(module.get(), &type_spec_DataPackage, object_bases.get(), inspectable_meta_type)};
     if (!DataPackage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataPackagePropertySet_type{py::register_python_type(module.get(), &type_spec_DataPackagePropertySet, object_bases.get(), nullptr)};
+    py::pytype_handle DataPackagePropertySet_type{py::register_python_type(module.get(), &type_spec_DataPackagePropertySet, object_bases.get(), inspectable_meta_type)};
     if (!DataPackagePropertySet_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataPackagePropertySetView_type{py::register_python_type(module.get(), &type_spec_DataPackagePropertySetView, object_bases.get(), nullptr)};
+    py::pytype_handle DataPackagePropertySetView_type{py::register_python_type(module.get(), &type_spec_DataPackagePropertySetView, object_bases.get(), inspectable_meta_type)};
     if (!DataPackagePropertySetView_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataPackageView_type{py::register_python_type(module.get(), &type_spec_DataPackageView, object_bases.get(), nullptr)};
+    py::pytype_handle DataPackageView_type{py::register_python_type(module.get(), &type_spec_DataPackageView, object_bases.get(), inspectable_meta_type)};
     if (!DataPackageView_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataProviderDeferral_type{py::register_python_type(module.get(), &type_spec_DataProviderDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle DataProviderDeferral_type{py::register_python_type(module.get(), &type_spec_DataProviderDeferral, object_bases.get(), inspectable_meta_type)};
     if (!DataProviderDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataProviderRequest_type{py::register_python_type(module.get(), &type_spec_DataProviderRequest, object_bases.get(), nullptr)};
+    py::pytype_handle DataProviderRequest_type{py::register_python_type(module.get(), &type_spec_DataProviderRequest, object_bases.get(), inspectable_meta_type)};
     if (!DataProviderRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataRequest_type{py::register_python_type(module.get(), &type_spec_DataRequest, object_bases.get(), nullptr)};
+    py::pytype_handle DataRequest_type{py::register_python_type(module.get(), &type_spec_DataRequest, object_bases.get(), inspectable_meta_type)};
     if (!DataRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataRequestDeferral_type{py::register_python_type(module.get(), &type_spec_DataRequestDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle DataRequestDeferral_type{py::register_python_type(module.get(), &type_spec_DataRequestDeferral, object_bases.get(), inspectable_meta_type)};
     if (!DataRequestDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DataRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DataRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DataRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DataRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DataTransferManager_Static{PyType_FromSpec(&type_spec_DataTransferManager_Static)};
+    py::pyobj_handle DataTransferManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DataTransferManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DataTransferManager_Static{PyType_FromSpecWithBases(&type_spec_DataTransferManager_Static, DataTransferManager_Static_bases.get())};
     if (!type_DataTransferManager_Static)
     {
         return nullptr;
@@ -8759,7 +8777,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_HtmlFormatHelper_Static{PyType_FromSpec(&type_spec_HtmlFormatHelper_Static)};
+    py::pyobj_handle HtmlFormatHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HtmlFormatHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HtmlFormatHelper_Static{PyType_FromSpecWithBases(&type_spec_HtmlFormatHelper_Static, HtmlFormatHelper_Static_bases.get())};
     if (!type_HtmlFormatHelper_Static)
     {
         return nullptr;
@@ -8771,49 +8795,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle OperationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_OperationCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle OperationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_OperationCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!OperationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShareCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_ShareCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ShareCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_ShareCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ShareCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShareProvider_type{py::register_python_type(module.get(), &type_spec_ShareProvider, object_bases.get(), nullptr)};
+    py::pytype_handle ShareProvider_type{py::register_python_type(module.get(), &type_spec_ShareProvider, object_bases.get(), inspectable_meta_type)};
     if (!ShareProvider_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShareProviderOperation_type{py::register_python_type(module.get(), &type_spec_ShareProviderOperation, object_bases.get(), nullptr)};
+    py::pytype_handle ShareProviderOperation_type{py::register_python_type(module.get(), &type_spec_ShareProviderOperation, object_bases.get(), inspectable_meta_type)};
     if (!ShareProviderOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShareProvidersRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ShareProvidersRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ShareProvidersRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ShareProvidersRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ShareProvidersRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShareTargetInfo_type{py::register_python_type(module.get(), &type_spec_ShareTargetInfo, object_bases.get(), nullptr)};
+    py::pytype_handle ShareTargetInfo_type{py::register_python_type(module.get(), &type_spec_ShareTargetInfo, object_bases.get(), inspectable_meta_type)};
     if (!ShareTargetInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShareUIOptions_type{py::register_python_type(module.get(), &type_spec_ShareUIOptions, object_bases.get(), nullptr)};
+    py::pytype_handle ShareUIOptions_type{py::register_python_type(module.get(), &type_spec_ShareUIOptions, object_bases.get(), inspectable_meta_type)};
     if (!ShareUIOptions_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SharedStorageAccessManager_Static{PyType_FromSpec(&type_spec_SharedStorageAccessManager_Static)};
+    py::pyobj_handle SharedStorageAccessManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SharedStorageAccessManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SharedStorageAccessManager_Static{PyType_FromSpecWithBases(&type_spec_SharedStorageAccessManager_Static, SharedStorageAccessManager_Static_bases.get())};
     if (!type_SharedStorageAccessManager_Static)
     {
         return nullptr;
@@ -8825,7 +8855,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_StandardDataFormats_Static{PyType_FromSpec(&type_spec_StandardDataFormats_Static)};
+    py::pyobj_handle StandardDataFormats_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StandardDataFormats_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StandardDataFormats_Static{PyType_FromSpecWithBases(&type_spec_StandardDataFormats_Static, StandardDataFormats_Static_bases.get())};
     if (!type_StandardDataFormats_Static)
     {
         return nullptr;
@@ -8837,7 +8873,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle TargetApplicationChosenEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetApplicationChosenEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle TargetApplicationChosenEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetApplicationChosenEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!TargetApplicationChosenEventArgs_type)
     {
         return nullptr;

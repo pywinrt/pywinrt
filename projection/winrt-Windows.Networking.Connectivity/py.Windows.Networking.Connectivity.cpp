@@ -6549,6 +6549,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_connectivity(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -6562,49 +6568,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_connectivity(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AttributedNetworkUsage_type{py::register_python_type(module.get(), &type_spec_AttributedNetworkUsage, object_bases.get(), nullptr)};
+    py::pytype_handle AttributedNetworkUsage_type{py::register_python_type(module.get(), &type_spec_AttributedNetworkUsage, object_bases.get(), inspectable_meta_type)};
     if (!AttributedNetworkUsage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CellularApnContext_type{py::register_python_type(module.get(), &type_spec_CellularApnContext, object_bases.get(), nullptr)};
+    py::pytype_handle CellularApnContext_type{py::register_python_type(module.get(), &type_spec_CellularApnContext, object_bases.get(), inspectable_meta_type)};
     if (!CellularApnContext_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConnectionCost_type{py::register_python_type(module.get(), &type_spec_ConnectionCost, object_bases.get(), nullptr)};
+    py::pytype_handle ConnectionCost_type{py::register_python_type(module.get(), &type_spec_ConnectionCost, object_bases.get(), inspectable_meta_type)};
     if (!ConnectionCost_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConnectionProfile_type{py::register_python_type(module.get(), &type_spec_ConnectionProfile, object_bases.get(), nullptr)};
+    py::pytype_handle ConnectionProfile_type{py::register_python_type(module.get(), &type_spec_ConnectionProfile, object_bases.get(), inspectable_meta_type)};
     if (!ConnectionProfile_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConnectionProfileFilter_type{py::register_python_type(module.get(), &type_spec_ConnectionProfileFilter, object_bases.get(), nullptr)};
+    py::pytype_handle ConnectionProfileFilter_type{py::register_python_type(module.get(), &type_spec_ConnectionProfileFilter, object_bases.get(), inspectable_meta_type)};
     if (!ConnectionProfileFilter_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConnectionSession_type{py::register_python_type(module.get(), &type_spec_ConnectionSession, object_bases.get(), nullptr)};
+    py::pytype_handle ConnectionSession_type{py::register_python_type(module.get(), &type_spec_ConnectionSession, object_bases.get(), inspectable_meta_type)};
     if (!ConnectionSession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConnectivityInterval_type{py::register_python_type(module.get(), &type_spec_ConnectivityInterval, object_bases.get(), nullptr)};
+    py::pytype_handle ConnectivityInterval_type{py::register_python_type(module.get(), &type_spec_ConnectivityInterval, object_bases.get(), inspectable_meta_type)};
     if (!ConnectivityInterval_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ConnectivityManager_Static{PyType_FromSpec(&type_spec_ConnectivityManager_Static)};
+    py::pyobj_handle ConnectivityManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ConnectivityManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ConnectivityManager_Static{PyType_FromSpecWithBases(&type_spec_ConnectivityManager_Static, ConnectivityManager_Static_bases.get())};
     if (!type_ConnectivityManager_Static)
     {
         return nullptr;
@@ -6616,49 +6628,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_connectivity(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DataPlanStatus_type{py::register_python_type(module.get(), &type_spec_DataPlanStatus, object_bases.get(), nullptr)};
+    py::pytype_handle DataPlanStatus_type{py::register_python_type(module.get(), &type_spec_DataPlanStatus, object_bases.get(), inspectable_meta_type)};
     if (!DataPlanStatus_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataPlanUsage_type{py::register_python_type(module.get(), &type_spec_DataPlanUsage, object_bases.get(), nullptr)};
+    py::pytype_handle DataPlanUsage_type{py::register_python_type(module.get(), &type_spec_DataPlanUsage, object_bases.get(), inspectable_meta_type)};
     if (!DataPlanUsage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataUsage_type{py::register_python_type(module.get(), &type_spec_DataUsage, object_bases.get(), nullptr)};
+    py::pytype_handle DataUsage_type{py::register_python_type(module.get(), &type_spec_DataUsage, object_bases.get(), inspectable_meta_type)};
     if (!DataUsage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IPInformation_type{py::register_python_type(module.get(), &type_spec_IPInformation, object_bases.get(), nullptr)};
+    py::pytype_handle IPInformation_type{py::register_python_type(module.get(), &type_spec_IPInformation, object_bases.get(), inspectable_meta_type)};
     if (!IPInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LanIdentifier_type{py::register_python_type(module.get(), &type_spec_LanIdentifier, object_bases.get(), nullptr)};
+    py::pytype_handle LanIdentifier_type{py::register_python_type(module.get(), &type_spec_LanIdentifier, object_bases.get(), inspectable_meta_type)};
     if (!LanIdentifier_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LanIdentifierData_type{py::register_python_type(module.get(), &type_spec_LanIdentifierData, object_bases.get(), nullptr)};
+    py::pytype_handle LanIdentifierData_type{py::register_python_type(module.get(), &type_spec_LanIdentifierData, object_bases.get(), inspectable_meta_type)};
     if (!LanIdentifierData_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkAdapter_type{py::register_python_type(module.get(), &type_spec_NetworkAdapter, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkAdapter_type{py::register_python_type(module.get(), &type_spec_NetworkAdapter, object_bases.get(), inspectable_meta_type)};
     if (!NetworkAdapter_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NetworkInformation_Static{PyType_FromSpec(&type_spec_NetworkInformation_Static)};
+    py::pyobj_handle NetworkInformation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!NetworkInformation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NetworkInformation_Static{PyType_FromSpecWithBases(&type_spec_NetworkInformation_Static, NetworkInformation_Static_bases.get())};
     if (!type_NetworkInformation_Static)
     {
         return nullptr;
@@ -6670,55 +6688,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_connectivity(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle NetworkItem_type{py::register_python_type(module.get(), &type_spec_NetworkItem, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkItem_type{py::register_python_type(module.get(), &type_spec_NetworkItem, object_bases.get(), inspectable_meta_type)};
     if (!NetworkItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkSecuritySettings_type{py::register_python_type(module.get(), &type_spec_NetworkSecuritySettings, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkSecuritySettings_type{py::register_python_type(module.get(), &type_spec_NetworkSecuritySettings, object_bases.get(), inspectable_meta_type)};
     if (!NetworkSecuritySettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkStateChangeEventDetails_type{py::register_python_type(module.get(), &type_spec_NetworkStateChangeEventDetails, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkStateChangeEventDetails_type{py::register_python_type(module.get(), &type_spec_NetworkStateChangeEventDetails, object_bases.get(), inspectable_meta_type)};
     if (!NetworkStateChangeEventDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkUsage_type{py::register_python_type(module.get(), &type_spec_NetworkUsage, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkUsage_type{py::register_python_type(module.get(), &type_spec_NetworkUsage, object_bases.get(), inspectable_meta_type)};
     if (!NetworkUsage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProviderNetworkUsage_type{py::register_python_type(module.get(), &type_spec_ProviderNetworkUsage, object_bases.get(), nullptr)};
+    py::pytype_handle ProviderNetworkUsage_type{py::register_python_type(module.get(), &type_spec_ProviderNetworkUsage, object_bases.get(), inspectable_meta_type)};
     if (!ProviderNetworkUsage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProxyConfiguration_type{py::register_python_type(module.get(), &type_spec_ProxyConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle ProxyConfiguration_type{py::register_python_type(module.get(), &type_spec_ProxyConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!ProxyConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RoutePolicy_type{py::register_python_type(module.get(), &type_spec_RoutePolicy, object_bases.get(), nullptr)};
+    py::pytype_handle RoutePolicy_type{py::register_python_type(module.get(), &type_spec_RoutePolicy, object_bases.get(), inspectable_meta_type)};
     if (!RoutePolicy_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WlanConnectionProfileDetails_type{py::register_python_type(module.get(), &type_spec_WlanConnectionProfileDetails, object_bases.get(), nullptr)};
+    py::pytype_handle WlanConnectionProfileDetails_type{py::register_python_type(module.get(), &type_spec_WlanConnectionProfileDetails, object_bases.get(), inspectable_meta_type)};
     if (!WlanConnectionProfileDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WwanConnectionProfileDetails_type{py::register_python_type(module.get(), &type_spec_WwanConnectionProfileDetails, object_bases.get(), nullptr)};
+    py::pytype_handle WwanConnectionProfileDetails_type{py::register_python_type(module.get(), &type_spec_WwanConnectionProfileDetails, object_bases.get(), inspectable_meta_type)};
     if (!WwanConnectionProfileDetails_type)
     {
         return nullptr;

@@ -1705,6 +1705,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_rfcomm(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1718,7 +1724,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_rfcomm(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RfcommDeviceService_Static{PyType_FromSpec(&type_spec_RfcommDeviceService_Static)};
+    py::pyobj_handle RfcommDeviceService_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RfcommDeviceService_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RfcommDeviceService_Static{PyType_FromSpecWithBases(&type_spec_RfcommDeviceService_Static, RfcommDeviceService_Static_bases.get())};
     if (!type_RfcommDeviceService_Static)
     {
         return nullptr;
@@ -1730,13 +1742,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_rfcomm(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RfcommDeviceServicesResult_type{py::register_python_type(module.get(), &type_spec_RfcommDeviceServicesResult, object_bases.get(), nullptr)};
+    py::pytype_handle RfcommDeviceServicesResult_type{py::register_python_type(module.get(), &type_spec_RfcommDeviceServicesResult, object_bases.get(), inspectable_meta_type)};
     if (!RfcommDeviceServicesResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RfcommServiceId_Static{PyType_FromSpec(&type_spec_RfcommServiceId_Static)};
+    py::pyobj_handle RfcommServiceId_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RfcommServiceId_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RfcommServiceId_Static{PyType_FromSpecWithBases(&type_spec_RfcommServiceId_Static, RfcommServiceId_Static_bases.get())};
     if (!type_RfcommServiceId_Static)
     {
         return nullptr;
@@ -1748,7 +1766,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_rfcomm(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RfcommServiceProvider_Static{PyType_FromSpec(&type_spec_RfcommServiceProvider_Static)};
+    py::pyobj_handle RfcommServiceProvider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RfcommServiceProvider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RfcommServiceProvider_Static{PyType_FromSpecWithBases(&type_spec_RfcommServiceProvider_Static, RfcommServiceProvider_Static_bases.get())};
     if (!type_RfcommServiceProvider_Static)
     {
         return nullptr;

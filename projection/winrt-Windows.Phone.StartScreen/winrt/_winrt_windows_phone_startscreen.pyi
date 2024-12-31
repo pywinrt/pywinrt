@@ -16,7 +16,7 @@ import winrt.windows.ui.notifications as windows_ui_notifications
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DualSimTile_Static(type):
+class DualSimTile_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Notifications.BadgeUpdater Windows.Phone.StartScreen.DualSimTile::CreateBadgeUpdaterForSim1()
     def create_badge_updater_for_sim1(cls) -> windows_ui_notifications.BadgeUpdater: ...
     # Windows.UI.Notifications.BadgeUpdater Windows.Phone.StartScreen.DualSimTile::CreateBadgeUpdaterForSim2()

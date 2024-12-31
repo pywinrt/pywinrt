@@ -51,7 +51,7 @@ class Class(winrt.system.Object, IRequiredOne):
     # System.Int32 TestComponent.Class::One()
     def one(self) -> winrt.system.Int32: ...
 
-class Composable_Static(type):
+class Composable_Static(winrt._winrt.IInspectable_Static):
     # System.Int32 TestComponent.Composable::ExpectComposable(TestComponent.Composable)
     def expect_composable(cls, t: Composable, /) -> winrt.system.Int32: ...
     # System.Int32 TestComponent.Composable::ExpectRequiredFour(TestComponent.IRequiredFour)
@@ -90,7 +90,7 @@ class Derived_Static(Composable_Static):
 class Derived(Composable, metaclass=Derived_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
-class OverloadClass_Static(type):
+class OverloadClass_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class OverloadClass(winrt.system.Object, metaclass=OverloadClass_Static):
@@ -106,7 +106,7 @@ class OverloadClass(winrt.system.Object, metaclass=OverloadClass_Static):
     # System.Void TestComponent.OverloadClass::Overload(System.Int32,System.Int32)
     def _overload_with_two(self, a: winrt.system.Int32, b: winrt.system.Int32, /) -> None: ...
 
-class Override_Static(type):
+class Override_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class Override(winrt.system.Object, metaclass=Override_Static):
@@ -136,7 +136,7 @@ class Override(winrt.system.Object, metaclass=Override_Static):
     def remove_protected_called(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class TestRunner_Static(type):
+class TestRunner_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction TestComponent.TestRunner::CreateAsyncAction(System.UInt32)
     def create_async_action(cls, milliseconds: winrt.system.UInt32, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IVector`1<System.Int32> TestComponent.TestRunner::CreateInt32Vector()

@@ -8,6 +8,7 @@ namespace py::cpp::_winrt
 {
     struct module_state
     {
+        PyTypeObject* inspectable_meta_type;
         PyTypeObject* object_type;
         PyTypeObject* array_type;
         PyTypeObject* mapping_iter_type;

@@ -14,7 +14,7 @@ import winrt.windows.storage as windows_storage
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ApplicationDataManager_Static(type):
+class ApplicationDataManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Storage.ApplicationData Windows.Management.Core.ApplicationDataManager::CreateForPackageFamily(System.String)
     def create_for_package_family(cls, package_family_name: str, /) -> windows_storage.ApplicationData: ...
 

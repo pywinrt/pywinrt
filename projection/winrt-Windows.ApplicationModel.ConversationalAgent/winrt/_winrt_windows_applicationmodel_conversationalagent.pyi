@@ -158,7 +158,7 @@ class ActivationSignalDetector(winrt.system.Object):
     def detector_id(self) -> str: ...
 
 @typing.final
-class ConversationalAgentDetectorManager_Static(type):
+class ConversationalAgentDetectorManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager::get_Default()
     @_property
     def default(cls) -> ConversationalAgentDetectorManager: ...
@@ -179,7 +179,7 @@ class ConversationalAgentDetectorManager(winrt.system.Object, metaclass=Conversa
     def get_all_activation_signal_detectors_async(self) -> windows_foundation.IAsyncOperation[typing.Sequence[ActivationSignalDetector]]: ...
 
 @typing.final
-class ConversationalAgentSession_Static(type):
+class ConversationalAgentSession_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession> Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession::GetCurrentSessionAsync()
     def get_current_session_async(cls) -> windows_foundation.IAsyncOperation[ConversationalAgentSession]: ...
     # Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession::GetCurrentSessionSync()

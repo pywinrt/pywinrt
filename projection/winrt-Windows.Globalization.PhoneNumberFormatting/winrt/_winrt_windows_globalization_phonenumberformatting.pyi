@@ -16,7 +16,7 @@ from winrt.windows.globalization.phonenumberformatting import PhoneNumberFormat,
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PhoneNumberFormatter_Static(type):
+class PhoneNumberFormatter_Static(winrt._winrt.IInspectable_Static):
     # System.Int32 Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::GetCountryCodeForRegion(System.String)
     def get_country_code_for_region(cls, region_code: str, /) -> winrt.system.Int32: ...
     # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::GetNationalDirectDialingPrefixForRegion(System.String,System.Boolean)
@@ -41,7 +41,7 @@ class PhoneNumberFormatter(winrt.system.Object, metaclass=PhoneNumberFormatter_S
     def format_with_output_format(self, number: PhoneNumberInfo, number_format: PhoneNumberFormat, /) -> str: ...
 
 @typing.final
-class PhoneNumberInfo_Static(type):
+class PhoneNumberInfo_Static(winrt._winrt.IInspectable_Static):
     # Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo::TryParse(System.String,Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo&)
     def try_parse(cls, input: str, /) -> typing.Tuple[PhoneNumberParseResult, PhoneNumberInfo]: ...
     # Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo::TryParse(System.String,System.String,Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo&)

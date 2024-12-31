@@ -56,7 +56,7 @@ class SpatialRay:
     def __init__(self, origin: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), direction: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3()) -> None: ...
 
 @typing.final
-class SpatialAnchor_Static(type):
+class SpatialAnchor_Static(winrt._winrt.IInspectable_Static):
     # Windows.Perception.Spatial.SpatialAnchor Windows.Perception.Spatial.SpatialAnchor::TryCreateRelativeTo(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_create_relative_to(cls, coordinate_system: SpatialCoordinateSystem, /) -> typing.Optional[SpatialAnchor]: ...
     # Windows.Perception.Spatial.SpatialAnchor Windows.Perception.Spatial.SpatialAnchor::TryCreateRelativeTo(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Foundation.Numerics.Vector3,Windows.Foundation.Numerics.Quaternion)
@@ -93,7 +93,7 @@ class SpatialAnchorExportSufficiency(winrt.system.Object):
     def sufficiency_level(self) -> winrt.system.Double: ...
 
 @typing.final
-class SpatialAnchorExporter_Static(type):
+class SpatialAnchorExporter_Static(winrt._winrt.IInspectable_Static):
     # Windows.Perception.Spatial.SpatialAnchorExporter Windows.Perception.Spatial.SpatialAnchorExporter::GetDefault()
     def get_default(cls) -> SpatialAnchorExporter: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> Windows.Perception.Spatial.SpatialAnchorExporter::RequestAccessAsync()
@@ -107,7 +107,7 @@ class SpatialAnchorExporter(winrt.system.Object, metaclass=SpatialAnchorExporter
     def try_export_anchor_async(self, anchor: SpatialAnchor, purpose: SpatialAnchorExportPurpose, stream: windows_storage_streams.IOutputStream, /) -> windows_foundation.IAsyncOperation[bool]: ...
 
 @typing.final
-class SpatialAnchorManager_Static(type):
+class SpatialAnchorManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.SpatialAnchorStore> Windows.Perception.Spatial.SpatialAnchorManager::RequestStoreAsync()
     def request_store_async(cls) -> windows_foundation.IAsyncOperation[SpatialAnchorStore]: ...
 
@@ -133,7 +133,7 @@ class SpatialAnchorStore(winrt.system.Object):
     def try_save(self, id: str, anchor: SpatialAnchor, /) -> bool: ...
 
 @typing.final
-class SpatialAnchorTransferManager_Static(type):
+class SpatialAnchorTransferManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> Windows.Perception.Spatial.SpatialAnchorTransferManager::RequestAccessAsync()
     # @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[SpatialPerceptionAccessStatus]: ...
@@ -149,7 +149,7 @@ class SpatialAnchorTransferManager(winrt.system.Object, metaclass=SpatialAnchorT
     pass
 
 @typing.final
-class SpatialBoundingVolume_Static(type):
+class SpatialBoundingVolume_Static(winrt._winrt.IInspectable_Static):
     # Windows.Perception.Spatial.SpatialBoundingVolume Windows.Perception.Spatial.SpatialBoundingVolume::FromBox(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Perception.Spatial.SpatialBoundingBox)
     def from_box(cls, coordinate_system: SpatialCoordinateSystem, box: SpatialBoundingBox, /) -> SpatialBoundingVolume: ...
     # Windows.Perception.Spatial.SpatialBoundingVolume Windows.Perception.Spatial.SpatialBoundingVolume::FromFrustum(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Perception.Spatial.SpatialBoundingFrustum)
@@ -197,7 +197,7 @@ class SpatialEntityRemovedEventArgs(winrt.system.Object):
     def entity(self) -> SpatialEntity: ...
 
 @typing.final
-class SpatialEntityStore_Static(type):
+class SpatialEntityStore_Static(winrt._winrt.IInspectable_Static):
     # Windows.Perception.Spatial.SpatialEntityStore Windows.Perception.Spatial.SpatialEntityStore::TryGet(Windows.System.RemoteSystems.RemoteSystemSession)
     def try_get_for_remote_system_session(cls, session: windows_system_remotesystems.RemoteSystemSession, /) -> typing.Optional[SpatialEntityStore]: ...
     # System.Boolean Windows.Perception.Spatial.SpatialEntityStore::get_IsSupported()
@@ -273,7 +273,7 @@ class SpatialLocation(winrt.system.Object):
     def absolute_angular_velocity_axis_angle(self) -> windows_foundation_numerics.Vector3: ...
 
 @typing.final
-class SpatialLocator_Static(type):
+class SpatialLocator_Static(winrt._winrt.IInspectable_Static):
     # Windows.Perception.Spatial.SpatialLocator Windows.Perception.Spatial.SpatialLocator::GetDefault()
     def get_default(cls) -> SpatialLocator: ...
 
@@ -340,7 +340,7 @@ class SpatialLocatorPositionalTrackingDeactivatingEventArgs(winrt.system.Object)
     def canceled(self, value: bool) -> None: ...
 
 @typing.final
-class SpatialStageFrameOfReference_Static(type):
+class SpatialStageFrameOfReference_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.SpatialStageFrameOfReference> Windows.Perception.Spatial.SpatialStageFrameOfReference::RequestNewStageAsync()
     def request_new_stage_async(cls) -> windows_foundation.IAsyncOperation[SpatialStageFrameOfReference]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Perception.Spatial.SpatialStageFrameOfReference::add_CurrentChanged(Windows.Foundation.EventHandler`1<System.Object>)

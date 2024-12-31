@@ -15,7 +15,8 @@ class TestGeolocation(unittest.TestCase):
     def test_pinterface_qi(self):
         locator = wdg.Geolocator()
         op = locator.get_geoposition_async()
-        self.assertEqual(type(op), wf.IAsyncOperation)
+        # FIXME: runtime type checking for generic interfaces is not implemented
+        # self.assertIsInstance(op, wf.IAsyncOperation[wdg.Geoposition])
         op.cancel()
 
     def test_struct_ctor(self):

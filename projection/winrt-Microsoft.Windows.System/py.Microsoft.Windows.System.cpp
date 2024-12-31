@@ -610,6 +610,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_system(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -623,7 +629,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_system(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_EnvironmentManager_Static{PyType_FromSpec(&type_spec_EnvironmentManager_Static)};
+    py::pyobj_handle EnvironmentManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!EnvironmentManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EnvironmentManager_Static{PyType_FromSpecWithBases(&type_spec_EnvironmentManager_Static, EnvironmentManager_Static_bases.get())};
     if (!type_EnvironmentManager_Static)
     {
         return nullptr;

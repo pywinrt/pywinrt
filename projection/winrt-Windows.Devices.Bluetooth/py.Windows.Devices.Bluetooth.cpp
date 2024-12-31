@@ -7412,6 +7412,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -7425,7 +7431,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothAdapter_Static{PyType_FromSpec(&type_spec_BluetoothAdapter_Static)};
+    py::pyobj_handle BluetoothAdapter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothAdapter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothAdapter_Static{PyType_FromSpecWithBases(&type_spec_BluetoothAdapter_Static, BluetoothAdapter_Static_bases.get())};
     if (!type_BluetoothAdapter_Static)
     {
         return nullptr;
@@ -7437,7 +7449,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothClassOfDevice_Static{PyType_FromSpec(&type_spec_BluetoothClassOfDevice_Static)};
+    py::pyobj_handle BluetoothClassOfDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothClassOfDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothClassOfDevice_Static{PyType_FromSpecWithBases(&type_spec_BluetoothClassOfDevice_Static, BluetoothClassOfDevice_Static_bases.get())};
     if (!type_BluetoothClassOfDevice_Static)
     {
         return nullptr;
@@ -7449,7 +7467,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothDevice_Static{PyType_FromSpec(&type_spec_BluetoothDevice_Static)};
+    py::pyobj_handle BluetoothDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothDevice_Static{PyType_FromSpecWithBases(&type_spec_BluetoothDevice_Static, BluetoothDevice_Static_bases.get())};
     if (!type_BluetoothDevice_Static)
     {
         return nullptr;
@@ -7461,7 +7485,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothDeviceId_Static{PyType_FromSpec(&type_spec_BluetoothDeviceId_Static)};
+    py::pyobj_handle BluetoothDeviceId_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothDeviceId_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothDeviceId_Static{PyType_FromSpecWithBases(&type_spec_BluetoothDeviceId_Static, BluetoothDeviceId_Static_bases.get())};
     if (!type_BluetoothDeviceId_Static)
     {
         return nullptr;
@@ -7473,7 +7503,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothLEAppearance_Static{PyType_FromSpec(&type_spec_BluetoothLEAppearance_Static)};
+    py::pyobj_handle BluetoothLEAppearance_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothLEAppearance_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothLEAppearance_Static{PyType_FromSpecWithBases(&type_spec_BluetoothLEAppearance_Static, BluetoothLEAppearance_Static_bases.get())};
     if (!type_BluetoothLEAppearance_Static)
     {
         return nullptr;
@@ -7485,7 +7521,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothLEAppearanceCategories_Static{PyType_FromSpec(&type_spec_BluetoothLEAppearanceCategories_Static)};
+    py::pyobj_handle BluetoothLEAppearanceCategories_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothLEAppearanceCategories_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothLEAppearanceCategories_Static{PyType_FromSpecWithBases(&type_spec_BluetoothLEAppearanceCategories_Static, BluetoothLEAppearanceCategories_Static_bases.get())};
     if (!type_BluetoothLEAppearanceCategories_Static)
     {
         return nullptr;
@@ -7497,7 +7539,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothLEAppearanceSubcategories_Static{PyType_FromSpec(&type_spec_BluetoothLEAppearanceSubcategories_Static)};
+    py::pyobj_handle BluetoothLEAppearanceSubcategories_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothLEAppearanceSubcategories_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothLEAppearanceSubcategories_Static{PyType_FromSpecWithBases(&type_spec_BluetoothLEAppearanceSubcategories_Static, BluetoothLEAppearanceSubcategories_Static_bases.get())};
     if (!type_BluetoothLEAppearanceSubcategories_Static)
     {
         return nullptr;
@@ -7509,25 +7557,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEConnectionParameters_type{py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionParameters, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEConnectionParameters_type{py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionParameters, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEConnectionParameters_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEConnectionPhy_type{py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionPhy, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEConnectionPhy_type{py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionPhy, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEConnectionPhy_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEConnectionPhyInfo_type{py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionPhyInfo, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEConnectionPhyInfo_type{py::register_python_type(module.get(), &type_spec_BluetoothLEConnectionPhyInfo, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEConnectionPhyInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothLEDevice_Static{PyType_FromSpec(&type_spec_BluetoothLEDevice_Static)};
+    py::pyobj_handle BluetoothLEDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothLEDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothLEDevice_Static{PyType_FromSpecWithBases(&type_spec_BluetoothLEDevice_Static, BluetoothLEDevice_Static_bases.get())};
     if (!type_BluetoothLEDevice_Static)
     {
         return nullptr;
@@ -7539,7 +7593,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothLEPreferredConnectionParameters_Static{PyType_FromSpec(&type_spec_BluetoothLEPreferredConnectionParameters_Static)};
+    py::pyobj_handle BluetoothLEPreferredConnectionParameters_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothLEPreferredConnectionParameters_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothLEPreferredConnectionParameters_Static{PyType_FromSpecWithBases(&type_spec_BluetoothLEPreferredConnectionParameters_Static, BluetoothLEPreferredConnectionParameters_Static_bases.get())};
     if (!type_BluetoothLEPreferredConnectionParameters_Static)
     {
         return nullptr;
@@ -7551,19 +7611,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEPreferredConnectionParametersRequest_type{py::register_python_type(module.get(), &type_spec_BluetoothLEPreferredConnectionParametersRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEPreferredConnectionParametersRequest_type{py::register_python_type(module.get(), &type_spec_BluetoothLEPreferredConnectionParametersRequest, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEPreferredConnectionParametersRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothSignalStrengthFilter_type{py::register_python_type(module.get(), &type_spec_BluetoothSignalStrengthFilter, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothSignalStrengthFilter_type{py::register_python_type(module.get(), &type_spec_BluetoothSignalStrengthFilter, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothSignalStrengthFilter_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BluetoothUuidHelper_Static{PyType_FromSpec(&type_spec_BluetoothUuidHelper_Static)};
+    py::pyobj_handle BluetoothUuidHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BluetoothUuidHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BluetoothUuidHelper_Static{PyType_FromSpecWithBases(&type_spec_BluetoothUuidHelper_Static, BluetoothUuidHelper_Static_bases.get())};
     if (!type_BluetoothUuidHelper_Static)
     {
         return nullptr;

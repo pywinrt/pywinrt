@@ -5083,6 +5083,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5096,7 +5102,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_IsolatedWindowsEnvironment_Static{PyType_FromSpec(&type_spec_IsolatedWindowsEnvironment_Static)};
+    py::pyobj_handle IsolatedWindowsEnvironment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!IsolatedWindowsEnvironment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_IsolatedWindowsEnvironment_Static{PyType_FromSpecWithBases(&type_spec_IsolatedWindowsEnvironment_Static, IsolatedWindowsEnvironment_Static_bases.get())};
     if (!type_IsolatedWindowsEnvironment_Static)
     {
         return nullptr;
@@ -5108,19 +5120,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentCreateResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentCreateResult, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentCreateResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentCreateResult, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentCreateResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentFile_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentFile, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentFile_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentFile, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentFile_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_IsolatedWindowsEnvironmentHost_Static{PyType_FromSpec(&type_spec_IsolatedWindowsEnvironmentHost_Static)};
+    py::pyobj_handle IsolatedWindowsEnvironmentHost_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!IsolatedWindowsEnvironmentHost_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_IsolatedWindowsEnvironmentHost_Static{PyType_FromSpecWithBases(&type_spec_IsolatedWindowsEnvironmentHost_Static, IsolatedWindowsEnvironmentHost_Static_bases.get())};
     if (!type_IsolatedWindowsEnvironmentHost_Static)
     {
         return nullptr;
@@ -5132,19 +5150,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentLaunchFileResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentLaunchFileResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentLaunchFileResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentOptions_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOptions, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentOptions_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOptions, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentOptions_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_IsolatedWindowsEnvironmentOwnerRegistration_Static{PyType_FromSpec(&type_spec_IsolatedWindowsEnvironmentOwnerRegistration_Static)};
+    py::pyobj_handle IsolatedWindowsEnvironmentOwnerRegistration_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!IsolatedWindowsEnvironmentOwnerRegistration_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_IsolatedWindowsEnvironmentOwnerRegistration_Static{PyType_FromSpecWithBases(&type_spec_IsolatedWindowsEnvironmentOwnerRegistration_Static, IsolatedWindowsEnvironmentOwnerRegistration_Static_bases.get())};
     if (!type_IsolatedWindowsEnvironmentOwnerRegistration_Static)
     {
         return nullptr;
@@ -5156,73 +5180,79 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentOwnerRegistrationData_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentOwnerRegistrationData_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentOwnerRegistrationData_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentOwnerRegistrationResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentOwnerRegistrationResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentOwnerRegistrationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentPostMessageResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentPostMessageResult, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentPostMessageResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentPostMessageResult, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentPostMessageResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentProcess_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentProcess, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentProcess_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentProcess, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentProcess_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentShareFileRequestOptions_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentShareFileRequestOptions_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentShareFileRequestOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentShareFileResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFileResult, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentShareFileResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFileResult, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentShareFileResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentShareFolderRequestOptions_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentShareFolderRequestOptions_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentShareFolderRequestOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentShareFolderResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFolderResult, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentShareFolderResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFolderResult, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentShareFolderResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentStartProcessResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentStartProcessResult, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentStartProcessResult_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentStartProcessResult, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentStartProcessResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentTelemetryParameters_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentTelemetryParameters_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentTelemetryParameters_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IsolatedWindowsEnvironmentUserInfo_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentUserInfo, object_bases.get(), nullptr)};
+    py::pytype_handle IsolatedWindowsEnvironmentUserInfo_type{py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentUserInfo, object_bases.get(), inspectable_meta_type)};
     if (!IsolatedWindowsEnvironmentUserInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_IsolatedWindowsHostMessenger_Static{PyType_FromSpec(&type_spec_IsolatedWindowsHostMessenger_Static)};
+    py::pyobj_handle IsolatedWindowsHostMessenger_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!IsolatedWindowsHostMessenger_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_IsolatedWindowsHostMessenger_Static{PyType_FromSpecWithBases(&type_spec_IsolatedWindowsHostMessenger_Static, IsolatedWindowsHostMessenger_Static_bases.get())};
     if (!type_IsolatedWindowsHostMessenger_Static)
     {
         return nullptr;

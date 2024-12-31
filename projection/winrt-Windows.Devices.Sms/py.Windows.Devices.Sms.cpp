@@ -13317,6 +13317,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -13330,61 +13336,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DeleteSmsMessageOperation_type{py::register_python_type(module.get(), &type_spec_DeleteSmsMessageOperation, object_bases.get(), nullptr)};
+    py::pytype_handle DeleteSmsMessageOperation_type{py::register_python_type(module.get(), &type_spec_DeleteSmsMessageOperation, object_bases.get(), inspectable_meta_type)};
     if (!DeleteSmsMessageOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeleteSmsMessagesOperation_type{py::register_python_type(module.get(), &type_spec_DeleteSmsMessagesOperation, object_bases.get(), nullptr)};
+    py::pytype_handle DeleteSmsMessagesOperation_type{py::register_python_type(module.get(), &type_spec_DeleteSmsMessagesOperation, object_bases.get(), inspectable_meta_type)};
     if (!DeleteSmsMessagesOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GetSmsDeviceOperation_type{py::register_python_type(module.get(), &type_spec_GetSmsDeviceOperation, object_bases.get(), nullptr)};
+    py::pytype_handle GetSmsDeviceOperation_type{py::register_python_type(module.get(), &type_spec_GetSmsDeviceOperation, object_bases.get(), inspectable_meta_type)};
     if (!GetSmsDeviceOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GetSmsMessageOperation_type{py::register_python_type(module.get(), &type_spec_GetSmsMessageOperation, object_bases.get(), nullptr)};
+    py::pytype_handle GetSmsMessageOperation_type{py::register_python_type(module.get(), &type_spec_GetSmsMessageOperation, object_bases.get(), inspectable_meta_type)};
     if (!GetSmsMessageOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GetSmsMessagesOperation_type{py::register_python_type(module.get(), &type_spec_GetSmsMessagesOperation, object_bases.get(), nullptr)};
+    py::pytype_handle GetSmsMessagesOperation_type{py::register_python_type(module.get(), &type_spec_GetSmsMessagesOperation, object_bases.get(), inspectable_meta_type)};
     if (!GetSmsMessagesOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SendSmsMessageOperation_type{py::register_python_type(module.get(), &type_spec_SendSmsMessageOperation, object_bases.get(), nullptr)};
+    py::pytype_handle SendSmsMessageOperation_type{py::register_python_type(module.get(), &type_spec_SendSmsMessageOperation, object_bases.get(), inspectable_meta_type)};
     if (!SendSmsMessageOperation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsAppMessage_type{py::register_python_type(module.get(), &type_spec_SmsAppMessage, object_bases.get(), nullptr)};
+    py::pytype_handle SmsAppMessage_type{py::register_python_type(module.get(), &type_spec_SmsAppMessage, object_bases.get(), inspectable_meta_type)};
     if (!SmsAppMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsBinaryMessage_type{py::register_python_type(module.get(), &type_spec_SmsBinaryMessage, object_bases.get(), nullptr)};
+    py::pytype_handle SmsBinaryMessage_type{py::register_python_type(module.get(), &type_spec_SmsBinaryMessage, object_bases.get(), inspectable_meta_type)};
     if (!SmsBinaryMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsBroadcastMessage_type{py::register_python_type(module.get(), &type_spec_SmsBroadcastMessage, object_bases.get(), nullptr)};
+    py::pytype_handle SmsBroadcastMessage_type{py::register_python_type(module.get(), &type_spec_SmsBroadcastMessage, object_bases.get(), inspectable_meta_type)};
     if (!SmsBroadcastMessage_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SmsDevice_Static{PyType_FromSpec(&type_spec_SmsDevice_Static)};
+    py::pyobj_handle SmsDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmsDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmsDevice_Static{PyType_FromSpecWithBases(&type_spec_SmsDevice_Static, SmsDevice_Static_bases.get())};
     if (!type_SmsDevice_Static)
     {
         return nullptr;
@@ -13396,7 +13408,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SmsDevice2_Static{PyType_FromSpec(&type_spec_SmsDevice2_Static)};
+    py::pyobj_handle SmsDevice2_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmsDevice2_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmsDevice2_Static{PyType_FromSpecWithBases(&type_spec_SmsDevice2_Static, SmsDevice2_Static_bases.get())};
     if (!type_SmsDevice2_Static)
     {
         return nullptr;
@@ -13408,37 +13426,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SmsDeviceMessageStore_type{py::register_python_type(module.get(), &type_spec_SmsDeviceMessageStore, object_bases.get(), nullptr)};
+    py::pytype_handle SmsDeviceMessageStore_type{py::register_python_type(module.get(), &type_spec_SmsDeviceMessageStore, object_bases.get(), inspectable_meta_type)};
     if (!SmsDeviceMessageStore_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsFilterRule_type{py::register_python_type(module.get(), &type_spec_SmsFilterRule, object_bases.get(), nullptr)};
+    py::pytype_handle SmsFilterRule_type{py::register_python_type(module.get(), &type_spec_SmsFilterRule, object_bases.get(), inspectable_meta_type)};
     if (!SmsFilterRule_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsFilterRules_type{py::register_python_type(module.get(), &type_spec_SmsFilterRules, object_bases.get(), nullptr)};
+    py::pytype_handle SmsFilterRules_type{py::register_python_type(module.get(), &type_spec_SmsFilterRules, object_bases.get(), inspectable_meta_type)};
     if (!SmsFilterRules_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_SmsMessageReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle SmsMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_SmsMessageReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!SmsMessageReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsMessageReceivedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_SmsMessageReceivedTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle SmsMessageReceivedTriggerDetails_type{py::register_python_type(module.get(), &type_spec_SmsMessageReceivedTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!SmsMessageReceivedTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SmsMessageRegistration_Static{PyType_FromSpec(&type_spec_SmsMessageRegistration_Static)};
+    py::pyobj_handle SmsMessageRegistration_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmsMessageRegistration_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmsMessageRegistration_Static{PyType_FromSpecWithBases(&type_spec_SmsMessageRegistration_Static, SmsMessageRegistration_Static_bases.get())};
     if (!type_SmsMessageRegistration_Static)
     {
         return nullptr;
@@ -13450,25 +13474,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SmsReceivedEventDetails_type{py::register_python_type(module.get(), &type_spec_SmsReceivedEventDetails, object_bases.get(), nullptr)};
+    py::pytype_handle SmsReceivedEventDetails_type{py::register_python_type(module.get(), &type_spec_SmsReceivedEventDetails, object_bases.get(), inspectable_meta_type)};
     if (!SmsReceivedEventDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsSendMessageResult_type{py::register_python_type(module.get(), &type_spec_SmsSendMessageResult, object_bases.get(), nullptr)};
+    py::pytype_handle SmsSendMessageResult_type{py::register_python_type(module.get(), &type_spec_SmsSendMessageResult, object_bases.get(), inspectable_meta_type)};
     if (!SmsSendMessageResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsStatusMessage_type{py::register_python_type(module.get(), &type_spec_SmsStatusMessage, object_bases.get(), nullptr)};
+    py::pytype_handle SmsStatusMessage_type{py::register_python_type(module.get(), &type_spec_SmsStatusMessage, object_bases.get(), inspectable_meta_type)};
     if (!SmsStatusMessage_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SmsTextMessage_Static{PyType_FromSpec(&type_spec_SmsTextMessage_Static)};
+    py::pyobj_handle SmsTextMessage_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SmsTextMessage_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SmsTextMessage_Static{PyType_FromSpecWithBases(&type_spec_SmsTextMessage_Static, SmsTextMessage_Static_bases.get())};
     if (!type_SmsTextMessage_Static)
     {
         return nullptr;
@@ -13480,19 +13510,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SmsTextMessage2_type{py::register_python_type(module.get(), &type_spec_SmsTextMessage2, object_bases.get(), nullptr)};
+    py::pytype_handle SmsTextMessage2_type{py::register_python_type(module.get(), &type_spec_SmsTextMessage2, object_bases.get(), inspectable_meta_type)};
     if (!SmsTextMessage2_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsVoicemailMessage_type{py::register_python_type(module.get(), &type_spec_SmsVoicemailMessage, object_bases.get(), nullptr)};
+    py::pytype_handle SmsVoicemailMessage_type{py::register_python_type(module.get(), &type_spec_SmsVoicemailMessage, object_bases.get(), inspectable_meta_type)};
     if (!SmsVoicemailMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsWapMessage_type{py::register_python_type(module.get(), &type_spec_SmsWapMessage, object_bases.get(), nullptr)};
+    py::pytype_handle SmsWapMessage_type{py::register_python_type(module.get(), &type_spec_SmsWapMessage, object_bases.get(), inspectable_meta_type)};
     if (!SmsWapMessage_type)
     {
         return nullptr;
@@ -13504,7 +13534,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISmsBinaryMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsBinaryMessage, nullptr))};
+    py::pytype_handle ImplementsISmsBinaryMessage_type{py::register_python_type(module.get(), &type_spec_ImplementsISmsBinaryMessage, nullptr, inspectable_meta_type)};
     if (!ImplementsISmsBinaryMessage_type)
     {
         return nullptr;
@@ -13521,7 +13551,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISmsDevice_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsDevice, nullptr))};
+    py::pytype_handle ImplementsISmsDevice_type{py::register_python_type(module.get(), &type_spec_ImplementsISmsDevice, nullptr, inspectable_meta_type)};
     if (!ImplementsISmsDevice_type)
     {
         return nullptr;
@@ -13538,7 +13568,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISmsMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsMessage, nullptr))};
+    py::pytype_handle ImplementsISmsMessage_type{py::register_python_type(module.get(), &type_spec_ImplementsISmsMessage, nullptr, inspectable_meta_type)};
     if (!ImplementsISmsMessage_type)
     {
         return nullptr;
@@ -13555,7 +13585,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISmsMessageBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsMessageBase, nullptr))};
+    py::pytype_handle ImplementsISmsMessageBase_type{py::register_python_type(module.get(), &type_spec_ImplementsISmsMessageBase, nullptr, inspectable_meta_type)};
     if (!ImplementsISmsMessageBase_type)
     {
         return nullptr;
@@ -13572,7 +13602,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsISmsTextMessage_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsISmsTextMessage, nullptr))};
+    py::pytype_handle ImplementsISmsTextMessage_type{py::register_python_type(module.get(), &type_spec_ImplementsISmsTextMessage, nullptr, inspectable_meta_type)};
     if (!ImplementsISmsTextMessage_type)
     {
         return nullptr;

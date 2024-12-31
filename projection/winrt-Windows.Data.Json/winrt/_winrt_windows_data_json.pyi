@@ -18,7 +18,7 @@ from winrt.windows.data.json import JsonErrorStatus, JsonValueType
 Self = typing.TypeVar('Self')
 
 @typing.final
-class JsonArray_Static(type):
+class JsonArray_Static(winrt._winrt.IInspectable_Static):
     # Windows.Data.Json.JsonArray Windows.Data.Json.JsonArray::Parse(System.String)
     def parse(cls, input: str, /) -> JsonArray: ...
     # System.Boolean Windows.Data.Json.JsonArray::TryParse(System.String,Windows.Data.Json.JsonArray&)
@@ -98,7 +98,7 @@ class JsonArray(winrt.system.Object, windows_foundation.IStringable, IJsonValue,
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class JsonError_Static(type):
+class JsonError_Static(winrt._winrt.IInspectable_Static):
     # Windows.Data.Json.JsonErrorStatus Windows.Data.Json.JsonError::GetJsonStatus(System.Int32)
     def get_json_status(cls, hresult: winrt.system.Int32, /) -> JsonErrorStatus: ...
 
@@ -107,7 +107,7 @@ class JsonError(winrt.system.Object, metaclass=JsonError_Static):
     pass
 
 @typing.final
-class JsonObject_Static(type):
+class JsonObject_Static(winrt._winrt.IInspectable_Static):
     # Windows.Data.Json.JsonObject Windows.Data.Json.JsonObject::Parse(System.String)
     def parse(cls, input: str, /) -> JsonObject: ...
     # System.Boolean Windows.Data.Json.JsonObject::TryParse(System.String,Windows.Data.Json.JsonObject&)
@@ -185,7 +185,7 @@ class JsonObject(winrt.system.Object, windows_foundation.IStringable, IJsonValue
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class JsonValue_Static(type):
+class JsonValue_Static(winrt._winrt.IInspectable_Static):
     # Windows.Data.Json.JsonValue Windows.Data.Json.JsonValue::CreateBooleanValue(System.Boolean)
     def create_boolean_value(cls, input: bool, /) -> JsonValue: ...
     # Windows.Data.Json.JsonValue Windows.Data.Json.JsonValue::CreateNullValue()

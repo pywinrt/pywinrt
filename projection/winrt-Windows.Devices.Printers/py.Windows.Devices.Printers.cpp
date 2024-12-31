@@ -5279,6 +5279,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5292,13 +5298,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IppAttributeError_type{py::register_python_type(module.get(), &type_spec_IppAttributeError, object_bases.get(), nullptr)};
+    py::pytype_handle IppAttributeError_type{py::register_python_type(module.get(), &type_spec_IppAttributeError, object_bases.get(), inspectable_meta_type)};
     if (!IppAttributeError_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_IppAttributeValue_Static{PyType_FromSpec(&type_spec_IppAttributeValue_Static)};
+    py::pyobj_handle IppAttributeValue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!IppAttributeValue_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_IppAttributeValue_Static{PyType_FromSpecWithBases(&type_spec_IppAttributeValue_Static, IppAttributeValue_Static_bases.get())};
     if (!type_IppAttributeValue_Static)
     {
         return nullptr;
@@ -5310,13 +5322,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IppIntegerRange_type{py::register_python_type(module.get(), &type_spec_IppIntegerRange, object_bases.get(), nullptr)};
+    py::pytype_handle IppIntegerRange_type{py::register_python_type(module.get(), &type_spec_IppIntegerRange, object_bases.get(), inspectable_meta_type)};
     if (!IppIntegerRange_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_IppPrintDevice_Static{PyType_FromSpec(&type_spec_IppPrintDevice_Static)};
+    py::pyobj_handle IppPrintDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!IppPrintDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_IppPrintDevice_Static{PyType_FromSpecWithBases(&type_spec_IppPrintDevice_Static, IppPrintDevice_Static_bases.get())};
     if (!type_IppPrintDevice_Static)
     {
         return nullptr;
@@ -5328,43 +5346,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IppResolution_type{py::register_python_type(module.get(), &type_spec_IppResolution, object_bases.get(), nullptr)};
+    py::pytype_handle IppResolution_type{py::register_python_type(module.get(), &type_spec_IppResolution, object_bases.get(), inspectable_meta_type)};
     if (!IppResolution_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IppSetAttributesResult_type{py::register_python_type(module.get(), &type_spec_IppSetAttributesResult, object_bases.get(), nullptr)};
+    py::pytype_handle IppSetAttributesResult_type{py::register_python_type(module.get(), &type_spec_IppSetAttributesResult, object_bases.get(), inspectable_meta_type)};
     if (!IppSetAttributesResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle IppTextWithLanguage_type{py::register_python_type(module.get(), &type_spec_IppTextWithLanguage, object_bases.get(), nullptr)};
+    py::pytype_handle IppTextWithLanguage_type{py::register_python_type(module.get(), &type_spec_IppTextWithLanguage, object_bases.get(), inspectable_meta_type)};
     if (!IppTextWithLanguage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PageConfigurationSettings_type{py::register_python_type(module.get(), &type_spec_PageConfigurationSettings, object_bases.get(), nullptr)};
+    py::pytype_handle PageConfigurationSettings_type{py::register_python_type(module.get(), &type_spec_PageConfigurationSettings, object_bases.get(), inspectable_meta_type)};
     if (!PageConfigurationSettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PdlPassthroughProvider_type{py::register_python_type(module.get(), &type_spec_PdlPassthroughProvider, object_bases.get(), nullptr)};
+    py::pytype_handle PdlPassthroughProvider_type{py::register_python_type(module.get(), &type_spec_PdlPassthroughProvider, object_bases.get(), inspectable_meta_type)};
     if (!PdlPassthroughProvider_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PdlPassthroughTarget_type{py::register_python_type(module.get(), &type_spec_PdlPassthroughTarget, object_bases.get(), nullptr)};
+    py::pytype_handle PdlPassthroughTarget_type{py::register_python_type(module.get(), &type_spec_PdlPassthroughTarget, object_bases.get(), inspectable_meta_type)};
     if (!PdlPassthroughTarget_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Print3DDevice_Static{PyType_FromSpec(&type_spec_Print3DDevice_Static)};
+    py::pyobj_handle Print3DDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Print3DDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Print3DDevice_Static{PyType_FromSpecWithBases(&type_spec_Print3DDevice_Static, Print3DDevice_Static_bases.get())};
     if (!type_Print3DDevice_Static)
     {
         return nullptr;
@@ -5376,7 +5400,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PrintSchema_type{py::register_python_type(module.get(), &type_spec_PrintSchema, object_bases.get(), nullptr)};
+    py::pytype_handle PrintSchema_type{py::register_python_type(module.get(), &type_spec_PrintSchema, object_bases.get(), inspectable_meta_type)};
     if (!PrintSchema_type)
     {
         return nullptr;

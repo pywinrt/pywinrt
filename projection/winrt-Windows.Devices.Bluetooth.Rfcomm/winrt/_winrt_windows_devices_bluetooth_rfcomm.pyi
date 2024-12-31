@@ -20,7 +20,7 @@ import winrt.windows.storage.streams as windows_storage_streams
 Self = typing.TypeVar('Self')
 
 @typing.final
-class RfcommDeviceService_Static(type):
+class RfcommDeviceService_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService> Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[RfcommDeviceService]: ...
     # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::GetDeviceSelector(Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId)
@@ -78,7 +78,7 @@ class RfcommDeviceServicesResult(winrt.system.Object):
     def services(self) -> typing.Sequence[RfcommDeviceService]: ...
 
 @typing.final
-class RfcommServiceId_Static(type):
+class RfcommServiceId_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId::FromShortId(System.UInt32)
     def from_short_id(cls, short_id: winrt.system.UInt32, /) -> RfcommServiceId: ...
     # Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId::FromUuid(System.Guid)
@@ -113,7 +113,7 @@ class RfcommServiceId(winrt.system.Object, metaclass=RfcommServiceId_Static):
     def uuid(self) -> _uuid.UUID: ...
 
 @typing.final
-class RfcommServiceProvider_Static(type):
+class RfcommServiceProvider_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider> Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider::CreateAsync(Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId)
     def create_async(cls, service_id: RfcommServiceId, /) -> windows_foundation.IAsyncOperation[RfcommServiceProvider]: ...
 

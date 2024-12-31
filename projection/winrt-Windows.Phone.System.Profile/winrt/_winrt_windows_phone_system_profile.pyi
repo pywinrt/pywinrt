@@ -13,7 +13,7 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 @typing.final
-class RetailMode_Static(type):
+class RetailMode_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Phone.System.Profile.RetailMode::get_RetailModeEnabled()
     @_property
     def retail_mode_enabled(cls) -> bool: ...

@@ -15,7 +15,7 @@ import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 Self = typing.TypeVar('Self')
 
 @typing.final
-class InputActivationListenerPreview_Static(type):
+class InputActivationListenerPreview_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Input.InputActivationListener Windows.UI.Input.Preview.InputActivationListenerPreview::CreateForApplicationWindow(Windows.UI.WindowManagement.AppWindow)
     def create_for_application_window(cls, window: windows_ui_windowmanagement.AppWindow, /) -> windows_ui_input.InputActivationListener: ...
 

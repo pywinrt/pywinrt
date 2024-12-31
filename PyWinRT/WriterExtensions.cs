@@ -1280,6 +1280,14 @@ static class WriterExtensions
             w.WriteBlock(() => w.WriteLine("return nullptr;"));
             w.WriteBlankLine();
 
+            if (members.Classes.Count != 0 || members.Interfaces.Count != 0)
+            {
+                w.WriteLine("auto inspectable_meta_type = py::get_inspectable_meta_type();");
+                w.WriteLine("if (!inspectable_meta_type)");
+                w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                w.WriteBlankLine();
+            }
+
             w.WriteLine("auto object_type = py::get_object_type();");
             w.WriteLine("if (!object_type)");
             w.WriteBlock(() => w.WriteLine("return nullptr;"));
@@ -1357,22 +1365,29 @@ static class WriterExtensions
             type.Type.BaseType is not null && type.Type.BaseType.Namespace != "System";
 
         var name = type.Name.ToNonGeneric();
-        var metaclass = "nullptr";
+        var metaclass = type.Category == Category.Class ? "inspectable_meta_type" : "nullptr";
 
         if (type.PyRequiresMetaclass)
         {
-            if (hasComposableBase)
+            if (type.Category == Category.Class)
             {
-                var baseType = type.Type.BaseType!;
-                var baseName = baseType.Name;
+                var baseTypePtr = "inspectable_meta_type";
 
-                if (baseType.Namespace != type.Namespace)
+                if (hasComposableBase)
                 {
-                    baseName = $"{baseType.Namespace.ToPyModuleAlias()}_{baseName}";
+                    var baseType = type.Type.BaseType!;
+                    baseTypePtr = $"{baseType.Name}_type";
+
+                    if (baseType.Namespace != type.Namespace)
+                    {
+                        baseTypePtr = $"{baseType.Namespace.ToPyModuleAlias()}_{baseTypePtr}";
+                    }
+
+                    baseTypePtr = $"Py_TYPE({baseTypePtr}.get())";
                 }
 
                 w.WriteLine(
-                    $"py::pyobj_handle {name}_Static_bases{{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE({baseName}_type.get())))}};"
+                    $"py::pyobj_handle {name}_Static_bases{{PyTuple_Pack(1, reinterpret_cast<PyObject*>({baseTypePtr}))}};"
                 );
                 w.WriteLine($"if (!{name}_Static_bases)");
                 w.WriteBlock(() => w.WriteLine("return nullptr;"));
@@ -1431,7 +1446,7 @@ static class WriterExtensions
         if (type.Category == Category.Interface)
         {
             w.WriteLine(
-                $"py::pytype_handle Implements{name}_type{{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_Implements{name}, nullptr))}};"
+                $"py::pytype_handle Implements{name}_type{{py::register_python_type(module.get(), &type_spec_Implements{name}, nullptr, inspectable_meta_type)}};"
             );
             w.WriteLine($"if (!Implements{name}_type)");
             w.WriteBlock(() => w.WriteLine("return nullptr;"));

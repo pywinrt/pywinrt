@@ -149,7 +149,7 @@ class CompositeTransform3D(Transform3D, metaclass=CompositeTransform3D_Static):
     def center_x(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
-class Matrix3DHelper_Static(type):
+class Matrix3DHelper_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Media.Media3D.Matrix3D Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper::FromElements(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
     def from_elements(cls, m11: winrt.system.Double, m12: winrt.system.Double, m13: winrt.system.Double, m14: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, m23: winrt.system.Double, m24: winrt.system.Double, m31: winrt.system.Double, m32: winrt.system.Double, m33: winrt.system.Double, m34: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double, offset_z: winrt.system.Double, m44: winrt.system.Double, /) -> Matrix3D: ...
     # System.Boolean Microsoft.UI.Xaml.Media.Media3D.Matrix3DHelper::GetHasInverse(Microsoft.UI.Xaml.Media.Media3D.Matrix3D)

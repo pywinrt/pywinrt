@@ -22,7 +22,7 @@ from winrt.windows.devices.perception import PerceptionFrameSourceAccessStatus, 
 Self = typing.TypeVar('Self')
 
 @typing.final
-class KnownCameraIntrinsicsProperties_Static(type):
+class KnownCameraIntrinsicsProperties_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.KnownCameraIntrinsicsProperties::get_FocalLength()
     @_property
     def focal_length(cls) -> str: ...
@@ -41,7 +41,7 @@ class KnownCameraIntrinsicsProperties(winrt.system.Object, metaclass=KnownCamera
     pass
 
 @typing.final
-class KnownPerceptionColorFrameSourceProperties_Static(type):
+class KnownPerceptionColorFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties::get_AutoExposureEnabled()
     @_property
     def auto_exposure_enabled(cls) -> str: ...
@@ -57,7 +57,7 @@ class KnownPerceptionColorFrameSourceProperties(winrt.system.Object, metaclass=K
     pass
 
 @typing.final
-class KnownPerceptionDepthFrameSourceProperties_Static(type):
+class KnownPerceptionDepthFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties::get_MaxDepth()
     @_property
     def max_depth(cls) -> str: ...
@@ -70,7 +70,7 @@ class KnownPerceptionDepthFrameSourceProperties(winrt.system.Object, metaclass=K
     pass
 
 @typing.final
-class KnownPerceptionFrameSourceProperties_Static(type):
+class KnownPerceptionFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionFrameSourceProperties::get_DeviceModelVersion()
     @_property
     def device_model_version(cls) -> str: ...
@@ -95,7 +95,7 @@ class KnownPerceptionFrameSourceProperties(winrt.system.Object, metaclass=KnownP
     pass
 
 @typing.final
-class KnownPerceptionInfraredFrameSourceProperties_Static(type):
+class KnownPerceptionInfraredFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_ActiveIlluminationEnabled()
     @_property
     def active_illumination_enabled(cls) -> str: ...
@@ -123,7 +123,7 @@ class KnownPerceptionInfraredFrameSourceProperties(winrt.system.Object, metaclas
     pass
 
 @typing.final
-class KnownPerceptionVideoFrameSourceProperties_Static(type):
+class KnownPerceptionVideoFrameSourceProperties_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties::get_AvailableVideoProfiles()
     @_property
     def available_video_profiles(cls) -> str: ...
@@ -145,7 +145,7 @@ class KnownPerceptionVideoFrameSourceProperties(winrt.system.Object, metaclass=K
     pass
 
 @typing.final
-class KnownPerceptionVideoProfileProperties_Static(type):
+class KnownPerceptionVideoProfileProperties_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionVideoProfileProperties::get_BitmapAlphaMode()
     @_property
     def bitmap_alpha_mode(cls) -> str: ...
@@ -211,7 +211,7 @@ class PerceptionColorFrameReader(winrt.system.Object, windows_foundation.IClosab
     def source(self) -> PerceptionColorFrameSource: ...
 
 @typing.final
-class PerceptionColorFrameSource_Static(type):
+class PerceptionColorFrameSource_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Perception.PerceptionColorFrameSourceWatcher Windows.Devices.Perception.PerceptionColorFrameSource::CreateWatcher()
     # @deprecated("PerceptionColorFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionColorFrameSourceWatcher: ...
@@ -457,7 +457,7 @@ class PerceptionDepthFrameReader(winrt.system.Object, windows_foundation.IClosab
     def source(self) -> PerceptionDepthFrameSource: ...
 
 @typing.final
-class PerceptionDepthFrameSource_Static(type):
+class PerceptionDepthFrameSource_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher Windows.Devices.Perception.PerceptionDepthFrameSource::CreateWatcher()
     # @deprecated("PerceptionDepthFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionDepthFrameSourceWatcher: ...
@@ -675,7 +675,7 @@ class PerceptionInfraredFrameReader(winrt.system.Object, windows_foundation.IClo
     def source(self) -> PerceptionInfraredFrameSource: ...
 
 @typing.final
-class PerceptionInfraredFrameSource_Static(type):
+class PerceptionInfraredFrameSource_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher Windows.Devices.Perception.PerceptionInfraredFrameSource::CreateWatcher()
     # @deprecated("PerceptionInfraredFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionInfraredFrameSourceWatcher: ...

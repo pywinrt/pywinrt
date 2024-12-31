@@ -5550,6 +5550,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice_provider(void) noexc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5563,133 +5569,133 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice_provider(void) noexc
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerDisableScannerRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerDisableScannerRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerDisableScannerRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerDisableScannerRequest, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerDisableScannerRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerDisableScannerRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerDisableScannerRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerDisableScannerRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerDisableScannerRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerDisableScannerRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerEnableScannerRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerEnableScannerRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerEnableScannerRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerEnableScannerRequest, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerEnableScannerRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerEnableScannerRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerEnableScannerRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerEnableScannerRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerEnableScannerRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerEnableScannerRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerFrameReader_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerFrameReader, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerFrameReader_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerFrameReader, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerFrameReader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerFrameReaderFrameArrivedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerFrameReaderFrameArrivedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerFrameReaderFrameArrivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerGetSymbologyAttributesRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerGetSymbologyAttributesRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerGetSymbologyAttributesRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerGetSymbologyAttributesRequest, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerGetSymbologyAttributesRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerGetSymbologyAttributesRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerGetSymbologyAttributesRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerGetSymbologyAttributesRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerHideVideoPreviewRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerHideVideoPreviewRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerHideVideoPreviewRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerHideVideoPreviewRequest, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerHideVideoPreviewRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerHideVideoPreviewRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerHideVideoPreviewRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerHideVideoPreviewRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerProviderConnection_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerProviderConnection, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerProviderConnection_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerProviderConnection, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerProviderConnection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerProviderTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerProviderTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerProviderTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerSetActiveSymbologiesRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerSetActiveSymbologiesRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerSetActiveSymbologiesRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerSetActiveSymbologiesRequest, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerSetActiveSymbologiesRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerSetActiveSymbologiesRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerSetActiveSymbologiesRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerSetActiveSymbologiesRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerSetSymbologyAttributesRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerSetSymbologyAttributesRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerSetSymbologyAttributesRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerSetSymbologyAttributesRequest, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerSetSymbologyAttributesRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerSetSymbologyAttributesRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerSetSymbologyAttributesRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerSetSymbologyAttributesRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerStartSoftwareTriggerRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStartSoftwareTriggerRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerStartSoftwareTriggerRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStartSoftwareTriggerRequest, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerStartSoftwareTriggerRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerStartSoftwareTriggerRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerStartSoftwareTriggerRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerStartSoftwareTriggerRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerStopSoftwareTriggerRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStopSoftwareTriggerRequest, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerStopSoftwareTriggerRequest_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStopSoftwareTriggerRequest, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerStopSoftwareTriggerRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerStopSoftwareTriggerRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerStopSoftwareTriggerRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerStopSoftwareTriggerRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeScannerVideoFrame_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerVideoFrame, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeScannerVideoFrame_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerVideoFrame, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeScannerVideoFrame_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BarcodeSymbologyAttributesBuilder_type{py::register_python_type(module.get(), &type_spec_BarcodeSymbologyAttributesBuilder, object_bases.get(), nullptr)};
+    py::pytype_handle BarcodeSymbologyAttributesBuilder_type{py::register_python_type(module.get(), &type_spec_BarcodeSymbologyAttributesBuilder, object_bases.get(), inspectable_meta_type)};
     if (!BarcodeSymbologyAttributesBuilder_type)
     {
         return nullptr;

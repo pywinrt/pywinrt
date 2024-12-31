@@ -16,7 +16,7 @@ import winrt.windows.storage.streams as windows_storage_streams
 Self = typing.TypeVar('Self')
 
 @typing.final
-class LockApplicationHost_Static(type):
+class LockApplicationHost_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.LockScreen.LockApplicationHost Windows.ApplicationModel.LockScreen.LockApplicationHost::GetForCurrentView()
     def get_for_current_view(cls) -> LockApplicationHost: ...
 

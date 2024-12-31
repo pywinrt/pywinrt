@@ -2692,6 +2692,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -2705,37 +2711,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle VoiceCommand_type{py::register_python_type(module.get(), &type_spec_VoiceCommand, object_bases.get(), nullptr)};
+    py::pytype_handle VoiceCommand_type{py::register_python_type(module.get(), &type_spec_VoiceCommand, object_bases.get(), inspectable_meta_type)};
     if (!VoiceCommand_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VoiceCommandCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_VoiceCommandCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle VoiceCommandCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_VoiceCommandCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!VoiceCommandCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VoiceCommandConfirmationResult_type{py::register_python_type(module.get(), &type_spec_VoiceCommandConfirmationResult, object_bases.get(), nullptr)};
+    py::pytype_handle VoiceCommandConfirmationResult_type{py::register_python_type(module.get(), &type_spec_VoiceCommandConfirmationResult, object_bases.get(), inspectable_meta_type)};
     if (!VoiceCommandConfirmationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VoiceCommandContentTile_type{py::register_python_type(module.get(), &type_spec_VoiceCommandContentTile, object_bases.get(), nullptr)};
+    py::pytype_handle VoiceCommandContentTile_type{py::register_python_type(module.get(), &type_spec_VoiceCommandContentTile, object_bases.get(), inspectable_meta_type)};
     if (!VoiceCommandContentTile_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VoiceCommandDefinition_type{py::register_python_type(module.get(), &type_spec_VoiceCommandDefinition, object_bases.get(), nullptr)};
+    py::pytype_handle VoiceCommandDefinition_type{py::register_python_type(module.get(), &type_spec_VoiceCommandDefinition, object_bases.get(), inspectable_meta_type)};
     if (!VoiceCommandDefinition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_VoiceCommandDefinitionManager_Static{PyType_FromSpec(&type_spec_VoiceCommandDefinitionManager_Static)};
+    py::pyobj_handle VoiceCommandDefinitionManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!VoiceCommandDefinitionManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VoiceCommandDefinitionManager_Static{PyType_FromSpecWithBases(&type_spec_VoiceCommandDefinitionManager_Static, VoiceCommandDefinitionManager_Static_bases.get())};
     if (!type_VoiceCommandDefinitionManager_Static)
     {
         return nullptr;
@@ -2747,13 +2759,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle VoiceCommandDisambiguationResult_type{py::register_python_type(module.get(), &type_spec_VoiceCommandDisambiguationResult, object_bases.get(), nullptr)};
+    py::pytype_handle VoiceCommandDisambiguationResult_type{py::register_python_type(module.get(), &type_spec_VoiceCommandDisambiguationResult, object_bases.get(), inspectable_meta_type)};
     if (!VoiceCommandDisambiguationResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_VoiceCommandResponse_Static{PyType_FromSpec(&type_spec_VoiceCommandResponse_Static)};
+    py::pyobj_handle VoiceCommandResponse_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!VoiceCommandResponse_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VoiceCommandResponse_Static{PyType_FromSpecWithBases(&type_spec_VoiceCommandResponse_Static, VoiceCommandResponse_Static_bases.get())};
     if (!type_VoiceCommandResponse_Static)
     {
         return nullptr;
@@ -2765,7 +2783,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    py::pyobj_handle type_VoiceCommandServiceConnection_Static{PyType_FromSpec(&type_spec_VoiceCommandServiceConnection_Static)};
+    py::pyobj_handle VoiceCommandServiceConnection_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!VoiceCommandServiceConnection_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VoiceCommandServiceConnection_Static{PyType_FromSpecWithBases(&type_spec_VoiceCommandServiceConnection_Static, VoiceCommandServiceConnection_Static_bases.get())};
     if (!type_VoiceCommandServiceConnection_Static)
     {
         return nullptr;
@@ -2777,7 +2801,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle VoiceCommandUserMessage_type{py::register_python_type(module.get(), &type_spec_VoiceCommandUserMessage, object_bases.get(), nullptr)};
+    py::pytype_handle VoiceCommandUserMessage_type{py::register_python_type(module.get(), &type_spec_VoiceCommandUserMessage, object_bases.get(), inspectable_meta_type)};
     if (!VoiceCommandUserMessage_type)
     {
         return nullptr;

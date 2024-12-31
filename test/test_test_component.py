@@ -49,6 +49,9 @@ class TestTestComponent(unittest.TestCase):
             tc.Composable.expect_required_one(c), 1, "calling from winrt didn't work"
         )
 
+        # FIXME: need to implement adding guid to IInspectable::GetIids
+        # self.assertIsInstance(c, tc.IRequiredOne)
+
     def test_overriding_new(self):
         class C(tc.Composable):
             @override
@@ -180,19 +183,16 @@ class TestTestComponent(unittest.TestCase):
             wr(), "object should be collected when WinRT references are gone"
         )
 
-    def test_composable_inheritance(self):
+    def test_composable_isinstance(self):
         d = tc.Derived()
 
         self.assertIsInstance(d, tc.Composable)
-        # TODO: implement runtime checking for interface implementation
-        # self.assertIsInstance(d, tc.ImplementsIRequiredOne)
+        self.assertIsInstance(d, tc.IRequiredOne)
 
-    def test_interface_subclass(self):
-        # subclassing a interface type is not allowed
-        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
-
-            class s(tc.ITests):  # type: ignore
-                pass
+    def test_composable_issubclass(self):
+        self.assertTrue(issubclass(tc.Derived, tc.Composable))  # type: ignore
+        # FIXME: runtime subclass checking for interfaces is not implemented
+        # self.assertTrue(issubclass(tc.Derived, tc.IRequiredOne))  # type: ignore
 
     def test_object_equality(self):
         c1 = tc.Derived()

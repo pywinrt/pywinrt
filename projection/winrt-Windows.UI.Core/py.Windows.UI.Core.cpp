@@ -19450,6 +19450,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -19463,67 +19469,73 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AcceleratorKeyEventArgs_type{py::register_python_type(module.get(), &type_spec_AcceleratorKeyEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AcceleratorKeyEventArgs_type{py::register_python_type(module.get(), &type_spec_AcceleratorKeyEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AcceleratorKeyEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AutomationProviderRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AutomationProviderRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AutomationProviderRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AutomationProviderRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AutomationProviderRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BackRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BackRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BackRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CharacterReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CharacterReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CharacterReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CharacterReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CharacterReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ClosestInteractiveBoundsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClosestInteractiveBoundsRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ClosestInteractiveBoundsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ClosestInteractiveBoundsRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ClosestInteractiveBoundsRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreAcceleratorKeys_type{py::register_python_type(module.get(), &type_spec_CoreAcceleratorKeys, object_bases.get(), nullptr)};
+    py::pytype_handle CoreAcceleratorKeys_type{py::register_python_type(module.get(), &type_spec_CoreAcceleratorKeys, object_bases.get(), inspectable_meta_type)};
     if (!CoreAcceleratorKeys_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreComponentInputSource_type{py::register_python_type(module.get(), &type_spec_CoreComponentInputSource, object_bases.get(), nullptr)};
+    py::pytype_handle CoreComponentInputSource_type{py::register_python_type(module.get(), &type_spec_CoreComponentInputSource, object_bases.get(), inspectable_meta_type)};
     if (!CoreComponentInputSource_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreCursor_type{py::register_python_type(module.get(), &type_spec_CoreCursor, object_bases.get(), nullptr)};
+    py::pytype_handle CoreCursor_type{py::register_python_type(module.get(), &type_spec_CoreCursor, object_bases.get(), inspectable_meta_type)};
     if (!CoreCursor_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreDispatcher_type{py::register_python_type(module.get(), &type_spec_CoreDispatcher, object_bases.get(), nullptr)};
+    py::pytype_handle CoreDispatcher_type{py::register_python_type(module.get(), &type_spec_CoreDispatcher, object_bases.get(), inspectable_meta_type)};
     if (!CoreDispatcher_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreIndependentInputSource_type{py::register_python_type(module.get(), &type_spec_CoreIndependentInputSource, object_bases.get(), nullptr)};
+    py::pytype_handle CoreIndependentInputSource_type{py::register_python_type(module.get(), &type_spec_CoreIndependentInputSource, object_bases.get(), inspectable_meta_type)};
     if (!CoreIndependentInputSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreIndependentInputSourceController_Static{PyType_FromSpec(&type_spec_CoreIndependentInputSourceController_Static)};
+    py::pyobj_handle CoreIndependentInputSourceController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreIndependentInputSourceController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreIndependentInputSourceController_Static{PyType_FromSpecWithBases(&type_spec_CoreIndependentInputSourceController_Static, CoreIndependentInputSourceController_Static_bases.get())};
     if (!type_CoreIndependentInputSourceController_Static)
     {
         return nullptr;
@@ -19535,7 +19547,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreWindow_Static{PyType_FromSpec(&type_spec_CoreWindow_Static)};
+    py::pyobj_handle CoreWindow_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreWindow_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreWindow_Static{PyType_FromSpecWithBases(&type_spec_CoreWindow_Static, CoreWindow_Static_bases.get())};
     if (!type_CoreWindow_Static)
     {
         return nullptr;
@@ -19547,31 +19565,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreWindowDialog_type{py::register_python_type(module.get(), &type_spec_CoreWindowDialog, object_bases.get(), nullptr)};
+    py::pytype_handle CoreWindowDialog_type{py::register_python_type(module.get(), &type_spec_CoreWindowDialog, object_bases.get(), inspectable_meta_type)};
     if (!CoreWindowDialog_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreWindowEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWindowEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreWindowEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWindowEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreWindowEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreWindowFlyout_type{py::register_python_type(module.get(), &type_spec_CoreWindowFlyout, object_bases.get(), nullptr)};
+    py::pytype_handle CoreWindowFlyout_type{py::register_python_type(module.get(), &type_spec_CoreWindowFlyout, object_bases.get(), inspectable_meta_type)};
     if (!CoreWindowFlyout_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreWindowPopupShowingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWindowPopupShowingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CoreWindowPopupShowingEventArgs_type{py::register_python_type(module.get(), &type_spec_CoreWindowPopupShowingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CoreWindowPopupShowingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreWindowResizeManager_Static{PyType_FromSpec(&type_spec_CoreWindowResizeManager_Static)};
+    py::pyobj_handle CoreWindowResizeManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreWindowResizeManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreWindowResizeManager_Static{PyType_FromSpecWithBases(&type_spec_CoreWindowResizeManager_Static, CoreWindowResizeManager_Static_bases.get())};
     if (!type_CoreWindowResizeManager_Static)
     {
         return nullptr;
@@ -19583,31 +19607,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle IdleDispatchedHandlerArgs_type{py::register_python_type(module.get(), &type_spec_IdleDispatchedHandlerArgs, object_bases.get(), nullptr)};
+    py::pytype_handle IdleDispatchedHandlerArgs_type{py::register_python_type(module.get(), &type_spec_IdleDispatchedHandlerArgs, object_bases.get(), inspectable_meta_type)};
     if (!IdleDispatchedHandlerArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputEnabledEventArgs_type{py::register_python_type(module.get(), &type_spec_InputEnabledEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InputEnabledEventArgs_type{py::register_python_type(module.get(), &type_spec_InputEnabledEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!InputEnabledEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle KeyEventArgs_type{py::register_python_type(module.get(), &type_spec_KeyEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle KeyEventArgs_type{py::register_python_type(module.get(), &type_spec_KeyEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!KeyEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointerEventArgs_type{py::register_python_type(module.get(), &type_spec_PointerEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PointerEventArgs_type{py::register_python_type(module.get(), &type_spec_PointerEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PointerEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemNavigationManager_Static{PyType_FromSpec(&type_spec_SystemNavigationManager_Static)};
+    py::pyobj_handle SystemNavigationManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SystemNavigationManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemNavigationManager_Static{PyType_FromSpecWithBases(&type_spec_SystemNavigationManager_Static, SystemNavigationManager_Static_bases.get())};
     if (!type_SystemNavigationManager_Static)
     {
         return nullptr;
@@ -19619,25 +19649,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TouchHitTestingEventArgs_type{py::register_python_type(module.get(), &type_spec_TouchHitTestingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle TouchHitTestingEventArgs_type{py::register_python_type(module.get(), &type_spec_TouchHitTestingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!TouchHitTestingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VisibilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_VisibilityChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle VisibilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_VisibilityChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!VisibilityChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowActivatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WindowActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowActivatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowSizeChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowSizeChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WindowSizeChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowSizeChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowSizeChangedEventArgs_type)
     {
         return nullptr;
@@ -19649,7 +19679,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICoreAcceleratorKeys_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreAcceleratorKeys, nullptr))};
+    py::pytype_handle ImplementsICoreAcceleratorKeys_type{py::register_python_type(module.get(), &type_spec_ImplementsICoreAcceleratorKeys, nullptr, inspectable_meta_type)};
     if (!ImplementsICoreAcceleratorKeys_type)
     {
         return nullptr;
@@ -19666,7 +19696,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICoreInputSourceBase_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreInputSourceBase, nullptr))};
+    py::pytype_handle ImplementsICoreInputSourceBase_type{py::register_python_type(module.get(), &type_spec_ImplementsICoreInputSourceBase, nullptr, inspectable_meta_type)};
     if (!ImplementsICoreInputSourceBase_type)
     {
         return nullptr;
@@ -19683,7 +19713,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICorePointerInputSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICorePointerInputSource, nullptr))};
+    py::pytype_handle ImplementsICorePointerInputSource_type{py::register_python_type(module.get(), &type_spec_ImplementsICorePointerInputSource, nullptr, inspectable_meta_type)};
     if (!ImplementsICorePointerInputSource_type)
     {
         return nullptr;
@@ -19700,7 +19730,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICorePointerInputSource2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICorePointerInputSource2, nullptr))};
+    py::pytype_handle ImplementsICorePointerInputSource2_type{py::register_python_type(module.get(), &type_spec_ImplementsICorePointerInputSource2, nullptr, inspectable_meta_type)};
     if (!ImplementsICorePointerInputSource2_type)
     {
         return nullptr;
@@ -19717,7 +19747,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICorePointerRedirector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICorePointerRedirector, nullptr))};
+    py::pytype_handle ImplementsICorePointerRedirector_type{py::register_python_type(module.get(), &type_spec_ImplementsICorePointerRedirector, nullptr, inspectable_meta_type)};
     if (!ImplementsICorePointerRedirector_type)
     {
         return nullptr;
@@ -19734,7 +19764,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICoreWindow_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreWindow, nullptr))};
+    py::pytype_handle ImplementsICoreWindow_type{py::register_python_type(module.get(), &type_spec_ImplementsICoreWindow, nullptr, inspectable_meta_type)};
     if (!ImplementsICoreWindow_type)
     {
         return nullptr;
@@ -19751,7 +19781,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICoreWindowEventArgs_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreWindowEventArgs, nullptr))};
+    py::pytype_handle ImplementsICoreWindowEventArgs_type{py::register_python_type(module.get(), &type_spec_ImplementsICoreWindowEventArgs, nullptr, inspectable_meta_type)};
     if (!ImplementsICoreWindowEventArgs_type)
     {
         return nullptr;
@@ -19768,7 +19798,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIInitializeWithCoreWindow_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIInitializeWithCoreWindow, nullptr))};
+    py::pytype_handle ImplementsIInitializeWithCoreWindow_type{py::register_python_type(module.get(), &type_spec_ImplementsIInitializeWithCoreWindow, nullptr, inspectable_meta_type)};
     if (!ImplementsIInitializeWithCoreWindow_type)
     {
         return nullptr;

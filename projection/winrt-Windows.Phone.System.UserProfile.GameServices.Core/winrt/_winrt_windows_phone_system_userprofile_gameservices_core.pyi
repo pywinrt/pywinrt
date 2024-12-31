@@ -17,7 +17,7 @@ from winrt.windows.phone.system.userprofile.gameservices.core import GameService
 Self = typing.TypeVar('Self')
 
 @typing.final
-class GameService_Static(type):
+class GameService_Static(winrt._winrt.IInspectable_Static):
     # System.UInt32 Windows.Phone.System.UserProfile.GameServices.Core.GameService::GetAuthenticationStatus()
     def get_authentication_status(cls) -> winrt.system.UInt32: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Phone.System.UserProfile.GameServices.Core.GameServicePropertyCollection> Windows.Phone.System.UserProfile.GameServices.Core.GameService::GetGamerProfileAsync()

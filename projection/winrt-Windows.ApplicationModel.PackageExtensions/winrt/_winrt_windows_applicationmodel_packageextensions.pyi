@@ -42,7 +42,7 @@ class PackageExtension(winrt.system.Object):
     def package(self) -> windows_applicationmodel.Package: ...
 
 @typing.final
-class PackageExtensionCatalog_Static(type):
+class PackageExtensionCatalog_Static(winrt._winrt.IInspectable_Static):
     # Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog::Open(System.String)
     def open(cls, package_extension_name: str, /) -> PackageExtensionCatalog: ...
 

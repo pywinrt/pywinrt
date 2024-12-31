@@ -8944,6 +8944,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -8969,7 +8975,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AnnotationPatternIdentifiers_Static{PyType_FromSpec(&type_spec_AnnotationPatternIdentifiers_Static)};
+    py::pyobj_handle AnnotationPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AnnotationPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AnnotationPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_AnnotationPatternIdentifiers_Static, AnnotationPatternIdentifiers_Static_bases.get())};
     if (!type_AnnotationPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9005,7 +9017,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AutomationElementIdentifiers_Static{PyType_FromSpec(&type_spec_AutomationElementIdentifiers_Static)};
+    py::pyobj_handle AutomationElementIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AutomationElementIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AutomationElementIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_AutomationElementIdentifiers_Static, AutomationElementIdentifiers_Static_bases.get())};
     if (!type_AutomationElementIdentifiers_Static)
     {
         return nullptr;
@@ -9017,7 +9035,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AutomationProperties_Static{PyType_FromSpec(&type_spec_AutomationProperties_Static)};
+    py::pyobj_handle AutomationProperties_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AutomationProperties_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AutomationProperties_Static{PyType_FromSpecWithBases(&type_spec_AutomationProperties_Static, AutomationProperties_Static_bases.get())};
     if (!type_AutomationProperties_Static)
     {
         return nullptr;
@@ -9029,13 +9053,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AutomationProperty_type{py::register_python_type(module.get(), &type_spec_AutomationProperty, object_bases.get(), nullptr)};
+    py::pytype_handle AutomationProperty_type{py::register_python_type(module.get(), &type_spec_AutomationProperty, object_bases.get(), inspectable_meta_type)};
     if (!AutomationProperty_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DockPatternIdentifiers_Static{PyType_FromSpec(&type_spec_DockPatternIdentifiers_Static)};
+    py::pyobj_handle DockPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DockPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DockPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_DockPatternIdentifiers_Static, DockPatternIdentifiers_Static_bases.get())};
     if (!type_DockPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9047,7 +9077,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DragPatternIdentifiers_Static{PyType_FromSpec(&type_spec_DragPatternIdentifiers_Static)};
+    py::pyobj_handle DragPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DragPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DragPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_DragPatternIdentifiers_Static, DragPatternIdentifiers_Static_bases.get())};
     if (!type_DragPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9059,7 +9095,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DropTargetPatternIdentifiers_Static{PyType_FromSpec(&type_spec_DropTargetPatternIdentifiers_Static)};
+    py::pyobj_handle DropTargetPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DropTargetPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DropTargetPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_DropTargetPatternIdentifiers_Static, DropTargetPatternIdentifiers_Static_bases.get())};
     if (!type_DropTargetPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9071,7 +9113,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ExpandCollapsePatternIdentifiers_Static{PyType_FromSpec(&type_spec_ExpandCollapsePatternIdentifiers_Static)};
+    py::pyobj_handle ExpandCollapsePatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ExpandCollapsePatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ExpandCollapsePatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_ExpandCollapsePatternIdentifiers_Static, ExpandCollapsePatternIdentifiers_Static_bases.get())};
     if (!type_ExpandCollapsePatternIdentifiers_Static)
     {
         return nullptr;
@@ -9083,7 +9131,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GridItemPatternIdentifiers_Static{PyType_FromSpec(&type_spec_GridItemPatternIdentifiers_Static)};
+    py::pyobj_handle GridItemPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GridItemPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GridItemPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_GridItemPatternIdentifiers_Static, GridItemPatternIdentifiers_Static_bases.get())};
     if (!type_GridItemPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9095,7 +9149,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GridPatternIdentifiers_Static{PyType_FromSpec(&type_spec_GridPatternIdentifiers_Static)};
+    py::pyobj_handle GridPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GridPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GridPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_GridPatternIdentifiers_Static, GridPatternIdentifiers_Static_bases.get())};
     if (!type_GridPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9107,7 +9167,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MultipleViewPatternIdentifiers_Static{PyType_FromSpec(&type_spec_MultipleViewPatternIdentifiers_Static)};
+    py::pyobj_handle MultipleViewPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MultipleViewPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MultipleViewPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_MultipleViewPatternIdentifiers_Static, MultipleViewPatternIdentifiers_Static_bases.get())};
     if (!type_MultipleViewPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9119,7 +9185,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RangeValuePatternIdentifiers_Static{PyType_FromSpec(&type_spec_RangeValuePatternIdentifiers_Static)};
+    py::pyobj_handle RangeValuePatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RangeValuePatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RangeValuePatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_RangeValuePatternIdentifiers_Static, RangeValuePatternIdentifiers_Static_bases.get())};
     if (!type_RangeValuePatternIdentifiers_Static)
     {
         return nullptr;
@@ -9131,7 +9203,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ScrollPatternIdentifiers_Static{PyType_FromSpec(&type_spec_ScrollPatternIdentifiers_Static)};
+    py::pyobj_handle ScrollPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ScrollPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScrollPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_ScrollPatternIdentifiers_Static, ScrollPatternIdentifiers_Static_bases.get())};
     if (!type_ScrollPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9143,7 +9221,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SelectionItemPatternIdentifiers_Static{PyType_FromSpec(&type_spec_SelectionItemPatternIdentifiers_Static)};
+    py::pyobj_handle SelectionItemPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SelectionItemPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SelectionItemPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_SelectionItemPatternIdentifiers_Static, SelectionItemPatternIdentifiers_Static_bases.get())};
     if (!type_SelectionItemPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9155,7 +9239,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SelectionPatternIdentifiers_Static{PyType_FromSpec(&type_spec_SelectionPatternIdentifiers_Static)};
+    py::pyobj_handle SelectionPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SelectionPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SelectionPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_SelectionPatternIdentifiers_Static, SelectionPatternIdentifiers_Static_bases.get())};
     if (!type_SelectionPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9167,7 +9257,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SpreadsheetItemPatternIdentifiers_Static{PyType_FromSpec(&type_spec_SpreadsheetItemPatternIdentifiers_Static)};
+    py::pyobj_handle SpreadsheetItemPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SpreadsheetItemPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SpreadsheetItemPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_SpreadsheetItemPatternIdentifiers_Static, SpreadsheetItemPatternIdentifiers_Static_bases.get())};
     if (!type_SpreadsheetItemPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9179,7 +9275,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StylesPatternIdentifiers_Static{PyType_FromSpec(&type_spec_StylesPatternIdentifiers_Static)};
+    py::pyobj_handle StylesPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StylesPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StylesPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_StylesPatternIdentifiers_Static, StylesPatternIdentifiers_Static_bases.get())};
     if (!type_StylesPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9191,7 +9293,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TableItemPatternIdentifiers_Static{PyType_FromSpec(&type_spec_TableItemPatternIdentifiers_Static)};
+    py::pyobj_handle TableItemPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TableItemPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TableItemPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_TableItemPatternIdentifiers_Static, TableItemPatternIdentifiers_Static_bases.get())};
     if (!type_TableItemPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9203,7 +9311,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TablePatternIdentifiers_Static{PyType_FromSpec(&type_spec_TablePatternIdentifiers_Static)};
+    py::pyobj_handle TablePatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TablePatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TablePatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_TablePatternIdentifiers_Static, TablePatternIdentifiers_Static_bases.get())};
     if (!type_TablePatternIdentifiers_Static)
     {
         return nullptr;
@@ -9215,7 +9329,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TogglePatternIdentifiers_Static{PyType_FromSpec(&type_spec_TogglePatternIdentifiers_Static)};
+    py::pyobj_handle TogglePatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TogglePatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TogglePatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_TogglePatternIdentifiers_Static, TogglePatternIdentifiers_Static_bases.get())};
     if (!type_TogglePatternIdentifiers_Static)
     {
         return nullptr;
@@ -9227,7 +9347,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TransformPattern2Identifiers_Static{PyType_FromSpec(&type_spec_TransformPattern2Identifiers_Static)};
+    py::pyobj_handle TransformPattern2Identifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TransformPattern2Identifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TransformPattern2Identifiers_Static{PyType_FromSpecWithBases(&type_spec_TransformPattern2Identifiers_Static, TransformPattern2Identifiers_Static_bases.get())};
     if (!type_TransformPattern2Identifiers_Static)
     {
         return nullptr;
@@ -9239,7 +9365,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TransformPatternIdentifiers_Static{PyType_FromSpec(&type_spec_TransformPatternIdentifiers_Static)};
+    py::pyobj_handle TransformPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TransformPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TransformPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_TransformPatternIdentifiers_Static, TransformPatternIdentifiers_Static_bases.get())};
     if (!type_TransformPatternIdentifiers_Static)
     {
         return nullptr;
@@ -9251,7 +9383,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ValuePatternIdentifiers_Static{PyType_FromSpec(&type_spec_ValuePatternIdentifiers_Static)};
+    py::pyobj_handle ValuePatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ValuePatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ValuePatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_ValuePatternIdentifiers_Static, ValuePatternIdentifiers_Static_bases.get())};
     if (!type_ValuePatternIdentifiers_Static)
     {
         return nullptr;
@@ -9263,7 +9401,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_WindowPatternIdentifiers_Static{PyType_FromSpec(&type_spec_WindowPatternIdentifiers_Static)};
+    py::pyobj_handle WindowPatternIdentifiers_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WindowPatternIdentifiers_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WindowPatternIdentifiers_Static{PyType_FromSpecWithBases(&type_spec_WindowPatternIdentifiers_Static, WindowPatternIdentifiers_Static_bases.get())};
     if (!type_WindowPatternIdentifiers_Static)
     {
         return nullptr;

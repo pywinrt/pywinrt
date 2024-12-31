@@ -17,7 +17,7 @@ import winrt.windows.storage.streams as windows_storage_streams
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ContactPartnerProvisioningManager_Static(type):
+class ContactPartnerProvisioningManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager::AssociateNetworkAccountAsync(Windows.Phone.PersonalInformation.ContactStore,System.String,System.String)
     def associate_network_account_async(cls, store: windows_phone_personalinformation.ContactStore, network_name: str, network_account_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Phone.PersonalInformation.Provisioning.ContactPartnerProvisioningManager::AssociateSocialNetworkAccountAsync(Windows.Phone.PersonalInformation.ContactStore,System.String,System.String)
@@ -30,7 +30,7 @@ class ContactPartnerProvisioningManager(winrt.system.Object, metaclass=ContactPa
     pass
 
 @typing.final
-class MessagePartnerProvisioningManager_Static(type):
+class MessagePartnerProvisioningManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager::ImportMmsToSystemAsync(System.Boolean,System.Boolean,System.String,System.String,Windows.Foundation.Collections.IVectorView`1<System.String>,Windows.Foundation.DateTime,Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Collections.IMapView`2<System.String,System.Object>>)
     def import_mms_to_system_async(cls, incoming: bool, read: bool, subject: str, sender: str, recipients: typing.Sequence[str], delivery_time: datetime.datetime, attachments: typing.Sequence[typing.Mapping[str, winrt.system.Object]], /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Phone.PersonalInformation.Provisioning.MessagePartnerProvisioningManager::ImportSmsToSystemAsync(System.Boolean,System.Boolean,System.String,System.String,Windows.Foundation.Collections.IVectorView`1<System.String>,Windows.Foundation.DateTime)

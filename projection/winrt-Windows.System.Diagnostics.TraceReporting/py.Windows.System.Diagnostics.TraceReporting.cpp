@@ -814,6 +814,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_tracereporting(void) noe
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -827,7 +833,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_tracereporting(void) noe
         return nullptr;
     }
 
-    py::pyobj_handle type_PlatformDiagnosticActions_Static{PyType_FromSpec(&type_spec_PlatformDiagnosticActions_Static)};
+    py::pyobj_handle PlatformDiagnosticActions_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PlatformDiagnosticActions_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PlatformDiagnosticActions_Static{PyType_FromSpecWithBases(&type_spec_PlatformDiagnosticActions_Static, PlatformDiagnosticActions_Static_bases.get())};
     if (!type_PlatformDiagnosticActions_Static)
     {
         return nullptr;
@@ -839,13 +851,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_tracereporting(void) noe
         return nullptr;
     }
 
-    py::pytype_handle PlatformDiagnosticTraceInfo_type{py::register_python_type(module.get(), &type_spec_PlatformDiagnosticTraceInfo, object_bases.get(), nullptr)};
+    py::pytype_handle PlatformDiagnosticTraceInfo_type{py::register_python_type(module.get(), &type_spec_PlatformDiagnosticTraceInfo, object_bases.get(), inspectable_meta_type)};
     if (!PlatformDiagnosticTraceInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlatformDiagnosticTraceRuntimeInfo_type{py::register_python_type(module.get(), &type_spec_PlatformDiagnosticTraceRuntimeInfo, object_bases.get(), nullptr)};
+    py::pytype_handle PlatformDiagnosticTraceRuntimeInfo_type{py::register_python_type(module.get(), &type_spec_PlatformDiagnosticTraceRuntimeInfo, object_bases.get(), inspectable_meta_type)};
     if (!PlatformDiagnosticTraceRuntimeInfo_type)
     {
         return nullptr;

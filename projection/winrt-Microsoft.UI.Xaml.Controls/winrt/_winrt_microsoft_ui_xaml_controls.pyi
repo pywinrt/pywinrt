@@ -3625,7 +3625,7 @@ class CoreWebView2InitializedEventArgs(winrt.system.Object):
     @_property
     def exception(self) -> windows_foundation.HResult: ...
 
-class DataTemplateSelector_Static(type):
+class DataTemplateSelector_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class DataTemplateSelector(winrt.system.Object, microsoft_ui_xaml.IElementFactory, metaclass=DataTemplateSelector_Static):
@@ -4495,7 +4495,7 @@ class GroupItem_Static(ContentControl_Static):
 class GroupItem(ContentControl, metaclass=GroupItem_Static):
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
-class GroupStyle_Static(type):
+class GroupStyle_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class GroupStyle(winrt.system.Object, microsoft_ui_xaml_data.INotifyPropertyChanged, metaclass=GroupStyle_Static):
@@ -4556,7 +4556,7 @@ class GroupStyle(winrt.system.Object, microsoft_ui_xaml_data.INotifyPropertyChan
     @typing.final
     def container_style(self, value: microsoft_ui_xaml.Style) -> None: ...
 
-class GroupStyleSelector_Static(type):
+class GroupStyleSelector_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class GroupStyleSelector(winrt.system.Object, metaclass=GroupStyleSelector_Static):
@@ -5163,7 +5163,7 @@ class InfoBar(Control, metaclass=InfoBar_Static):
     @typing.final
     def template_settings(self) -> InfoBarTemplateSettings: ...
 
-class InfoBarClosedEventArgs_Static(type):
+class InfoBarClosedEventArgs_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class InfoBarClosedEventArgs(winrt.system.Object, metaclass=InfoBarClosedEventArgs_Static):
@@ -5172,7 +5172,7 @@ class InfoBarClosedEventArgs(winrt.system.Object, metaclass=InfoBarClosedEventAr
     @typing.final
     def reason(self) -> InfoBarCloseReason: ...
 
-class InfoBarClosingEventArgs_Static(type):
+class InfoBarClosingEventArgs_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class InfoBarClosingEventArgs(winrt.system.Object, metaclass=InfoBarClosingEventArgs_Static):
@@ -5303,7 +5303,7 @@ class ItemCollectionTransitionProgress(winrt.system.Object):
     @_property
     def transition(self) -> ItemCollectionTransition: ...
 
-class ItemCollectionTransitionProvider_Static(type):
+class ItemCollectionTransitionProvider_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ItemCollectionTransitionProvider(winrt.system.Object, metaclass=ItemCollectionTransitionProvider_Static):
@@ -5821,7 +5821,7 @@ class ItemsRepeaterScrollHost(microsoft_ui_xaml.FrameworkElement):
     @_property
     def current_anchor(self) -> microsoft_ui_xaml.UIElement: ...
 
-class ItemsSourceView_Static(type):
+class ItemsSourceView_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ItemsSourceView(winrt.system.Object, microsoft_ui_xaml_interop.INotifyCollectionChanged, metaclass=ItemsSourceView_Static):
@@ -6398,7 +6398,7 @@ class ListViewHeaderItem(ListViewBaseHeaderItem, metaclass=ListViewHeaderItem_St
     def __new__(cls: typing.Type[Self]) -> Self: ...
 
 @typing.final
-class ListViewPersistenceHelper_Static(type):
+class ListViewPersistenceHelper_Static(winrt._winrt.IInspectable_Static):
     # System.String Microsoft.UI.Xaml.Controls.ListViewPersistenceHelper::GetRelativeScrollPosition(Microsoft.UI.Xaml.Controls.ListViewBase,Microsoft.UI.Xaml.Controls.ListViewItemToKeyHandler)
     def get_relative_scroll_position(cls, list_view_base: ListViewBase, item_to_key_handler: ListViewItemToKeyHandler, /) -> str: ...
     # Windows.Foundation.IAsyncAction Microsoft.UI.Xaml.Controls.ListViewPersistenceHelper::SetRelativeScrollPositionAsync(Microsoft.UI.Xaml.Controls.ListViewBase,System.String,Microsoft.UI.Xaml.Controls.ListViewKeyToItemHandler)
@@ -6965,7 +6965,7 @@ class MediaTransportControls(Control, metaclass=MediaTransportControls_Static):
     def fast_play_fallback_behaviour(self, value: microsoft_ui_xaml_media.FastPlayFallbackBehaviour) -> None: ...
 
 @typing.final
-class MediaTransportControlsHelper_Static(type):
+class MediaTransportControlsHelper_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IReference`1<System.Int32> Microsoft.UI.Xaml.Controls.MediaTransportControlsHelper::GetDropoutOrder(Microsoft.UI.Xaml.UIElement)
     def get_dropout_order(cls, element: microsoft_ui_xaml.UIElement, /) -> typing.Optional[winrt.system.Int32]: ...
     # System.Void Microsoft.UI.Xaml.Controls.MediaTransportControlsHelper::SetDropoutOrder(Microsoft.UI.Xaml.UIElement,Windows.Foundation.IReference`1<System.Int32>)
@@ -11688,7 +11688,7 @@ class ScrollingScrollCompletedEventArgs(winrt.system.Object):
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
 
-class ScrollingScrollOptions_Static(type):
+class ScrollingScrollOptions_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ScrollingScrollOptions(winrt.system.Object, metaclass=ScrollingScrollOptions_Static):
@@ -11738,7 +11738,7 @@ class ScrollingZoomCompletedEventArgs(winrt.system.Object):
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
 
-class ScrollingZoomOptions_Static(type):
+class ScrollingZoomOptions_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ScrollingZoomOptions(winrt.system.Object, metaclass=ScrollingZoomOptions_Static):
@@ -11761,7 +11761,7 @@ class ScrollingZoomOptions(winrt.system.Object, metaclass=ScrollingZoomOptions_S
     @typing.final
     def animation_mode(self, value: ScrollingAnimationMode) -> None: ...
 
-class SectionsInViewChangedEventArgs_Static(type):
+class SectionsInViewChangedEventArgs_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class SectionsInViewChangedEventArgs(winrt.system.Object, metaclass=SectionsInViewChangedEventArgs_Static):
@@ -12288,7 +12288,7 @@ class StackPanel(Panel, IInsertionPanel, microsoft_ui_xaml_controls_primitives.I
     @typing.final
     def are_vertical_snap_points_regular(self) -> bool: ...
 
-class StyleSelector_Static(type):
+class StyleSelector_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class StyleSelector(winrt.system.Object, metaclass=StyleSelector_Static):
@@ -14463,7 +14463,7 @@ class ToolTip(ContentControl, metaclass=ToolTip_Static):
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.ToolTipTemplateSettings: ...
 
 @typing.final
-class ToolTipService_Static(type):
+class ToolTipService_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.UI.Xaml.Controls.Primitives.PlacementMode Microsoft.UI.Xaml.Controls.ToolTipService::GetPlacement(Microsoft.UI.Xaml.DependencyObject)
     def get_placement(cls, element: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml_controls_primitives.PlacementMode: ...
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ToolTipService::GetPlacementTarget(Microsoft.UI.Xaml.DependencyObject)

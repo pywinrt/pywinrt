@@ -26946,6 +26946,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -26959,37 +26965,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DtdEntity_type{py::register_python_type(module.get(), &type_spec_DtdEntity, object_bases.get(), nullptr)};
+    py::pytype_handle DtdEntity_type{py::register_python_type(module.get(), &type_spec_DtdEntity, object_bases.get(), inspectable_meta_type)};
     if (!DtdEntity_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DtdNotation_type{py::register_python_type(module.get(), &type_spec_DtdNotation, object_bases.get(), nullptr)};
+    py::pytype_handle DtdNotation_type{py::register_python_type(module.get(), &type_spec_DtdNotation, object_bases.get(), inspectable_meta_type)};
     if (!DtdNotation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlAttribute_type{py::register_python_type(module.get(), &type_spec_XmlAttribute, object_bases.get(), nullptr)};
+    py::pytype_handle XmlAttribute_type{py::register_python_type(module.get(), &type_spec_XmlAttribute, object_bases.get(), inspectable_meta_type)};
     if (!XmlAttribute_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlCDataSection_type{py::register_python_type(module.get(), &type_spec_XmlCDataSection, object_bases.get(), nullptr)};
+    py::pytype_handle XmlCDataSection_type{py::register_python_type(module.get(), &type_spec_XmlCDataSection, object_bases.get(), inspectable_meta_type)};
     if (!XmlCDataSection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlComment_type{py::register_python_type(module.get(), &type_spec_XmlComment, object_bases.get(), nullptr)};
+    py::pytype_handle XmlComment_type{py::register_python_type(module.get(), &type_spec_XmlComment, object_bases.get(), inspectable_meta_type)};
     if (!XmlComment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_XmlDocument_Static{PyType_FromSpec(&type_spec_XmlDocument_Static)};
+    py::pyobj_handle XmlDocument_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!XmlDocument_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XmlDocument_Static{PyType_FromSpecWithBases(&type_spec_XmlDocument_Static, XmlDocument_Static_bases.get())};
     if (!type_XmlDocument_Static)
     {
         return nullptr;
@@ -27001,61 +27013,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle XmlDocumentFragment_type{py::register_python_type(module.get(), &type_spec_XmlDocumentFragment, object_bases.get(), nullptr)};
+    py::pytype_handle XmlDocumentFragment_type{py::register_python_type(module.get(), &type_spec_XmlDocumentFragment, object_bases.get(), inspectable_meta_type)};
     if (!XmlDocumentFragment_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlDocumentType_type{py::register_python_type(module.get(), &type_spec_XmlDocumentType, object_bases.get(), nullptr)};
+    py::pytype_handle XmlDocumentType_type{py::register_python_type(module.get(), &type_spec_XmlDocumentType, object_bases.get(), inspectable_meta_type)};
     if (!XmlDocumentType_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlDomImplementation_type{py::register_python_type(module.get(), &type_spec_XmlDomImplementation, object_bases.get(), nullptr)};
+    py::pytype_handle XmlDomImplementation_type{py::register_python_type(module.get(), &type_spec_XmlDomImplementation, object_bases.get(), inspectable_meta_type)};
     if (!XmlDomImplementation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlElement_type{py::register_python_type(module.get(), &type_spec_XmlElement, object_bases.get(), nullptr)};
+    py::pytype_handle XmlElement_type{py::register_python_type(module.get(), &type_spec_XmlElement, object_bases.get(), inspectable_meta_type)};
     if (!XmlElement_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlEntityReference_type{py::register_python_type(module.get(), &type_spec_XmlEntityReference, object_bases.get(), nullptr)};
+    py::pytype_handle XmlEntityReference_type{py::register_python_type(module.get(), &type_spec_XmlEntityReference, object_bases.get(), inspectable_meta_type)};
     if (!XmlEntityReference_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlLoadSettings_type{py::register_python_type(module.get(), &type_spec_XmlLoadSettings, object_bases.get(), nullptr)};
+    py::pytype_handle XmlLoadSettings_type{py::register_python_type(module.get(), &type_spec_XmlLoadSettings, object_bases.get(), inspectable_meta_type)};
     if (!XmlLoadSettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlNamedNodeMap_type{py::register_python_type(module.get(), &type_spec_XmlNamedNodeMap, object_bases.get(), nullptr)};
+    py::pytype_handle XmlNamedNodeMap_type{py::register_python_type(module.get(), &type_spec_XmlNamedNodeMap, object_bases.get(), inspectable_meta_type)};
     if (!XmlNamedNodeMap_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlNodeList_type{py::register_python_type(module.get(), &type_spec_XmlNodeList, object_bases.get(), nullptr)};
+    py::pytype_handle XmlNodeList_type{py::register_python_type(module.get(), &type_spec_XmlNodeList, object_bases.get(), inspectable_meta_type)};
     if (!XmlNodeList_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlProcessingInstruction_type{py::register_python_type(module.get(), &type_spec_XmlProcessingInstruction, object_bases.get(), nullptr)};
+    py::pytype_handle XmlProcessingInstruction_type{py::register_python_type(module.get(), &type_spec_XmlProcessingInstruction, object_bases.get(), inspectable_meta_type)};
     if (!XmlProcessingInstruction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle XmlText_type{py::register_python_type(module.get(), &type_spec_XmlText, object_bases.get(), nullptr)};
+    py::pytype_handle XmlText_type{py::register_python_type(module.get(), &type_spec_XmlText, object_bases.get(), inspectable_meta_type)};
     if (!XmlText_type)
     {
         return nullptr;
@@ -27067,7 +27079,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIXmlCharacterData_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlCharacterData, nullptr))};
+    py::pytype_handle ImplementsIXmlCharacterData_type{py::register_python_type(module.get(), &type_spec_ImplementsIXmlCharacterData, nullptr, inspectable_meta_type)};
     if (!ImplementsIXmlCharacterData_type)
     {
         return nullptr;
@@ -27084,7 +27096,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIXmlNode_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlNode, nullptr))};
+    py::pytype_handle ImplementsIXmlNode_type{py::register_python_type(module.get(), &type_spec_ImplementsIXmlNode, nullptr, inspectable_meta_type)};
     if (!ImplementsIXmlNode_type)
     {
         return nullptr;
@@ -27101,7 +27113,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIXmlNodeSelector_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlNodeSelector, nullptr))};
+    py::pytype_handle ImplementsIXmlNodeSelector_type{py::register_python_type(module.get(), &type_spec_ImplementsIXmlNodeSelector, nullptr, inspectable_meta_type)};
     if (!ImplementsIXmlNodeSelector_type)
     {
         return nullptr;
@@ -27118,7 +27130,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIXmlNodeSerializer_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlNodeSerializer, nullptr))};
+    py::pytype_handle ImplementsIXmlNodeSerializer_type{py::register_python_type(module.get(), &type_spec_ImplementsIXmlNodeSerializer, nullptr, inspectable_meta_type)};
     if (!ImplementsIXmlNodeSerializer_type)
     {
         return nullptr;
@@ -27135,7 +27147,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIXmlText_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIXmlText, nullptr))};
+    py::pytype_handle ImplementsIXmlText_type{py::register_python_type(module.get(), &type_spec_ImplementsIXmlText, nullptr, inspectable_meta_type)};
     if (!ImplementsIXmlText_type)
     {
         return nullptr;

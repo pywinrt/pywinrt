@@ -25388,6 +25388,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -25521,13 +25527,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapActualCameraChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapActualCameraChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapActualCameraChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapActualCameraChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapActualCameraChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapActualCameraChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_MapActualCameraChangingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapActualCameraChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_MapActualCameraChangingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapActualCameraChangingEventArgs_type)
     {
         return nullptr;
@@ -25587,13 +25593,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapCamera_type{py::register_python_type(module.get(), &type_spec_MapCamera, MapCamera_bases.get(), nullptr)};
+    py::pytype_handle MapCamera_type{py::register_python_type(module.get(), &type_spec_MapCamera, MapCamera_bases.get(), inspectable_meta_type)};
     if (!MapCamera_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapContextRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapContextRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapContextRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapContextRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapContextRequestedEventArgs_type)
     {
         return nullptr;
@@ -25623,25 +25629,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapControlBusinessLandmarkClickEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkClickEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapControlBusinessLandmarkClickEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkClickEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapControlBusinessLandmarkClickEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapControlBusinessLandmarkPointerEnteredEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapControlBusinessLandmarkPointerEnteredEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapControlBusinessLandmarkPointerEnteredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapControlBusinessLandmarkPointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapControlBusinessLandmarkPointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapControlBusinessLandmarkPointerExitedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapControlBusinessLandmarkRightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapControlBusinessLandmarkRightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapControlBusinessLandmarkRightTappedEventArgs_type)
     {
         return nullptr;
@@ -25671,25 +25677,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapControlTransitFeatureClickEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlTransitFeatureClickEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapControlTransitFeatureClickEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlTransitFeatureClickEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapControlTransitFeatureClickEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapControlTransitFeaturePointerEnteredEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapControlTransitFeaturePointerEnteredEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapControlTransitFeaturePointerEnteredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapControlTransitFeaturePointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlTransitFeaturePointerExitedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapControlTransitFeaturePointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlTransitFeaturePointerExitedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapControlTransitFeaturePointerExitedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapControlTransitFeatureRightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlTransitFeatureRightTappedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapControlTransitFeatureRightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapControlTransitFeatureRightTappedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapControlTransitFeatureRightTappedEventArgs_type)
     {
         return nullptr;
@@ -25719,7 +25725,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapCustomExperienceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapCustomExperienceChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapCustomExperienceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapCustomExperienceChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapCustomExperienceChangedEventArgs_type)
     {
         return nullptr;
@@ -25749,19 +25755,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapElementClickEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementClickEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapElementClickEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementClickEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapElementClickEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapElementPointerEnteredEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementPointerEnteredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapElementPointerEnteredEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementPointerEnteredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapElementPointerEnteredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapElementPointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementPointerExitedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapElementPointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementPointerExitedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapElementPointerExitedEventArgs_type)
     {
         return nullptr;
@@ -25815,25 +25821,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapElementsLayerClickEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementsLayerClickEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapElementsLayerClickEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementsLayerClickEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapElementsLayerClickEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapElementsLayerContextRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementsLayerContextRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapElementsLayerContextRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementsLayerContextRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapElementsLayerContextRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapElementsLayerPointerEnteredEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementsLayerPointerEnteredEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapElementsLayerPointerEnteredEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementsLayerPointerEnteredEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapElementsLayerPointerEnteredEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapElementsLayerPointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementsLayerPointerExitedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapElementsLayerPointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementsLayerPointerExitedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapElementsLayerPointerExitedEventArgs_type)
     {
         return nullptr;
@@ -25869,7 +25875,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapInputEventArgs_type{py::register_python_type(module.get(), &type_spec_MapInputEventArgs, MapInputEventArgs_bases.get(), nullptr)};
+    py::pytype_handle MapInputEventArgs_type{py::register_python_type(module.get(), &type_spec_MapInputEventArgs, MapInputEventArgs_bases.get(), inspectable_meta_type)};
     if (!MapInputEventArgs_type)
     {
         return nullptr;
@@ -25971,7 +25977,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapRightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapRightTappedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapRightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapRightTappedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapRightTappedEventArgs_type)
     {
         return nullptr;
@@ -26049,7 +26055,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapStyleSheetEntries_Static{PyType_FromSpec(&type_spec_MapStyleSheetEntries_Static)};
+    py::pyobj_handle MapStyleSheetEntries_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MapStyleSheetEntries_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapStyleSheetEntries_Static{PyType_FromSpecWithBases(&type_spec_MapStyleSheetEntries_Static, MapStyleSheetEntries_Static_bases.get())};
     if (!type_MapStyleSheetEntries_Static)
     {
         return nullptr;
@@ -26061,7 +26073,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapStyleSheetEntryStates_Static{PyType_FromSpec(&type_spec_MapStyleSheetEntryStates_Static)};
+    py::pyobj_handle MapStyleSheetEntryStates_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MapStyleSheetEntryStates_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapStyleSheetEntryStates_Static{PyType_FromSpecWithBases(&type_spec_MapStyleSheetEntryStates_Static, MapStyleSheetEntryStates_Static_bases.get())};
     if (!type_MapStyleSheetEntryStates_Static)
     {
         return nullptr;
@@ -26073,25 +26091,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapTargetCameraChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapTargetCameraChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapTargetCameraChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapTargetCameraChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapTargetCameraChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapTileBitmapRequest_type{py::register_python_type(module.get(), &type_spec_MapTileBitmapRequest, object_bases.get(), nullptr)};
+    py::pytype_handle MapTileBitmapRequest_type{py::register_python_type(module.get(), &type_spec_MapTileBitmapRequest, object_bases.get(), inspectable_meta_type)};
     if (!MapTileBitmapRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapTileBitmapRequestDeferral_type{py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle MapTileBitmapRequestDeferral_type{py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestDeferral, object_bases.get(), inspectable_meta_type)};
     if (!MapTileBitmapRequestDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapTileBitmapRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapTileBitmapRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapTileBitmapRequestedEventArgs_type)
     {
         return nullptr;
@@ -26121,19 +26139,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapTileUriRequest_type{py::register_python_type(module.get(), &type_spec_MapTileUriRequest, object_bases.get(), nullptr)};
+    py::pytype_handle MapTileUriRequest_type{py::register_python_type(module.get(), &type_spec_MapTileUriRequest, object_bases.get(), inspectable_meta_type)};
     if (!MapTileUriRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapTileUriRequestDeferral_type{py::register_python_type(module.get(), &type_spec_MapTileUriRequestDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle MapTileUriRequestDeferral_type{py::register_python_type(module.get(), &type_spec_MapTileUriRequestDeferral, object_bases.get(), inspectable_meta_type)};
     if (!MapTileUriRequestDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapTileUriRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapTileUriRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MapTileUriRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapTileUriRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MapTileUriRequestedEventArgs_type)
     {
         return nullptr;
@@ -26145,7 +26163,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StreetsideExperience_type{py::register_python_type(module.get(), &type_spec_StreetsideExperience, StreetsideExperience_bases.get(), nullptr)};
+    py::pytype_handle StreetsideExperience_type{py::register_python_type(module.get(), &type_spec_StreetsideExperience, StreetsideExperience_bases.get(), inspectable_meta_type)};
     if (!StreetsideExperience_type)
     {
         return nullptr;

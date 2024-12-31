@@ -225,7 +225,7 @@ class InjectedInputTouchInfo(winrt.system.Object):
     def contact(self, value: InjectedInputRectangle) -> None: ...
 
 @typing.final
-class InputInjector_Static(type):
+class InputInjector_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Input.Preview.Injection.InputInjector Windows.UI.Input.Preview.Injection.InputInjector::TryCreate()
     def try_create(cls) -> typing.Optional[InputInjector]: ...
     # Windows.UI.Input.Preview.Injection.InputInjector Windows.UI.Input.Preview.Injection.InputInjector::TryCreateForAppBroadcastOnly()

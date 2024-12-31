@@ -4029,6 +4029,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4042,31 +4048,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WalletBarcode_type{py::register_python_type(module.get(), &type_spec_WalletBarcode, object_bases.get(), nullptr)};
+    py::pytype_handle WalletBarcode_type{py::register_python_type(module.get(), &type_spec_WalletBarcode, object_bases.get(), inspectable_meta_type)};
     if (!WalletBarcode_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WalletItem_type{py::register_python_type(module.get(), &type_spec_WalletItem, object_bases.get(), nullptr)};
+    py::pytype_handle WalletItem_type{py::register_python_type(module.get(), &type_spec_WalletItem, object_bases.get(), inspectable_meta_type)};
     if (!WalletItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WalletItemCustomProperty_type{py::register_python_type(module.get(), &type_spec_WalletItemCustomProperty, object_bases.get(), nullptr)};
+    py::pytype_handle WalletItemCustomProperty_type{py::register_python_type(module.get(), &type_spec_WalletItemCustomProperty, object_bases.get(), inspectable_meta_type)};
     if (!WalletItemCustomProperty_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WalletItemStore_type{py::register_python_type(module.get(), &type_spec_WalletItemStore, object_bases.get(), nullptr)};
+    py::pytype_handle WalletItemStore_type{py::register_python_type(module.get(), &type_spec_WalletItemStore, object_bases.get(), inspectable_meta_type)};
     if (!WalletItemStore_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_WalletManager_Static{PyType_FromSpec(&type_spec_WalletManager_Static)};
+    py::pyobj_handle WalletManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WalletManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WalletManager_Static{PyType_FromSpecWithBases(&type_spec_WalletManager_Static, WalletManager_Static_bases.get())};
     if (!type_WalletManager_Static)
     {
         return nullptr;
@@ -4078,19 +4090,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WalletRelevantLocation_type{py::register_python_type(module.get(), &type_spec_WalletRelevantLocation, object_bases.get(), nullptr)};
+    py::pytype_handle WalletRelevantLocation_type{py::register_python_type(module.get(), &type_spec_WalletRelevantLocation, object_bases.get(), inspectable_meta_type)};
     if (!WalletRelevantLocation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WalletTransaction_type{py::register_python_type(module.get(), &type_spec_WalletTransaction, object_bases.get(), nullptr)};
+    py::pytype_handle WalletTransaction_type{py::register_python_type(module.get(), &type_spec_WalletTransaction, object_bases.get(), inspectable_meta_type)};
     if (!WalletTransaction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WalletVerb_type{py::register_python_type(module.get(), &type_spec_WalletVerb, object_bases.get(), nullptr)};
+    py::pytype_handle WalletVerb_type{py::register_python_type(module.get(), &type_spec_WalletVerb, object_bases.get(), inspectable_meta_type)};
     if (!WalletVerb_type)
     {
         return nullptr;

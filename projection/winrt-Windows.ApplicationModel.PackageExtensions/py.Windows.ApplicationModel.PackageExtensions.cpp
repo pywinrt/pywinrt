@@ -1702,6 +1702,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_packageextensions(void) no
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1715,13 +1721,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_packageextensions(void) no
         return nullptr;
     }
 
-    py::pytype_handle PackageExtension_type{py::register_python_type(module.get(), &type_spec_PackageExtension, object_bases.get(), nullptr)};
+    py::pytype_handle PackageExtension_type{py::register_python_type(module.get(), &type_spec_PackageExtension, object_bases.get(), inspectable_meta_type)};
     if (!PackageExtension_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PackageExtensionCatalog_Static{PyType_FromSpec(&type_spec_PackageExtensionCatalog_Static)};
+    py::pyobj_handle PackageExtensionCatalog_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PackageExtensionCatalog_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PackageExtensionCatalog_Static{PyType_FromSpecWithBases(&type_spec_PackageExtensionCatalog_Static, PackageExtensionCatalog_Static_bases.get())};
     if (!type_PackageExtensionCatalog_Static)
     {
         return nullptr;
@@ -1733,31 +1745,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_packageextensions(void) no
         return nullptr;
     }
 
-    py::pytype_handle PackageExtensionPackageInstalledEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageInstalledEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageExtensionPackageInstalledEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageInstalledEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageExtensionPackageInstalledEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageExtensionPackageStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageStatusChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageExtensionPackageStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageStatusChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageExtensionPackageStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageExtensionPackageUninstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageUninstallingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageExtensionPackageUninstallingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageUninstallingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageExtensionPackageUninstallingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageExtensionPackageUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageExtensionPackageUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageExtensionPackageUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PackageExtensionPackageUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageUpdatingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PackageExtensionPackageUpdatingEventArgs_type{py::register_python_type(module.get(), &type_spec_PackageExtensionPackageUpdatingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PackageExtensionPackageUpdatingEventArgs_type)
     {
         return nullptr;

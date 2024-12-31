@@ -62,7 +62,7 @@ class AppBroadcastingStatusDetails(winrt.system.Object):
     def is_gpu_constrained(self) -> bool: ...
 
 @typing.final
-class AppBroadcastingUI_Static(type):
+class AppBroadcastingUI_Static(winrt._winrt.IInspectable_Static):
     # Windows.Media.AppBroadcasting.AppBroadcastingUI Windows.Media.AppBroadcasting.AppBroadcastingUI::GetDefault()
     def get_default(cls) -> AppBroadcastingUI: ...
     # Windows.Media.AppBroadcasting.AppBroadcastingUI Windows.Media.AppBroadcasting.AppBroadcastingUI::GetForUser(Windows.System.User)

@@ -543,6 +543,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -556,13 +562,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_threading_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PreallocatedWorkItem_type{py::register_python_type(module.get(), &type_spec_PreallocatedWorkItem, object_bases.get(), nullptr)};
+    py::pytype_handle PreallocatedWorkItem_type{py::register_python_type(module.get(), &type_spec_PreallocatedWorkItem, object_bases.get(), inspectable_meta_type)};
     if (!PreallocatedWorkItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SignalNotifier_Static{PyType_FromSpec(&type_spec_SignalNotifier_Static)};
+    py::pyobj_handle SignalNotifier_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!SignalNotifier_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SignalNotifier_Static{PyType_FromSpecWithBases(&type_spec_SignalNotifier_Static, SignalNotifier_Static_bases.get())};
     if (!type_SignalNotifier_Static)
     {
         return nullptr;

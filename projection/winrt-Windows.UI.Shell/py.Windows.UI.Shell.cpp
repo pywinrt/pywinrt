@@ -5282,6 +5282,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5295,7 +5301,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AdaptiveCardBuilder_Static{PyType_FromSpec(&type_spec_AdaptiveCardBuilder_Static)};
+    py::pyobj_handle AdaptiveCardBuilder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AdaptiveCardBuilder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AdaptiveCardBuilder_Static{PyType_FromSpecWithBases(&type_spec_AdaptiveCardBuilder_Static, AdaptiveCardBuilder_Static_bases.get())};
     if (!type_AdaptiveCardBuilder_Static)
     {
         return nullptr;
@@ -5307,13 +5319,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FocusSession_type{py::register_python_type(module.get(), &type_spec_FocusSession, object_bases.get(), nullptr)};
+    py::pytype_handle FocusSession_type{py::register_python_type(module.get(), &type_spec_FocusSession, object_bases.get(), inspectable_meta_type)};
     if (!FocusSession_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FocusSessionManager_Static{PyType_FromSpec(&type_spec_FocusSessionManager_Static)};
+    py::pyobj_handle FocusSessionManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FocusSessionManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FocusSessionManager_Static{PyType_FromSpecWithBases(&type_spec_FocusSessionManager_Static, FocusSessionManager_Static_bases.get())};
     if (!type_FocusSessionManager_Static)
     {
         return nullptr;
@@ -5325,19 +5343,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SecurityAppManager_type{py::register_python_type(module.get(), &type_spec_SecurityAppManager, object_bases.get(), nullptr)};
+    py::pytype_handle SecurityAppManager_type{py::register_python_type(module.get(), &type_spec_SecurityAppManager, object_bases.get(), inspectable_meta_type)};
     if (!SecurityAppManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShareWindowCommandEventArgs_type{py::register_python_type(module.get(), &type_spec_ShareWindowCommandEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ShareWindowCommandEventArgs_type{py::register_python_type(module.get(), &type_spec_ShareWindowCommandEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ShareWindowCommandEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ShareWindowCommandSource_Static{PyType_FromSpec(&type_spec_ShareWindowCommandSource_Static)};
+    py::pyobj_handle ShareWindowCommandSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ShareWindowCommandSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ShareWindowCommandSource_Static{PyType_FromSpecWithBases(&type_spec_ShareWindowCommandSource_Static, ShareWindowCommandSource_Static_bases.get())};
     if (!type_ShareWindowCommandSource_Static)
     {
         return nullptr;
@@ -5349,7 +5373,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TaskbarManager_Static{PyType_FromSpec(&type_spec_TaskbarManager_Static)};
+    py::pyobj_handle TaskbarManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!TaskbarManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TaskbarManager_Static{PyType_FromSpecWithBases(&type_spec_TaskbarManager_Static, TaskbarManager_Static_bases.get())};
     if (!type_TaskbarManager_Static)
     {
         return nullptr;
@@ -5361,31 +5391,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WindowTab_type{py::register_python_type(module.get(), &type_spec_WindowTab, object_bases.get(), nullptr)};
+    py::pytype_handle WindowTab_type{py::register_python_type(module.get(), &type_spec_WindowTab, object_bases.get(), inspectable_meta_type)};
     if (!WindowTab_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowTabCloseRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabCloseRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WindowTabCloseRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabCloseRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowTabCloseRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowTabCollection_type{py::register_python_type(module.get(), &type_spec_WindowTabCollection, object_bases.get(), nullptr)};
+    py::pytype_handle WindowTabCollection_type{py::register_python_type(module.get(), &type_spec_WindowTabCollection, object_bases.get(), inspectable_meta_type)};
     if (!WindowTabCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowTabGroup_type{py::register_python_type(module.get(), &type_spec_WindowTabGroup, object_bases.get(), nullptr)};
+    py::pytype_handle WindowTabGroup_type{py::register_python_type(module.get(), &type_spec_WindowTabGroup, object_bases.get(), inspectable_meta_type)};
     if (!WindowTabGroup_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_WindowTabIcon_Static{PyType_FromSpec(&type_spec_WindowTabIcon_Static)};
+    py::pyobj_handle WindowTabIcon_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WindowTabIcon_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WindowTabIcon_Static{PyType_FromSpecWithBases(&type_spec_WindowTabIcon_Static, WindowTabIcon_Static_bases.get())};
     if (!type_WindowTabIcon_Static)
     {
         return nullptr;
@@ -5397,7 +5433,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_WindowTabManager_Static{PyType_FromSpec(&type_spec_WindowTabManager_Static)};
+    py::pyobj_handle WindowTabManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!WindowTabManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WindowTabManager_Static{PyType_FromSpecWithBases(&type_spec_WindowTabManager_Static, WindowTabManager_Static_bases.get())};
     if (!type_WindowTabManager_Static)
     {
         return nullptr;
@@ -5409,19 +5451,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle WindowTabSwitchRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabSwitchRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WindowTabSwitchRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabSwitchRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowTabSwitchRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowTabTearOutRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabTearOutRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WindowTabTearOutRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabTearOutRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowTabTearOutRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowTabThumbnailRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabThumbnailRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WindowTabThumbnailRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabThumbnailRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowTabThumbnailRequestedEventArgs_type)
     {
         return nullptr;
@@ -5433,7 +5475,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAdaptiveCard_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAdaptiveCard, nullptr))};
+    py::pytype_handle ImplementsIAdaptiveCard_type{py::register_python_type(module.get(), &type_spec_ImplementsIAdaptiveCard, nullptr, inspectable_meta_type)};
     if (!ImplementsIAdaptiveCard_type)
     {
         return nullptr;
@@ -5450,7 +5492,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAdaptiveCardBuilderStatics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAdaptiveCardBuilderStatics, nullptr))};
+    py::pytype_handle ImplementsIAdaptiveCardBuilderStatics_type{py::register_python_type(module.get(), &type_spec_ImplementsIAdaptiveCardBuilderStatics, nullptr, inspectable_meta_type)};
     if (!ImplementsIAdaptiveCardBuilderStatics_type)
     {
         return nullptr;

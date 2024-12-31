@@ -1949,6 +1949,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts_dataprovider(void
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1962,61 +1968,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts_dataprovider(void
         return nullptr;
     }
 
-    py::pytype_handle ContactDataProviderConnection_type{py::register_python_type(module.get(), &type_spec_ContactDataProviderConnection, object_bases.get(), nullptr)};
+    py::pytype_handle ContactDataProviderConnection_type{py::register_python_type(module.get(), &type_spec_ContactDataProviderConnection, object_bases.get(), inspectable_meta_type)};
     if (!ContactDataProviderConnection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactDataProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ContactDataProviderTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle ContactDataProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ContactDataProviderTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!ContactDataProviderTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactListCreateOrUpdateContactRequest_type{py::register_python_type(module.get(), &type_spec_ContactListCreateOrUpdateContactRequest, object_bases.get(), nullptr)};
+    py::pytype_handle ContactListCreateOrUpdateContactRequest_type{py::register_python_type(module.get(), &type_spec_ContactListCreateOrUpdateContactRequest, object_bases.get(), inspectable_meta_type)};
     if (!ContactListCreateOrUpdateContactRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactListCreateOrUpdateContactRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactListCreateOrUpdateContactRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ContactListCreateOrUpdateContactRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactListCreateOrUpdateContactRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ContactListCreateOrUpdateContactRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactListDeleteContactRequest_type{py::register_python_type(module.get(), &type_spec_ContactListDeleteContactRequest, object_bases.get(), nullptr)};
+    py::pytype_handle ContactListDeleteContactRequest_type{py::register_python_type(module.get(), &type_spec_ContactListDeleteContactRequest, object_bases.get(), inspectable_meta_type)};
     if (!ContactListDeleteContactRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactListDeleteContactRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactListDeleteContactRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ContactListDeleteContactRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactListDeleteContactRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ContactListDeleteContactRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactListServerSearchReadBatchRequest_type{py::register_python_type(module.get(), &type_spec_ContactListServerSearchReadBatchRequest, object_bases.get(), nullptr)};
+    py::pytype_handle ContactListServerSearchReadBatchRequest_type{py::register_python_type(module.get(), &type_spec_ContactListServerSearchReadBatchRequest, object_bases.get(), inspectable_meta_type)};
     if (!ContactListServerSearchReadBatchRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactListServerSearchReadBatchRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactListServerSearchReadBatchRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ContactListServerSearchReadBatchRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactListServerSearchReadBatchRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ContactListServerSearchReadBatchRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactListSyncManagerSyncRequest_type{py::register_python_type(module.get(), &type_spec_ContactListSyncManagerSyncRequest, object_bases.get(), nullptr)};
+    py::pytype_handle ContactListSyncManagerSyncRequest_type{py::register_python_type(module.get(), &type_spec_ContactListSyncManagerSyncRequest, object_bases.get(), inspectable_meta_type)};
     if (!ContactListSyncManagerSyncRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactListSyncManagerSyncRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactListSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ContactListSyncManagerSyncRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactListSyncManagerSyncRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ContactListSyncManagerSyncRequestEventArgs_type)
     {
         return nullptr;

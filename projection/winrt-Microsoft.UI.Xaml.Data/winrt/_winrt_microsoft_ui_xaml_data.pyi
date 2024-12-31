@@ -130,14 +130,14 @@ class BindingExpression(BindingExpressionBase, metaclass=BindingExpression_Stati
     @typing.final
     def parent_binding(self) -> Binding: ...
 
-class BindingExpressionBase_Static(type):
+class BindingExpressionBase_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class BindingExpressionBase(winrt.system.Object, metaclass=BindingExpressionBase_Static):
     pass
 
 @typing.final
-class BindingOperations_Static(type):
+class BindingOperations_Static(winrt._winrt.IInspectable_Static):
     # System.Void Microsoft.UI.Xaml.Data.BindingOperations::SetBinding(Microsoft.UI.Xaml.DependencyObject,Microsoft.UI.Xaml.DependencyProperty,Microsoft.UI.Xaml.Data.BindingBase)
     def set_binding(cls, target: microsoft_ui_xaml.DependencyObject, dp: microsoft_ui_xaml.DependencyProperty, binding: BindingBase, /) -> None: ...
 
@@ -185,7 +185,7 @@ class CollectionViewSource(microsoft_ui_xaml.DependencyObject, metaclass=Collect
     @_property
     def view(self) -> ICollectionView: ...
 
-class CurrentChangingEventArgs_Static(type):
+class CurrentChangingEventArgs_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class CurrentChangingEventArgs(winrt.system.Object, metaclass=CurrentChangingEventArgs_Static):
@@ -215,7 +215,7 @@ class DataErrorsChangedEventArgs(winrt.system.Object):
     @property_name.setter
     def property_name(self, value: str) -> None: ...
 
-class ItemIndexRange_Static(type):
+class ItemIndexRange_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
@@ -233,7 +233,7 @@ class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
     @typing.final
     def length(self) -> winrt.system.UInt32: ...
 
-class PropertyChangedEventArgs_Static(type):
+class PropertyChangedEventArgs_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class PropertyChangedEventArgs(winrt.system.Object, metaclass=PropertyChangedEventArgs_Static):

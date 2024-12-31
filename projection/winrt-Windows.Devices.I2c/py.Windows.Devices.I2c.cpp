@@ -1712,6 +1712,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1725,13 +1731,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle I2cConnectionSettings_type{py::register_python_type(module.get(), &type_spec_I2cConnectionSettings, object_bases.get(), nullptr)};
+    py::pytype_handle I2cConnectionSettings_type{py::register_python_type(module.get(), &type_spec_I2cConnectionSettings, object_bases.get(), inspectable_meta_type)};
     if (!I2cConnectionSettings_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_I2cController_Static{PyType_FromSpec(&type_spec_I2cController_Static)};
+    py::pyobj_handle I2cController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!I2cController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_I2cController_Static{PyType_FromSpecWithBases(&type_spec_I2cController_Static, I2cController_Static_bases.get())};
     if (!type_I2cController_Static)
     {
         return nullptr;
@@ -1743,7 +1755,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_I2cDevice_Static{PyType_FromSpec(&type_spec_I2cDevice_Static)};
+    py::pyobj_handle I2cDevice_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!I2cDevice_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_I2cDevice_Static{PyType_FromSpecWithBases(&type_spec_I2cDevice_Static, I2cDevice_Static_bases.get())};
     if (!type_I2cDevice_Static)
     {
         return nullptr;
@@ -1761,7 +1779,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsII2cDeviceStatics_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsII2cDeviceStatics, nullptr))};
+    py::pytype_handle ImplementsII2cDeviceStatics_type{py::register_python_type(module.get(), &type_spec_ImplementsII2cDeviceStatics, nullptr, inspectable_meta_type)};
     if (!ImplementsII2cDeviceStatics_type)
     {
         return nullptr;

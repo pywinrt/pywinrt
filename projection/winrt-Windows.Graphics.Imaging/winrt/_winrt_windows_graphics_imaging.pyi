@@ -70,7 +70,7 @@ class BitmapCodecInformation(winrt.system.Object):
     def mime_types(self) -> typing.Sequence[str]: ...
 
 @typing.final
-class BitmapDecoder_Static(type):
+class BitmapDecoder_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapDecoder> Windows.Graphics.Imaging.BitmapDecoder::CreateAsync(Windows.Storage.Streams.IRandomAccessStream)
     def create_async(cls, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[BitmapDecoder]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapDecoder> Windows.Graphics.Imaging.BitmapDecoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream)
@@ -161,7 +161,7 @@ class BitmapDecoder(winrt.system.Object, IBitmapFrameWithSoftwareBitmap, IBitmap
     def pixel_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class BitmapEncoder_Static(type):
+class BitmapEncoder_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateAsync(System.Guid,Windows.Storage.Streams.IRandomAccessStream)
     def create_async(cls, encoder_id: _uuid.UUID, stream: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncOperation[BitmapEncoder]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapEncoder> Windows.Graphics.Imaging.BitmapEncoder::CreateForInPlacePropertyEncodingAsync(Windows.Graphics.Imaging.BitmapDecoder)
@@ -413,7 +413,7 @@ class PixelDataProvider(winrt.system.Object):
     def detach_pixel_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
 
 @typing.final
-class SoftwareBitmap_Static(type):
+class SoftwareBitmap_Static(winrt._winrt.IInspectable_Static):
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::Convert(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapPixelFormat)
     def convert(cls, source: SoftwareBitmap, format: BitmapPixelFormat, /) -> SoftwareBitmap: ...
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Graphics.Imaging.SoftwareBitmap::Convert(Windows.Graphics.Imaging.SoftwareBitmap,Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode)

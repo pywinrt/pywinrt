@@ -1167,6 +1167,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1180,7 +1186,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GameBar_Static{PyType_FromSpec(&type_spec_GameBar_Static)};
+    py::pyobj_handle GameBar_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GameBar_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GameBar_Static{PyType_FromSpecWithBases(&type_spec_GameBar_Static, GameBar_Static_bases.get())};
     if (!type_GameBar_Static)
     {
         return nullptr;
@@ -1192,13 +1204,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GameChatMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_GameChatMessageReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GameChatMessageReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_GameChatMessageReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GameChatMessageReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GameChatOverlay_Static{PyType_FromSpec(&type_spec_GameChatOverlay_Static)};
+    py::pyobj_handle GameChatOverlay_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GameChatOverlay_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GameChatOverlay_Static{PyType_FromSpecWithBases(&type_spec_GameChatOverlay_Static, GameChatOverlay_Static_bases.get())};
     if (!type_GameChatOverlay_Static)
     {
         return nullptr;
@@ -1210,13 +1228,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GameChatOverlayMessageSource_type{py::register_python_type(module.get(), &type_spec_GameChatOverlayMessageSource, object_bases.get(), nullptr)};
+    py::pytype_handle GameChatOverlayMessageSource_type{py::register_python_type(module.get(), &type_spec_GameChatOverlayMessageSource, object_bases.get(), inspectable_meta_type)};
     if (!GameChatOverlayMessageSource_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GameUIProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_GameUIProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GameUIProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_GameUIProviderActivatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GameUIProviderActivatedEventArgs_type)
     {
         return nullptr;

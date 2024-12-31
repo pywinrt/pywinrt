@@ -1655,6 +1655,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_dispatching(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1668,13 +1674,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_dispatching(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DispatcherExitDeferral_type{py::register_python_type(module.get(), &type_spec_DispatcherExitDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle DispatcherExitDeferral_type{py::register_python_type(module.get(), &type_spec_DispatcherExitDeferral, object_bases.get(), inspectable_meta_type)};
     if (!DispatcherExitDeferral_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DispatcherQueue_Static{PyType_FromSpec(&type_spec_DispatcherQueue_Static)};
+    py::pyobj_handle DispatcherQueue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DispatcherQueue_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DispatcherQueue_Static{PyType_FromSpecWithBases(&type_spec_DispatcherQueue_Static, DispatcherQueue_Static_bases.get())};
     if (!type_DispatcherQueue_Static)
     {
         return nullptr;
@@ -1686,7 +1698,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_dispatching(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DispatcherQueueController_Static{PyType_FromSpec(&type_spec_DispatcherQueueController_Static)};
+    py::pyobj_handle DispatcherQueueController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DispatcherQueueController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DispatcherQueueController_Static{PyType_FromSpecWithBases(&type_spec_DispatcherQueueController_Static, DispatcherQueueController_Static_bases.get())};
     if (!type_DispatcherQueueController_Static)
     {
         return nullptr;
@@ -1698,13 +1716,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_dispatching(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DispatcherQueueShutdownStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_DispatcherQueueShutdownStartingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DispatcherQueueShutdownStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_DispatcherQueueShutdownStartingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DispatcherQueueShutdownStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DispatcherQueueTimer_type{py::register_python_type(module.get(), &type_spec_DispatcherQueueTimer, object_bases.get(), nullptr)};
+    py::pytype_handle DispatcherQueueTimer_type{py::register_python_type(module.get(), &type_spec_DispatcherQueueTimer, object_bases.get(), inspectable_meta_type)};
     if (!DispatcherQueueTimer_type)
     {
         return nullptr;

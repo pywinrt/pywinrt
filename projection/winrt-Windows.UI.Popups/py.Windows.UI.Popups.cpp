@@ -1907,6 +1907,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_popups(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1920,25 +1926,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_popups(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MessageDialog_type{py::register_python_type(module.get(), &type_spec_MessageDialog, object_bases.get(), nullptr)};
+    py::pytype_handle MessageDialog_type{py::register_python_type(module.get(), &type_spec_MessageDialog, object_bases.get(), inspectable_meta_type)};
     if (!MessageDialog_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PopupMenu_type{py::register_python_type(module.get(), &type_spec_PopupMenu, object_bases.get(), nullptr)};
+    py::pytype_handle PopupMenu_type{py::register_python_type(module.get(), &type_spec_PopupMenu, object_bases.get(), inspectable_meta_type)};
     if (!PopupMenu_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UICommand_type{py::register_python_type(module.get(), &type_spec_UICommand, object_bases.get(), nullptr)};
+    py::pytype_handle UICommand_type{py::register_python_type(module.get(), &type_spec_UICommand, object_bases.get(), inspectable_meta_type)};
     if (!UICommand_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UICommandSeparator_type{py::register_python_type(module.get(), &type_spec_UICommandSeparator, object_bases.get(), nullptr)};
+    py::pytype_handle UICommandSeparator_type{py::register_python_type(module.get(), &type_spec_UICommandSeparator, object_bases.get(), inspectable_meta_type)};
     if (!UICommandSeparator_type)
     {
         return nullptr;
@@ -1950,7 +1956,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_popups(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIUICommand_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIUICommand, nullptr))};
+    py::pytype_handle ImplementsIUICommand_type{py::register_python_type(module.get(), &type_spec_ImplementsIUICommand, nullptr, inspectable_meta_type)};
     if (!ImplementsIUICommand_type)
     {
         return nullptr;

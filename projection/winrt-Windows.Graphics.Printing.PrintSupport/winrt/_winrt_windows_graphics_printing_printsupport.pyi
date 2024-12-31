@@ -176,7 +176,7 @@ class PrintSupportPrintDeviceCapabilitiesChangedEventArgs(winrt.system.Object):
     def mxdc_image_quality_configuration(self) -> PrintSupportMxdcImageQualityConfiguration: ...
 
 @typing.final
-class PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static(type):
+class PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static(winrt._winrt.IInspectable_Static):
     # Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePeriodicRefresh(Windows.Foundation.TimeSpan)
     def create_periodic_refresh(cls, update_period: datetime.timedelta, /) -> PrintSupportPrintDeviceCapabilitiesUpdatePolicy: ...
     # Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePrintJobRefresh(System.UInt32)

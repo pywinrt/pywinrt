@@ -17,7 +17,7 @@ from winrt.windows.globalization.datetimeformatting import DayFormat, DayOfWeekF
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DateTimeFormatter_Static(type):
+class DateTimeFormatter_Static(winrt._winrt.IInspectable_Static):
     # Windows.Globalization.DateTimeFormatting.DateTimeFormatter Windows.Globalization.DateTimeFormatting.DateTimeFormatter::get_LongDate()
     @_property
     def long_date(cls) -> DateTimeFormatter: ...

@@ -35,7 +35,7 @@ class JointPose:
     def __init__(self, orientation: windows_foundation_numerics.Quaternion = windows_foundation_numerics.Quaternion(), position: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), radius: winrt.system.Single = 0, accuracy: JointPoseAccuracy = JointPoseAccuracy(0)) -> None: ...
 
 @typing.final
-class EyesPose_Static(type):
+class EyesPose_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Perception.People.EyesPose::IsSupported()
     def is_supported(cls) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Input.GazeInputAccessStatus> Windows.Perception.People.EyesPose::RequestAccessAsync()

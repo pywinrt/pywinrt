@@ -3311,6 +3311,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments_dataprovider(
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3324,85 +3330,85 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments_dataprovider(
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarCancelMeetingRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarCancelMeetingRequest, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarCancelMeetingRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarCancelMeetingRequest, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarCancelMeetingRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarCancelMeetingRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarCancelMeetingRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarCancelMeetingRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarCancelMeetingRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarCancelMeetingRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarCreateOrUpdateAppointmentRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarCreateOrUpdateAppointmentRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequest, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarCreateOrUpdateAppointmentRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarForwardMeetingRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarForwardMeetingRequest, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarForwardMeetingRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarForwardMeetingRequest, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarForwardMeetingRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarForwardMeetingRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarForwardMeetingRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarForwardMeetingRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarForwardMeetingRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarForwardMeetingRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarProposeNewTimeForMeetingRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarProposeNewTimeForMeetingRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequest, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarProposeNewTimeForMeetingRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarSyncManagerSyncRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarSyncManagerSyncRequest, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarSyncManagerSyncRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarSyncManagerSyncRequest, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarSyncManagerSyncRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarSyncManagerSyncRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarSyncManagerSyncRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarSyncManagerSyncRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarSyncManagerSyncRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarUpdateMeetingResponseRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarUpdateMeetingResponseRequest, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarUpdateMeetingResponseRequest_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarUpdateMeetingResponseRequest, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarUpdateMeetingResponseRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentCalendarUpdateMeetingResponseRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentCalendarUpdateMeetingResponseRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentCalendarUpdateMeetingResponseRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentCalendarUpdateMeetingResponseRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentDataProviderConnection_type{py::register_python_type(module.get(), &type_spec_AppointmentDataProviderConnection, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentDataProviderConnection_type{py::register_python_type(module.get(), &type_spec_AppointmentDataProviderConnection, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentDataProviderConnection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentDataProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_AppointmentDataProviderTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentDataProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_AppointmentDataProviderTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentDataProviderTriggerDetails_type)
     {
         return nullptr;

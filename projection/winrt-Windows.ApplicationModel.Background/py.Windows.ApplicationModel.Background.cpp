@@ -15255,6 +15255,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -15268,13 +15274,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ActivitySensorTrigger_type{py::register_python_type(module.get(), &type_spec_ActivitySensorTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ActivitySensorTrigger_type{py::register_python_type(module.get(), &type_spec_ActivitySensorTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ActivitySensorTrigger_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AlarmApplicationManager_Static{PyType_FromSpec(&type_spec_AlarmApplicationManager_Static)};
+    py::pyobj_handle AlarmApplicationManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AlarmApplicationManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AlarmApplicationManager_Static{PyType_FromSpecWithBases(&type_spec_AlarmApplicationManager_Static, AlarmApplicationManager_Static_bases.get())};
     if (!type_AlarmApplicationManager_Static)
     {
         return nullptr;
@@ -15286,37 +15298,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AppBroadcastTrigger_type{py::register_python_type(module.get(), &type_spec_AppBroadcastTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle AppBroadcastTrigger_type{py::register_python_type(module.get(), &type_spec_AppBroadcastTrigger, object_bases.get(), inspectable_meta_type)};
     if (!AppBroadcastTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBroadcastTriggerProviderInfo_type{py::register_python_type(module.get(), &type_spec_AppBroadcastTriggerProviderInfo, object_bases.get(), nullptr)};
+    py::pytype_handle AppBroadcastTriggerProviderInfo_type{py::register_python_type(module.get(), &type_spec_AppBroadcastTriggerProviderInfo, object_bases.get(), inspectable_meta_type)};
     if (!AppBroadcastTriggerProviderInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ApplicationTrigger_type{py::register_python_type(module.get(), &type_spec_ApplicationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ApplicationTrigger_type{py::register_python_type(module.get(), &type_spec_ApplicationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ApplicationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ApplicationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ApplicationTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle ApplicationTriggerDetails_type{py::register_python_type(module.get(), &type_spec_ApplicationTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!ApplicationTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppointmentStoreNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle AppointmentStoreNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_AppointmentStoreNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!AppointmentStoreNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundExecutionManager_Static{PyType_FromSpec(&type_spec_BackgroundExecutionManager_Static)};
+    py::pyobj_handle BackgroundExecutionManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BackgroundExecutionManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackgroundExecutionManager_Static{PyType_FromSpecWithBases(&type_spec_BackgroundExecutionManager_Static, BackgroundExecutionManager_Static_bases.get())};
     if (!type_BackgroundExecutionManager_Static)
     {
         return nullptr;
@@ -15328,7 +15346,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundTaskBuilder_Static{PyType_FromSpec(&type_spec_BackgroundTaskBuilder_Static)};
+    py::pyobj_handle BackgroundTaskBuilder_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BackgroundTaskBuilder_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackgroundTaskBuilder_Static{PyType_FromSpecWithBases(&type_spec_BackgroundTaskBuilder_Static, BackgroundTaskBuilder_Static_bases.get())};
     if (!type_BackgroundTaskBuilder_Static)
     {
         return nullptr;
@@ -15340,25 +15364,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTaskCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BackgroundTaskCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BackgroundTaskCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTaskDeferral_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle BackgroundTaskDeferral_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskDeferral, object_bases.get(), inspectable_meta_type)};
     if (!BackgroundTaskDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTaskProgressEventArgs_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskProgressEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle BackgroundTaskProgressEventArgs_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskProgressEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!BackgroundTaskProgressEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundTaskRegistration_Static{PyType_FromSpec(&type_spec_BackgroundTaskRegistration_Static)};
+    py::pyobj_handle BackgroundTaskRegistration_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BackgroundTaskRegistration_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackgroundTaskRegistration_Static{PyType_FromSpecWithBases(&type_spec_BackgroundTaskRegistration_Static, BackgroundTaskRegistration_Static_bases.get())};
     if (!type_BackgroundTaskRegistration_Static)
     {
         return nullptr;
@@ -15370,13 +15400,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTaskRegistrationGroup_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskRegistrationGroup, object_bases.get(), nullptr)};
+    py::pytype_handle BackgroundTaskRegistrationGroup_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskRegistrationGroup, object_bases.get(), inspectable_meta_type)};
     if (!BackgroundTaskRegistrationGroup_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BackgroundWorkCost_Static{PyType_FromSpec(&type_spec_BackgroundWorkCost_Static)};
+    py::pyobj_handle BackgroundWorkCost_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!BackgroundWorkCost_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackgroundWorkCost_Static{PyType_FromSpecWithBases(&type_spec_BackgroundWorkCost_Static, BackgroundWorkCost_Static_bases.get())};
     if (!type_BackgroundWorkCost_Static)
     {
         return nullptr;
@@ -15388,73 +15424,79 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementPublisherTrigger_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementPublisherTrigger_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherTrigger, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementPublisherTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BluetoothLEAdvertisementWatcherTrigger_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle BluetoothLEAdvertisementWatcherTrigger_type{py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherTrigger, object_bases.get(), inspectable_meta_type)};
     if (!BluetoothLEAdvertisementWatcherTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CachedFileUpdaterTrigger_type{py::register_python_type(module.get(), &type_spec_CachedFileUpdaterTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle CachedFileUpdaterTrigger_type{py::register_python_type(module.get(), &type_spec_CachedFileUpdaterTrigger, object_bases.get(), inspectable_meta_type)};
     if (!CachedFileUpdaterTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CachedFileUpdaterTriggerDetails_type{py::register_python_type(module.get(), &type_spec_CachedFileUpdaterTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle CachedFileUpdaterTriggerDetails_type{py::register_python_type(module.get(), &type_spec_CachedFileUpdaterTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!CachedFileUpdaterTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_ChatMessageNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_ChatMessageNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ChatMessageReceivedNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_ChatMessageReceivedNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ChatMessageReceivedNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_ChatMessageReceivedNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ChatMessageReceivedNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CommunicationBlockingAppSetAsActiveTrigger_type{py::register_python_type(module.get(), &type_spec_CommunicationBlockingAppSetAsActiveTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle CommunicationBlockingAppSetAsActiveTrigger_type{py::register_python_type(module.get(), &type_spec_CommunicationBlockingAppSetAsActiveTrigger, object_bases.get(), inspectable_meta_type)};
     if (!CommunicationBlockingAppSetAsActiveTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContactStoreNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_ContactStoreNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ContactStoreNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_ContactStoreNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ContactStoreNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContentPrefetchTrigger_type{py::register_python_type(module.get(), &type_spec_ContentPrefetchTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ContentPrefetchTrigger_type{py::register_python_type(module.get(), &type_spec_ContentPrefetchTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ContentPrefetchTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ConversationalAgentTrigger_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ConversationalAgentTrigger_type{py::register_python_type(module.get(), &type_spec_ConversationalAgentTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ConversationalAgentTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CustomSystemEventTrigger_type{py::register_python_type(module.get(), &type_spec_CustomSystemEventTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle CustomSystemEventTrigger_type{py::register_python_type(module.get(), &type_spec_CustomSystemEventTrigger, object_bases.get(), inspectable_meta_type)};
     if (!CustomSystemEventTrigger_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DeviceConnectionChangeTrigger_Static{PyType_FromSpec(&type_spec_DeviceConnectionChangeTrigger_Static)};
+    py::pyobj_handle DeviceConnectionChangeTrigger_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DeviceConnectionChangeTrigger_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DeviceConnectionChangeTrigger_Static{PyType_FromSpecWithBases(&type_spec_DeviceConnectionChangeTrigger_Static, DeviceConnectionChangeTrigger_Static_bases.get())};
     if (!type_DeviceConnectionChangeTrigger_Static)
     {
         return nullptr;
@@ -15466,43 +15508,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DeviceManufacturerNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_DeviceManufacturerNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceManufacturerNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_DeviceManufacturerNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!DeviceManufacturerNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceServicingTrigger_type{py::register_python_type(module.get(), &type_spec_DeviceServicingTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceServicingTrigger_type{py::register_python_type(module.get(), &type_spec_DeviceServicingTrigger, object_bases.get(), inspectable_meta_type)};
     if (!DeviceServicingTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceUseTrigger_type{py::register_python_type(module.get(), &type_spec_DeviceUseTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceUseTrigger_type{py::register_python_type(module.get(), &type_spec_DeviceUseTrigger, object_bases.get(), inspectable_meta_type)};
     if (!DeviceUseTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DeviceWatcherTrigger_type{py::register_python_type(module.get(), &type_spec_DeviceWatcherTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle DeviceWatcherTrigger_type{py::register_python_type(module.get(), &type_spec_DeviceWatcherTrigger, object_bases.get(), inspectable_meta_type)};
     if (!DeviceWatcherTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EmailStoreNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_EmailStoreNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle EmailStoreNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_EmailStoreNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!EmailStoreNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GattCharacteristicNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_GattCharacteristicNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle GattCharacteristicNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_GattCharacteristicNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!GattCharacteristicNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GattServiceProviderTrigger_Static{PyType_FromSpec(&type_spec_GattServiceProviderTrigger_Static)};
+    py::pyobj_handle GattServiceProviderTrigger_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GattServiceProviderTrigger_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GattServiceProviderTrigger_Static{PyType_FromSpecWithBases(&type_spec_GattServiceProviderTrigger_Static, GattServiceProviderTrigger_Static_bases.get())};
     if (!type_GattServiceProviderTrigger_Static)
     {
         return nullptr;
@@ -15514,151 +15562,157 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GattServiceProviderTriggerResult_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderTriggerResult, object_bases.get(), nullptr)};
+    py::pytype_handle GattServiceProviderTriggerResult_type{py::register_python_type(module.get(), &type_spec_GattServiceProviderTriggerResult, object_bases.get(), inspectable_meta_type)};
     if (!GattServiceProviderTriggerResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GeovisitTrigger_type{py::register_python_type(module.get(), &type_spec_GeovisitTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle GeovisitTrigger_type{py::register_python_type(module.get(), &type_spec_GeovisitTrigger, object_bases.get(), inspectable_meta_type)};
     if (!GeovisitTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LocationTrigger_type{py::register_python_type(module.get(), &type_spec_LocationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle LocationTrigger_type{py::register_python_type(module.get(), &type_spec_LocationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!LocationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MaintenanceTrigger_type{py::register_python_type(module.get(), &type_spec_MaintenanceTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle MaintenanceTrigger_type{py::register_python_type(module.get(), &type_spec_MaintenanceTrigger, object_bases.get(), inspectable_meta_type)};
     if (!MaintenanceTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaProcessingTrigger_type{py::register_python_type(module.get(), &type_spec_MediaProcessingTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle MediaProcessingTrigger_type{py::register_python_type(module.get(), &type_spec_MediaProcessingTrigger, object_bases.get(), inspectable_meta_type)};
     if (!MediaProcessingTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceServiceNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceServiceNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceServiceNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPcoDataChangeTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPcoDataChangeTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPcoDataChangeTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPcoDataChangeTrigger, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPcoDataChangeTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPinLockStateChangeTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChangeTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPinLockStateChangeTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChangeTrigger, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPinLockStateChangeTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandRadioStateChangeTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChangeTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandRadioStateChangeTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChangeTrigger, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandRadioStateChangeTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandRegistrationStateChangeTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandRegistrationStateChangeTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandRegistrationStateChangeTrigger_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandRegistrationStateChangeTrigger, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandRegistrationStateChangeTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorDataUsageTrigger_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorDataUsageTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorDataUsageTrigger_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorDataUsageTrigger, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorDataUsageTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorHotspotAuthenticationTrigger_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorHotspotAuthenticationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorHotspotAuthenticationTrigger_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorHotspotAuthenticationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorHotspotAuthenticationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PaymentAppCanMakePaymentTrigger_type{py::register_python_type(module.get(), &type_spec_PaymentAppCanMakePaymentTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle PaymentAppCanMakePaymentTrigger_type{py::register_python_type(module.get(), &type_spec_PaymentAppCanMakePaymentTrigger, object_bases.get(), inspectable_meta_type)};
     if (!PaymentAppCanMakePaymentTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PhoneTrigger_type{py::register_python_type(module.get(), &type_spec_PhoneTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle PhoneTrigger_type{py::register_python_type(module.get(), &type_spec_PhoneTrigger, object_bases.get(), inspectable_meta_type)};
     if (!PhoneTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PushNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_PushNotificationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle PushNotificationTrigger_type{py::register_python_type(module.get(), &type_spec_PushNotificationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!PushNotificationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RcsEndUserMessageAvailableTrigger_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle RcsEndUserMessageAvailableTrigger_type{py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableTrigger, object_bases.get(), inspectable_meta_type)};
     if (!RcsEndUserMessageAvailableTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RfcommConnectionTrigger_type{py::register_python_type(module.get(), &type_spec_RfcommConnectionTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle RfcommConnectionTrigger_type{py::register_python_type(module.get(), &type_spec_RfcommConnectionTrigger, object_bases.get(), inspectable_meta_type)};
     if (!RfcommConnectionTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SecondaryAuthenticationFactorAuthenticationTrigger_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthenticationTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle SecondaryAuthenticationFactorAuthenticationTrigger_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthenticationTrigger, object_bases.get(), inspectable_meta_type)};
     if (!SecondaryAuthenticationFactorAuthenticationTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SensorDataThresholdTrigger_type{py::register_python_type(module.get(), &type_spec_SensorDataThresholdTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle SensorDataThresholdTrigger_type{py::register_python_type(module.get(), &type_spec_SensorDataThresholdTrigger, object_bases.get(), inspectable_meta_type)};
     if (!SensorDataThresholdTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmartCardTrigger_type{py::register_python_type(module.get(), &type_spec_SmartCardTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle SmartCardTrigger_type{py::register_python_type(module.get(), &type_spec_SmartCardTrigger, object_bases.get(), inspectable_meta_type)};
     if (!SmartCardTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SmsMessageReceivedTrigger_type{py::register_python_type(module.get(), &type_spec_SmsMessageReceivedTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle SmsMessageReceivedTrigger_type{py::register_python_type(module.get(), &type_spec_SmsMessageReceivedTrigger, object_bases.get(), inspectable_meta_type)};
     if (!SmsMessageReceivedTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SocketActivityTrigger_type{py::register_python_type(module.get(), &type_spec_SocketActivityTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle SocketActivityTrigger_type{py::register_python_type(module.get(), &type_spec_SocketActivityTrigger, object_bases.get(), inspectable_meta_type)};
     if (!SocketActivityTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StorageLibraryChangeTrackerTrigger_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeTrackerTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle StorageLibraryChangeTrackerTrigger_type{py::register_python_type(module.get(), &type_spec_StorageLibraryChangeTrackerTrigger, object_bases.get(), inspectable_meta_type)};
     if (!StorageLibraryChangeTrackerTrigger_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StorageLibraryContentChangedTrigger_Static{PyType_FromSpec(&type_spec_StorageLibraryContentChangedTrigger_Static)};
+    py::pyobj_handle StorageLibraryContentChangedTrigger_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!StorageLibraryContentChangedTrigger_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StorageLibraryContentChangedTrigger_Static{PyType_FromSpecWithBases(&type_spec_StorageLibraryContentChangedTrigger_Static, StorageLibraryContentChangedTrigger_Static_bases.get())};
     if (!type_StorageLibraryContentChangedTrigger_Static)
     {
         return nullptr;
@@ -15670,55 +15724,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SystemCondition_type{py::register_python_type(module.get(), &type_spec_SystemCondition, object_bases.get(), nullptr)};
+    py::pytype_handle SystemCondition_type{py::register_python_type(module.get(), &type_spec_SystemCondition, object_bases.get(), inspectable_meta_type)};
     if (!SystemCondition_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemTrigger_type{py::register_python_type(module.get(), &type_spec_SystemTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle SystemTrigger_type{py::register_python_type(module.get(), &type_spec_SystemTrigger, object_bases.get(), inspectable_meta_type)};
     if (!SystemTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TetheringEntitlementCheckTrigger_type{py::register_python_type(module.get(), &type_spec_TetheringEntitlementCheckTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle TetheringEntitlementCheckTrigger_type{py::register_python_type(module.get(), &type_spec_TetheringEntitlementCheckTrigger, object_bases.get(), inspectable_meta_type)};
     if (!TetheringEntitlementCheckTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TimeTrigger_type{py::register_python_type(module.get(), &type_spec_TimeTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle TimeTrigger_type{py::register_python_type(module.get(), &type_spec_TimeTrigger, object_bases.get(), inspectable_meta_type)};
     if (!TimeTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToastNotificationActionTrigger_type{py::register_python_type(module.get(), &type_spec_ToastNotificationActionTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ToastNotificationActionTrigger_type{py::register_python_type(module.get(), &type_spec_ToastNotificationActionTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ToastNotificationActionTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToastNotificationHistoryChangedTrigger_type{py::register_python_type(module.get(), &type_spec_ToastNotificationHistoryChangedTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle ToastNotificationHistoryChangedTrigger_type{py::register_python_type(module.get(), &type_spec_ToastNotificationHistoryChangedTrigger, object_bases.get(), inspectable_meta_type)};
     if (!ToastNotificationHistoryChangedTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UserNotificationChangedTrigger_type{py::register_python_type(module.get(), &type_spec_UserNotificationChangedTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle UserNotificationChangedTrigger_type{py::register_python_type(module.get(), &type_spec_UserNotificationChangedTrigger, object_bases.get(), inspectable_meta_type)};
     if (!UserNotificationChangedTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiOnDemandHotspotConnectTrigger_type{py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiOnDemandHotspotConnectTrigger_type{py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectTrigger, object_bases.get(), inspectable_meta_type)};
     if (!WiFiOnDemandHotspotConnectTrigger_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WiFiOnDemandHotspotUpdateMetadataTrigger_type{py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger, object_bases.get(), nullptr)};
+    py::pytype_handle WiFiOnDemandHotspotUpdateMetadataTrigger_type{py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotUpdateMetadataTrigger, object_bases.get(), inspectable_meta_type)};
     if (!WiFiOnDemandHotspotUpdateMetadataTrigger_type)
     {
         return nullptr;
@@ -15730,7 +15784,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundCondition_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundCondition, nullptr))};
+    py::pytype_handle ImplementsIBackgroundCondition_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundCondition, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundCondition_type)
     {
         return nullptr;
@@ -15747,7 +15801,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTask_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTask, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTask_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTask, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTask_type)
     {
         return nullptr;
@@ -15764,7 +15818,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTaskInstance_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskInstance, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTaskInstance_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTaskInstance, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTaskInstance_type)
     {
         return nullptr;
@@ -15781,7 +15835,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTaskInstance2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskInstance2, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTaskInstance2_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTaskInstance2, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTaskInstance2_type)
     {
         return nullptr;
@@ -15798,7 +15852,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTaskInstance4_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskInstance4, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTaskInstance4_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTaskInstance4, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTaskInstance4_type)
     {
         return nullptr;
@@ -15815,7 +15869,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTaskRegistration_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTaskRegistration_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTaskRegistration_type)
     {
         return nullptr;
@@ -15832,7 +15886,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTaskRegistration2_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration2, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTaskRegistration2_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration2, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTaskRegistration2_type)
     {
         return nullptr;
@@ -15849,7 +15903,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTaskRegistration3_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration3, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTaskRegistration3_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTaskRegistration3, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTaskRegistration3_type)
     {
         return nullptr;
@@ -15866,7 +15920,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBackgroundTrigger_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBackgroundTrigger, nullptr))};
+    py::pytype_handle ImplementsIBackgroundTrigger_type{py::register_python_type(module.get(), &type_spec_ImplementsIBackgroundTrigger, nullptr, inspectable_meta_type)};
     if (!ImplementsIBackgroundTrigger_type)
     {
         return nullptr;

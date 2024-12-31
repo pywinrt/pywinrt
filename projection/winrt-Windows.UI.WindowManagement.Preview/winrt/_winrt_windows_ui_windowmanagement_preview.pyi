@@ -15,7 +15,7 @@ import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
 Self = typing.TypeVar('Self')
 
 @typing.final
-class WindowManagementPreview_Static(type):
+class WindowManagementPreview_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.WindowManagement.Preview.WindowManagementPreview::SetPreferredMinSize(Windows.UI.WindowManagement.AppWindow,Windows.Foundation.Size)
     def set_preferred_min_size(cls, window: windows_ui_windowmanagement.AppWindow, preferred_frame_min_size: windows_foundation.Size, /) -> None: ...
 

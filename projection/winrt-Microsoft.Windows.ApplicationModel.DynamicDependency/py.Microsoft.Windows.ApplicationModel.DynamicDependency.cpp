@@ -1620,6 +1620,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependenc
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1633,19 +1639,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependenc
         return nullptr;
     }
 
-    py::pytype_handle AddPackageDependencyOptions_type{py::register_python_type(module.get(), &type_spec_AddPackageDependencyOptions, object_bases.get(), nullptr)};
+    py::pytype_handle AddPackageDependencyOptions_type{py::register_python_type(module.get(), &type_spec_AddPackageDependencyOptions, object_bases.get(), inspectable_meta_type)};
     if (!AddPackageDependencyOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CreatePackageDependencyOptions_type{py::register_python_type(module.get(), &type_spec_CreatePackageDependencyOptions, object_bases.get(), nullptr)};
+    py::pytype_handle CreatePackageDependencyOptions_type{py::register_python_type(module.get(), &type_spec_CreatePackageDependencyOptions, object_bases.get(), inspectable_meta_type)};
     if (!CreatePackageDependencyOptions_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PackageDependency_Static{PyType_FromSpec(&type_spec_PackageDependency_Static)};
+    py::pyobj_handle PackageDependency_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PackageDependency_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PackageDependency_Static{PyType_FromSpecWithBases(&type_spec_PackageDependency_Static, PackageDependency_Static_bases.get())};
     if (!type_PackageDependency_Static)
     {
         return nullptr;
@@ -1657,13 +1669,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependenc
         return nullptr;
     }
 
-    py::pytype_handle PackageDependencyContext_type{py::register_python_type(module.get(), &type_spec_PackageDependencyContext, object_bases.get(), nullptr)};
+    py::pytype_handle PackageDependencyContext_type{py::register_python_type(module.get(), &type_spec_PackageDependencyContext, object_bases.get(), inspectable_meta_type)};
     if (!PackageDependencyContext_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PackageDependencyRank_Static{PyType_FromSpec(&type_spec_PackageDependencyRank_Static)};
+    py::pyobj_handle PackageDependencyRank_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PackageDependencyRank_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PackageDependencyRank_Static{PyType_FromSpecWithBases(&type_spec_PackageDependencyRank_Static, PackageDependencyRank_Static_bases.get())};
     if (!type_PackageDependencyRank_Static)
     {
         return nullptr;

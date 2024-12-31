@@ -5012,6 +5012,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_streaming_adaptive(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5025,7 +5031,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_streaming_adaptive(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AdaptiveMediaSource_Static{PyType_FromSpec(&type_spec_AdaptiveMediaSource_Static)};
+    py::pyobj_handle AdaptiveMediaSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AdaptiveMediaSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AdaptiveMediaSource_Static{PyType_FromSpecWithBases(&type_spec_AdaptiveMediaSource_Static, AdaptiveMediaSource_Static_bases.get())};
     if (!type_AdaptiveMediaSource_Static)
     {
         return nullptr;
@@ -5037,79 +5049,79 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_streaming_adaptive(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceAdvancedSettings_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceAdvancedSettings, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceAdvancedSettings_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceAdvancedSettings, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceAdvancedSettings_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceCorrelatedTimes_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceCorrelatedTimes, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceCorrelatedTimes_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceCorrelatedTimes, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceCorrelatedTimes_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceCreationResult_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceCreationResult, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceCreationResult_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceCreationResult, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceCreationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDiagnosticAvailableEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDiagnosticAvailableEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDiagnosticAvailableEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDiagnostics_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDiagnostics, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDiagnostics_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDiagnostics, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDiagnostics_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDownloadBitrateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDownloadBitrateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDownloadBitrateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDownloadCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDownloadCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDownloadCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDownloadFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDownloadFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDownloadFailedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDownloadRequestedDeferral_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDownloadRequestedDeferral_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDownloadRequestedDeferral_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDownloadRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDownloadRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDownloadRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDownloadResult_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadResult, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDownloadResult_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadResult, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDownloadResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourceDownloadStatistics_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadStatistics, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourceDownloadStatistics_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadStatistics, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourceDownloadStatistics_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_type)
     {
         return nullptr;

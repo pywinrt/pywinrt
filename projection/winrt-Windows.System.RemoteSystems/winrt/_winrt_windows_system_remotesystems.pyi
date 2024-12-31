@@ -22,7 +22,7 @@ from winrt.windows.system.remotesystems import RemoteSystemAccessStatus, RemoteS
 Self = typing.TypeVar('Self')
 
 @typing.final
-class KnownRemoteSystemCapabilities_Static(type):
+class KnownRemoteSystemCapabilities_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.System.RemoteSystems.KnownRemoteSystemCapabilities::get_AppService()
     @_property
     def app_service(cls) -> str: ...
@@ -41,7 +41,7 @@ class KnownRemoteSystemCapabilities(winrt.system.Object, metaclass=KnownRemoteSy
     pass
 
 @typing.final
-class RemoteSystem_Static(type):
+class RemoteSystem_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcher()
     def create_watcher(cls) -> RemoteSystemWatcher: ...
     # Windows.System.RemoteSystems.RemoteSystemWatcher Windows.System.RemoteSystems.RemoteSystem::CreateWatcherForUser(Windows.System.User)
@@ -126,7 +126,7 @@ class RemoteSystemApp(winrt.system.Object):
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class RemoteSystemAppRegistration_Static(type):
+class RemoteSystemAppRegistration_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.RemoteSystems.RemoteSystemAppRegistration Windows.System.RemoteSystems.RemoteSystemAppRegistration::GetDefault()
     def get_default(cls) -> RemoteSystemAppRegistration: ...
     # Windows.System.RemoteSystems.RemoteSystemAppRegistration Windows.System.RemoteSystems.RemoteSystemAppRegistration::GetForUser(Windows.System.User)
@@ -151,7 +151,7 @@ class RemoteSystemAuthorizationKindFilter(winrt.system.Object, IRemoteSystemFilt
     def remote_system_authorization_kind(self) -> RemoteSystemAuthorizationKind: ...
 
 @typing.final
-class RemoteSystemConnectionInfo_Static(type):
+class RemoteSystemConnectionInfo_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.RemoteSystems.RemoteSystemConnectionInfo Windows.System.RemoteSystems.RemoteSystemConnectionInfo::TryCreateFromAppServiceConnection(Windows.ApplicationModel.AppService.AppServiceConnection)
     def try_create_from_app_service_connection(cls, connection: windows_applicationmodel_appservice.AppServiceConnection, /) -> typing.Optional[RemoteSystemConnectionInfo]: ...
 
@@ -162,7 +162,7 @@ class RemoteSystemConnectionInfo(winrt.system.Object, metaclass=RemoteSystemConn
     def is_proximal(self) -> bool: ...
 
 @typing.final
-class RemoteSystemConnectionRequest_Static(type):
+class RemoteSystemConnectionRequest_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.RemoteSystems.RemoteSystemConnectionRequest Windows.System.RemoteSystems.RemoteSystemConnectionRequest::CreateForApp(Windows.System.RemoteSystems.RemoteSystemApp)
     def create_for_app(cls, remote_system_app: RemoteSystemApp, /) -> RemoteSystemConnectionRequest: ...
     # Windows.System.RemoteSystems.RemoteSystemConnectionRequest Windows.System.RemoteSystems.RemoteSystemConnectionRequest::CreateFromConnectionToken(System.String)
@@ -202,7 +202,7 @@ class RemoteSystemKindFilter(winrt.system.Object, IRemoteSystemFilter):
     def remote_system_kinds(self) -> typing.Sequence[str]: ...
 
 @typing.final
-class RemoteSystemKinds_Static(type):
+class RemoteSystemKinds_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.System.RemoteSystems.RemoteSystemKinds::get_Desktop()
     @_property
     def desktop(cls) -> str: ...
@@ -239,7 +239,7 @@ class RemoteSystemRemovedEventArgs(winrt.system.Object):
     def remote_system_id(self) -> str: ...
 
 @typing.final
-class RemoteSystemSession_Static(type):
+class RemoteSystemSession_Static(winrt._winrt.IInspectable_Static):
     # Windows.System.RemoteSystems.RemoteSystemSessionWatcher Windows.System.RemoteSystems.RemoteSystemSession::CreateWatcher()
     def create_watcher(cls) -> RemoteSystemSessionWatcher: ...
 

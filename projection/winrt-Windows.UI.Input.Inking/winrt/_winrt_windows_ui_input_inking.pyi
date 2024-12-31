@@ -23,7 +23,7 @@ from winrt.windows.ui.input.inking import HandwritingLineHeight, InkDrawingAttri
 Self = typing.TypeVar('Self')
 
 @typing.final
-class InkDrawingAttributes_Static(type):
+class InkDrawingAttributes_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Input.Inking.InkDrawingAttributes Windows.UI.Input.Inking.InkDrawingAttributes::CreateForPencil()
     def create_for_pencil(cls) -> InkDrawingAttributes: ...
 
@@ -652,7 +652,7 @@ class InkUnprocessedInput(winrt.system.Object):
     def ink_presenter(self) -> InkPresenter: ...
 
 @typing.final
-class PenAndInkSettings_Static(type):
+class PenAndInkSettings_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Input.Inking.PenAndInkSettings Windows.UI.Input.Inking.PenAndInkSettings::GetDefault()
     def get_default(cls) -> PenAndInkSettings: ...
 

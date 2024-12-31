@@ -969,6 +969,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation_geofencing(void) noexce
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -982,13 +988,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation_geofencing(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle Geofence_type{py::register_python_type(module.get(), &type_spec_Geofence, object_bases.get(), nullptr)};
+    py::pytype_handle Geofence_type{py::register_python_type(module.get(), &type_spec_Geofence, object_bases.get(), inspectable_meta_type)};
     if (!Geofence_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GeofenceMonitor_Static{PyType_FromSpec(&type_spec_GeofenceMonitor_Static)};
+    py::pyobj_handle GeofenceMonitor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!GeofenceMonitor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GeofenceMonitor_Static{PyType_FromSpecWithBases(&type_spec_GeofenceMonitor_Static, GeofenceMonitor_Static_bases.get())};
     if (!type_GeofenceMonitor_Static)
     {
         return nullptr;
@@ -1000,7 +1012,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation_geofencing(void) noexce
         return nullptr;
     }
 
-    py::pytype_handle GeofenceStateChangeReport_type{py::register_python_type(module.get(), &type_spec_GeofenceStateChangeReport, object_bases.get(), nullptr)};
+    py::pytype_handle GeofenceStateChangeReport_type{py::register_python_type(module.get(), &type_spec_GeofenceStateChangeReport, object_bases.get(), inspectable_meta_type)};
     if (!GeofenceStateChangeReport_type)
     {
         return nullptr;

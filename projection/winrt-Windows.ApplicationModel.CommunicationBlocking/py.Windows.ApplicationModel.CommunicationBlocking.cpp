@@ -492,6 +492,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -505,7 +511,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void
         return nullptr;
     }
 
-    py::pyobj_handle type_CommunicationBlockingAccessManager_Static{PyType_FromSpec(&type_spec_CommunicationBlockingAccessManager_Static)};
+    py::pyobj_handle CommunicationBlockingAccessManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CommunicationBlockingAccessManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CommunicationBlockingAccessManager_Static{PyType_FromSpecWithBases(&type_spec_CommunicationBlockingAccessManager_Static, CommunicationBlockingAccessManager_Static_bases.get())};
     if (!type_CommunicationBlockingAccessManager_Static)
     {
         return nullptr;
@@ -517,7 +529,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void
         return nullptr;
     }
 
-    py::pyobj_handle type_CommunicationBlockingAppManager_Static{PyType_FromSpec(&type_spec_CommunicationBlockingAppManager_Static)};
+    py::pyobj_handle CommunicationBlockingAppManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CommunicationBlockingAppManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CommunicationBlockingAppManager_Static{PyType_FromSpecWithBases(&type_spec_CommunicationBlockingAppManager_Static, CommunicationBlockingAppManager_Static_bases.get())};
     if (!type_CommunicationBlockingAppManager_Static)
     {
         return nullptr;

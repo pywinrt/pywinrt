@@ -18,7 +18,7 @@ from winrt.windows.devices.custom import DeviceAccessMode, DeviceSharingMode, IO
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CustomDevice_Static(type):
+class CustomDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Custom.CustomDevice> Windows.Devices.Custom.CustomDevice::FromIdAsync(System.String,Windows.Devices.Custom.DeviceAccessMode,Windows.Devices.Custom.DeviceSharingMode)
     def from_id_async(cls, device_id: str, desired_access: DeviceAccessMode, sharing_mode: DeviceSharingMode, /) -> windows_foundation.IAsyncOperation[CustomDevice]: ...
     # System.String Windows.Devices.Custom.CustomDevice::GetDeviceSelector(System.Guid)
@@ -57,7 +57,7 @@ class IOControlCode(winrt.system.Object, IIOControlCode):
     def function(self) -> winrt.system.UInt16: ...
 
 @typing.final
-class KnownDeviceTypes_Static(type):
+class KnownDeviceTypes_Static(winrt._winrt.IInspectable_Static):
     # System.UInt16 Windows.Devices.Custom.KnownDeviceTypes::get_Unknown()
     @_property
     def unknown(cls) -> winrt.system.UInt16: ...

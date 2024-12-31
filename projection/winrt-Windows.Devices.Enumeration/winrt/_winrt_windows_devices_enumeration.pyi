@@ -35,7 +35,7 @@ class DeviceAccessChangedEventArgs(winrt.system.Object):
     def user_prompt_required(self) -> bool: ...
 
 @typing.final
-class DeviceAccessInformation_Static(type):
+class DeviceAccessInformation_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Enumeration.DeviceAccessInformation Windows.Devices.Enumeration.DeviceAccessInformation::CreateFromDeviceClass(Windows.Devices.Enumeration.DeviceClass)
     def create_from_device_class(cls, device_class: DeviceClass, /) -> DeviceAccessInformation: ...
     # Windows.Devices.Enumeration.DeviceAccessInformation Windows.Devices.Enumeration.DeviceAccessInformation::CreateFromDeviceClassId(System.Guid)
@@ -69,7 +69,7 @@ class DeviceDisconnectButtonClickedEventArgs(winrt.system.Object):
     def device(self) -> DeviceInformation: ...
 
 @typing.final
-class DeviceInformation_Static(type):
+class DeviceInformation_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DeviceInformation> Windows.Devices.Enumeration.DeviceInformation::CreateFromIdAsync(System.String)
     def create_from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[DeviceInformation]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DeviceInformation> Windows.Devices.Enumeration.DeviceInformation::CreateFromIdAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
@@ -178,7 +178,7 @@ class DeviceInformationCustomPairing(winrt.system.Object):
     def remove_pairing_set_members_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class DeviceInformationPairing_Static(type):
+class DeviceInformationPairing_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Devices.Enumeration.DeviceInformationPairing::TryRegisterForAllInboundPairingRequests(Windows.Devices.Enumeration.DevicePairingKinds)
     def try_register_for_all_inbound_pairing_requests(cls, pairing_kinds_supported: DevicePairingKinds, /) -> bool: ...
     # System.Boolean Windows.Devices.Enumeration.DeviceInformationPairing::TryRegisterForAllInboundPairingRequestsWithProtectionLevel(Windows.Devices.Enumeration.DevicePairingKinds,Windows.Devices.Enumeration.DevicePairingProtectionLevel)

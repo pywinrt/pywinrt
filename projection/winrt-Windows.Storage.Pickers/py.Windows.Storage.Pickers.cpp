@@ -3920,6 +3920,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3933,13 +3939,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FileExtensionVector_type{py::register_python_type(module.get(), &type_spec_FileExtensionVector, object_bases.get(), nullptr)};
+    py::pytype_handle FileExtensionVector_type{py::register_python_type(module.get(), &type_spec_FileExtensionVector, object_bases.get(), inspectable_meta_type)};
     if (!FileExtensionVector_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FileOpenPicker_Static{PyType_FromSpec(&type_spec_FileOpenPicker_Static)};
+    py::pyobj_handle FileOpenPicker_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FileOpenPicker_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FileOpenPicker_Static{PyType_FromSpecWithBases(&type_spec_FileOpenPicker_Static, FileOpenPicker_Static_bases.get())};
     if (!type_FileOpenPicker_Static)
     {
         return nullptr;
@@ -3951,19 +3963,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FilePickerFileTypesOrderedMap_type{py::register_python_type(module.get(), &type_spec_FilePickerFileTypesOrderedMap, object_bases.get(), nullptr)};
+    py::pytype_handle FilePickerFileTypesOrderedMap_type{py::register_python_type(module.get(), &type_spec_FilePickerFileTypesOrderedMap, object_bases.get(), inspectable_meta_type)};
     if (!FilePickerFileTypesOrderedMap_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FilePickerSelectedFilesArray_type{py::register_python_type(module.get(), &type_spec_FilePickerSelectedFilesArray, object_bases.get(), nullptr)};
+    py::pytype_handle FilePickerSelectedFilesArray_type{py::register_python_type(module.get(), &type_spec_FilePickerSelectedFilesArray, object_bases.get(), inspectable_meta_type)};
     if (!FilePickerSelectedFilesArray_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FileSavePicker_Static{PyType_FromSpec(&type_spec_FileSavePicker_Static)};
+    py::pyobj_handle FileSavePicker_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FileSavePicker_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FileSavePicker_Static{PyType_FromSpecWithBases(&type_spec_FileSavePicker_Static, FileSavePicker_Static_bases.get())};
     if (!type_FileSavePicker_Static)
     {
         return nullptr;
@@ -3975,7 +3993,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FolderPicker_Static{PyType_FromSpec(&type_spec_FolderPicker_Static)};
+    py::pyobj_handle FolderPicker_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FolderPicker_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FolderPicker_Static{PyType_FromSpecWithBases(&type_spec_FolderPicker_Static, FolderPicker_Static_bases.get())};
     if (!type_FolderPicker_Static)
     {
         return nullptr;

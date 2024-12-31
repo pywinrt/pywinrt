@@ -21,7 +21,7 @@ from winrt.windows.gaming.preview.gamesenumeration import GameListChangedEventHa
 Self = typing.TypeVar('Self')
 
 @typing.final
-class GameList_Static(type):
+class GameList_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> Windows.Gaming.Preview.GamesEnumeration.GameList::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[GameListEntry]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> Windows.Gaming.Preview.GamesEnumeration.GameList::FindAllAsync(System.String)
@@ -141,7 +141,7 @@ class GameModeConfiguration(winrt.system.Object):
     def related_process_names(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
-class GameModeUserConfiguration_Static(type):
+class GameModeUserConfiguration_Static(winrt._winrt.IInspectable_Static):
     # Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration::GetDefault()
     def get_default(cls) -> GameModeUserConfiguration: ...
 

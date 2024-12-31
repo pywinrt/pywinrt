@@ -22,7 +22,7 @@ from winrt.microsoft.ui.composition.systembackdrops import DesktopAcrylicKind, M
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DesktopAcrylicController_Static(type):
+class DesktopAcrylicController_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController::IsSupported()
     def is_supported(cls) -> bool: ...
 
@@ -97,7 +97,7 @@ class DesktopAcrylicController(winrt.system.Object, microsoft_ui.IClosableNotifi
     def is_closed(self) -> bool: ...
 
 @typing.final
-class MicaController_Static(type):
+class MicaController_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.MicaController::IsSupported()
     def is_supported(cls) -> bool: ...
 

@@ -33,7 +33,7 @@ class GipFirmwareUpdateProgress:
     def __init__(self, percent_completed: winrt.system.Double = 0, current_component_id: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
-class GameControllerFactoryManager_Static(type):
+class GameControllerFactoryManager_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.Gaming.Input.Custom.GameControllerFactoryManager::RegisterCustomFactoryForGipInterface(Windows.Gaming.Input.Custom.ICustomGameControllerFactory,System.Guid)
     def register_custom_factory_for_gip_interface(cls, factory: ICustomGameControllerFactory, interface_id: _uuid.UUID, /) -> None: ...
     # System.Void Windows.Gaming.Input.Custom.GameControllerFactoryManager::RegisterCustomFactoryForHardwareId(Windows.Gaming.Input.Custom.ICustomGameControllerFactory,System.UInt16,System.UInt16)

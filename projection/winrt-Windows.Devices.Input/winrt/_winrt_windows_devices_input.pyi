@@ -62,7 +62,7 @@ class MouseCapabilities(winrt.system.Object):
     def vertical_wheel_present(self) -> winrt.system.Int32: ...
 
 @typing.final
-class MouseDevice_Static(type):
+class MouseDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Input.MouseDevice Windows.Devices.Input.MouseDevice::GetForCurrentView()
     def get_for_current_view(cls) -> MouseDevice: ...
 
@@ -80,7 +80,7 @@ class MouseEventArgs(winrt.system.Object):
     def mouse_delta(self) -> MouseDelta: ...
 
 @typing.final
-class PenButtonListener_Static(type):
+class PenButtonListener_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Input.PenButtonListener Windows.Devices.Input.PenButtonListener::GetDefault()
     def get_default(cls) -> PenButtonListener: ...
 
@@ -106,7 +106,7 @@ class PenButtonListener(winrt.system.Object, metaclass=PenButtonListener_Static)
     def remove_tail_button_long_pressed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class PenDevice_Static(type):
+class PenDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Input.PenDevice Windows.Devices.Input.PenDevice::GetFromPointerId(System.UInt32)
     def get_from_pointer_id(cls, pointer_id: winrt.system.UInt32, /) -> PenDevice: ...
 
@@ -120,7 +120,7 @@ class PenDevice(winrt.system.Object, metaclass=PenDevice_Static):
     def simple_haptics_controller(self) -> windows_devices_haptics.SimpleHapticsController: ...
 
 @typing.final
-class PenDockListener_Static(type):
+class PenDockListener_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Input.PenDockListener Windows.Devices.Input.PenDockListener::GetDefault()
     def get_default(cls) -> PenDockListener: ...
 
@@ -162,7 +162,7 @@ class PenUndockedEventArgs(winrt.system.Object):
     pass
 
 @typing.final
-class PointerDevice_Static(type):
+class PointerDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Input.PointerDevice Windows.Devices.Input.PointerDevice::GetPointerDevice(System.UInt32)
     def get_pointer_device(cls, pointer_id: winrt.system.UInt32, /) -> PointerDevice: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Input.PointerDevice> Windows.Devices.Input.PointerDevice::GetPointerDevices()

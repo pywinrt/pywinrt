@@ -27,7 +27,7 @@ class ImageScannerResolution:
     def __init__(self, dpi_x: winrt.system.Single = 0, dpi_y: winrt.system.Single = 0) -> None: ...
 
 @typing.final
-class ImageScanner_Static(type):
+class ImageScanner_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Scanners.ImageScanner> Windows.Devices.Scanners.ImageScanner::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[ImageScanner]: ...
     # System.String Windows.Devices.Scanners.ImageScanner::GetDeviceSelector()

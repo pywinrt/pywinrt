@@ -67,7 +67,7 @@ class DesignerAppView(winrt.system.Object, windows_foundation.IClosable):
     @_property
     def view_state(self) -> DesignerAppViewState: ...
 
-class DesktopWindowXamlSource_Static(type):
+class DesktopWindowXamlSource_Static(winrt._winrt.IInspectable_Static):
     pass
 
 class DesktopWindowXamlSource(winrt.system.Object, windows_foundation.IClosable, metaclass=DesktopWindowXamlSource_Static):
@@ -116,7 +116,7 @@ class DesktopWindowXamlSourceTakeFocusRequestedEventArgs(winrt.system.Object):
     def request(self) -> XamlSourceFocusNavigationRequest: ...
 
 @typing.final
-class ElementCompositionPreview_Static(type):
+class ElementCompositionPreview_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Hosting.ElementCompositionPreview::GetAppWindowContent(Windows.UI.WindowManagement.AppWindow)
     def get_app_window_content(cls, app_window: windows_ui_windowmanagement.AppWindow, /) -> windows_ui_xaml.UIElement: ...
     # Windows.UI.Composition.Visual Windows.UI.Xaml.Hosting.ElementCompositionPreview::GetElementChildVisual(Windows.UI.Xaml.UIElement)
@@ -143,7 +143,7 @@ class ElementCompositionPreview(winrt.system.Object, metaclass=ElementCompositio
     pass
 
 @typing.final
-class WindowsXamlManager_Static(type):
+class WindowsXamlManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Xaml.Hosting.WindowsXamlManager Windows.UI.Xaml.Hosting.WindowsXamlManager::InitializeForCurrentThread()
     def initialize_for_current_thread(cls) -> WindowsXamlManager: ...
 
@@ -180,7 +180,7 @@ class XamlSourceFocusNavigationResult(winrt.system.Object):
     def was_focus_moved(self) -> bool: ...
 
 @typing.final
-class XamlUIPresenter_Static(type):
+class XamlUIPresenter_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.Rect Windows.UI.Xaml.Hosting.XamlUIPresenter::GetFlyoutPlacement(Windows.Foundation.Rect,Windows.Foundation.Size,Windows.Foundation.Size,Windows.Foundation.Rect,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,System.Boolean,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode&)
     def get_flyout_placement(cls, placement_target_bounds: windows_foundation.Rect, control_size: windows_foundation.Size, min_control_size: windows_foundation.Size, container_rect: windows_foundation.Rect, target_preferred_placement: windows_ui_xaml_controls_primitives.FlyoutPlacementMode, allow_fallbacks: bool, /) -> typing.Tuple[windows_foundation.Rect, windows_ui_xaml_controls_primitives.FlyoutPlacementMode]: ...
     # Windows.Foundation.Rect Windows.UI.Xaml.Hosting.XamlUIPresenter::GetFlyoutPlacementTargetInfo(Windows.UI.Xaml.FrameworkElement,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode,Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode&,System.Boolean&)

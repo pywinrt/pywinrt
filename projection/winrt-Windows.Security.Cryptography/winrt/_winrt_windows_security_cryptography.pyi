@@ -16,7 +16,7 @@ from winrt.windows.security.cryptography import BinaryStringEncoding
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CryptographicBuffer_Static(type):
+class CryptographicBuffer_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.Security.Cryptography.CryptographicBuffer::Compare(Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     def compare(cls, object1: windows_storage_streams.IBuffer, object2: windows_storage_streams.IBuffer, /) -> bool: ...
     # System.String Windows.Security.Cryptography.CryptographicBuffer::ConvertBinaryToString(Windows.Security.Cryptography.BinaryStringEncoding,Windows.Storage.Streams.IBuffer)

@@ -97,7 +97,7 @@ class WidgetInfo(winrt.system.Object):
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
-class WidgetManager_Static(type):
+class WidgetManager_Static(winrt._winrt.IInspectable_Static):
     # Microsoft.Windows.Widgets.Providers.WidgetManager Microsoft.Windows.Widgets.Providers.WidgetManager::GetDefault()
     def get_default(cls) -> WidgetManager: ...
 
@@ -115,7 +115,7 @@ class WidgetManager(winrt.system.Object, IWidgetManager, metaclass=WidgetManager
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
 
 @typing.final
-class WidgetUpdateRequestOptions_Static(type):
+class WidgetUpdateRequestOptions_Static(winrt._winrt.IInspectable_Static):
     # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_UnsetValue()
     @_property
     def unset_value(cls) -> str: ...

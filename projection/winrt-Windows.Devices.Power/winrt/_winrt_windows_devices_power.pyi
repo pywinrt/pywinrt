@@ -16,7 +16,7 @@ import winrt.windows.system.power as windows_system_power
 Self = typing.TypeVar('Self')
 
 @typing.final
-class Battery_Static(type):
+class Battery_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Power.Battery> Windows.Devices.Power.Battery::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Battery]: ...
     # System.String Windows.Devices.Power.Battery::GetDeviceSelector()
@@ -65,7 +65,7 @@ class PowerGridData(winrt.system.Object):
     def severity(self) -> winrt.system.Double: ...
 
 @typing.final
-class PowerGridForecast_Static(type):
+class PowerGridForecast_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.Power.PowerGridForecast Windows.Devices.Power.PowerGridForecast::GetForecast()
     def get_forecast(cls) -> PowerGridForecast: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Power.PowerGridForecast::add_ForecastUpdated(Windows.Foundation.EventHandler`1<System.Object>)

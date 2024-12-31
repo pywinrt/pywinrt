@@ -14,7 +14,7 @@ import winrt.windows.foundation as windows_foundation
 Self = typing.TypeVar('Self')
 
 @typing.final
-class VibrationDevice_Static(type):
+class VibrationDevice_Static(winrt._winrt.IInspectable_Static):
     # Windows.Phone.Devices.Notification.VibrationDevice Windows.Phone.Devices.Notification.VibrationDevice::GetDefault()
     def get_default(cls) -> VibrationDevice: ...
 

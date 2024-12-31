@@ -18,7 +18,7 @@ from winrt.microsoft.windows.applicationmodel.resources import ResourceCandidate
 Self = typing.TypeVar('Self')
 
 @typing.final
-class KnownResourceQualifierName_Static(type):
+class KnownResourceQualifierName_Static(winrt._winrt.IInspectable_Static):
     # System.String Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName::get_Contrast()
     @_property
     def contrast(cls) -> str: ...
@@ -77,7 +77,7 @@ class ResourceContext(winrt.system.Object, IResourceContext):
     def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
 
 @typing.final
-class ResourceLoader_Static(type):
+class ResourceLoader_Static(winrt._winrt.IInspectable_Static):
     # System.String Microsoft.Windows.ApplicationModel.Resources.ResourceLoader::GetDefaultResourceFilePath()
     def get_default_resource_file_path(cls) -> str: ...
 

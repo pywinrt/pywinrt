@@ -21141,6 +21141,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -21154,37 +21160,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ESim_type{py::register_python_type(module.get(), &type_spec_ESim, object_bases.get(), nullptr)};
+    py::pytype_handle ESim_type{py::register_python_type(module.get(), &type_spec_ESim, object_bases.get(), inspectable_meta_type)};
     if (!ESim_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_ESimAddedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ESimAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_ESimAddedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ESimAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimDiscoverEvent_type{py::register_python_type(module.get(), &type_spec_ESimDiscoverEvent, object_bases.get(), nullptr)};
+    py::pytype_handle ESimDiscoverEvent_type{py::register_python_type(module.get(), &type_spec_ESimDiscoverEvent, object_bases.get(), inspectable_meta_type)};
     if (!ESimDiscoverEvent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimDiscoverResult_type{py::register_python_type(module.get(), &type_spec_ESimDiscoverResult, object_bases.get(), nullptr)};
+    py::pytype_handle ESimDiscoverResult_type{py::register_python_type(module.get(), &type_spec_ESimDiscoverResult, object_bases.get(), inspectable_meta_type)};
     if (!ESimDiscoverResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimDownloadProfileMetadataResult_type{py::register_python_type(module.get(), &type_spec_ESimDownloadProfileMetadataResult, object_bases.get(), nullptr)};
+    py::pytype_handle ESimDownloadProfileMetadataResult_type{py::register_python_type(module.get(), &type_spec_ESimDownloadProfileMetadataResult, object_bases.get(), inspectable_meta_type)};
     if (!ESimDownloadProfileMetadataResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ESimManager_Static{PyType_FromSpec(&type_spec_ESimManager_Static)};
+    py::pyobj_handle ESimManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ESimManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ESimManager_Static{PyType_FromSpecWithBases(&type_spec_ESimManager_Static, ESimManager_Static_bases.get())};
     if (!type_ESimManager_Static)
     {
         return nullptr;
@@ -21196,61 +21208,67 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ESimOperationResult_type{py::register_python_type(module.get(), &type_spec_ESimOperationResult, object_bases.get(), nullptr)};
+    py::pytype_handle ESimOperationResult_type{py::register_python_type(module.get(), &type_spec_ESimOperationResult, object_bases.get(), inspectable_meta_type)};
     if (!ESimOperationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimPolicy_type{py::register_python_type(module.get(), &type_spec_ESimPolicy, object_bases.get(), nullptr)};
+    py::pytype_handle ESimPolicy_type{py::register_python_type(module.get(), &type_spec_ESimPolicy, object_bases.get(), inspectable_meta_type)};
     if (!ESimPolicy_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimProfile_type{py::register_python_type(module.get(), &type_spec_ESimProfile, object_bases.get(), nullptr)};
+    py::pytype_handle ESimProfile_type{py::register_python_type(module.get(), &type_spec_ESimProfile, object_bases.get(), inspectable_meta_type)};
     if (!ESimProfile_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimProfileMetadata_type{py::register_python_type(module.get(), &type_spec_ESimProfileMetadata, object_bases.get(), nullptr)};
+    py::pytype_handle ESimProfileMetadata_type{py::register_python_type(module.get(), &type_spec_ESimProfileMetadata, object_bases.get(), inspectable_meta_type)};
     if (!ESimProfileMetadata_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimProfilePolicy_type{py::register_python_type(module.get(), &type_spec_ESimProfilePolicy, object_bases.get(), nullptr)};
+    py::pytype_handle ESimProfilePolicy_type{py::register_python_type(module.get(), &type_spec_ESimProfilePolicy, object_bases.get(), inspectable_meta_type)};
     if (!ESimProfilePolicy_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_ESimRemovedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ESimRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_ESimRemovedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ESimRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimServiceInfo_type{py::register_python_type(module.get(), &type_spec_ESimServiceInfo, object_bases.get(), nullptr)};
+    py::pytype_handle ESimServiceInfo_type{py::register_python_type(module.get(), &type_spec_ESimServiceInfo, object_bases.get(), inspectable_meta_type)};
     if (!ESimServiceInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ESimUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ESimUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ESimUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ESimUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ESimWatcher_type{py::register_python_type(module.get(), &type_spec_ESimWatcher, object_bases.get(), nullptr)};
+    py::pytype_handle ESimWatcher_type{py::register_python_type(module.get(), &type_spec_ESimWatcher, object_bases.get(), inspectable_meta_type)};
     if (!ESimWatcher_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FdnAccessManager_Static{PyType_FromSpec(&type_spec_FdnAccessManager_Static)};
+    py::pyobj_handle FdnAccessManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FdnAccessManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FdnAccessManager_Static{PyType_FromSpecWithBases(&type_spec_FdnAccessManager_Static, FdnAccessManager_Static_bases.get())};
     if (!type_FdnAccessManager_Static)
     {
         return nullptr;
@@ -21262,7 +21280,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_HotspotAuthenticationContext_Static{PyType_FromSpec(&type_spec_HotspotAuthenticationContext_Static)};
+    py::pyobj_handle HotspotAuthenticationContext_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!HotspotAuthenticationContext_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HotspotAuthenticationContext_Static{PyType_FromSpecWithBases(&type_spec_HotspotAuthenticationContext_Static, HotspotAuthenticationContext_Static_bases.get())};
     if (!type_HotspotAuthenticationContext_Static)
     {
         return nullptr;
@@ -21274,19 +21298,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle HotspotAuthenticationEventDetails_type{py::register_python_type(module.get(), &type_spec_HotspotAuthenticationEventDetails, object_bases.get(), nullptr)};
+    py::pytype_handle HotspotAuthenticationEventDetails_type{py::register_python_type(module.get(), &type_spec_HotspotAuthenticationEventDetails, object_bases.get(), inspectable_meta_type)};
     if (!HotspotAuthenticationEventDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HotspotCredentialsAuthenticationResult_type{py::register_python_type(module.get(), &type_spec_HotspotCredentialsAuthenticationResult, object_bases.get(), nullptr)};
+    py::pytype_handle HotspotCredentialsAuthenticationResult_type{py::register_python_type(module.get(), &type_spec_HotspotCredentialsAuthenticationResult, object_bases.get(), inspectable_meta_type)};
     if (!HotspotCredentialsAuthenticationResult_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownCSimFilePaths_Static{PyType_FromSpec(&type_spec_KnownCSimFilePaths_Static)};
+    py::pyobj_handle KnownCSimFilePaths_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownCSimFilePaths_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownCSimFilePaths_Static{PyType_FromSpecWithBases(&type_spec_KnownCSimFilePaths_Static, KnownCSimFilePaths_Static_bases.get())};
     if (!type_KnownCSimFilePaths_Static)
     {
         return nullptr;
@@ -21298,7 +21328,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownRuimFilePaths_Static{PyType_FromSpec(&type_spec_KnownRuimFilePaths_Static)};
+    py::pyobj_handle KnownRuimFilePaths_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownRuimFilePaths_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownRuimFilePaths_Static{PyType_FromSpecWithBases(&type_spec_KnownRuimFilePaths_Static, KnownRuimFilePaths_Static_bases.get())};
     if (!type_KnownRuimFilePaths_Static)
     {
         return nullptr;
@@ -21310,7 +21346,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownSimFilePaths_Static{PyType_FromSpec(&type_spec_KnownSimFilePaths_Static)};
+    py::pyobj_handle KnownSimFilePaths_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownSimFilePaths_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownSimFilePaths_Static{PyType_FromSpecWithBases(&type_spec_KnownSimFilePaths_Static, KnownSimFilePaths_Static_bases.get())};
     if (!type_KnownSimFilePaths_Static)
     {
         return nullptr;
@@ -21322,7 +21364,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KnownUSimFilePaths_Static{PyType_FromSpec(&type_spec_KnownUSimFilePaths_Static)};
+    py::pyobj_handle KnownUSimFilePaths_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!KnownUSimFilePaths_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KnownUSimFilePaths_Static{PyType_FromSpecWithBases(&type_spec_KnownUSimFilePaths_Static, KnownUSimFilePaths_Static_bases.get())};
     if (!type_KnownUSimFilePaths_Static)
     {
         return nullptr;
@@ -21334,7 +21382,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MobileBroadbandAccount_Static{PyType_FromSpec(&type_spec_MobileBroadbandAccount_Static)};
+    py::pyobj_handle MobileBroadbandAccount_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MobileBroadbandAccount_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MobileBroadbandAccount_Static{PyType_FromSpecWithBases(&type_spec_MobileBroadbandAccount_Static, MobileBroadbandAccount_Static_bases.get())};
     if (!type_MobileBroadbandAccount_Static)
     {
         return nullptr;
@@ -21346,133 +21400,139 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandAccountEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandAccountEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandAccountEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandAccountUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandAccountUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandAccountUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandAccountWatcher_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountWatcher, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandAccountWatcher_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountWatcher, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandAccountWatcher_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandAntennaSar_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandAntennaSar, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandAntennaSar_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandAntennaSar, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandAntennaSar_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandCellCdma_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellCdma, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandCellCdma_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellCdma, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandCellCdma_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandCellGsm_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellGsm, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandCellGsm_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellGsm, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandCellGsm_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandCellLte_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellLte, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandCellLte_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellLte, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandCellLte_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandCellNR_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellNR, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandCellNR_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellNR, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandCellNR_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandCellTdscdma_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellTdscdma, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandCellTdscdma_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellTdscdma, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandCellTdscdma_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandCellUmts_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellUmts, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandCellUmts_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellUmts, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandCellUmts_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandCellsInfo_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellsInfo, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandCellsInfo_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCellsInfo, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandCellsInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandCurrentSlotIndexChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandCurrentSlotIndexChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandCurrentSlotIndexChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceInformation_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceInformation, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceInformation_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceInformation, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceService_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceService, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceService_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceService, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceService_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceServiceCommandEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceServiceCommandEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceServiceCommandEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceServiceCommandResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandResult, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceServiceCommandResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandResult, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceServiceCommandResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceServiceCommandSession_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandSession, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceServiceCommandSession_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandSession, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceServiceCommandSession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceServiceDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceServiceDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceServiceDataReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceServiceDataSession_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceDataSession, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceServiceDataSession_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceDataSession, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceServiceDataSession_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceServiceInformation_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceInformation, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceServiceInformation_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceInformation, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceServiceInformation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandDeviceServiceTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandDeviceServiceTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandDeviceServiceTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MobileBroadbandModem_Static{PyType_FromSpec(&type_spec_MobileBroadbandModem_Static)};
+    py::pyobj_handle MobileBroadbandModem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!MobileBroadbandModem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MobileBroadbandModem_Static{PyType_FromSpecWithBases(&type_spec_MobileBroadbandModem_Static, MobileBroadbandModem_Static_bases.get())};
     if (!type_MobileBroadbandModem_Static)
     {
         return nullptr;
@@ -21484,175 +21544,181 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandModemConfiguration_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandModemConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandModemConfiguration_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandModemConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandModemConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandModemIsolation_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandModemIsolation, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandModemIsolation_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandModemIsolation, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandModemIsolation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandNetwork_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandNetwork, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandNetwork_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandNetwork, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandNetwork_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandNetworkRegistrationStateChange_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandNetworkRegistrationStateChange, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandNetworkRegistrationStateChange_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandNetworkRegistrationStateChange, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandNetworkRegistrationStateChange_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandNetworkRegistrationStateChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandNetworkRegistrationStateChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandNetworkRegistrationStateChangeTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPco_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPco, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPco_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPco, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPco_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPcoDataChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPcoDataChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPcoDataChangeTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPin_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPin, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPin_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPin, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPin_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPinLockStateChange_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChange, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPinLockStateChange_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChange, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPinLockStateChange_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPinLockStateChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPinLockStateChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPinLockStateChangeTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPinManager_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinManager, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPinManager_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinManager, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPinManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandPinOperationResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinOperationResult, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandPinOperationResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandPinOperationResult, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandPinOperationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandRadioStateChange_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChange, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandRadioStateChange_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChange, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandRadioStateChange_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandRadioStateChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandRadioStateChangeTriggerDetails_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandRadioStateChangeTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandSarManager_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandSarManager, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandSarManager_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandSarManager, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandSarManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandSlotInfo_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotInfo, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandSlotInfo_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotInfo, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandSlotInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandSlotInfoChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotInfoChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandSlotInfoChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotInfoChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandSlotInfoChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandSlotManager_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotManager, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandSlotManager_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotManager, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandSlotManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandTransmissionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandTransmissionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandTransmissionStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandUicc_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUicc, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandUicc_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUicc, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandUicc_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandUiccApp_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccApp, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandUiccApp_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccApp, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandUiccApp_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandUiccAppReadRecordResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppReadRecordResult, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandUiccAppReadRecordResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppReadRecordResult, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandUiccAppReadRecordResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandUiccAppRecordDetailsResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppRecordDetailsResult, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandUiccAppRecordDetailsResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppRecordDetailsResult, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandUiccAppRecordDetailsResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MobileBroadbandUiccAppsResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppsResult, object_bases.get(), nullptr)};
+    py::pytype_handle MobileBroadbandUiccAppsResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppsResult, object_bases.get(), inspectable_meta_type)};
     if (!MobileBroadbandUiccAppsResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorDataUsageTriggerDetails_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorDataUsageTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorDataUsageTriggerDetails_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorDataUsageTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorDataUsageTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorNotificationEventDetails_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorNotificationEventDetails, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorNotificationEventDetails_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorNotificationEventDetails, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorNotificationEventDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorTetheringAccessPointConfiguration_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringAccessPointConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorTetheringAccessPointConfiguration_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringAccessPointConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorTetheringAccessPointConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorTetheringClient_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringClient, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorTetheringClient_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringClient, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorTetheringClient_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NetworkOperatorTetheringManager_Static{PyType_FromSpec(&type_spec_NetworkOperatorTetheringManager_Static)};
+    py::pyobj_handle NetworkOperatorTetheringManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!NetworkOperatorTetheringManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NetworkOperatorTetheringManager_Static{PyType_FromSpecWithBases(&type_spec_NetworkOperatorTetheringManager_Static, NetworkOperatorTetheringManager_Static_bases.get())};
     if (!type_NetworkOperatorTetheringManager_Static)
     {
         return nullptr;
@@ -21664,31 +21730,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorTetheringOperationResult_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringOperationResult, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorTetheringOperationResult_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringOperationResult, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorTetheringOperationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NetworkOperatorTetheringSessionAccessPointConfiguration_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringSessionAccessPointConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle NetworkOperatorTetheringSessionAccessPointConfiguration_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringSessionAccessPointConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!NetworkOperatorTetheringSessionAccessPointConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProvisionFromXmlDocumentResults_type{py::register_python_type(module.get(), &type_spec_ProvisionFromXmlDocumentResults, object_bases.get(), nullptr)};
+    py::pytype_handle ProvisionFromXmlDocumentResults_type{py::register_python_type(module.get(), &type_spec_ProvisionFromXmlDocumentResults, object_bases.get(), inspectable_meta_type)};
     if (!ProvisionFromXmlDocumentResults_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProvisionedProfile_type{py::register_python_type(module.get(), &type_spec_ProvisionedProfile, object_bases.get(), nullptr)};
+    py::pytype_handle ProvisionedProfile_type{py::register_python_type(module.get(), &type_spec_ProvisionedProfile, object_bases.get(), inspectable_meta_type)};
     if (!ProvisionedProfile_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ProvisioningAgent_Static{PyType_FromSpec(&type_spec_ProvisioningAgent_Static)};
+    py::pyobj_handle ProvisioningAgent_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ProvisioningAgent_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ProvisioningAgent_Static{PyType_FromSpecWithBases(&type_spec_ProvisioningAgent_Static, ProvisioningAgent_Static_bases.get())};
     if (!type_ProvisioningAgent_Static)
     {
         return nullptr;
@@ -21700,25 +21772,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TetheringEntitlementCheckTriggerDetails_type{py::register_python_type(module.get(), &type_spec_TetheringEntitlementCheckTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle TetheringEntitlementCheckTriggerDetails_type{py::register_python_type(module.get(), &type_spec_TetheringEntitlementCheckTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!TetheringEntitlementCheckTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UssdMessage_type{py::register_python_type(module.get(), &type_spec_UssdMessage, object_bases.get(), nullptr)};
+    py::pytype_handle UssdMessage_type{py::register_python_type(module.get(), &type_spec_UssdMessage, object_bases.get(), inspectable_meta_type)};
     if (!UssdMessage_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UssdReply_type{py::register_python_type(module.get(), &type_spec_UssdReply, object_bases.get(), nullptr)};
+    py::pytype_handle UssdReply_type{py::register_python_type(module.get(), &type_spec_UssdReply, object_bases.get(), inspectable_meta_type)};
     if (!UssdReply_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_UssdSession_Static{PyType_FromSpec(&type_spec_UssdSession_Static)};
+    py::pyobj_handle UssdSession_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!UssdSession_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UssdSession_Static{PyType_FromSpecWithBases(&type_spec_UssdSession_Static, UssdSession_Static_bases.get())};
     if (!type_UssdSession_Static)
     {
         return nullptr;

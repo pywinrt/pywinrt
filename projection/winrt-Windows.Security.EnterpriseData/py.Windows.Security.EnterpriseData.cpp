@@ -4899,6 +4899,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -4912,19 +4918,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BufferProtectUnprotectResult_type{py::register_python_type(module.get(), &type_spec_BufferProtectUnprotectResult, object_bases.get(), nullptr)};
+    py::pytype_handle BufferProtectUnprotectResult_type{py::register_python_type(module.get(), &type_spec_BufferProtectUnprotectResult, object_bases.get(), inspectable_meta_type)};
     if (!BufferProtectUnprotectResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DataProtectionInfo_type{py::register_python_type(module.get(), &type_spec_DataProtectionInfo, object_bases.get(), nullptr)};
+    py::pytype_handle DataProtectionInfo_type{py::register_python_type(module.get(), &type_spec_DataProtectionInfo, object_bases.get(), inspectable_meta_type)};
     if (!DataProtectionInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DataProtectionManager_Static{PyType_FromSpec(&type_spec_DataProtectionManager_Static)};
+    py::pyobj_handle DataProtectionManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!DataProtectionManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DataProtectionManager_Static{PyType_FromSpecWithBases(&type_spec_DataProtectionManager_Static, DataProtectionManager_Static_bases.get())};
     if (!type_DataProtectionManager_Static)
     {
         return nullptr;
@@ -4936,13 +4948,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FileProtectionInfo_type{py::register_python_type(module.get(), &type_spec_FileProtectionInfo, object_bases.get(), nullptr)};
+    py::pytype_handle FileProtectionInfo_type{py::register_python_type(module.get(), &type_spec_FileProtectionInfo, object_bases.get(), inspectable_meta_type)};
     if (!FileProtectionInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FileProtectionManager_Static{PyType_FromSpec(&type_spec_FileProtectionManager_Static)};
+    py::pyobj_handle FileProtectionManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FileProtectionManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FileProtectionManager_Static{PyType_FromSpecWithBases(&type_spec_FileProtectionManager_Static, FileProtectionManager_Static_bases.get())};
     if (!type_FileProtectionManager_Static)
     {
         return nullptr;
@@ -4954,7 +4972,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FileRevocationManager_Static{PyType_FromSpec(&type_spec_FileRevocationManager_Static)};
+    py::pyobj_handle FileRevocationManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FileRevocationManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FileRevocationManager_Static{PyType_FromSpecWithBases(&type_spec_FileRevocationManager_Static, FileRevocationManager_Static_bases.get())};
     if (!type_FileRevocationManager_Static)
     {
         return nullptr;
@@ -4966,55 +4990,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FileUnprotectOptions_type{py::register_python_type(module.get(), &type_spec_FileUnprotectOptions, object_bases.get(), nullptr)};
+    py::pytype_handle FileUnprotectOptions_type{py::register_python_type(module.get(), &type_spec_FileUnprotectOptions, object_bases.get(), inspectable_meta_type)};
     if (!FileUnprotectOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProtectedAccessResumedEventArgs_type{py::register_python_type(module.get(), &type_spec_ProtectedAccessResumedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ProtectedAccessResumedEventArgs_type{py::register_python_type(module.get(), &type_spec_ProtectedAccessResumedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ProtectedAccessResumedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProtectedAccessSuspendingEventArgs_type{py::register_python_type(module.get(), &type_spec_ProtectedAccessSuspendingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ProtectedAccessSuspendingEventArgs_type{py::register_python_type(module.get(), &type_spec_ProtectedAccessSuspendingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ProtectedAccessSuspendingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProtectedContainerExportResult_type{py::register_python_type(module.get(), &type_spec_ProtectedContainerExportResult, object_bases.get(), nullptr)};
+    py::pytype_handle ProtectedContainerExportResult_type{py::register_python_type(module.get(), &type_spec_ProtectedContainerExportResult, object_bases.get(), inspectable_meta_type)};
     if (!ProtectedContainerExportResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProtectedContainerImportResult_type{py::register_python_type(module.get(), &type_spec_ProtectedContainerImportResult, object_bases.get(), nullptr)};
+    py::pytype_handle ProtectedContainerImportResult_type{py::register_python_type(module.get(), &type_spec_ProtectedContainerImportResult, object_bases.get(), inspectable_meta_type)};
     if (!ProtectedContainerImportResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProtectedContentRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_ProtectedContentRevokedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ProtectedContentRevokedEventArgs_type{py::register_python_type(module.get(), &type_spec_ProtectedContentRevokedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ProtectedContentRevokedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProtectedFileCreateResult_type{py::register_python_type(module.get(), &type_spec_ProtectedFileCreateResult, object_bases.get(), nullptr)};
+    py::pytype_handle ProtectedFileCreateResult_type{py::register_python_type(module.get(), &type_spec_ProtectedFileCreateResult, object_bases.get(), inspectable_meta_type)};
     if (!ProtectedFileCreateResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProtectionPolicyAuditInfo_type{py::register_python_type(module.get(), &type_spec_ProtectionPolicyAuditInfo, object_bases.get(), nullptr)};
+    py::pytype_handle ProtectionPolicyAuditInfo_type{py::register_python_type(module.get(), &type_spec_ProtectionPolicyAuditInfo, object_bases.get(), inspectable_meta_type)};
     if (!ProtectionPolicyAuditInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ProtectionPolicyManager_Static{PyType_FromSpec(&type_spec_ProtectionPolicyManager_Static)};
+    py::pyobj_handle ProtectionPolicyManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ProtectionPolicyManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ProtectionPolicyManager_Static{PyType_FromSpecWithBases(&type_spec_ProtectionPolicyManager_Static, ProtectionPolicyManager_Static_bases.get())};
     if (!type_ProtectionPolicyManager_Static)
     {
         return nullptr;
@@ -5026,7 +5056,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ThreadNetworkContext_type{py::register_python_type(module.get(), &type_spec_ThreadNetworkContext, object_bases.get(), nullptr)};
+    py::pytype_handle ThreadNetworkContext_type{py::register_python_type(module.get(), &type_spec_ThreadNetworkContext, object_bases.get(), inspectable_meta_type)};
     if (!ThreadNetworkContext_type)
     {
         return nullptr;

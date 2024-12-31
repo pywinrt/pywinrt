@@ -1430,6 +1430,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1443,7 +1449,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GpioPinProviderValueChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GpioPinProviderValueChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle GpioPinProviderValueChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GpioPinProviderValueChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!GpioPinProviderValueChangedEventArgs_type)
     {
         return nullptr;
@@ -1455,7 +1461,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGpioControllerProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGpioControllerProvider, nullptr))};
+    py::pytype_handle ImplementsIGpioControllerProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIGpioControllerProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIGpioControllerProvider_type)
     {
         return nullptr;
@@ -1472,7 +1478,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGpioPinProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGpioPinProvider, nullptr))};
+    py::pytype_handle ImplementsIGpioPinProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIGpioPinProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIGpioPinProvider_type)
     {
         return nullptr;
@@ -1489,7 +1495,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIGpioProvider_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIGpioProvider, nullptr))};
+    py::pytype_handle ImplementsIGpioProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIGpioProvider, nullptr, inspectable_meta_type)};
     if (!ImplementsIGpioProvider_type)
     {
         return nullptr;

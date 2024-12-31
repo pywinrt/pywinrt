@@ -13,7 +13,7 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 @typing.final
-class InteractiveSession_Static(type):
+class InteractiveSession_Static(winrt._winrt.IInspectable_Static):
     # System.Boolean Windows.System.RemoteDesktop.InteractiveSession::get_IsRemote()
     @_property
     def is_remote(cls) -> bool: ...

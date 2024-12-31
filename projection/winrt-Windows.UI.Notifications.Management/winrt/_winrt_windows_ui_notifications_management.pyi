@@ -18,7 +18,7 @@ from winrt.windows.ui.notifications.management import UserNotificationListenerAc
 Self = typing.TypeVar('Self')
 
 @typing.final
-class UserNotificationListener_Static(type):
+class UserNotificationListener_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Notifications.Management.UserNotificationListener Windows.UI.Notifications.Management.UserNotificationListener::get_Current()
     @_property
     def current(cls) -> UserNotificationListener: ...

@@ -14943,6 +14943,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -14956,55 +14962,61 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CharacterReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CharacterReceivedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CharacterReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CharacterReceivedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CharacterReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContextMenuKeyEventArgs_type{py::register_python_type(module.get(), &type_spec_ContextMenuKeyEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ContextMenuKeyEventArgs_type{py::register_python_type(module.get(), &type_spec_ContextMenuKeyEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ContextMenuKeyEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CrossSlidingEventArgs_type{py::register_python_type(module.get(), &type_spec_CrossSlidingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle CrossSlidingEventArgs_type{py::register_python_type(module.get(), &type_spec_CrossSlidingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!CrossSlidingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DraggingEventArgs_type{py::register_python_type(module.get(), &type_spec_DraggingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle DraggingEventArgs_type{py::register_python_type(module.get(), &type_spec_DraggingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!DraggingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EnteredMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteredMoveSizeEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle EnteredMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteredMoveSizeEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!EnteredMoveSizeEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle EnteringMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteringMoveSizeEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle EnteringMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteringMoveSizeEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!EnteringMoveSizeEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExitedMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_ExitedMoveSizeEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ExitedMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_ExitedMoveSizeEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ExitedMoveSizeEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FocusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_FocusChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FocusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_FocusChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!FocusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FocusNavigationRequest_Static{PyType_FromSpec(&type_spec_FocusNavigationRequest_Static)};
+    py::pyobj_handle FocusNavigationRequest_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!FocusNavigationRequest_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FocusNavigationRequest_Static{PyType_FromSpecWithBases(&type_spec_FocusNavigationRequest_Static, FocusNavigationRequest_Static_bases.get())};
     if (!type_FocusNavigationRequest_Static)
     {
         return nullptr;
@@ -15016,25 +15028,31 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FocusNavigationRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_FocusNavigationRequestEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle FocusNavigationRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_FocusNavigationRequestEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!FocusNavigationRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GestureRecognizer_type{py::register_python_type(module.get(), &type_spec_GestureRecognizer, object_bases.get(), nullptr)};
+    py::pytype_handle GestureRecognizer_type{py::register_python_type(module.get(), &type_spec_GestureRecognizer, object_bases.get(), inspectable_meta_type)};
     if (!GestureRecognizer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HoldingEventArgs_type{py::register_python_type(module.get(), &type_spec_HoldingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HoldingEventArgs_type{py::register_python_type(module.get(), &type_spec_HoldingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HoldingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputObject_Static{PyType_FromSpec(&type_spec_InputObject_Static)};
+    py::pyobj_handle InputObject_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!InputObject_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputObject_Static{PyType_FromSpecWithBases(&type_spec_InputObject_Static, InputObject_Static_bases.get())};
     if (!type_InputObject_Static)
     {
         return nullptr;
@@ -15070,13 +15088,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InputActivationListenerActivationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InputActivationListenerActivationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!InputActivationListenerActivationChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputCursor_Static{PyType_FromSpec(&type_spec_InputCursor_Static)};
+    py::pyobj_handle InputCursor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!InputCursor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputCursor_Static{PyType_FromSpecWithBases(&type_spec_InputCursor_Static, InputCursor_Static_bases.get())};
     if (!type_InputCursor_Static)
     {
         return nullptr;
@@ -15256,13 +15280,19 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InputLightDismissEventArgs_type{py::register_python_type(module.get(), &type_spec_InputLightDismissEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle InputLightDismissEventArgs_type{py::register_python_type(module.get(), &type_spec_InputLightDismissEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!InputLightDismissEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputNonClientPointerSource_Static{PyType_FromSpec(&type_spec_InputNonClientPointerSource_Static)};
+    py::pyobj_handle InputNonClientPointerSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!InputNonClientPointerSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputNonClientPointerSource_Static{PyType_FromSpecWithBases(&type_spec_InputNonClientPointerSource_Static, InputNonClientPointerSource_Static_bases.get())};
     if (!type_InputNonClientPointerSource_Static)
     {
         return nullptr;
@@ -15346,79 +15376,85 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle KeyEventArgs_type{py::register_python_type(module.get(), &type_spec_KeyEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle KeyEventArgs_type{py::register_python_type(module.get(), &type_spec_KeyEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!KeyEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ManipulationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ManipulationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationInertiaStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationInertiaStartingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ManipulationInertiaStartingEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationInertiaStartingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ManipulationInertiaStartingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ManipulationStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ManipulationStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationUpdatedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle ManipulationUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationUpdatedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!ManipulationUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MouseWheelParameters_type{py::register_python_type(module.get(), &type_spec_MouseWheelParameters, object_bases.get(), nullptr)};
+    py::pytype_handle MouseWheelParameters_type{py::register_python_type(module.get(), &type_spec_MouseWheelParameters, object_bases.get(), inspectable_meta_type)};
     if (!MouseWheelParameters_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NonClientCaptionTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_NonClientCaptionTappedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle NonClientCaptionTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_NonClientCaptionTappedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!NonClientCaptionTappedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NonClientPointerEventArgs_type{py::register_python_type(module.get(), &type_spec_NonClientPointerEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle NonClientPointerEventArgs_type{py::register_python_type(module.get(), &type_spec_NonClientPointerEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!NonClientPointerEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NonClientRegionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_NonClientRegionsChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle NonClientRegionsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_NonClientRegionsChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!NonClientRegionsChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointerEventArgs_type{py::register_python_type(module.get(), &type_spec_PointerEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle PointerEventArgs_type{py::register_python_type(module.get(), &type_spec_PointerEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!PointerEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointerPoint_type{py::register_python_type(module.get(), &type_spec_PointerPoint, object_bases.get(), nullptr)};
+    py::pytype_handle PointerPoint_type{py::register_python_type(module.get(), &type_spec_PointerPoint, object_bases.get(), inspectable_meta_type)};
     if (!PointerPoint_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointerPointProperties_type{py::register_python_type(module.get(), &type_spec_PointerPointProperties, object_bases.get(), nullptr)};
+    py::pytype_handle PointerPointProperties_type{py::register_python_type(module.get(), &type_spec_PointerPointProperties, object_bases.get(), inspectable_meta_type)};
     if (!PointerPointProperties_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PointerPredictor_Static{PyType_FromSpec(&type_spec_PointerPredictor_Static)};
+    py::pyobj_handle PointerPredictor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PointerPredictor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PointerPredictor_Static{PyType_FromSpecWithBases(&type_spec_PointerPredictor_Static, PointerPredictor_Static_bases.get())};
     if (!type_PointerPredictor_Static)
     {
         return nullptr;
@@ -15430,25 +15466,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_RightTappedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle RightTappedEventArgs_type{py::register_python_type(module.get(), &type_spec_RightTappedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!RightTappedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TappedEventArgs_type{py::register_python_type(module.get(), &type_spec_TappedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle TappedEventArgs_type{py::register_python_type(module.get(), &type_spec_TappedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!TappedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowRectChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowRectChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WindowRectChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowRectChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowRectChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WindowRectChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowRectChangingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle WindowRectChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowRectChangingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowRectChangingEventArgs_type)
     {
         return nullptr;
@@ -15460,7 +15496,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIPointerPointTransform_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIPointerPointTransform, nullptr))};
+    py::pytype_handle ImplementsIPointerPointTransform_type{py::register_python_type(module.get(), &type_spec_ImplementsIPointerPointTransform, nullptr, inspectable_meta_type)};
     if (!ImplementsIPointerPointTransform_type)
     {
         return nullptr;

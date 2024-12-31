@@ -19,7 +19,7 @@ from winrt.windows.devices.wifi import WiFiAccessStatus, WiFiConnectionMethod, W
 Self = typing.TypeVar('Self')
 
 @typing.final
-class WiFiAdapter_Static(type):
+class WiFiAdapter_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAdapter>> Windows.Devices.WiFi.WiFiAdapter::FindAllAdaptersAsync()
     def find_all_adapters_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[WiFiAdapter]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiAdapter> Windows.Devices.WiFi.WiFiAdapter::FromIdAsync(System.String)
@@ -126,7 +126,7 @@ class WiFiOnDemandHotspotConnectionResult(winrt.system.Object):
     def status(self) -> WiFiOnDemandHotspotConnectStatus: ...
 
 @typing.final
-class WiFiOnDemandHotspotNetwork_Static(type):
+class WiFiOnDemandHotspotNetwork_Static(winrt._winrt.IInspectable_Static):
     # Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork::GetOrCreateById(System.Guid)
     def get_or_create_by_id(cls, network_id: _uuid.UUID, /) -> WiFiOnDemandHotspotNetwork: ...
 

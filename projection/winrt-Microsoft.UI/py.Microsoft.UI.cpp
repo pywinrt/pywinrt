@@ -5603,6 +5603,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5616,7 +5622,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorHelper_Static{PyType_FromSpec(&type_spec_ColorHelper_Static)};
+    py::pyobj_handle ColorHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ColorHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ColorHelper_Static{PyType_FromSpecWithBases(&type_spec_ColorHelper_Static, ColorHelper_Static_bases.get())};
     if (!type_ColorHelper_Static)
     {
         return nullptr;
@@ -5628,7 +5640,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Colors_Static{PyType_FromSpec(&type_spec_Colors_Static)};
+    py::pyobj_handle Colors_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Colors_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Colors_Static{PyType_FromSpecWithBases(&type_spec_Colors_Static, Colors_Static_bases.get())};
     if (!type_Colors_Static)
     {
         return nullptr;
@@ -5646,7 +5664,7 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIClosableNotifier_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIClosableNotifier, nullptr))};
+    py::pytype_handle ImplementsIClosableNotifier_type{py::register_python_type(module.get(), &type_spec_ImplementsIClosableNotifier, nullptr, inspectable_meta_type)};
     if (!ImplementsIClosableNotifier_type)
     {
         return nullptr;

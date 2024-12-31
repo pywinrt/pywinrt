@@ -277,6 +277,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_preview(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -290,7 +296,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_preview(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PalmRejectionDelayZonePreview_Static{PyType_FromSpec(&type_spec_PalmRejectionDelayZonePreview_Static)};
+    py::pyobj_handle PalmRejectionDelayZonePreview_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PalmRejectionDelayZonePreview_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PalmRejectionDelayZonePreview_Static{PyType_FromSpecWithBases(&type_spec_PalmRejectionDelayZonePreview_Static, PalmRejectionDelayZonePreview_Static_bases.get())};
     if (!type_PalmRejectionDelayZonePreview_Static)
     {
         return nullptr;

@@ -3521,6 +3521,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3534,13 +3540,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AppListEntry_type{py::register_python_type(module.get(), &type_spec_AppListEntry, object_bases.get(), nullptr)};
+    py::pytype_handle AppListEntry_type{py::register_python_type(module.get(), &type_spec_AppListEntry, object_bases.get(), inspectable_meta_type)};
     if (!AppListEntry_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CoreApplication_Static{PyType_FromSpec(&type_spec_CoreApplication_Static)};
+    py::pyobj_handle CoreApplication_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!CoreApplication_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CoreApplication_Static{PyType_FromSpecWithBases(&type_spec_CoreApplication_Static, CoreApplication_Static_bases.get())};
     if (!type_CoreApplication_Static)
     {
         return nullptr;
@@ -3552,31 +3564,31 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreApplicationView_type{py::register_python_type(module.get(), &type_spec_CoreApplicationView, object_bases.get(), nullptr)};
+    py::pytype_handle CoreApplicationView_type{py::register_python_type(module.get(), &type_spec_CoreApplicationView, object_bases.get(), inspectable_meta_type)};
     if (!CoreApplicationView_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CoreApplicationViewTitleBar_type{py::register_python_type(module.get(), &type_spec_CoreApplicationViewTitleBar, object_bases.get(), nullptr)};
+    py::pytype_handle CoreApplicationViewTitleBar_type{py::register_python_type(module.get(), &type_spec_CoreApplicationViewTitleBar, object_bases.get(), inspectable_meta_type)};
     if (!CoreApplicationViewTitleBar_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HostedViewClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_HostedViewClosingEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle HostedViewClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_HostedViewClosingEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!HostedViewClosingEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UnhandledError_type{py::register_python_type(module.get(), &type_spec_UnhandledError, object_bases.get(), nullptr)};
+    py::pytype_handle UnhandledError_type{py::register_python_type(module.get(), &type_spec_UnhandledError, object_bases.get(), inspectable_meta_type)};
     if (!UnhandledError_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle UnhandledErrorDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_UnhandledErrorDetectedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle UnhandledErrorDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_UnhandledErrorDetectedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!UnhandledErrorDetectedEventArgs_type)
     {
         return nullptr;
@@ -3588,7 +3600,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsICoreApplicationUnhandledError_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsICoreApplicationUnhandledError, nullptr))};
+    py::pytype_handle ImplementsICoreApplicationUnhandledError_type{py::register_python_type(module.get(), &type_spec_ImplementsICoreApplicationUnhandledError, nullptr, inspectable_meta_type)};
     if (!ImplementsICoreApplicationUnhandledError_type)
     {
         return nullptr;
@@ -3605,7 +3617,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFrameworkView_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFrameworkView, nullptr))};
+    py::pytype_handle ImplementsIFrameworkView_type{py::register_python_type(module.get(), &type_spec_ImplementsIFrameworkView, nullptr, inspectable_meta_type)};
     if (!ImplementsIFrameworkView_type)
     {
         return nullptr;
@@ -3622,7 +3634,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIFrameworkViewSource_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIFrameworkViewSource, nullptr))};
+    py::pytype_handle ImplementsIFrameworkViewSource_type{py::register_python_type(module.get(), &type_spec_ImplementsIFrameworkViewSource, nullptr, inspectable_meta_type)};
     if (!ImplementsIFrameworkViewSource_type)
     {
         return nullptr;

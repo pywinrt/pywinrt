@@ -889,6 +889,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_sharetarget(v
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -902,13 +908,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_sharetarget(v
         return nullptr;
     }
 
-    py::pytype_handle QuickLink_type{py::register_python_type(module.get(), &type_spec_QuickLink, object_bases.get(), nullptr)};
+    py::pytype_handle QuickLink_type{py::register_python_type(module.get(), &type_spec_QuickLink, object_bases.get(), inspectable_meta_type)};
     if (!QuickLink_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShareOperation_type{py::register_python_type(module.get(), &type_spec_ShareOperation, object_bases.get(), nullptr)};
+    py::pytype_handle ShareOperation_type{py::register_python_type(module.get(), &type_spec_ShareOperation, object_bases.get(), inspectable_meta_type)};
     if (!ShareOperation_type)
     {
         return nullptr;

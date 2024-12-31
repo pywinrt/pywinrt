@@ -3349,6 +3349,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning_preview(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3362,37 +3368,43 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning_preview(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImageVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_ImageVariableDescriptorPreview, object_bases.get(), nullptr)};
+    py::pytype_handle ImageVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_ImageVariableDescriptorPreview, object_bases.get(), inspectable_meta_type)};
     if (!ImageVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InferencingOptionsPreview_type{py::register_python_type(module.get(), &type_spec_InferencingOptionsPreview, object_bases.get(), nullptr)};
+    py::pytype_handle InferencingOptionsPreview_type{py::register_python_type(module.get(), &type_spec_InferencingOptionsPreview, object_bases.get(), inspectable_meta_type)};
     if (!InferencingOptionsPreview_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LearningModelBindingPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelBindingPreview, object_bases.get(), nullptr)};
+    py::pytype_handle LearningModelBindingPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelBindingPreview, object_bases.get(), inspectable_meta_type)};
     if (!LearningModelBindingPreview_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LearningModelDescriptionPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelDescriptionPreview, object_bases.get(), nullptr)};
+    py::pytype_handle LearningModelDescriptionPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelDescriptionPreview, object_bases.get(), inspectable_meta_type)};
     if (!LearningModelDescriptionPreview_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LearningModelEvaluationResultPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelEvaluationResultPreview, object_bases.get(), nullptr)};
+    py::pytype_handle LearningModelEvaluationResultPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelEvaluationResultPreview, object_bases.get(), inspectable_meta_type)};
     if (!LearningModelEvaluationResultPreview_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LearningModelPreview_Static{PyType_FromSpec(&type_spec_LearningModelPreview_Static)};
+    py::pyobj_handle LearningModelPreview_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!LearningModelPreview_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LearningModelPreview_Static{PyType_FromSpecWithBases(&type_spec_LearningModelPreview_Static, LearningModelPreview_Static_bases.get())};
     if (!type_LearningModelPreview_Static)
     {
         return nullptr;
@@ -3404,25 +3416,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning_preview(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LearningModelVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelVariableDescriptorPreview, object_bases.get(), nullptr)};
+    py::pytype_handle LearningModelVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_LearningModelVariableDescriptorPreview, object_bases.get(), inspectable_meta_type)};
     if (!LearningModelVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_MapVariableDescriptorPreview, object_bases.get(), nullptr)};
+    py::pytype_handle MapVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_MapVariableDescriptorPreview, object_bases.get(), inspectable_meta_type)};
     if (!MapVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SequenceVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_SequenceVariableDescriptorPreview, object_bases.get(), nullptr)};
+    py::pytype_handle SequenceVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_SequenceVariableDescriptorPreview, object_bases.get(), inspectable_meta_type)};
     if (!SequenceVariableDescriptorPreview_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TensorVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_TensorVariableDescriptorPreview, object_bases.get(), nullptr)};
+    py::pytype_handle TensorVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_TensorVariableDescriptorPreview, object_bases.get(), inspectable_meta_type)};
     if (!TensorVariableDescriptorPreview_type)
     {
         return nullptr;
@@ -3434,7 +3446,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning_preview(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsILearningModelVariableDescriptorPreview_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsILearningModelVariableDescriptorPreview, nullptr))};
+    py::pytype_handle ImplementsILearningModelVariableDescriptorPreview_type{py::register_python_type(module.get(), &type_spec_ImplementsILearningModelVariableDescriptorPreview, nullptr, inspectable_meta_type)};
     if (!ImplementsILearningModelVariableDescriptorPreview_type)
     {
         return nullptr;

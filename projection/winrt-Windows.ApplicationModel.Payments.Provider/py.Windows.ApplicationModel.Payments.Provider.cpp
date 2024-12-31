@@ -1006,6 +1006,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -1019,13 +1025,19 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
         return nullptr;
     }
 
-    py::pytype_handle PaymentAppCanMakePaymentTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PaymentAppCanMakePaymentTriggerDetails, object_bases.get(), nullptr)};
+    py::pytype_handle PaymentAppCanMakePaymentTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PaymentAppCanMakePaymentTriggerDetails, object_bases.get(), inspectable_meta_type)};
     if (!PaymentAppCanMakePaymentTriggerDetails_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PaymentAppManager_Static{PyType_FromSpec(&type_spec_PaymentAppManager_Static)};
+    py::pyobj_handle PaymentAppManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PaymentAppManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PaymentAppManager_Static{PyType_FromSpecWithBases(&type_spec_PaymentAppManager_Static, PaymentAppManager_Static_bases.get())};
     if (!type_PaymentAppManager_Static)
     {
         return nullptr;
@@ -1037,7 +1049,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
         return nullptr;
     }
 
-    py::pyobj_handle type_PaymentTransaction_Static{PyType_FromSpec(&type_spec_PaymentTransaction_Static)};
+    py::pyobj_handle PaymentTransaction_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!PaymentTransaction_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PaymentTransaction_Static{PyType_FromSpecWithBases(&type_spec_PaymentTransaction_Static, PaymentTransaction_Static_bases.get())};
     if (!type_PaymentTransaction_Static)
     {
         return nullptr;
@@ -1049,7 +1067,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
         return nullptr;
     }
 
-    py::pytype_handle PaymentTransactionAcceptResult_type{py::register_python_type(module.get(), &type_spec_PaymentTransactionAcceptResult, object_bases.get(), nullptr)};
+    py::pytype_handle PaymentTransactionAcceptResult_type{py::register_python_type(module.get(), &type_spec_PaymentTransactionAcceptResult, object_bases.get(), inspectable_meta_type)};
     if (!PaymentTransactionAcceptResult_type)
     {
         return nullptr;

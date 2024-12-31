@@ -19,7 +19,7 @@ from winrt.windows.data.pdf import PdfPageRotation
 Self = typing.TypeVar('Self')
 
 @typing.final
-class PdfDocument_Static(type):
+class PdfDocument_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromFileAsync(Windows.Storage.IStorageFile)
     def load_from_file_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[PdfDocument]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromFileAsync(Windows.Storage.IStorageFile,System.String)

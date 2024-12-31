@@ -18,7 +18,7 @@ from winrt.windows.media.playlists import PlaylistFormat
 Self = typing.TypeVar('Self')
 
 @typing.final
-class Playlist_Static(type):
+class Playlist_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Playlists.Playlist> Windows.Media.Playlists.Playlist::LoadAsync(Windows.Storage.IStorageFile)
     def load_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[Playlist]: ...
 

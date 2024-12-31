@@ -15,7 +15,7 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DeviceLockdownProfile_Static(type):
+class DeviceLockdownProfile_Static(winrt._winrt.IInspectable_Static):
     # Windows.Foundation.IAsyncAction Windows.Embedded.DeviceLockdown.DeviceLockdownProfile::ApplyLockdownProfileAsync(System.Guid)
     def apply_lockdown_profile_async(cls, profile_id: _uuid.UUID, /) -> windows_foundation.IAsyncAction: ...
     # System.Guid Windows.Embedded.DeviceLockdown.DeviceLockdownProfile::GetCurrentLockdownProfile()

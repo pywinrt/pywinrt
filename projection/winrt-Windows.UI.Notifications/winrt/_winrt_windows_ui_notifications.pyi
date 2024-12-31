@@ -56,7 +56,7 @@ class BadgeNotification(winrt.system.Object):
     def content(self) -> windows_data_xml_dom.XmlDocument: ...
 
 @typing.final
-class BadgeUpdateManager_Static(type):
+class BadgeUpdateManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManager::CreateBadgeUpdaterForApplication()
     def create_badge_updater_for_application(cls) -> BadgeUpdater: ...
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManager::CreateBadgeUpdaterForApplication(System.String)
@@ -98,7 +98,7 @@ class BadgeUpdater(winrt.system.Object):
     def update(self, notification: BadgeNotification, /) -> None: ...
 
 @typing.final
-class KnownAdaptiveNotificationHints_Static(type):
+class KnownAdaptiveNotificationHints_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.Notifications.KnownAdaptiveNotificationHints::get_Align()
     @_property
     def align(cls) -> str: ...
@@ -123,7 +123,7 @@ class KnownAdaptiveNotificationHints(winrt.system.Object, metaclass=KnownAdaptiv
     pass
 
 @typing.final
-class KnownAdaptiveNotificationTextStyles_Static(type):
+class KnownAdaptiveNotificationTextStyles_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles::get_Base()
     @_property
     def base(cls) -> str: ...
@@ -187,7 +187,7 @@ class KnownAdaptiveNotificationTextStyles(winrt.system.Object, metaclass=KnownAd
     pass
 
 @typing.final
-class KnownNotificationBindings_Static(type):
+class KnownNotificationBindings_Static(winrt._winrt.IInspectable_Static):
     # System.String Windows.UI.Notifications.KnownNotificationBindings::get_ToastGeneric()
     @_property
     def toast_generic(cls) -> str: ...
@@ -387,7 +387,7 @@ class TileFlyoutNotification(winrt.system.Object):
     def content(self) -> windows_data_xml_dom.XmlDocument: ...
 
 @typing.final
-class TileFlyoutUpdateManager_Static(type):
+class TileFlyoutUpdateManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Notifications.TileFlyoutUpdater Windows.UI.Notifications.TileFlyoutUpdateManager::CreateTileFlyoutUpdaterForApplication()
     def create_tile_flyout_updater_for_application(cls) -> TileFlyoutUpdater: ...
     # Windows.UI.Notifications.TileFlyoutUpdater Windows.UI.Notifications.TileFlyoutUpdateManager::CreateTileFlyoutUpdaterForApplication(System.String)
@@ -437,7 +437,7 @@ class TileNotification(winrt.system.Object):
     def content(self) -> windows_data_xml_dom.XmlDocument: ...
 
 @typing.final
-class TileUpdateManager_Static(type):
+class TileUpdateManager_Static(winrt._winrt.IInspectable_Static):
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManager::CreateTileUpdaterForApplication()
     def create_tile_updater_for_application(cls) -> TileUpdater: ...
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManager::CreateTileUpdaterForApplication(System.String)
@@ -677,7 +677,7 @@ class ToastNotificationHistoryChangedTriggerDetail(winrt.system.Object):
     def collection_id(self) -> str: ...
 
 @typing.final
-class ToastNotificationManager_Static(type):
+class ToastNotificationManager_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.Notifications.ToastNotificationManager::ConfigureNotificationMirroring(Windows.UI.Notifications.NotificationMirroring)
     def configure_notification_mirroring(cls, value: NotificationMirroring, /) -> None: ...
     # Windows.UI.Notifications.ToastNotifier Windows.UI.Notifications.ToastNotificationManager::CreateToastNotifier()

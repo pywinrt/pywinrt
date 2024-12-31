@@ -3828,6 +3828,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices_core(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -3841,91 +3847,91 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CameraIntrinsics_type{py::register_python_type(module.get(), &type_spec_CameraIntrinsics, object_bases.get(), nullptr)};
+    py::pytype_handle CameraIntrinsics_type{py::register_python_type(module.get(), &type_spec_CameraIntrinsics, object_bases.get(), inspectable_meta_type)};
     if (!CameraIntrinsics_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DepthCorrelatedCoordinateMapper_type{py::register_python_type(module.get(), &type_spec_DepthCorrelatedCoordinateMapper, object_bases.get(), nullptr)};
+    py::pytype_handle DepthCorrelatedCoordinateMapper_type{py::register_python_type(module.get(), &type_spec_DepthCorrelatedCoordinateMapper, object_bases.get(), inspectable_meta_type)};
     if (!DepthCorrelatedCoordinateMapper_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameControlCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameControlCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle FrameControlCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameControlCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!FrameControlCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameController_type{py::register_python_type(module.get(), &type_spec_FrameController, object_bases.get(), nullptr)};
+    py::pytype_handle FrameController_type{py::register_python_type(module.get(), &type_spec_FrameController, object_bases.get(), inspectable_meta_type)};
     if (!FrameController_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameExposureCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameExposureCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle FrameExposureCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameExposureCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!FrameExposureCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameExposureCompensationCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameExposureCompensationCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle FrameExposureCompensationCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameExposureCompensationCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!FrameExposureCompensationCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameExposureCompensationControl_type{py::register_python_type(module.get(), &type_spec_FrameExposureCompensationControl, object_bases.get(), nullptr)};
+    py::pytype_handle FrameExposureCompensationControl_type{py::register_python_type(module.get(), &type_spec_FrameExposureCompensationControl, object_bases.get(), inspectable_meta_type)};
     if (!FrameExposureCompensationControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameExposureControl_type{py::register_python_type(module.get(), &type_spec_FrameExposureControl, object_bases.get(), nullptr)};
+    py::pytype_handle FrameExposureControl_type{py::register_python_type(module.get(), &type_spec_FrameExposureControl, object_bases.get(), inspectable_meta_type)};
     if (!FrameExposureControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameFlashCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameFlashCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle FrameFlashCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameFlashCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!FrameFlashCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameFlashControl_type{py::register_python_type(module.get(), &type_spec_FrameFlashControl, object_bases.get(), nullptr)};
+    py::pytype_handle FrameFlashControl_type{py::register_python_type(module.get(), &type_spec_FrameFlashControl, object_bases.get(), inspectable_meta_type)};
     if (!FrameFlashControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameFocusCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameFocusCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle FrameFocusCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameFocusCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!FrameFocusCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameFocusControl_type{py::register_python_type(module.get(), &type_spec_FrameFocusControl, object_bases.get(), nullptr)};
+    py::pytype_handle FrameFocusControl_type{py::register_python_type(module.get(), &type_spec_FrameFocusControl, object_bases.get(), inspectable_meta_type)};
     if (!FrameFocusControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameIsoSpeedCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameIsoSpeedCapabilities, object_bases.get(), nullptr)};
+    py::pytype_handle FrameIsoSpeedCapabilities_type{py::register_python_type(module.get(), &type_spec_FrameIsoSpeedCapabilities, object_bases.get(), inspectable_meta_type)};
     if (!FrameIsoSpeedCapabilities_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameIsoSpeedControl_type{py::register_python_type(module.get(), &type_spec_FrameIsoSpeedControl, object_bases.get(), nullptr)};
+    py::pytype_handle FrameIsoSpeedControl_type{py::register_python_type(module.get(), &type_spec_FrameIsoSpeedControl, object_bases.get(), inspectable_meta_type)};
     if (!FrameIsoSpeedControl_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VariablePhotoSequenceController_type{py::register_python_type(module.get(), &type_spec_VariablePhotoSequenceController, object_bases.get(), nullptr)};
+    py::pytype_handle VariablePhotoSequenceController_type{py::register_python_type(module.get(), &type_spec_VariablePhotoSequenceController, object_bases.get(), inspectable_meta_type)};
     if (!VariablePhotoSequenceController_type)
     {
         return nullptr;

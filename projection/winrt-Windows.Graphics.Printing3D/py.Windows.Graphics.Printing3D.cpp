@@ -7604,6 +7604,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -7617,7 +7623,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Print3DManager_Static{PyType_FromSpec(&type_spec_Print3DManager_Static)};
+    py::pyobj_handle Print3DManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Print3DManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Print3DManager_Static{PyType_FromSpecWithBases(&type_spec_Print3DManager_Static, Print3DManager_Static_bases.get())};
     if (!type_Print3DManager_Static)
     {
         return nullptr;
@@ -7629,43 +7641,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Print3DTask_type{py::register_python_type(module.get(), &type_spec_Print3DTask, object_bases.get(), nullptr)};
+    py::pytype_handle Print3DTask_type{py::register_python_type(module.get(), &type_spec_Print3DTask, object_bases.get(), inspectable_meta_type)};
     if (!Print3DTask_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Print3DTaskCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DTaskCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle Print3DTaskCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DTaskCompletedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!Print3DTaskCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Print3DTaskRequest_type{py::register_python_type(module.get(), &type_spec_Print3DTaskRequest, object_bases.get(), nullptr)};
+    py::pytype_handle Print3DTaskRequest_type{py::register_python_type(module.get(), &type_spec_Print3DTaskRequest, object_bases.get(), inspectable_meta_type)};
     if (!Print3DTaskRequest_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Print3DTaskRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DTaskRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle Print3DTaskRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DTaskRequestedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!Print3DTaskRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Print3DTaskSourceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DTaskSourceChangedEventArgs, object_bases.get(), nullptr)};
+    py::pytype_handle Print3DTaskSourceChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DTaskSourceChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!Print3DTaskSourceChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Print3DTaskSourceRequestedArgs_type{py::register_python_type(module.get(), &type_spec_Print3DTaskSourceRequestedArgs, object_bases.get(), nullptr)};
+    py::pytype_handle Print3DTaskSourceRequestedArgs_type{py::register_python_type(module.get(), &type_spec_Print3DTaskSourceRequestedArgs, object_bases.get(), inspectable_meta_type)};
     if (!Print3DTaskSourceRequestedArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Printing3D3MFPackage_Static{PyType_FromSpec(&type_spec_Printing3D3MFPackage_Static)};
+    py::pyobj_handle Printing3D3MFPackage_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Printing3D3MFPackage_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Printing3D3MFPackage_Static{PyType_FromSpecWithBases(&type_spec_Printing3D3MFPackage_Static, Printing3D3MFPackage_Static_bases.get())};
     if (!type_Printing3D3MFPackage_Static)
     {
         return nullptr;
@@ -7677,7 +7695,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Printing3DBaseMaterial_Static{PyType_FromSpec(&type_spec_Printing3DBaseMaterial_Static)};
+    py::pyobj_handle Printing3DBaseMaterial_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!Printing3DBaseMaterial_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Printing3DBaseMaterial_Static{PyType_FromSpecWithBases(&type_spec_Printing3DBaseMaterial_Static, Printing3DBaseMaterial_Static_bases.get())};
     if (!type_Printing3DBaseMaterial_Static)
     {
         return nullptr;
@@ -7689,109 +7713,109 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Printing3DBaseMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DBaseMaterialGroup, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DBaseMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DBaseMaterialGroup, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DBaseMaterialGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DColorMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DColorMaterial, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DColorMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DColorMaterial, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DColorMaterial_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DColorMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DColorMaterialGroup, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DColorMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DColorMaterialGroup, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DColorMaterialGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DComponent_type{py::register_python_type(module.get(), &type_spec_Printing3DComponent, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DComponent_type{py::register_python_type(module.get(), &type_spec_Printing3DComponent, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DComponent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DComponentWithMatrix_type{py::register_python_type(module.get(), &type_spec_Printing3DComponentWithMatrix, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DComponentWithMatrix_type{py::register_python_type(module.get(), &type_spec_Printing3DComponentWithMatrix, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DComponentWithMatrix_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DCompositeMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DCompositeMaterial, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DCompositeMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DCompositeMaterial, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DCompositeMaterial_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DCompositeMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DCompositeMaterialGroup, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DCompositeMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DCompositeMaterialGroup, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DCompositeMaterialGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DFaceReductionOptions_type{py::register_python_type(module.get(), &type_spec_Printing3DFaceReductionOptions, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DFaceReductionOptions_type{py::register_python_type(module.get(), &type_spec_Printing3DFaceReductionOptions, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DFaceReductionOptions_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DMaterial, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DMaterial, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DMaterial_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DMesh_type{py::register_python_type(module.get(), &type_spec_Printing3DMesh, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DMesh_type{py::register_python_type(module.get(), &type_spec_Printing3DMesh, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DMesh_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DMeshVerificationResult_type{py::register_python_type(module.get(), &type_spec_Printing3DMeshVerificationResult, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DMeshVerificationResult_type{py::register_python_type(module.get(), &type_spec_Printing3DMeshVerificationResult, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DMeshVerificationResult_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DModel_type{py::register_python_type(module.get(), &type_spec_Printing3DModel, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DModel_type{py::register_python_type(module.get(), &type_spec_Printing3DModel, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DModel_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DModelTexture_type{py::register_python_type(module.get(), &type_spec_Printing3DModelTexture, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DModelTexture_type{py::register_python_type(module.get(), &type_spec_Printing3DModelTexture, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DModelTexture_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DMultiplePropertyMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DMultiplePropertyMaterial, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DMultiplePropertyMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DMultiplePropertyMaterial, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DMultiplePropertyMaterial_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DMultiplePropertyMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DMultiplePropertyMaterialGroup, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DMultiplePropertyMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DMultiplePropertyMaterialGroup, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DMultiplePropertyMaterialGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DTexture2CoordMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DTexture2CoordMaterial, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DTexture2CoordMaterial_type{py::register_python_type(module.get(), &type_spec_Printing3DTexture2CoordMaterial, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DTexture2CoordMaterial_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DTexture2CoordMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DTexture2CoordMaterialGroup, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DTexture2CoordMaterialGroup_type{py::register_python_type(module.get(), &type_spec_Printing3DTexture2CoordMaterialGroup, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DTexture2CoordMaterialGroup_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Printing3DTextureResource_type{py::register_python_type(module.get(), &type_spec_Printing3DTextureResource, object_bases.get(), nullptr)};
+    py::pytype_handle Printing3DTextureResource_type{py::register_python_type(module.get(), &type_spec_Printing3DTextureResource, object_bases.get(), inspectable_meta_type)};
     if (!Printing3DTextureResource_type)
     {
         return nullptr;

@@ -5732,6 +5732,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
+    auto inspectable_meta_type = py::get_inspectable_meta_type();
+    if (!inspectable_meta_type)
+    {
+        return nullptr;
+    }
+
     auto object_type = py::get_object_type();
     if (!object_type)
     {
@@ -5745,31 +5751,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AcousticEchoCancellationConfiguration_type{py::register_python_type(module.get(), &type_spec_AcousticEchoCancellationConfiguration, object_bases.get(), nullptr)};
+    py::pytype_handle AcousticEchoCancellationConfiguration_type{py::register_python_type(module.get(), &type_spec_AcousticEchoCancellationConfiguration, object_bases.get(), inspectable_meta_type)};
     if (!AcousticEchoCancellationConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AudioCaptureEffectsManager_type{py::register_python_type(module.get(), &type_spec_AudioCaptureEffectsManager, object_bases.get(), nullptr)};
+    py::pytype_handle AudioCaptureEffectsManager_type{py::register_python_type(module.get(), &type_spec_AudioCaptureEffectsManager, object_bases.get(), inspectable_meta_type)};
     if (!AudioCaptureEffectsManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AudioEffect_type{py::register_python_type(module.get(), &type_spec_AudioEffect, object_bases.get(), nullptr)};
+    py::pytype_handle AudioEffect_type{py::register_python_type(module.get(), &type_spec_AudioEffect, object_bases.get(), inspectable_meta_type)};
     if (!AudioEffect_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AudioEffectDefinition_type{py::register_python_type(module.get(), &type_spec_AudioEffectDefinition, object_bases.get(), nullptr)};
+    py::pytype_handle AudioEffectDefinition_type{py::register_python_type(module.get(), &type_spec_AudioEffectDefinition, object_bases.get(), inspectable_meta_type)};
     if (!AudioEffectDefinition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AudioEffectsManager_Static{PyType_FromSpec(&type_spec_AudioEffectsManager_Static)};
+    py::pyobj_handle AudioEffectsManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!AudioEffectsManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AudioEffectsManager_Static{PyType_FromSpecWithBases(&type_spec_AudioEffectsManager_Static, AudioEffectsManager_Static_bases.get())};
     if (!type_AudioEffectsManager_Static)
     {
         return nullptr;
@@ -5781,55 +5793,55 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AudioRenderEffectsManager_type{py::register_python_type(module.get(), &type_spec_AudioRenderEffectsManager, object_bases.get(), nullptr)};
+    py::pytype_handle AudioRenderEffectsManager_type{py::register_python_type(module.get(), &type_spec_AudioRenderEffectsManager, object_bases.get(), inspectable_meta_type)};
     if (!AudioRenderEffectsManager_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositeVideoFrameContext_type{py::register_python_type(module.get(), &type_spec_CompositeVideoFrameContext, object_bases.get(), nullptr)};
+    py::pytype_handle CompositeVideoFrameContext_type{py::register_python_type(module.get(), &type_spec_CompositeVideoFrameContext, object_bases.get(), inspectable_meta_type)};
     if (!CompositeVideoFrameContext_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProcessAudioFrameContext_type{py::register_python_type(module.get(), &type_spec_ProcessAudioFrameContext, object_bases.get(), nullptr)};
+    py::pytype_handle ProcessAudioFrameContext_type{py::register_python_type(module.get(), &type_spec_ProcessAudioFrameContext, object_bases.get(), inspectable_meta_type)};
     if (!ProcessAudioFrameContext_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProcessVideoFrameContext_type{py::register_python_type(module.get(), &type_spec_ProcessVideoFrameContext, object_bases.get(), nullptr)};
+    py::pytype_handle ProcessVideoFrameContext_type{py::register_python_type(module.get(), &type_spec_ProcessVideoFrameContext, object_bases.get(), inspectable_meta_type)};
     if (!ProcessVideoFrameContext_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SlowMotionEffectDefinition_type{py::register_python_type(module.get(), &type_spec_SlowMotionEffectDefinition, object_bases.get(), nullptr)};
+    py::pytype_handle SlowMotionEffectDefinition_type{py::register_python_type(module.get(), &type_spec_SlowMotionEffectDefinition, object_bases.get(), inspectable_meta_type)};
     if (!SlowMotionEffectDefinition_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VideoCompositorDefinition_type{py::register_python_type(module.get(), &type_spec_VideoCompositorDefinition, object_bases.get(), nullptr)};
+    py::pytype_handle VideoCompositorDefinition_type{py::register_python_type(module.get(), &type_spec_VideoCompositorDefinition, object_bases.get(), inspectable_meta_type)};
     if (!VideoCompositorDefinition_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VideoEffectDefinition_type{py::register_python_type(module.get(), &type_spec_VideoEffectDefinition, object_bases.get(), nullptr)};
+    py::pytype_handle VideoEffectDefinition_type{py::register_python_type(module.get(), &type_spec_VideoEffectDefinition, object_bases.get(), inspectable_meta_type)};
     if (!VideoEffectDefinition_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VideoTransformEffectDefinition_type{py::register_python_type(module.get(), &type_spec_VideoTransformEffectDefinition, object_bases.get(), nullptr)};
+    py::pytype_handle VideoTransformEffectDefinition_type{py::register_python_type(module.get(), &type_spec_VideoTransformEffectDefinition, object_bases.get(), inspectable_meta_type)};
     if (!VideoTransformEffectDefinition_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VideoTransformSphericalProjection_type{py::register_python_type(module.get(), &type_spec_VideoTransformSphericalProjection, object_bases.get(), nullptr)};
+    py::pytype_handle VideoTransformSphericalProjection_type{py::register_python_type(module.get(), &type_spec_VideoTransformSphericalProjection, object_bases.get(), inspectable_meta_type)};
     if (!VideoTransformSphericalProjection_type)
     {
         return nullptr;
@@ -5841,7 +5853,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIAudioEffectDefinition_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIAudioEffectDefinition, nullptr))};
+    py::pytype_handle ImplementsIAudioEffectDefinition_type{py::register_python_type(module.get(), &type_spec_ImplementsIAudioEffectDefinition, nullptr, inspectable_meta_type)};
     if (!ImplementsIAudioEffectDefinition_type)
     {
         return nullptr;
@@ -5858,7 +5870,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBasicAudioEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBasicAudioEffect, nullptr))};
+    py::pytype_handle ImplementsIBasicAudioEffect_type{py::register_python_type(module.get(), &type_spec_ImplementsIBasicAudioEffect, nullptr, inspectable_meta_type)};
     if (!ImplementsIBasicAudioEffect_type)
     {
         return nullptr;
@@ -5875,7 +5887,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIBasicVideoEffect_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIBasicVideoEffect, nullptr))};
+    py::pytype_handle ImplementsIBasicVideoEffect_type{py::register_python_type(module.get(), &type_spec_ImplementsIBasicVideoEffect, nullptr, inspectable_meta_type)};
     if (!ImplementsIBasicVideoEffect_type)
     {
         return nullptr;
@@ -5892,7 +5904,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIVideoCompositor_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVideoCompositor, nullptr))};
+    py::pytype_handle ImplementsIVideoCompositor_type{py::register_python_type(module.get(), &type_spec_ImplementsIVideoCompositor, nullptr, inspectable_meta_type)};
     if (!ImplementsIVideoCompositor_type)
     {
         return nullptr;
@@ -5909,7 +5921,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIVideoCompositorDefinition_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVideoCompositorDefinition, nullptr))};
+    py::pytype_handle ImplementsIVideoCompositorDefinition_type{py::register_python_type(module.get(), &type_spec_ImplementsIVideoCompositorDefinition, nullptr, inspectable_meta_type)};
     if (!ImplementsIVideoCompositorDefinition_type)
     {
         return nullptr;
@@ -5926,7 +5938,7 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImplementsIVideoEffectDefinition_type{reinterpret_cast<PyTypeObject*>(PyType_FromModuleAndSpec(module.get(), &type_spec_ImplementsIVideoEffectDefinition, nullptr))};
+    py::pytype_handle ImplementsIVideoEffectDefinition_type{py::register_python_type(module.get(), &type_spec_ImplementsIVideoEffectDefinition, nullptr, inspectable_meta_type)};
     if (!ImplementsIVideoEffectDefinition_type)
     {
         return nullptr;
