@@ -494,6 +494,10 @@ static class ObjectWriterExtensions
                     () => w.WriteLine("return py::py_obj_ref::query_interface_tearoff(id, result);")
                 );
 
+                w.WriteBlankLine();
+                w.WriteLine("std::vector<winrt::guid> get_iids_tearoff() const noexcept override");
+                w.WriteBlock(() => w.WriteLine("return py::py_obj_ref::get_iids_tearoff();"));
+
                 foreach (var method in type.Methods.Where(m => m.IsOverridable))
                 {
                     w.WriteBlankLine();

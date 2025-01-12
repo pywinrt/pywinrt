@@ -378,12 +378,14 @@ namespace py
       private:
         PyObject* py_obj;
         std::map<winrt::guid, std::unique_ptr<ImplementsInterface>> interfaces;
+        std::vector<winrt::guid> interface_guids{};
 
       public:
         void add_interface(
             winrt::guid const& guid, std::unique_ptr<ImplementsInterface> iface)
         {
             interfaces.emplace(guid, std::move(iface));
+            interface_guids.push_back(guid);
         }
 
       protected:
@@ -434,6 +436,11 @@ namespace py
             }
 
             return winrt::impl::error_no_interface;
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept
+        {
+            return interface_guids;
         }
     };
 

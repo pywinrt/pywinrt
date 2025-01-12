@@ -48,9 +48,8 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(
             tc.Composable.expect_required_one(c), 1, "calling from winrt didn't work"
         )
-
-        # FIXME: need to implement adding guid to IInspectable::GetIids
-        # self.assertIsInstance(c, tc.IRequiredOne)
+        self.assertIsInstance(c, tc.Override)
+        self.assertIsInstance(c, tc.IRequiredOne)
 
     def test_overriding_new(self):
         class C(tc.Composable):

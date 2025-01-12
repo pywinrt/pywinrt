@@ -34,6 +34,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_AppBarButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -898,6 +903,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -1764,6 +1774,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_Button(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -2031,6 +2046,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_CheckBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -2196,6 +2216,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
 
         void OnDropDownClosed(winrt::Windows::Foundation::IInspectable const& param0)
@@ -4153,6 +4178,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_ComboBoxItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -4318,6 +4348,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -5773,6 +5808,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_DropDownButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5938,6 +5978,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -6206,6 +6251,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_FlipViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6371,6 +6421,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -6740,6 +6795,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_GridView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6905,6 +6965,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -7102,6 +7167,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -7370,6 +7440,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_InkToolbarBallpointPenButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7535,6 +7610,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -7904,6 +7984,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_InkToolbarCustomToggleButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -8069,6 +8154,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -8337,6 +8427,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_InkToolbarEraserButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -8603,6 +8698,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -9105,6 +9205,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -10139,6 +10244,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_InkToolbarPencilButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -10304,6 +10414,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -10532,6 +10647,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -11457,6 +11577,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_ListBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -11941,6 +12066,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -13163,6 +13293,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_ListView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -13327,6 +13462,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -16770,6 +16910,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_ListViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -16967,6 +17112,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_MenuBarItemFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -17132,6 +17282,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -17475,6 +17630,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -17990,6 +18150,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_NavigationViewItemHeader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -18156,6 +18321,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_NavigationViewItemSeparator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -18321,6 +18491,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -18906,6 +19081,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_ProgressBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -19406,6 +19586,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_RadioButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -19672,6 +19857,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -20950,6 +21140,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_TextCommandBarFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -21634,6 +21829,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -22670,6 +22870,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 

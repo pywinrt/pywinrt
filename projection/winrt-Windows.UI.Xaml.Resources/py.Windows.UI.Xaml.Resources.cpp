@@ -35,6 +35,11 @@ namespace py::cpp::Windows::UI::Xaml::Resources
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
+
         winrt::Windows::Foundation::IInspectable GetResource(winrt::hstring const& param0, winrt::hstring const& param1, winrt::hstring const& param2, winrt::hstring const& param3)
         {
             auto gil = py::ensure_gil();

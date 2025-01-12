@@ -5169,6 +5169,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_KeyboardAccelerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -8029,6 +8034,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_ManipulationStartedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -9915,6 +9925,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_StandardUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -10448,6 +10463,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
