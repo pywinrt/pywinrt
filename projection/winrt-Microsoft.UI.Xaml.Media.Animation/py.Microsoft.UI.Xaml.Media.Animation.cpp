@@ -326,6 +326,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_BasicConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -1939,6 +1944,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -5216,6 +5226,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_DirectConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6569,6 +6584,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -12230,6 +12250,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_GravityConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -13280,6 +13305,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
 
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
+
         winrt::hstring GetNavigationStateCore()
         {
             auto gil = py::ensure_gil();
@@ -13774,6 +13804,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -15942,6 +15977,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -24936,6 +24976,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 

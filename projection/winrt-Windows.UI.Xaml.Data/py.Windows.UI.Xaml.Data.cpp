@@ -34,6 +34,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_Binding(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -969,6 +974,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -2010,6 +2020,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_CurrentChangingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -2315,6 +2330,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_ItemIndexRange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -2577,6 +2597,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_PropertyChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -2775,6 +2800,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 

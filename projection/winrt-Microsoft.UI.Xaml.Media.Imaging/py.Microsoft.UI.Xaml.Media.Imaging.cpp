@@ -1169,6 +1169,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_BitmapSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2182,6 +2187,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
         }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
     };
 
     static PyObject* _new_SurfaceImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -2391,6 +2401,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
     };
 
@@ -3497,6 +3512,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
         {
             return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
         }
 
         void OnRun(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& param0)
