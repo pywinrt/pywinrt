@@ -37,6 +37,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           allow-prereleases: true
           architecture: ${{ matrix.architecture }}
+      - run: python -m pip install -r requirements.txt
       - name: install nuget packages
         run: ./scripts/fetch-tools.ps1 -noCppWinRT
       - name: configure
@@ -74,6 +75,7 @@ jobs:
             cc:p
             cmake:p
             python:p
+            python-typing_extensions:p
       - name: install nuget packages
         shell: pwsh
         run: ./scripts/fetch-tools.ps1 -noCppWinRT

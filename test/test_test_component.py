@@ -2,8 +2,9 @@ import gc
 import threading
 import unittest
 import weakref
-from typing import override
 from uuid import UUID
+
+from typing_extensions import override
 
 import winrt.testcomponent as tc
 import winrt.windows.foundation.collections as wfc
