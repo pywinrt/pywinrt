@@ -59,7 +59,6 @@ jobs:
           - mingw32
           - mingw64
           - ucrt64
-          - clang32
           - clang64
     name: 'Building on MSYS ${{ matrix.sys }}'
     defaults:
