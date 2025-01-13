@@ -1,7 +1,8 @@
 import atexit
 import tempfile
 from ctypes import WinError
-from typing import override
+
+from typing_extensions import override
 
 from winrt.microsoft.ui.xaml import (
     Application,

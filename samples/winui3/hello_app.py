@@ -1,4 +1,5 @@
-from typing import override
+from typing_extensions import override
+
 from winrt.microsoft.ui.xaml import (
     Application,
     ApplicationInitializationCallbackParams,
