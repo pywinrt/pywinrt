@@ -35,14 +35,6 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     add_compile_options(-Wno-nonnull)
 endif()
 
-# work around https://gitlab.kitware.com/cmake/cmake/-/issues/24587
-if(CMAKE_VERSION VERSION_LESS 3.27 AND (NOT CMAKE_GENERATOR_PLATFORM AND CMAKE_SYSTEM_PROCESSOR MATCHES "ARM64" OR CMAKE_GENERATOR_PLATFORM MATCHES "ARM64"))
-    foreach (version IN_LIST 3.13 3.12 3.11 3.10 3.9)
-        list(APPEND Python3_ROOT_DIR [HKEY_CURRENT_USER/SOFTWARE/Python/PythonCore/${version}-arm64/InstallPath])
-        list(APPEND Python3_ROOT_DIR [HKEY_LOCAL_MACHINE/SOFTWARE/Python/PythonCore/${version}-arm64/InstallPath])
-    endforeach()
-endif()
-
 find_package(Python3 REQUIRED COMPONENTS Development.Module)
 
 # helper functions
