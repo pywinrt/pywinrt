@@ -164,10 +164,23 @@ def _mixin_mapping(typ) -> None:
     if not hasattr(typ, "__contains__"):
         typ.__contains__ = Mapping.__contains__
 
-    if typ.__eq__ == object.__eq__ or typ.__eq__ == Object.__eq__:
+    # HACK: Version check works around inheritance anomaly caused by hacky
+    # metaclass inheritance implementation in runtime.cpp. This works as long
+    # as we don't change the projection to implement rich comparison methods
+    # on mapping types.
+
+    if (
+        typ.__eq__ == object.__eq__
+        or typ.__eq__ == Object.__eq__
+        or sys.version_info < (3, 12)
+    ):
         typ.__eq__ = Mapping.__eq__
 
-    if typ.__ne__ == object.__ne__ or typ.__ne__ == Object.__ne__:
+    if (
+        typ.__ne__ == object.__ne__
+        or typ.__ne__ == Object.__ne__
+        or sys.version_info < (3, 12)
+    ):
         typ.__ne__ = Mapping.__ne__
 
     Mapping.register(typ)
