@@ -254,9 +254,11 @@ class TestTestComponent(unittest.TestCase):
         b2 = tc.Blittable()
 
         self.assertEqual(b1, b2)
+        self.assertFalse(b1 != b2)
 
         b1.a = 1
         self.assertNotEqual(b1, b2)
+        self.assertFalse(b1 == b2)
 
         b2.a = 1
         self.assertEqual(b1, b2)
