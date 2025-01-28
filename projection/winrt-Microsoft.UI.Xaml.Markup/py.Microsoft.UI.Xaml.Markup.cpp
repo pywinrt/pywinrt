@@ -5882,26 +5882,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
-    static int XamlBinaryWriterErrorInformation_set_InputStreamIndex(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.InputStreamIndex = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* XamlBinaryWriterErrorInformation_get_LineNumber(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, void* /*unused*/) noexcept
     {
         try
@@ -5912,26 +5892,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int XamlBinaryWriterErrorInformation_set_LineNumber(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LineNumber = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5948,30 +5908,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
-    static int XamlBinaryWriterErrorInformation_set_LinePosition(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LinePosition = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_XamlBinaryWriterErrorInformation[] = {
-        { "input_stream_index", reinterpret_cast<getter>(XamlBinaryWriterErrorInformation_get_InputStreamIndex), reinterpret_cast<setter>(XamlBinaryWriterErrorInformation_set_InputStreamIndex), nullptr, nullptr },
-        { "line_number", reinterpret_cast<getter>(XamlBinaryWriterErrorInformation_get_LineNumber), reinterpret_cast<setter>(XamlBinaryWriterErrorInformation_set_LineNumber), nullptr, nullptr },
-        { "line_position", reinterpret_cast<getter>(XamlBinaryWriterErrorInformation_get_LinePosition), reinterpret_cast<setter>(XamlBinaryWriterErrorInformation_set_LinePosition), nullptr, nullptr },
+        { "input_stream_index", reinterpret_cast<getter>(XamlBinaryWriterErrorInformation_get_InputStreamIndex), nullptr, nullptr, nullptr },
+        { "line_number", reinterpret_cast<getter>(XamlBinaryWriterErrorInformation_get_LineNumber), nullptr, nullptr, nullptr },
+        { "line_position", reinterpret_cast<getter>(XamlBinaryWriterErrorInformation_get_LinePosition), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_XamlBinaryWriterErrorInformation(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* other, int op) noexcept
@@ -6133,26 +6073,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
-    static int XmlnsDefinition_set_XmlNamespace(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.XmlNamespace = py::convert_to<winrt::hstring>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* XmlnsDefinition_get_Namespace(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, void* /*unused*/) noexcept
     {
         try
@@ -6166,29 +6086,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
-    static int XmlnsDefinition_set_Namespace(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Namespace = py::convert_to<winrt::hstring>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_XmlnsDefinition[] = {
-        { "xml_namespace", reinterpret_cast<getter>(XmlnsDefinition_get_XmlNamespace), reinterpret_cast<setter>(XmlnsDefinition_set_XmlNamespace), nullptr, nullptr },
-        { "namespace", reinterpret_cast<getter>(XmlnsDefinition_get_Namespace), reinterpret_cast<setter>(XmlnsDefinition_set_Namespace), nullptr, nullptr },
+        { "xml_namespace", reinterpret_cast<getter>(XmlnsDefinition_get_XmlNamespace), nullptr, nullptr, nullptr },
+        { "namespace", reinterpret_cast<getter>(XmlnsDefinition_get_Namespace), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_XmlnsDefinition(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, PyObject* other, int op) noexcept

@@ -6272,26 +6272,6 @@ namespace py::cpp::Windows::Devices::Scanners
         }
     }
 
-    static int ImageScannerResolution_set_DpiX(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.DpiX = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ImageScannerResolution_get_DpiY(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, void* /*unused*/) noexcept
     {
         try
@@ -6305,29 +6285,9 @@ namespace py::cpp::Windows::Devices::Scanners
         }
     }
 
-    static int ImageScannerResolution_set_DpiY(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.DpiY = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_ImageScannerResolution[] = {
-        { "dpi_x", reinterpret_cast<getter>(ImageScannerResolution_get_DpiX), reinterpret_cast<setter>(ImageScannerResolution_set_DpiX), nullptr, nullptr },
-        { "dpi_y", reinterpret_cast<getter>(ImageScannerResolution_get_DpiY), reinterpret_cast<setter>(ImageScannerResolution_set_DpiY), nullptr, nullptr },
+        { "dpi_x", reinterpret_cast<getter>(ImageScannerResolution_get_DpiX), nullptr, nullptr, nullptr },
+        { "dpi_y", reinterpret_cast<getter>(ImageScannerResolution_get_DpiY), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_ImageScannerResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* other, int op) noexcept

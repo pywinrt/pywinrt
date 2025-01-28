@@ -10386,28 +10386,8 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static int PackageInstallProgress_set_PercentComplete(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PercentComplete = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PackageInstallProgress[] = {
-        { "percent_complete", reinterpret_cast<getter>(PackageInstallProgress_get_PercentComplete), reinterpret_cast<setter>(PackageInstallProgress_set_PercentComplete), nullptr, nullptr },
+        { "percent_complete", reinterpret_cast<getter>(PackageInstallProgress_get_PercentComplete), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PackageInstallProgress(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, PyObject* other, int op) noexcept
@@ -10561,26 +10541,6 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static int PackageVersion_set_Major(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Major = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PackageVersion_get_Minor(py::wrapper::Windows::ApplicationModel::PackageVersion* self, void* /*unused*/) noexcept
     {
         try
@@ -10591,26 +10551,6 @@ namespace py::cpp::Windows::ApplicationModel
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PackageVersion_set_Minor(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Minor = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -10627,26 +10567,6 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static int PackageVersion_set_Build(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Build = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PackageVersion_get_Revision(py::wrapper::Windows::ApplicationModel::PackageVersion* self, void* /*unused*/) noexcept
     {
         try
@@ -10660,31 +10580,11 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
-    static int PackageVersion_set_Revision(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Revision = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PackageVersion[] = {
-        { "major", reinterpret_cast<getter>(PackageVersion_get_Major), reinterpret_cast<setter>(PackageVersion_set_Major), nullptr, nullptr },
-        { "minor", reinterpret_cast<getter>(PackageVersion_get_Minor), reinterpret_cast<setter>(PackageVersion_set_Minor), nullptr, nullptr },
-        { "build", reinterpret_cast<getter>(PackageVersion_get_Build), reinterpret_cast<setter>(PackageVersion_set_Build), nullptr, nullptr },
-        { "revision", reinterpret_cast<getter>(PackageVersion_get_Revision), reinterpret_cast<setter>(PackageVersion_set_Revision), nullptr, nullptr },
+        { "major", reinterpret_cast<getter>(PackageVersion_get_Major), nullptr, nullptr, nullptr },
+        { "minor", reinterpret_cast<getter>(PackageVersion_get_Minor), nullptr, nullptr, nullptr },
+        { "build", reinterpret_cast<getter>(PackageVersion_get_Build), nullptr, nullptr, nullptr },
+        { "revision", reinterpret_cast<getter>(PackageVersion_get_Revision), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PackageVersion(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* other, int op) noexcept

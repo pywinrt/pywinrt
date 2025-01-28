@@ -22,8 +22,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ImageScannerResolution:
-    dpi_x: winrt.system.Single
-    dpi_y: winrt.system.Single
+    @_property
+    def dpi_x(self) -> winrt.system.Single: ...
+    @_property
+    def dpi_y(self) -> winrt.system.Single: ...
     def __init__(self, dpi_x: winrt.system.Single = 0, dpi_y: winrt.system.Single = 0) -> None: ...
 
 @typing.final

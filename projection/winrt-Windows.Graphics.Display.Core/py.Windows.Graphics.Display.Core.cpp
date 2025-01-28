@@ -1002,26 +1002,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
     }
 
-    static int HdmiDisplayHdr2086Metadata_set_RedPrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RedPrimaryX = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HdmiDisplayHdr2086Metadata_get_RedPrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept
     {
         try
@@ -1032,26 +1012,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HdmiDisplayHdr2086Metadata_set_RedPrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RedPrimaryY = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1068,26 +1028,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
     }
 
-    static int HdmiDisplayHdr2086Metadata_set_GreenPrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.GreenPrimaryX = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HdmiDisplayHdr2086Metadata_get_GreenPrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept
     {
         try
@@ -1098,26 +1038,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HdmiDisplayHdr2086Metadata_set_GreenPrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.GreenPrimaryY = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1134,26 +1054,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
     }
 
-    static int HdmiDisplayHdr2086Metadata_set_BluePrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BluePrimaryX = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HdmiDisplayHdr2086Metadata_get_BluePrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept
     {
         try
@@ -1164,26 +1064,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HdmiDisplayHdr2086Metadata_set_BluePrimaryY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BluePrimaryY = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1200,26 +1080,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
     }
 
-    static int HdmiDisplayHdr2086Metadata_set_WhitePointX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.WhitePointX = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HdmiDisplayHdr2086Metadata_get_WhitePointY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept
     {
         try
@@ -1230,26 +1090,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HdmiDisplayHdr2086Metadata_set_WhitePointY(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.WhitePointY = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1266,26 +1106,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
     }
 
-    static int HdmiDisplayHdr2086Metadata_set_MaxMasteringLuminance(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MaxMasteringLuminance = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HdmiDisplayHdr2086Metadata_get_MinMasteringLuminance(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept
     {
         try
@@ -1296,26 +1116,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HdmiDisplayHdr2086Metadata_set_MinMasteringLuminance(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MinMasteringLuminance = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1332,26 +1132,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
     }
 
-    static int HdmiDisplayHdr2086Metadata_set_MaxContentLightLevel(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MaxContentLightLevel = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HdmiDisplayHdr2086Metadata_get_MaxFrameAverageLightLevel(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept
     {
         try
@@ -1365,39 +1145,19 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
     }
 
-    static int HdmiDisplayHdr2086Metadata_set_MaxFrameAverageLightLevel(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MaxFrameAverageLightLevel = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_HdmiDisplayHdr2086Metadata[] = {
-        { "red_primary_x", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_RedPrimaryX), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_RedPrimaryX), nullptr, nullptr },
-        { "red_primary_y", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_RedPrimaryY), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_RedPrimaryY), nullptr, nullptr },
-        { "green_primary_x", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_GreenPrimaryX), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_GreenPrimaryX), nullptr, nullptr },
-        { "green_primary_y", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_GreenPrimaryY), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_GreenPrimaryY), nullptr, nullptr },
-        { "blue_primary_x", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_BluePrimaryX), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_BluePrimaryX), nullptr, nullptr },
-        { "blue_primary_y", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_BluePrimaryY), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_BluePrimaryY), nullptr, nullptr },
-        { "white_point_x", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_WhitePointX), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_WhitePointX), nullptr, nullptr },
-        { "white_point_y", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_WhitePointY), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_WhitePointY), nullptr, nullptr },
-        { "max_mastering_luminance", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MaxMasteringLuminance), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_MaxMasteringLuminance), nullptr, nullptr },
-        { "min_mastering_luminance", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MinMasteringLuminance), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_MinMasteringLuminance), nullptr, nullptr },
-        { "max_content_light_level", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MaxContentLightLevel), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_MaxContentLightLevel), nullptr, nullptr },
-        { "max_frame_average_light_level", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MaxFrameAverageLightLevel), reinterpret_cast<setter>(HdmiDisplayHdr2086Metadata_set_MaxFrameAverageLightLevel), nullptr, nullptr },
+        { "red_primary_x", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_RedPrimaryX), nullptr, nullptr, nullptr },
+        { "red_primary_y", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_RedPrimaryY), nullptr, nullptr, nullptr },
+        { "green_primary_x", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_GreenPrimaryX), nullptr, nullptr, nullptr },
+        { "green_primary_y", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_GreenPrimaryY), nullptr, nullptr, nullptr },
+        { "blue_primary_x", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_BluePrimaryX), nullptr, nullptr, nullptr },
+        { "blue_primary_y", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_BluePrimaryY), nullptr, nullptr, nullptr },
+        { "white_point_x", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_WhitePointX), nullptr, nullptr, nullptr },
+        { "white_point_y", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_WhitePointY), nullptr, nullptr, nullptr },
+        { "max_mastering_luminance", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MaxMasteringLuminance), nullptr, nullptr, nullptr },
+        { "min_mastering_luminance", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MinMasteringLuminance), nullptr, nullptr, nullptr },
+        { "max_content_light_level", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MaxContentLightLevel), nullptr, nullptr, nullptr },
+        { "max_frame_average_light_level", reinterpret_cast<getter>(HdmiDisplayHdr2086Metadata_get_MaxFrameAverageLightLevel), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_HdmiDisplayHdr2086Metadata(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* other, int op) noexcept

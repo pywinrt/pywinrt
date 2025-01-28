@@ -10946,28 +10946,8 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int EventRegistrationToken_set_Value(py::wrapper::Windows::Foundation::EventRegistrationToken* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.value = py::convert_to<int64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_EventRegistrationToken[] = {
-        { "value", reinterpret_cast<getter>(EventRegistrationToken_get_Value), reinterpret_cast<setter>(EventRegistrationToken_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(EventRegistrationToken_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_EventRegistrationToken(py::wrapper::Windows::Foundation::EventRegistrationToken* self, PyObject* other, int op) noexcept
@@ -11115,28 +11095,8 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int HResult_set_Value(py::wrapper::Windows::Foundation::HResult* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.value = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_HResult[] = {
-        { "value", reinterpret_cast<getter>(HResult_get_Value), reinterpret_cast<setter>(HResult_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(HResult_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_HResult(py::wrapper::Windows::Foundation::HResult* self, PyObject* other, int op) noexcept
@@ -11286,26 +11246,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int Point_set_X(py::wrapper::Windows::Foundation::Point* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.X = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Point_get_Y(py::wrapper::Windows::Foundation::Point* self, void* /*unused*/) noexcept
     {
         try
@@ -11319,29 +11259,9 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int Point_set_Y(py::wrapper::Windows::Foundation::Point* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Y = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Point[] = {
-        { "x", reinterpret_cast<getter>(Point_get_X), reinterpret_cast<setter>(Point_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(Point_get_Y), reinterpret_cast<setter>(Point_set_Y), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(Point_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(Point_get_Y), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Point(py::wrapper::Windows::Foundation::Point* self, PyObject* other, int op) noexcept
@@ -11501,26 +11421,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int Rect_set_X(py::wrapper::Windows::Foundation::Rect* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.X = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Rect_get_Y(py::wrapper::Windows::Foundation::Rect* self, void* /*unused*/) noexcept
     {
         try
@@ -11531,26 +11431,6 @@ namespace py::cpp::Windows::Foundation
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Rect_set_Y(py::wrapper::Windows::Foundation::Rect* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Y = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -11567,26 +11447,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int Rect_set_Width(py::wrapper::Windows::Foundation::Rect* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Rect_get_Height(py::wrapper::Windows::Foundation::Rect* self, void* /*unused*/) noexcept
     {
         try
@@ -11600,31 +11460,11 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int Rect_set_Height(py::wrapper::Windows::Foundation::Rect* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Rect[] = {
-        { "x", reinterpret_cast<getter>(Rect_get_X), reinterpret_cast<setter>(Rect_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(Rect_get_Y), reinterpret_cast<setter>(Rect_set_Y), nullptr, nullptr },
-        { "width", reinterpret_cast<getter>(Rect_get_Width), reinterpret_cast<setter>(Rect_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(Rect_get_Height), reinterpret_cast<setter>(Rect_set_Height), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(Rect_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(Rect_get_Y), nullptr, nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(Rect_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(Rect_get_Height), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Rect(py::wrapper::Windows::Foundation::Rect* self, PyObject* other, int op) noexcept
@@ -11792,26 +11632,6 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int Size_set_Width(py::wrapper::Windows::Foundation::Size* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Size_get_Height(py::wrapper::Windows::Foundation::Size* self, void* /*unused*/) noexcept
     {
         try
@@ -11825,29 +11645,9 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
-    static int Size_set_Height(py::wrapper::Windows::Foundation::Size* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Size[] = {
-        { "width", reinterpret_cast<getter>(Size_get_Width), reinterpret_cast<setter>(Size_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(Size_get_Height), reinterpret_cast<setter>(Size_set_Height), nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(Size_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(Size_get_Height), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Size(py::wrapper::Windows::Foundation::Size* self, PyObject* other, int op) noexcept

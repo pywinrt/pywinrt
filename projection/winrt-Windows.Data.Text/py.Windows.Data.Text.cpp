@@ -3004,26 +3004,6 @@ namespace py::cpp::Windows::Data::Text
         }
     }
 
-    static int TextSegment_set_StartPosition(py::wrapper::Windows::Data::Text::TextSegment* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.StartPosition = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TextSegment_get_Length(py::wrapper::Windows::Data::Text::TextSegment* self, void* /*unused*/) noexcept
     {
         try
@@ -3037,29 +3017,9 @@ namespace py::cpp::Windows::Data::Text
         }
     }
 
-    static int TextSegment_set_Length(py::wrapper::Windows::Data::Text::TextSegment* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Length = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_TextSegment[] = {
-        { "start_position", reinterpret_cast<getter>(TextSegment_get_StartPosition), reinterpret_cast<setter>(TextSegment_set_StartPosition), nullptr, nullptr },
-        { "length", reinterpret_cast<getter>(TextSegment_get_Length), reinterpret_cast<setter>(TextSegment_set_Length), nullptr, nullptr },
+        { "start_position", reinterpret_cast<getter>(TextSegment_get_StartPosition), nullptr, nullptr, nullptr },
+        { "length", reinterpret_cast<getter>(TextSegment_get_Length), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_TextSegment(py::wrapper::Windows::Data::Text::TextSegment* self, PyObject* other, int op) noexcept

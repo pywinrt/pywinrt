@@ -211,26 +211,6 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int DisplayAdapterId_set_LowPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LowPart = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* DisplayAdapterId_get_HighPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, void* /*unused*/) noexcept
     {
         try
@@ -244,29 +224,9 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int DisplayAdapterId_set_HighPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.HighPart = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_DisplayAdapterId[] = {
-        { "low_part", reinterpret_cast<getter>(DisplayAdapterId_get_LowPart), reinterpret_cast<setter>(DisplayAdapterId_set_LowPart), nullptr, nullptr },
-        { "high_part", reinterpret_cast<getter>(DisplayAdapterId_get_HighPart), reinterpret_cast<setter>(DisplayAdapterId_set_HighPart), nullptr, nullptr },
+        { "low_part", reinterpret_cast<getter>(DisplayAdapterId_get_LowPart), nullptr, nullptr, nullptr },
+        { "high_part", reinterpret_cast<getter>(DisplayAdapterId_get_HighPart), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_DisplayAdapterId(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* other, int op) noexcept
@@ -420,28 +380,8 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int DisplayId_set_Value(py::wrapper::Windows::Graphics::DisplayId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_DisplayId[] = {
-        { "value", reinterpret_cast<getter>(DisplayId_get_Value), reinterpret_cast<setter>(DisplayId_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(DisplayId_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_DisplayId(py::wrapper::Windows::Graphics::DisplayId* self, PyObject* other, int op) noexcept
@@ -591,26 +531,6 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int PointInt32_set_X(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.X = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PointInt32_get_Y(py::wrapper::Windows::Graphics::PointInt32* self, void* /*unused*/) noexcept
     {
         try
@@ -624,29 +544,9 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int PointInt32_set_Y(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Y = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PointInt32[] = {
-        { "x", reinterpret_cast<getter>(PointInt32_get_X), reinterpret_cast<setter>(PointInt32_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(PointInt32_get_Y), reinterpret_cast<setter>(PointInt32_set_Y), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(PointInt32_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(PointInt32_get_Y), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PointInt32(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* other, int op) noexcept
@@ -806,26 +706,6 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int RectInt32_set_X(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.X = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RectInt32_get_Y(py::wrapper::Windows::Graphics::RectInt32* self, void* /*unused*/) noexcept
     {
         try
@@ -836,26 +716,6 @@ namespace py::cpp::Windows::Graphics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int RectInt32_set_Y(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Y = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -872,26 +732,6 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int RectInt32_set_Width(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RectInt32_get_Height(py::wrapper::Windows::Graphics::RectInt32* self, void* /*unused*/) noexcept
     {
         try
@@ -905,31 +745,11 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int RectInt32_set_Height(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_RectInt32[] = {
-        { "x", reinterpret_cast<getter>(RectInt32_get_X), reinterpret_cast<setter>(RectInt32_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(RectInt32_get_Y), reinterpret_cast<setter>(RectInt32_set_Y), nullptr, nullptr },
-        { "width", reinterpret_cast<getter>(RectInt32_get_Width), reinterpret_cast<setter>(RectInt32_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(RectInt32_get_Height), reinterpret_cast<setter>(RectInt32_set_Height), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(RectInt32_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(RectInt32_get_Y), nullptr, nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(RectInt32_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(RectInt32_get_Height), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_RectInt32(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* other, int op) noexcept
@@ -1097,26 +917,6 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int SizeInt32_set_Width(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SizeInt32_get_Height(py::wrapper::Windows::Graphics::SizeInt32* self, void* /*unused*/) noexcept
     {
         try
@@ -1130,29 +930,9 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
-    static int SizeInt32_set_Height(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SizeInt32[] = {
-        { "width", reinterpret_cast<getter>(SizeInt32_get_Width), reinterpret_cast<setter>(SizeInt32_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(SizeInt32_get_Height), reinterpret_cast<setter>(SizeInt32_set_Height), nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(SizeInt32_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(SizeInt32_get_Height), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SizeInt32(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* other, int op) noexcept

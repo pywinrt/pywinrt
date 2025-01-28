@@ -6344,26 +6344,6 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     }
 
-    static int PrintPageDescription_set_PageSize(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PageSize = py::convert_to<winrt::Windows::Foundation::Size>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PrintPageDescription_get_ImageableRect(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -6374,26 +6354,6 @@ namespace py::cpp::Windows::Graphics::Printing
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PrintPageDescription_set_ImageableRect(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.ImageableRect = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -6410,26 +6370,6 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     }
 
-    static int PrintPageDescription_set_DpiX(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.DpiX = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PrintPageDescription_get_DpiY(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -6443,31 +6383,11 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     }
 
-    static int PrintPageDescription_set_DpiY(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.DpiY = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PrintPageDescription[] = {
-        { "page_size", reinterpret_cast<getter>(PrintPageDescription_get_PageSize), reinterpret_cast<setter>(PrintPageDescription_set_PageSize), nullptr, nullptr },
-        { "imageable_rect", reinterpret_cast<getter>(PrintPageDescription_get_ImageableRect), reinterpret_cast<setter>(PrintPageDescription_set_ImageableRect), nullptr, nullptr },
-        { "dpi_x", reinterpret_cast<getter>(PrintPageDescription_get_DpiX), reinterpret_cast<setter>(PrintPageDescription_set_DpiX), nullptr, nullptr },
-        { "dpi_y", reinterpret_cast<getter>(PrintPageDescription_get_DpiY), reinterpret_cast<setter>(PrintPageDescription_set_DpiY), nullptr, nullptr },
+        { "page_size", reinterpret_cast<getter>(PrintPageDescription_get_PageSize), nullptr, nullptr, nullptr },
+        { "imageable_rect", reinterpret_cast<getter>(PrintPageDescription_get_ImageableRect), nullptr, nullptr, nullptr },
+        { "dpi_x", reinterpret_cast<getter>(PrintPageDescription_get_DpiX), nullptr, nullptr, nullptr },
+        { "dpi_y", reinterpret_cast<getter>(PrintPageDescription_get_DpiY), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PrintPageDescription(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, PyObject* other, int op) noexcept

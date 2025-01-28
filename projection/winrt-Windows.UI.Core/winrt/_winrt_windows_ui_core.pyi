@@ -25,18 +25,26 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CorePhysicalKeyStatus:
-    repeat_count: winrt.system.UInt32
-    scan_code: winrt.system.UInt32
-    is_extended_key: bool
-    is_menu_key_down: bool
-    was_key_down: bool
-    is_key_released: bool
+    @_property
+    def repeat_count(self) -> winrt.system.UInt32: ...
+    @_property
+    def scan_code(self) -> winrt.system.UInt32: ...
+    @_property
+    def is_extended_key(self) -> bool: ...
+    @_property
+    def is_menu_key_down(self) -> bool: ...
+    @_property
+    def was_key_down(self) -> bool: ...
+    @_property
+    def is_key_released(self) -> bool: ...
     def __init__(self, repeat_count: winrt.system.UInt32 = 0, scan_code: winrt.system.UInt32 = 0, is_extended_key: bool = False, is_menu_key_down: bool = False, was_key_down: bool = False, is_key_released: bool = False) -> None: ...
 
 @typing.final
 class CoreProximityEvaluation:
-    score: winrt.system.Int32
-    adjusted_point: windows_foundation.Point
+    @_property
+    def score(self) -> winrt.system.Int32: ...
+    @_property
+    def adjusted_point(self) -> windows_foundation.Point: ...
     def __init__(self, score: winrt.system.Int32 = 0, adjusted_point: windows_foundation.Point = windows_foundation.Point()) -> None: ...
 
 @typing.final

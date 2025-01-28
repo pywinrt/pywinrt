@@ -3758,26 +3758,6 @@ namespace py::cpp::Windows::Storage::AccessCache
         }
     }
 
-    static int AccessListEntry_set_Token(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Token = py::convert_to<winrt::hstring>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* AccessListEntry_get_Metadata(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, void* /*unused*/) noexcept
     {
         try
@@ -3791,29 +3771,9 @@ namespace py::cpp::Windows::Storage::AccessCache
         }
     }
 
-    static int AccessListEntry_set_Metadata(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Metadata = py::convert_to<winrt::hstring>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_AccessListEntry[] = {
-        { "token", reinterpret_cast<getter>(AccessListEntry_get_Token), reinterpret_cast<setter>(AccessListEntry_set_Token), nullptr, nullptr },
-        { "metadata", reinterpret_cast<getter>(AccessListEntry_get_Metadata), reinterpret_cast<setter>(AccessListEntry_set_Metadata), nullptr, nullptr },
+        { "token", reinterpret_cast<getter>(AccessListEntry_get_Token), nullptr, nullptr, nullptr },
+        { "metadata", reinterpret_cast<getter>(AccessListEntry_get_Metadata), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_AccessListEntry(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, PyObject* other, int op) noexcept

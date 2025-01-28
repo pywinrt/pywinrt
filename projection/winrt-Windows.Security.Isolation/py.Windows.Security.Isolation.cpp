@@ -4924,26 +4924,6 @@ namespace py::cpp::Windows::Security::Isolation
         }
     }
 
-    static int IsolatedWindowsEnvironmentCreateProgress_set_State(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.State = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* IsolatedWindowsEnvironmentCreateProgress_get_PercentComplete(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -4957,29 +4937,9 @@ namespace py::cpp::Windows::Security::Isolation
         }
     }
 
-    static int IsolatedWindowsEnvironmentCreateProgress_set_PercentComplete(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PercentComplete = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_IsolatedWindowsEnvironmentCreateProgress[] = {
-        { "state", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateProgress_get_State), reinterpret_cast<setter>(IsolatedWindowsEnvironmentCreateProgress_set_State), nullptr, nullptr },
-        { "percent_complete", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateProgress_get_PercentComplete), reinterpret_cast<setter>(IsolatedWindowsEnvironmentCreateProgress_set_PercentComplete), nullptr, nullptr },
+        { "state", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateProgress_get_State), nullptr, nullptr, nullptr },
+        { "percent_complete", reinterpret_cast<getter>(IsolatedWindowsEnvironmentCreateProgress_get_PercentComplete), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_IsolatedWindowsEnvironmentCreateProgress(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, PyObject* other, int op) noexcept

@@ -21,8 +21,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class NetworkUsageStates:
-    roaming: TriStates
-    shared: TriStates
+    @_property
+    def roaming(self) -> TriStates: ...
+    @_property
+    def shared(self) -> TriStates: ...
     def __init__(self, roaming: TriStates = TriStates(0), shared: TriStates = TriStates(0)) -> None: ...
 
 @typing.final

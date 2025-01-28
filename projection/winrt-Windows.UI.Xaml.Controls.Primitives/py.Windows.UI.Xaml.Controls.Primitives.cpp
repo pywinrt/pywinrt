@@ -31449,26 +31449,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GeneratorPosition_set_Index(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Index = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GeneratorPosition_get_Offset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition* self, void* /*unused*/) noexcept
     {
         try
@@ -31482,29 +31462,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
     }
 
-    static int GeneratorPosition_set_Offset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Offset = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_GeneratorPosition[] = {
-        { "index", reinterpret_cast<getter>(GeneratorPosition_get_Index), reinterpret_cast<setter>(GeneratorPosition_set_Index), nullptr, nullptr },
-        { "offset", reinterpret_cast<getter>(GeneratorPosition_get_Offset), reinterpret_cast<setter>(GeneratorPosition_set_Offset), nullptr, nullptr },
+        { "index", reinterpret_cast<getter>(GeneratorPosition_get_Index), nullptr, nullptr, nullptr },
+        { "offset", reinterpret_cast<getter>(GeneratorPosition_get_Offset), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_GeneratorPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition* self, PyObject* other, int op) noexcept

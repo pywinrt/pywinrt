@@ -20,11 +20,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PhotoImportProgress:
-    items_imported: winrt.system.UInt32
-    total_items_to_import: winrt.system.UInt32
-    bytes_imported: winrt.system.UInt64
-    total_bytes_to_import: winrt.system.UInt64
-    import_progress: winrt.system.Double
+    @_property
+    def items_imported(self) -> winrt.system.UInt32: ...
+    @_property
+    def total_items_to_import(self) -> winrt.system.UInt32: ...
+    @_property
+    def bytes_imported(self) -> winrt.system.UInt64: ...
+    @_property
+    def total_bytes_to_import(self) -> winrt.system.UInt64: ...
+    @_property
+    def import_progress(self) -> winrt.system.Double: ...
     def __init__(self, items_imported: winrt.system.UInt32 = 0, total_items_to_import: winrt.system.UInt32 = 0, bytes_imported: winrt.system.UInt64 = 0, total_bytes_to_import: winrt.system.UInt64 = 0, import_progress: winrt.system.Double = 0) -> None: ...
 
 @typing.final

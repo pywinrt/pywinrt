@@ -21,16 +21,22 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class RetrievalProgress:
-    bytes_retrieved: winrt.system.UInt32
-    total_bytes_to_retrieve: winrt.system.UInt32
+    @_property
+    def bytes_retrieved(self) -> winrt.system.UInt32: ...
+    @_property
+    def total_bytes_to_retrieve(self) -> winrt.system.UInt32: ...
     def __init__(self, bytes_retrieved: winrt.system.UInt32 = 0, total_bytes_to_retrieve: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class TransferProgress:
-    bytes_sent: winrt.system.UInt32
-    total_bytes_to_send: winrt.system.UInt32
-    bytes_retrieved: winrt.system.UInt32
-    total_bytes_to_retrieve: winrt.system.UInt32
+    @_property
+    def bytes_sent(self) -> winrt.system.UInt32: ...
+    @_property
+    def total_bytes_to_send(self) -> winrt.system.UInt32: ...
+    @_property
+    def bytes_retrieved(self) -> winrt.system.UInt32: ...
+    @_property
+    def total_bytes_to_retrieve(self) -> winrt.system.UInt32: ...
     def __init__(self, bytes_sent: winrt.system.UInt32 = 0, total_bytes_to_send: winrt.system.UInt32 = 0, bytes_retrieved: winrt.system.UInt32 = 0, total_bytes_to_retrieve: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

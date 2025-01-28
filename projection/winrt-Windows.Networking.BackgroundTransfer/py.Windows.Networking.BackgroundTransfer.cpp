@@ -7813,26 +7813,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundDownloadProgress_set_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesReceived = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BackgroundDownloadProgress_get_TotalBytesToReceive(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -7843,26 +7823,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BackgroundDownloadProgress_set_TotalBytesToReceive(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToReceive = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -7879,26 +7839,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundDownloadProgress_set_Status(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Status = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BackgroundDownloadProgress_get_HasResponseChanged(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -7909,26 +7849,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BackgroundDownloadProgress_set_HasResponseChanged(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.HasResponseChanged = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -7945,32 +7865,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundDownloadProgress_set_HasRestarted(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.HasRestarted = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_BackgroundDownloadProgress[] = {
-        { "bytes_received", reinterpret_cast<getter>(BackgroundDownloadProgress_get_BytesReceived), reinterpret_cast<setter>(BackgroundDownloadProgress_set_BytesReceived), nullptr, nullptr },
-        { "total_bytes_to_receive", reinterpret_cast<getter>(BackgroundDownloadProgress_get_TotalBytesToReceive), reinterpret_cast<setter>(BackgroundDownloadProgress_set_TotalBytesToReceive), nullptr, nullptr },
-        { "status", reinterpret_cast<getter>(BackgroundDownloadProgress_get_Status), reinterpret_cast<setter>(BackgroundDownloadProgress_set_Status), nullptr, nullptr },
-        { "has_response_changed", reinterpret_cast<getter>(BackgroundDownloadProgress_get_HasResponseChanged), reinterpret_cast<setter>(BackgroundDownloadProgress_set_HasResponseChanged), nullptr, nullptr },
-        { "has_restarted", reinterpret_cast<getter>(BackgroundDownloadProgress_get_HasRestarted), reinterpret_cast<setter>(BackgroundDownloadProgress_set_HasRestarted), nullptr, nullptr },
+        { "bytes_received", reinterpret_cast<getter>(BackgroundDownloadProgress_get_BytesReceived), nullptr, nullptr, nullptr },
+        { "total_bytes_to_receive", reinterpret_cast<getter>(BackgroundDownloadProgress_get_TotalBytesToReceive), nullptr, nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(BackgroundDownloadProgress_get_Status), nullptr, nullptr, nullptr },
+        { "has_response_changed", reinterpret_cast<getter>(BackgroundDownloadProgress_get_HasResponseChanged), nullptr, nullptr, nullptr },
+        { "has_restarted", reinterpret_cast<getter>(BackgroundDownloadProgress_get_HasRestarted), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_BackgroundDownloadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* other, int op) noexcept
@@ -8144,26 +8044,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundTransferFileRange_set_Offset(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Offset = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BackgroundTransferFileRange_get_Length(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, void* /*unused*/) noexcept
     {
         try
@@ -8177,29 +8057,9 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundTransferFileRange_set_Length(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Length = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_BackgroundTransferFileRange[] = {
-        { "offset", reinterpret_cast<getter>(BackgroundTransferFileRange_get_Offset), reinterpret_cast<setter>(BackgroundTransferFileRange_set_Offset), nullptr, nullptr },
-        { "length", reinterpret_cast<getter>(BackgroundTransferFileRange_get_Length), reinterpret_cast<setter>(BackgroundTransferFileRange_set_Length), nullptr, nullptr },
+        { "offset", reinterpret_cast<getter>(BackgroundTransferFileRange_get_Offset), nullptr, nullptr, nullptr },
+        { "length", reinterpret_cast<getter>(BackgroundTransferFileRange_get_Length), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_BackgroundTransferFileRange(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* other, int op) noexcept
@@ -8365,26 +8225,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundUploadProgress_set_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesReceived = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BackgroundUploadProgress_get_BytesSent(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -8395,26 +8235,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BackgroundUploadProgress_set_BytesSent(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesSent = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -8431,26 +8251,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundUploadProgress_set_TotalBytesToReceive(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToReceive = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BackgroundUploadProgress_get_TotalBytesToSend(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -8461,26 +8261,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BackgroundUploadProgress_set_TotalBytesToSend(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToSend = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -8497,26 +8277,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundUploadProgress_set_Status(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Status = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BackgroundUploadProgress_get_HasResponseChanged(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -8527,26 +8287,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BackgroundUploadProgress_set_HasResponseChanged(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.HasResponseChanged = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -8563,34 +8303,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
-    static int BackgroundUploadProgress_set_HasRestarted(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.HasRestarted = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_BackgroundUploadProgress[] = {
-        { "bytes_received", reinterpret_cast<getter>(BackgroundUploadProgress_get_BytesReceived), reinterpret_cast<setter>(BackgroundUploadProgress_set_BytesReceived), nullptr, nullptr },
-        { "bytes_sent", reinterpret_cast<getter>(BackgroundUploadProgress_get_BytesSent), reinterpret_cast<setter>(BackgroundUploadProgress_set_BytesSent), nullptr, nullptr },
-        { "total_bytes_to_receive", reinterpret_cast<getter>(BackgroundUploadProgress_get_TotalBytesToReceive), reinterpret_cast<setter>(BackgroundUploadProgress_set_TotalBytesToReceive), nullptr, nullptr },
-        { "total_bytes_to_send", reinterpret_cast<getter>(BackgroundUploadProgress_get_TotalBytesToSend), reinterpret_cast<setter>(BackgroundUploadProgress_set_TotalBytesToSend), nullptr, nullptr },
-        { "status", reinterpret_cast<getter>(BackgroundUploadProgress_get_Status), reinterpret_cast<setter>(BackgroundUploadProgress_set_Status), nullptr, nullptr },
-        { "has_response_changed", reinterpret_cast<getter>(BackgroundUploadProgress_get_HasResponseChanged), reinterpret_cast<setter>(BackgroundUploadProgress_set_HasResponseChanged), nullptr, nullptr },
-        { "has_restarted", reinterpret_cast<getter>(BackgroundUploadProgress_get_HasRestarted), reinterpret_cast<setter>(BackgroundUploadProgress_set_HasRestarted), nullptr, nullptr },
+        { "bytes_received", reinterpret_cast<getter>(BackgroundUploadProgress_get_BytesReceived), nullptr, nullptr, nullptr },
+        { "bytes_sent", reinterpret_cast<getter>(BackgroundUploadProgress_get_BytesSent), nullptr, nullptr, nullptr },
+        { "total_bytes_to_receive", reinterpret_cast<getter>(BackgroundUploadProgress_get_TotalBytesToReceive), nullptr, nullptr, nullptr },
+        { "total_bytes_to_send", reinterpret_cast<getter>(BackgroundUploadProgress_get_TotalBytesToSend), nullptr, nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(BackgroundUploadProgress_get_Status), nullptr, nullptr, nullptr },
+        { "has_response_changed", reinterpret_cast<getter>(BackgroundUploadProgress_get_HasResponseChanged), nullptr, nullptr, nullptr },
+        { "has_restarted", reinterpret_cast<getter>(BackgroundUploadProgress_get_HasRestarted), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_BackgroundUploadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* other, int op) noexcept

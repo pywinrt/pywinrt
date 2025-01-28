@@ -19,9 +19,12 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BasicGeoposition:
-    latitude: winrt.system.Double
-    longitude: winrt.system.Double
-    altitude: winrt.system.Double
+    @_property
+    def latitude(self) -> winrt.system.Double: ...
+    @_property
+    def longitude(self) -> winrt.system.Double: ...
+    @_property
+    def altitude(self) -> winrt.system.Double: ...
     def __init__(self, latitude: winrt.system.Double = 0, longitude: winrt.system.Double = 0, altitude: winrt.system.Double = 0) -> None: ...
 
 @typing.final

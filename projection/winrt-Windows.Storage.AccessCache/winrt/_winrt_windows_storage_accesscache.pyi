@@ -21,8 +21,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AccessListEntry:
-    token: str
-    metadata: str
+    @_property
+    def token(self) -> str: ...
+    @_property
+    def metadata(self) -> str: ...
     def __init__(self, token: str = "", metadata: str = "") -> None: ...
 
 @typing.final

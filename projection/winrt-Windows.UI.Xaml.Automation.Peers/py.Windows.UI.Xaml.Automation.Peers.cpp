@@ -25952,26 +25952,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
-    static int RawElementProviderRuntimeId_set_Part1(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Part1 = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RawElementProviderRuntimeId_get_Part2(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, void* /*unused*/) noexcept
     {
         try
@@ -25985,29 +25965,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         }
     }
 
-    static int RawElementProviderRuntimeId_set_Part2(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Part2 = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_RawElementProviderRuntimeId[] = {
-        { "part1", reinterpret_cast<getter>(RawElementProviderRuntimeId_get_Part1), reinterpret_cast<setter>(RawElementProviderRuntimeId_set_Part1), nullptr, nullptr },
-        { "part2", reinterpret_cast<getter>(RawElementProviderRuntimeId_get_Part2), reinterpret_cast<setter>(RawElementProviderRuntimeId_set_Part2), nullptr, nullptr },
+        { "part1", reinterpret_cast<getter>(RawElementProviderRuntimeId_get_Part1), nullptr, nullptr, nullptr },
+        { "part2", reinterpret_cast<getter>(RawElementProviderRuntimeId_get_Part2), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_RawElementProviderRuntimeId(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, PyObject* other, int op) noexcept

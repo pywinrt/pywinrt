@@ -5698,26 +5698,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         }
     }
 
-    static int ResourceLayoutInfo_set_MajorVersion(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MajorVersion = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ResourceLayoutInfo_get_MinorVersion(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, void* /*unused*/) noexcept
     {
         try
@@ -5728,26 +5708,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int ResourceLayoutInfo_set_MinorVersion(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MinorVersion = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5764,26 +5724,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         }
     }
 
-    static int ResourceLayoutInfo_set_ResourceSubtreeCount(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.ResourceSubtreeCount = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ResourceLayoutInfo_get_NamedResourceCount(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, void* /*unused*/) noexcept
     {
         try
@@ -5794,26 +5734,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int ResourceLayoutInfo_set_NamedResourceCount(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.NamedResourceCount = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5830,32 +5750,12 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         }
     }
 
-    static int ResourceLayoutInfo_set_Checksum(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Checksum = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_ResourceLayoutInfo[] = {
-        { "major_version", reinterpret_cast<getter>(ResourceLayoutInfo_get_MajorVersion), reinterpret_cast<setter>(ResourceLayoutInfo_set_MajorVersion), nullptr, nullptr },
-        { "minor_version", reinterpret_cast<getter>(ResourceLayoutInfo_get_MinorVersion), reinterpret_cast<setter>(ResourceLayoutInfo_set_MinorVersion), nullptr, nullptr },
-        { "resource_subtree_count", reinterpret_cast<getter>(ResourceLayoutInfo_get_ResourceSubtreeCount), reinterpret_cast<setter>(ResourceLayoutInfo_set_ResourceSubtreeCount), nullptr, nullptr },
-        { "named_resource_count", reinterpret_cast<getter>(ResourceLayoutInfo_get_NamedResourceCount), reinterpret_cast<setter>(ResourceLayoutInfo_set_NamedResourceCount), nullptr, nullptr },
-        { "checksum", reinterpret_cast<getter>(ResourceLayoutInfo_get_Checksum), reinterpret_cast<setter>(ResourceLayoutInfo_set_Checksum), nullptr, nullptr },
+        { "major_version", reinterpret_cast<getter>(ResourceLayoutInfo_get_MajorVersion), nullptr, nullptr, nullptr },
+        { "minor_version", reinterpret_cast<getter>(ResourceLayoutInfo_get_MinorVersion), nullptr, nullptr, nullptr },
+        { "resource_subtree_count", reinterpret_cast<getter>(ResourceLayoutInfo_get_ResourceSubtreeCount), nullptr, nullptr, nullptr },
+        { "named_resource_count", reinterpret_cast<getter>(ResourceLayoutInfo_get_NamedResourceCount), nullptr, nullptr, nullptr },
+        { "checksum", reinterpret_cast<getter>(ResourceLayoutInfo_get_Checksum), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_ResourceLayoutInfo(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* other, int op) noexcept

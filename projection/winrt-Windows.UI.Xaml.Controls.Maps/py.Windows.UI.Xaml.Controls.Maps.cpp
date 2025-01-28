@@ -25279,26 +25279,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapZoomLevelRange_set_Min(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Min = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* MapZoomLevelRange_get_Max(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, void* /*unused*/) noexcept
     {
         try
@@ -25312,29 +25292,9 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static int MapZoomLevelRange_set_Max(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Max = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_MapZoomLevelRange[] = {
-        { "min", reinterpret_cast<getter>(MapZoomLevelRange_get_Min), reinterpret_cast<setter>(MapZoomLevelRange_set_Min), nullptr, nullptr },
-        { "max", reinterpret_cast<getter>(MapZoomLevelRange_get_Max), reinterpret_cast<setter>(MapZoomLevelRange_set_Max), nullptr, nullptr },
+        { "min", reinterpret_cast<getter>(MapZoomLevelRange_get_Min), nullptr, nullptr, nullptr },
+        { "max", reinterpret_cast<getter>(MapZoomLevelRange_get_Max), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_MapZoomLevelRange(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, PyObject* other, int op) noexcept

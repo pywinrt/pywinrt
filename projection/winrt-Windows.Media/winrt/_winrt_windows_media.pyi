@@ -25,8 +25,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class MediaTimeRange:
-    start: datetime.timedelta
-    end: datetime.timedelta
+    @_property
+    def start(self) -> datetime.timedelta: ...
+    @_property
+    def end(self) -> datetime.timedelta: ...
     def __init__(self, start: datetime.timedelta = datetime.timedelta(0), end: datetime.timedelta = datetime.timedelta(0)) -> None: ...
 
 @typing.final

@@ -4619,26 +4619,6 @@ namespace py::cpp::Windows::Devices::Geolocation
         }
     }
 
-    static int BasicGeoposition_set_Latitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Latitude = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BasicGeoposition_get_Longitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, void* /*unused*/) noexcept
     {
         try
@@ -4649,26 +4629,6 @@ namespace py::cpp::Windows::Devices::Geolocation
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BasicGeoposition_set_Longitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Longitude = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -4685,30 +4645,10 @@ namespace py::cpp::Windows::Devices::Geolocation
         }
     }
 
-    static int BasicGeoposition_set_Altitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Altitude = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_BasicGeoposition[] = {
-        { "latitude", reinterpret_cast<getter>(BasicGeoposition_get_Latitude), reinterpret_cast<setter>(BasicGeoposition_set_Latitude), nullptr, nullptr },
-        { "longitude", reinterpret_cast<getter>(BasicGeoposition_get_Longitude), reinterpret_cast<setter>(BasicGeoposition_set_Longitude), nullptr, nullptr },
-        { "altitude", reinterpret_cast<getter>(BasicGeoposition_get_Altitude), reinterpret_cast<setter>(BasicGeoposition_set_Altitude), nullptr, nullptr },
+        { "latitude", reinterpret_cast<getter>(BasicGeoposition_get_Latitude), nullptr, nullptr, nullptr },
+        { "longitude", reinterpret_cast<getter>(BasicGeoposition_get_Longitude), nullptr, nullptr, nullptr },
+        { "altitude", reinterpret_cast<getter>(BasicGeoposition_get_Altitude), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_BasicGeoposition(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* other, int op) noexcept

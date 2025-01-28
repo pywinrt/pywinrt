@@ -1007,26 +1007,6 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         }
     }
 
-    static int PushNotificationCreateChannelStatus_set_status(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.status = py::convert_to<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PushNotificationCreateChannelStatus_get_extendedError(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -1037,26 +1017,6 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PushNotificationCreateChannelStatus_set_extendedError(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.extendedError = py::convert_to<winrt::hresult>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1073,30 +1033,10 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         }
     }
 
-    static int PushNotificationCreateChannelStatus_set_retryCount(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.retryCount = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PushNotificationCreateChannelStatus[] = {
-        { "status", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_status), reinterpret_cast<setter>(PushNotificationCreateChannelStatus_set_status), nullptr, nullptr },
-        { "extended_error", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_extendedError), reinterpret_cast<setter>(PushNotificationCreateChannelStatus_set_extendedError), nullptr, nullptr },
-        { "retry_count", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_retryCount), reinterpret_cast<setter>(PushNotificationCreateChannelStatus_set_retryCount), nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_status), nullptr, nullptr, nullptr },
+        { "extended_error", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_extendedError), nullptr, nullptr, nullptr },
+        { "retry_count", reinterpret_cast<getter>(PushNotificationCreateChannelStatus_get_retryCount), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PushNotificationCreateChannelStatus(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, PyObject* other, int op) noexcept

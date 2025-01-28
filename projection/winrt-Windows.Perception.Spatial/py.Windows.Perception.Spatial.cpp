@@ -4998,26 +4998,6 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingBox_set_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SpatialBoundingBox_get_Extents(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, void* /*unused*/) noexcept
     {
         try
@@ -5031,29 +5011,9 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingBox_set_Extents(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Extents = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SpatialBoundingBox[] = {
-        { "center", reinterpret_cast<getter>(SpatialBoundingBox_get_Center), reinterpret_cast<setter>(SpatialBoundingBox_set_Center), nullptr, nullptr },
-        { "extents", reinterpret_cast<getter>(SpatialBoundingBox_get_Extents), reinterpret_cast<setter>(SpatialBoundingBox_set_Extents), nullptr, nullptr },
+        { "center", reinterpret_cast<getter>(SpatialBoundingBox_get_Center), nullptr, nullptr, nullptr },
+        { "extents", reinterpret_cast<getter>(SpatialBoundingBox_get_Extents), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SpatialBoundingBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* other, int op) noexcept
@@ -5217,26 +5177,6 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingFrustum_set_Near(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Near = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SpatialBoundingFrustum_get_Far(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, void* /*unused*/) noexcept
     {
         try
@@ -5247,26 +5187,6 @@ namespace py::cpp::Windows::Perception::Spatial
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int SpatialBoundingFrustum_set_Far(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Far = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5283,26 +5203,6 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingFrustum_set_Right(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Right = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SpatialBoundingFrustum_get_Left(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, void* /*unused*/) noexcept
     {
         try
@@ -5313,26 +5213,6 @@ namespace py::cpp::Windows::Perception::Spatial
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int SpatialBoundingFrustum_set_Left(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Left = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5349,26 +5229,6 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingFrustum_set_Top(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Top = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SpatialBoundingFrustum_get_Bottom(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, void* /*unused*/) noexcept
     {
         try
@@ -5382,33 +5242,13 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingFrustum_set_Bottom(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Bottom = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SpatialBoundingFrustum[] = {
-        { "near", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Near), reinterpret_cast<setter>(SpatialBoundingFrustum_set_Near), nullptr, nullptr },
-        { "far", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Far), reinterpret_cast<setter>(SpatialBoundingFrustum_set_Far), nullptr, nullptr },
-        { "right", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Right), reinterpret_cast<setter>(SpatialBoundingFrustum_set_Right), nullptr, nullptr },
-        { "left", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Left), reinterpret_cast<setter>(SpatialBoundingFrustum_set_Left), nullptr, nullptr },
-        { "top", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Top), reinterpret_cast<setter>(SpatialBoundingFrustum_set_Top), nullptr, nullptr },
-        { "bottom", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Bottom), reinterpret_cast<setter>(SpatialBoundingFrustum_set_Bottom), nullptr, nullptr },
+        { "near", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Near), nullptr, nullptr, nullptr },
+        { "far", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Far), nullptr, nullptr, nullptr },
+        { "right", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Right), nullptr, nullptr, nullptr },
+        { "left", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Left), nullptr, nullptr, nullptr },
+        { "top", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Top), nullptr, nullptr, nullptr },
+        { "bottom", reinterpret_cast<getter>(SpatialBoundingFrustum_get_Bottom), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SpatialBoundingFrustum(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* other, int op) noexcept
@@ -5590,26 +5430,6 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingOrientedBox_set_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SpatialBoundingOrientedBox_get_Extents(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, void* /*unused*/) noexcept
     {
         try
@@ -5620,26 +5440,6 @@ namespace py::cpp::Windows::Perception::Spatial
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int SpatialBoundingOrientedBox_set_Extents(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Extents = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5656,30 +5456,10 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingOrientedBox_set_Orientation(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Orientation = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SpatialBoundingOrientedBox[] = {
-        { "center", reinterpret_cast<getter>(SpatialBoundingOrientedBox_get_Center), reinterpret_cast<setter>(SpatialBoundingOrientedBox_set_Center), nullptr, nullptr },
-        { "extents", reinterpret_cast<getter>(SpatialBoundingOrientedBox_get_Extents), reinterpret_cast<setter>(SpatialBoundingOrientedBox_set_Extents), nullptr, nullptr },
-        { "orientation", reinterpret_cast<getter>(SpatialBoundingOrientedBox_get_Orientation), reinterpret_cast<setter>(SpatialBoundingOrientedBox_set_Orientation), nullptr, nullptr },
+        { "center", reinterpret_cast<getter>(SpatialBoundingOrientedBox_get_Center), nullptr, nullptr, nullptr },
+        { "extents", reinterpret_cast<getter>(SpatialBoundingOrientedBox_get_Extents), nullptr, nullptr, nullptr },
+        { "orientation", reinterpret_cast<getter>(SpatialBoundingOrientedBox_get_Orientation), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SpatialBoundingOrientedBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* other, int op) noexcept
@@ -5841,26 +5621,6 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingSphere_set_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SpatialBoundingSphere_get_Radius(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, void* /*unused*/) noexcept
     {
         try
@@ -5874,29 +5634,9 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialBoundingSphere_set_Radius(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Radius = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SpatialBoundingSphere[] = {
-        { "center", reinterpret_cast<getter>(SpatialBoundingSphere_get_Center), reinterpret_cast<setter>(SpatialBoundingSphere_set_Center), nullptr, nullptr },
-        { "radius", reinterpret_cast<getter>(SpatialBoundingSphere_get_Radius), reinterpret_cast<setter>(SpatialBoundingSphere_set_Radius), nullptr, nullptr },
+        { "center", reinterpret_cast<getter>(SpatialBoundingSphere_get_Center), nullptr, nullptr, nullptr },
+        { "radius", reinterpret_cast<getter>(SpatialBoundingSphere_get_Radius), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SpatialBoundingSphere(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* other, int op) noexcept
@@ -6052,26 +5792,6 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialRay_set_Origin(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Origin = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SpatialRay_get_Direction(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, void* /*unused*/) noexcept
     {
         try
@@ -6085,29 +5805,9 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
-    static int SpatialRay_set_Direction(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Direction = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SpatialRay[] = {
-        { "origin", reinterpret_cast<getter>(SpatialRay_get_Origin), reinterpret_cast<setter>(SpatialRay_set_Origin), nullptr, nullptr },
-        { "direction", reinterpret_cast<getter>(SpatialRay_get_Direction), reinterpret_cast<setter>(SpatialRay_set_Direction), nullptr, nullptr },
+        { "origin", reinterpret_cast<getter>(SpatialRay_get_Origin), nullptr, nullptr, nullptr },
+        { "direction", reinterpret_cast<getter>(SpatialRay_get_Direction), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SpatialRay(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* other, int op) noexcept

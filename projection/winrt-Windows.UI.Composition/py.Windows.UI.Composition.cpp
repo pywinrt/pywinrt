@@ -38695,26 +38695,6 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int InkTrailPoint_set_Point(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Point = py::convert_to<winrt::Windows::Foundation::Point>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* InkTrailPoint_get_Radius(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, void* /*unused*/) noexcept
     {
         try
@@ -38728,29 +38708,9 @@ namespace py::cpp::Windows::UI::Composition
         }
     }
 
-    static int InkTrailPoint_set_Radius(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Radius = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_InkTrailPoint[] = {
-        { "point", reinterpret_cast<getter>(InkTrailPoint_get_Point), reinterpret_cast<setter>(InkTrailPoint_set_Point), nullptr, nullptr },
-        { "radius", reinterpret_cast<getter>(InkTrailPoint_get_Radius), reinterpret_cast<setter>(InkTrailPoint_set_Radius), nullptr, nullptr },
+        { "point", reinterpret_cast<getter>(InkTrailPoint_get_Point), nullptr, nullptr, nullptr },
+        { "radius", reinterpret_cast<getter>(InkTrailPoint_get_Radius), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_InkTrailPoint(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, PyObject* other, int op) noexcept

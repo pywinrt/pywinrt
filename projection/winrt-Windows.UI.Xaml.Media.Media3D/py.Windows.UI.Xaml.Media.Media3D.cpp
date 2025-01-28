@@ -2307,26 +2307,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_M11(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M11 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3D_get_M12(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2337,26 +2317,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3D_set_M12(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M12 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2373,26 +2333,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_M13(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M13 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3D_get_M14(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2403,26 +2343,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3D_set_M14(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M14 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2439,26 +2359,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_M21(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M21 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3D_get_M22(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2469,26 +2369,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3D_set_M22(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M22 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2505,26 +2385,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_M23(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M23 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3D_get_M24(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2535,26 +2395,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3D_set_M24(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M24 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2571,26 +2411,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_M31(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M31 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3D_get_M32(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2601,26 +2421,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3D_set_M32(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M32 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2637,26 +2437,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_M33(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M33 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3D_get_M34(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2667,26 +2447,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3D_set_M34(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M34 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2703,26 +2463,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_OffsetX(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OffsetX = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3D_get_OffsetY(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2733,26 +2473,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3D_set_OffsetY(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OffsetY = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2769,26 +2489,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_OffsetZ(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OffsetZ = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3D_get_M44(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept
     {
         try
@@ -2802,43 +2502,23 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         }
     }
 
-    static int Matrix3D_set_M44(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M44 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Matrix3D[] = {
-        { "m11", reinterpret_cast<getter>(Matrix3D_get_M11), reinterpret_cast<setter>(Matrix3D_set_M11), nullptr, nullptr },
-        { "m12", reinterpret_cast<getter>(Matrix3D_get_M12), reinterpret_cast<setter>(Matrix3D_set_M12), nullptr, nullptr },
-        { "m13", reinterpret_cast<getter>(Matrix3D_get_M13), reinterpret_cast<setter>(Matrix3D_set_M13), nullptr, nullptr },
-        { "m14", reinterpret_cast<getter>(Matrix3D_get_M14), reinterpret_cast<setter>(Matrix3D_set_M14), nullptr, nullptr },
-        { "m21", reinterpret_cast<getter>(Matrix3D_get_M21), reinterpret_cast<setter>(Matrix3D_set_M21), nullptr, nullptr },
-        { "m22", reinterpret_cast<getter>(Matrix3D_get_M22), reinterpret_cast<setter>(Matrix3D_set_M22), nullptr, nullptr },
-        { "m23", reinterpret_cast<getter>(Matrix3D_get_M23), reinterpret_cast<setter>(Matrix3D_set_M23), nullptr, nullptr },
-        { "m24", reinterpret_cast<getter>(Matrix3D_get_M24), reinterpret_cast<setter>(Matrix3D_set_M24), nullptr, nullptr },
-        { "m31", reinterpret_cast<getter>(Matrix3D_get_M31), reinterpret_cast<setter>(Matrix3D_set_M31), nullptr, nullptr },
-        { "m32", reinterpret_cast<getter>(Matrix3D_get_M32), reinterpret_cast<setter>(Matrix3D_set_M32), nullptr, nullptr },
-        { "m33", reinterpret_cast<getter>(Matrix3D_get_M33), reinterpret_cast<setter>(Matrix3D_set_M33), nullptr, nullptr },
-        { "m34", reinterpret_cast<getter>(Matrix3D_get_M34), reinterpret_cast<setter>(Matrix3D_set_M34), nullptr, nullptr },
-        { "offset_x", reinterpret_cast<getter>(Matrix3D_get_OffsetX), reinterpret_cast<setter>(Matrix3D_set_OffsetX), nullptr, nullptr },
-        { "offset_y", reinterpret_cast<getter>(Matrix3D_get_OffsetY), reinterpret_cast<setter>(Matrix3D_set_OffsetY), nullptr, nullptr },
-        { "offset_z", reinterpret_cast<getter>(Matrix3D_get_OffsetZ), reinterpret_cast<setter>(Matrix3D_set_OffsetZ), nullptr, nullptr },
-        { "m44", reinterpret_cast<getter>(Matrix3D_get_M44), reinterpret_cast<setter>(Matrix3D_set_M44), nullptr, nullptr },
+        { "m11", reinterpret_cast<getter>(Matrix3D_get_M11), nullptr, nullptr, nullptr },
+        { "m12", reinterpret_cast<getter>(Matrix3D_get_M12), nullptr, nullptr, nullptr },
+        { "m13", reinterpret_cast<getter>(Matrix3D_get_M13), nullptr, nullptr, nullptr },
+        { "m14", reinterpret_cast<getter>(Matrix3D_get_M14), nullptr, nullptr, nullptr },
+        { "m21", reinterpret_cast<getter>(Matrix3D_get_M21), nullptr, nullptr, nullptr },
+        { "m22", reinterpret_cast<getter>(Matrix3D_get_M22), nullptr, nullptr, nullptr },
+        { "m23", reinterpret_cast<getter>(Matrix3D_get_M23), nullptr, nullptr, nullptr },
+        { "m24", reinterpret_cast<getter>(Matrix3D_get_M24), nullptr, nullptr, nullptr },
+        { "m31", reinterpret_cast<getter>(Matrix3D_get_M31), nullptr, nullptr, nullptr },
+        { "m32", reinterpret_cast<getter>(Matrix3D_get_M32), nullptr, nullptr, nullptr },
+        { "m33", reinterpret_cast<getter>(Matrix3D_get_M33), nullptr, nullptr, nullptr },
+        { "m34", reinterpret_cast<getter>(Matrix3D_get_M34), nullptr, nullptr, nullptr },
+        { "offset_x", reinterpret_cast<getter>(Matrix3D_get_OffsetX), nullptr, nullptr, nullptr },
+        { "offset_y", reinterpret_cast<getter>(Matrix3D_get_OffsetY), nullptr, nullptr, nullptr },
+        { "offset_z", reinterpret_cast<getter>(Matrix3D_get_OffsetZ), nullptr, nullptr, nullptr },
+        { "m44", reinterpret_cast<getter>(Matrix3D_get_M44), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Matrix3D(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* other, int op) noexcept

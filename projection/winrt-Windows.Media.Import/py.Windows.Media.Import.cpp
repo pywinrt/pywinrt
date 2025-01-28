@@ -5405,26 +5405,6 @@ namespace py::cpp::Windows::Media::Import
         }
     }
 
-    static int PhotoImportProgress_set_ItemsImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.ItemsImported = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PhotoImportProgress_get_TotalItemsToImport(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -5435,26 +5415,6 @@ namespace py::cpp::Windows::Media::Import
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PhotoImportProgress_set_TotalItemsToImport(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalItemsToImport = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5471,26 +5431,6 @@ namespace py::cpp::Windows::Media::Import
         }
     }
 
-    static int PhotoImportProgress_set_BytesImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesImported = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PhotoImportProgress_get_TotalBytesToImport(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -5501,26 +5441,6 @@ namespace py::cpp::Windows::Media::Import
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PhotoImportProgress_set_TotalBytesToImport(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToImport = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5537,32 +5457,12 @@ namespace py::cpp::Windows::Media::Import
         }
     }
 
-    static int PhotoImportProgress_set_ImportProgress(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.ImportProgress = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PhotoImportProgress[] = {
-        { "items_imported", reinterpret_cast<getter>(PhotoImportProgress_get_ItemsImported), reinterpret_cast<setter>(PhotoImportProgress_set_ItemsImported), nullptr, nullptr },
-        { "total_items_to_import", reinterpret_cast<getter>(PhotoImportProgress_get_TotalItemsToImport), reinterpret_cast<setter>(PhotoImportProgress_set_TotalItemsToImport), nullptr, nullptr },
-        { "bytes_imported", reinterpret_cast<getter>(PhotoImportProgress_get_BytesImported), reinterpret_cast<setter>(PhotoImportProgress_set_BytesImported), nullptr, nullptr },
-        { "total_bytes_to_import", reinterpret_cast<getter>(PhotoImportProgress_get_TotalBytesToImport), reinterpret_cast<setter>(PhotoImportProgress_set_TotalBytesToImport), nullptr, nullptr },
-        { "import_progress", reinterpret_cast<getter>(PhotoImportProgress_get_ImportProgress), reinterpret_cast<setter>(PhotoImportProgress_set_ImportProgress), nullptr, nullptr },
+        { "items_imported", reinterpret_cast<getter>(PhotoImportProgress_get_ItemsImported), nullptr, nullptr, nullptr },
+        { "total_items_to_import", reinterpret_cast<getter>(PhotoImportProgress_get_TotalItemsToImport), nullptr, nullptr, nullptr },
+        { "bytes_imported", reinterpret_cast<getter>(PhotoImportProgress_get_BytesImported), nullptr, nullptr, nullptr },
+        { "total_bytes_to_import", reinterpret_cast<getter>(PhotoImportProgress_get_TotalBytesToImport), nullptr, nullptr, nullptr },
+        { "import_progress", reinterpret_cast<getter>(PhotoImportProgress_get_ImportProgress), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PhotoImportProgress(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* other, int op) noexcept

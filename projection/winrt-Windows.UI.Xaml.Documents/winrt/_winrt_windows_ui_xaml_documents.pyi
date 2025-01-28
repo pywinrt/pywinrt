@@ -23,8 +23,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class TextRange:
-    start_index: winrt.system.Int32
-    length: winrt.system.Int32
+    @_property
+    def start_index(self) -> winrt.system.Int32: ...
+    @_property
+    def length(self) -> winrt.system.Int32: ...
     def __init__(self, start_index: winrt.system.Int32 = 0, length: winrt.system.Int32 = 0) -> None: ...
 
 class Block_Static(TextElement_Static):

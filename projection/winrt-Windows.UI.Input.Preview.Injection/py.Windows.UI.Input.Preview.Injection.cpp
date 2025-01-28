@@ -3104,26 +3104,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
-    static int InjectedInputPoint_set_PositionX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PositionX = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* InjectedInputPoint_get_PositionY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, void* /*unused*/) noexcept
     {
         try
@@ -3137,29 +3117,9 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
-    static int InjectedInputPoint_set_PositionY(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PositionY = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_InjectedInputPoint[] = {
-        { "position_x", reinterpret_cast<getter>(InjectedInputPoint_get_PositionX), reinterpret_cast<setter>(InjectedInputPoint_set_PositionX), nullptr, nullptr },
-        { "position_y", reinterpret_cast<getter>(InjectedInputPoint_get_PositionY), reinterpret_cast<setter>(InjectedInputPoint_set_PositionY), nullptr, nullptr },
+        { "position_x", reinterpret_cast<getter>(InjectedInputPoint_get_PositionX), nullptr, nullptr, nullptr },
+        { "position_y", reinterpret_cast<getter>(InjectedInputPoint_get_PositionY), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_InjectedInputPoint(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* other, int op) noexcept
@@ -3321,26 +3281,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
-    static int InjectedInputPointerInfo_set_PointerId(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PointerId = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* InjectedInputPointerInfo_get_PointerOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, void* /*unused*/) noexcept
     {
         try
@@ -3351,26 +3291,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int InjectedInputPointerInfo_set_PointerOptions(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PointerOptions = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -3387,26 +3307,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
-    static int InjectedInputPointerInfo_set_PixelLocation(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PixelLocation = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* InjectedInputPointerInfo_get_TimeOffsetInMilliseconds(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, void* /*unused*/) noexcept
     {
         try
@@ -3417,26 +3317,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int InjectedInputPointerInfo_set_TimeOffsetInMilliseconds(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TimeOffsetInMilliseconds = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -3453,32 +3333,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
-    static int InjectedInputPointerInfo_set_PerformanceCount(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PerformanceCount = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_InjectedInputPointerInfo[] = {
-        { "pointer_id", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PointerId), reinterpret_cast<setter>(InjectedInputPointerInfo_set_PointerId), nullptr, nullptr },
-        { "pointer_options", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PointerOptions), reinterpret_cast<setter>(InjectedInputPointerInfo_set_PointerOptions), nullptr, nullptr },
-        { "pixel_location", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PixelLocation), reinterpret_cast<setter>(InjectedInputPointerInfo_set_PixelLocation), nullptr, nullptr },
-        { "time_offset_in_milliseconds", reinterpret_cast<getter>(InjectedInputPointerInfo_get_TimeOffsetInMilliseconds), reinterpret_cast<setter>(InjectedInputPointerInfo_set_TimeOffsetInMilliseconds), nullptr, nullptr },
-        { "performance_count", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PerformanceCount), reinterpret_cast<setter>(InjectedInputPointerInfo_set_PerformanceCount), nullptr, nullptr },
+        { "pointer_id", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PointerId), nullptr, nullptr, nullptr },
+        { "pointer_options", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PointerOptions), nullptr, nullptr, nullptr },
+        { "pixel_location", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PixelLocation), nullptr, nullptr, nullptr },
+        { "time_offset_in_milliseconds", reinterpret_cast<getter>(InjectedInputPointerInfo_get_TimeOffsetInMilliseconds), nullptr, nullptr, nullptr },
+        { "performance_count", reinterpret_cast<getter>(InjectedInputPointerInfo_get_PerformanceCount), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_InjectedInputPointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* other, int op) noexcept
@@ -3656,26 +3516,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
-    static int InjectedInputRectangle_set_Left(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Left = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* InjectedInputRectangle_get_Top(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, void* /*unused*/) noexcept
     {
         try
@@ -3686,26 +3526,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int InjectedInputRectangle_set_Top(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Top = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -3722,26 +3542,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
-    static int InjectedInputRectangle_set_Bottom(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Bottom = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* InjectedInputRectangle_get_Right(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, void* /*unused*/) noexcept
     {
         try
@@ -3755,31 +3555,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
-    static int InjectedInputRectangle_set_Right(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Right = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_InjectedInputRectangle[] = {
-        { "left", reinterpret_cast<getter>(InjectedInputRectangle_get_Left), reinterpret_cast<setter>(InjectedInputRectangle_set_Left), nullptr, nullptr },
-        { "top", reinterpret_cast<getter>(InjectedInputRectangle_get_Top), reinterpret_cast<setter>(InjectedInputRectangle_set_Top), nullptr, nullptr },
-        { "bottom", reinterpret_cast<getter>(InjectedInputRectangle_get_Bottom), reinterpret_cast<setter>(InjectedInputRectangle_set_Bottom), nullptr, nullptr },
-        { "right", reinterpret_cast<getter>(InjectedInputRectangle_get_Right), reinterpret_cast<setter>(InjectedInputRectangle_set_Right), nullptr, nullptr },
+        { "left", reinterpret_cast<getter>(InjectedInputRectangle_get_Left), nullptr, nullptr, nullptr },
+        { "top", reinterpret_cast<getter>(InjectedInputRectangle_get_Top), nullptr, nullptr, nullptr },
+        { "bottom", reinterpret_cast<getter>(InjectedInputRectangle_get_Bottom), nullptr, nullptr, nullptr },
+        { "right", reinterpret_cast<getter>(InjectedInputRectangle_get_Right), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_InjectedInputRectangle(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* other, int op) noexcept

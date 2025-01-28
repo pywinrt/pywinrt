@@ -24,8 +24,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DisplayPresentationRate:
-    vertical_sync_rate: windows_foundation_numerics.Rational
-    vertical_syncs_per_presentation: winrt.system.Int32
+    @_property
+    def vertical_sync_rate(self) -> windows_foundation_numerics.Rational: ...
+    @_property
+    def vertical_syncs_per_presentation(self) -> winrt.system.Int32: ...
     def __init__(self, vertical_sync_rate: windows_foundation_numerics.Rational = windows_foundation_numerics.Rational(), vertical_syncs_per_presentation: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final

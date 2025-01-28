@@ -6052,26 +6052,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
-    static int HolographicAdapterId_set_LowPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LowPart = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HolographicAdapterId_get_HighPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, void* /*unused*/) noexcept
     {
         try
@@ -6085,29 +6065,9 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
-    static int HolographicAdapterId_set_HighPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.HighPart = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_HolographicAdapterId[] = {
-        { "low_part", reinterpret_cast<getter>(HolographicAdapterId_get_LowPart), reinterpret_cast<setter>(HolographicAdapterId_set_LowPart), nullptr, nullptr },
-        { "high_part", reinterpret_cast<getter>(HolographicAdapterId_get_HighPart), reinterpret_cast<setter>(HolographicAdapterId_set_HighPart), nullptr, nullptr },
+        { "low_part", reinterpret_cast<getter>(HolographicAdapterId_get_LowPart), nullptr, nullptr, nullptr },
+        { "high_part", reinterpret_cast<getter>(HolographicAdapterId_get_HighPart), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_HolographicAdapterId(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* other, int op) noexcept
@@ -6261,28 +6221,8 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
-    static int HolographicFrameId_set_Value(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_HolographicFrameId[] = {
-        { "value", reinterpret_cast<getter>(HolographicFrameId_get_Value), reinterpret_cast<setter>(HolographicFrameId_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(HolographicFrameId_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_HolographicFrameId(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, PyObject* other, int op) noexcept
@@ -6432,26 +6372,6 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
-    static int HolographicStereoTransform_set_Left(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Left = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HolographicStereoTransform_get_Right(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, void* /*unused*/) noexcept
     {
         try
@@ -6465,29 +6385,9 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
-    static int HolographicStereoTransform_set_Right(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Right = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_HolographicStereoTransform[] = {
-        { "left", reinterpret_cast<getter>(HolographicStereoTransform_get_Left), reinterpret_cast<setter>(HolographicStereoTransform_set_Left), nullptr, nullptr },
-        { "right", reinterpret_cast<getter>(HolographicStereoTransform_get_Right), reinterpret_cast<setter>(HolographicStereoTransform_set_Right), nullptr, nullptr },
+        { "left", reinterpret_cast<getter>(HolographicStereoTransform_get_Left), nullptr, nullptr, nullptr },
+        { "right", reinterpret_cast<getter>(HolographicStereoTransform_get_Right), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_HolographicStereoTransform(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* other, int op) noexcept

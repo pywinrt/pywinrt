@@ -22,16 +22,22 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class HandMeshVertex:
-    position: windows_foundation_numerics.Vector3
-    normal: windows_foundation_numerics.Vector3
+    @_property
+    def position(self) -> windows_foundation_numerics.Vector3: ...
+    @_property
+    def normal(self) -> windows_foundation_numerics.Vector3: ...
     def __init__(self, position: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), normal: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3()) -> None: ...
 
 @typing.final
 class JointPose:
-    orientation: windows_foundation_numerics.Quaternion
-    position: windows_foundation_numerics.Vector3
-    radius: winrt.system.Single
-    accuracy: JointPoseAccuracy
+    @_property
+    def orientation(self) -> windows_foundation_numerics.Quaternion: ...
+    @_property
+    def position(self) -> windows_foundation_numerics.Vector3: ...
+    @_property
+    def radius(self) -> winrt.system.Single: ...
+    @_property
+    def accuracy(self) -> JointPoseAccuracy: ...
     def __init__(self, orientation: windows_foundation_numerics.Quaternion = windows_foundation_numerics.Quaternion(), position: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), radius: winrt.system.Single = 0, accuracy: JointPoseAccuracy = JointPoseAccuracy(0)) -> None: ...
 
 @typing.final

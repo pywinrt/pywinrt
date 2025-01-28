@@ -1186,26 +1186,6 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         }
     }
 
-    static int HeadsetGeqGains_set_band1Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.band1Gain = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HeadsetGeqGains_get_band2Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, void* /*unused*/) noexcept
     {
         try
@@ -1216,26 +1196,6 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HeadsetGeqGains_set_band2Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.band2Gain = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1252,26 +1212,6 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         }
     }
 
-    static int HeadsetGeqGains_set_band3Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.band3Gain = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HeadsetGeqGains_get_band4Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, void* /*unused*/) noexcept
     {
         try
@@ -1282,26 +1222,6 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HeadsetGeqGains_set_band4Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.band4Gain = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1318,32 +1238,12 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         }
     }
 
-    static int HeadsetGeqGains_set_band5Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.band5Gain = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_HeadsetGeqGains[] = {
-        { "band1_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band1Gain), reinterpret_cast<setter>(HeadsetGeqGains_set_band1Gain), nullptr, nullptr },
-        { "band2_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band2Gain), reinterpret_cast<setter>(HeadsetGeqGains_set_band2Gain), nullptr, nullptr },
-        { "band3_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band3Gain), reinterpret_cast<setter>(HeadsetGeqGains_set_band3Gain), nullptr, nullptr },
-        { "band4_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band4Gain), reinterpret_cast<setter>(HeadsetGeqGains_set_band4Gain), nullptr, nullptr },
-        { "band5_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band5Gain), reinterpret_cast<setter>(HeadsetGeqGains_set_band5Gain), nullptr, nullptr },
+        { "band1_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band1Gain), nullptr, nullptr, nullptr },
+        { "band2_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band2Gain), nullptr, nullptr, nullptr },
+        { "band3_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band3Gain), nullptr, nullptr, nullptr },
+        { "band4_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band4Gain), nullptr, nullptr, nullptr },
+        { "band5_gain", reinterpret_cast<getter>(HeadsetGeqGains_get_band5Gain), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_HeadsetGeqGains(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* other, int op) noexcept

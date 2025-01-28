@@ -14910,26 +14910,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextRange_set_StartIndex(py::wrapper::Microsoft::UI::Xaml::Documents::TextRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.StartIndex = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TextRange_get_Length(py::wrapper::Microsoft::UI::Xaml::Documents::TextRange* self, void* /*unused*/) noexcept
     {
         try
@@ -14943,29 +14923,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         }
     }
 
-    static int TextRange_set_Length(py::wrapper::Microsoft::UI::Xaml::Documents::TextRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Length = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_TextRange[] = {
-        { "start_index", reinterpret_cast<getter>(TextRange_get_StartIndex), reinterpret_cast<setter>(TextRange_set_StartIndex), nullptr, nullptr },
-        { "length", reinterpret_cast<getter>(TextRange_get_Length), reinterpret_cast<setter>(TextRange_set_Length), nullptr, nullptr },
+        { "start_index", reinterpret_cast<getter>(TextRange_get_StartIndex), nullptr, nullptr, nullptr },
+        { "length", reinterpret_cast<getter>(TextRange_get_Length), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_TextRange(py::wrapper::Microsoft::UI::Xaml::Documents::TextRange* self, PyObject* other, int op) noexcept

@@ -1487,26 +1487,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         }
     }
 
-    static int ProviderI2cTransferResult_set_Status(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Status = py::convert_to<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferStatus>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ProviderI2cTransferResult_get_BytesTransferred(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, void* /*unused*/) noexcept
     {
         try
@@ -1520,29 +1500,9 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         }
     }
 
-    static int ProviderI2cTransferResult_set_BytesTransferred(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesTransferred = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_ProviderI2cTransferResult[] = {
-        { "status", reinterpret_cast<getter>(ProviderI2cTransferResult_get_Status), reinterpret_cast<setter>(ProviderI2cTransferResult_set_Status), nullptr, nullptr },
-        { "bytes_transferred", reinterpret_cast<getter>(ProviderI2cTransferResult_get_BytesTransferred), reinterpret_cast<setter>(ProviderI2cTransferResult_set_BytesTransferred), nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(ProviderI2cTransferResult_get_Status), nullptr, nullptr, nullptr },
+        { "bytes_transferred", reinterpret_cast<getter>(ProviderI2cTransferResult_get_BytesTransferred), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_ProviderI2cTransferResult(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, PyObject* other, int op) noexcept

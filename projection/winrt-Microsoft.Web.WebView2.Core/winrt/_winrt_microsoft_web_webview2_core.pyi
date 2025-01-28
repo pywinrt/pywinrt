@@ -25,12 +25,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CoreWebView2PhysicalKeyStatus:
-    repeat_count: winrt.system.UInt32
-    scan_code: winrt.system.UInt32
-    is_extended_key: winrt.system.Int32
-    is_menu_key_down: winrt.system.Int32
-    was_key_down: winrt.system.Int32
-    is_key_released: winrt.system.Int32
+    @_property
+    def repeat_count(self) -> winrt.system.UInt32: ...
+    @_property
+    def scan_code(self) -> winrt.system.UInt32: ...
+    @_property
+    def is_extended_key(self) -> winrt.system.Int32: ...
+    @_property
+    def is_menu_key_down(self) -> winrt.system.Int32: ...
+    @_property
+    def was_key_down(self) -> winrt.system.Int32: ...
+    @_property
+    def is_key_released(self) -> winrt.system.Int32: ...
     def __init__(self, repeat_count: winrt.system.UInt32 = 0, scan_code: winrt.system.UInt32 = 0, is_extended_key: winrt.system.Int32 = 0, is_menu_key_down: winrt.system.Int32 = 0, was_key_down: winrt.system.Int32 = 0, is_key_released: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final

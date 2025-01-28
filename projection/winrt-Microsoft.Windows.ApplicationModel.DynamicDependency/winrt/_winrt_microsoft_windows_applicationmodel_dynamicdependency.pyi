@@ -17,7 +17,8 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PackageDependencyContextId:
-    id: winrt.system.UInt64
+    @_property
+    def id(self) -> winrt.system.UInt64: ...
     def __init__(self, id: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final

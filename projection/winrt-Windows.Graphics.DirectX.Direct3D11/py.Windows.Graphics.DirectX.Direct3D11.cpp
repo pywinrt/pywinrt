@@ -633,26 +633,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
-    static int Direct3DMultisampleDescription_set_Count(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Count = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Direct3DMultisampleDescription_get_Quality(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -666,29 +646,9 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
-    static int Direct3DMultisampleDescription_set_Quality(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Quality = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Direct3DMultisampleDescription[] = {
-        { "count", reinterpret_cast<getter>(Direct3DMultisampleDescription_get_Count), reinterpret_cast<setter>(Direct3DMultisampleDescription_set_Count), nullptr, nullptr },
-        { "quality", reinterpret_cast<getter>(Direct3DMultisampleDescription_get_Quality), reinterpret_cast<setter>(Direct3DMultisampleDescription_set_Quality), nullptr, nullptr },
+        { "count", reinterpret_cast<getter>(Direct3DMultisampleDescription_get_Count), nullptr, nullptr, nullptr },
+        { "quality", reinterpret_cast<getter>(Direct3DMultisampleDescription_get_Quality), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Direct3DMultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, PyObject* other, int op) noexcept
@@ -848,26 +808,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
-    static int Direct3DSurfaceDescription_set_Width(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Direct3DSurfaceDescription_get_Height(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -878,26 +818,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Direct3DSurfaceDescription_set_Height(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -914,26 +834,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
-    static int Direct3DSurfaceDescription_set_Format(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Format = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Direct3DSurfaceDescription_get_MultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -947,31 +847,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
-    static int Direct3DSurfaceDescription_set_MultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MultisampleDescription = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Direct3DSurfaceDescription[] = {
-        { "width", reinterpret_cast<getter>(Direct3DSurfaceDescription_get_Width), reinterpret_cast<setter>(Direct3DSurfaceDescription_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(Direct3DSurfaceDescription_get_Height), reinterpret_cast<setter>(Direct3DSurfaceDescription_set_Height), nullptr, nullptr },
-        { "format", reinterpret_cast<getter>(Direct3DSurfaceDescription_get_Format), reinterpret_cast<setter>(Direct3DSurfaceDescription_set_Format), nullptr, nullptr },
-        { "multisample_description", reinterpret_cast<getter>(Direct3DSurfaceDescription_get_MultisampleDescription), reinterpret_cast<setter>(Direct3DSurfaceDescription_set_MultisampleDescription), nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(Direct3DSurfaceDescription_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(Direct3DSurfaceDescription_get_Height), nullptr, nullptr, nullptr },
+        { "format", reinterpret_cast<getter>(Direct3DSurfaceDescription_get_Format), nullptr, nullptr, nullptr },
+        { "multisample_description", reinterpret_cast<getter>(Direct3DSurfaceDescription_get_MultisampleDescription), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Direct3DSurfaceDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* other, int op) noexcept

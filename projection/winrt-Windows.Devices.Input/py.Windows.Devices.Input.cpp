@@ -2567,26 +2567,6 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
-    static int MouseDelta_set_X(py::wrapper::Windows::Devices::Input::MouseDelta* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.X = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* MouseDelta_get_Y(py::wrapper::Windows::Devices::Input::MouseDelta* self, void* /*unused*/) noexcept
     {
         try
@@ -2600,29 +2580,9 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
-    static int MouseDelta_set_Y(py::wrapper::Windows::Devices::Input::MouseDelta* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Y = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_MouseDelta[] = {
-        { "x", reinterpret_cast<getter>(MouseDelta_get_X), reinterpret_cast<setter>(MouseDelta_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(MouseDelta_get_Y), reinterpret_cast<setter>(MouseDelta_set_Y), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(MouseDelta_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(MouseDelta_get_Y), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_MouseDelta(py::wrapper::Windows::Devices::Input::MouseDelta* self, PyObject* other, int op) noexcept
@@ -2790,26 +2750,6 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
-    static int PointerDeviceUsage_set_UsagePage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.UsagePage = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PointerDeviceUsage_get_Usage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, void* /*unused*/) noexcept
     {
         try
@@ -2820,26 +2760,6 @@ namespace py::cpp::Windows::Devices::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PointerDeviceUsage_set_Usage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Usage = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2856,26 +2776,6 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
-    static int PointerDeviceUsage_set_MinLogical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MinLogical = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PointerDeviceUsage_get_MaxLogical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, void* /*unused*/) noexcept
     {
         try
@@ -2886,26 +2786,6 @@ namespace py::cpp::Windows::Devices::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PointerDeviceUsage_set_MaxLogical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MaxLogical = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2922,26 +2802,6 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
-    static int PointerDeviceUsage_set_MinPhysical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MinPhysical = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PointerDeviceUsage_get_MaxPhysical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, void* /*unused*/) noexcept
     {
         try
@@ -2952,26 +2812,6 @@ namespace py::cpp::Windows::Devices::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PointerDeviceUsage_set_MaxPhysical(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MaxPhysical = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2988,26 +2828,6 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
-    static int PointerDeviceUsage_set_Unit(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Unit = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PointerDeviceUsage_get_PhysicalMultiplier(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, void* /*unused*/) noexcept
     {
         try
@@ -3021,35 +2841,15 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
-    static int PointerDeviceUsage_set_PhysicalMultiplier(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PhysicalMultiplier = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PointerDeviceUsage[] = {
-        { "usage_page", reinterpret_cast<getter>(PointerDeviceUsage_get_UsagePage), reinterpret_cast<setter>(PointerDeviceUsage_set_UsagePage), nullptr, nullptr },
-        { "usage", reinterpret_cast<getter>(PointerDeviceUsage_get_Usage), reinterpret_cast<setter>(PointerDeviceUsage_set_Usage), nullptr, nullptr },
-        { "min_logical", reinterpret_cast<getter>(PointerDeviceUsage_get_MinLogical), reinterpret_cast<setter>(PointerDeviceUsage_set_MinLogical), nullptr, nullptr },
-        { "max_logical", reinterpret_cast<getter>(PointerDeviceUsage_get_MaxLogical), reinterpret_cast<setter>(PointerDeviceUsage_set_MaxLogical), nullptr, nullptr },
-        { "min_physical", reinterpret_cast<getter>(PointerDeviceUsage_get_MinPhysical), reinterpret_cast<setter>(PointerDeviceUsage_set_MinPhysical), nullptr, nullptr },
-        { "max_physical", reinterpret_cast<getter>(PointerDeviceUsage_get_MaxPhysical), reinterpret_cast<setter>(PointerDeviceUsage_set_MaxPhysical), nullptr, nullptr },
-        { "unit", reinterpret_cast<getter>(PointerDeviceUsage_get_Unit), reinterpret_cast<setter>(PointerDeviceUsage_set_Unit), nullptr, nullptr },
-        { "physical_multiplier", reinterpret_cast<getter>(PointerDeviceUsage_get_PhysicalMultiplier), reinterpret_cast<setter>(PointerDeviceUsage_set_PhysicalMultiplier), nullptr, nullptr },
+        { "usage_page", reinterpret_cast<getter>(PointerDeviceUsage_get_UsagePage), nullptr, nullptr, nullptr },
+        { "usage", reinterpret_cast<getter>(PointerDeviceUsage_get_Usage), nullptr, nullptr, nullptr },
+        { "min_logical", reinterpret_cast<getter>(PointerDeviceUsage_get_MinLogical), nullptr, nullptr, nullptr },
+        { "max_logical", reinterpret_cast<getter>(PointerDeviceUsage_get_MaxLogical), nullptr, nullptr, nullptr },
+        { "min_physical", reinterpret_cast<getter>(PointerDeviceUsage_get_MinPhysical), nullptr, nullptr, nullptr },
+        { "max_physical", reinterpret_cast<getter>(PointerDeviceUsage_get_MaxPhysical), nullptr, nullptr, nullptr },
+        { "unit", reinterpret_cast<getter>(PointerDeviceUsage_get_Unit), nullptr, nullptr, nullptr },
+        { "physical_multiplier", reinterpret_cast<getter>(PointerDeviceUsage_get_PhysicalMultiplier), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PointerDeviceUsage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* other, int op) noexcept

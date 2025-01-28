@@ -21682,26 +21682,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2PhysicalKeyStatus_set_RepeatCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RepeatCount = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* CoreWebView2PhysicalKeyStatus_get_ScanCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -21712,26 +21692,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int CoreWebView2PhysicalKeyStatus_set_ScanCode(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.ScanCode = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -21748,26 +21708,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2PhysicalKeyStatus_set_IsExtendedKey(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.IsExtendedKey = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* CoreWebView2PhysicalKeyStatus_get_IsMenuKeyDown(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -21778,26 +21718,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int CoreWebView2PhysicalKeyStatus_set_IsMenuKeyDown(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.IsMenuKeyDown = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -21814,26 +21734,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2PhysicalKeyStatus_set_WasKeyDown(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.WasKeyDown = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* CoreWebView2PhysicalKeyStatus_get_IsKeyReleased(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -21847,33 +21747,13 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
-    static int CoreWebView2PhysicalKeyStatus_set_IsKeyReleased(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.IsKeyReleased = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_CoreWebView2PhysicalKeyStatus[] = {
-        { "repeat_count", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_RepeatCount), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_RepeatCount), nullptr, nullptr },
-        { "scan_code", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_ScanCode), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_ScanCode), nullptr, nullptr },
-        { "is_extended_key", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_IsExtendedKey), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_IsExtendedKey), nullptr, nullptr },
-        { "is_menu_key_down", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_IsMenuKeyDown), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_IsMenuKeyDown), nullptr, nullptr },
-        { "was_key_down", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_WasKeyDown), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_WasKeyDown), nullptr, nullptr },
-        { "is_key_released", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_IsKeyReleased), reinterpret_cast<setter>(CoreWebView2PhysicalKeyStatus_set_IsKeyReleased), nullptr, nullptr },
+        { "repeat_count", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_RepeatCount), nullptr, nullptr, nullptr },
+        { "scan_code", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_ScanCode), nullptr, nullptr, nullptr },
+        { "is_extended_key", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_IsExtendedKey), nullptr, nullptr, nullptr },
+        { "is_menu_key_down", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_IsMenuKeyDown), nullptr, nullptr, nullptr },
+        { "was_key_down", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_WasKeyDown), nullptr, nullptr, nullptr },
+        { "is_key_released", reinterpret_cast<getter>(CoreWebView2PhysicalKeyStatus_get_IsKeyReleased), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_CoreWebView2PhysicalKeyStatus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* other, int op) noexcept

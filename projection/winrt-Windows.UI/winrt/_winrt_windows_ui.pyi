@@ -14,15 +14,20 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Color:
-    a: winrt.system.UInt8
-    r: winrt.system.UInt8
-    g: winrt.system.UInt8
-    b: winrt.system.UInt8
+    @_property
+    def a(self) -> winrt.system.UInt8: ...
+    @_property
+    def r(self) -> winrt.system.UInt8: ...
+    @_property
+    def g(self) -> winrt.system.UInt8: ...
+    @_property
+    def b(self) -> winrt.system.UInt8: ...
     def __init__(self, a: winrt.system.UInt8 = 0, r: winrt.system.UInt8 = 0, g: winrt.system.UInt8 = 0, b: winrt.system.UInt8 = 0) -> None: ...
 
 @typing.final
 class WindowId:
-    value: winrt.system.UInt64
+    @_property
+    def value(self) -> winrt.system.UInt64: ...
     def __init__(self, value: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final

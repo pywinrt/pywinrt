@@ -23,8 +23,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SortEntry:
-    property_name: str
-    ascending_order: bool
+    @_property
+    def property_name(self) -> str: ...
+    @_property
+    def ascending_order(self) -> bool: ...
     def __init__(self, property_name: str = "", ascending_order: bool = False) -> None: ...
 
 @typing.final

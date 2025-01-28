@@ -14570,26 +14570,6 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static int BandwidthStatistics_set_OutboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OutboundBitsPerSecond = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BandwidthStatistics_get_InboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, void* /*unused*/) noexcept
     {
         try
@@ -14600,26 +14580,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BandwidthStatistics_set_InboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.InboundBitsPerSecond = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -14636,26 +14596,6 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static int BandwidthStatistics_set_OutboundBitsPerSecondInstability(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OutboundBitsPerSecondInstability = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BandwidthStatistics_get_InboundBitsPerSecondInstability(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, void* /*unused*/) noexcept
     {
         try
@@ -14666,26 +14606,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BandwidthStatistics_set_InboundBitsPerSecondInstability(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.InboundBitsPerSecondInstability = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -14702,26 +14622,6 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static int BandwidthStatistics_set_OutboundBandwidthPeaked(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OutboundBandwidthPeaked = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BandwidthStatistics_get_InboundBandwidthPeaked(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, void* /*unused*/) noexcept
     {
         try
@@ -14735,33 +14635,13 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static int BandwidthStatistics_set_InboundBandwidthPeaked(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.InboundBandwidthPeaked = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_BandwidthStatistics[] = {
-        { "outbound_bits_per_second", reinterpret_cast<getter>(BandwidthStatistics_get_OutboundBitsPerSecond), reinterpret_cast<setter>(BandwidthStatistics_set_OutboundBitsPerSecond), nullptr, nullptr },
-        { "inbound_bits_per_second", reinterpret_cast<getter>(BandwidthStatistics_get_InboundBitsPerSecond), reinterpret_cast<setter>(BandwidthStatistics_set_InboundBitsPerSecond), nullptr, nullptr },
-        { "outbound_bits_per_second_instability", reinterpret_cast<getter>(BandwidthStatistics_get_OutboundBitsPerSecondInstability), reinterpret_cast<setter>(BandwidthStatistics_set_OutboundBitsPerSecondInstability), nullptr, nullptr },
-        { "inbound_bits_per_second_instability", reinterpret_cast<getter>(BandwidthStatistics_get_InboundBitsPerSecondInstability), reinterpret_cast<setter>(BandwidthStatistics_set_InboundBitsPerSecondInstability), nullptr, nullptr },
-        { "outbound_bandwidth_peaked", reinterpret_cast<getter>(BandwidthStatistics_get_OutboundBandwidthPeaked), reinterpret_cast<setter>(BandwidthStatistics_set_OutboundBandwidthPeaked), nullptr, nullptr },
-        { "inbound_bandwidth_peaked", reinterpret_cast<getter>(BandwidthStatistics_get_InboundBandwidthPeaked), reinterpret_cast<setter>(BandwidthStatistics_set_InboundBandwidthPeaked), nullptr, nullptr },
+        { "outbound_bits_per_second", reinterpret_cast<getter>(BandwidthStatistics_get_OutboundBitsPerSecond), nullptr, nullptr, nullptr },
+        { "inbound_bits_per_second", reinterpret_cast<getter>(BandwidthStatistics_get_InboundBitsPerSecond), nullptr, nullptr, nullptr },
+        { "outbound_bits_per_second_instability", reinterpret_cast<getter>(BandwidthStatistics_get_OutboundBitsPerSecondInstability), nullptr, nullptr, nullptr },
+        { "inbound_bits_per_second_instability", reinterpret_cast<getter>(BandwidthStatistics_get_InboundBitsPerSecondInstability), nullptr, nullptr, nullptr },
+        { "outbound_bandwidth_peaked", reinterpret_cast<getter>(BandwidthStatistics_get_OutboundBandwidthPeaked), nullptr, nullptr, nullptr },
+        { "inbound_bandwidth_peaked", reinterpret_cast<getter>(BandwidthStatistics_get_InboundBandwidthPeaked), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_BandwidthStatistics(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* other, int op) noexcept
@@ -14945,26 +14825,6 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static int RoundTripTimeStatistics_set_Variance(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Variance = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RoundTripTimeStatistics_get_Max(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, void* /*unused*/) noexcept
     {
         try
@@ -14975,26 +14835,6 @@ namespace py::cpp::Windows::Networking::Sockets
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int RoundTripTimeStatistics_set_Max(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Max = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -15011,26 +14851,6 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static int RoundTripTimeStatistics_set_Min(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Min = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RoundTripTimeStatistics_get_Sum(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, void* /*unused*/) noexcept
     {
         try
@@ -15044,31 +14864,11 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
-    static int RoundTripTimeStatistics_set_Sum(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Sum = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_RoundTripTimeStatistics[] = {
-        { "variance", reinterpret_cast<getter>(RoundTripTimeStatistics_get_Variance), reinterpret_cast<setter>(RoundTripTimeStatistics_set_Variance), nullptr, nullptr },
-        { "max", reinterpret_cast<getter>(RoundTripTimeStatistics_get_Max), reinterpret_cast<setter>(RoundTripTimeStatistics_set_Max), nullptr, nullptr },
-        { "min", reinterpret_cast<getter>(RoundTripTimeStatistics_get_Min), reinterpret_cast<setter>(RoundTripTimeStatistics_set_Min), nullptr, nullptr },
-        { "sum", reinterpret_cast<getter>(RoundTripTimeStatistics_get_Sum), reinterpret_cast<setter>(RoundTripTimeStatistics_set_Sum), nullptr, nullptr },
+        { "variance", reinterpret_cast<getter>(RoundTripTimeStatistics_get_Variance), nullptr, nullptr, nullptr },
+        { "max", reinterpret_cast<getter>(RoundTripTimeStatistics_get_Max), nullptr, nullptr, nullptr },
+        { "min", reinterpret_cast<getter>(RoundTripTimeStatistics_get_Min), nullptr, nullptr, nullptr },
+        { "sum", reinterpret_cast<getter>(RoundTripTimeStatistics_get_Sum), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_RoundTripTimeStatistics(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* other, int op) noexcept

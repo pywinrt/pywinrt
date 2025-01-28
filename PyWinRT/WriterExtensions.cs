@@ -308,7 +308,7 @@ static class WriterExtensions
         {
             foreach (var field in type.Type.Fields)
             {
-                writeRow(field.Name, $"get_{field.Name}", $"set_{field.Name}");
+                writeRow(field.Name, $"get_{field.Name}", null);
             }
         }
         else if (type.Category == Category.Class || type.Category == Category.Interface)

@@ -20,15 +20,20 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class XamlBinaryWriterErrorInformation:
-    input_stream_index: winrt.system.UInt32
-    line_number: winrt.system.UInt32
-    line_position: winrt.system.UInt32
+    @_property
+    def input_stream_index(self) -> winrt.system.UInt32: ...
+    @_property
+    def line_number(self) -> winrt.system.UInt32: ...
+    @_property
+    def line_position(self) -> winrt.system.UInt32: ...
     def __init__(self, input_stream_index: winrt.system.UInt32 = 0, line_number: winrt.system.UInt32 = 0, line_position: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class XmlnsDefinition:
-    xml_namespace: str
-    namespace: str
+    @_property
+    def xml_namespace(self) -> str: ...
+    @_property
+    def namespace(self) -> str: ...
     def __init__(self, xml_namespace: str = "", namespace: str = "") -> None: ...
 
 class MarkupExtension_Static(winrt._winrt.IInspectable_Static):

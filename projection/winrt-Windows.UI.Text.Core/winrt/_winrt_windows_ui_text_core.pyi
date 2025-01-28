@@ -21,8 +21,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CoreTextRange:
-    start_caret_position: winrt.system.Int32
-    end_caret_position: winrt.system.Int32
+    @_property
+    def start_caret_position(self) -> winrt.system.Int32: ...
+    @_property
+    def end_caret_position(self) -> winrt.system.Int32: ...
     def __init__(self, start_caret_position: winrt.system.Int32 = 0, end_caret_position: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final

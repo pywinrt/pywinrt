@@ -2321,28 +2321,8 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         }
     }
 
-    static int AutomationAnnotationTypeRegistration_set_LocalId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LocalId = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_AutomationAnnotationTypeRegistration[] = {
-        { "local_id", reinterpret_cast<getter>(AutomationAnnotationTypeRegistration_get_LocalId), reinterpret_cast<setter>(AutomationAnnotationTypeRegistration_set_LocalId), nullptr, nullptr },
+        { "local_id", reinterpret_cast<getter>(AutomationAnnotationTypeRegistration_get_LocalId), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_AutomationAnnotationTypeRegistration(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, PyObject* other, int op) noexcept
@@ -2490,28 +2470,8 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         }
     }
 
-    static int AutomationRemoteOperationOperandId_set_Value(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_AutomationRemoteOperationOperandId[] = {
-        { "value", reinterpret_cast<getter>(AutomationRemoteOperationOperandId_get_Value), reinterpret_cast<setter>(AutomationRemoteOperationOperandId_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(AutomationRemoteOperationOperandId_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_AutomationRemoteOperationOperandId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, PyObject* other, int op) noexcept

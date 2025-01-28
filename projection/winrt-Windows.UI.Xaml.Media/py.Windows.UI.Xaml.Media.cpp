@@ -26140,26 +26140,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int Matrix_set_M11(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M11 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix_get_M12(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, void* /*unused*/) noexcept
     {
         try
@@ -26170,26 +26150,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix_set_M12(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M12 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -26206,26 +26166,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int Matrix_set_M21(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M21 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix_get_M22(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, void* /*unused*/) noexcept
     {
         try
@@ -26236,26 +26176,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix_set_M22(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.M22 = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -26272,26 +26192,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int Matrix_set_OffsetX(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OffsetX = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix_get_OffsetY(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, void* /*unused*/) noexcept
     {
         try
@@ -26305,33 +26205,13 @@ namespace py::cpp::Windows::UI::Xaml::Media
         }
     }
 
-    static int Matrix_set_OffsetY(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OffsetY = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Matrix[] = {
-        { "m11", reinterpret_cast<getter>(Matrix_get_M11), reinterpret_cast<setter>(Matrix_set_M11), nullptr, nullptr },
-        { "m12", reinterpret_cast<getter>(Matrix_get_M12), reinterpret_cast<setter>(Matrix_set_M12), nullptr, nullptr },
-        { "m21", reinterpret_cast<getter>(Matrix_get_M21), reinterpret_cast<setter>(Matrix_set_M21), nullptr, nullptr },
-        { "m22", reinterpret_cast<getter>(Matrix_get_M22), reinterpret_cast<setter>(Matrix_set_M22), nullptr, nullptr },
-        { "offset_x", reinterpret_cast<getter>(Matrix_get_OffsetX), reinterpret_cast<setter>(Matrix_set_OffsetX), nullptr, nullptr },
-        { "offset_y", reinterpret_cast<getter>(Matrix_get_OffsetY), reinterpret_cast<setter>(Matrix_set_OffsetY), nullptr, nullptr },
+        { "m11", reinterpret_cast<getter>(Matrix_get_M11), nullptr, nullptr, nullptr },
+        { "m12", reinterpret_cast<getter>(Matrix_get_M12), nullptr, nullptr, nullptr },
+        { "m21", reinterpret_cast<getter>(Matrix_get_M21), nullptr, nullptr, nullptr },
+        { "m22", reinterpret_cast<getter>(Matrix_get_M22), nullptr, nullptr, nullptr },
+        { "offset_x", reinterpret_cast<getter>(Matrix_get_OffsetX), nullptr, nullptr, nullptr },
+        { "offset_y", reinterpret_cast<getter>(Matrix_get_OffsetY), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Matrix(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, PyObject* other, int op) noexcept

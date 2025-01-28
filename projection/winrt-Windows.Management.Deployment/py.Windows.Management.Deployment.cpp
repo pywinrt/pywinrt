@@ -11444,26 +11444,6 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static int DeploymentProgress_set_state(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.state = py::convert_to<winrt::Windows::Management::Deployment::DeploymentProgressState>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* DeploymentProgress_get_percentage(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -11477,29 +11457,9 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
-    static int DeploymentProgress_set_percentage(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.percentage = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_DeploymentProgress[] = {
-        { "state", reinterpret_cast<getter>(DeploymentProgress_get_state), reinterpret_cast<setter>(DeploymentProgress_set_state), nullptr, nullptr },
-        { "percentage", reinterpret_cast<getter>(DeploymentProgress_get_percentage), reinterpret_cast<setter>(DeploymentProgress_set_percentage), nullptr, nullptr },
+        { "state", reinterpret_cast<getter>(DeploymentProgress_get_state), nullptr, nullptr, nullptr },
+        { "percentage", reinterpret_cast<getter>(DeploymentProgress_get_percentage), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_DeploymentProgress(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, PyObject* other, int op) noexcept

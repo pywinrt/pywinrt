@@ -24,15 +24,20 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PackageInstallProgress:
-    percent_complete: winrt.system.UInt32
+    @_property
+    def percent_complete(self) -> winrt.system.UInt32: ...
     def __init__(self, percent_complete: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class PackageVersion:
-    major: winrt.system.UInt16
-    minor: winrt.system.UInt16
-    build: winrt.system.UInt16
-    revision: winrt.system.UInt16
+    @_property
+    def major(self) -> winrt.system.UInt16: ...
+    @_property
+    def minor(self) -> winrt.system.UInt16: ...
+    @_property
+    def build(self) -> winrt.system.UInt16: ...
+    @_property
+    def revision(self) -> winrt.system.UInt16: ...
     def __init__(self, major: winrt.system.UInt16 = 0, minor: winrt.system.UInt16 = 0, build: winrt.system.UInt16 = 0, revision: winrt.system.UInt16 = 0) -> None: ...
 
 @typing.final

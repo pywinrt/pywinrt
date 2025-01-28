@@ -8551,28 +8551,8 @@ namespace py::cpp::Windows::UI::Xaml::Data
         }
     }
 
-    static int LoadMoreItemsResult_set_Count(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Count = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_LoadMoreItemsResult[] = {
-        { "count", reinterpret_cast<getter>(LoadMoreItemsResult_get_Count), reinterpret_cast<setter>(LoadMoreItemsResult_set_Count), nullptr, nullptr },
+        { "count", reinterpret_cast<getter>(LoadMoreItemsResult_get_Count), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_LoadMoreItemsResult(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self, PyObject* other, int op) noexcept

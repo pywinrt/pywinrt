@@ -27569,28 +27569,8 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
     }
 
-    static int KeyTime_set_TimeSpan(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_KeyTime[] = {
-        { "time_span", reinterpret_cast<getter>(KeyTime_get_TimeSpan), reinterpret_cast<setter>(KeyTime_set_TimeSpan), nullptr, nullptr },
+        { "time_span", reinterpret_cast<getter>(KeyTime_get_TimeSpan), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime* self, PyObject* other, int op) noexcept
@@ -27742,26 +27722,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
     }
 
-    static int RepeatBehavior_set_Count(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Count = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RepeatBehavior_get_Duration(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, void* /*unused*/) noexcept
     {
         try
@@ -27772,26 +27732,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int RepeatBehavior_set_Duration(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Duration = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -27808,30 +27748,10 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
     }
 
-    static int RepeatBehavior_set_Type(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Type = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_RepeatBehavior[] = {
-        { "count", reinterpret_cast<getter>(RepeatBehavior_get_Count), reinterpret_cast<setter>(RepeatBehavior_set_Count), nullptr, nullptr },
-        { "duration", reinterpret_cast<getter>(RepeatBehavior_get_Duration), reinterpret_cast<setter>(RepeatBehavior_set_Duration), nullptr, nullptr },
-        { "type", reinterpret_cast<getter>(RepeatBehavior_get_Type), reinterpret_cast<setter>(RepeatBehavior_set_Type), nullptr, nullptr },
+        { "count", reinterpret_cast<getter>(RepeatBehavior_get_Count), nullptr, nullptr, nullptr },
+        { "duration", reinterpret_cast<getter>(RepeatBehavior_get_Duration), nullptr, nullptr, nullptr },
+        { "type", reinterpret_cast<getter>(RepeatBehavior_get_Type), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_RepeatBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* other, int op) noexcept

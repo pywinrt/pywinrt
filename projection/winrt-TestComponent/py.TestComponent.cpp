@@ -11755,26 +11755,6 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Blittable_set_A(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.A = py::convert_to<uint8_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Blittable_get_B(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
     {
         try
@@ -11785,26 +11765,6 @@ namespace py::cpp::TestComponent
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Blittable_set_B(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.B = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -11821,26 +11781,6 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Blittable_set_C(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.C = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Blittable_get_D(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
     {
         try
@@ -11851,26 +11791,6 @@ namespace py::cpp::TestComponent
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Blittable_set_D(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.D = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -11887,26 +11807,6 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Blittable_set_E(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.E = py::convert_to<int16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Blittable_get_F(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
     {
         try
@@ -11917,26 +11817,6 @@ namespace py::cpp::TestComponent
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Blittable_set_F(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.F = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -11953,26 +11833,6 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Blittable_set_G(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.G = py::convert_to<int64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Blittable_get_H(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
     {
         try
@@ -11983,26 +11843,6 @@ namespace py::cpp::TestComponent
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Blittable_set_H(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.H = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -12019,26 +11859,6 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Blittable_set_I(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.I = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Blittable_get_J(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
     {
         try
@@ -12052,37 +11872,17 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Blittable_set_J(py::wrapper::TestComponent::Blittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.J = py::convert_to<winrt::guid>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Blittable[] = {
-        { "a", reinterpret_cast<getter>(Blittable_get_A), reinterpret_cast<setter>(Blittable_set_A), nullptr, nullptr },
-        { "b", reinterpret_cast<getter>(Blittable_get_B), reinterpret_cast<setter>(Blittable_set_B), nullptr, nullptr },
-        { "c", reinterpret_cast<getter>(Blittable_get_C), reinterpret_cast<setter>(Blittable_set_C), nullptr, nullptr },
-        { "d", reinterpret_cast<getter>(Blittable_get_D), reinterpret_cast<setter>(Blittable_set_D), nullptr, nullptr },
-        { "e", reinterpret_cast<getter>(Blittable_get_E), reinterpret_cast<setter>(Blittable_set_E), nullptr, nullptr },
-        { "f", reinterpret_cast<getter>(Blittable_get_F), reinterpret_cast<setter>(Blittable_set_F), nullptr, nullptr },
-        { "g", reinterpret_cast<getter>(Blittable_get_G), reinterpret_cast<setter>(Blittable_set_G), nullptr, nullptr },
-        { "h", reinterpret_cast<getter>(Blittable_get_H), reinterpret_cast<setter>(Blittable_set_H), nullptr, nullptr },
-        { "i", reinterpret_cast<getter>(Blittable_get_I), reinterpret_cast<setter>(Blittable_set_I), nullptr, nullptr },
-        { "j", reinterpret_cast<getter>(Blittable_get_J), reinterpret_cast<setter>(Blittable_set_J), nullptr, nullptr },
+        { "a", reinterpret_cast<getter>(Blittable_get_A), nullptr, nullptr, nullptr },
+        { "b", reinterpret_cast<getter>(Blittable_get_B), nullptr, nullptr, nullptr },
+        { "c", reinterpret_cast<getter>(Blittable_get_C), nullptr, nullptr, nullptr },
+        { "d", reinterpret_cast<getter>(Blittable_get_D), nullptr, nullptr, nullptr },
+        { "e", reinterpret_cast<getter>(Blittable_get_E), nullptr, nullptr, nullptr },
+        { "f", reinterpret_cast<getter>(Blittable_get_F), nullptr, nullptr, nullptr },
+        { "g", reinterpret_cast<getter>(Blittable_get_G), nullptr, nullptr, nullptr },
+        { "h", reinterpret_cast<getter>(Blittable_get_H), nullptr, nullptr, nullptr },
+        { "i", reinterpret_cast<getter>(Blittable_get_I), nullptr, nullptr, nullptr },
+        { "j", reinterpret_cast<getter>(Blittable_get_J), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Blittable(py::wrapper::TestComponent::Blittable* self, PyObject* other, int op) noexcept
@@ -12286,26 +12086,6 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Nested_set_Blittable(py::wrapper::TestComponent::Nested* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Blittable = py::convert_to<winrt::TestComponent::Blittable>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Nested_get_NonBlittable(py::wrapper::TestComponent::Nested* self, void* /*unused*/) noexcept
     {
         try
@@ -12319,29 +12099,9 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int Nested_set_NonBlittable(py::wrapper::TestComponent::Nested* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.NonBlittable = py::convert_to<winrt::TestComponent::NonBlittable>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Nested[] = {
-        { "blittable", reinterpret_cast<getter>(Nested_get_Blittable), reinterpret_cast<setter>(Nested_set_Blittable), nullptr, nullptr },
-        { "non_blittable", reinterpret_cast<getter>(Nested_get_NonBlittable), reinterpret_cast<setter>(Nested_set_NonBlittable), nullptr, nullptr },
+        { "blittable", reinterpret_cast<getter>(Nested_get_Blittable), nullptr, nullptr, nullptr },
+        { "non_blittable", reinterpret_cast<getter>(Nested_get_NonBlittable), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Nested(py::wrapper::TestComponent::Nested* self, PyObject* other, int op) noexcept
@@ -12501,26 +12261,6 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int NonBlittable_set_A(py::wrapper::TestComponent::NonBlittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.A = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* NonBlittable_get_B(py::wrapper::TestComponent::NonBlittable* self, void* /*unused*/) noexcept
     {
         try
@@ -12531,26 +12271,6 @@ namespace py::cpp::TestComponent
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int NonBlittable_set_B(py::wrapper::TestComponent::NonBlittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.B = py::convert_to<char16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -12567,26 +12287,6 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int NonBlittable_set_C(py::wrapper::TestComponent::NonBlittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.C = py::convert_to<winrt::hstring>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* NonBlittable_get_D(py::wrapper::TestComponent::NonBlittable* self, void* /*unused*/) noexcept
     {
         try
@@ -12600,31 +12300,11 @@ namespace py::cpp::TestComponent
         }
     }
 
-    static int NonBlittable_set_D(py::wrapper::TestComponent::NonBlittable* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.D = py::convert_to<winrt::Windows::Foundation::IReference<int64_t>>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_NonBlittable[] = {
-        { "a", reinterpret_cast<getter>(NonBlittable_get_A), reinterpret_cast<setter>(NonBlittable_set_A), nullptr, nullptr },
-        { "b", reinterpret_cast<getter>(NonBlittable_get_B), reinterpret_cast<setter>(NonBlittable_set_B), nullptr, nullptr },
-        { "c", reinterpret_cast<getter>(NonBlittable_get_C), reinterpret_cast<setter>(NonBlittable_set_C), nullptr, nullptr },
-        { "d", reinterpret_cast<getter>(NonBlittable_get_D), reinterpret_cast<setter>(NonBlittable_set_D), nullptr, nullptr },
+        { "a", reinterpret_cast<getter>(NonBlittable_get_A), nullptr, nullptr, nullptr },
+        { "b", reinterpret_cast<getter>(NonBlittable_get_B), nullptr, nullptr, nullptr },
+        { "c", reinterpret_cast<getter>(NonBlittable_get_C), nullptr, nullptr, nullptr },
+        { "d", reinterpret_cast<getter>(NonBlittable_get_D), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_NonBlittable(py::wrapper::TestComponent::NonBlittable* self, PyObject* other, int op) noexcept

@@ -25,35 +25,52 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CrossSlideThresholds:
-    selection_start: winrt.system.Single
-    speed_bump_start: winrt.system.Single
-    speed_bump_end: winrt.system.Single
-    rearrange_start: winrt.system.Single
+    @_property
+    def selection_start(self) -> winrt.system.Single: ...
+    @_property
+    def speed_bump_start(self) -> winrt.system.Single: ...
+    @_property
+    def speed_bump_end(self) -> winrt.system.Single: ...
+    @_property
+    def rearrange_start(self) -> winrt.system.Single: ...
     def __init__(self, selection_start: winrt.system.Single = 0, speed_bump_start: winrt.system.Single = 0, speed_bump_end: winrt.system.Single = 0, rearrange_start: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class ManipulationDelta:
-    translation: windows_foundation.Point
-    scale: winrt.system.Single
-    rotation: winrt.system.Single
-    expansion: winrt.system.Single
+    @_property
+    def translation(self) -> windows_foundation.Point: ...
+    @_property
+    def scale(self) -> winrt.system.Single: ...
+    @_property
+    def rotation(self) -> winrt.system.Single: ...
+    @_property
+    def expansion(self) -> winrt.system.Single: ...
     def __init__(self, translation: windows_foundation.Point = windows_foundation.Point(), scale: winrt.system.Single = 0, rotation: winrt.system.Single = 0, expansion: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class ManipulationVelocities:
-    linear: windows_foundation.Point
-    angular: winrt.system.Single
-    expansion: winrt.system.Single
+    @_property
+    def linear(self) -> windows_foundation.Point: ...
+    @_property
+    def angular(self) -> winrt.system.Single: ...
+    @_property
+    def expansion(self) -> winrt.system.Single: ...
     def __init__(self, linear: windows_foundation.Point = windows_foundation.Point(), angular: winrt.system.Single = 0, expansion: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class PhysicalKeyStatus:
-    repeat_count: winrt.system.UInt32
-    scan_code: winrt.system.UInt32
-    is_extended_key: bool
-    is_menu_key_down: bool
-    was_key_down: bool
-    is_key_released: bool
+    @_property
+    def repeat_count(self) -> winrt.system.UInt32: ...
+    @_property
+    def scan_code(self) -> winrt.system.UInt32: ...
+    @_property
+    def is_extended_key(self) -> bool: ...
+    @_property
+    def is_menu_key_down(self) -> bool: ...
+    @_property
+    def was_key_down(self) -> bool: ...
+    @_property
+    def is_key_released(self) -> bool: ...
     def __init__(self, repeat_count: winrt.system.UInt32 = 0, scan_code: winrt.system.UInt32 = 0, is_extended_key: bool = False, is_menu_key_down: bool = False, was_key_down: bool = False, is_key_released: bool = False) -> None: ...
 
 @typing.final

@@ -19,12 +19,14 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AutomationAnnotationTypeRegistration:
-    local_id: winrt.system.Int32
+    @_property
+    def local_id(self) -> winrt.system.Int32: ...
     def __init__(self, local_id: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class AutomationRemoteOperationOperandId:
-    value: winrt.system.Int32
+    @_property
+    def value(self) -> winrt.system.Int32: ...
     def __init__(self, value: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final

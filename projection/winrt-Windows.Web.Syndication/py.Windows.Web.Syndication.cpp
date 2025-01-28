@@ -12499,26 +12499,6 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
-    static int RetrievalProgress_set_BytesRetrieved(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesRetrieved = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RetrievalProgress_get_TotalBytesToRetrieve(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -12532,29 +12512,9 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
-    static int RetrievalProgress_set_TotalBytesToRetrieve(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToRetrieve = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_RetrievalProgress[] = {
-        { "bytes_retrieved", reinterpret_cast<getter>(RetrievalProgress_get_BytesRetrieved), reinterpret_cast<setter>(RetrievalProgress_set_BytesRetrieved), nullptr, nullptr },
-        { "total_bytes_to_retrieve", reinterpret_cast<getter>(RetrievalProgress_get_TotalBytesToRetrieve), reinterpret_cast<setter>(RetrievalProgress_set_TotalBytesToRetrieve), nullptr, nullptr },
+        { "bytes_retrieved", reinterpret_cast<getter>(RetrievalProgress_get_BytesRetrieved), nullptr, nullptr, nullptr },
+        { "total_bytes_to_retrieve", reinterpret_cast<getter>(RetrievalProgress_get_TotalBytesToRetrieve), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_RetrievalProgress(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, PyObject* other, int op) noexcept
@@ -12714,26 +12674,6 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
-    static int TransferProgress_set_BytesSent(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesSent = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TransferProgress_get_TotalBytesToSend(py::wrapper::Windows::Web::Syndication::TransferProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -12744,26 +12684,6 @@ namespace py::cpp::Windows::Web::Syndication
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int TransferProgress_set_TotalBytesToSend(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToSend = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -12780,26 +12700,6 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
-    static int TransferProgress_set_BytesRetrieved(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesRetrieved = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TransferProgress_get_TotalBytesToRetrieve(py::wrapper::Windows::Web::Syndication::TransferProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -12813,31 +12713,11 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
-    static int TransferProgress_set_TotalBytesToRetrieve(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToRetrieve = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_TransferProgress[] = {
-        { "bytes_sent", reinterpret_cast<getter>(TransferProgress_get_BytesSent), reinterpret_cast<setter>(TransferProgress_set_BytesSent), nullptr, nullptr },
-        { "total_bytes_to_send", reinterpret_cast<getter>(TransferProgress_get_TotalBytesToSend), reinterpret_cast<setter>(TransferProgress_set_TotalBytesToSend), nullptr, nullptr },
-        { "bytes_retrieved", reinterpret_cast<getter>(TransferProgress_get_BytesRetrieved), reinterpret_cast<setter>(TransferProgress_set_BytesRetrieved), nullptr, nullptr },
-        { "total_bytes_to_retrieve", reinterpret_cast<getter>(TransferProgress_get_TotalBytesToRetrieve), reinterpret_cast<setter>(TransferProgress_set_TotalBytesToRetrieve), nullptr, nullptr },
+        { "bytes_sent", reinterpret_cast<getter>(TransferProgress_get_BytesSent), nullptr, nullptr, nullptr },
+        { "total_bytes_to_send", reinterpret_cast<getter>(TransferProgress_get_TotalBytesToSend), nullptr, nullptr, nullptr },
+        { "bytes_retrieved", reinterpret_cast<getter>(TransferProgress_get_BytesRetrieved), nullptr, nullptr, nullptr },
+        { "total_bytes_to_retrieve", reinterpret_cast<getter>(TransferProgress_get_TotalBytesToRetrieve), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_TransferProgress(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* other, int op) noexcept

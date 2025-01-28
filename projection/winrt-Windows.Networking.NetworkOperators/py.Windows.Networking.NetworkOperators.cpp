@@ -20771,26 +20771,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
-    static int ESimProfileInstallProgress_set_TotalSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalSizeInBytes = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ESimProfileInstallProgress_get_InstalledSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -20804,29 +20784,9 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
-    static int ESimProfileInstallProgress_set_InstalledSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.InstalledSizeInBytes = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_ESimProfileInstallProgress[] = {
-        { "total_size_in_bytes", reinterpret_cast<getter>(ESimProfileInstallProgress_get_TotalSizeInBytes), reinterpret_cast<setter>(ESimProfileInstallProgress_set_TotalSizeInBytes), nullptr, nullptr },
-        { "installed_size_in_bytes", reinterpret_cast<getter>(ESimProfileInstallProgress_get_InstalledSizeInBytes), reinterpret_cast<setter>(ESimProfileInstallProgress_set_InstalledSizeInBytes), nullptr, nullptr },
+        { "total_size_in_bytes", reinterpret_cast<getter>(ESimProfileInstallProgress_get_TotalSizeInBytes), nullptr, nullptr, nullptr },
+        { "installed_size_in_bytes", reinterpret_cast<getter>(ESimProfileInstallProgress_get_InstalledSizeInBytes), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_ESimProfileInstallProgress(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, PyObject* other, int op) noexcept
@@ -20982,26 +20942,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
-    static int ProfileUsage_set_UsageInMegabytes(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.UsageInMegabytes = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ProfileUsage_get_LastSyncTime(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, void* /*unused*/) noexcept
     {
         try
@@ -21015,29 +20955,9 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
-    static int ProfileUsage_set_LastSyncTime(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LastSyncTime = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_ProfileUsage[] = {
-        { "usage_in_megabytes", reinterpret_cast<getter>(ProfileUsage_get_UsageInMegabytes), reinterpret_cast<setter>(ProfileUsage_set_UsageInMegabytes), nullptr, nullptr },
-        { "last_sync_time", reinterpret_cast<getter>(ProfileUsage_get_LastSyncTime), reinterpret_cast<setter>(ProfileUsage_set_LastSyncTime), nullptr, nullptr },
+        { "usage_in_megabytes", reinterpret_cast<getter>(ProfileUsage_get_UsageInMegabytes), nullptr, nullptr, nullptr },
+        { "last_sync_time", reinterpret_cast<getter>(ProfileUsage_get_LastSyncTime), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_ProfileUsage(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* other, int op) noexcept

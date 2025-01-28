@@ -14,8 +14,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AppContainerNameAndAccess:
-    app_container_name: str
-    access_mask: winrt.system.UInt32
+    @_property
+    def app_container_name(self) -> str: ...
+    @_property
+    def access_mask(self) -> winrt.system.UInt32: ...
     def __init__(self, app_container_name: str = "", access_mask: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
