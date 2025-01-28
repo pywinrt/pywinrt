@@ -37506,26 +37506,6 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static int SizeUInt32_set_Width(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SizeUInt32_get_Height(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, void* /*unused*/) noexcept
     {
         try
@@ -37539,29 +37519,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static int SizeUInt32_set_Height(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SizeUInt32[] = {
-        { "width", reinterpret_cast<getter>(SizeUInt32_get_Width), reinterpret_cast<setter>(SizeUInt32_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(SizeUInt32_get_Height), reinterpret_cast<setter>(SizeUInt32_set_Height), nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(SizeUInt32_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(SizeUInt32_get_Height), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SizeUInt32(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, PyObject* other, int op) noexcept

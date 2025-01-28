@@ -21,11 +21,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SmsEncodedLength:
-    segment_count: winrt.system.UInt32
-    character_count_last_segment: winrt.system.UInt32
-    characters_per_segment: winrt.system.UInt32
-    byte_count_last_segment: winrt.system.UInt32
-    bytes_per_segment: winrt.system.UInt32
+    @_property
+    def segment_count(self) -> winrt.system.UInt32: ...
+    @_property
+    def character_count_last_segment(self) -> winrt.system.UInt32: ...
+    @_property
+    def characters_per_segment(self) -> winrt.system.UInt32: ...
+    @_property
+    def byte_count_last_segment(self) -> winrt.system.UInt32: ...
+    @_property
+    def bytes_per_segment(self) -> winrt.system.UInt32: ...
     def __init__(self, segment_count: winrt.system.UInt32 = 0, character_count_last_segment: winrt.system.UInt32 = 0, characters_per_segment: winrt.system.UInt32 = 0, byte_count_last_segment: winrt.system.UInt32 = 0, bytes_per_segment: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

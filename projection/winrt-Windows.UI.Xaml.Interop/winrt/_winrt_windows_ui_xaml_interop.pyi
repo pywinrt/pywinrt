@@ -19,8 +19,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class TypeName:
-    name: str
-    kind: TypeKind
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def kind(self) -> TypeKind: ...
     def __init__(self, name: str = "", kind: TypeKind = TypeKind(0)) -> None: ...
 
 class NotifyCollectionChangedEventArgs_Static(winrt._winrt.IInspectable_Static):

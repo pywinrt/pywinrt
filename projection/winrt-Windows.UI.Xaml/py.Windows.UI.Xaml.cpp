@@ -40631,26 +40631,6 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int CornerRadius_set_TopLeft(py::wrapper::Windows::UI::Xaml::CornerRadius* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TopLeft = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* CornerRadius_get_TopRight(py::wrapper::Windows::UI::Xaml::CornerRadius* self, void* /*unused*/) noexcept
     {
         try
@@ -40661,26 +40641,6 @@ namespace py::cpp::Windows::UI::Xaml
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int CornerRadius_set_TopRight(py::wrapper::Windows::UI::Xaml::CornerRadius* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TopRight = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -40697,26 +40657,6 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int CornerRadius_set_BottomRight(py::wrapper::Windows::UI::Xaml::CornerRadius* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BottomRight = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* CornerRadius_get_BottomLeft(py::wrapper::Windows::UI::Xaml::CornerRadius* self, void* /*unused*/) noexcept
     {
         try
@@ -40730,31 +40670,11 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int CornerRadius_set_BottomLeft(py::wrapper::Windows::UI::Xaml::CornerRadius* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BottomLeft = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_CornerRadius[] = {
-        { "top_left", reinterpret_cast<getter>(CornerRadius_get_TopLeft), reinterpret_cast<setter>(CornerRadius_set_TopLeft), nullptr, nullptr },
-        { "top_right", reinterpret_cast<getter>(CornerRadius_get_TopRight), reinterpret_cast<setter>(CornerRadius_set_TopRight), nullptr, nullptr },
-        { "bottom_right", reinterpret_cast<getter>(CornerRadius_get_BottomRight), reinterpret_cast<setter>(CornerRadius_set_BottomRight), nullptr, nullptr },
-        { "bottom_left", reinterpret_cast<getter>(CornerRadius_get_BottomLeft), reinterpret_cast<setter>(CornerRadius_set_BottomLeft), nullptr, nullptr },
+        { "top_left", reinterpret_cast<getter>(CornerRadius_get_TopLeft), nullptr, nullptr, nullptr },
+        { "top_right", reinterpret_cast<getter>(CornerRadius_get_TopRight), nullptr, nullptr, nullptr },
+        { "bottom_right", reinterpret_cast<getter>(CornerRadius_get_BottomRight), nullptr, nullptr, nullptr },
+        { "bottom_left", reinterpret_cast<getter>(CornerRadius_get_BottomLeft), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_CornerRadius(py::wrapper::Windows::UI::Xaml::CornerRadius* self, PyObject* other, int op) noexcept
@@ -40922,26 +40842,6 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Duration_set_TimeSpan(py::wrapper::Windows::UI::Xaml::Duration* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Duration_get_Type(py::wrapper::Windows::UI::Xaml::Duration* self, void* /*unused*/) noexcept
     {
         try
@@ -40955,29 +40855,9 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Duration_set_Type(py::wrapper::Windows::UI::Xaml::Duration* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Type = py::convert_to<winrt::Windows::UI::Xaml::DurationType>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Duration[] = {
-        { "time_span", reinterpret_cast<getter>(Duration_get_TimeSpan), reinterpret_cast<setter>(Duration_set_TimeSpan), nullptr, nullptr },
-        { "type", reinterpret_cast<getter>(Duration_get_Type), reinterpret_cast<setter>(Duration_set_Type), nullptr, nullptr },
+        { "time_span", reinterpret_cast<getter>(Duration_get_TimeSpan), nullptr, nullptr, nullptr },
+        { "type", reinterpret_cast<getter>(Duration_get_Type), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Duration(py::wrapper::Windows::UI::Xaml::Duration* self, PyObject* other, int op) noexcept
@@ -41133,26 +41013,6 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int GridLength_set_Value(py::wrapper::Windows::UI::Xaml::GridLength* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GridLength_get_GridUnitType(py::wrapper::Windows::UI::Xaml::GridLength* self, void* /*unused*/) noexcept
     {
         try
@@ -41166,29 +41026,9 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int GridLength_set_GridUnitType(py::wrapper::Windows::UI::Xaml::GridLength* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.GridUnitType = py::convert_to<winrt::Windows::UI::Xaml::GridUnitType>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_GridLength[] = {
-        { "value", reinterpret_cast<getter>(GridLength_get_Value), reinterpret_cast<setter>(GridLength_set_Value), nullptr, nullptr },
-        { "grid_unit_type", reinterpret_cast<getter>(GridLength_get_GridUnitType), reinterpret_cast<setter>(GridLength_set_GridUnitType), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(GridLength_get_Value), nullptr, nullptr, nullptr },
+        { "grid_unit_type", reinterpret_cast<getter>(GridLength_get_GridUnitType), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_GridLength(py::wrapper::Windows::UI::Xaml::GridLength* self, PyObject* other, int op) noexcept
@@ -41348,26 +41188,6 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Thickness_set_Left(py::wrapper::Windows::UI::Xaml::Thickness* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Left = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Thickness_get_Top(py::wrapper::Windows::UI::Xaml::Thickness* self, void* /*unused*/) noexcept
     {
         try
@@ -41378,26 +41198,6 @@ namespace py::cpp::Windows::UI::Xaml
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Thickness_set_Top(py::wrapper::Windows::UI::Xaml::Thickness* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Top = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -41414,26 +41214,6 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Thickness_set_Right(py::wrapper::Windows::UI::Xaml::Thickness* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Right = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Thickness_get_Bottom(py::wrapper::Windows::UI::Xaml::Thickness* self, void* /*unused*/) noexcept
     {
         try
@@ -41447,31 +41227,11 @@ namespace py::cpp::Windows::UI::Xaml
         }
     }
 
-    static int Thickness_set_Bottom(py::wrapper::Windows::UI::Xaml::Thickness* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Bottom = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Thickness[] = {
-        { "left", reinterpret_cast<getter>(Thickness_get_Left), reinterpret_cast<setter>(Thickness_set_Left), nullptr, nullptr },
-        { "top", reinterpret_cast<getter>(Thickness_get_Top), reinterpret_cast<setter>(Thickness_set_Top), nullptr, nullptr },
-        { "right", reinterpret_cast<getter>(Thickness_get_Right), reinterpret_cast<setter>(Thickness_set_Right), nullptr, nullptr },
-        { "bottom", reinterpret_cast<getter>(Thickness_get_Bottom), reinterpret_cast<setter>(Thickness_set_Bottom), nullptr, nullptr },
+        { "left", reinterpret_cast<getter>(Thickness_get_Left), nullptr, nullptr, nullptr },
+        { "top", reinterpret_cast<getter>(Thickness_get_Top), nullptr, nullptr, nullptr },
+        { "right", reinterpret_cast<getter>(Thickness_get_Right), nullptr, nullptr, nullptr },
+        { "bottom", reinterpret_cast<getter>(Thickness_get_Bottom), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Thickness(py::wrapper::Windows::UI::Xaml::Thickness* self, PyObject* other, int op) noexcept

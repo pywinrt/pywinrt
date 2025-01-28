@@ -33,8 +33,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class GeneratorPosition:
-    index: winrt.system.Int32
-    offset: winrt.system.Int32
+    @_property
+    def index(self) -> winrt.system.Int32: ...
+    @_property
+    def offset(self) -> winrt.system.Int32: ...
     def __init__(self, index: winrt.system.Int32 = 0, offset: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final

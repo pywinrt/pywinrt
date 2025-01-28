@@ -26,20 +26,30 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BandwidthStatistics:
-    outbound_bits_per_second: winrt.system.UInt64
-    inbound_bits_per_second: winrt.system.UInt64
-    outbound_bits_per_second_instability: winrt.system.UInt64
-    inbound_bits_per_second_instability: winrt.system.UInt64
-    outbound_bandwidth_peaked: bool
-    inbound_bandwidth_peaked: bool
+    @_property
+    def outbound_bits_per_second(self) -> winrt.system.UInt64: ...
+    @_property
+    def inbound_bits_per_second(self) -> winrt.system.UInt64: ...
+    @_property
+    def outbound_bits_per_second_instability(self) -> winrt.system.UInt64: ...
+    @_property
+    def inbound_bits_per_second_instability(self) -> winrt.system.UInt64: ...
+    @_property
+    def outbound_bandwidth_peaked(self) -> bool: ...
+    @_property
+    def inbound_bandwidth_peaked(self) -> bool: ...
     def __init__(self, outbound_bits_per_second: winrt.system.UInt64 = 0, inbound_bits_per_second: winrt.system.UInt64 = 0, outbound_bits_per_second_instability: winrt.system.UInt64 = 0, inbound_bits_per_second_instability: winrt.system.UInt64 = 0, outbound_bandwidth_peaked: bool = False, inbound_bandwidth_peaked: bool = False) -> None: ...
 
 @typing.final
 class RoundTripTimeStatistics:
-    variance: winrt.system.UInt32
-    max: winrt.system.UInt32
-    min: winrt.system.UInt32
-    sum: winrt.system.UInt32
+    @_property
+    def variance(self) -> winrt.system.UInt32: ...
+    @_property
+    def max(self) -> winrt.system.UInt32: ...
+    @_property
+    def min(self) -> winrt.system.UInt32: ...
+    @_property
+    def sum(self) -> winrt.system.UInt32: ...
     def __init__(self, variance: winrt.system.UInt32 = 0, max: winrt.system.UInt32 = 0, min: winrt.system.UInt32 = 0, sum: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

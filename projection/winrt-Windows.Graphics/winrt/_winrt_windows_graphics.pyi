@@ -15,33 +15,44 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DisplayAdapterId:
-    low_part: winrt.system.UInt32
-    high_part: winrt.system.Int32
+    @_property
+    def low_part(self) -> winrt.system.UInt32: ...
+    @_property
+    def high_part(self) -> winrt.system.Int32: ...
     def __init__(self, low_part: winrt.system.UInt32 = 0, high_part: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class DisplayId:
-    value: winrt.system.UInt64
+    @_property
+    def value(self) -> winrt.system.UInt64: ...
     def __init__(self, value: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final
 class PointInt32:
-    x: winrt.system.Int32
-    y: winrt.system.Int32
+    @_property
+    def x(self) -> winrt.system.Int32: ...
+    @_property
+    def y(self) -> winrt.system.Int32: ...
     def __init__(self, x: winrt.system.Int32 = 0, y: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class RectInt32:
-    x: winrt.system.Int32
-    y: winrt.system.Int32
-    width: winrt.system.Int32
-    height: winrt.system.Int32
+    @_property
+    def x(self) -> winrt.system.Int32: ...
+    @_property
+    def y(self) -> winrt.system.Int32: ...
+    @_property
+    def width(self) -> winrt.system.Int32: ...
+    @_property
+    def height(self) -> winrt.system.Int32: ...
     def __init__(self, x: winrt.system.Int32 = 0, y: winrt.system.Int32 = 0, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class SizeInt32:
-    width: winrt.system.Int32
-    height: winrt.system.Int32
+    @_property
+    def width(self) -> winrt.system.Int32: ...
+    @_property
+    def height(self) -> winrt.system.Int32: ...
     def __init__(self, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final

@@ -24,12 +24,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class HttpProgress:
-    stage: HttpProgressStage
-    bytes_sent: winrt.system.UInt64
-    total_bytes_to_send: typing.Optional[winrt.system.UInt64]
-    bytes_received: winrt.system.UInt64
-    total_bytes_to_receive: typing.Optional[winrt.system.UInt64]
-    retries: winrt.system.UInt32
+    @_property
+    def stage(self) -> HttpProgressStage: ...
+    @_property
+    def bytes_sent(self) -> winrt.system.UInt64: ...
+    @_property
+    def total_bytes_to_send(self) -> typing.Optional[winrt.system.UInt64]: ...
+    @_property
+    def bytes_received(self) -> winrt.system.UInt64: ...
+    @_property
+    def total_bytes_to_receive(self) -> typing.Optional[winrt.system.UInt64]: ...
+    @_property
+    def retries(self) -> winrt.system.UInt32: ...
     def __init__(self, stage: HttpProgressStage = HttpProgressStage(0), bytes_sent: winrt.system.UInt64 = 0, total_bytes_to_send: typing.Optional[winrt.system.UInt64] = None, bytes_received: winrt.system.UInt64 = 0, total_bytes_to_receive: typing.Optional[winrt.system.UInt64] = None, retries: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

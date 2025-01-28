@@ -35,9 +35,12 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class WhiteBalanceGain:
-    r: winrt.system.Double
-    g: winrt.system.Double
-    b: winrt.system.Double
+    @_property
+    def r(self) -> winrt.system.Double: ...
+    @_property
+    def g(self) -> winrt.system.Double: ...
+    @_property
+    def b(self) -> winrt.system.Double: ...
     def __init__(self, r: winrt.system.Double = 0, g: winrt.system.Double = 0, b: winrt.system.Double = 0) -> None: ...
 
 @typing.final

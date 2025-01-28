@@ -4379,26 +4379,6 @@ namespace py::cpp::Windows::Graphics::Display
         }
     }
 
-    static int NitRange_set_MinNits(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MinNits = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* NitRange_get_MaxNits(py::wrapper::Windows::Graphics::Display::NitRange* self, void* /*unused*/) noexcept
     {
         try
@@ -4409,26 +4389,6 @@ namespace py::cpp::Windows::Graphics::Display
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int NitRange_set_MaxNits(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.MaxNits = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -4445,30 +4405,10 @@ namespace py::cpp::Windows::Graphics::Display
         }
     }
 
-    static int NitRange_set_StepSizeNits(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.StepSizeNits = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_NitRange[] = {
-        { "min_nits", reinterpret_cast<getter>(NitRange_get_MinNits), reinterpret_cast<setter>(NitRange_set_MinNits), nullptr, nullptr },
-        { "max_nits", reinterpret_cast<getter>(NitRange_get_MaxNits), reinterpret_cast<setter>(NitRange_set_MaxNits), nullptr, nullptr },
-        { "step_size_nits", reinterpret_cast<getter>(NitRange_get_StepSizeNits), reinterpret_cast<setter>(NitRange_set_StepSizeNits), nullptr, nullptr },
+        { "min_nits", reinterpret_cast<getter>(NitRange_get_MinNits), nullptr, nullptr, nullptr },
+        { "max_nits", reinterpret_cast<getter>(NitRange_get_MaxNits), nullptr, nullptr, nullptr },
+        { "step_size_nits", reinterpret_cast<getter>(NitRange_get_StepSizeNits), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_NitRange(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* other, int op) noexcept

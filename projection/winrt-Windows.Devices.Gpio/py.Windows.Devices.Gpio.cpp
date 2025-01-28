@@ -2223,26 +2223,6 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
-    static int GpioChangeCount_set_Count(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Count = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GpioChangeCount_get_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, void* /*unused*/) noexcept
     {
         try
@@ -2256,29 +2236,9 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
-    static int GpioChangeCount_set_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_GpioChangeCount[] = {
-        { "count", reinterpret_cast<getter>(GpioChangeCount_get_Count), reinterpret_cast<setter>(GpioChangeCount_set_Count), nullptr, nullptr },
-        { "relative_time", reinterpret_cast<getter>(GpioChangeCount_get_RelativeTime), reinterpret_cast<setter>(GpioChangeCount_set_RelativeTime), nullptr, nullptr },
+        { "count", reinterpret_cast<getter>(GpioChangeCount_get_Count), nullptr, nullptr, nullptr },
+        { "relative_time", reinterpret_cast<getter>(GpioChangeCount_get_RelativeTime), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_GpioChangeCount(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* other, int op) noexcept
@@ -2434,26 +2394,6 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
-    static int GpioChangeRecord_set_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GpioChangeRecord_get_Edge(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, void* /*unused*/) noexcept
     {
         try
@@ -2467,29 +2407,9 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
-    static int GpioChangeRecord_set_Edge(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Edge = py::convert_to<winrt::Windows::Devices::Gpio::GpioPinEdge>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_GpioChangeRecord[] = {
-        { "relative_time", reinterpret_cast<getter>(GpioChangeRecord_get_RelativeTime), reinterpret_cast<setter>(GpioChangeRecord_set_RelativeTime), nullptr, nullptr },
-        { "edge", reinterpret_cast<getter>(GpioChangeRecord_get_Edge), reinterpret_cast<setter>(GpioChangeRecord_set_Edge), nullptr, nullptr },
+        { "relative_time", reinterpret_cast<getter>(GpioChangeRecord_get_RelativeTime), nullptr, nullptr, nullptr },
+        { "edge", reinterpret_cast<getter>(GpioChangeRecord_get_Edge), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_GpioChangeRecord(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* other, int op) noexcept

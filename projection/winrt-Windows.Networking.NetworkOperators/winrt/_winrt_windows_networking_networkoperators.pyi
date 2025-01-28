@@ -23,14 +23,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ESimProfileInstallProgress:
-    total_size_in_bytes: winrt.system.Int32
-    installed_size_in_bytes: winrt.system.Int32
+    @_property
+    def total_size_in_bytes(self) -> winrt.system.Int32: ...
+    @_property
+    def installed_size_in_bytes(self) -> winrt.system.Int32: ...
     def __init__(self, total_size_in_bytes: winrt.system.Int32 = 0, installed_size_in_bytes: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class ProfileUsage:
-    usage_in_megabytes: winrt.system.UInt32
-    last_sync_time: datetime.datetime
+    @_property
+    def usage_in_megabytes(self) -> winrt.system.UInt32: ...
+    @_property
+    def last_sync_time(self) -> datetime.datetime: ...
     def __init__(self, usage_in_megabytes: winrt.system.UInt32 = 0, last_sync_time: datetime.datetime = datetime.datetime(1601, 1, 1, tzinfo=datetime.timezone.utc)) -> None: ...
 
 @typing.final

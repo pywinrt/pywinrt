@@ -21,24 +21,34 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BitmapBounds:
-    x: winrt.system.UInt32
-    y: winrt.system.UInt32
-    width: winrt.system.UInt32
-    height: winrt.system.UInt32
+    @_property
+    def x(self) -> winrt.system.UInt32: ...
+    @_property
+    def y(self) -> winrt.system.UInt32: ...
+    @_property
+    def width(self) -> winrt.system.UInt32: ...
+    @_property
+    def height(self) -> winrt.system.UInt32: ...
     def __init__(self, x: winrt.system.UInt32 = 0, y: winrt.system.UInt32 = 0, width: winrt.system.UInt32 = 0, height: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class BitmapPlaneDescription:
-    start_index: winrt.system.Int32
-    width: winrt.system.Int32
-    height: winrt.system.Int32
-    stride: winrt.system.Int32
+    @_property
+    def start_index(self) -> winrt.system.Int32: ...
+    @_property
+    def width(self) -> winrt.system.Int32: ...
+    @_property
+    def height(self) -> winrt.system.Int32: ...
+    @_property
+    def stride(self) -> winrt.system.Int32: ...
     def __init__(self, start_index: winrt.system.Int32 = 0, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0, stride: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class BitmapSize:
-    width: winrt.system.UInt32
-    height: winrt.system.UInt32
+    @_property
+    def width(self) -> winrt.system.UInt32: ...
+    @_property
+    def height(self) -> winrt.system.UInt32: ...
     def __init__(self, width: winrt.system.UInt32 = 0, height: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

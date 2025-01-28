@@ -20,7 +20,8 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class FontWeight:
-    weight: winrt.system.UInt16
+    @_property
+    def weight(self) -> winrt.system.UInt16: ...
     def __init__(self, weight: winrt.system.UInt16 = 0) -> None: ...
 
 @typing.final

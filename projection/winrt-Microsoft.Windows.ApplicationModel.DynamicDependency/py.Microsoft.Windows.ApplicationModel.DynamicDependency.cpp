@@ -1501,28 +1501,8 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         }
     }
 
-    static int PackageDependencyContextId_set_Id(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Id = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PackageDependencyContextId[] = {
-        { "id", reinterpret_cast<getter>(PackageDependencyContextId_get_Id), reinterpret_cast<setter>(PackageDependencyContextId_set_Id), nullptr, nullptr },
+        { "id", reinterpret_cast<getter>(PackageDependencyContextId_get_Id), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PackageDependencyContextId(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId* self, PyObject* other, int op) noexcept

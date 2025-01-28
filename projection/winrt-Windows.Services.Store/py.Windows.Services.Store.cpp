@@ -8953,26 +8953,6 @@ namespace py::cpp::Windows::Services::Store
         }
     }
 
-    static int StorePackageUpdateStatus_set_PackageFamilyName(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PackageFamilyName = py::convert_to<winrt::hstring>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* StorePackageUpdateStatus_get_PackageDownloadSizeInBytes(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -8983,26 +8963,6 @@ namespace py::cpp::Windows::Services::Store
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int StorePackageUpdateStatus_set_PackageDownloadSizeInBytes(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PackageDownloadSizeInBytes = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -9019,26 +8979,6 @@ namespace py::cpp::Windows::Services::Store
         }
     }
 
-    static int StorePackageUpdateStatus_set_PackageBytesDownloaded(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PackageBytesDownloaded = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* StorePackageUpdateStatus_get_PackageDownloadProgress(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -9049,26 +8989,6 @@ namespace py::cpp::Windows::Services::Store
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int StorePackageUpdateStatus_set_PackageDownloadProgress(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PackageDownloadProgress = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -9085,26 +9005,6 @@ namespace py::cpp::Windows::Services::Store
         }
     }
 
-    static int StorePackageUpdateStatus_set_TotalDownloadProgress(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalDownloadProgress = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* StorePackageUpdateStatus_get_PackageUpdateState(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -9118,33 +9018,13 @@ namespace py::cpp::Windows::Services::Store
         }
     }
 
-    static int StorePackageUpdateStatus_set_PackageUpdateState(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PackageUpdateState = py::convert_to<winrt::Windows::Services::Store::StorePackageUpdateState>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_StorePackageUpdateStatus[] = {
-        { "package_family_name", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageFamilyName), reinterpret_cast<setter>(StorePackageUpdateStatus_set_PackageFamilyName), nullptr, nullptr },
-        { "package_download_size_in_bytes", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageDownloadSizeInBytes), reinterpret_cast<setter>(StorePackageUpdateStatus_set_PackageDownloadSizeInBytes), nullptr, nullptr },
-        { "package_bytes_downloaded", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageBytesDownloaded), reinterpret_cast<setter>(StorePackageUpdateStatus_set_PackageBytesDownloaded), nullptr, nullptr },
-        { "package_download_progress", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageDownloadProgress), reinterpret_cast<setter>(StorePackageUpdateStatus_set_PackageDownloadProgress), nullptr, nullptr },
-        { "total_download_progress", reinterpret_cast<getter>(StorePackageUpdateStatus_get_TotalDownloadProgress), reinterpret_cast<setter>(StorePackageUpdateStatus_set_TotalDownloadProgress), nullptr, nullptr },
-        { "package_update_state", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageUpdateState), reinterpret_cast<setter>(StorePackageUpdateStatus_set_PackageUpdateState), nullptr, nullptr },
+        { "package_family_name", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageFamilyName), nullptr, nullptr, nullptr },
+        { "package_download_size_in_bytes", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageDownloadSizeInBytes), nullptr, nullptr, nullptr },
+        { "package_bytes_downloaded", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageBytesDownloaded), nullptr, nullptr, nullptr },
+        { "package_download_progress", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageDownloadProgress), nullptr, nullptr, nullptr },
+        { "total_download_progress", reinterpret_cast<getter>(StorePackageUpdateStatus_get_TotalDownloadProgress), nullptr, nullptr, nullptr },
+        { "package_update_state", reinterpret_cast<getter>(StorePackageUpdateStatus_get_PackageUpdateState), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_StorePackageUpdateStatus(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* other, int op) noexcept

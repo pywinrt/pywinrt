@@ -13777,26 +13777,6 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int CrossSlideThresholds_set_SelectionStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.SelectionStart = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* CrossSlideThresholds_get_SpeedBumpStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, void* /*unused*/) noexcept
     {
         try
@@ -13807,26 +13787,6 @@ namespace py::cpp::Microsoft::UI::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int CrossSlideThresholds_set_SpeedBumpStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.SpeedBumpStart = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -13843,26 +13803,6 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int CrossSlideThresholds_set_SpeedBumpEnd(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.SpeedBumpEnd = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* CrossSlideThresholds_get_RearrangeStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, void* /*unused*/) noexcept
     {
         try
@@ -13876,31 +13816,11 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int CrossSlideThresholds_set_RearrangeStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RearrangeStart = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_CrossSlideThresholds[] = {
-        { "selection_start", reinterpret_cast<getter>(CrossSlideThresholds_get_SelectionStart), reinterpret_cast<setter>(CrossSlideThresholds_set_SelectionStart), nullptr, nullptr },
-        { "speed_bump_start", reinterpret_cast<getter>(CrossSlideThresholds_get_SpeedBumpStart), reinterpret_cast<setter>(CrossSlideThresholds_set_SpeedBumpStart), nullptr, nullptr },
-        { "speed_bump_end", reinterpret_cast<getter>(CrossSlideThresholds_get_SpeedBumpEnd), reinterpret_cast<setter>(CrossSlideThresholds_set_SpeedBumpEnd), nullptr, nullptr },
-        { "rearrange_start", reinterpret_cast<getter>(CrossSlideThresholds_get_RearrangeStart), reinterpret_cast<setter>(CrossSlideThresholds_set_RearrangeStart), nullptr, nullptr },
+        { "selection_start", reinterpret_cast<getter>(CrossSlideThresholds_get_SelectionStart), nullptr, nullptr, nullptr },
+        { "speed_bump_start", reinterpret_cast<getter>(CrossSlideThresholds_get_SpeedBumpStart), nullptr, nullptr, nullptr },
+        { "speed_bump_end", reinterpret_cast<getter>(CrossSlideThresholds_get_SpeedBumpEnd), nullptr, nullptr, nullptr },
+        { "rearrange_start", reinterpret_cast<getter>(CrossSlideThresholds_get_RearrangeStart), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_CrossSlideThresholds(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* other, int op) noexcept
@@ -14072,26 +13992,6 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int ManipulationDelta_set_Translation(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Translation = py::convert_to<winrt::Windows::Foundation::Point>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ManipulationDelta_get_Scale(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, void* /*unused*/) noexcept
     {
         try
@@ -14102,26 +14002,6 @@ namespace py::cpp::Microsoft::UI::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int ManipulationDelta_set_Scale(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Scale = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -14138,26 +14018,6 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int ManipulationDelta_set_Rotation(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Rotation = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ManipulationDelta_get_Expansion(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, void* /*unused*/) noexcept
     {
         try
@@ -14171,31 +14031,11 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int ManipulationDelta_set_Expansion(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Expansion = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_ManipulationDelta[] = {
-        { "translation", reinterpret_cast<getter>(ManipulationDelta_get_Translation), reinterpret_cast<setter>(ManipulationDelta_set_Translation), nullptr, nullptr },
-        { "scale", reinterpret_cast<getter>(ManipulationDelta_get_Scale), reinterpret_cast<setter>(ManipulationDelta_set_Scale), nullptr, nullptr },
-        { "rotation", reinterpret_cast<getter>(ManipulationDelta_get_Rotation), reinterpret_cast<setter>(ManipulationDelta_set_Rotation), nullptr, nullptr },
-        { "expansion", reinterpret_cast<getter>(ManipulationDelta_get_Expansion), reinterpret_cast<setter>(ManipulationDelta_set_Expansion), nullptr, nullptr },
+        { "translation", reinterpret_cast<getter>(ManipulationDelta_get_Translation), nullptr, nullptr, nullptr },
+        { "scale", reinterpret_cast<getter>(ManipulationDelta_get_Scale), nullptr, nullptr, nullptr },
+        { "rotation", reinterpret_cast<getter>(ManipulationDelta_get_Rotation), nullptr, nullptr, nullptr },
+        { "expansion", reinterpret_cast<getter>(ManipulationDelta_get_Expansion), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_ManipulationDelta(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* other, int op) noexcept
@@ -14365,26 +14205,6 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int ManipulationVelocities_set_Linear(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Linear = py::convert_to<winrt::Windows::Foundation::Point>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ManipulationVelocities_get_Angular(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, void* /*unused*/) noexcept
     {
         try
@@ -14395,26 +14215,6 @@ namespace py::cpp::Microsoft::UI::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int ManipulationVelocities_set_Angular(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Angular = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -14431,30 +14231,10 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int ManipulationVelocities_set_Expansion(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Expansion = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_ManipulationVelocities[] = {
-        { "linear", reinterpret_cast<getter>(ManipulationVelocities_get_Linear), reinterpret_cast<setter>(ManipulationVelocities_set_Linear), nullptr, nullptr },
-        { "angular", reinterpret_cast<getter>(ManipulationVelocities_get_Angular), reinterpret_cast<setter>(ManipulationVelocities_set_Angular), nullptr, nullptr },
-        { "expansion", reinterpret_cast<getter>(ManipulationVelocities_get_Expansion), reinterpret_cast<setter>(ManipulationVelocities_set_Expansion), nullptr, nullptr },
+        { "linear", reinterpret_cast<getter>(ManipulationVelocities_get_Linear), nullptr, nullptr, nullptr },
+        { "angular", reinterpret_cast<getter>(ManipulationVelocities_get_Angular), nullptr, nullptr, nullptr },
+        { "expansion", reinterpret_cast<getter>(ManipulationVelocities_get_Expansion), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_ManipulationVelocities(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* other, int op) noexcept
@@ -14624,26 +14404,6 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int PhysicalKeyStatus_set_RepeatCount(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RepeatCount = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PhysicalKeyStatus_get_ScanCode(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -14654,26 +14414,6 @@ namespace py::cpp::Microsoft::UI::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PhysicalKeyStatus_set_ScanCode(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.ScanCode = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -14690,26 +14430,6 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int PhysicalKeyStatus_set_IsExtendedKey(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.IsExtendedKey = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PhysicalKeyStatus_get_IsMenuKeyDown(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -14720,26 +14440,6 @@ namespace py::cpp::Microsoft::UI::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int PhysicalKeyStatus_set_IsMenuKeyDown(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.IsMenuKeyDown = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -14756,26 +14456,6 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int PhysicalKeyStatus_set_WasKeyDown(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.WasKeyDown = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PhysicalKeyStatus_get_IsKeyReleased(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, void* /*unused*/) noexcept
     {
         try
@@ -14789,33 +14469,13 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
-    static int PhysicalKeyStatus_set_IsKeyReleased(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.IsKeyReleased = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PhysicalKeyStatus[] = {
-        { "repeat_count", reinterpret_cast<getter>(PhysicalKeyStatus_get_RepeatCount), reinterpret_cast<setter>(PhysicalKeyStatus_set_RepeatCount), nullptr, nullptr },
-        { "scan_code", reinterpret_cast<getter>(PhysicalKeyStatus_get_ScanCode), reinterpret_cast<setter>(PhysicalKeyStatus_set_ScanCode), nullptr, nullptr },
-        { "is_extended_key", reinterpret_cast<getter>(PhysicalKeyStatus_get_IsExtendedKey), reinterpret_cast<setter>(PhysicalKeyStatus_set_IsExtendedKey), nullptr, nullptr },
-        { "is_menu_key_down", reinterpret_cast<getter>(PhysicalKeyStatus_get_IsMenuKeyDown), reinterpret_cast<setter>(PhysicalKeyStatus_set_IsMenuKeyDown), nullptr, nullptr },
-        { "was_key_down", reinterpret_cast<getter>(PhysicalKeyStatus_get_WasKeyDown), reinterpret_cast<setter>(PhysicalKeyStatus_set_WasKeyDown), nullptr, nullptr },
-        { "is_key_released", reinterpret_cast<getter>(PhysicalKeyStatus_get_IsKeyReleased), reinterpret_cast<setter>(PhysicalKeyStatus_set_IsKeyReleased), nullptr, nullptr },
+        { "repeat_count", reinterpret_cast<getter>(PhysicalKeyStatus_get_RepeatCount), nullptr, nullptr, nullptr },
+        { "scan_code", reinterpret_cast<getter>(PhysicalKeyStatus_get_ScanCode), nullptr, nullptr, nullptr },
+        { "is_extended_key", reinterpret_cast<getter>(PhysicalKeyStatus_get_IsExtendedKey), nullptr, nullptr, nullptr },
+        { "is_menu_key_down", reinterpret_cast<getter>(PhysicalKeyStatus_get_IsMenuKeyDown), nullptr, nullptr, nullptr },
+        { "was_key_down", reinterpret_cast<getter>(PhysicalKeyStatus_get_WasKeyDown), nullptr, nullptr, nullptr },
+        { "is_key_released", reinterpret_cast<getter>(PhysicalKeyStatus_get_IsKeyReleased), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PhysicalKeyStatus(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* other, int op) noexcept

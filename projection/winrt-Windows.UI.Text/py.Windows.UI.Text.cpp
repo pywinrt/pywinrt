@@ -21560,28 +21560,8 @@ namespace py::cpp::Windows::UI::Text
         }
     }
 
-    static int FontWeight_set_Weight(py::wrapper::Windows::UI::Text::FontWeight* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Weight = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_FontWeight[] = {
-        { "weight", reinterpret_cast<getter>(FontWeight_get_Weight), reinterpret_cast<setter>(FontWeight_set_Weight), nullptr, nullptr },
+        { "weight", reinterpret_cast<getter>(FontWeight_get_Weight), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_FontWeight(py::wrapper::Windows::UI::Text::FontWeight* self, PyObject* other, int op) noexcept

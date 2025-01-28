@@ -8735,26 +8735,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static int BitmapBounds_set_X(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.X = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BitmapBounds_get_Y(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, void* /*unused*/) noexcept
     {
         try
@@ -8765,26 +8745,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BitmapBounds_set_Y(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Y = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -8801,26 +8761,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static int BitmapBounds_set_Width(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BitmapBounds_get_Height(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, void* /*unused*/) noexcept
     {
         try
@@ -8834,31 +8774,11 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static int BitmapBounds_set_Height(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_BitmapBounds[] = {
-        { "x", reinterpret_cast<getter>(BitmapBounds_get_X), reinterpret_cast<setter>(BitmapBounds_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(BitmapBounds_get_Y), reinterpret_cast<setter>(BitmapBounds_set_Y), nullptr, nullptr },
-        { "width", reinterpret_cast<getter>(BitmapBounds_get_Width), reinterpret_cast<setter>(BitmapBounds_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(BitmapBounds_get_Height), reinterpret_cast<setter>(BitmapBounds_set_Height), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(BitmapBounds_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(BitmapBounds_get_Y), nullptr, nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(BitmapBounds_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(BitmapBounds_get_Height), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_BitmapBounds(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* other, int op) noexcept
@@ -9030,26 +8950,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static int BitmapPlaneDescription_set_StartIndex(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.StartIndex = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BitmapPlaneDescription_get_Width(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -9060,26 +8960,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int BitmapPlaneDescription_set_Width(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -9096,26 +8976,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static int BitmapPlaneDescription_set_Height(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BitmapPlaneDescription_get_Stride(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -9129,31 +8989,11 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static int BitmapPlaneDescription_set_Stride(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Stride = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_BitmapPlaneDescription[] = {
-        { "start_index", reinterpret_cast<getter>(BitmapPlaneDescription_get_StartIndex), reinterpret_cast<setter>(BitmapPlaneDescription_set_StartIndex), nullptr, nullptr },
-        { "width", reinterpret_cast<getter>(BitmapPlaneDescription_get_Width), reinterpret_cast<setter>(BitmapPlaneDescription_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(BitmapPlaneDescription_get_Height), reinterpret_cast<setter>(BitmapPlaneDescription_set_Height), nullptr, nullptr },
-        { "stride", reinterpret_cast<getter>(BitmapPlaneDescription_get_Stride), reinterpret_cast<setter>(BitmapPlaneDescription_set_Stride), nullptr, nullptr },
+        { "start_index", reinterpret_cast<getter>(BitmapPlaneDescription_get_StartIndex), nullptr, nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(BitmapPlaneDescription_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(BitmapPlaneDescription_get_Height), nullptr, nullptr, nullptr },
+        { "stride", reinterpret_cast<getter>(BitmapPlaneDescription_get_Stride), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_BitmapPlaneDescription(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* other, int op) noexcept
@@ -9321,26 +9161,6 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static int BitmapSize_set_Width(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* BitmapSize_get_Height(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, void* /*unused*/) noexcept
     {
         try
@@ -9354,29 +9174,9 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
-    static int BitmapSize_set_Height(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_BitmapSize[] = {
-        { "width", reinterpret_cast<getter>(BitmapSize_get_Width), reinterpret_cast<setter>(BitmapSize_set_Width), nullptr, nullptr },
-        { "height", reinterpret_cast<getter>(BitmapSize_get_Height), reinterpret_cast<setter>(BitmapSize_set_Height), nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(BitmapSize_get_Width), nullptr, nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(BitmapSize_get_Height), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_BitmapSize(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* other, int op) noexcept

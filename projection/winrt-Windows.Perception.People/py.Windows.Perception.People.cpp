@@ -1264,26 +1264,6 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
-    static int HandMeshVertex_set_Position(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HandMeshVertex_get_Normal(py::wrapper::Windows::Perception::People::HandMeshVertex* self, void* /*unused*/) noexcept
     {
         try
@@ -1297,29 +1277,9 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
-    static int HandMeshVertex_set_Normal(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_HandMeshVertex[] = {
-        { "position", reinterpret_cast<getter>(HandMeshVertex_get_Position), reinterpret_cast<setter>(HandMeshVertex_set_Position), nullptr, nullptr },
-        { "normal", reinterpret_cast<getter>(HandMeshVertex_get_Normal), reinterpret_cast<setter>(HandMeshVertex_set_Normal), nullptr, nullptr },
+        { "position", reinterpret_cast<getter>(HandMeshVertex_get_Position), nullptr, nullptr, nullptr },
+        { "normal", reinterpret_cast<getter>(HandMeshVertex_get_Normal), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_HandMeshVertex(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* other, int op) noexcept
@@ -1479,26 +1439,6 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
-    static int JointPose_set_Orientation(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Orientation = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* JointPose_get_Position(py::wrapper::Windows::Perception::People::JointPose* self, void* /*unused*/) noexcept
     {
         try
@@ -1509,26 +1449,6 @@ namespace py::cpp::Windows::Perception::People
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int JointPose_set_Position(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1545,26 +1465,6 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
-    static int JointPose_set_Radius(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Radius = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* JointPose_get_Accuracy(py::wrapper::Windows::Perception::People::JointPose* self, void* /*unused*/) noexcept
     {
         try
@@ -1578,31 +1478,11 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
-    static int JointPose_set_Accuracy(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Accuracy = py::convert_to<winrt::Windows::Perception::People::JointPoseAccuracy>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_JointPose[] = {
-        { "orientation", reinterpret_cast<getter>(JointPose_get_Orientation), reinterpret_cast<setter>(JointPose_set_Orientation), nullptr, nullptr },
-        { "position", reinterpret_cast<getter>(JointPose_get_Position), reinterpret_cast<setter>(JointPose_set_Position), nullptr, nullptr },
-        { "radius", reinterpret_cast<getter>(JointPose_get_Radius), reinterpret_cast<setter>(JointPose_set_Radius), nullptr, nullptr },
-        { "accuracy", reinterpret_cast<getter>(JointPose_get_Accuracy), reinterpret_cast<setter>(JointPose_set_Accuracy), nullptr, nullptr },
+        { "orientation", reinterpret_cast<getter>(JointPose_get_Orientation), nullptr, nullptr, nullptr },
+        { "position", reinterpret_cast<getter>(JointPose_get_Position), nullptr, nullptr, nullptr },
+        { "radius", reinterpret_cast<getter>(JointPose_get_Radius), nullptr, nullptr, nullptr },
+        { "accuracy", reinterpret_cast<getter>(JointPose_get_Accuracy), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_JointPose(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* other, int op) noexcept

@@ -6390,26 +6390,6 @@ namespace py::cpp::Windows::Networking::Connectivity
         }
     }
 
-    static int NetworkUsageStates_set_Roaming(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Roaming = py::convert_to<winrt::Windows::Networking::Connectivity::TriStates>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* NetworkUsageStates_get_Shared(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, void* /*unused*/) noexcept
     {
         try
@@ -6423,29 +6403,9 @@ namespace py::cpp::Windows::Networking::Connectivity
         }
     }
 
-    static int NetworkUsageStates_set_Shared(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Shared = py::convert_to<winrt::Windows::Networking::Connectivity::TriStates>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_NetworkUsageStates[] = {
-        { "roaming", reinterpret_cast<getter>(NetworkUsageStates_get_Roaming), reinterpret_cast<setter>(NetworkUsageStates_set_Roaming), nullptr, nullptr },
-        { "shared", reinterpret_cast<getter>(NetworkUsageStates_get_Shared), reinterpret_cast<setter>(NetworkUsageStates_set_Shared), nullptr, nullptr },
+        { "roaming", reinterpret_cast<getter>(NetworkUsageStates_get_Roaming), nullptr, nullptr, nullptr },
+        { "shared", reinterpret_cast<getter>(NetworkUsageStates_get_Shared), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_NetworkUsageStates(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, PyObject* other, int op) noexcept

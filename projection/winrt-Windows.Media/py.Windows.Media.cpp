@@ -10406,26 +10406,6 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static int MediaTimeRange_set_Start(py::wrapper::Windows::Media::MediaTimeRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* MediaTimeRange_get_End(py::wrapper::Windows::Media::MediaTimeRange* self, void* /*unused*/) noexcept
     {
         try
@@ -10439,29 +10419,9 @@ namespace py::cpp::Windows::Media
         }
     }
 
-    static int MediaTimeRange_set_End(py::wrapper::Windows::Media::MediaTimeRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_MediaTimeRange[] = {
-        { "start", reinterpret_cast<getter>(MediaTimeRange_get_Start), reinterpret_cast<setter>(MediaTimeRange_set_Start), nullptr, nullptr },
-        { "end", reinterpret_cast<getter>(MediaTimeRange_get_End), reinterpret_cast<setter>(MediaTimeRange_set_End), nullptr, nullptr },
+        { "start", reinterpret_cast<getter>(MediaTimeRange_get_Start), nullptr, nullptr, nullptr },
+        { "end", reinterpret_cast<getter>(MediaTimeRange_get_End), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_MediaTimeRange(py::wrapper::Windows::Media::MediaTimeRange* self, PyObject* other, int op) noexcept

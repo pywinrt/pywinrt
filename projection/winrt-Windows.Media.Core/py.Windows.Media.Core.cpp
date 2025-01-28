@@ -26747,26 +26747,6 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int MseTimeRange_set_Start(py::wrapper::Windows::Media::Core::MseTimeRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* MseTimeRange_get_End(py::wrapper::Windows::Media::Core::MseTimeRange* self, void* /*unused*/) noexcept
     {
         try
@@ -26780,29 +26760,9 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int MseTimeRange_set_End(py::wrapper::Windows::Media::Core::MseTimeRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_MseTimeRange[] = {
-        { "start", reinterpret_cast<getter>(MseTimeRange_get_Start), reinterpret_cast<setter>(MseTimeRange_set_Start), nullptr, nullptr },
-        { "end", reinterpret_cast<getter>(MseTimeRange_get_End), reinterpret_cast<setter>(MseTimeRange_set_End), nullptr, nullptr },
+        { "start", reinterpret_cast<getter>(MseTimeRange_get_Start), nullptr, nullptr, nullptr },
+        { "end", reinterpret_cast<getter>(MseTimeRange_get_End), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_MseTimeRange(py::wrapper::Windows::Media::Core::MseTimeRange* self, PyObject* other, int op) noexcept
@@ -26958,26 +26918,6 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextDouble_set_Value(py::wrapper::Windows::Media::Core::TimedTextDouble* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TimedTextDouble_get_Unit(py::wrapper::Windows::Media::Core::TimedTextDouble* self, void* /*unused*/) noexcept
     {
         try
@@ -26991,29 +26931,9 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextDouble_set_Unit(py::wrapper::Windows::Media::Core::TimedTextDouble* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_TimedTextDouble[] = {
-        { "value", reinterpret_cast<getter>(TimedTextDouble_get_Value), reinterpret_cast<setter>(TimedTextDouble_set_Value), nullptr, nullptr },
-        { "unit", reinterpret_cast<getter>(TimedTextDouble_get_Unit), reinterpret_cast<setter>(TimedTextDouble_set_Unit), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(TimedTextDouble_get_Value), nullptr, nullptr, nullptr },
+        { "unit", reinterpret_cast<getter>(TimedTextDouble_get_Unit), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_TimedTextDouble(py::wrapper::Windows::Media::Core::TimedTextDouble* self, PyObject* other, int op) noexcept
@@ -27175,26 +27095,6 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextPadding_set_Before(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Before = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TimedTextPadding_get_After(py::wrapper::Windows::Media::Core::TimedTextPadding* self, void* /*unused*/) noexcept
     {
         try
@@ -27205,26 +27105,6 @@ namespace py::cpp::Windows::Media::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int TimedTextPadding_set_After(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.After = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -27241,26 +27121,6 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextPadding_set_Start(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Start = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TimedTextPadding_get_End(py::wrapper::Windows::Media::Core::TimedTextPadding* self, void* /*unused*/) noexcept
     {
         try
@@ -27271,26 +27131,6 @@ namespace py::cpp::Windows::Media::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int TimedTextPadding_set_End(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.End = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -27307,32 +27147,12 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextPadding_set_Unit(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_TimedTextPadding[] = {
-        { "before", reinterpret_cast<getter>(TimedTextPadding_get_Before), reinterpret_cast<setter>(TimedTextPadding_set_Before), nullptr, nullptr },
-        { "after", reinterpret_cast<getter>(TimedTextPadding_get_After), reinterpret_cast<setter>(TimedTextPadding_set_After), nullptr, nullptr },
-        { "start", reinterpret_cast<getter>(TimedTextPadding_get_Start), reinterpret_cast<setter>(TimedTextPadding_set_Start), nullptr, nullptr },
-        { "end", reinterpret_cast<getter>(TimedTextPadding_get_End), reinterpret_cast<setter>(TimedTextPadding_set_End), nullptr, nullptr },
-        { "unit", reinterpret_cast<getter>(TimedTextPadding_get_Unit), reinterpret_cast<setter>(TimedTextPadding_set_Unit), nullptr, nullptr },
+        { "before", reinterpret_cast<getter>(TimedTextPadding_get_Before), nullptr, nullptr, nullptr },
+        { "after", reinterpret_cast<getter>(TimedTextPadding_get_After), nullptr, nullptr, nullptr },
+        { "start", reinterpret_cast<getter>(TimedTextPadding_get_Start), nullptr, nullptr, nullptr },
+        { "end", reinterpret_cast<getter>(TimedTextPadding_get_End), nullptr, nullptr, nullptr },
+        { "unit", reinterpret_cast<getter>(TimedTextPadding_get_Unit), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_TimedTextPadding(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* other, int op) noexcept
@@ -27508,26 +27328,6 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextPoint_set_X(py::wrapper::Windows::Media::Core::TimedTextPoint* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.X = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TimedTextPoint_get_Y(py::wrapper::Windows::Media::Core::TimedTextPoint* self, void* /*unused*/) noexcept
     {
         try
@@ -27538,26 +27338,6 @@ namespace py::cpp::Windows::Media::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int TimedTextPoint_set_Y(py::wrapper::Windows::Media::Core::TimedTextPoint* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Y = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -27574,30 +27354,10 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextPoint_set_Unit(py::wrapper::Windows::Media::Core::TimedTextPoint* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_TimedTextPoint[] = {
-        { "x", reinterpret_cast<getter>(TimedTextPoint_get_X), reinterpret_cast<setter>(TimedTextPoint_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(TimedTextPoint_get_Y), reinterpret_cast<setter>(TimedTextPoint_set_Y), nullptr, nullptr },
-        { "unit", reinterpret_cast<getter>(TimedTextPoint_get_Unit), reinterpret_cast<setter>(TimedTextPoint_set_Unit), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(TimedTextPoint_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(TimedTextPoint_get_Y), nullptr, nullptr, nullptr },
+        { "unit", reinterpret_cast<getter>(TimedTextPoint_get_Unit), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_TimedTextPoint(py::wrapper::Windows::Media::Core::TimedTextPoint* self, PyObject* other, int op) noexcept
@@ -27761,26 +27521,6 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextSize_set_Height(py::wrapper::Windows::Media::Core::TimedTextSize* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Height = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TimedTextSize_get_Width(py::wrapper::Windows::Media::Core::TimedTextSize* self, void* /*unused*/) noexcept
     {
         try
@@ -27791,26 +27531,6 @@ namespace py::cpp::Windows::Media::Core
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int TimedTextSize_set_Width(py::wrapper::Windows::Media::Core::TimedTextSize* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Width = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -27827,30 +27547,10 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
-    static int TimedTextSize_set_Unit(py::wrapper::Windows::Media::Core::TimedTextSize* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_TimedTextSize[] = {
-        { "height", reinterpret_cast<getter>(TimedTextSize_get_Height), reinterpret_cast<setter>(TimedTextSize_set_Height), nullptr, nullptr },
-        { "width", reinterpret_cast<getter>(TimedTextSize_get_Width), reinterpret_cast<setter>(TimedTextSize_set_Width), nullptr, nullptr },
-        { "unit", reinterpret_cast<getter>(TimedTextSize_get_Unit), reinterpret_cast<setter>(TimedTextSize_set_Unit), nullptr, nullptr },
+        { "height", reinterpret_cast<getter>(TimedTextSize_get_Height), nullptr, nullptr, nullptr },
+        { "width", reinterpret_cast<getter>(TimedTextSize_get_Width), nullptr, nullptr, nullptr },
+        { "unit", reinterpret_cast<getter>(TimedTextSize_get_Unit), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_TimedTextSize(py::wrapper::Windows::Media::Core::TimedTextSize* self, PyObject* other, int op) noexcept

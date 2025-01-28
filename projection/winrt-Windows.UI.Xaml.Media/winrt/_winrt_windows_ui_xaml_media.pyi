@@ -26,12 +26,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Matrix:
-    m11: winrt.system.Double
-    m12: winrt.system.Double
-    m21: winrt.system.Double
-    m22: winrt.system.Double
-    offset_x: winrt.system.Double
-    offset_y: winrt.system.Double
+    @_property
+    def m11(self) -> winrt.system.Double: ...
+    @_property
+    def m12(self) -> winrt.system.Double: ...
+    @_property
+    def m21(self) -> winrt.system.Double: ...
+    @_property
+    def m22(self) -> winrt.system.Double: ...
+    @_property
+    def offset_x(self) -> winrt.system.Double: ...
+    @_property
+    def offset_y(self) -> winrt.system.Double: ...
     def __init__(self, m11: winrt.system.Double = 0, m12: winrt.system.Double = 0, m21: winrt.system.Double = 0, m22: winrt.system.Double = 0, offset_x: winrt.system.Double = 0, offset_y: winrt.system.Double = 0) -> None: ...
 
 class AcrylicBrush_Static(XamlCompositionBrushBase_Static):

@@ -25,28 +25,42 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BackgroundDownloadProgress:
-    bytes_received: winrt.system.UInt64
-    total_bytes_to_receive: winrt.system.UInt64
-    status: BackgroundTransferStatus
-    has_response_changed: bool
-    has_restarted: bool
+    @_property
+    def bytes_received(self) -> winrt.system.UInt64: ...
+    @_property
+    def total_bytes_to_receive(self) -> winrt.system.UInt64: ...
+    @_property
+    def status(self) -> BackgroundTransferStatus: ...
+    @_property
+    def has_response_changed(self) -> bool: ...
+    @_property
+    def has_restarted(self) -> bool: ...
     def __init__(self, bytes_received: winrt.system.UInt64 = 0, total_bytes_to_receive: winrt.system.UInt64 = 0, status: BackgroundTransferStatus = BackgroundTransferStatus(0), has_response_changed: bool = False, has_restarted: bool = False) -> None: ...
 
 @typing.final
 class BackgroundTransferFileRange:
-    offset: winrt.system.UInt64
-    length: winrt.system.UInt64
+    @_property
+    def offset(self) -> winrt.system.UInt64: ...
+    @_property
+    def length(self) -> winrt.system.UInt64: ...
     def __init__(self, offset: winrt.system.UInt64 = 0, length: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final
 class BackgroundUploadProgress:
-    bytes_received: winrt.system.UInt64
-    bytes_sent: winrt.system.UInt64
-    total_bytes_to_receive: winrt.system.UInt64
-    total_bytes_to_send: winrt.system.UInt64
-    status: BackgroundTransferStatus
-    has_response_changed: bool
-    has_restarted: bool
+    @_property
+    def bytes_received(self) -> winrt.system.UInt64: ...
+    @_property
+    def bytes_sent(self) -> winrt.system.UInt64: ...
+    @_property
+    def total_bytes_to_receive(self) -> winrt.system.UInt64: ...
+    @_property
+    def total_bytes_to_send(self) -> winrt.system.UInt64: ...
+    @_property
+    def status(self) -> BackgroundTransferStatus: ...
+    @_property
+    def has_response_changed(self) -> bool: ...
+    @_property
+    def has_restarted(self) -> bool: ...
     def __init__(self, bytes_received: winrt.system.UInt64 = 0, bytes_sent: winrt.system.UInt64 = 0, total_bytes_to_receive: winrt.system.UInt64 = 0, total_bytes_to_send: winrt.system.UInt64 = 0, status: BackgroundTransferStatus = BackgroundTransferStatus(0), has_response_changed: bool = False, has_restarted: bool = False) -> None: ...
 
 @typing.final

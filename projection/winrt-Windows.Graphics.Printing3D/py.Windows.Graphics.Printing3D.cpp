@@ -7445,26 +7445,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
         }
     }
 
-    static int Printing3DBufferDescription_set_Format(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Format = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Printing3DBufferDescription_get_Stride(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, void* /*unused*/) noexcept
     {
         try
@@ -7478,29 +7458,9 @@ namespace py::cpp::Windows::Graphics::Printing3D
         }
     }
 
-    static int Printing3DBufferDescription_set_Stride(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Stride = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Printing3DBufferDescription[] = {
-        { "format", reinterpret_cast<getter>(Printing3DBufferDescription_get_Format), reinterpret_cast<setter>(Printing3DBufferDescription_set_Format), nullptr, nullptr },
-        { "stride", reinterpret_cast<getter>(Printing3DBufferDescription_get_Stride), reinterpret_cast<setter>(Printing3DBufferDescription_set_Stride), nullptr, nullptr },
+        { "format", reinterpret_cast<getter>(Printing3DBufferDescription_get_Format), nullptr, nullptr, nullptr },
+        { "stride", reinterpret_cast<getter>(Printing3DBufferDescription_get_Stride), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Printing3DBufferDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, PyObject* other, int op) noexcept

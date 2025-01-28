@@ -26,8 +26,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class InkTrailPoint:
-    point: windows_foundation.Point
-    radius: winrt.system.Single
+    @_property
+    def point(self) -> windows_foundation.Point: ...
+    @_property
+    def radius(self) -> winrt.system.Single: ...
     def __init__(self, point: windows_foundation.Point = windows_foundation.Point(), radius: winrt.system.Single = 0) -> None: ...
 
 @typing.final

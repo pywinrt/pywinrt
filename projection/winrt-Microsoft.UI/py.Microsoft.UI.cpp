@@ -5146,28 +5146,8 @@ namespace py::cpp::Microsoft::UI
         }
     }
 
-    static int DisplayId_set_Value(py::wrapper::Microsoft::UI::DisplayId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_DisplayId[] = {
-        { "value", reinterpret_cast<getter>(DisplayId_get_Value), reinterpret_cast<setter>(DisplayId_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(DisplayId_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_DisplayId(py::wrapper::Microsoft::UI::DisplayId* self, PyObject* other, int op) noexcept
@@ -5315,28 +5295,8 @@ namespace py::cpp::Microsoft::UI
         }
     }
 
-    static int IconId_set_Value(py::wrapper::Microsoft::UI::IconId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_IconId[] = {
-        { "value", reinterpret_cast<getter>(IconId_get_Value), reinterpret_cast<setter>(IconId_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(IconId_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_IconId(py::wrapper::Microsoft::UI::IconId* self, PyObject* other, int op) noexcept
@@ -5484,28 +5444,8 @@ namespace py::cpp::Microsoft::UI
         }
     }
 
-    static int WindowId_set_Value(py::wrapper::Microsoft::UI::WindowId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_WindowId[] = {
-        { "value", reinterpret_cast<getter>(WindowId_get_Value), reinterpret_cast<setter>(WindowId_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(WindowId_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_WindowId(py::wrapper::Microsoft::UI::WindowId* self, PyObject* other, int op) noexcept

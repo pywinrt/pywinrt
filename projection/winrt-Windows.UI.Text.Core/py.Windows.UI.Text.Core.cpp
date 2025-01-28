@@ -4197,26 +4197,6 @@ namespace py::cpp::Windows::UI::Text::Core
         }
     }
 
-    static int CoreTextRange_set_StartCaretPosition(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.StartCaretPosition = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* CoreTextRange_get_EndCaretPosition(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, void* /*unused*/) noexcept
     {
         try
@@ -4230,29 +4210,9 @@ namespace py::cpp::Windows::UI::Text::Core
         }
     }
 
-    static int CoreTextRange_set_EndCaretPosition(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.EndCaretPosition = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_CoreTextRange[] = {
-        { "start_caret_position", reinterpret_cast<getter>(CoreTextRange_get_StartCaretPosition), reinterpret_cast<setter>(CoreTextRange_set_StartCaretPosition), nullptr, nullptr },
-        { "end_caret_position", reinterpret_cast<getter>(CoreTextRange_get_EndCaretPosition), reinterpret_cast<setter>(CoreTextRange_set_EndCaretPosition), nullptr, nullptr },
+        { "start_caret_position", reinterpret_cast<getter>(CoreTextRange_get_StartCaretPosition), nullptr, nullptr, nullptr },
+        { "end_caret_position", reinterpret_cast<getter>(CoreTextRange_get_EndCaretPosition), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_CoreTextRange(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, PyObject* other, int op) noexcept

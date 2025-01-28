@@ -21,12 +21,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class StorePackageUpdateStatus:
-    package_family_name: str
-    package_download_size_in_bytes: winrt.system.UInt64
-    package_bytes_downloaded: winrt.system.UInt64
-    package_download_progress: winrt.system.Double
-    total_download_progress: winrt.system.Double
-    package_update_state: StorePackageUpdateState
+    @_property
+    def package_family_name(self) -> str: ...
+    @_property
+    def package_download_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def package_bytes_downloaded(self) -> winrt.system.UInt64: ...
+    @_property
+    def package_download_progress(self) -> winrt.system.Double: ...
+    @_property
+    def total_download_progress(self) -> winrt.system.Double: ...
+    @_property
+    def package_update_state(self) -> StorePackageUpdateState: ...
     def __init__(self, package_family_name: str = "", package_download_size_in_bytes: winrt.system.UInt64 = 0, package_bytes_downloaded: winrt.system.UInt64 = 0, package_download_progress: winrt.system.Double = 0, total_download_progress: winrt.system.Double = 0, package_update_state: StorePackageUpdateState = StorePackageUpdateState(0)) -> None: ...
 
 @typing.final

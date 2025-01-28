@@ -8016,26 +8016,6 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
     }
 
-    static int DisplayPresentationRate_set_VerticalSyncRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.VerticalSyncRate = py::convert_to<winrt::Windows::Foundation::Numerics::Rational>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* DisplayPresentationRate_get_VerticalSyncsPerPresentation(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, void* /*unused*/) noexcept
     {
         try
@@ -8049,29 +8029,9 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
     }
 
-    static int DisplayPresentationRate_set_VerticalSyncsPerPresentation(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.VerticalSyncsPerPresentation = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_DisplayPresentationRate[] = {
-        { "vertical_sync_rate", reinterpret_cast<getter>(DisplayPresentationRate_get_VerticalSyncRate), reinterpret_cast<setter>(DisplayPresentationRate_set_VerticalSyncRate), nullptr, nullptr },
-        { "vertical_syncs_per_presentation", reinterpret_cast<getter>(DisplayPresentationRate_get_VerticalSyncsPerPresentation), reinterpret_cast<setter>(DisplayPresentationRate_set_VerticalSyncsPerPresentation), nullptr, nullptr },
+        { "vertical_sync_rate", reinterpret_cast<getter>(DisplayPresentationRate_get_VerticalSyncRate), nullptr, nullptr, nullptr },
+        { "vertical_syncs_per_presentation", reinterpret_cast<getter>(DisplayPresentationRate_get_VerticalSyncsPerPresentation), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_DisplayPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, PyObject* other, int op) noexcept

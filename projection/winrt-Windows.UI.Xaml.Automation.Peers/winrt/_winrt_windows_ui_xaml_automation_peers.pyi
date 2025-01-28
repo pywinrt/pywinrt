@@ -23,8 +23,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class RawElementProviderRuntimeId:
-    part1: winrt.system.UInt32
-    part2: winrt.system.UInt32
+    @_property
+    def part1(self) -> winrt.system.UInt32: ...
+    @_property
+    def part2(self) -> winrt.system.UInt32: ...
     def __init__(self, part1: winrt.system.UInt32 = 0, part2: winrt.system.UInt32 = 0) -> None: ...
 
 class AppBarAutomationPeer_Static(FrameworkElementAutomationPeer_Static):

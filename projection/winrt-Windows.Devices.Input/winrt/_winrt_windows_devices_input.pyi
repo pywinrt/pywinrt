@@ -19,20 +19,30 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class MouseDelta:
-    x: winrt.system.Int32
-    y: winrt.system.Int32
+    @_property
+    def x(self) -> winrt.system.Int32: ...
+    @_property
+    def y(self) -> winrt.system.Int32: ...
     def __init__(self, x: winrt.system.Int32 = 0, y: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class PointerDeviceUsage:
-    usage_page: winrt.system.UInt32
-    usage: winrt.system.UInt32
-    min_logical: winrt.system.Int32
-    max_logical: winrt.system.Int32
-    min_physical: winrt.system.Int32
-    max_physical: winrt.system.Int32
-    unit: winrt.system.UInt32
-    physical_multiplier: winrt.system.Single
+    @_property
+    def usage_page(self) -> winrt.system.UInt32: ...
+    @_property
+    def usage(self) -> winrt.system.UInt32: ...
+    @_property
+    def min_logical(self) -> winrt.system.Int32: ...
+    @_property
+    def max_logical(self) -> winrt.system.Int32: ...
+    @_property
+    def min_physical(self) -> winrt.system.Int32: ...
+    @_property
+    def max_physical(self) -> winrt.system.Int32: ...
+    @_property
+    def unit(self) -> winrt.system.UInt32: ...
+    @_property
+    def physical_multiplier(self) -> winrt.system.Single: ...
     def __init__(self, usage_page: winrt.system.UInt32 = 0, usage: winrt.system.UInt32 = 0, min_logical: winrt.system.Int32 = 0, max_logical: winrt.system.Int32 = 0, min_physical: winrt.system.Int32 = 0, max_physical: winrt.system.Int32 = 0, unit: winrt.system.UInt32 = 0, physical_multiplier: winrt.system.Single = 0) -> None: ...
 
 @typing.final

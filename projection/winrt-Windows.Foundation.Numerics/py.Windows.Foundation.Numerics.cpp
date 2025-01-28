@@ -460,26 +460,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix3x2_set_M11(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m11 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3x2_get_M12(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, void* /*unused*/) noexcept
     {
         try
@@ -490,26 +470,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3x2_set_M12(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m12 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -526,26 +486,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix3x2_set_M21(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m21 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3x2_get_M22(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, void* /*unused*/) noexcept
     {
         try
@@ -556,26 +496,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix3x2_set_M22(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m22 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -592,26 +512,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix3x2_set_M31(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m31 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix3x2_get_M32(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, void* /*unused*/) noexcept
     {
         try
@@ -625,33 +525,13 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix3x2_set_M32(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m32 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Matrix3x2[] = {
-        { "m11", reinterpret_cast<getter>(Matrix3x2_get_M11), reinterpret_cast<setter>(Matrix3x2_set_M11), nullptr, nullptr },
-        { "m12", reinterpret_cast<getter>(Matrix3x2_get_M12), reinterpret_cast<setter>(Matrix3x2_set_M12), nullptr, nullptr },
-        { "m21", reinterpret_cast<getter>(Matrix3x2_get_M21), reinterpret_cast<setter>(Matrix3x2_set_M21), nullptr, nullptr },
-        { "m22", reinterpret_cast<getter>(Matrix3x2_get_M22), reinterpret_cast<setter>(Matrix3x2_set_M22), nullptr, nullptr },
-        { "m31", reinterpret_cast<getter>(Matrix3x2_get_M31), reinterpret_cast<setter>(Matrix3x2_set_M31), nullptr, nullptr },
-        { "m32", reinterpret_cast<getter>(Matrix3x2_get_M32), reinterpret_cast<setter>(Matrix3x2_set_M32), nullptr, nullptr },
+        { "m11", reinterpret_cast<getter>(Matrix3x2_get_M11), nullptr, nullptr, nullptr },
+        { "m12", reinterpret_cast<getter>(Matrix3x2_get_M12), nullptr, nullptr, nullptr },
+        { "m21", reinterpret_cast<getter>(Matrix3x2_get_M21), nullptr, nullptr, nullptr },
+        { "m22", reinterpret_cast<getter>(Matrix3x2_get_M22), nullptr, nullptr, nullptr },
+        { "m31", reinterpret_cast<getter>(Matrix3x2_get_M31), nullptr, nullptr, nullptr },
+        { "m32", reinterpret_cast<getter>(Matrix3x2_get_M32), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _add_Matrix3x2(PyObject* left, PyObject* right) noexcept
@@ -1911,26 +1791,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M11(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m11 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix4x4_get_M12(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
         try
@@ -1941,26 +1801,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix4x4_set_M12(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m12 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -1977,26 +1817,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M13(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m13 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix4x4_get_M14(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
         try
@@ -2007,26 +1827,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix4x4_set_M14(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m14 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2043,26 +1843,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M21(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m21 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix4x4_get_M22(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
         try
@@ -2073,26 +1853,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix4x4_set_M22(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m22 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2109,26 +1869,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M23(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m23 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix4x4_get_M24(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
         try
@@ -2139,26 +1879,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix4x4_set_M24(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m24 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2175,26 +1895,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M31(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m31 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix4x4_get_M32(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
         try
@@ -2205,26 +1905,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix4x4_set_M32(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m32 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2241,26 +1921,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M33(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m33 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix4x4_get_M34(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
         try
@@ -2271,26 +1931,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix4x4_set_M34(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m34 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2307,26 +1947,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M41(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m41 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix4x4_get_M42(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
         try
@@ -2337,26 +1957,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Matrix4x4_set_M42(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m42 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -2373,26 +1973,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M43(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m43 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Matrix4x4_get_M44(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
     {
         try
@@ -2406,43 +1986,23 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Matrix4x4_set_M44(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.m44 = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Matrix4x4[] = {
-        { "m11", reinterpret_cast<getter>(Matrix4x4_get_M11), reinterpret_cast<setter>(Matrix4x4_set_M11), nullptr, nullptr },
-        { "m12", reinterpret_cast<getter>(Matrix4x4_get_M12), reinterpret_cast<setter>(Matrix4x4_set_M12), nullptr, nullptr },
-        { "m13", reinterpret_cast<getter>(Matrix4x4_get_M13), reinterpret_cast<setter>(Matrix4x4_set_M13), nullptr, nullptr },
-        { "m14", reinterpret_cast<getter>(Matrix4x4_get_M14), reinterpret_cast<setter>(Matrix4x4_set_M14), nullptr, nullptr },
-        { "m21", reinterpret_cast<getter>(Matrix4x4_get_M21), reinterpret_cast<setter>(Matrix4x4_set_M21), nullptr, nullptr },
-        { "m22", reinterpret_cast<getter>(Matrix4x4_get_M22), reinterpret_cast<setter>(Matrix4x4_set_M22), nullptr, nullptr },
-        { "m23", reinterpret_cast<getter>(Matrix4x4_get_M23), reinterpret_cast<setter>(Matrix4x4_set_M23), nullptr, nullptr },
-        { "m24", reinterpret_cast<getter>(Matrix4x4_get_M24), reinterpret_cast<setter>(Matrix4x4_set_M24), nullptr, nullptr },
-        { "m31", reinterpret_cast<getter>(Matrix4x4_get_M31), reinterpret_cast<setter>(Matrix4x4_set_M31), nullptr, nullptr },
-        { "m32", reinterpret_cast<getter>(Matrix4x4_get_M32), reinterpret_cast<setter>(Matrix4x4_set_M32), nullptr, nullptr },
-        { "m33", reinterpret_cast<getter>(Matrix4x4_get_M33), reinterpret_cast<setter>(Matrix4x4_set_M33), nullptr, nullptr },
-        { "m34", reinterpret_cast<getter>(Matrix4x4_get_M34), reinterpret_cast<setter>(Matrix4x4_set_M34), nullptr, nullptr },
-        { "m41", reinterpret_cast<getter>(Matrix4x4_get_M41), reinterpret_cast<setter>(Matrix4x4_set_M41), nullptr, nullptr },
-        { "m42", reinterpret_cast<getter>(Matrix4x4_get_M42), reinterpret_cast<setter>(Matrix4x4_set_M42), nullptr, nullptr },
-        { "m43", reinterpret_cast<getter>(Matrix4x4_get_M43), reinterpret_cast<setter>(Matrix4x4_set_M43), nullptr, nullptr },
-        { "m44", reinterpret_cast<getter>(Matrix4x4_get_M44), reinterpret_cast<setter>(Matrix4x4_set_M44), nullptr, nullptr },
+        { "m11", reinterpret_cast<getter>(Matrix4x4_get_M11), nullptr, nullptr, nullptr },
+        { "m12", reinterpret_cast<getter>(Matrix4x4_get_M12), nullptr, nullptr, nullptr },
+        { "m13", reinterpret_cast<getter>(Matrix4x4_get_M13), nullptr, nullptr, nullptr },
+        { "m14", reinterpret_cast<getter>(Matrix4x4_get_M14), nullptr, nullptr, nullptr },
+        { "m21", reinterpret_cast<getter>(Matrix4x4_get_M21), nullptr, nullptr, nullptr },
+        { "m22", reinterpret_cast<getter>(Matrix4x4_get_M22), nullptr, nullptr, nullptr },
+        { "m23", reinterpret_cast<getter>(Matrix4x4_get_M23), nullptr, nullptr, nullptr },
+        { "m24", reinterpret_cast<getter>(Matrix4x4_get_M24), nullptr, nullptr, nullptr },
+        { "m31", reinterpret_cast<getter>(Matrix4x4_get_M31), nullptr, nullptr, nullptr },
+        { "m32", reinterpret_cast<getter>(Matrix4x4_get_M32), nullptr, nullptr, nullptr },
+        { "m33", reinterpret_cast<getter>(Matrix4x4_get_M33), nullptr, nullptr, nullptr },
+        { "m34", reinterpret_cast<getter>(Matrix4x4_get_M34), nullptr, nullptr, nullptr },
+        { "m41", reinterpret_cast<getter>(Matrix4x4_get_M41), nullptr, nullptr, nullptr },
+        { "m42", reinterpret_cast<getter>(Matrix4x4_get_M42), nullptr, nullptr, nullptr },
+        { "m43", reinterpret_cast<getter>(Matrix4x4_get_M43), nullptr, nullptr, nullptr },
+        { "m44", reinterpret_cast<getter>(Matrix4x4_get_M44), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _add_Matrix4x4(PyObject* left, PyObject* right) noexcept
@@ -2990,26 +2550,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Plane_set_Normal(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Plane_get_D(py::wrapper::Windows::Foundation::Numerics::Plane* self, void* /*unused*/) noexcept
     {
         try
@@ -3023,29 +2563,9 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Plane_set_D(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.d = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Plane[] = {
-        { "normal", reinterpret_cast<getter>(Plane_get_Normal), reinterpret_cast<setter>(Plane_set_Normal), nullptr, nullptr },
-        { "d", reinterpret_cast<getter>(Plane_get_D), reinterpret_cast<setter>(Plane_set_D), nullptr, nullptr },
+        { "normal", reinterpret_cast<getter>(Plane_get_Normal), nullptr, nullptr, nullptr },
+        { "d", reinterpret_cast<getter>(Plane_get_D), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Plane(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* other, int op) noexcept
@@ -3460,26 +2980,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Quaternion_set_X(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.x = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Quaternion_get_Y(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, void* /*unused*/) noexcept
     {
         try
@@ -3490,26 +2990,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Quaternion_set_Y(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.y = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -3526,26 +3006,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Quaternion_set_Z(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.z = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Quaternion_get_W(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, void* /*unused*/) noexcept
     {
         try
@@ -3559,31 +3019,11 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Quaternion_set_W(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.w = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Quaternion[] = {
-        { "x", reinterpret_cast<getter>(Quaternion_get_X), reinterpret_cast<setter>(Quaternion_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(Quaternion_get_Y), reinterpret_cast<setter>(Quaternion_set_Y), nullptr, nullptr },
-        { "z", reinterpret_cast<getter>(Quaternion_get_Z), reinterpret_cast<setter>(Quaternion_set_Z), nullptr, nullptr },
-        { "w", reinterpret_cast<getter>(Quaternion_get_W), reinterpret_cast<setter>(Quaternion_set_W), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(Quaternion_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(Quaternion_get_Y), nullptr, nullptr, nullptr },
+        { "z", reinterpret_cast<getter>(Quaternion_get_Z), nullptr, nullptr, nullptr },
+        { "w", reinterpret_cast<getter>(Quaternion_get_W), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _add_Quaternion(PyObject* left, PyObject* right) noexcept
@@ -3940,26 +3380,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Rational_set_Numerator(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Numerator = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Rational_get_Denominator(py::wrapper::Windows::Foundation::Numerics::Rational* self, void* /*unused*/) noexcept
     {
         try
@@ -3973,29 +3393,9 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Rational_set_Denominator(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Denominator = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Rational[] = {
-        { "numerator", reinterpret_cast<getter>(Rational_get_Numerator), reinterpret_cast<setter>(Rational_set_Numerator), nullptr, nullptr },
-        { "denominator", reinterpret_cast<getter>(Rational_get_Denominator), reinterpret_cast<setter>(Rational_set_Denominator), nullptr, nullptr },
+        { "numerator", reinterpret_cast<getter>(Rational_get_Numerator), nullptr, nullptr, nullptr },
+        { "denominator", reinterpret_cast<getter>(Rational_get_Denominator), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Rational(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* other, int op) noexcept
@@ -4462,26 +3862,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Vector2_set_X(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.x = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Vector2_get_Y(py::wrapper::Windows::Foundation::Numerics::Vector2* self, void* /*unused*/) noexcept
     {
         try
@@ -4495,29 +3875,9 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Vector2_set_Y(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.y = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Vector2[] = {
-        { "x", reinterpret_cast<getter>(Vector2_get_X), reinterpret_cast<setter>(Vector2_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(Vector2_get_Y), reinterpret_cast<setter>(Vector2_set_Y), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(Vector2_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(Vector2_get_Y), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _add_Vector2(PyObject* left, PyObject* right) noexcept
@@ -5206,26 +4566,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Vector3_set_X(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.x = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Vector3_get_Y(py::wrapper::Windows::Foundation::Numerics::Vector3* self, void* /*unused*/) noexcept
     {
         try
@@ -5236,26 +4576,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Vector3_set_Y(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.y = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5272,30 +4592,10 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Vector3_set_Z(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.z = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Vector3[] = {
-        { "x", reinterpret_cast<getter>(Vector3_get_X), reinterpret_cast<setter>(Vector3_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(Vector3_get_Y), reinterpret_cast<setter>(Vector3_set_Y), nullptr, nullptr },
-        { "z", reinterpret_cast<getter>(Vector3_get_Z), reinterpret_cast<setter>(Vector3_set_Z), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(Vector3_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(Vector3_get_Y), nullptr, nullptr, nullptr },
+        { "z", reinterpret_cast<getter>(Vector3_get_Z), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _add_Vector3(PyObject* left, PyObject* right) noexcept
@@ -5907,26 +5207,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Vector4_set_X(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.x = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Vector4_get_Y(py::wrapper::Windows::Foundation::Numerics::Vector4* self, void* /*unused*/) noexcept
     {
         try
@@ -5937,26 +5217,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Vector4_set_Y(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.y = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -5973,26 +5233,6 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Vector4_set_Z(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.z = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Vector4_get_W(py::wrapper::Windows::Foundation::Numerics::Vector4* self, void* /*unused*/) noexcept
     {
         try
@@ -6006,31 +5246,11 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
-    static int Vector4_set_W(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.w = py::convert_to<float>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Vector4[] = {
-        { "x", reinterpret_cast<getter>(Vector4_get_X), reinterpret_cast<setter>(Vector4_set_X), nullptr, nullptr },
-        { "y", reinterpret_cast<getter>(Vector4_get_Y), reinterpret_cast<setter>(Vector4_set_Y), nullptr, nullptr },
-        { "z", reinterpret_cast<getter>(Vector4_get_Z), reinterpret_cast<setter>(Vector4_set_Z), nullptr, nullptr },
-        { "w", reinterpret_cast<getter>(Vector4_get_W), reinterpret_cast<setter>(Vector4_set_W), nullptr, nullptr },
+        { "x", reinterpret_cast<getter>(Vector4_get_X), nullptr, nullptr, nullptr },
+        { "y", reinterpret_cast<getter>(Vector4_get_Y), nullptr, nullptr, nullptr },
+        { "z", reinterpret_cast<getter>(Vector4_get_Z), nullptr, nullptr, nullptr },
+        { "w", reinterpret_cast<getter>(Vector4_get_W), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _add_Vector4(PyObject* left, PyObject* right) noexcept

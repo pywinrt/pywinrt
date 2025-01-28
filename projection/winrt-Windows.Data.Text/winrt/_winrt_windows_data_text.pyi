@@ -20,8 +20,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class TextSegment:
-    start_position: winrt.system.UInt32
-    length: winrt.system.UInt32
+    @_property
+    def start_position(self) -> winrt.system.UInt32: ...
+    @_property
+    def length(self) -> winrt.system.UInt32: ...
     def __init__(self, start_position: winrt.system.UInt32 = 0, length: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

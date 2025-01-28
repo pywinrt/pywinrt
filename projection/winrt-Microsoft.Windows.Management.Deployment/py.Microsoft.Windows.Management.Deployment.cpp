@@ -7952,26 +7952,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         }
     }
 
-    static int PackageDeploymentProgress_set_Status(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Status = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* PackageDeploymentProgress_get_Progress(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -7985,29 +7965,9 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         }
     }
 
-    static int PackageDeploymentProgress_set_Progress(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Progress = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_PackageDeploymentProgress[] = {
-        { "status", reinterpret_cast<getter>(PackageDeploymentProgress_get_Status), reinterpret_cast<setter>(PackageDeploymentProgress_set_Status), nullptr, nullptr },
-        { "progress", reinterpret_cast<getter>(PackageDeploymentProgress_get_Progress), reinterpret_cast<setter>(PackageDeploymentProgress_set_Progress), nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(PackageDeploymentProgress_get_Status), nullptr, nullptr, nullptr },
+        { "progress", reinterpret_cast<getter>(PackageDeploymentProgress_get_Progress), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_PackageDeploymentProgress(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress* self, PyObject* other, int op) noexcept

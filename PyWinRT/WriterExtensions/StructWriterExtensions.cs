@@ -42,8 +42,9 @@ static class StructWriterExtensions
 
         foreach (var field in type.Type.Fields)
         {
+            w.WriteLine("@_property");
             w.WriteLine(
-                $"{field.Name.ToPythonIdentifier()}: {field.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(field.FieldType))}"
+                $"def {field.Name.ToPythonIdentifier()}(self) -> {field.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(field.FieldType))}: ..."
             );
         }
 
@@ -88,7 +89,7 @@ static class StructWriterExtensions
 
         foreach (var field in type.Type.Fields)
         {
-            w.WriteStructGetSetFunction(type, field);
+            w.WriteStructGetFunction(type, field);
         }
 
         w.WriteGetSetTable(type);
@@ -177,7 +178,7 @@ static class StructWriterExtensions
         });
     }
 
-    static void WriteStructGetSetFunction(
+    static void WriteStructGetFunction(
         this IndentedTextWriter w,
         ProjectedType type,
         FieldDefinition field
@@ -194,32 +195,6 @@ static class StructWriterExtensions
                     w.WriteLine($"return py::convert(self->obj.{field.ToWinrtFieldName()});");
                 })
         );
-
-        w.WriteBlankLine();
-        w.WriteLine(
-            $"static int {type.Name}_set_{field.Name}({type.CppPyWrapperType}* self, PyObject* arg, void* /*unused*/) noexcept"
-        );
-        w.WriteBlock(() =>
-        {
-            w.WriteLine("if (!arg)");
-            w.WriteBlock(() =>
-            {
-                w.WriteLine("PyErr_SetString(PyExc_AttributeError, \"can't delete attribute\");");
-                w.WriteLine("return -1;");
-            });
-            w.WriteBlankLine();
-
-            w.WriteTryCatch(
-                () =>
-                {
-                    w.WriteLine(
-                        $"self->obj.{field.ToWinrtFieldName()} = py::convert_to<{field.FieldType.ToCppTypeName()}>(arg);"
-                    );
-                    w.WriteLine("return 0;");
-                },
-                catchReturn: "-1"
-            );
-        });
     }
 
     static void WriteStructEqualityMethods(this IndentedTextWriter w, ProjectedType type)

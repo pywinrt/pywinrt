@@ -22,7 +22,8 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class LoadMoreItemsResult:
-    count: winrt.system.UInt32
+    @_property
+    def count(self) -> winrt.system.UInt32: ...
     def __init__(self, count: winrt.system.UInt32 = 0) -> None: ...
 
 class Binding_Static(BindingBase_Static):

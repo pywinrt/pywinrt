@@ -22,10 +22,14 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PrintPageDescription:
-    page_size: windows_foundation.Size
-    imageable_rect: windows_foundation.Rect
-    dpi_x: winrt.system.UInt32
-    dpi_y: winrt.system.UInt32
+    @_property
+    def page_size(self) -> windows_foundation.Size: ...
+    @_property
+    def imageable_rect(self) -> windows_foundation.Rect: ...
+    @_property
+    def dpi_x(self) -> winrt.system.UInt32: ...
+    @_property
+    def dpi_y(self) -> winrt.system.UInt32: ...
     def __init__(self, page_size: windows_foundation.Size = windows_foundation.Size(), imageable_rect: windows_foundation.Rect = windows_foundation.Rect(), dpi_x: winrt.system.UInt32 = 0, dpi_y: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

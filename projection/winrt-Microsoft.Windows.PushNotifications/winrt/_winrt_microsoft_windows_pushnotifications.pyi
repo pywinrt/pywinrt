@@ -18,9 +18,12 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PushNotificationCreateChannelStatus:
-    status: PushNotificationChannelStatus
-    extended_error: windows_foundation.HResult
-    retry_count: winrt.system.UInt32
+    @_property
+    def status(self) -> PushNotificationChannelStatus: ...
+    @_property
+    def extended_error(self) -> windows_foundation.HResult: ...
+    @_property
+    def retry_count(self) -> winrt.system.UInt32: ...
     def __init__(self, status: PushNotificationChannelStatus = PushNotificationChannelStatus(0), extended_error: windows_foundation.HResult = windows_foundation.HResult(), retry_count: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

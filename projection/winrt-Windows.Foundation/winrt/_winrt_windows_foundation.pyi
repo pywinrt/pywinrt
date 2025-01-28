@@ -22,32 +22,42 @@ TResult = typing.TypeVar('TResult')
 
 @typing.final
 class EventRegistrationToken:
-    value: winrt.system.Int64
+    @_property
+    def value(self) -> winrt.system.Int64: ...
     def __init__(self, value: winrt.system.Int64 = 0) -> None: ...
 
 @typing.final
 class HResult:
-    value: winrt.system.Int32
+    @_property
+    def value(self) -> winrt.system.Int32: ...
     def __init__(self, value: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class Point:
-    x: winrt.system.Single
-    y: winrt.system.Single
+    @_property
+    def x(self) -> winrt.system.Single: ...
+    @_property
+    def y(self) -> winrt.system.Single: ...
     def __init__(self, x: winrt.system.Single = 0, y: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class Rect:
-    x: winrt.system.Single
-    y: winrt.system.Single
-    width: winrt.system.Single
-    height: winrt.system.Single
+    @_property
+    def x(self) -> winrt.system.Single: ...
+    @_property
+    def y(self) -> winrt.system.Single: ...
+    @_property
+    def width(self) -> winrt.system.Single: ...
+    @_property
+    def height(self) -> winrt.system.Single: ...
     def __init__(self, x: winrt.system.Single = 0, y: winrt.system.Single = 0, width: winrt.system.Single = 0, height: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class Size:
-    width: winrt.system.Single
-    height: winrt.system.Single
+    @_property
+    def width(self) -> winrt.system.Single: ...
+    @_property
+    def height(self) -> winrt.system.Single: ...
     def __init__(self, width: winrt.system.Single = 0, height: winrt.system.Single = 0) -> None: ...
 
 @typing.final

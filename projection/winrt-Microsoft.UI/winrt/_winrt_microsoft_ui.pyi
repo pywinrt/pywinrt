@@ -19,17 +19,20 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class DisplayId:
-    value: winrt.system.UInt64
+    @_property
+    def value(self) -> winrt.system.UInt64: ...
     def __init__(self, value: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final
 class IconId:
-    value: winrt.system.UInt64
+    @_property
+    def value(self) -> winrt.system.UInt64: ...
     def __init__(self, value: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final
 class WindowId:
-    value: winrt.system.UInt64
+    @_property
+    def value(self) -> winrt.system.UInt64: ...
     def __init__(self, value: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final

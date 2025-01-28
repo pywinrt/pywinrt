@@ -3546,26 +3546,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
-    static int TypeName_set_Name(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Name = py::convert_to<winrt::hstring>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* TypeName_get_Kind(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, void* /*unused*/) noexcept
     {
         try
@@ -3579,29 +3559,9 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
-    static int TypeName_set_Kind(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Kind = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeKind>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_TypeName[] = {
-        { "name", reinterpret_cast<getter>(TypeName_get_Name), reinterpret_cast<setter>(TypeName_set_Name), nullptr, nullptr },
-        { "kind", reinterpret_cast<getter>(TypeName_get_Kind), reinterpret_cast<setter>(TypeName_set_Kind), nullptr, nullptr },
+        { "name", reinterpret_cast<getter>(TypeName_get_Name), nullptr, nullptr, nullptr },
+        { "kind", reinterpret_cast<getter>(TypeName_get_Kind), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_TypeName(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, PyObject* other, int op) noexcept

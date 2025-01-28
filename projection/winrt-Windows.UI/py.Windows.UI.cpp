@@ -4877,26 +4877,6 @@ namespace py::cpp::Windows::UI
         }
     }
 
-    static int Color_set_A(py::wrapper::Windows::UI::Color* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.A = py::convert_to<uint8_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Color_get_R(py::wrapper::Windows::UI::Color* self, void* /*unused*/) noexcept
     {
         try
@@ -4907,26 +4887,6 @@ namespace py::cpp::Windows::UI
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int Color_set_R(py::wrapper::Windows::UI::Color* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.R = py::convert_to<uint8_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -4943,26 +4903,6 @@ namespace py::cpp::Windows::UI
         }
     }
 
-    static int Color_set_G(py::wrapper::Windows::UI::Color* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.G = py::convert_to<uint8_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* Color_get_B(py::wrapper::Windows::UI::Color* self, void* /*unused*/) noexcept
     {
         try
@@ -4976,31 +4916,11 @@ namespace py::cpp::Windows::UI
         }
     }
 
-    static int Color_set_B(py::wrapper::Windows::UI::Color* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.B = py::convert_to<uint8_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_Color[] = {
-        { "a", reinterpret_cast<getter>(Color_get_A), reinterpret_cast<setter>(Color_set_A), nullptr, nullptr },
-        { "r", reinterpret_cast<getter>(Color_get_R), reinterpret_cast<setter>(Color_set_R), nullptr, nullptr },
-        { "g", reinterpret_cast<getter>(Color_get_G), reinterpret_cast<setter>(Color_set_G), nullptr, nullptr },
-        { "b", reinterpret_cast<getter>(Color_get_B), reinterpret_cast<setter>(Color_set_B), nullptr, nullptr },
+        { "a", reinterpret_cast<getter>(Color_get_A), nullptr, nullptr, nullptr },
+        { "r", reinterpret_cast<getter>(Color_get_R), nullptr, nullptr, nullptr },
+        { "g", reinterpret_cast<getter>(Color_get_G), nullptr, nullptr, nullptr },
+        { "b", reinterpret_cast<getter>(Color_get_B), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_Color(py::wrapper::Windows::UI::Color* self, PyObject* other, int op) noexcept
@@ -5166,28 +5086,8 @@ namespace py::cpp::Windows::UI
         }
     }
 
-    static int WindowId_set_Value(py::wrapper::Windows::UI::WindowId* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Value = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_WindowId[] = {
-        { "value", reinterpret_cast<getter>(WindowId_get_Value), reinterpret_cast<setter>(WindowId_set_Value), nullptr, nullptr },
+        { "value", reinterpret_cast<getter>(WindowId_get_Value), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_WindowId(py::wrapper::Windows::UI::WindowId* self, PyObject* other, int op) noexcept

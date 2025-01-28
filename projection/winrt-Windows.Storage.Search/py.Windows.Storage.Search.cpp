@@ -7505,26 +7505,6 @@ namespace py::cpp::Windows::Storage::Search
         }
     }
 
-    static int SortEntry_set_PropertyName(py::wrapper::Windows::Storage::Search::SortEntry* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PropertyName = py::convert_to<winrt::hstring>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SortEntry_get_AscendingOrder(py::wrapper::Windows::Storage::Search::SortEntry* self, void* /*unused*/) noexcept
     {
         try
@@ -7538,29 +7518,9 @@ namespace py::cpp::Windows::Storage::Search
         }
     }
 
-    static int SortEntry_set_AscendingOrder(py::wrapper::Windows::Storage::Search::SortEntry* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.AscendingOrder = py::convert_to<bool>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SortEntry[] = {
-        { "property_name", reinterpret_cast<getter>(SortEntry_get_PropertyName), reinterpret_cast<setter>(SortEntry_set_PropertyName), nullptr, nullptr },
-        { "ascending_order", reinterpret_cast<getter>(SortEntry_get_AscendingOrder), reinterpret_cast<setter>(SortEntry_set_AscendingOrder), nullptr, nullptr },
+        { "property_name", reinterpret_cast<getter>(SortEntry_get_PropertyName), nullptr, nullptr, nullptr },
+        { "ascending_order", reinterpret_cast<getter>(SortEntry_get_AscendingOrder), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SortEntry(py::wrapper::Windows::Storage::Search::SortEntry* self, PyObject* other, int op) noexcept

@@ -13038,26 +13038,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static int SmsEncodedLength_set_SegmentCount(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.SegmentCount = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SmsEncodedLength_get_CharacterCountLastSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, void* /*unused*/) noexcept
     {
         try
@@ -13068,26 +13048,6 @@ namespace py::cpp::Windows::Devices::Sms
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int SmsEncodedLength_set_CharacterCountLastSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.CharacterCountLastSegment = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -13104,26 +13064,6 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static int SmsEncodedLength_set_CharactersPerSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.CharactersPerSegment = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* SmsEncodedLength_get_ByteCountLastSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, void* /*unused*/) noexcept
     {
         try
@@ -13134,26 +13074,6 @@ namespace py::cpp::Windows::Devices::Sms
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int SmsEncodedLength_set_ByteCountLastSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.ByteCountLastSegment = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -13170,32 +13090,12 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
-    static int SmsEncodedLength_set_BytesPerSegment(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesPerSegment = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_SmsEncodedLength[] = {
-        { "segment_count", reinterpret_cast<getter>(SmsEncodedLength_get_SegmentCount), reinterpret_cast<setter>(SmsEncodedLength_set_SegmentCount), nullptr, nullptr },
-        { "character_count_last_segment", reinterpret_cast<getter>(SmsEncodedLength_get_CharacterCountLastSegment), reinterpret_cast<setter>(SmsEncodedLength_set_CharacterCountLastSegment), nullptr, nullptr },
-        { "characters_per_segment", reinterpret_cast<getter>(SmsEncodedLength_get_CharactersPerSegment), reinterpret_cast<setter>(SmsEncodedLength_set_CharactersPerSegment), nullptr, nullptr },
-        { "byte_count_last_segment", reinterpret_cast<getter>(SmsEncodedLength_get_ByteCountLastSegment), reinterpret_cast<setter>(SmsEncodedLength_set_ByteCountLastSegment), nullptr, nullptr },
-        { "bytes_per_segment", reinterpret_cast<getter>(SmsEncodedLength_get_BytesPerSegment), reinterpret_cast<setter>(SmsEncodedLength_set_BytesPerSegment), nullptr, nullptr },
+        { "segment_count", reinterpret_cast<getter>(SmsEncodedLength_get_SegmentCount), nullptr, nullptr, nullptr },
+        { "character_count_last_segment", reinterpret_cast<getter>(SmsEncodedLength_get_CharacterCountLastSegment), nullptr, nullptr, nullptr },
+        { "characters_per_segment", reinterpret_cast<getter>(SmsEncodedLength_get_CharactersPerSegment), nullptr, nullptr, nullptr },
+        { "byte_count_last_segment", reinterpret_cast<getter>(SmsEncodedLength_get_ByteCountLastSegment), nullptr, nullptr, nullptr },
+        { "bytes_per_segment", reinterpret_cast<getter>(SmsEncodedLength_get_BytesPerSegment), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_SmsEncodedLength(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* other, int op) noexcept

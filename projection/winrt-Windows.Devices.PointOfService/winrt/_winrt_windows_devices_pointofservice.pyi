@@ -22,8 +22,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class SizeUInt32:
-    width: winrt.system.UInt32
-    height: winrt.system.UInt32
+    @_property
+    def width(self) -> winrt.system.UInt32: ...
+    @_property
+    def height(self) -> winrt.system.UInt32: ...
     def __init__(self, width: winrt.system.UInt32 = 0, height: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final

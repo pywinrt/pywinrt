@@ -9927,26 +9927,6 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static int HttpProgress_set_Stage(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Stage = py::convert_to<winrt::Windows::Web::Http::HttpProgressStage>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HttpProgress_get_BytesSent(py::wrapper::Windows::Web::Http::HttpProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -9957,26 +9937,6 @@ namespace py::cpp::Windows::Web::Http
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HttpProgress_set_BytesSent(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesSent = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -9993,26 +9953,6 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static int HttpProgress_set_TotalBytesToSend(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToSend = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HttpProgress_get_BytesReceived(py::wrapper::Windows::Web::Http::HttpProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -10023,26 +9963,6 @@ namespace py::cpp::Windows::Web::Http
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int HttpProgress_set_BytesReceived(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.BytesReceived = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -10059,26 +9979,6 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static int HttpProgress_set_TotalBytesToReceive(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.TotalBytesToReceive = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* HttpProgress_get_Retries(py::wrapper::Windows::Web::Http::HttpProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -10092,33 +9992,13 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
-    static int HttpProgress_set_Retries(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Retries = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_HttpProgress[] = {
-        { "stage", reinterpret_cast<getter>(HttpProgress_get_Stage), reinterpret_cast<setter>(HttpProgress_set_Stage), nullptr, nullptr },
-        { "bytes_sent", reinterpret_cast<getter>(HttpProgress_get_BytesSent), reinterpret_cast<setter>(HttpProgress_set_BytesSent), nullptr, nullptr },
-        { "total_bytes_to_send", reinterpret_cast<getter>(HttpProgress_get_TotalBytesToSend), reinterpret_cast<setter>(HttpProgress_set_TotalBytesToSend), nullptr, nullptr },
-        { "bytes_received", reinterpret_cast<getter>(HttpProgress_get_BytesReceived), reinterpret_cast<setter>(HttpProgress_set_BytesReceived), nullptr, nullptr },
-        { "total_bytes_to_receive", reinterpret_cast<getter>(HttpProgress_get_TotalBytesToReceive), reinterpret_cast<setter>(HttpProgress_set_TotalBytesToReceive), nullptr, nullptr },
-        { "retries", reinterpret_cast<getter>(HttpProgress_get_Retries), reinterpret_cast<setter>(HttpProgress_set_Retries), nullptr, nullptr },
+        { "stage", reinterpret_cast<getter>(HttpProgress_get_Stage), nullptr, nullptr, nullptr },
+        { "bytes_sent", reinterpret_cast<getter>(HttpProgress_get_BytesSent), nullptr, nullptr, nullptr },
+        { "total_bytes_to_send", reinterpret_cast<getter>(HttpProgress_get_TotalBytesToSend), nullptr, nullptr, nullptr },
+        { "bytes_received", reinterpret_cast<getter>(HttpProgress_get_BytesReceived), nullptr, nullptr, nullptr },
+        { "total_bytes_to_receive", reinterpret_cast<getter>(HttpProgress_get_TotalBytesToReceive), nullptr, nullptr, nullptr },
+        { "retries", reinterpret_cast<getter>(HttpProgress_get_Retries), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_HttpProgress(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* other, int op) noexcept

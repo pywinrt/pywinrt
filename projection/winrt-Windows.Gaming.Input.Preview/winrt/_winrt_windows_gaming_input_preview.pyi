@@ -20,11 +20,16 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class HeadsetGeqGains:
-    band1_gain: winrt.system.Int32
-    band2_gain: winrt.system.Int32
-    band3_gain: winrt.system.Int32
-    band4_gain: winrt.system.Int32
-    band5_gain: winrt.system.Int32
+    @_property
+    def band1_gain(self) -> winrt.system.Int32: ...
+    @_property
+    def band2_gain(self) -> winrt.system.Int32: ...
+    @_property
+    def band3_gain(self) -> winrt.system.Int32: ...
+    @_property
+    def band4_gain(self) -> winrt.system.Int32: ...
+    @_property
+    def band5_gain(self) -> winrt.system.Int32: ...
     def __init__(self, band1_gain: winrt.system.Int32 = 0, band2_gain: winrt.system.Int32 = 0, band3_gain: winrt.system.Int32 = 0, band4_gain: winrt.system.Int32 = 0, band5_gain: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final

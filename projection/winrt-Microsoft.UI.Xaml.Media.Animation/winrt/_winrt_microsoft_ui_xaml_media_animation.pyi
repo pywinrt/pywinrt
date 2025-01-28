@@ -23,14 +23,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class KeyTime:
-    time_span: datetime.timedelta
+    @_property
+    def time_span(self) -> datetime.timedelta: ...
     def __init__(self, time_span: datetime.timedelta = datetime.timedelta(0)) -> None: ...
 
 @typing.final
 class RepeatBehavior:
-    count: winrt.system.Double
-    duration: datetime.timedelta
-    type: RepeatBehaviorType
+    @_property
+    def count(self) -> winrt.system.Double: ...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def type(self) -> RepeatBehaviorType: ...
     def __init__(self, count: winrt.system.Double = 0, duration: datetime.timedelta = datetime.timedelta(0), type: RepeatBehaviorType = RepeatBehaviorType(0)) -> None: ...
 
 @typing.final

@@ -21,9 +21,12 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class NitRange:
-    min_nits: winrt.system.Single
-    max_nits: winrt.system.Single
-    step_size_nits: winrt.system.Single
+    @_property
+    def min_nits(self) -> winrt.system.Single: ...
+    @_property
+    def max_nits(self) -> winrt.system.Single: ...
+    @_property
+    def step_size_nits(self) -> winrt.system.Single: ...
     def __init__(self, min_nits: winrt.system.Single = 0, max_nits: winrt.system.Single = 0, step_size_nits: winrt.system.Single = 0) -> None: ...
 
 @typing.final

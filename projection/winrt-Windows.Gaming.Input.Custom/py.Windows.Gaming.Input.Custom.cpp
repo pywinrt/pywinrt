@@ -3708,26 +3708,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static int GameControllerVersionInfo_set_Major(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Major = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GameControllerVersionInfo_get_Minor(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, void* /*unused*/) noexcept
     {
         try
@@ -3738,26 +3718,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int GameControllerVersionInfo_set_Minor(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Minor = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -3774,26 +3734,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static int GameControllerVersionInfo_set_Build(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Build = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GameControllerVersionInfo_get_Revision(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, void* /*unused*/) noexcept
     {
         try
@@ -3807,31 +3747,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static int GameControllerVersionInfo_set_Revision(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Revision = py::convert_to<uint16_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_GameControllerVersionInfo[] = {
-        { "major", reinterpret_cast<getter>(GameControllerVersionInfo_get_Major), reinterpret_cast<setter>(GameControllerVersionInfo_set_Major), nullptr, nullptr },
-        { "minor", reinterpret_cast<getter>(GameControllerVersionInfo_get_Minor), reinterpret_cast<setter>(GameControllerVersionInfo_set_Minor), nullptr, nullptr },
-        { "build", reinterpret_cast<getter>(GameControllerVersionInfo_get_Build), reinterpret_cast<setter>(GameControllerVersionInfo_set_Build), nullptr, nullptr },
-        { "revision", reinterpret_cast<getter>(GameControllerVersionInfo_get_Revision), reinterpret_cast<setter>(GameControllerVersionInfo_set_Revision), nullptr, nullptr },
+        { "major", reinterpret_cast<getter>(GameControllerVersionInfo_get_Major), nullptr, nullptr, nullptr },
+        { "minor", reinterpret_cast<getter>(GameControllerVersionInfo_get_Minor), nullptr, nullptr, nullptr },
+        { "build", reinterpret_cast<getter>(GameControllerVersionInfo_get_Build), nullptr, nullptr, nullptr },
+        { "revision", reinterpret_cast<getter>(GameControllerVersionInfo_get_Revision), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_GameControllerVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* other, int op) noexcept
@@ -3999,26 +3919,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static int GipFirmwareUpdateProgress_set_PercentCompleted(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PercentCompleted = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GipFirmwareUpdateProgress_get_CurrentComponentId(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, void* /*unused*/) noexcept
     {
         try
@@ -4032,29 +3932,9 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
-    static int GipFirmwareUpdateProgress_set_CurrentComponentId(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.CurrentComponentId = py::convert_to<uint32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_GipFirmwareUpdateProgress[] = {
-        { "percent_completed", reinterpret_cast<getter>(GipFirmwareUpdateProgress_get_PercentCompleted), reinterpret_cast<setter>(GipFirmwareUpdateProgress_set_PercentCompleted), nullptr, nullptr },
-        { "current_component_id", reinterpret_cast<getter>(GipFirmwareUpdateProgress_get_CurrentComponentId), reinterpret_cast<setter>(GipFirmwareUpdateProgress_set_CurrentComponentId), nullptr, nullptr },
+        { "percent_completed", reinterpret_cast<getter>(GipFirmwareUpdateProgress_get_PercentCompleted), nullptr, nullptr, nullptr },
+        { "current_component_id", reinterpret_cast<getter>(GipFirmwareUpdateProgress_get_CurrentComponentId), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_GipFirmwareUpdateProgress(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, PyObject* other, int op) noexcept

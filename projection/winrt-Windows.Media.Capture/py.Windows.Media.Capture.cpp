@@ -26930,26 +26930,6 @@ namespace py::cpp::Windows::Media::Capture
         }
     }
 
-    static int WhiteBalanceGain_set_R(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.R = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* WhiteBalanceGain_get_G(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, void* /*unused*/) noexcept
     {
         try
@@ -26960,26 +26940,6 @@ namespace py::cpp::Windows::Media::Capture
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int WhiteBalanceGain_set_G(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.G = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -26996,30 +26956,10 @@ namespace py::cpp::Windows::Media::Capture
         }
     }
 
-    static int WhiteBalanceGain_set_B(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.B = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_WhiteBalanceGain[] = {
-        { "r", reinterpret_cast<getter>(WhiteBalanceGain_get_R), reinterpret_cast<setter>(WhiteBalanceGain_set_R), nullptr, nullptr },
-        { "g", reinterpret_cast<getter>(WhiteBalanceGain_get_G), reinterpret_cast<setter>(WhiteBalanceGain_set_G), nullptr, nullptr },
-        { "b", reinterpret_cast<getter>(WhiteBalanceGain_get_B), reinterpret_cast<setter>(WhiteBalanceGain_set_B), nullptr, nullptr },
+        { "r", reinterpret_cast<getter>(WhiteBalanceGain_get_R), nullptr, nullptr, nullptr },
+        { "g", reinterpret_cast<getter>(WhiteBalanceGain_get_G), nullptr, nullptr, nullptr },
+        { "b", reinterpret_cast<getter>(WhiteBalanceGain_get_B), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_WhiteBalanceGain(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* other, int op) noexcept

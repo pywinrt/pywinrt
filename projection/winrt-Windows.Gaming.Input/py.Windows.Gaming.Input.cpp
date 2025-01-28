@@ -6029,26 +6029,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int ArcadeStickReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ArcadeStickReading_get_Buttons(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, void* /*unused*/) noexcept
     {
         try
@@ -6062,29 +6042,9 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int ArcadeStickReading_set_Buttons(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Buttons = py::convert_to<winrt::Windows::Gaming::Input::ArcadeStickButtons>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_ArcadeStickReading[] = {
-        { "timestamp", reinterpret_cast<getter>(ArcadeStickReading_get_Timestamp), reinterpret_cast<setter>(ArcadeStickReading_set_Timestamp), nullptr, nullptr },
-        { "buttons", reinterpret_cast<getter>(ArcadeStickReading_get_Buttons), reinterpret_cast<setter>(ArcadeStickReading_set_Buttons), nullptr, nullptr },
+        { "timestamp", reinterpret_cast<getter>(ArcadeStickReading_get_Timestamp), nullptr, nullptr, nullptr },
+        { "buttons", reinterpret_cast<getter>(ArcadeStickReading_get_Buttons), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_ArcadeStickReading(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, PyObject* other, int op) noexcept
@@ -6250,26 +6210,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int FlightStickReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* FlightStickReading_get_Buttons(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, void* /*unused*/) noexcept
     {
         try
@@ -6280,26 +6220,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int FlightStickReading_set_Buttons(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Buttons = py::convert_to<winrt::Windows::Gaming::Input::FlightStickButtons>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -6316,26 +6236,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int FlightStickReading_set_HatSwitch(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.HatSwitch = py::convert_to<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* FlightStickReading_get_Roll(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, void* /*unused*/) noexcept
     {
         try
@@ -6346,26 +6246,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int FlightStickReading_set_Roll(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Roll = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -6382,26 +6262,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int FlightStickReading_set_Pitch(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Pitch = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* FlightStickReading_get_Yaw(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, void* /*unused*/) noexcept
     {
         try
@@ -6412,26 +6272,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int FlightStickReading_set_Yaw(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Yaw = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -6448,34 +6288,14 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int FlightStickReading_set_Throttle(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Throttle = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_FlightStickReading[] = {
-        { "timestamp", reinterpret_cast<getter>(FlightStickReading_get_Timestamp), reinterpret_cast<setter>(FlightStickReading_set_Timestamp), nullptr, nullptr },
-        { "buttons", reinterpret_cast<getter>(FlightStickReading_get_Buttons), reinterpret_cast<setter>(FlightStickReading_set_Buttons), nullptr, nullptr },
-        { "hat_switch", reinterpret_cast<getter>(FlightStickReading_get_HatSwitch), reinterpret_cast<setter>(FlightStickReading_set_HatSwitch), nullptr, nullptr },
-        { "roll", reinterpret_cast<getter>(FlightStickReading_get_Roll), reinterpret_cast<setter>(FlightStickReading_set_Roll), nullptr, nullptr },
-        { "pitch", reinterpret_cast<getter>(FlightStickReading_get_Pitch), reinterpret_cast<setter>(FlightStickReading_set_Pitch), nullptr, nullptr },
-        { "yaw", reinterpret_cast<getter>(FlightStickReading_get_Yaw), reinterpret_cast<setter>(FlightStickReading_set_Yaw), nullptr, nullptr },
-        { "throttle", reinterpret_cast<getter>(FlightStickReading_get_Throttle), reinterpret_cast<setter>(FlightStickReading_set_Throttle), nullptr, nullptr },
+        { "timestamp", reinterpret_cast<getter>(FlightStickReading_get_Timestamp), nullptr, nullptr, nullptr },
+        { "buttons", reinterpret_cast<getter>(FlightStickReading_get_Buttons), nullptr, nullptr, nullptr },
+        { "hat_switch", reinterpret_cast<getter>(FlightStickReading_get_HatSwitch), nullptr, nullptr, nullptr },
+        { "roll", reinterpret_cast<getter>(FlightStickReading_get_Roll), nullptr, nullptr, nullptr },
+        { "pitch", reinterpret_cast<getter>(FlightStickReading_get_Pitch), nullptr, nullptr, nullptr },
+        { "yaw", reinterpret_cast<getter>(FlightStickReading_get_Yaw), nullptr, nullptr, nullptr },
+        { "throttle", reinterpret_cast<getter>(FlightStickReading_get_Throttle), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_FlightStickReading(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* other, int op) noexcept
@@ -6673,26 +6493,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int GamepadReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GamepadReading_get_Buttons(py::wrapper::Windows::Gaming::Input::GamepadReading* self, void* /*unused*/) noexcept
     {
         try
@@ -6703,26 +6503,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int GamepadReading_set_Buttons(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Buttons = py::convert_to<winrt::Windows::Gaming::Input::GamepadButtons>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -6739,26 +6519,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int GamepadReading_set_LeftTrigger(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LeftTrigger = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GamepadReading_get_RightTrigger(py::wrapper::Windows::Gaming::Input::GamepadReading* self, void* /*unused*/) noexcept
     {
         try
@@ -6769,26 +6529,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int GamepadReading_set_RightTrigger(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RightTrigger = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -6805,26 +6545,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int GamepadReading_set_LeftThumbstickX(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LeftThumbstickX = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GamepadReading_get_LeftThumbstickY(py::wrapper::Windows::Gaming::Input::GamepadReading* self, void* /*unused*/) noexcept
     {
         try
@@ -6835,26 +6555,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int GamepadReading_set_LeftThumbstickY(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LeftThumbstickY = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -6871,26 +6571,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int GamepadReading_set_RightThumbstickX(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RightThumbstickX = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GamepadReading_get_RightThumbstickY(py::wrapper::Windows::Gaming::Input::GamepadReading* self, void* /*unused*/) noexcept
     {
         try
@@ -6904,35 +6584,15 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int GamepadReading_set_RightThumbstickY(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RightThumbstickY = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_GamepadReading[] = {
-        { "timestamp", reinterpret_cast<getter>(GamepadReading_get_Timestamp), reinterpret_cast<setter>(GamepadReading_set_Timestamp), nullptr, nullptr },
-        { "buttons", reinterpret_cast<getter>(GamepadReading_get_Buttons), reinterpret_cast<setter>(GamepadReading_set_Buttons), nullptr, nullptr },
-        { "left_trigger", reinterpret_cast<getter>(GamepadReading_get_LeftTrigger), reinterpret_cast<setter>(GamepadReading_set_LeftTrigger), nullptr, nullptr },
-        { "right_trigger", reinterpret_cast<getter>(GamepadReading_get_RightTrigger), reinterpret_cast<setter>(GamepadReading_set_RightTrigger), nullptr, nullptr },
-        { "left_thumbstick_x", reinterpret_cast<getter>(GamepadReading_get_LeftThumbstickX), reinterpret_cast<setter>(GamepadReading_set_LeftThumbstickX), nullptr, nullptr },
-        { "left_thumbstick_y", reinterpret_cast<getter>(GamepadReading_get_LeftThumbstickY), reinterpret_cast<setter>(GamepadReading_set_LeftThumbstickY), nullptr, nullptr },
-        { "right_thumbstick_x", reinterpret_cast<getter>(GamepadReading_get_RightThumbstickX), reinterpret_cast<setter>(GamepadReading_set_RightThumbstickX), nullptr, nullptr },
-        { "right_thumbstick_y", reinterpret_cast<getter>(GamepadReading_get_RightThumbstickY), reinterpret_cast<setter>(GamepadReading_set_RightThumbstickY), nullptr, nullptr },
+        { "timestamp", reinterpret_cast<getter>(GamepadReading_get_Timestamp), nullptr, nullptr, nullptr },
+        { "buttons", reinterpret_cast<getter>(GamepadReading_get_Buttons), nullptr, nullptr, nullptr },
+        { "left_trigger", reinterpret_cast<getter>(GamepadReading_get_LeftTrigger), nullptr, nullptr, nullptr },
+        { "right_trigger", reinterpret_cast<getter>(GamepadReading_get_RightTrigger), nullptr, nullptr, nullptr },
+        { "left_thumbstick_x", reinterpret_cast<getter>(GamepadReading_get_LeftThumbstickX), nullptr, nullptr, nullptr },
+        { "left_thumbstick_y", reinterpret_cast<getter>(GamepadReading_get_LeftThumbstickY), nullptr, nullptr, nullptr },
+        { "right_thumbstick_x", reinterpret_cast<getter>(GamepadReading_get_RightThumbstickX), nullptr, nullptr, nullptr },
+        { "right_thumbstick_y", reinterpret_cast<getter>(GamepadReading_get_RightThumbstickY), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_GamepadReading(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* other, int op) noexcept
@@ -7128,26 +6788,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int GamepadVibration_set_LeftMotor(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LeftMotor = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GamepadVibration_get_RightMotor(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, void* /*unused*/) noexcept
     {
         try
@@ -7158,26 +6798,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int GamepadVibration_set_RightMotor(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RightMotor = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -7194,26 +6814,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int GamepadVibration_set_LeftTrigger(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.LeftTrigger = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* GamepadVibration_get_RightTrigger(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, void* /*unused*/) noexcept
     {
         try
@@ -7227,31 +6827,11 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int GamepadVibration_set_RightTrigger(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RightTrigger = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_GamepadVibration[] = {
-        { "left_motor", reinterpret_cast<getter>(GamepadVibration_get_LeftMotor), reinterpret_cast<setter>(GamepadVibration_set_LeftMotor), nullptr, nullptr },
-        { "right_motor", reinterpret_cast<getter>(GamepadVibration_get_RightMotor), reinterpret_cast<setter>(GamepadVibration_set_RightMotor), nullptr, nullptr },
-        { "left_trigger", reinterpret_cast<getter>(GamepadVibration_get_LeftTrigger), reinterpret_cast<setter>(GamepadVibration_set_LeftTrigger), nullptr, nullptr },
-        { "right_trigger", reinterpret_cast<getter>(GamepadVibration_get_RightTrigger), reinterpret_cast<setter>(GamepadVibration_set_RightTrigger), nullptr, nullptr },
+        { "left_motor", reinterpret_cast<getter>(GamepadVibration_get_LeftMotor), nullptr, nullptr, nullptr },
+        { "right_motor", reinterpret_cast<getter>(GamepadVibration_get_RightMotor), nullptr, nullptr, nullptr },
+        { "left_trigger", reinterpret_cast<getter>(GamepadVibration_get_LeftTrigger), nullptr, nullptr, nullptr },
+        { "right_trigger", reinterpret_cast<getter>(GamepadVibration_get_RightTrigger), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_GamepadVibration(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* other, int op) noexcept
@@ -7431,26 +7011,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int RacingWheelReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RacingWheelReading_get_Buttons(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, void* /*unused*/) noexcept
     {
         try
@@ -7461,26 +7021,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int RacingWheelReading_set_Buttons(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Buttons = py::convert_to<winrt::Windows::Gaming::Input::RacingWheelButtons>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -7497,26 +7037,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int RacingWheelReading_set_PatternShifterGear(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.PatternShifterGear = py::convert_to<int32_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RacingWheelReading_get_Wheel(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, void* /*unused*/) noexcept
     {
         try
@@ -7527,26 +7047,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int RacingWheelReading_set_Wheel(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Wheel = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -7563,26 +7063,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int RacingWheelReading_set_Throttle(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Throttle = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RacingWheelReading_get_Brake(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, void* /*unused*/) noexcept
     {
         try
@@ -7593,26 +7073,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int RacingWheelReading_set_Brake(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Brake = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -7629,26 +7089,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int RacingWheelReading_set_Clutch(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Clutch = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* RacingWheelReading_get_Handbrake(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, void* /*unused*/) noexcept
     {
         try
@@ -7662,35 +7102,15 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int RacingWheelReading_set_Handbrake(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Handbrake = py::convert_to<double>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_RacingWheelReading[] = {
-        { "timestamp", reinterpret_cast<getter>(RacingWheelReading_get_Timestamp), reinterpret_cast<setter>(RacingWheelReading_set_Timestamp), nullptr, nullptr },
-        { "buttons", reinterpret_cast<getter>(RacingWheelReading_get_Buttons), reinterpret_cast<setter>(RacingWheelReading_set_Buttons), nullptr, nullptr },
-        { "pattern_shifter_gear", reinterpret_cast<getter>(RacingWheelReading_get_PatternShifterGear), reinterpret_cast<setter>(RacingWheelReading_set_PatternShifterGear), nullptr, nullptr },
-        { "wheel", reinterpret_cast<getter>(RacingWheelReading_get_Wheel), reinterpret_cast<setter>(RacingWheelReading_set_Wheel), nullptr, nullptr },
-        { "throttle", reinterpret_cast<getter>(RacingWheelReading_get_Throttle), reinterpret_cast<setter>(RacingWheelReading_set_Throttle), nullptr, nullptr },
-        { "brake", reinterpret_cast<getter>(RacingWheelReading_get_Brake), reinterpret_cast<setter>(RacingWheelReading_set_Brake), nullptr, nullptr },
-        { "clutch", reinterpret_cast<getter>(RacingWheelReading_get_Clutch), reinterpret_cast<setter>(RacingWheelReading_set_Clutch), nullptr, nullptr },
-        { "handbrake", reinterpret_cast<getter>(RacingWheelReading_get_Handbrake), reinterpret_cast<setter>(RacingWheelReading_set_Handbrake), nullptr, nullptr },
+        { "timestamp", reinterpret_cast<getter>(RacingWheelReading_get_Timestamp), nullptr, nullptr, nullptr },
+        { "buttons", reinterpret_cast<getter>(RacingWheelReading_get_Buttons), nullptr, nullptr, nullptr },
+        { "pattern_shifter_gear", reinterpret_cast<getter>(RacingWheelReading_get_PatternShifterGear), nullptr, nullptr, nullptr },
+        { "wheel", reinterpret_cast<getter>(RacingWheelReading_get_Wheel), nullptr, nullptr, nullptr },
+        { "throttle", reinterpret_cast<getter>(RacingWheelReading_get_Throttle), nullptr, nullptr, nullptr },
+        { "brake", reinterpret_cast<getter>(RacingWheelReading_get_Brake), nullptr, nullptr, nullptr },
+        { "clutch", reinterpret_cast<getter>(RacingWheelReading_get_Clutch), nullptr, nullptr, nullptr },
+        { "handbrake", reinterpret_cast<getter>(RacingWheelReading_get_Handbrake), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_RacingWheelReading(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* other, int op) noexcept
@@ -7884,26 +7304,6 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int UINavigationReading_set_Timestamp(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.Timestamp = py::convert_to<uint64_t>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* UINavigationReading_get_RequiredButtons(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, void* /*unused*/) noexcept
     {
         try
@@ -7914,26 +7314,6 @@ namespace py::cpp::Windows::Gaming::Input
         {
             py::to_PyErr();
             return nullptr;
-        }
-    }
-
-    static int UINavigationReading_set_RequiredButtons(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.RequiredButtons = py::convert_to<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
         }
     }
 
@@ -7950,30 +7330,10 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
-    static int UINavigationReading_set_OptionalButtons(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (!arg)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            self->obj.OptionalButtons = py::convert_to<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(arg);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyGetSetDef _getset_UINavigationReading[] = {
-        { "timestamp", reinterpret_cast<getter>(UINavigationReading_get_Timestamp), reinterpret_cast<setter>(UINavigationReading_set_Timestamp), nullptr, nullptr },
-        { "required_buttons", reinterpret_cast<getter>(UINavigationReading_get_RequiredButtons), reinterpret_cast<setter>(UINavigationReading_set_RequiredButtons), nullptr, nullptr },
-        { "optional_buttons", reinterpret_cast<getter>(UINavigationReading_get_OptionalButtons), reinterpret_cast<setter>(UINavigationReading_set_OptionalButtons), nullptr, nullptr },
+        { "timestamp", reinterpret_cast<getter>(UINavigationReading_get_Timestamp), nullptr, nullptr, nullptr },
+        { "required_buttons", reinterpret_cast<getter>(UINavigationReading_get_RequiredButtons), nullptr, nullptr, nullptr },
+        { "optional_buttons", reinterpret_cast<getter>(UINavigationReading_get_OptionalButtons), nullptr, nullptr, nullptr },
         { }};
 
     static PyObject* _richcompare_UINavigationReading(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* other, int op) noexcept

@@ -20,8 +20,10 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PackageDeploymentProgress:
-    status: PackageDeploymentProgressStatus
-    progress: winrt.system.Double
+    @_property
+    def status(self) -> PackageDeploymentProgressStatus: ...
+    @_property
+    def progress(self) -> winrt.system.Double: ...
     def __init__(self, status: PackageDeploymentProgressStatus = PackageDeploymentProgressStatus(0), progress: winrt.system.Double = 0) -> None: ...
 
 @typing.final
