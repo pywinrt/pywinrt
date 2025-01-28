@@ -4842,28 +4842,21 @@ namespace py::cpp::Windows::Security::Isolation
 
     // ----- IsolatedWindowsEnvironmentCreateProgress struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>* _new_IsolatedWindowsEnvironmentCreateProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_IsolatedWindowsEnvironmentCreateProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_IsolatedWindowsEnvironmentCreateProgress(winrt_struct_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _State{};
@@ -4872,7 +4865,7 @@ namespace py::cpp::Windows::Security::Isolation
         static const char* kwlist[] = {"state", "percent_complete", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iI", const_cast<char**>(kwlist), &_State, &_PercentComplete))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -4880,12 +4873,12 @@ namespace py::cpp::Windows::Security::Isolation
             self->obj.State = static_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>(_State);
             self->obj.PercentComplete = _PercentComplete;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -4996,7 +4989,6 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Slot _type_slots_IsolatedWindowsEnvironmentCreateProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_IsolatedWindowsEnvironmentCreateProgress) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IsolatedWindowsEnvironmentCreateProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IsolatedWindowsEnvironmentCreateProgress) },

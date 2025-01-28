@@ -3622,28 +3622,21 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- GameControllerVersionInfo struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>* _new_GameControllerVersionInfo(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_GameControllerVersionInfo(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_GameControllerVersionInfo(winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint16_t _Major{};
@@ -3654,7 +3647,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         static const char* kwlist[] = {"major", "minor", "build", "revision", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "HHHH", const_cast<char**>(kwlist), &_Major, &_Minor, &_Build, &_Revision))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -3664,12 +3657,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
             self->obj.Build = _Build;
             self->obj.Revision = _Revision;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3820,7 +3813,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Slot _type_slots_GameControllerVersionInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GameControllerVersionInfo) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_GameControllerVersionInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GameControllerVersionInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GameControllerVersionInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GameControllerVersionInfo) },
@@ -3837,28 +3829,21 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- GipFirmwareUpdateProgress struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>* _new_GipFirmwareUpdateProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_GipFirmwareUpdateProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_GipFirmwareUpdateProgress(winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _PercentCompleted{};
@@ -3867,7 +3852,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         static const char* kwlist[] = {"percent_completed", "current_component_id", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "dI", const_cast<char**>(kwlist), &_PercentCompleted, &_CurrentComponentId))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -3875,12 +3860,12 @@ namespace py::cpp::Windows::Gaming::Input::Custom
             self->obj.PercentCompleted = _PercentCompleted;
             self->obj.CurrentComponentId = _CurrentComponentId;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3991,7 +3976,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyType_Slot _type_slots_GipFirmwareUpdateProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GipFirmwareUpdateProgress) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_GipFirmwareUpdateProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GipFirmwareUpdateProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GipFirmwareUpdateProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GipFirmwareUpdateProgress) },

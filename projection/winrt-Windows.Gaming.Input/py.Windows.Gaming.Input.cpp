@@ -5947,28 +5947,21 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- ArcadeStickReading struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Gaming::Input::ArcadeStickReading>* _new_ArcadeStickReading(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_ArcadeStickReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::ArcadeStickReading>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::ArcadeStickReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_ArcadeStickReading(winrt_struct_wrapper<winrt::Windows::Gaming::Input::ArcadeStickReading>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Timestamp{};
@@ -5977,7 +5970,7 @@ namespace py::cpp::Windows::Gaming::Input
         static const char* kwlist[] = {"timestamp", "buttons", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KI", const_cast<char**>(kwlist), &_Timestamp, &_Buttons))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -5985,12 +5978,12 @@ namespace py::cpp::Windows::Gaming::Input
             self->obj.Timestamp = _Timestamp;
             self->obj.Buttons = static_cast<winrt::Windows::Gaming::Input::ArcadeStickButtons>(_Buttons);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -6101,7 +6094,6 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Slot _type_slots_ArcadeStickReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ArcadeStickReading) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_ArcadeStickReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ArcadeStickReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ArcadeStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ArcadeStickReading) },
@@ -6118,28 +6110,21 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- FlightStickReading struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Gaming::Input::FlightStickReading>* _new_FlightStickReading(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_FlightStickReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::FlightStickReading>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::FlightStickReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_FlightStickReading(winrt_struct_wrapper<winrt::Windows::Gaming::Input::FlightStickReading>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Timestamp{};
@@ -6153,7 +6138,7 @@ namespace py::cpp::Windows::Gaming::Input
         static const char* kwlist[] = {"timestamp", "buttons", "hat_switch", "roll", "pitch", "yaw", "throttle", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KIidddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_HatSwitch, &_Roll, &_Pitch, &_Yaw, &_Throttle))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -6166,12 +6151,12 @@ namespace py::cpp::Windows::Gaming::Input
             self->obj.Yaw = _Yaw;
             self->obj.Throttle = _Throttle;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -6382,7 +6367,6 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Slot _type_slots_FlightStickReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FlightStickReading) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_FlightStickReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FlightStickReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FlightStickReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FlightStickReading) },
@@ -6399,28 +6383,21 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- GamepadReading struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadReading>* _new_GamepadReading(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_GamepadReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadReading>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_GamepadReading(winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadReading>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Timestamp{};
@@ -6435,7 +6412,7 @@ namespace py::cpp::Windows::Gaming::Input
         static const char* kwlist[] = {"timestamp", "buttons", "left_trigger", "right_trigger", "left_thumbstick_x", "left_thumbstick_y", "right_thumbstick_x", "right_thumbstick_y", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KIdddddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_LeftTrigger, &_RightTrigger, &_LeftThumbstickX, &_LeftThumbstickY, &_RightThumbstickX, &_RightThumbstickY))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -6449,12 +6426,12 @@ namespace py::cpp::Windows::Gaming::Input
             self->obj.RightThumbstickX = _RightThumbstickX;
             self->obj.RightThumbstickY = _RightThumbstickY;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -6685,7 +6662,6 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Slot _type_slots_GamepadReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadReading) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_GamepadReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GamepadReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadReading) },
@@ -6702,28 +6678,21 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- GamepadVibration struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadVibration>* _new_GamepadVibration(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_GamepadVibration(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadVibration>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadVibration>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_GamepadVibration(winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadVibration>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _LeftMotor{};
@@ -6734,7 +6703,7 @@ namespace py::cpp::Windows::Gaming::Input
         static const char* kwlist[] = {"left_motor", "right_motor", "left_trigger", "right_trigger", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddd", const_cast<char**>(kwlist), &_LeftMotor, &_RightMotor, &_LeftTrigger, &_RightTrigger))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -6744,12 +6713,12 @@ namespace py::cpp::Windows::Gaming::Input
             self->obj.LeftTrigger = _LeftTrigger;
             self->obj.RightTrigger = _RightTrigger;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -6900,7 +6869,6 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Slot _type_slots_GamepadVibration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GamepadVibration) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_GamepadVibration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GamepadVibration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GamepadVibration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GamepadVibration) },
@@ -6917,28 +6885,21 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- RacingWheelReading struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Gaming::Input::RacingWheelReading>* _new_RacingWheelReading(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_RacingWheelReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::RacingWheelReading>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::RacingWheelReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_RacingWheelReading(winrt_struct_wrapper<winrt::Windows::Gaming::Input::RacingWheelReading>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Timestamp{};
@@ -6953,7 +6914,7 @@ namespace py::cpp::Windows::Gaming::Input
         static const char* kwlist[] = {"timestamp", "buttons", "pattern_shifter_gear", "wheel", "throttle", "brake", "clutch", "handbrake", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KIiddddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_PatternShifterGear, &_Wheel, &_Throttle, &_Brake, &_Clutch, &_Handbrake))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -6967,12 +6928,12 @@ namespace py::cpp::Windows::Gaming::Input
             self->obj.Clutch = _Clutch;
             self->obj.Handbrake = _Handbrake;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -7203,7 +7164,6 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Slot _type_slots_RacingWheelReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RacingWheelReading) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_RacingWheelReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RacingWheelReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RacingWheelReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RacingWheelReading) },
@@ -7220,28 +7180,21 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- UINavigationReading struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Gaming::Input::UINavigationReading>* _new_UINavigationReading(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_UINavigationReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::UINavigationReading>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::UINavigationReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_UINavigationReading(winrt_struct_wrapper<winrt::Windows::Gaming::Input::UINavigationReading>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Timestamp{};
@@ -7251,7 +7204,7 @@ namespace py::cpp::Windows::Gaming::Input
         static const char* kwlist[] = {"timestamp", "required_buttons", "optional_buttons", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KII", const_cast<char**>(kwlist), &_Timestamp, &_RequiredButtons, &_OptionalButtons))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -7260,12 +7213,12 @@ namespace py::cpp::Windows::Gaming::Input
             self->obj.RequiredButtons = static_cast<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(_RequiredButtons);
             self->obj.OptionalButtons = static_cast<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(_OptionalButtons);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -7396,7 +7349,6 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Slot _type_slots_UINavigationReading[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_UINavigationReading) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_UINavigationReading) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_UINavigationReading) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_UINavigationReading) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_UINavigationReading) },

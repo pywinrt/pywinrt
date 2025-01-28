@@ -14828,28 +14828,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     // ----- TextRange struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Documents::TextRange>* _new_TextRange(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_TextRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Documents::TextRange>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Documents::TextRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_TextRange(winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Documents::TextRange>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _StartIndex{};
@@ -14858,7 +14851,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         static const char* kwlist[] = {"start_index", "length", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_StartIndex, &_Length))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -14866,12 +14859,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
             self->obj.StartIndex = _StartIndex;
             self->obj.Length = _Length;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -14982,7 +14975,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyType_Slot _type_slots_TextRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextRange) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_TextRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextRange) },

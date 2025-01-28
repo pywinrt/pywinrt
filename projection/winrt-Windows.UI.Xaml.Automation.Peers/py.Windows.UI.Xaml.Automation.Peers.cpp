@@ -25870,28 +25870,21 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RawElementProviderRuntimeId struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>* _new_RawElementProviderRuntimeId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_RawElementProviderRuntimeId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_RawElementProviderRuntimeId(winrt_struct_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _Part1{};
@@ -25900,7 +25893,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         static const char* kwlist[] = {"part1", "part2", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_Part1, &_Part2))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -25908,12 +25901,12 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
             self->obj.Part1 = _Part1;
             self->obj.Part2 = _Part2;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -26024,7 +26017,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     static PyType_Slot _type_slots_RawElementProviderRuntimeId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RawElementProviderRuntimeId) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_RawElementProviderRuntimeId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RawElementProviderRuntimeId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RawElementProviderRuntimeId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RawElementProviderRuntimeId) },

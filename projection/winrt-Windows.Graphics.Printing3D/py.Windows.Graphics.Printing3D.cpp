@@ -7363,28 +7363,21 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Printing3DBufferDescription struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>* _new_Printing3DBufferDescription(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Printing3DBufferDescription(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Printing3DBufferDescription(winrt_struct_wrapper<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _Format{};
@@ -7393,7 +7386,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         static const char* kwlist[] = {"format", "stride", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iI", const_cast<char**>(kwlist), &_Format, &_Stride))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -7401,12 +7394,12 @@ namespace py::cpp::Windows::Graphics::Printing3D
             self->obj.Format = static_cast<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>(_Format);
             self->obj.Stride = _Stride;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -7517,7 +7510,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyType_Slot _type_slots_Printing3DBufferDescription[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Printing3DBufferDescription) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Printing3DBufferDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Printing3DBufferDescription) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Printing3DBufferDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Printing3DBufferDescription) },

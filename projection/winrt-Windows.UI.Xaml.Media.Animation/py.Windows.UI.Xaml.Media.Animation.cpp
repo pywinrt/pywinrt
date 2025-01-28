@@ -27489,28 +27489,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- KeyTime struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>* _new_KeyTime(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_KeyTime(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_KeyTime(winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _TimeSpan{};
@@ -27518,19 +27511,19 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static const char* kwlist[] = {"time_span", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "O", const_cast<char**>(kwlist), &_TimeSpan))
         {
-            return -1;
+            return nullptr;
         }
 
         try
         {
             self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -27621,7 +27614,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Slot _type_slots_KeyTime[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_KeyTime) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_KeyTime) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_KeyTime) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_KeyTime) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_KeyTime) },
@@ -27638,28 +27630,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- RepeatBehavior struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>* _new_RepeatBehavior(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_RepeatBehavior(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_RepeatBehavior(winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _Count{};
@@ -27669,7 +27654,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         static const char* kwlist[] = {"count", "duration", "type", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "dOi", const_cast<char**>(kwlist), &_Count, &_Duration, &_Type))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -27678,12 +27663,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
             self->obj.Duration = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Duration);
             self->obj.Type = static_cast<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>(_Type);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -27814,7 +27799,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyType_Slot _type_slots_RepeatBehavior[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RepeatBehavior) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_RepeatBehavior) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RepeatBehavior) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RepeatBehavior) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RepeatBehavior) },

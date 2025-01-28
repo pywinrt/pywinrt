@@ -6,28 +6,21 @@ namespace py::cpp::Windows::Foundation::Numerics
 {
     // ----- Matrix3x2 struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* _new_Matrix3x2(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Matrix3x2(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         float _M11{};
@@ -40,7 +33,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         static const char* kwlist[] = {"m11", "m12", "m21", "m22", "m31", "m32", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffffff", const_cast<char**>(kwlist), &_M11, &_M12, &_M21, &_M22, &_M31, &_M32))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -52,12 +45,12 @@ namespace py::cpp::Windows::Foundation::Numerics
             self->obj.m31 = _M31;
             self->obj.m32 = _M32;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -724,7 +717,6 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Slot _type_slots_Matrix3x2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3x2) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3x2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3x2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3x2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3x2) },
@@ -773,28 +765,21 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Matrix4x4 struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* _new_Matrix4x4(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Matrix4x4(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         float _M11{};
@@ -817,7 +802,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         static const char* kwlist[] = {"m11", "m12", "m13", "m14", "m21", "m22", "m23", "m24", "m31", "m32", "m33", "m34", "m41", "m42", "m43", "m44", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffffffffffffffff", const_cast<char**>(kwlist), &_M11, &_M12, &_M13, &_M14, &_M21, &_M22, &_M23, &_M24, &_M31, &_M32, &_M33, &_M34, &_M41, &_M42, &_M43, &_M44))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -839,12 +824,12 @@ namespace py::cpp::Windows::Foundation::Numerics
             self->obj.m43 = _M43;
             self->obj.m44 = _M44;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -2255,7 +2240,6 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Slot _type_slots_Matrix4x4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix4x4) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Matrix4x4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix4x4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix4x4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix4x4) },
@@ -2319,28 +2303,21 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Plane struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* _new_Plane(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Plane(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _Normal{};
@@ -2349,7 +2326,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         static const char* kwlist[] = {"normal", "d", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Of", const_cast<char**>(kwlist), &_Normal, &_D))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -2357,12 +2334,12 @@ namespace py::cpp::Windows::Foundation::Numerics
             self->obj.normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal);
             self->obj.d = _D;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -2622,7 +2599,6 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Slot _type_slots_Plane[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Plane) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Plane) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Plane) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Plane) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Plane) },
@@ -2661,28 +2637,21 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Quaternion struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* _new_Quaternion(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Quaternion(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         float _X{};
@@ -2693,7 +2662,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         static const char* kwlist[] = {"x", "y", "z", "w", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Z, &_W))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -2703,12 +2672,12 @@ namespace py::cpp::Windows::Foundation::Numerics
             self->obj.z = _Z;
             self->obj.w = _W;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3250,7 +3219,6 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Slot _type_slots_Quaternion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Quaternion) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Quaternion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Quaternion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Quaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Quaternion) },
@@ -3298,28 +3266,21 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Rational struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::Rational>* _new_Rational(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Rational(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::Rational>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::Rational>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Rational(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::Rational>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _Numerator{};
@@ -3328,7 +3289,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         static const char* kwlist[] = {"numerator", "denominator", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_Numerator, &_Denominator))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -3336,12 +3297,12 @@ namespace py::cpp::Windows::Foundation::Numerics
             self->obj.Numerator = _Numerator;
             self->obj.Denominator = _Denominator;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3452,7 +3413,6 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Slot _type_slots_Rational[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Rational) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Rational) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rational) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Rational) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rational) },
@@ -3469,28 +3429,21 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Vector2 struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* _new_Vector2(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Vector2(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         float _X{};
@@ -3499,7 +3452,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         static const char* kwlist[] = {"x", "y", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff", const_cast<char**>(kwlist), &_X, &_Y))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -3507,12 +3460,12 @@ namespace py::cpp::Windows::Foundation::Numerics
             self->obj.x = _X;
             self->obj.y = _Y;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -4125,7 +4078,6 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Slot _type_slots_Vector2[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector2) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Vector2) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2) },
@@ -4173,28 +4125,21 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Vector3 struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* _new_Vector3(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Vector3(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         float _X{};
@@ -4204,7 +4149,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         static const char* kwlist[] = {"x", "y", "z", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "fff", const_cast<char**>(kwlist), &_X, &_Y, &_Z))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -4213,12 +4158,12 @@ namespace py::cpp::Windows::Foundation::Numerics
             self->obj.y = _Y;
             self->obj.z = _Z;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -4849,7 +4794,6 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Slot _type_slots_Vector3[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector3) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Vector3) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3) },
@@ -4898,28 +4842,21 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Vector4 struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* _new_Vector4(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Vector4(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         float _X{};
@@ -4930,7 +4867,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         static const char* kwlist[] = {"x", "y", "z", "w", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Z, &_W))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -4940,12 +4877,12 @@ namespace py::cpp::Windows::Foundation::Numerics
             self->obj.z = _Z;
             self->obj.w = _W;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -5510,7 +5447,6 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Slot _type_slots_Vector4[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Vector4) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Vector4) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4) },

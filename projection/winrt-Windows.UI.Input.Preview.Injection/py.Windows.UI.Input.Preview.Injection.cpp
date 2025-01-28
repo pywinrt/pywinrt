@@ -3022,28 +3022,21 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     // ----- InjectedInputPoint struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>* _new_InjectedInputPoint(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_InjectedInputPoint(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_InjectedInputPoint(winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _PositionX{};
@@ -3052,7 +3045,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         static const char* kwlist[] = {"position_x", "position_y", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_PositionX, &_PositionY))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -3060,12 +3053,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             self->obj.PositionX = _PositionX;
             self->obj.PositionY = _PositionY;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3176,7 +3169,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyType_Slot _type_slots_InjectedInputPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPoint) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPoint) },
@@ -3193,28 +3185,21 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     // ----- InjectedInputPointerInfo struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>* _new_InjectedInputPointerInfo(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_InjectedInputPointerInfo(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_InjectedInputPointerInfo(winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _PointerId{};
@@ -3226,7 +3211,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         static const char* kwlist[] = {"pointer_id", "pointer_options", "pixel_location", "time_offset_in_milliseconds", "performance_count", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIOIK", const_cast<char**>(kwlist), &_PointerId, &_PointerOptions, &_PixelLocation, &_TimeOffsetInMilliseconds, &_PerformanceCount))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -3237,12 +3222,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             self->obj.TimeOffsetInMilliseconds = _TimeOffsetInMilliseconds;
             self->obj.PerformanceCount = _PerformanceCount;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3413,7 +3398,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyType_Slot _type_slots_InjectedInputPointerInfo[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputPointerInfo) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputPointerInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputPointerInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputPointerInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputPointerInfo) },
@@ -3430,28 +3414,21 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     // ----- InjectedInputRectangle struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>* _new_InjectedInputRectangle(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_InjectedInputRectangle(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_InjectedInputRectangle(winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _Left{};
@@ -3462,7 +3439,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         static const char* kwlist[] = {"left", "top", "bottom", "right", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiii", const_cast<char**>(kwlist), &_Left, &_Top, &_Bottom, &_Right))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -3472,12 +3449,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             self->obj.Bottom = _Bottom;
             self->obj.Right = _Right;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3628,7 +3605,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyType_Slot _type_slots_InjectedInputRectangle[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InjectedInputRectangle) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_InjectedInputRectangle) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InjectedInputRectangle) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InjectedInputRectangle) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InjectedInputRectangle) },

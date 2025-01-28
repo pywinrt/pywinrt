@@ -5798,28 +5798,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     // ----- XamlBinaryWriterErrorInformation struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>* _new_XamlBinaryWriterErrorInformation(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_XamlBinaryWriterErrorInformation(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_XamlBinaryWriterErrorInformation(winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _InputStreamIndex{};
@@ -5829,7 +5822,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         static const char* kwlist[] = {"input_stream_index", "line_number", "line_position", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "III", const_cast<char**>(kwlist), &_InputStreamIndex, &_LineNumber, &_LinePosition))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -5838,12 +5831,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
             self->obj.LineNumber = _LineNumber;
             self->obj.LinePosition = _LinePosition;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -5974,7 +5967,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static PyType_Slot _type_slots_XamlBinaryWriterErrorInformation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XamlBinaryWriterErrorInformation) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_XamlBinaryWriterErrorInformation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlBinaryWriterErrorInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlBinaryWriterErrorInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlBinaryWriterErrorInformation) },
@@ -5991,28 +5983,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     // ----- XmlnsDefinition struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition>* _new_XmlnsDefinition(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_XmlnsDefinition(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_XmlnsDefinition(winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _XmlNamespace{};
@@ -6021,7 +6006,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         static const char* kwlist[] = {"xml_namespace", "namespace", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_XmlNamespace, &_Namespace))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -6029,12 +6014,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
             self->obj.XmlNamespace = py::convert_to<winrt::hstring>(_XmlNamespace);
             self->obj.Namespace = py::convert_to<winrt::hstring>(_Namespace);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -6145,7 +6130,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static PyType_Slot _type_slots_XmlnsDefinition[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_XmlnsDefinition) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_XmlnsDefinition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XmlnsDefinition) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_XmlnsDefinition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_XmlnsDefinition) },

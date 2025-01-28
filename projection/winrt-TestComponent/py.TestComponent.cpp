@@ -11657,28 +11657,21 @@ namespace py::cpp::TestComponent
 
     // ----- Blittable struct --------------------
 
-    winrt_struct_wrapper<winrt::TestComponent::Blittable>* _new_Blittable(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Blittable(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::Blittable>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::Blittable>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Blittable(winrt_struct_wrapper<winrt::TestComponent::Blittable>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint8_t _A{};
@@ -11695,7 +11688,7 @@ namespace py::cpp::TestComponent
         static const char* kwlist[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "BHIKhiLfdO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D, &_E, &_F, &_G, &_H, &_I, &_J))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -11711,12 +11704,12 @@ namespace py::cpp::TestComponent
             self->obj.I = _I;
             self->obj.J = py::convert_to<winrt::guid>(_J);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -11987,7 +11980,6 @@ namespace py::cpp::TestComponent
 
     static PyType_Slot _type_slots_Blittable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Blittable) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Blittable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Blittable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Blittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Blittable) },
@@ -12004,28 +11996,21 @@ namespace py::cpp::TestComponent
 
     // ----- Nested struct --------------------
 
-    winrt_struct_wrapper<winrt::TestComponent::Nested>* _new_Nested(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Nested(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::Nested>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::Nested>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Nested(winrt_struct_wrapper<winrt::TestComponent::Nested>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _Blittable{};
@@ -12034,7 +12019,7 @@ namespace py::cpp::TestComponent
         static const char* kwlist[] = {"blittable", "non_blittable", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Blittable, &_NonBlittable))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -12042,12 +12027,12 @@ namespace py::cpp::TestComponent
             self->obj.Blittable = py::convert_to<winrt::TestComponent::Blittable>(_Blittable);
             self->obj.NonBlittable = py::convert_to<winrt::TestComponent::NonBlittable>(_NonBlittable);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -12158,7 +12143,6 @@ namespace py::cpp::TestComponent
 
     static PyType_Slot _type_slots_Nested[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Nested) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Nested) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Nested) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Nested) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Nested) },
@@ -12175,28 +12159,21 @@ namespace py::cpp::TestComponent
 
     // ----- NonBlittable struct --------------------
 
-    winrt_struct_wrapper<winrt::TestComponent::NonBlittable>* _new_NonBlittable(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_NonBlittable(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::NonBlittable>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::NonBlittable>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_NonBlittable(winrt_struct_wrapper<winrt::TestComponent::NonBlittable>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int _A{};
@@ -12207,7 +12184,7 @@ namespace py::cpp::TestComponent
         static const char* kwlist[] = {"a", "b", "c", "d", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "pOOO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -12217,12 +12194,12 @@ namespace py::cpp::TestComponent
             self->obj.C = py::convert_to<winrt::hstring>(_C);
             self->obj.D = py::convert_to<winrt::Windows::Foundation::IReference<int64_t>>(_D);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -12373,7 +12350,6 @@ namespace py::cpp::TestComponent
 
     static PyType_Slot _type_slots_NonBlittable[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NonBlittable) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_NonBlittable) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NonBlittable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NonBlittable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NonBlittable) },

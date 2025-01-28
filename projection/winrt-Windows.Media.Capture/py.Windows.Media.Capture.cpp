@@ -26846,28 +26846,21 @@ namespace py::cpp::Windows::Media::Capture
 
     // ----- WhiteBalanceGain struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Media::Capture::WhiteBalanceGain>* _new_WhiteBalanceGain(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_WhiteBalanceGain(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Capture::WhiteBalanceGain>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Capture::WhiteBalanceGain>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_WhiteBalanceGain(winrt_struct_wrapper<winrt::Windows::Media::Capture::WhiteBalanceGain>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _R{};
@@ -26877,7 +26870,7 @@ namespace py::cpp::Windows::Media::Capture
         static const char* kwlist[] = {"r", "g", "b", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddd", const_cast<char**>(kwlist), &_R, &_G, &_B))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -26886,12 +26879,12 @@ namespace py::cpp::Windows::Media::Capture
             self->obj.G = _G;
             self->obj.B = _B;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -27022,7 +27015,6 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Slot _type_slots_WhiteBalanceGain[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WhiteBalanceGain) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_WhiteBalanceGain) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WhiteBalanceGain) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WhiteBalanceGain) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WhiteBalanceGain) },

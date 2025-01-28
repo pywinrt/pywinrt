@@ -42160,28 +42160,21 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     // ----- CornerRadius struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::CornerRadius>* _new_CornerRadius(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_CornerRadius(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::CornerRadius>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::CornerRadius>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_CornerRadius(winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::CornerRadius>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _TopLeft{};
@@ -42192,7 +42185,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         static const char* kwlist[] = {"top_left", "top_right", "bottom_right", "bottom_left", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddd", const_cast<char**>(kwlist), &_TopLeft, &_TopRight, &_BottomRight, &_BottomLeft))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -42202,12 +42195,12 @@ namespace py::cpp::Microsoft::UI::Xaml
             self->obj.BottomRight = _BottomRight;
             self->obj.BottomLeft = _BottomLeft;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -42358,7 +42351,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyType_Slot _type_slots_CornerRadius[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CornerRadius) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_CornerRadius) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CornerRadius) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CornerRadius) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CornerRadius) },
@@ -42375,28 +42367,21 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     // ----- Duration struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Duration>* _new_Duration(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Duration(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Duration>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Duration>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Duration(winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Duration>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _TimeSpan{};
@@ -42405,7 +42390,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         static const char* kwlist[] = {"time_span", "type", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Oi", const_cast<char**>(kwlist), &_TimeSpan, &_Type))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -42413,12 +42398,12 @@ namespace py::cpp::Microsoft::UI::Xaml
             self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan);
             self->obj.Type = static_cast<winrt::Microsoft::UI::Xaml::DurationType>(_Type);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -42529,7 +42514,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyType_Slot _type_slots_Duration[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Duration) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Duration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Duration) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Duration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Duration) },
@@ -42546,28 +42530,21 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     // ----- GridLength struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::GridLength>* _new_GridLength(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_GridLength(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::GridLength>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::GridLength>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_GridLength(winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::GridLength>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _Value{};
@@ -42576,7 +42553,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         static const char* kwlist[] = {"value", "grid_unit_type", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "di", const_cast<char**>(kwlist), &_Value, &_GridUnitType))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -42584,12 +42561,12 @@ namespace py::cpp::Microsoft::UI::Xaml
             self->obj.Value = _Value;
             self->obj.GridUnitType = static_cast<winrt::Microsoft::UI::Xaml::GridUnitType>(_GridUnitType);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -42700,7 +42677,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyType_Slot _type_slots_GridLength[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GridLength) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_GridLength) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GridLength) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GridLength) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GridLength) },
@@ -42717,28 +42693,21 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     // ----- Thickness struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Thickness>* _new_Thickness(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Thickness(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Thickness>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Thickness>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Thickness(winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Thickness>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _Left{};
@@ -42749,7 +42718,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         static const char* kwlist[] = {"left", "top", "right", "bottom", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddd", const_cast<char**>(kwlist), &_Left, &_Top, &_Right, &_Bottom))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -42759,12 +42728,12 @@ namespace py::cpp::Microsoft::UI::Xaml
             self->obj.Right = _Right;
             self->obj.Bottom = _Bottom;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -42915,7 +42884,6 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyType_Slot _type_slots_Thickness[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Thickness) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Thickness) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Thickness) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Thickness) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Thickness) },

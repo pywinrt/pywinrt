@@ -923,28 +923,21 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     // ----- PushNotificationCreateChannelStatus struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>* _new_PushNotificationCreateChannelStatus(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_PushNotificationCreateChannelStatus(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_PushNotificationCreateChannelStatus(winrt_struct_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _status{};
@@ -954,7 +947,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         static const char* kwlist[] = {"status", "extended_error", "retry_count", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iOI", const_cast<char**>(kwlist), &_status, &_extendedError, &_retryCount))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -963,12 +956,12 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
             self->obj.extendedError = py::convert_to<winrt::hresult>(_extendedError);
             self->obj.retryCount = _retryCount;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -1099,7 +1092,6 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyType_Slot _type_slots_PushNotificationCreateChannelStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PushNotificationCreateChannelStatus) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_PushNotificationCreateChannelStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PushNotificationCreateChannelStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PushNotificationCreateChannelStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PushNotificationCreateChannelStatus) },

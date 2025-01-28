@@ -1421,28 +1421,21 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     // ----- PackageDependencyContextId struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>* _new_PackageDependencyContextId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_PackageDependencyContextId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_PackageDependencyContextId(winrt_struct_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Id{};
@@ -1450,19 +1443,19 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         static const char* kwlist[] = {"id", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Id))
         {
-            return -1;
+            return nullptr;
         }
 
         try
         {
             self->obj.Id = _Id;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -1553,7 +1546,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyType_Slot _type_slots_PackageDependencyContextId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDependencyContextId) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_PackageDependencyContextId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageDependencyContextId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDependencyContextId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDependencyContextId) },

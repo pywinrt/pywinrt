@@ -10306,28 +10306,21 @@ namespace py::cpp::Windows::ApplicationModel
 
     // ----- PackageInstallProgress struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageInstallProgress>* _new_PackageInstallProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_PackageInstallProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageInstallProgress>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageInstallProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_PackageInstallProgress(winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageInstallProgress>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _PercentComplete{};
@@ -10335,19 +10328,19 @@ namespace py::cpp::Windows::ApplicationModel
         static const char* kwlist[] = {"percent_complete", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "I", const_cast<char**>(kwlist), &_PercentComplete))
         {
-            return -1;
+            return nullptr;
         }
 
         try
         {
             self->obj.PercentComplete = _PercentComplete;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -10438,7 +10431,6 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Slot _type_slots_PackageInstallProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageInstallProgress) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_PackageInstallProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageInstallProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageInstallProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageInstallProgress) },
@@ -10455,28 +10447,21 @@ namespace py::cpp::Windows::ApplicationModel
 
     // ----- PackageVersion struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageVersion>* _new_PackageVersion(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_PackageVersion(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageVersion>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageVersion>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_PackageVersion(winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageVersion>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint16_t _Major{};
@@ -10487,7 +10472,7 @@ namespace py::cpp::Windows::ApplicationModel
         static const char* kwlist[] = {"major", "minor", "build", "revision", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "HHHH", const_cast<char**>(kwlist), &_Major, &_Minor, &_Build, &_Revision))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -10497,12 +10482,12 @@ namespace py::cpp::Windows::ApplicationModel
             self->obj.Build = _Build;
             self->obj.Revision = _Revision;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -10653,7 +10638,6 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Slot _type_slots_PackageVersion[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageVersion) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_PackageVersion) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageVersion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageVersion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageVersion) },
