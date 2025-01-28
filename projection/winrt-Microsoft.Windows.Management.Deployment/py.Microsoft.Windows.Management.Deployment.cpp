@@ -7870,28 +7870,21 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     // ----- PackageDeploymentProgress struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>* _new_PackageDeploymentProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_PackageDeploymentProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_PackageDeploymentProgress(winrt_struct_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _Status{};
@@ -7900,7 +7893,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         static const char* kwlist[] = {"status", "progress", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "id", const_cast<char**>(kwlist), &_Status, &_Progress))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -7908,12 +7901,12 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
             self->obj.Status = static_cast<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>(_Status);
             self->obj.Progress = _Progress;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -8024,7 +8017,6 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyType_Slot _type_slots_PackageDeploymentProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PackageDeploymentProgress) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_PackageDeploymentProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PackageDeploymentProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PackageDeploymentProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PackageDeploymentProgress) },

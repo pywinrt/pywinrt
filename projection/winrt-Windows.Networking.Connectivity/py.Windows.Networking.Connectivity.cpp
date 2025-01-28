@@ -6308,28 +6308,21 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkUsageStates struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsageStates>* _new_NetworkUsageStates(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_NetworkUsageStates(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsageStates>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsageStates>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_NetworkUsageStates(winrt_struct_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsageStates>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _Roaming{};
@@ -6338,7 +6331,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         static const char* kwlist[] = {"roaming", "shared", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_Roaming, &_Shared))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -6346,12 +6339,12 @@ namespace py::cpp::Windows::Networking::Connectivity
             self->obj.Roaming = static_cast<winrt::Windows::Networking::Connectivity::TriStates>(_Roaming);
             self->obj.Shared = static_cast<winrt::Windows::Networking::Connectivity::TriStates>(_Shared);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -6462,7 +6455,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyType_Slot _type_slots_NetworkUsageStates[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_NetworkUsageStates) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_NetworkUsageStates) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkUsageStates) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkUsageStates) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkUsageStates) },

@@ -8863,28 +8863,21 @@ namespace py::cpp::Windows::Services::Store
 
     // ----- StorePackageUpdateStatus struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Services::Store::StorePackageUpdateStatus>* _new_StorePackageUpdateStatus(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_StorePackageUpdateStatus(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Services::Store::StorePackageUpdateStatus>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Services::Store::StorePackageUpdateStatus>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_StorePackageUpdateStatus(winrt_struct_wrapper<winrt::Windows::Services::Store::StorePackageUpdateStatus>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _PackageFamilyName{};
@@ -8897,7 +8890,7 @@ namespace py::cpp::Windows::Services::Store
         static const char* kwlist[] = {"package_family_name", "package_download_size_in_bytes", "package_bytes_downloaded", "package_download_progress", "total_download_progress", "package_update_state", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OKKddi", const_cast<char**>(kwlist), &_PackageFamilyName, &_PackageDownloadSizeInBytes, &_PackageBytesDownloaded, &_PackageDownloadProgress, &_TotalDownloadProgress, &_PackageUpdateState))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -8909,12 +8902,12 @@ namespace py::cpp::Windows::Services::Store
             self->obj.TotalDownloadProgress = _TotalDownloadProgress;
             self->obj.PackageUpdateState = static_cast<winrt::Windows::Services::Store::StorePackageUpdateState>(_PackageUpdateState);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -9105,7 +9098,6 @@ namespace py::cpp::Windows::Services::Store
 
     static PyType_Slot _type_slots_StorePackageUpdateStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_StorePackageUpdateStatus) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_StorePackageUpdateStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_StorePackageUpdateStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_StorePackageUpdateStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_StorePackageUpdateStatus) },

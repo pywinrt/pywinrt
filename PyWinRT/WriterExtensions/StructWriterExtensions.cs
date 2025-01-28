@@ -49,7 +49,7 @@ static class StructWriterExtensions
         }
 
         w.WriteLine(
-            $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType))} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> None: ..."
+            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType))} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> {type.Name}: ..."
         );
 
         if (type.Type.IsCustomNumeric())
@@ -115,35 +115,25 @@ static class StructWriterExtensions
     {
         w.WriteBlankLine();
         w.WriteLine(
-            $"winrt_struct_wrapper<{type.CppWinrtType}>* _new_{type.Name}(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept"
+            $"PyObject* _new_{type.Name}(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept"
         );
         w.WriteBlock(() =>
         {
-            w.WriteLine(
-                $"auto self = reinterpret_cast<winrt_struct_wrapper<{type.CppWinrtType}>*>(subclass->tp_alloc(subclass, 0));"
-            );
-            w.WriteBlankLine();
-            w.WriteLine("if (!self)");
+            w.WriteLine($"pyobj_handle self_obj{{(subclass->tp_alloc(subclass, 0))}};");
+
+            w.WriteLine("if (!self_obj)");
             w.WriteBlock(() => w.WriteLine("return nullptr;"));
             w.WriteBlankLine();
+            w.WriteLine(
+                $"auto self = reinterpret_cast<winrt_struct_wrapper<{type.CppWinrtType}>*>(self_obj.get());"
+            );
             w.WriteLine("std::construct_at(&self->obj);");
             w.WriteBlankLine();
-            w.WriteLine("return self;");
-        });
-
-        w.WriteBlankLine();
-        w.WriteLine(
-            $"int _init_{type.Name}(winrt_struct_wrapper<{type.CppWinrtType}>* self, PyObject* args, PyObject* kwds) noexcept"
-        );
-        w.WriteBlock(() =>
-        {
             w.WriteLine("auto tuple_size = PyTuple_Size(args);");
-            w.WriteBlankLine();
             w.WriteLine("if ((tuple_size == 0) && (!kwds))");
             w.WriteBlock(() =>
             {
-                w.WriteLine("self->obj = {};");
-                w.WriteLine("return 0;");
+                w.WriteLine("return self_obj.detach();");
             });
             w.WriteBlankLine();
 
@@ -159,22 +149,19 @@ static class StructWriterExtensions
             w.WriteLine(
                 $"if (!PyArg_ParseTupleAndKeywords(args, kwds, \"{type.Type.ToStructFieldFormat()}\", const_cast<char**>(kwlist){type.Type.ToStructFieldParseParameterList()}))"
             );
-            w.WriteBlock(() => w.WriteLine("return -1;"));
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
             w.WriteBlankLine();
-            w.WriteTryCatch(
-                () =>
+            w.WriteTryCatch(() =>
+            {
+                foreach (var field in type.Type.Fields)
                 {
-                    foreach (var field in type.Type.Fields)
-                    {
-                        w.WriteLine(
-                            $"self->obj.{field.ToWinrtFieldName()} = {field.ToStructFieldInitializer()};"
-                        );
-                    }
-                    w.WriteBlankLine();
-                    w.WriteLine("return 0;");
-                },
-                catchReturn: "-1"
-            );
+                    w.WriteLine(
+                        $"self->obj.{field.ToWinrtFieldName()} = {field.ToStructFieldInitializer()};"
+                    );
+                }
+                w.WriteBlankLine();
+                w.WriteLine("return self_obj.detach();");
+            });
         });
     }
 

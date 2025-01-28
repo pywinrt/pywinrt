@@ -14480,28 +14480,21 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- BandwidthStatistics struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Networking::Sockets::BandwidthStatistics>* _new_BandwidthStatistics(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_BandwidthStatistics(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Sockets::BandwidthStatistics>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Sockets::BandwidthStatistics>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_BandwidthStatistics(winrt_struct_wrapper<winrt::Windows::Networking::Sockets::BandwidthStatistics>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _OutboundBitsPerSecond{};
@@ -14514,7 +14507,7 @@ namespace py::cpp::Windows::Networking::Sockets
         static const char* kwlist[] = {"outbound_bits_per_second", "inbound_bits_per_second", "outbound_bits_per_second_instability", "inbound_bits_per_second_instability", "outbound_bandwidth_peaked", "inbound_bandwidth_peaked", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKKKpp", const_cast<char**>(kwlist), &_OutboundBitsPerSecond, &_InboundBitsPerSecond, &_OutboundBitsPerSecondInstability, &_InboundBitsPerSecondInstability, &_OutboundBandwidthPeaked, &_InboundBandwidthPeaked))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -14526,12 +14519,12 @@ namespace py::cpp::Windows::Networking::Sockets
             self->obj.OutboundBandwidthPeaked = _OutboundBandwidthPeaked;
             self->obj.InboundBandwidthPeaked = _InboundBandwidthPeaked;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -14722,7 +14715,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyType_Slot _type_slots_BandwidthStatistics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BandwidthStatistics) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_BandwidthStatistics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BandwidthStatistics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BandwidthStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BandwidthStatistics) },
@@ -14739,28 +14731,21 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- RoundTripTimeStatistics struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>* _new_RoundTripTimeStatistics(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_RoundTripTimeStatistics(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_RoundTripTimeStatistics(winrt_struct_wrapper<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _Variance{};
@@ -14771,7 +14756,7 @@ namespace py::cpp::Windows::Networking::Sockets
         static const char* kwlist[] = {"variance", "max", "min", "sum", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIII", const_cast<char**>(kwlist), &_Variance, &_Max, &_Min, &_Sum))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -14781,12 +14766,12 @@ namespace py::cpp::Windows::Networking::Sockets
             self->obj.Min = _Min;
             self->obj.Sum = _Sum;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -14937,7 +14922,6 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyType_Slot _type_slots_RoundTripTimeStatistics[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_RoundTripTimeStatistics) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_RoundTripTimeStatistics) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RoundTripTimeStatistics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_RoundTripTimeStatistics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RoundTripTimeStatistics) },

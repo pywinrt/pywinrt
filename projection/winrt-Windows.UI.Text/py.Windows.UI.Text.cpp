@@ -21480,28 +21480,21 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- FontWeight struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Text::FontWeight>* _new_FontWeight(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_FontWeight(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Text::FontWeight>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Text::FontWeight>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_FontWeight(winrt_struct_wrapper<winrt::Windows::UI::Text::FontWeight>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint16_t _Weight{};
@@ -21509,19 +21502,19 @@ namespace py::cpp::Windows::UI::Text
         static const char* kwlist[] = {"weight", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "H", const_cast<char**>(kwlist), &_Weight))
         {
-            return -1;
+            return nullptr;
         }
 
         try
         {
             self->obj.Weight = _Weight;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -21612,7 +21605,6 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Slot _type_slots_FontWeight[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_FontWeight) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_FontWeight) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FontWeight) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_FontWeight) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_FontWeight) },

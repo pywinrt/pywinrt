@@ -2922,28 +2922,21 @@ namespace py::cpp::Windows::Data::Text
 
     // ----- TextSegment struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>* _new_TextSegment(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_TextSegment(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_TextSegment(winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _StartPosition{};
@@ -2952,7 +2945,7 @@ namespace py::cpp::Windows::Data::Text
         static const char* kwlist[] = {"start_position", "length", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_StartPosition, &_Length))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -2960,12 +2953,12 @@ namespace py::cpp::Windows::Data::Text
             self->obj.StartPosition = _StartPosition;
             self->obj.Length = _Length;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3076,7 +3069,6 @@ namespace py::cpp::Windows::Data::Text
 
     static PyType_Slot _type_slots_TextSegment[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextSegment) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_TextSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextSegment) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TextSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextSegment) },

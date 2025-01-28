@@ -38613,28 +38613,21 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- InkTrailPoint struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Composition::InkTrailPoint>* _new_InkTrailPoint(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_InkTrailPoint(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Composition::InkTrailPoint>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Composition::InkTrailPoint>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_InkTrailPoint(winrt_struct_wrapper<winrt::Windows::UI::Composition::InkTrailPoint>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _Point{};
@@ -38643,7 +38636,7 @@ namespace py::cpp::Windows::UI::Composition
         static const char* kwlist[] = {"point", "radius", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Of", const_cast<char**>(kwlist), &_Point, &_Radius))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -38651,12 +38644,12 @@ namespace py::cpp::Windows::UI::Composition
             self->obj.Point = py::convert_to<winrt::Windows::Foundation::Point>(_Point);
             self->obj.Radius = _Radius;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -38767,7 +38760,6 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Slot _type_slots_InkTrailPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_InkTrailPoint) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_InkTrailPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_InkTrailPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_InkTrailPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_InkTrailPoint) },

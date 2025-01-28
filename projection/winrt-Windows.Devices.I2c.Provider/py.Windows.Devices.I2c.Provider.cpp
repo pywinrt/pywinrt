@@ -1405,28 +1405,21 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     // ----- ProviderI2cTransferResult struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>* _new_ProviderI2cTransferResult(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_ProviderI2cTransferResult(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_ProviderI2cTransferResult(winrt_struct_wrapper<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _Status{};
@@ -1435,7 +1428,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         static const char* kwlist[] = {"status", "bytes_transferred", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iI", const_cast<char**>(kwlist), &_Status, &_BytesTransferred))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -1443,12 +1436,12 @@ namespace py::cpp::Windows::Devices::I2c::Provider
             self->obj.Status = static_cast<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferStatus>(_Status);
             self->obj.BytesTransferred = _BytesTransferred;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -1559,7 +1552,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyType_Slot _type_slots_ProviderI2cTransferResult[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProviderI2cTransferResult) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_ProviderI2cTransferResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProviderI2cTransferResult) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ProviderI2cTransferResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProviderI2cTransferResult) },

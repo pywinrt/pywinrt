@@ -9837,28 +9837,21 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpProgress struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>* _new_HttpProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_HttpProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_HttpProgress(winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _Stage{};
@@ -9871,7 +9864,7 @@ namespace py::cpp::Windows::Web::Http
         static const char* kwlist[] = {"stage", "bytes_sent", "total_bytes_to_send", "bytes_received", "total_bytes_to_receive", "retries", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iKOKOI", const_cast<char**>(kwlist), &_Stage, &_BytesSent, &_TotalBytesToSend, &_BytesReceived, &_TotalBytesToReceive, &_Retries))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -9883,12 +9876,12 @@ namespace py::cpp::Windows::Web::Http
             self->obj.TotalBytesToReceive = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(_TotalBytesToReceive);
             self->obj.Retries = _Retries;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -10079,7 +10072,6 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Slot _type_slots_HttpProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HttpProgress) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_HttpProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HttpProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HttpProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HttpProgress) },

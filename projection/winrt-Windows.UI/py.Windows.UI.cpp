@@ -4791,28 +4791,21 @@ namespace py::cpp::Windows::UI
 
     // ----- Color struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Color>* _new_Color(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Color(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Color>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Color>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Color(winrt_struct_wrapper<winrt::Windows::UI::Color>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint8_t _A{};
@@ -4823,7 +4816,7 @@ namespace py::cpp::Windows::UI
         static const char* kwlist[] = {"a", "r", "g", "b", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "BBBB", const_cast<char**>(kwlist), &_A, &_R, &_G, &_B))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -4833,12 +4826,12 @@ namespace py::cpp::Windows::UI
             self->obj.G = _G;
             self->obj.B = _B;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -4989,7 +4982,6 @@ namespace py::cpp::Windows::UI
 
     static PyType_Slot _type_slots_Color[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Color) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Color) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Color) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Color) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Color) },
@@ -5006,28 +4998,21 @@ namespace py::cpp::Windows::UI
 
     // ----- WindowId struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::WindowId>* _new_WindowId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_WindowId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::WindowId>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::WindowId>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_WindowId(winrt_struct_wrapper<winrt::Windows::UI::WindowId>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Value{};
@@ -5035,19 +5020,19 @@ namespace py::cpp::Windows::UI
         static const char* kwlist[] = {"value", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Value))
         {
-            return -1;
+            return nullptr;
         }
 
         try
         {
             self->obj.Value = _Value;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -5138,7 +5123,6 @@ namespace py::cpp::Windows::UI
 
     static PyType_Slot _type_slots_WindowId[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_WindowId) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_WindowId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowId) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowId) },

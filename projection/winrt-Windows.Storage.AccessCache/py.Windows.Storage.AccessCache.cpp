@@ -3676,28 +3676,21 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- AccessListEntry struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>* _new_AccessListEntry(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_AccessListEntry(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_AccessListEntry(winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _Token{};
@@ -3706,7 +3699,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         static const char* kwlist[] = {"token", "metadata", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Token, &_Metadata))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -3714,12 +3707,12 @@ namespace py::cpp::Windows::Storage::AccessCache
             self->obj.Token = py::convert_to<winrt::hstring>(_Token);
             self->obj.Metadata = py::convert_to<winrt::hstring>(_Metadata);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -3830,7 +3823,6 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyType_Slot _type_slots_AccessListEntry[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_AccessListEntry) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_AccessListEntry) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AccessListEntry) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_AccessListEntry) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AccessListEntry) },

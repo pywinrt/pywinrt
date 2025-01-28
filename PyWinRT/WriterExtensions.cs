@@ -208,11 +208,6 @@ static class WriterExtensions
         w.Indent++;
         w.WriteLine($"{{ Py_tp_new, reinterpret_cast<void*>(_new_{name}) }},");
 
-        if (type.Category == Category.Struct)
-        {
-            w.WriteLine($"{{ Py_tp_init, reinterpret_cast<void*>(_init_{name}) }},");
-        }
-
         if (!type.IsStatic)
         {
             w.WriteLine($"{{ Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_{name}) }},");

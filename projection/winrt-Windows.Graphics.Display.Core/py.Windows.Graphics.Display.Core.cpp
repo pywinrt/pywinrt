@@ -900,28 +900,21 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     // ----- HdmiDisplayHdr2086Metadata struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>* _new_HdmiDisplayHdr2086Metadata(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_HdmiDisplayHdr2086Metadata(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_HdmiDisplayHdr2086Metadata(winrt_struct_wrapper<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint16_t _RedPrimaryX{};
@@ -940,7 +933,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
         static const char* kwlist[] = {"red_primary_x", "red_primary_y", "green_primary_x", "green_primary_y", "blue_primary_x", "blue_primary_y", "white_point_x", "white_point_y", "max_mastering_luminance", "min_mastering_luminance", "max_content_light_level", "max_frame_average_light_level", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "HHHHHHHHHHHH", const_cast<char**>(kwlist), &_RedPrimaryX, &_RedPrimaryY, &_GreenPrimaryX, &_GreenPrimaryY, &_BluePrimaryX, &_BluePrimaryY, &_WhitePointX, &_WhitePointY, &_MaxMasteringLuminance, &_MinMasteringLuminance, &_MaxContentLightLevel, &_MaxFrameAverageLightLevel))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -958,12 +951,12 @@ namespace py::cpp::Windows::Graphics::Display::Core
             self->obj.MaxContentLightLevel = _MaxContentLightLevel;
             self->obj.MaxFrameAverageLightLevel = _MaxFrameAverageLightLevel;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -1274,7 +1267,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyType_Slot _type_slots_HdmiDisplayHdr2086Metadata[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_HdmiDisplayHdr2086Metadata) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_HdmiDisplayHdr2086Metadata) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HdmiDisplayHdr2086Metadata) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_HdmiDisplayHdr2086Metadata) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HdmiDisplayHdr2086Metadata) },

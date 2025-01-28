@@ -14645,28 +14645,21 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- CrossSlideThresholds struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>* _new_CrossSlideThresholds(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_CrossSlideThresholds(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_CrossSlideThresholds(winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         float _SelectionStart{};
@@ -14677,7 +14670,7 @@ namespace py::cpp::Windows::UI::Input
         static const char* kwlist[] = {"selection_start", "speed_bump_start", "speed_bump_end", "rearrange_start", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffff", const_cast<char**>(kwlist), &_SelectionStart, &_SpeedBumpStart, &_SpeedBumpEnd, &_RearrangeStart))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -14687,12 +14680,12 @@ namespace py::cpp::Windows::UI::Input
             self->obj.SpeedBumpEnd = _SpeedBumpEnd;
             self->obj.RearrangeStart = _RearrangeStart;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -14843,7 +14836,6 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Slot _type_slots_CrossSlideThresholds[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CrossSlideThresholds) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_CrossSlideThresholds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CrossSlideThresholds) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CrossSlideThresholds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CrossSlideThresholds) },
@@ -14860,28 +14852,21 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationDelta struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationDelta>* _new_ManipulationDelta(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_ManipulationDelta(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationDelta>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationDelta>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_ManipulationDelta(winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationDelta>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _Translation{};
@@ -14892,7 +14877,7 @@ namespace py::cpp::Windows::UI::Input
         static const char* kwlist[] = {"translation", "scale", "rotation", "expansion", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Offf", const_cast<char**>(kwlist), &_Translation, &_Scale, &_Rotation, &_Expansion))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -14902,12 +14887,12 @@ namespace py::cpp::Windows::UI::Input
             self->obj.Rotation = _Rotation;
             self->obj.Expansion = _Expansion;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -15058,7 +15043,6 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Slot _type_slots_ManipulationDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationDelta) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationDelta) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationDelta) },
@@ -15075,28 +15059,21 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationVelocities struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationVelocities>* _new_ManipulationVelocities(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_ManipulationVelocities(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationVelocities>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationVelocities>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_ManipulationVelocities(winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationVelocities>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _Linear{};
@@ -15106,7 +15083,7 @@ namespace py::cpp::Windows::UI::Input
         static const char* kwlist[] = {"linear", "angular", "expansion", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Off", const_cast<char**>(kwlist), &_Linear, &_Angular, &_Expansion))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -15115,12 +15092,12 @@ namespace py::cpp::Windows::UI::Input
             self->obj.Angular = _Angular;
             self->obj.Expansion = _Expansion;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -15251,7 +15228,6 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Slot _type_slots_ManipulationVelocities[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ManipulationVelocities) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_ManipulationVelocities) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ManipulationVelocities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ManipulationVelocities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ManipulationVelocities) },

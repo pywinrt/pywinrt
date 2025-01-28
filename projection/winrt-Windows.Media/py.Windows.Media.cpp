@@ -10324,28 +10324,21 @@ namespace py::cpp::Windows::Media
 
     // ----- MediaTimeRange struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Media::MediaTimeRange>* _new_MediaTimeRange(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_MediaTimeRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::MediaTimeRange>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::MediaTimeRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_MediaTimeRange(winrt_struct_wrapper<winrt::Windows::Media::MediaTimeRange>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _Start{};
@@ -10354,7 +10347,7 @@ namespace py::cpp::Windows::Media
         static const char* kwlist[] = {"start", "end", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Start, &_End))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -10362,12 +10355,12 @@ namespace py::cpp::Windows::Media
             self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start);
             self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -10478,7 +10471,6 @@ namespace py::cpp::Windows::Media
 
     static PyType_Slot _type_slots_MediaTimeRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MediaTimeRange) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_MediaTimeRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MediaTimeRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MediaTimeRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MediaTimeRange) },

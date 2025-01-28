@@ -2485,28 +2485,21 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- MouseDelta struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Devices::Input::MouseDelta>* _new_MouseDelta(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_MouseDelta(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Input::MouseDelta>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Input::MouseDelta>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_MouseDelta(winrt_struct_wrapper<winrt::Windows::Devices::Input::MouseDelta>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _X{};
@@ -2515,7 +2508,7 @@ namespace py::cpp::Windows::Devices::Input
         static const char* kwlist[] = {"x", "y", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_X, &_Y))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -2523,12 +2516,12 @@ namespace py::cpp::Windows::Devices::Input
             self->obj.X = _X;
             self->obj.Y = _Y;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -2639,7 +2632,6 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Slot _type_slots_MouseDelta[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MouseDelta) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_MouseDelta) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MouseDelta) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MouseDelta) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MouseDelta) },
@@ -2656,28 +2648,21 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PointerDeviceUsage struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Devices::Input::PointerDeviceUsage>* _new_PointerDeviceUsage(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_PointerDeviceUsage(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Input::PointerDeviceUsage>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Input::PointerDeviceUsage>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_PointerDeviceUsage(winrt_struct_wrapper<winrt::Windows::Devices::Input::PointerDeviceUsage>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _UsagePage{};
@@ -2692,7 +2677,7 @@ namespace py::cpp::Windows::Devices::Input
         static const char* kwlist[] = {"usage_page", "usage", "min_logical", "max_logical", "min_physical", "max_physical", "unit", "physical_multiplier", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIiiiiIf", const_cast<char**>(kwlist), &_UsagePage, &_Usage, &_MinLogical, &_MaxLogical, &_MinPhysical, &_MaxPhysical, &_Unit, &_PhysicalMultiplier))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -2706,12 +2691,12 @@ namespace py::cpp::Windows::Devices::Input
             self->obj.Unit = _Unit;
             self->obj.PhysicalMultiplier = _PhysicalMultiplier;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -2942,7 +2927,6 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyType_Slot _type_slots_PointerDeviceUsage[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointerDeviceUsage) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_PointerDeviceUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointerDeviceUsage) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_PointerDeviceUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointerDeviceUsage) },

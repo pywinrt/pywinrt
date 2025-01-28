@@ -26665,28 +26665,21 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MseTimeRange struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Media::Core::MseTimeRange>* _new_MseTimeRange(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_MseTimeRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::MseTimeRange>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::MseTimeRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_MseTimeRange(winrt_struct_wrapper<winrt::Windows::Media::Core::MseTimeRange>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _Start{};
@@ -26695,7 +26688,7 @@ namespace py::cpp::Windows::Media::Core
         static const char* kwlist[] = {"start", "end", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Start, &_End))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -26703,12 +26696,12 @@ namespace py::cpp::Windows::Media::Core
             self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start);
             self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -26819,7 +26812,6 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Slot _type_slots_MseTimeRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_MseTimeRange) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_MseTimeRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MseTimeRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_MseTimeRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_MseTimeRange) },
@@ -26836,28 +26828,21 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextDouble struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextDouble>* _new_TimedTextDouble(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_TimedTextDouble(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextDouble>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextDouble>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_TimedTextDouble(winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextDouble>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _Value{};
@@ -26866,7 +26851,7 @@ namespace py::cpp::Windows::Media::Core
         static const char* kwlist[] = {"value", "unit", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "di", const_cast<char**>(kwlist), &_Value, &_Unit))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -26874,12 +26859,12 @@ namespace py::cpp::Windows::Media::Core
             self->obj.Value = _Value;
             self->obj.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -26990,7 +26975,6 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Slot _type_slots_TimedTextDouble[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextDouble) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextDouble) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextDouble) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextDouble) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextDouble) },
@@ -27007,28 +26991,21 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextPadding struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPadding>* _new_TimedTextPadding(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_TimedTextPadding(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPadding>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPadding>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_TimedTextPadding(winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPadding>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _Before{};
@@ -27040,7 +27017,7 @@ namespace py::cpp::Windows::Media::Core
         static const char* kwlist[] = {"before", "after", "start", "end", "unit", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddddi", const_cast<char**>(kwlist), &_Before, &_After, &_Start, &_End, &_Unit))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -27051,12 +27028,12 @@ namespace py::cpp::Windows::Media::Core
             self->obj.End = _End;
             self->obj.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -27227,7 +27204,6 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Slot _type_slots_TimedTextPadding[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextPadding) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextPadding) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextPadding) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextPadding) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPadding) },
@@ -27244,28 +27220,21 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextPoint struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPoint>* _new_TimedTextPoint(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_TimedTextPoint(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPoint>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPoint>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_TimedTextPoint(winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPoint>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _X{};
@@ -27275,7 +27244,7 @@ namespace py::cpp::Windows::Media::Core
         static const char* kwlist[] = {"x", "y", "unit", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddi", const_cast<char**>(kwlist), &_X, &_Y, &_Unit))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -27284,12 +27253,12 @@ namespace py::cpp::Windows::Media::Core
             self->obj.Y = _Y;
             self->obj.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -27420,7 +27389,6 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Slot _type_slots_TimedTextPoint[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextPoint) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextPoint) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextPoint) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextPoint) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextPoint) },
@@ -27437,28 +27405,21 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextSize struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextSize>* _new_TimedTextSize(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_TimedTextSize(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextSize>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextSize>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_TimedTextSize(winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextSize>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _Height{};
@@ -27468,7 +27429,7 @@ namespace py::cpp::Windows::Media::Core
         static const char* kwlist[] = {"height", "width", "unit", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddi", const_cast<char**>(kwlist), &_Height, &_Width, &_Unit))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -27477,12 +27438,12 @@ namespace py::cpp::Windows::Media::Core
             self->obj.Width = _Width;
             self->obj.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -27613,7 +27574,6 @@ namespace py::cpp::Windows::Media::Core
 
     static PyType_Slot _type_slots_TimedTextSize[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_TimedTextSize) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_TimedTextSize) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimedTextSize) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_TimedTextSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TimedTextSize) },

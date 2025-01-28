@@ -37424,28 +37424,21 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- SizeUInt32 struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>* _new_SizeUInt32(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_SizeUInt32(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_SizeUInt32(winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _Width{};
@@ -37454,7 +37447,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         static const char* kwlist[] = {"width", "height", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_Width, &_Height))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -37462,12 +37455,12 @@ namespace py::cpp::Windows::Devices::PointOfService
             self->obj.Width = _Width;
             self->obj.Height = _Height;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -37578,7 +37571,6 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Slot _type_slots_SizeUInt32[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SizeUInt32) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_SizeUInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SizeUInt32) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SizeUInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeUInt32) },

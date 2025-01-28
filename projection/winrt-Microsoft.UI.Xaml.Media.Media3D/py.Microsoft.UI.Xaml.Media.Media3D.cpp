@@ -2197,28 +2197,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     // ----- Matrix3D struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>* _new_Matrix3D(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_Matrix3D(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_Matrix3D(winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         double _M11{};
@@ -2241,7 +2234,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         static const char* kwlist[] = {"m11", "m12", "m13", "m14", "m21", "m22", "m23", "m24", "m31", "m32", "m33", "m34", "offset_x", "offset_y", "offset_z", "m44", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddddddddddddddd", const_cast<char**>(kwlist), &_M11, &_M12, &_M13, &_M14, &_M21, &_M22, &_M23, &_M24, &_M31, &_M32, &_M33, &_M34, &_OffsetX, &_OffsetY, &_OffsetZ, &_M44))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -2263,12 +2256,12 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
             self->obj.OffsetZ = _OffsetZ;
             self->obj.M44 = _M44;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -2659,7 +2652,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     static PyType_Slot _type_slots_Matrix3D[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix3D) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_Matrix3D) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3D) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3D) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3D) },

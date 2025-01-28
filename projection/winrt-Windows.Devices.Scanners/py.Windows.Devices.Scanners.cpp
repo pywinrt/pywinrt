@@ -6190,28 +6190,21 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- ImageScannerResolution struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>* _new_ImageScannerResolution(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_ImageScannerResolution(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_ImageScannerResolution(winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         float _DpiX{};
@@ -6220,7 +6213,7 @@ namespace py::cpp::Windows::Devices::Scanners
         static const char* kwlist[] = {"dpi_x", "dpi_y", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff", const_cast<char**>(kwlist), &_DpiX, &_DpiY))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -6228,12 +6221,12 @@ namespace py::cpp::Windows::Devices::Scanners
             self->obj.DpiX = _DpiX;
             self->obj.DpiY = _DpiY;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -6344,7 +6337,6 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Slot _type_slots_ImageScannerResolution[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_ImageScannerResolution) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_ImageScannerResolution) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ImageScannerResolution) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ImageScannerResolution) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ImageScannerResolution) },

@@ -2141,28 +2141,21 @@ namespace py::cpp::Windows::Devices::Gpio
 
     // ----- GpioChangeCount struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeCount>* _new_GpioChangeCount(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_GpioChangeCount(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeCount>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeCount>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_GpioChangeCount(winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeCount>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Count{};
@@ -2171,7 +2164,7 @@ namespace py::cpp::Windows::Devices::Gpio
         static const char* kwlist[] = {"count", "relative_time", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KO", const_cast<char**>(kwlist), &_Count, &_RelativeTime))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -2179,12 +2172,12 @@ namespace py::cpp::Windows::Devices::Gpio
             self->obj.Count = _Count;
             self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -2295,7 +2288,6 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Slot _type_slots_GpioChangeCount[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeCount) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_GpioChangeCount) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeCount) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeCount) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeCount) },
@@ -2312,28 +2304,21 @@ namespace py::cpp::Windows::Devices::Gpio
 
     // ----- GpioChangeRecord struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeRecord>* _new_GpioChangeRecord(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_GpioChangeRecord(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeRecord>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeRecord>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_GpioChangeRecord(winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeRecord>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         PyObject* _RelativeTime{};
@@ -2342,7 +2327,7 @@ namespace py::cpp::Windows::Devices::Gpio
         static const char* kwlist[] = {"relative_time", "edge", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Oi", const_cast<char**>(kwlist), &_RelativeTime, &_Edge))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -2350,12 +2335,12 @@ namespace py::cpp::Windows::Devices::Gpio
             self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime);
             self->obj.Edge = static_cast<winrt::Windows::Devices::Gpio::GpioPinEdge>(_Edge);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -2466,7 +2451,6 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyType_Slot _type_slots_GpioChangeRecord[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_GpioChangeRecord) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_GpioChangeRecord) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GpioChangeRecord) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_GpioChangeRecord) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GpioChangeRecord) },

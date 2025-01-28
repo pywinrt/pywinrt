@@ -12950,28 +12950,21 @@ namespace py::cpp::Windows::Devices::Sms
 
     // ----- SmsEncodedLength struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Devices::Sms::SmsEncodedLength>* _new_SmsEncodedLength(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_SmsEncodedLength(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Sms::SmsEncodedLength>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Sms::SmsEncodedLength>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_SmsEncodedLength(winrt_struct_wrapper<winrt::Windows::Devices::Sms::SmsEncodedLength>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _SegmentCount{};
@@ -12983,7 +12976,7 @@ namespace py::cpp::Windows::Devices::Sms
         static const char* kwlist[] = {"segment_count", "character_count_last_segment", "characters_per_segment", "byte_count_last_segment", "bytes_per_segment", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIIII", const_cast<char**>(kwlist), &_SegmentCount, &_CharacterCountLastSegment, &_CharactersPerSegment, &_ByteCountLastSegment, &_BytesPerSegment))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -12994,12 +12987,12 @@ namespace py::cpp::Windows::Devices::Sms
             self->obj.ByteCountLastSegment = _ByteCountLastSegment;
             self->obj.BytesPerSegment = _BytesPerSegment;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -13170,7 +13163,6 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyType_Slot _type_slots_SmsEncodedLength[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_SmsEncodedLength) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_SmsEncodedLength) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SmsEncodedLength) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_SmsEncodedLength) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SmsEncodedLength) },

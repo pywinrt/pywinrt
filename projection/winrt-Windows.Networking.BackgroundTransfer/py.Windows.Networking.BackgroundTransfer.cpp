@@ -7725,28 +7725,21 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundDownloadProgress struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>* _new_BackgroundDownloadProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_BackgroundDownloadProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_BackgroundDownloadProgress(winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _BytesReceived{};
@@ -7758,7 +7751,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         static const char* kwlist[] = {"bytes_received", "total_bytes_to_receive", "status", "has_response_changed", "has_restarted", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKipp", const_cast<char**>(kwlist), &_BytesReceived, &_TotalBytesToReceive, &_Status, &_HasResponseChanged, &_HasRestarted))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -7769,12 +7762,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             self->obj.HasResponseChanged = _HasResponseChanged;
             self->obj.HasRestarted = _HasRestarted;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -7945,7 +7938,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Slot _type_slots_BackgroundDownloadProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundDownloadProgress) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundDownloadProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundDownloadProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundDownloadProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundDownloadProgress) },
@@ -7962,28 +7954,21 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundTransferFileRange struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>* _new_BackgroundTransferFileRange(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_BackgroundTransferFileRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_BackgroundTransferFileRange(winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _Offset{};
@@ -7992,7 +7977,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         static const char* kwlist[] = {"offset", "length", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KK", const_cast<char**>(kwlist), &_Offset, &_Length))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -8000,12 +7985,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             self->obj.Offset = _Offset;
             self->obj.Length = _Length;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -8116,7 +8101,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Slot _type_slots_BackgroundTransferFileRange[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundTransferFileRange) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundTransferFileRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundTransferFileRange) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundTransferFileRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundTransferFileRange) },
@@ -8133,28 +8117,21 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundUploadProgress struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>* _new_BackgroundUploadProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_BackgroundUploadProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_BackgroundUploadProgress(winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint64_t _BytesReceived{};
@@ -8168,7 +8145,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         static const char* kwlist[] = {"bytes_received", "bytes_sent", "total_bytes_to_receive", "total_bytes_to_send", "status", "has_response_changed", "has_restarted", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKKKipp", const_cast<char**>(kwlist), &_BytesReceived, &_BytesSent, &_TotalBytesToReceive, &_TotalBytesToSend, &_Status, &_HasResponseChanged, &_HasRestarted))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -8181,12 +8158,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             self->obj.HasResponseChanged = _HasResponseChanged;
             self->obj.HasRestarted = _HasRestarted;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -8397,7 +8374,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Slot _type_slots_BackgroundUploadProgress[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_BackgroundUploadProgress) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_BackgroundUploadProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BackgroundUploadProgress) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_BackgroundUploadProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BackgroundUploadProgress) },

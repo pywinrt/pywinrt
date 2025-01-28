@@ -21592,28 +21592,21 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     // ----- CoreWebView2PhysicalKeyStatus struct --------------------
 
-    winrt_struct_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>* _new_CoreWebView2PhysicalKeyStatus(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_CoreWebView2PhysicalKeyStatus(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_CoreWebView2PhysicalKeyStatus(winrt_struct_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _RepeatCount{};
@@ -21626,7 +21619,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         static const char* kwlist[] = {"repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIiiii", const_cast<char**>(kwlist), &_RepeatCount, &_ScanCode, &_IsExtendedKey, &_IsMenuKeyDown, &_WasKeyDown, &_IsKeyReleased))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -21638,12 +21631,12 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             self->obj.WasKeyDown = _WasKeyDown;
             self->obj.IsKeyReleased = _IsKeyReleased;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -21834,7 +21827,6 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyType_Slot _type_slots_CoreWebView2PhysicalKeyStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreWebView2PhysicalKeyStatus) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_CoreWebView2PhysicalKeyStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreWebView2PhysicalKeyStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreWebView2PhysicalKeyStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreWebView2PhysicalKeyStatus) },

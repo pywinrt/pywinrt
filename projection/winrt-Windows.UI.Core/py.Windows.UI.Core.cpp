@@ -18830,28 +18830,21 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CorePhysicalKeyStatus struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Core::CorePhysicalKeyStatus>* _new_CorePhysicalKeyStatus(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_CorePhysicalKeyStatus(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Core::CorePhysicalKeyStatus>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Core::CorePhysicalKeyStatus>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_CorePhysicalKeyStatus(winrt_struct_wrapper<winrt::Windows::UI::Core::CorePhysicalKeyStatus>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         uint32_t _RepeatCount{};
@@ -18864,7 +18857,7 @@ namespace py::cpp::Windows::UI::Core
         static const char* kwlist[] = {"repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIpppp", const_cast<char**>(kwlist), &_RepeatCount, &_ScanCode, &_IsExtendedKey, &_IsMenuKeyDown, &_WasKeyDown, &_IsKeyReleased))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -18876,12 +18869,12 @@ namespace py::cpp::Windows::UI::Core
             self->obj.WasKeyDown = _WasKeyDown;
             self->obj.IsKeyReleased = _IsKeyReleased;
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -19072,7 +19065,6 @@ namespace py::cpp::Windows::UI::Core
 
     static PyType_Slot _type_slots_CorePhysicalKeyStatus[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CorePhysicalKeyStatus) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_CorePhysicalKeyStatus) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CorePhysicalKeyStatus) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CorePhysicalKeyStatus) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CorePhysicalKeyStatus) },
@@ -19089,28 +19081,21 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreProximityEvaluation struct --------------------
 
-    winrt_struct_wrapper<winrt::Windows::UI::Core::CoreProximityEvaluation>* _new_CoreProximityEvaluation(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    PyObject* _new_CoreProximityEvaluation(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
-        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Core::CoreProximityEvaluation>*>(subclass->tp_alloc(subclass, 0));
-
-        if (!self)
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
         {
             return nullptr;
         }
 
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Core::CoreProximityEvaluation>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        return self;
-    }
-
-    int _init_CoreProximityEvaluation(winrt_struct_wrapper<winrt::Windows::UI::Core::CoreProximityEvaluation>* self, PyObject* args, PyObject* kwds) noexcept
-    {
         auto tuple_size = PyTuple_Size(args);
-
         if ((tuple_size == 0) && (!kwds))
         {
-            self->obj = {};
-            return 0;
+            return self_obj.detach();
         }
 
         int32_t _Score{};
@@ -19119,7 +19104,7 @@ namespace py::cpp::Windows::UI::Core
         static const char* kwlist[] = {"score", "adjusted_point", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iO", const_cast<char**>(kwlist), &_Score, &_AdjustedPoint))
         {
-            return -1;
+            return nullptr;
         }
 
         try
@@ -19127,12 +19112,12 @@ namespace py::cpp::Windows::UI::Core
             self->obj.Score = _Score;
             self->obj.AdjustedPoint = py::convert_to<winrt::Windows::Foundation::Point>(_AdjustedPoint);
 
-            return 0;
+            return self_obj.detach();
         }
         catch (...)
         {
             py::to_PyErr();
-            return -1;
+            return nullptr;
         }
     }
 
@@ -19243,7 +19228,6 @@ namespace py::cpp::Windows::UI::Core
 
     static PyType_Slot _type_slots_CoreProximityEvaluation[] = {
         { Py_tp_new, reinterpret_cast<void*>(_new_CoreProximityEvaluation) },
-        { Py_tp_init, reinterpret_cast<void*>(_init_CoreProximityEvaluation) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CoreProximityEvaluation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_CoreProximityEvaluation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_CoreProximityEvaluation) },
