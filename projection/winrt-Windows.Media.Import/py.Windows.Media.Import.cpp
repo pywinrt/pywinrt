@@ -5341,7 +5341,7 @@ namespace py::cpp::Windows::Media::Import
         double _ImportProgress{};
 
         static const char* kwlist[] = {"items_imported", "total_items_to_import", "bytes_imported", "total_bytes_to_import", "import_progress", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIKKd", const_cast<char**>(kwlist), &_ItemsImported, &_TotalItemsToImport, &_BytesImported, &_TotalBytesToImport, &_ImportProgress))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIKKd", const_cast<char**>(kwlist), &_ItemsImported, &_TotalItemsToImport, &_BytesImported, &_TotalBytesToImport, &_ImportProgress))
         {
             return nullptr;
         }

@@ -931,7 +931,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
         uint16_t _MaxFrameAverageLightLevel{};
 
         static const char* kwlist[] = {"red_primary_x", "red_primary_y", "green_primary_x", "green_primary_y", "blue_primary_x", "blue_primary_y", "white_point_x", "white_point_y", "max_mastering_luminance", "min_mastering_luminance", "max_content_light_level", "max_frame_average_light_level", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "HHHHHHHHHHHH", const_cast<char**>(kwlist), &_RedPrimaryX, &_RedPrimaryY, &_GreenPrimaryX, &_GreenPrimaryY, &_BluePrimaryX, &_BluePrimaryY, &_WhitePointX, &_WhitePointY, &_MaxMasteringLuminance, &_MinMasteringLuminance, &_MaxContentLightLevel, &_MaxFrameAverageLightLevel))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|HHHHHHHHHHHH", const_cast<char**>(kwlist), &_RedPrimaryX, &_RedPrimaryY, &_GreenPrimaryX, &_GreenPrimaryY, &_BluePrimaryX, &_BluePrimaryY, &_WhitePointX, &_WhitePointY, &_MaxMasteringLuminance, &_MinMasteringLuminance, &_MaxContentLightLevel, &_MaxFrameAverageLightLevel))
         {
             return nullptr;
         }

@@ -38634,14 +38634,14 @@ namespace py::cpp::Windows::UI::Composition
         float _Radius{};
 
         static const char* kwlist[] = {"point", "radius", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Of", const_cast<char**>(kwlist), &_Point, &_Radius))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Of", const_cast<char**>(kwlist), &_Point, &_Radius))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Point = py::convert_to<winrt::Windows::Foundation::Point>(_Point);
+            self->obj.Point = _Point ? py::convert_to<winrt::Windows::Foundation::Point>(_Point) : winrt::Windows::Foundation::Point{};
             self->obj.Radius = _Radius;
 
             return self_obj.detach();

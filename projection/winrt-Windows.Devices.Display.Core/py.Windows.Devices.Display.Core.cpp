@@ -7955,14 +7955,14 @@ namespace py::cpp::Windows::Devices::Display::Core
         int32_t _VerticalSyncsPerPresentation{};
 
         static const char* kwlist[] = {"vertical_sync_rate", "vertical_syncs_per_presentation", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Oi", const_cast<char**>(kwlist), &_VerticalSyncRate, &_VerticalSyncsPerPresentation))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Oi", const_cast<char**>(kwlist), &_VerticalSyncRate, &_VerticalSyncsPerPresentation))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.VerticalSyncRate = py::convert_to<winrt::Windows::Foundation::Numerics::Rational>(_VerticalSyncRate);
+            self->obj.VerticalSyncRate = _VerticalSyncRate ? py::convert_to<winrt::Windows::Foundation::Numerics::Rational>(_VerticalSyncRate) : winrt::Windows::Foundation::Numerics::Rational{};
             self->obj.VerticalSyncsPerPresentation = _VerticalSyncsPerPresentation;
 
             return self_obj.detach();

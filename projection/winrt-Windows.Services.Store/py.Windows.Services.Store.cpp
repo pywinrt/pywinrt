@@ -8888,14 +8888,14 @@ namespace py::cpp::Windows::Services::Store
         int32_t _PackageUpdateState{};
 
         static const char* kwlist[] = {"package_family_name", "package_download_size_in_bytes", "package_bytes_downloaded", "package_download_progress", "total_download_progress", "package_update_state", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OKKddi", const_cast<char**>(kwlist), &_PackageFamilyName, &_PackageDownloadSizeInBytes, &_PackageBytesDownloaded, &_PackageDownloadProgress, &_TotalDownloadProgress, &_PackageUpdateState))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OKKddi", const_cast<char**>(kwlist), &_PackageFamilyName, &_PackageDownloadSizeInBytes, &_PackageBytesDownloaded, &_PackageDownloadProgress, &_TotalDownloadProgress, &_PackageUpdateState))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.PackageFamilyName = py::convert_to<winrt::hstring>(_PackageFamilyName);
+            self->obj.PackageFamilyName = _PackageFamilyName ? py::convert_to<winrt::hstring>(_PackageFamilyName) : winrt::hstring{};
             self->obj.PackageDownloadSizeInBytes = _PackageDownloadSizeInBytes;
             self->obj.PackageBytesDownloaded = _PackageBytesDownloaded;
             self->obj.PackageDownloadProgress = _PackageDownloadProgress;

@@ -5634,7 +5634,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         int32_t _Checksum{};
 
         static const char* kwlist[] = {"major_version", "minor_version", "resource_subtree_count", "named_resource_count", "checksum", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIIIi", const_cast<char**>(kwlist), &_MajorVersion, &_MinorVersion, &_ResourceSubtreeCount, &_NamedResourceCount, &_Checksum))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIIIi", const_cast<char**>(kwlist), &_MajorVersion, &_MinorVersion, &_ResourceSubtreeCount, &_NamedResourceCount, &_Checksum))
         {
             return nullptr;
         }

@@ -27509,14 +27509,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         PyObject* _TimeSpan{};
 
         static const char* kwlist[] = {"time_span", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "O", const_cast<char**>(kwlist), &_TimeSpan))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|O", const_cast<char**>(kwlist), &_TimeSpan))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan);
+            self->obj.TimeSpan = _TimeSpan ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan) : winrt::Windows::Foundation::TimeSpan{};
 
             return self_obj.detach();
         }
@@ -27652,7 +27652,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         int32_t _Type{};
 
         static const char* kwlist[] = {"count", "duration", "type", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "dOi", const_cast<char**>(kwlist), &_Count, &_Duration, &_Type))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dOi", const_cast<char**>(kwlist), &_Count, &_Duration, &_Type))
         {
             return nullptr;
         }
@@ -27660,7 +27660,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         try
         {
             self->obj.Count = _Count;
-            self->obj.Duration = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Duration);
+            self->obj.Duration = _Duration ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Duration) : winrt::Windows::Foundation::TimeSpan{};
             self->obj.Type = static_cast<winrt::Microsoft::UI::Xaml::Media::Animation::RepeatBehaviorType>(_Type);
 
             return self_obj.detach();

@@ -42183,7 +42183,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         double _BottomLeft{};
 
         static const char* kwlist[] = {"top_left", "top_right", "bottom_right", "bottom_left", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddd", const_cast<char**>(kwlist), &_TopLeft, &_TopRight, &_BottomRight, &_BottomLeft))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dddd", const_cast<char**>(kwlist), &_TopLeft, &_TopRight, &_BottomRight, &_BottomLeft))
         {
             return nullptr;
         }
@@ -42388,14 +42388,14 @@ namespace py::cpp::Microsoft::UI::Xaml
         int32_t _Type{};
 
         static const char* kwlist[] = {"time_span", "type", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Oi", const_cast<char**>(kwlist), &_TimeSpan, &_Type))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Oi", const_cast<char**>(kwlist), &_TimeSpan, &_Type))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan);
+            self->obj.TimeSpan = _TimeSpan ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan) : winrt::Windows::Foundation::TimeSpan{};
             self->obj.Type = static_cast<winrt::Microsoft::UI::Xaml::DurationType>(_Type);
 
             return self_obj.detach();
@@ -42551,7 +42551,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         int32_t _GridUnitType{};
 
         static const char* kwlist[] = {"value", "grid_unit_type", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "di", const_cast<char**>(kwlist), &_Value, &_GridUnitType))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|di", const_cast<char**>(kwlist), &_Value, &_GridUnitType))
         {
             return nullptr;
         }
@@ -42716,7 +42716,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         double _Bottom{};
 
         static const char* kwlist[] = {"left", "top", "right", "bottom", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddd", const_cast<char**>(kwlist), &_Left, &_Top, &_Right, &_Bottom))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dddd", const_cast<char**>(kwlist), &_Left, &_Top, &_Right, &_Bottom))
         {
             return nullptr;
         }

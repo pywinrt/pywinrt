@@ -6281,15 +6281,15 @@ namespace py::cpp::Windows::Graphics::Printing
         uint32_t _DpiY{};
 
         static const char* kwlist[] = {"page_size", "imageable_rect", "dpi_x", "dpi_y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OOII", const_cast<char**>(kwlist), &_PageSize, &_ImageableRect, &_DpiX, &_DpiY))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OOII", const_cast<char**>(kwlist), &_PageSize, &_ImageableRect, &_DpiX, &_DpiY))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.PageSize = py::convert_to<winrt::Windows::Foundation::Size>(_PageSize);
-            self->obj.ImageableRect = py::convert_to<winrt::Windows::Foundation::Rect>(_ImageableRect);
+            self->obj.PageSize = _PageSize ? py::convert_to<winrt::Windows::Foundation::Size>(_PageSize) : winrt::Windows::Foundation::Size{};
+            self->obj.ImageableRect = _ImageableRect ? py::convert_to<winrt::Windows::Foundation::Rect>(_ImageableRect) : winrt::Windows::Foundation::Rect{};
             self->obj.DpiX = _DpiX;
             self->obj.DpiY = _DpiY;
 

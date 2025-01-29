@@ -147,7 +147,7 @@ static class TypeExtensions
 
     public static string ToStructFieldFormat(this TypeDefinition type)
     {
-        var sb = new StringBuilder();
+        var sb = new StringBuilder("|");
 
         foreach (var field in type.Fields)
         {
@@ -213,7 +213,7 @@ static class TypeExtensions
                 => gen.ElementType.FullName switch
                 {
                     "Windows.Foundation.IReference`1"
-                        => $"py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name})",
+                        => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {field.FieldType.ToCppTypeName()}{{}}",
                     _ => throw new NotImplementedException(),
                 },
             { FullName: "System.Boolean" }
@@ -231,13 +231,14 @@ static class TypeExtensions
             { FullName: "System.Char" }
             or { FullName: "System.String" }
             or { FullName: "System.Guid" }
-                => $"py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name})",
+                => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {field.FieldType.ToCppTypeName()}{{}}",
             { IsValueType: true }
                 => field.FieldType.Resolve() switch
                 {
                     { IsEnum: true }
                         => $"static_cast<{field.FieldType.ToCppTypeName()}>(_{field.Name})",
-                    _ => $"py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name})"
+                    _
+                        => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {field.FieldType.ToCppTypeName()}{{}}"
                 },
             _ => throw new NotImplementedException(),
         };

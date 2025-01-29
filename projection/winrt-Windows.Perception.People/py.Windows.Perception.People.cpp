@@ -1203,15 +1203,15 @@ namespace py::cpp::Windows::Perception::People
         PyObject* _Normal{};
 
         static const char* kwlist[] = {"position", "normal", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Position, &_Normal))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_Position, &_Normal))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Position);
-            self->obj.Normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal);
+            self->obj.Position = _Position ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Position) : winrt::Windows::Foundation::Numerics::float3{};
+            self->obj.Normal = _Normal ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal) : winrt::Windows::Foundation::Numerics::float3{};
 
             return self_obj.detach();
         }
@@ -1368,15 +1368,15 @@ namespace py::cpp::Windows::Perception::People
         int32_t _Accuracy{};
 
         static const char* kwlist[] = {"orientation", "position", "radius", "accuracy", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OOfi", const_cast<char**>(kwlist), &_Orientation, &_Position, &_Radius, &_Accuracy))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OOfi", const_cast<char**>(kwlist), &_Orientation, &_Position, &_Radius, &_Accuracy))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Orientation = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(_Orientation);
-            self->obj.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Position);
+            self->obj.Orientation = _Orientation ? py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(_Orientation) : winrt::Windows::Foundation::Numerics::quaternion{};
+            self->obj.Position = _Position ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Position) : winrt::Windows::Foundation::Numerics::float3{};
             self->obj.Radius = _Radius;
             self->obj.Accuracy = static_cast<winrt::Windows::Perception::People::JointPoseAccuracy>(_Accuracy);
 

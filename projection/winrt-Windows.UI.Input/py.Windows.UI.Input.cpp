@@ -14668,7 +14668,7 @@ namespace py::cpp::Windows::UI::Input
         float _RearrangeStart{};
 
         static const char* kwlist[] = {"selection_start", "speed_bump_start", "speed_bump_end", "rearrange_start", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffff", const_cast<char**>(kwlist), &_SelectionStart, &_SpeedBumpStart, &_SpeedBumpEnd, &_RearrangeStart))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ffff", const_cast<char**>(kwlist), &_SelectionStart, &_SpeedBumpStart, &_SpeedBumpEnd, &_RearrangeStart))
         {
             return nullptr;
         }
@@ -14875,14 +14875,14 @@ namespace py::cpp::Windows::UI::Input
         float _Expansion{};
 
         static const char* kwlist[] = {"translation", "scale", "rotation", "expansion", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Offf", const_cast<char**>(kwlist), &_Translation, &_Scale, &_Rotation, &_Expansion))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Offf", const_cast<char**>(kwlist), &_Translation, &_Scale, &_Rotation, &_Expansion))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Translation = py::convert_to<winrt::Windows::Foundation::Point>(_Translation);
+            self->obj.Translation = _Translation ? py::convert_to<winrt::Windows::Foundation::Point>(_Translation) : winrt::Windows::Foundation::Point{};
             self->obj.Scale = _Scale;
             self->obj.Rotation = _Rotation;
             self->obj.Expansion = _Expansion;
@@ -15081,14 +15081,14 @@ namespace py::cpp::Windows::UI::Input
         float _Expansion{};
 
         static const char* kwlist[] = {"linear", "angular", "expansion", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Off", const_cast<char**>(kwlist), &_Linear, &_Angular, &_Expansion))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Off", const_cast<char**>(kwlist), &_Linear, &_Angular, &_Expansion))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Linear = py::convert_to<winrt::Windows::Foundation::Point>(_Linear);
+            self->obj.Linear = _Linear ? py::convert_to<winrt::Windows::Foundation::Point>(_Linear) : winrt::Windows::Foundation::Point{};
             self->obj.Angular = _Angular;
             self->obj.Expansion = _Expansion;
 

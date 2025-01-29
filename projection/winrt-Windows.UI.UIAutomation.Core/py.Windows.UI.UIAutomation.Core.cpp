@@ -2261,7 +2261,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         int32_t _LocalId{};
 
         static const char* kwlist[] = {"local_id", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "i", const_cast<char**>(kwlist), &_LocalId))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|i", const_cast<char**>(kwlist), &_LocalId))
         {
             return nullptr;
         }
@@ -2402,7 +2402,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         int32_t _Value{};
 
         static const char* kwlist[] = {"value", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "i", const_cast<char**>(kwlist), &_Value))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|i", const_cast<char**>(kwlist), &_Value))
         {
             return nullptr;
         }

@@ -11383,7 +11383,7 @@ namespace py::cpp::Windows::Management::Deployment
         uint32_t _percentage{};
 
         static const char* kwlist[] = {"state", "percentage", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iI", const_cast<char**>(kwlist), &_state, &_percentage))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iI", const_cast<char**>(kwlist), &_state, &_percentage))
         {
             return nullptr;
         }

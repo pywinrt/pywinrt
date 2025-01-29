@@ -3485,14 +3485,14 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         int32_t _Kind{};
 
         static const char* kwlist[] = {"name", "kind", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Oi", const_cast<char**>(kwlist), &_Name, &_Kind))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Oi", const_cast<char**>(kwlist), &_Name, &_Kind))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Name = py::convert_to<winrt::hstring>(_Name);
+            self->obj.Name = _Name ? py::convert_to<winrt::hstring>(_Name) : winrt::hstring{};
             self->obj.Kind = static_cast<winrt::Windows::UI::Xaml::Interop::TypeKind>(_Kind);
 
             return self_obj.detach();

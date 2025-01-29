@@ -2506,7 +2506,7 @@ namespace py::cpp::Windows::Devices::Input
         int32_t _Y{};
 
         static const char* kwlist[] = {"x", "y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_X, &_Y))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_X, &_Y))
         {
             return nullptr;
         }
@@ -2675,7 +2675,7 @@ namespace py::cpp::Windows::Devices::Input
         float _PhysicalMultiplier{};
 
         static const char* kwlist[] = {"usage_page", "usage", "min_logical", "max_logical", "min_physical", "max_physical", "unit", "physical_multiplier", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIiiiiIf", const_cast<char**>(kwlist), &_UsagePage, &_Usage, &_MinLogical, &_MaxLogical, &_MinPhysical, &_MaxPhysical, &_Unit, &_PhysicalMultiplier))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIiiiiIf", const_cast<char**>(kwlist), &_UsagePage, &_Usage, &_MinLogical, &_MaxLogical, &_MinPhysical, &_MaxPhysical, &_Unit, &_PhysicalMultiplier))
         {
             return nullptr;
         }

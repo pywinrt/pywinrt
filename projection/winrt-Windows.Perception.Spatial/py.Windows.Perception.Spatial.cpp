@@ -4937,15 +4937,15 @@ namespace py::cpp::Windows::Perception::Spatial
         PyObject* _Extents{};
 
         static const char* kwlist[] = {"center", "extents", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Center, &_Extents))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_Center, &_Extents))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center);
-            self->obj.Extents = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Extents);
+            self->obj.Center = _Center ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center) : winrt::Windows::Foundation::Numerics::float3{};
+            self->obj.Extents = _Extents ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Extents) : winrt::Windows::Foundation::Numerics::float3{};
 
             return self_obj.detach();
         }
@@ -5104,19 +5104,19 @@ namespace py::cpp::Windows::Perception::Spatial
         PyObject* _Bottom{};
 
         static const char* kwlist[] = {"near", "far", "right", "left", "top", "bottom", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OOOOOO", const_cast<char**>(kwlist), &_Near, &_Far, &_Right, &_Left, &_Top, &_Bottom))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OOOOOO", const_cast<char**>(kwlist), &_Near, &_Far, &_Right, &_Left, &_Top, &_Bottom))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Near = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Near);
-            self->obj.Far = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Far);
-            self->obj.Right = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Right);
-            self->obj.Left = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Left);
-            self->obj.Top = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Top);
-            self->obj.Bottom = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Bottom);
+            self->obj.Near = _Near ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Near) : winrt::Windows::Foundation::Numerics::plane{};
+            self->obj.Far = _Far ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Far) : winrt::Windows::Foundation::Numerics::plane{};
+            self->obj.Right = _Right ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Right) : winrt::Windows::Foundation::Numerics::plane{};
+            self->obj.Left = _Left ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Left) : winrt::Windows::Foundation::Numerics::plane{};
+            self->obj.Top = _Top ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Top) : winrt::Windows::Foundation::Numerics::plane{};
+            self->obj.Bottom = _Bottom ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Bottom) : winrt::Windows::Foundation::Numerics::plane{};
 
             return self_obj.detach();
         }
@@ -5352,16 +5352,16 @@ namespace py::cpp::Windows::Perception::Spatial
         PyObject* _Orientation{};
 
         static const char* kwlist[] = {"center", "extents", "orientation", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OOO", const_cast<char**>(kwlist), &_Center, &_Extents, &_Orientation))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OOO", const_cast<char**>(kwlist), &_Center, &_Extents, &_Orientation))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center);
-            self->obj.Extents = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Extents);
-            self->obj.Orientation = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(_Orientation);
+            self->obj.Center = _Center ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center) : winrt::Windows::Foundation::Numerics::float3{};
+            self->obj.Extents = _Extents ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Extents) : winrt::Windows::Foundation::Numerics::float3{};
+            self->obj.Orientation = _Orientation ? py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(_Orientation) : winrt::Windows::Foundation::Numerics::quaternion{};
 
             return self_obj.detach();
         }
@@ -5536,14 +5536,14 @@ namespace py::cpp::Windows::Perception::Spatial
         float _Radius{};
 
         static const char* kwlist[] = {"center", "radius", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Of", const_cast<char**>(kwlist), &_Center, &_Radius))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Of", const_cast<char**>(kwlist), &_Center, &_Radius))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center);
+            self->obj.Center = _Center ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center) : winrt::Windows::Foundation::Numerics::float3{};
             self->obj.Radius = _Radius;
 
             return self_obj.detach();
@@ -5699,15 +5699,15 @@ namespace py::cpp::Windows::Perception::Spatial
         PyObject* _Direction{};
 
         static const char* kwlist[] = {"origin", "direction", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Origin, &_Direction))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_Origin, &_Direction))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Origin = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Origin);
-            self->obj.Direction = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Direction);
+            self->obj.Origin = _Origin ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Origin) : winrt::Windows::Foundation::Numerics::float3{};
+            self->obj.Direction = _Direction ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Direction) : winrt::Windows::Foundation::Numerics::float3{};
 
             return self_obj.detach();
         }

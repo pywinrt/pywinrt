@@ -31388,7 +31388,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         int32_t _Offset{};
 
         static const char* kwlist[] = {"index", "offset", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_Index, &_Offset))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_Index, &_Offset))
         {
             return nullptr;
         }

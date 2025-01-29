@@ -4317,7 +4317,7 @@ namespace py::cpp::Windows::Graphics::Display
         float _StepSizeNits{};
 
         static const char* kwlist[] = {"min_nits", "max_nits", "step_size_nits", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "fff", const_cast<char**>(kwlist), &_MinNits, &_MaxNits, &_StepSizeNits))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|fff", const_cast<char**>(kwlist), &_MinNits, &_MaxNits, &_StepSizeNits))
         {
             return nullptr;
         }

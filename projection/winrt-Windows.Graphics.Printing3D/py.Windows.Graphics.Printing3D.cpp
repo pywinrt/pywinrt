@@ -7384,7 +7384,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         uint32_t _Stride{};
 
         static const char* kwlist[] = {"format", "stride", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iI", const_cast<char**>(kwlist), &_Format, &_Stride))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iI", const_cast<char**>(kwlist), &_Format, &_Stride))
         {
             return nullptr;
         }

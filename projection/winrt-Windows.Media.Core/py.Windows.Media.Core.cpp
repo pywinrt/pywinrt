@@ -26686,15 +26686,15 @@ namespace py::cpp::Windows::Media::Core
         PyObject* _End{};
 
         static const char* kwlist[] = {"start", "end", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Start, &_End))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_Start, &_End))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start);
-            self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End);
+            self->obj.Start = _Start ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start) : winrt::Windows::Foundation::TimeSpan{};
+            self->obj.End = _End ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End) : winrt::Windows::Foundation::TimeSpan{};
 
             return self_obj.detach();
         }
@@ -26849,7 +26849,7 @@ namespace py::cpp::Windows::Media::Core
         int32_t _Unit{};
 
         static const char* kwlist[] = {"value", "unit", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "di", const_cast<char**>(kwlist), &_Value, &_Unit))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|di", const_cast<char**>(kwlist), &_Value, &_Unit))
         {
             return nullptr;
         }
@@ -27015,7 +27015,7 @@ namespace py::cpp::Windows::Media::Core
         int32_t _Unit{};
 
         static const char* kwlist[] = {"before", "after", "start", "end", "unit", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddddi", const_cast<char**>(kwlist), &_Before, &_After, &_Start, &_End, &_Unit))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ddddi", const_cast<char**>(kwlist), &_Before, &_After, &_Start, &_End, &_Unit))
         {
             return nullptr;
         }
@@ -27242,7 +27242,7 @@ namespace py::cpp::Windows::Media::Core
         int32_t _Unit{};
 
         static const char* kwlist[] = {"x", "y", "unit", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddi", const_cast<char**>(kwlist), &_X, &_Y, &_Unit))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ddi", const_cast<char**>(kwlist), &_X, &_Y, &_Unit))
         {
             return nullptr;
         }
@@ -27427,7 +27427,7 @@ namespace py::cpp::Windows::Media::Core
         int32_t _Unit{};
 
         static const char* kwlist[] = {"height", "width", "unit", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddi", const_cast<char**>(kwlist), &_Height, &_Width, &_Unit))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ddi", const_cast<char**>(kwlist), &_Height, &_Width, &_Unit))
         {
             return nullptr;
         }

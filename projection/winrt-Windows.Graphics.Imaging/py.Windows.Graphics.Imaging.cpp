@@ -8672,7 +8672,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         uint32_t _Height{};
 
         static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIII", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIII", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
         {
             return nullptr;
         }
@@ -8879,7 +8879,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         int32_t _Stride{};
 
         static const char* kwlist[] = {"start_index", "width", "height", "stride", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiii", const_cast<char**>(kwlist), &_StartIndex, &_Width, &_Height, &_Stride))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iiii", const_cast<char**>(kwlist), &_StartIndex, &_Width, &_Height, &_Stride))
         {
             return nullptr;
         }
@@ -9084,7 +9084,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         uint32_t _Height{};
 
         static const char* kwlist[] = {"width", "height", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_Width, &_Height))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|II", const_cast<char**>(kwlist), &_Width, &_Height))
         {
             return nullptr;
         }

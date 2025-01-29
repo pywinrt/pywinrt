@@ -31,7 +31,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         float _M32{};
 
         static const char* kwlist[] = {"m11", "m12", "m21", "m22", "m31", "m32", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffffff", const_cast<char**>(kwlist), &_M11, &_M12, &_M21, &_M22, &_M31, &_M32))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ffffff", const_cast<char**>(kwlist), &_M11, &_M12, &_M21, &_M22, &_M31, &_M32))
         {
             return nullptr;
         }
@@ -800,7 +800,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         float _M44{};
 
         static const char* kwlist[] = {"m11", "m12", "m13", "m14", "m21", "m22", "m23", "m24", "m31", "m32", "m33", "m34", "m41", "m42", "m43", "m44", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffffffffffffffff", const_cast<char**>(kwlist), &_M11, &_M12, &_M13, &_M14, &_M21, &_M22, &_M23, &_M24, &_M31, &_M32, &_M33, &_M34, &_M41, &_M42, &_M43, &_M44))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ffffffffffffffff", const_cast<char**>(kwlist), &_M11, &_M12, &_M13, &_M14, &_M21, &_M22, &_M23, &_M24, &_M31, &_M32, &_M33, &_M34, &_M41, &_M42, &_M43, &_M44))
         {
             return nullptr;
         }
@@ -2324,14 +2324,14 @@ namespace py::cpp::Windows::Foundation::Numerics
         float _D{};
 
         static const char* kwlist[] = {"normal", "d", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Of", const_cast<char**>(kwlist), &_Normal, &_D))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Of", const_cast<char**>(kwlist), &_Normal, &_D))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal);
+            self->obj.normal = _Normal ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal) : winrt::Windows::Foundation::Numerics::float3{};
             self->obj.d = _D;
 
             return self_obj.detach();
@@ -2660,7 +2660,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         float _W{};
 
         static const char* kwlist[] = {"x", "y", "z", "w", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Z, &_W))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Z, &_W))
         {
             return nullptr;
         }
@@ -3287,7 +3287,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         uint32_t _Denominator{};
 
         static const char* kwlist[] = {"numerator", "denominator", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_Numerator, &_Denominator))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|II", const_cast<char**>(kwlist), &_Numerator, &_Denominator))
         {
             return nullptr;
         }
@@ -3450,7 +3450,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         float _Y{};
 
         static const char* kwlist[] = {"x", "y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff", const_cast<char**>(kwlist), &_X, &_Y))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ff", const_cast<char**>(kwlist), &_X, &_Y))
         {
             return nullptr;
         }
@@ -4147,7 +4147,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         float _Z{};
 
         static const char* kwlist[] = {"x", "y", "z", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "fff", const_cast<char**>(kwlist), &_X, &_Y, &_Z))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|fff", const_cast<char**>(kwlist), &_X, &_Y, &_Z))
         {
             return nullptr;
         }
@@ -4865,7 +4865,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         float _W{};
 
         static const char* kwlist[] = {"x", "y", "z", "w", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Z, &_W))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Z, &_W))
         {
             return nullptr;
         }

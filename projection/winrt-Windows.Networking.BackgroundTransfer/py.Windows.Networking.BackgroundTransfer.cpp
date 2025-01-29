@@ -7749,7 +7749,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         int _HasRestarted{};
 
         static const char* kwlist[] = {"bytes_received", "total_bytes_to_receive", "status", "has_response_changed", "has_restarted", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKipp", const_cast<char**>(kwlist), &_BytesReceived, &_TotalBytesToReceive, &_Status, &_HasResponseChanged, &_HasRestarted))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KKipp", const_cast<char**>(kwlist), &_BytesReceived, &_TotalBytesToReceive, &_Status, &_HasResponseChanged, &_HasRestarted))
         {
             return nullptr;
         }
@@ -7975,7 +7975,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         uint64_t _Length{};
 
         static const char* kwlist[] = {"offset", "length", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KK", const_cast<char**>(kwlist), &_Offset, &_Length))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KK", const_cast<char**>(kwlist), &_Offset, &_Length))
         {
             return nullptr;
         }
@@ -8143,7 +8143,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         int _HasRestarted{};
 
         static const char* kwlist[] = {"bytes_received", "bytes_sent", "total_bytes_to_receive", "total_bytes_to_send", "status", "has_response_changed", "has_restarted", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKKKipp", const_cast<char**>(kwlist), &_BytesReceived, &_BytesSent, &_TotalBytesToReceive, &_TotalBytesToSend, &_Status, &_HasResponseChanged, &_HasRestarted))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KKKKipp", const_cast<char**>(kwlist), &_BytesReceived, &_BytesSent, &_TotalBytesToReceive, &_TotalBytesToSend, &_Status, &_HasResponseChanged, &_HasRestarted))
         {
             return nullptr;
         }

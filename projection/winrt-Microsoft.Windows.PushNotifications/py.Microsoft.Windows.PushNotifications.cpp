@@ -945,7 +945,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         uint32_t _retryCount{};
 
         static const char* kwlist[] = {"status", "extended_error", "retry_count", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iOI", const_cast<char**>(kwlist), &_status, &_extendedError, &_retryCount))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iOI", const_cast<char**>(kwlist), &_status, &_extendedError, &_retryCount))
         {
             return nullptr;
         }
@@ -953,7 +953,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         try
         {
             self->obj.status = static_cast<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>(_status);
-            self->obj.extendedError = py::convert_to<winrt::hresult>(_extendedError);
+            self->obj.extendedError = _extendedError ? py::convert_to<winrt::hresult>(_extendedError) : winrt::hresult{};
             self->obj.retryCount = _retryCount;
 
             return self_obj.detach();

@@ -20710,7 +20710,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         int32_t _InstalledSizeInBytes{};
 
         static const char* kwlist[] = {"total_size_in_bytes", "installed_size_in_bytes", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_TotalSizeInBytes, &_InstalledSizeInBytes))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_TotalSizeInBytes, &_InstalledSizeInBytes))
         {
             return nullptr;
         }
@@ -20873,7 +20873,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         PyObject* _LastSyncTime{};
 
         static const char* kwlist[] = {"usage_in_megabytes", "last_sync_time", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IO", const_cast<char**>(kwlist), &_UsageInMegabytes, &_LastSyncTime))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IO", const_cast<char**>(kwlist), &_UsageInMegabytes, &_LastSyncTime))
         {
             return nullptr;
         }
@@ -20881,7 +20881,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         try
         {
             self->obj.UsageInMegabytes = _UsageInMegabytes;
-            self->obj.LastSyncTime = py::convert_to<winrt::Windows::Foundation::DateTime>(_LastSyncTime);
+            self->obj.LastSyncTime = _LastSyncTime ? py::convert_to<winrt::Windows::Foundation::DateTime>(_LastSyncTime) : winrt::Windows::Foundation::DateTime{};
 
             return self_obj.detach();
         }

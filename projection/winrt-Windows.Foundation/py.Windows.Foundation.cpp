@@ -10886,7 +10886,7 @@ namespace py::cpp::Windows::Foundation
         int64_t _Value{};
 
         static const char* kwlist[] = {"value", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "L", const_cast<char**>(kwlist), &_Value))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|L", const_cast<char**>(kwlist), &_Value))
         {
             return nullptr;
         }
@@ -11027,7 +11027,7 @@ namespace py::cpp::Windows::Foundation
         int32_t _Value{};
 
         static const char* kwlist[] = {"value", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "i", const_cast<char**>(kwlist), &_Value))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|i", const_cast<char**>(kwlist), &_Value))
         {
             return nullptr;
         }
@@ -11169,7 +11169,7 @@ namespace py::cpp::Windows::Foundation
         float _Y{};
 
         static const char* kwlist[] = {"x", "y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff", const_cast<char**>(kwlist), &_X, &_Y))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ff", const_cast<char**>(kwlist), &_X, &_Y))
         {
             return nullptr;
         }
@@ -11334,7 +11334,7 @@ namespace py::cpp::Windows::Foundation
         float _Height{};
 
         static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
         {
             return nullptr;
         }
@@ -11539,7 +11539,7 @@ namespace py::cpp::Windows::Foundation
         float _Height{};
 
         static const char* kwlist[] = {"width", "height", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff", const_cast<char**>(kwlist), &_Width, &_Height))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ff", const_cast<char**>(kwlist), &_Width, &_Height))
         {
             return nullptr;
         }

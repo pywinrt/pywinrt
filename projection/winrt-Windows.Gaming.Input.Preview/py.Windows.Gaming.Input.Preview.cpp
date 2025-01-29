@@ -1122,7 +1122,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         int32_t _band5Gain{};
 
         static const char* kwlist[] = {"band1_gain", "band2_gain", "band3_gain", "band4_gain", "band5_gain", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiiii", const_cast<char**>(kwlist), &_band1Gain, &_band2Gain, &_band3Gain, &_band4Gain, &_band5Gain))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iiiii", const_cast<char**>(kwlist), &_band1Gain, &_band2Gain, &_band3Gain, &_band4Gain, &_band5Gain))
         {
             return nullptr;
         }

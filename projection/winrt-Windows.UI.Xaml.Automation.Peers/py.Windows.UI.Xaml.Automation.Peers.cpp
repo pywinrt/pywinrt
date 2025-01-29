@@ -25891,7 +25891,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
         uint32_t _Part2{};
 
         static const char* kwlist[] = {"part1", "part2", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_Part1, &_Part2))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|II", const_cast<char**>(kwlist), &_Part1, &_Part2))
         {
             return nullptr;
         }

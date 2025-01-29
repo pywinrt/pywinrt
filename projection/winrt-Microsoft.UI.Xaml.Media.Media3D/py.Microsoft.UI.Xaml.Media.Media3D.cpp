@@ -2232,7 +2232,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         double _M44{};
 
         static const char* kwlist[] = {"m11", "m12", "m13", "m14", "m21", "m22", "m23", "m24", "m31", "m32", "m33", "m34", "offset_x", "offset_y", "offset_z", "m44", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddddddddddddddd", const_cast<char**>(kwlist), &_M11, &_M12, &_M13, &_M14, &_M21, &_M22, &_M23, &_M24, &_M31, &_M32, &_M33, &_M34, &_OffsetX, &_OffsetY, &_OffsetZ, &_M44))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dddddddddddddddd", const_cast<char**>(kwlist), &_M11, &_M12, &_M13, &_M14, &_M21, &_M22, &_M23, &_M24, &_M31, &_M32, &_M33, &_M34, &_OffsetX, &_OffsetY, &_OffsetZ, &_M44))
         {
             return nullptr;
         }

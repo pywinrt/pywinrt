@@ -14505,7 +14505,7 @@ namespace py::cpp::Windows::Networking::Sockets
         int _InboundBandwidthPeaked{};
 
         static const char* kwlist[] = {"outbound_bits_per_second", "inbound_bits_per_second", "outbound_bits_per_second_instability", "inbound_bits_per_second_instability", "outbound_bandwidth_peaked", "inbound_bandwidth_peaked", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KKKKpp", const_cast<char**>(kwlist), &_OutboundBitsPerSecond, &_InboundBitsPerSecond, &_OutboundBitsPerSecondInstability, &_InboundBitsPerSecondInstability, &_OutboundBandwidthPeaked, &_InboundBandwidthPeaked))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KKKKpp", const_cast<char**>(kwlist), &_OutboundBitsPerSecond, &_InboundBitsPerSecond, &_OutboundBitsPerSecondInstability, &_InboundBitsPerSecondInstability, &_OutboundBandwidthPeaked, &_InboundBandwidthPeaked))
         {
             return nullptr;
         }
@@ -14754,7 +14754,7 @@ namespace py::cpp::Windows::Networking::Sockets
         uint32_t _Sum{};
 
         static const char* kwlist[] = {"variance", "max", "min", "sum", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIII", const_cast<char**>(kwlist), &_Variance, &_Max, &_Min, &_Sum))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIII", const_cast<char**>(kwlist), &_Variance, &_Max, &_Min, &_Sum))
         {
             return nullptr;
         }

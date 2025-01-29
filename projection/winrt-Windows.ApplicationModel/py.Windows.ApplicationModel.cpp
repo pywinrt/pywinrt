@@ -10326,7 +10326,7 @@ namespace py::cpp::Windows::ApplicationModel
         uint32_t _PercentComplete{};
 
         static const char* kwlist[] = {"percent_complete", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "I", const_cast<char**>(kwlist), &_PercentComplete))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|I", const_cast<char**>(kwlist), &_PercentComplete))
         {
             return nullptr;
         }
@@ -10470,7 +10470,7 @@ namespace py::cpp::Windows::ApplicationModel
         uint16_t _Revision{};
 
         static const char* kwlist[] = {"major", "minor", "build", "revision", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "HHHH", const_cast<char**>(kwlist), &_Major, &_Minor, &_Build, &_Revision))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|HHHH", const_cast<char**>(kwlist), &_Major, &_Minor, &_Build, &_Revision))
         {
             return nullptr;
         }

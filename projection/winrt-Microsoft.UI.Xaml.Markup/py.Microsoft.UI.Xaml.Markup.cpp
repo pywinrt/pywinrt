@@ -5820,7 +5820,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         uint32_t _LinePosition{};
 
         static const char* kwlist[] = {"input_stream_index", "line_number", "line_position", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "III", const_cast<char**>(kwlist), &_InputStreamIndex, &_LineNumber, &_LinePosition))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|III", const_cast<char**>(kwlist), &_InputStreamIndex, &_LineNumber, &_LinePosition))
         {
             return nullptr;
         }
@@ -6004,15 +6004,15 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         PyObject* _Namespace{};
 
         static const char* kwlist[] = {"xml_namespace", "namespace", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_XmlNamespace, &_Namespace))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_XmlNamespace, &_Namespace))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.XmlNamespace = py::convert_to<winrt::hstring>(_XmlNamespace);
-            self->obj.Namespace = py::convert_to<winrt::hstring>(_Namespace);
+            self->obj.XmlNamespace = _XmlNamespace ? py::convert_to<winrt::hstring>(_XmlNamespace) : winrt::hstring{};
+            self->obj.Namespace = _Namespace ? py::convert_to<winrt::hstring>(_Namespace) : winrt::hstring{};
 
             return self_obj.detach();
         }

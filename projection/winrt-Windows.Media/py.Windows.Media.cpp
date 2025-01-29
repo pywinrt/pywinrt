@@ -10345,15 +10345,15 @@ namespace py::cpp::Windows::Media
         PyObject* _End{};
 
         static const char* kwlist[] = {"start", "end", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Start, &_End))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_Start, &_End))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start);
-            self->obj.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End);
+            self->obj.Start = _Start ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start) : winrt::Windows::Foundation::TimeSpan{};
+            self->obj.End = _End ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End) : winrt::Windows::Foundation::TimeSpan{};
 
             return self_obj.detach();
         }

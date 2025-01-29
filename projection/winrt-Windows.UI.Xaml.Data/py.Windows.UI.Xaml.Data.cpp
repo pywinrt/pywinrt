@@ -8491,7 +8491,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
         uint32_t _Count{};
 
         static const char* kwlist[] = {"count", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "I", const_cast<char**>(kwlist), &_Count))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|I", const_cast<char**>(kwlist), &_Count))
         {
             return nullptr;
         }

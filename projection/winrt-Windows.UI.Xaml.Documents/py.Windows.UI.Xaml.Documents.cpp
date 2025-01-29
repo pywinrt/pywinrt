@@ -17893,7 +17893,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         int32_t _Length{};
 
         static const char* kwlist[] = {"start_index", "length", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_StartIndex, &_Length))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_StartIndex, &_Length))
         {
             return nullptr;
         }

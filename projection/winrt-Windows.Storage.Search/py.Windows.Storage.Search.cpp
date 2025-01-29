@@ -7444,14 +7444,14 @@ namespace py::cpp::Windows::Storage::Search
         int _AscendingOrder{};
 
         static const char* kwlist[] = {"property_name", "ascending_order", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Op", const_cast<char**>(kwlist), &_PropertyName, &_AscendingOrder))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Op", const_cast<char**>(kwlist), &_PropertyName, &_AscendingOrder))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.PropertyName = py::convert_to<winrt::hstring>(_PropertyName);
+            self->obj.PropertyName = _PropertyName ? py::convert_to<winrt::hstring>(_PropertyName) : winrt::hstring{};
             self->obj.AscendingOrder = _AscendingOrder;
 
             return self_obj.detach();
