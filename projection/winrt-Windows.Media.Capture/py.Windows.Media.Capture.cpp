@@ -26868,7 +26868,7 @@ namespace py::cpp::Windows::Media::Capture
         double _B{};
 
         static const char* kwlist[] = {"r", "g", "b", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddd", const_cast<char**>(kwlist), &_R, &_G, &_B))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ddd", const_cast<char**>(kwlist), &_R, &_G, &_B))
         {
             return nullptr;
         }

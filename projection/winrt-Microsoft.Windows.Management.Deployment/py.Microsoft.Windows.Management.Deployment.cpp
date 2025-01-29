@@ -7891,7 +7891,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         double _Progress{};
 
         static const char* kwlist[] = {"status", "progress", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "id", const_cast<char**>(kwlist), &_Status, &_Progress))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|id", const_cast<char**>(kwlist), &_Status, &_Progress))
         {
             return nullptr;
         }

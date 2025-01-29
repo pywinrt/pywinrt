@@ -150,7 +150,7 @@ namespace py::cpp::Windows::Graphics
         int32_t _HighPart{};
 
         static const char* kwlist[] = {"low_part", "high_part", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Ii", const_cast<char**>(kwlist), &_LowPart, &_HighPart))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Ii", const_cast<char**>(kwlist), &_LowPart, &_HighPart))
         {
             return nullptr;
         }
@@ -312,7 +312,7 @@ namespace py::cpp::Windows::Graphics
         uint64_t _Value{};
 
         static const char* kwlist[] = {"value", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Value))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|K", const_cast<char**>(kwlist), &_Value))
         {
             return nullptr;
         }
@@ -454,7 +454,7 @@ namespace py::cpp::Windows::Graphics
         int32_t _Y{};
 
         static const char* kwlist[] = {"x", "y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_X, &_Y))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_X, &_Y))
         {
             return nullptr;
         }
@@ -619,7 +619,7 @@ namespace py::cpp::Windows::Graphics
         int32_t _Height{};
 
         static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiii", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iiii", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
         {
             return nullptr;
         }
@@ -824,7 +824,7 @@ namespace py::cpp::Windows::Graphics
         int32_t _Height{};
 
         static const char* kwlist[] = {"width", "height", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_Width, &_Height))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_Width, &_Height))
         {
             return nullptr;
         }

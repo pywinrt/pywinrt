@@ -12974,7 +12974,7 @@ namespace py::cpp::Windows::Devices::Sms
         uint32_t _BytesPerSegment{};
 
         static const char* kwlist[] = {"segment_count", "character_count_last_segment", "characters_per_segment", "byte_count_last_segment", "bytes_per_segment", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIIII", const_cast<char**>(kwlist), &_SegmentCount, &_CharacterCountLastSegment, &_CharactersPerSegment, &_ByteCountLastSegment, &_BytesPerSegment))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIIII", const_cast<char**>(kwlist), &_SegmentCount, &_CharacterCountLastSegment, &_CharactersPerSegment, &_ByteCountLastSegment, &_BytesPerSegment))
         {
             return nullptr;
         }

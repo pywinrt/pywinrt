@@ -4863,7 +4863,7 @@ namespace py::cpp::Windows::Security::Isolation
         uint32_t _PercentComplete{};
 
         static const char* kwlist[] = {"state", "percent_complete", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iI", const_cast<char**>(kwlist), &_State, &_PercentComplete))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iI", const_cast<char**>(kwlist), &_State, &_PercentComplete))
         {
             return nullptr;
         }

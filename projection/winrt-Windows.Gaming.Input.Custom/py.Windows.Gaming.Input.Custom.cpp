@@ -3645,7 +3645,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         uint16_t _Revision{};
 
         static const char* kwlist[] = {"major", "minor", "build", "revision", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "HHHH", const_cast<char**>(kwlist), &_Major, &_Minor, &_Build, &_Revision))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|HHHH", const_cast<char**>(kwlist), &_Major, &_Minor, &_Build, &_Revision))
         {
             return nullptr;
         }
@@ -3850,7 +3850,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         uint32_t _CurrentComponentId{};
 
         static const char* kwlist[] = {"percent_completed", "current_component_id", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "dI", const_cast<char**>(kwlist), &_PercentCompleted, &_CurrentComponentId))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dI", const_cast<char**>(kwlist), &_PercentCompleted, &_CurrentComponentId))
         {
             return nullptr;
         }

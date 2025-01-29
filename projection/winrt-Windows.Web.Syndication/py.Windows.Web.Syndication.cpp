@@ -12438,7 +12438,7 @@ namespace py::cpp::Windows::Web::Syndication
         uint32_t _TotalBytesToRetrieve{};
 
         static const char* kwlist[] = {"bytes_retrieved", "total_bytes_to_retrieve", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_BytesRetrieved, &_TotalBytesToRetrieve))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|II", const_cast<char**>(kwlist), &_BytesRetrieved, &_TotalBytesToRetrieve))
         {
             return nullptr;
         }
@@ -12603,7 +12603,7 @@ namespace py::cpp::Windows::Web::Syndication
         uint32_t _TotalBytesToRetrieve{};
 
         static const char* kwlist[] = {"bytes_sent", "total_bytes_to_send", "bytes_retrieved", "total_bytes_to_retrieve", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIII", const_cast<char**>(kwlist), &_BytesSent, &_TotalBytesToSend, &_BytesRetrieved, &_TotalBytesToRetrieve))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIII", const_cast<char**>(kwlist), &_BytesSent, &_TotalBytesToSend, &_BytesRetrieved, &_TotalBytesToRetrieve))
         {
             return nullptr;
         }

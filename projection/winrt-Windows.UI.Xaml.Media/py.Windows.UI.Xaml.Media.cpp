@@ -26075,7 +26075,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
         double _OffsetY{};
 
         static const char* kwlist[] = {"m11", "m12", "m21", "m22", "offset_x", "offset_y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddddd", const_cast<char**>(kwlist), &_M11, &_M12, &_M21, &_M22, &_OffsetX, &_OffsetY))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dddddd", const_cast<char**>(kwlist), &_M11, &_M12, &_M21, &_M22, &_OffsetX, &_OffsetY))
         {
             return nullptr;
         }

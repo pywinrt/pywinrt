@@ -6211,7 +6211,7 @@ namespace py::cpp::Windows::Devices::Scanners
         float _DpiY{};
 
         static const char* kwlist[] = {"dpi_x", "dpi_y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff", const_cast<char**>(kwlist), &_DpiX, &_DpiY))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ff", const_cast<char**>(kwlist), &_DpiX, &_DpiY))
         {
             return nullptr;
         }

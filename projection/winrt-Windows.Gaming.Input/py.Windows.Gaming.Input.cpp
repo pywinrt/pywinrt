@@ -5968,7 +5968,7 @@ namespace py::cpp::Windows::Gaming::Input
         uint32_t _Buttons{};
 
         static const char* kwlist[] = {"timestamp", "buttons", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KI", const_cast<char**>(kwlist), &_Timestamp, &_Buttons))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KI", const_cast<char**>(kwlist), &_Timestamp, &_Buttons))
         {
             return nullptr;
         }
@@ -6136,7 +6136,7 @@ namespace py::cpp::Windows::Gaming::Input
         double _Throttle{};
 
         static const char* kwlist[] = {"timestamp", "buttons", "hat_switch", "roll", "pitch", "yaw", "throttle", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KIidddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_HatSwitch, &_Roll, &_Pitch, &_Yaw, &_Throttle))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KIidddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_HatSwitch, &_Roll, &_Pitch, &_Yaw, &_Throttle))
         {
             return nullptr;
         }
@@ -6410,7 +6410,7 @@ namespace py::cpp::Windows::Gaming::Input
         double _RightThumbstickY{};
 
         static const char* kwlist[] = {"timestamp", "buttons", "left_trigger", "right_trigger", "left_thumbstick_x", "left_thumbstick_y", "right_thumbstick_x", "right_thumbstick_y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KIdddddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_LeftTrigger, &_RightTrigger, &_LeftThumbstickX, &_LeftThumbstickY, &_RightThumbstickX, &_RightThumbstickY))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KIdddddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_LeftTrigger, &_RightTrigger, &_LeftThumbstickX, &_LeftThumbstickY, &_RightThumbstickX, &_RightThumbstickY))
         {
             return nullptr;
         }
@@ -6701,7 +6701,7 @@ namespace py::cpp::Windows::Gaming::Input
         double _RightTrigger{};
 
         static const char* kwlist[] = {"left_motor", "right_motor", "left_trigger", "right_trigger", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddd", const_cast<char**>(kwlist), &_LeftMotor, &_RightMotor, &_LeftTrigger, &_RightTrigger))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dddd", const_cast<char**>(kwlist), &_LeftMotor, &_RightMotor, &_LeftTrigger, &_RightTrigger))
         {
             return nullptr;
         }
@@ -6912,7 +6912,7 @@ namespace py::cpp::Windows::Gaming::Input
         double _Handbrake{};
 
         static const char* kwlist[] = {"timestamp", "buttons", "pattern_shifter_gear", "wheel", "throttle", "brake", "clutch", "handbrake", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KIiddddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_PatternShifterGear, &_Wheel, &_Throttle, &_Brake, &_Clutch, &_Handbrake))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KIiddddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_PatternShifterGear, &_Wheel, &_Throttle, &_Brake, &_Clutch, &_Handbrake))
         {
             return nullptr;
         }
@@ -7202,7 +7202,7 @@ namespace py::cpp::Windows::Gaming::Input
         uint32_t _OptionalButtons{};
 
         static const char* kwlist[] = {"timestamp", "required_buttons", "optional_buttons", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KII", const_cast<char**>(kwlist), &_Timestamp, &_RequiredButtons, &_OptionalButtons))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KII", const_cast<char**>(kwlist), &_Timestamp, &_RequiredButtons, &_OptionalButtons))
         {
             return nullptr;
         }

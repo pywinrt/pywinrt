@@ -3697,15 +3697,15 @@ namespace py::cpp::Windows::Storage::AccessCache
         PyObject* _Metadata{};
 
         static const char* kwlist[] = {"token", "metadata", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Token, &_Metadata))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_Token, &_Metadata))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Token = py::convert_to<winrt::hstring>(_Token);
-            self->obj.Metadata = py::convert_to<winrt::hstring>(_Metadata);
+            self->obj.Token = _Token ? py::convert_to<winrt::hstring>(_Token) : winrt::hstring{};
+            self->obj.Metadata = _Metadata ? py::convert_to<winrt::hstring>(_Metadata) : winrt::hstring{};
 
             return self_obj.detach();
         }

@@ -37445,7 +37445,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         uint32_t _Height{};
 
         static const char* kwlist[] = {"width", "height", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_Width, &_Height))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|II", const_cast<char**>(kwlist), &_Width, &_Height))
         {
             return nullptr;
         }

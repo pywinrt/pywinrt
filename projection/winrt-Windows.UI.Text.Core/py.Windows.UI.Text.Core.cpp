@@ -4136,7 +4136,7 @@ namespace py::cpp::Windows::UI::Text::Core
         int32_t _EndCaretPosition{};
 
         static const char* kwlist[] = {"start_caret_position", "end_caret_position", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_StartCaretPosition, &_EndCaretPosition))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_StartCaretPosition, &_EndCaretPosition))
         {
             return nullptr;
         }

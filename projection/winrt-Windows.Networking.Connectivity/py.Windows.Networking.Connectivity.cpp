@@ -6329,7 +6329,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         int32_t _Shared{};
 
         static const char* kwlist[] = {"roaming", "shared", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_Roaming, &_Shared))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_Roaming, &_Shared))
         {
             return nullptr;
         }

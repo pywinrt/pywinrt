@@ -5086,7 +5086,7 @@ namespace py::cpp::Microsoft::UI
         uint64_t _Value{};
 
         static const char* kwlist[] = {"value", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Value))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|K", const_cast<char**>(kwlist), &_Value))
         {
             return nullptr;
         }
@@ -5227,7 +5227,7 @@ namespace py::cpp::Microsoft::UI
         uint64_t _Value{};
 
         static const char* kwlist[] = {"value", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Value))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|K", const_cast<char**>(kwlist), &_Value))
         {
             return nullptr;
         }
@@ -5368,7 +5368,7 @@ namespace py::cpp::Microsoft::UI
         uint64_t _Value{};
 
         static const char* kwlist[] = {"value", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Value))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|K", const_cast<char**>(kwlist), &_Value))
         {
             return nullptr;
         }

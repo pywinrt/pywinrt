@@ -3043,7 +3043,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         int32_t _PositionY{};
 
         static const char* kwlist[] = {"position_x", "position_y", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_PositionX, &_PositionY))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_PositionX, &_PositionY))
         {
             return nullptr;
         }
@@ -3209,7 +3209,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         uint64_t _PerformanceCount{};
 
         static const char* kwlist[] = {"pointer_id", "pointer_options", "pixel_location", "time_offset_in_milliseconds", "performance_count", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIOIK", const_cast<char**>(kwlist), &_PointerId, &_PointerOptions, &_PixelLocation, &_TimeOffsetInMilliseconds, &_PerformanceCount))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIOIK", const_cast<char**>(kwlist), &_PointerId, &_PointerOptions, &_PixelLocation, &_TimeOffsetInMilliseconds, &_PerformanceCount))
         {
             return nullptr;
         }
@@ -3218,7 +3218,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         {
             self->obj.PointerId = _PointerId;
             self->obj.PointerOptions = static_cast<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>(_PointerOptions);
-            self->obj.PixelLocation = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>(_PixelLocation);
+            self->obj.PixelLocation = _PixelLocation ? py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>(_PixelLocation) : winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint{};
             self->obj.TimeOffsetInMilliseconds = _TimeOffsetInMilliseconds;
             self->obj.PerformanceCount = _PerformanceCount;
 
@@ -3437,7 +3437,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         int32_t _Right{};
 
         static const char* kwlist[] = {"left", "top", "bottom", "right", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiii", const_cast<char**>(kwlist), &_Left, &_Top, &_Bottom, &_Right))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iiii", const_cast<char**>(kwlist), &_Left, &_Top, &_Bottom, &_Right))
         {
             return nullptr;
         }

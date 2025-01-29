@@ -21617,7 +21617,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         int32_t _IsKeyReleased{};
 
         static const char* kwlist[] = {"repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIiiii", const_cast<char**>(kwlist), &_RepeatCount, &_ScanCode, &_IsExtendedKey, &_IsMenuKeyDown, &_WasKeyDown, &_IsKeyReleased))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|IIiiii", const_cast<char**>(kwlist), &_RepeatCount, &_ScanCode, &_IsExtendedKey, &_IsMenuKeyDown, &_WasKeyDown, &_IsKeyReleased))
         {
             return nullptr;
         }

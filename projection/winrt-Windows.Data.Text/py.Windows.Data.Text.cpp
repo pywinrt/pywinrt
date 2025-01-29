@@ -2943,7 +2943,7 @@ namespace py::cpp::Windows::Data::Text
         uint32_t _Length{};
 
         static const char* kwlist[] = {"start_position", "length", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_StartPosition, &_Length))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|II", const_cast<char**>(kwlist), &_StartPosition, &_Length))
         {
             return nullptr;
         }

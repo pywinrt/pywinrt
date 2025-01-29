@@ -5991,7 +5991,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         int32_t _HighPart{};
 
         static const char* kwlist[] = {"low_part", "high_part", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Ii", const_cast<char**>(kwlist), &_LowPart, &_HighPart))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Ii", const_cast<char**>(kwlist), &_LowPart, &_HighPart))
         {
             return nullptr;
         }
@@ -6153,7 +6153,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         uint64_t _Value{};
 
         static const char* kwlist[] = {"value", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Value))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|K", const_cast<char**>(kwlist), &_Value))
         {
             return nullptr;
         }
@@ -6295,15 +6295,15 @@ namespace py::cpp::Windows::Graphics::Holographic
         PyObject* _Right{};
 
         static const char* kwlist[] = {"left", "right", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Left, &_Right))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_Left, &_Right))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Left = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(_Left);
-            self->obj.Right = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(_Right);
+            self->obj.Left = _Left ? py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(_Left) : winrt::Windows::Foundation::Numerics::float4x4{};
+            self->obj.Right = _Right ? py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(_Right) : winrt::Windows::Foundation::Numerics::float4x4{};
 
             return self_obj.detach();
         }

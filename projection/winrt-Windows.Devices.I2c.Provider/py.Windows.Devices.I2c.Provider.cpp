@@ -1426,7 +1426,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         uint32_t _BytesTransferred{};
 
         static const char* kwlist[] = {"status", "bytes_transferred", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iI", const_cast<char**>(kwlist), &_Status, &_BytesTransferred))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iI", const_cast<char**>(kwlist), &_Status, &_BytesTransferred))
         {
             return nullptr;
         }

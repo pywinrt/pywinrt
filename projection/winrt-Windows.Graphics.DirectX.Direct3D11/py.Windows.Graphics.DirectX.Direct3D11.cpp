@@ -572,7 +572,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         int32_t _Quality{};
 
         static const char* kwlist[] = {"count", "quality", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_Count, &_Quality))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ii", const_cast<char**>(kwlist), &_Count, &_Quality))
         {
             return nullptr;
         }
@@ -737,7 +737,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         PyObject* _MultisampleDescription{};
 
         static const char* kwlist[] = {"width", "height", "format", "multisample_description", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiiO", const_cast<char**>(kwlist), &_Width, &_Height, &_Format, &_MultisampleDescription))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|iiiO", const_cast<char**>(kwlist), &_Width, &_Height, &_Format, &_MultisampleDescription))
         {
             return nullptr;
         }
@@ -747,7 +747,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
             self->obj.Width = _Width;
             self->obj.Height = _Height;
             self->obj.Format = static_cast<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(_Format);
-            self->obj.MultisampleDescription = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(_MultisampleDescription);
+            self->obj.MultisampleDescription = _MultisampleDescription ? py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(_MultisampleDescription) : winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription{};
 
             return self_obj.detach();
         }

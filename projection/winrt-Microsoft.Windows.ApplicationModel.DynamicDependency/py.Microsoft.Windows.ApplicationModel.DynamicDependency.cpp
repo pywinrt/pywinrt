@@ -1441,7 +1441,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         uint64_t _Id{};
 
         static const char* kwlist[] = {"id", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Id))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|K", const_cast<char**>(kwlist), &_Id))
         {
             return nullptr;
         }

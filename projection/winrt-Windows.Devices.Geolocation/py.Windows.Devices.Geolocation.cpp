@@ -4557,7 +4557,7 @@ namespace py::cpp::Windows::Devices::Geolocation
         double _Altitude{};
 
         static const char* kwlist[] = {"latitude", "longitude", "altitude", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "ddd", const_cast<char**>(kwlist), &_Latitude, &_Longitude, &_Altitude))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|ddd", const_cast<char**>(kwlist), &_Latitude, &_Longitude, &_Altitude))
         {
             return nullptr;
         }

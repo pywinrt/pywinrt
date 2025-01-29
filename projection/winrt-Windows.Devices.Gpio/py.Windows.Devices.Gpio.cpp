@@ -2162,7 +2162,7 @@ namespace py::cpp::Windows::Devices::Gpio
         PyObject* _RelativeTime{};
 
         static const char* kwlist[] = {"count", "relative_time", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "KO", const_cast<char**>(kwlist), &_Count, &_RelativeTime))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|KO", const_cast<char**>(kwlist), &_Count, &_RelativeTime))
         {
             return nullptr;
         }
@@ -2170,7 +2170,7 @@ namespace py::cpp::Windows::Devices::Gpio
         try
         {
             self->obj.Count = _Count;
-            self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime);
+            self->obj.RelativeTime = _RelativeTime ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime) : winrt::Windows::Foundation::TimeSpan{};
 
             return self_obj.detach();
         }
@@ -2325,14 +2325,14 @@ namespace py::cpp::Windows::Devices::Gpio
         int32_t _Edge{};
 
         static const char* kwlist[] = {"relative_time", "edge", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "Oi", const_cast<char**>(kwlist), &_RelativeTime, &_Edge))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|Oi", const_cast<char**>(kwlist), &_RelativeTime, &_Edge))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime);
+            self->obj.RelativeTime = _RelativeTime ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime) : winrt::Windows::Foundation::TimeSpan{};
             self->obj.Edge = static_cast<winrt::Windows::Devices::Gpio::GpioPinEdge>(_Edge);
 
             return self_obj.detach();

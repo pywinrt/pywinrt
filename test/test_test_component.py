@@ -242,6 +242,27 @@ class TestTestComponent(unittest.TestCase):
             "different wrappers of the same WinRT object instance should hash the same",
         )
 
+    def test_struct_new(self):
+        b = tc.Blittable()
+        self.assertEqual(b.a, 0)
+
+        b = tc.Blittable(1)
+        self.assertEqual(b.a, 1)
+
+        b = tc.Blittable(b=1)
+        self.assertEqual(b.b, 1)
+
+        uuid = UUID("10000000-1000-1000-1000-100000000000")
+        b = tc.Blittable(j=uuid)
+        self.assertEqual(b.j, uuid)
+
+        n = tc.NonBlittable(True)
+        self.assertIs(n.a, True)
+
+        s = "str"
+        n = tc.NonBlittable(c=s)
+        self.assertEqual(n.c, s)
+
     def test_struct_hashable(self):
         b = tc.Blittable()
 
@@ -258,9 +279,7 @@ class TestTestComponent(unittest.TestCase):
 
     def test_struct_inequality(self):
         b1 = tc.Blittable()
-        b2 = tc.Blittable(
-            1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
-        )
+        b2 = tc.Blittable(1)
 
         self.assertNotEqual(b1, b2)
         self.assertFalse(b1 == b2)

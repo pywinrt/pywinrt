@@ -11686,7 +11686,7 @@ namespace py::cpp::TestComponent
         PyObject* _J{};
 
         static const char* kwlist[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "BHIKhiLfdO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D, &_E, &_F, &_G, &_H, &_I, &_J))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|BHIKhiLfdO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D, &_E, &_F, &_G, &_H, &_I, &_J))
         {
             return nullptr;
         }
@@ -11702,7 +11702,7 @@ namespace py::cpp::TestComponent
             self->obj.G = _G;
             self->obj.H = _H;
             self->obj.I = _I;
-            self->obj.J = py::convert_to<winrt::guid>(_J);
+            self->obj.J = _J ? py::convert_to<winrt::guid>(_J) : winrt::guid{};
 
             return self_obj.detach();
         }
@@ -12017,15 +12017,15 @@ namespace py::cpp::TestComponent
         PyObject* _NonBlittable{};
 
         static const char* kwlist[] = {"blittable", "non_blittable", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Blittable, &_NonBlittable))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|OO", const_cast<char**>(kwlist), &_Blittable, &_NonBlittable))
         {
             return nullptr;
         }
 
         try
         {
-            self->obj.Blittable = py::convert_to<winrt::TestComponent::Blittable>(_Blittable);
-            self->obj.NonBlittable = py::convert_to<winrt::TestComponent::NonBlittable>(_NonBlittable);
+            self->obj.Blittable = _Blittable ? py::convert_to<winrt::TestComponent::Blittable>(_Blittable) : winrt::TestComponent::Blittable{};
+            self->obj.NonBlittable = _NonBlittable ? py::convert_to<winrt::TestComponent::NonBlittable>(_NonBlittable) : winrt::TestComponent::NonBlittable{};
 
             return self_obj.detach();
         }
@@ -12182,7 +12182,7 @@ namespace py::cpp::TestComponent
         PyObject* _D{};
 
         static const char* kwlist[] = {"a", "b", "c", "d", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "pOOO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|pOOO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D))
         {
             return nullptr;
         }
@@ -12190,9 +12190,9 @@ namespace py::cpp::TestComponent
         try
         {
             self->obj.A = _A;
-            self->obj.B = py::convert_to<char16_t>(_B);
-            self->obj.C = py::convert_to<winrt::hstring>(_C);
-            self->obj.D = py::convert_to<winrt::Windows::Foundation::IReference<int64_t>>(_D);
+            self->obj.B = _B ? py::convert_to<char16_t>(_B) : char16_t{};
+            self->obj.C = _C ? py::convert_to<winrt::hstring>(_C) : winrt::hstring{};
+            self->obj.D = _D ? py::convert_to<winrt::Windows::Foundation::IReference<int64_t>>(_D) : winrt::Windows::Foundation::IReference<int64_t>{};
 
             return self_obj.detach();
         }

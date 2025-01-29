@@ -25218,7 +25218,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         double _Max{};
 
         static const char* kwlist[] = {"min", "max", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "dd", const_cast<char**>(kwlist), &_Min, &_Max))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|dd", const_cast<char**>(kwlist), &_Min, &_Max))
         {
             return nullptr;
         }

@@ -21500,7 +21500,7 @@ namespace py::cpp::Windows::UI::Text
         uint16_t _Weight{};
 
         static const char* kwlist[] = {"weight", nullptr};
-        if (!PyArg_ParseTupleAndKeywords(args, kwds, "H", const_cast<char**>(kwlist), &_Weight))
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|H", const_cast<char**>(kwlist), &_Weight))
         {
             return nullptr;
         }
