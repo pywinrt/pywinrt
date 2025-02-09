@@ -24,6 +24,7 @@
 - `winrt.windows.foundation.IMapView[K, V]` input parameters now accept any `typing.Mapping[K, V]`.
 - Implemented type hints for interface inheritance ([#80]).
 - Implemented proper inheritance of composable classes ([#25]).
+- Failing to convert from `uuid.UUID` now raises `TypeError`.
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
