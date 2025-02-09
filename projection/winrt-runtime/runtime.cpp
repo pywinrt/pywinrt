@@ -479,32 +479,74 @@ winrt::guid py::convert_to_guid(PyObject* obj)
 {
     throw_if_pyobj_null(obj);
 
-    pyobj_handle bytes{PyObject_GetAttrString(obj, "bytes")};
-    if (!bytes)
+    try
     {
+        pyobj_handle bytes{PyObject_GetAttrString(obj, "bytes")};
+        if (!bytes)
+        {
+            throw python_exception();
+        }
+
+        char* buffer;
+        Py_ssize_t size;
+        if (PyBytes_AsStringAndSize(bytes.get(), &buffer, &size) == -1)
+        {
+            throw python_exception();
+        }
+
+        if (size != sizeof(winrt::guid))
+        {
+            PyErr_SetString(PyExc_ValueError, "bytes is wrong size");
+            throw python_exception();
+        }
+
+        // It is faster to swap in C++ rather than using bytes_le in Python since
+        // Python stores the bytes in a different order.
+        winrt::guid result;
+        result.Data1 = _byteswap_ulong(*reinterpret_cast<uint32_t*>(buffer));
+        result.Data2 = _byteswap_ushort(*reinterpret_cast<uint16_t*>(buffer + 4));
+        result.Data3 = _byteswap_ushort(*reinterpret_cast<uint16_t*>(buffer + 6));
+        std::memcpy(result.Data4, buffer + 8, sizeof(result.Data4));
+
+        return result;
+    }
+    catch (python_exception)
+    {
+        // Convert any Python exception to a TypeError with cause set to the
+        // original exception.
+
+#if PY_VERSION_HEX < 0x030C0000
+        PyObject *type, *value, *trace;
+        PyErr_Fetch(&type, &value, &trace);
+        PyErr_NormalizeException(&type, &value, &trace);
+        pyobj_handle old_value{value};
+        Py_XDECREF(type);
+        Py_XDECREF(trace);
+#else
+        pyobj_handle old_value{PyErr_GetRaisedException()};
+#endif
+
+        PyErr_SetString(PyExc_TypeError, "requires uuid.UUID object");
+
+#if PY_VERSION_HEX < 0x030C0000
+        PyErr_Fetch(&type, &value, &trace);
+        PyErr_NormalizeException(&type, &value, &trace);
+        pyobj_handle new_value{value};
+#else
+        pyobj_handle new_value{PyErr_GetRaisedException()};
+#endif
+
+        // steals reference to cause
+        PyException_SetCause(new_value.get(), old_value.detach());
+
+#if PY_VERSION_HEX < 0x030C0000
+        // steals references to args
+        PyErr_Restore(type, new_value.detach(), trace);
+#else
+        // steals reference to exception
+        PyErr_SetRaisedException(new_value.detach());
+#endif
+
         throw python_exception();
     }
-
-    char* buffer;
-    Py_ssize_t size;
-    if (PyBytes_AsStringAndSize(bytes.get(), &buffer, &size) == -1)
-    {
-        throw python_exception();
-    }
-
-    if (size != sizeof(winrt::guid))
-    {
-        PyErr_SetString(PyExc_ValueError, "bytes is wrong size");
-        throw python_exception();
-    }
-
-    // It is faster to swap in C++ rather than using bytes_le in Python since
-    // Python stores the bytes in a different order.
-    winrt::guid result;
-    result.Data1 = _byteswap_ulong(*reinterpret_cast<uint32_t*>(buffer));
-    result.Data2 = _byteswap_ushort(*reinterpret_cast<uint16_t*>(buffer + 4));
-    result.Data3 = _byteswap_ushort(*reinterpret_cast<uint16_t*>(buffer + 6));
-    std::memcpy(result.Data4, buffer + 8, sizeof(result.Data4));
-
-    return result;
 }
