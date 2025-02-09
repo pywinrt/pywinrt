@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Core.h")
-#include "py.Windows.ApplicationModel.Core.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -40,32 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Miracast
 {
-}
-
-namespace py::impl::Windows::Media::Miracast
-{
-}
-
-namespace py::wrapper::Windows::Media::Miracast
-{
-    using MiracastReceiver = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiver>;
-    using MiracastReceiverApplySettingsResult = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsResult>;
-    using MiracastReceiverConnection = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverConnection>;
-    using MiracastReceiverConnectionCreatedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>;
-    using MiracastReceiverCursorImageChannel = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel>;
-    using MiracastReceiverCursorImageChannelSettings = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings>;
-    using MiracastReceiverDisconnectedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>;
-    using MiracastReceiverGameControllerDevice = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice>;
-    using MiracastReceiverInputDevices = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverInputDevices>;
-    using MiracastReceiverKeyboardDevice = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice>;
-    using MiracastReceiverMediaSourceCreatedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>;
-    using MiracastReceiverSession = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverSession>;
-    using MiracastReceiverSessionStartResult = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartResult>;
-    using MiracastReceiverSettings = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverSettings>;
-    using MiracastReceiverStatus = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverStatus>;
-    using MiracastReceiverStreamControl = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverStreamControl>;
-    using MiracastReceiverVideoStreamSettings = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>;
-    using MiracastTransmitter = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastTransmitter>;
 }
 
 namespace py
@@ -302,4 +251,58 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.miracast";
         static constexpr const char* type_name = "MiracastTransmitter";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Core.h")
+#include "py.Windows.ApplicationModel.Core.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+#if __has_include("py.Windows.Media.Core.h")
+#include "py.Windows.Media.Core.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media::Miracast
+{
+}
+
+namespace py::wrapper::Windows::Media::Miracast
+{
+    using MiracastReceiver = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiver>;
+    using MiracastReceiverApplySettingsResult = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsResult>;
+    using MiracastReceiverConnection = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverConnection>;
+    using MiracastReceiverConnectionCreatedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>;
+    using MiracastReceiverCursorImageChannel = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel>;
+    using MiracastReceiverCursorImageChannelSettings = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings>;
+    using MiracastReceiverDisconnectedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>;
+    using MiracastReceiverGameControllerDevice = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice>;
+    using MiracastReceiverInputDevices = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverInputDevices>;
+    using MiracastReceiverKeyboardDevice = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice>;
+    using MiracastReceiverMediaSourceCreatedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>;
+    using MiracastReceiverSession = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverSession>;
+    using MiracastReceiverSessionStartResult = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartResult>;
+    using MiracastReceiverSettings = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverSettings>;
+    using MiracastReceiverStatus = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverStatus>;
+    using MiracastReceiverStreamControl = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverStreamControl>;
+    using MiracastReceiverVideoStreamSettings = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>;
+    using MiracastTransmitter = py::winrt_wrapper<winrt::Windows::Media::Miracast::MiracastTransmitter>;
+}
+
+namespace py
+{
 }

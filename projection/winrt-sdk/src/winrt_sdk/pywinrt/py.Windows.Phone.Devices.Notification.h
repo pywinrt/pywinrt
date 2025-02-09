@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Phone.Devices.Notification.h>
 
 namespace py::proj::Windows::Phone::Devices::Notification
 {
-}
-
-namespace py::impl::Windows::Phone::Devices::Notification
-{
-}
-
-namespace py::wrapper::Windows::Phone::Devices::Notification
-{
-    using VibrationDevice = py::winrt_wrapper<winrt::Windows::Phone::Devices::Notification::VibrationDevice>;
 }
 
 namespace py
@@ -36,4 +22,21 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.devices.notification";
         static constexpr const char* type_name = "VibrationDevice";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::Phone::Devices::Notification
+{
+}
+
+namespace py::wrapper::Windows::Phone::Devices::Notification
+{
+    using VibrationDevice = py::winrt_wrapper<winrt::Windows::Phone::Devices::Notification::VibrationDevice>;
+}
+
+namespace py
+{
 }

@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.h>
@@ -35,34 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Appointments
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Appointments
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Appointments
-{
-    using Appointment = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::Appointment>;
-    using AppointmentCalendar = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>;
-    using AppointmentCalendarSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager>;
-    using AppointmentConflictResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentConflictResult>;
-    using AppointmentException = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentException>;
-    using AppointmentInvitee = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentInvitee>;
-    using AppointmentManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentManager>;
-    using AppointmentManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentManagerForUser>;
-    using AppointmentOrganizer = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentOrganizer>;
-    using AppointmentProperties = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentProperties>;
-    using AppointmentRecurrence = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence>;
-    using AppointmentStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStore>;
-    using AppointmentStoreChange = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChange>;
-    using AppointmentStoreChangeReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader>;
-    using AppointmentStoreChangeTracker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker>;
-    using AppointmentStoreChangedDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedDeferral>;
-    using AppointmentStoreChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs>;
-    using AppointmentStoreNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreNotificationTriggerDetails>;
-    using FindAppointmentsOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>;
-    using IAppointmentParticipant = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>;
 }
 
 namespace py
@@ -414,4 +365,56 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments";
         static constexpr const char* type_name = "_IAppointmentParticipant";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Appointments
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Appointments
+{
+    using Appointment = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::Appointment>;
+    using AppointmentCalendar = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>;
+    using AppointmentCalendarSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager>;
+    using AppointmentConflictResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentConflictResult>;
+    using AppointmentException = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentException>;
+    using AppointmentInvitee = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentInvitee>;
+    using AppointmentManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentManager>;
+    using AppointmentManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentManagerForUser>;
+    using AppointmentOrganizer = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentOrganizer>;
+    using AppointmentProperties = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentProperties>;
+    using AppointmentRecurrence = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrence>;
+    using AppointmentStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStore>;
+    using AppointmentStoreChange = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChange>;
+    using AppointmentStoreChangeReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader>;
+    using AppointmentStoreChangeTracker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker>;
+    using AppointmentStoreChangedDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedDeferral>;
+    using AppointmentStoreChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs>;
+    using AppointmentStoreNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreNotificationTriggerDetails>;
+    using FindAppointmentsOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::FindAppointmentsOptions>;
+    using IAppointmentParticipant = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>;
+}
+
+namespace py
+{
 }

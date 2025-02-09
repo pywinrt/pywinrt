@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Core.h")
-#include "py.Windows.ApplicationModel.Core.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.StartScreen.h")
-#include "py.Windows.UI.StartScreen.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -45,32 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Shell
 {
-}
-
-namespace py::impl::Windows::UI::Shell
-{
-}
-
-namespace py::wrapper::Windows::UI::Shell
-{
-    using AdaptiveCardBuilder = py::winrt_wrapper<winrt::Windows::UI::Shell::AdaptiveCardBuilder>;
-    using FocusSession = py::winrt_wrapper<winrt::Windows::UI::Shell::FocusSession>;
-    using FocusSessionManager = py::winrt_wrapper<winrt::Windows::UI::Shell::FocusSessionManager>;
-    using SecurityAppManager = py::winrt_wrapper<winrt::Windows::UI::Shell::SecurityAppManager>;
-    using ShareWindowCommandEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>;
-    using ShareWindowCommandSource = py::winrt_wrapper<winrt::Windows::UI::Shell::ShareWindowCommandSource>;
-    using TaskbarManager = py::winrt_wrapper<winrt::Windows::UI::Shell::TaskbarManager>;
-    using WindowTab = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTab>;
-    using WindowTabCloseRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>;
-    using WindowTabCollection = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabCollection>;
-    using WindowTabGroup = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabGroup>;
-    using WindowTabIcon = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabIcon>;
-    using WindowTabManager = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabManager>;
-    using WindowTabSwitchRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>;
-    using WindowTabTearOutRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>;
-    using WindowTabThumbnailRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>;
-    using IAdaptiveCard = py::winrt_wrapper<winrt::Windows::UI::Shell::IAdaptiveCard>;
-    using IAdaptiveCardBuilderStatics = py::winrt_wrapper<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>;
 }
 
 namespace py
@@ -263,4 +208,62 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "_IAdaptiveCardBuilderStatics";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Core.h")
+#include "py.Windows.ApplicationModel.Core.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.StartScreen.h")
+#include "py.Windows.UI.StartScreen.h"
+#endif
+
+namespace py::impl::Windows::UI::Shell
+{
+}
+
+namespace py::wrapper::Windows::UI::Shell
+{
+    using AdaptiveCardBuilder = py::winrt_wrapper<winrt::Windows::UI::Shell::AdaptiveCardBuilder>;
+    using FocusSession = py::winrt_wrapper<winrt::Windows::UI::Shell::FocusSession>;
+    using FocusSessionManager = py::winrt_wrapper<winrt::Windows::UI::Shell::FocusSessionManager>;
+    using SecurityAppManager = py::winrt_wrapper<winrt::Windows::UI::Shell::SecurityAppManager>;
+    using ShareWindowCommandEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>;
+    using ShareWindowCommandSource = py::winrt_wrapper<winrt::Windows::UI::Shell::ShareWindowCommandSource>;
+    using TaskbarManager = py::winrt_wrapper<winrt::Windows::UI::Shell::TaskbarManager>;
+    using WindowTab = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTab>;
+    using WindowTabCloseRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>;
+    using WindowTabCollection = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabCollection>;
+    using WindowTabGroup = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabGroup>;
+    using WindowTabIcon = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabIcon>;
+    using WindowTabManager = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabManager>;
+    using WindowTabSwitchRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>;
+    using WindowTabTearOutRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>;
+    using WindowTabThumbnailRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>;
+    using IAdaptiveCard = py::winrt_wrapper<winrt::Windows::UI::Shell::IAdaptiveCard>;
+    using IAdaptiveCardBuilderStatics = py::winrt_wrapper<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>;
+}
+
+namespace py
+{
 }

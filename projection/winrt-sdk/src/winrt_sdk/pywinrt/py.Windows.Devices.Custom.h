@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
 
@@ -20,18 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Custom
 {
-}
-
-namespace py::impl::Windows::Devices::Custom
-{
-}
-
-namespace py::wrapper::Windows::Devices::Custom
-{
-    using CustomDevice = py::winrt_wrapper<winrt::Windows::Devices::Custom::CustomDevice>;
-    using IOControlCode = py::winrt_wrapper<winrt::Windows::Devices::Custom::IOControlCode>;
-    using KnownDeviceTypes = py::winrt_wrapper<winrt::Windows::Devices::Custom::KnownDeviceTypes>;
-    using IIOControlCode = py::winrt_wrapper<winrt::Windows::Devices::Custom::IIOControlCode>;
 }
 
 namespace py
@@ -112,4 +91,28 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "_IIOControlCode";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::Custom
+{
+}
+
+namespace py::wrapper::Windows::Devices::Custom
+{
+    using CustomDevice = py::winrt_wrapper<winrt::Windows::Devices::Custom::CustomDevice>;
+    using IOControlCode = py::winrt_wrapper<winrt::Windows::Devices::Custom::IOControlCode>;
+    using KnownDeviceTypes = py::winrt_wrapper<winrt::Windows::Devices::Custom::KnownDeviceTypes>;
+    using IIOControlCode = py::winrt_wrapper<winrt::Windows::Devices::Custom::IIOControlCode>;
+}
+
+namespace py
+{
 }

@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Networking.Connectivity.h")
-#include "py.Windows.Networking.Connectivity.h"
-#endif
-
 #include <winrt/Windows.Networking.Connectivity.h>
 
 #include <winrt/Windows.Networking.h>
 
 namespace py::proj::Windows::Networking
 {
-}
-
-namespace py::impl::Windows::Networking
-{
-}
-
-namespace py::wrapper::Windows::Networking
-{
-    using EndpointPair = py::winrt_wrapper<winrt::Windows::Networking::EndpointPair>;
-    using HostName = py::winrt_wrapper<winrt::Windows::Networking::HostName>;
 }
 
 namespace py
@@ -78,4 +63,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.networking";
         static constexpr const char* type_name = "HostName";
     };
+}
+
+#if __has_include("py.Windows.Networking.Connectivity.h")
+#include "py.Windows.Networking.Connectivity.h"
+#endif
+
+namespace py::impl::Windows::Networking
+{
+}
+
+namespace py::wrapper::Windows::Networking
+{
+    using EndpointPair = py::winrt_wrapper<winrt::Windows::Networking::EndpointPair>;
+    using HostName = py::winrt_wrapper<winrt::Windows::Networking::HostName>;
+}
+
+namespace py
+{
 }

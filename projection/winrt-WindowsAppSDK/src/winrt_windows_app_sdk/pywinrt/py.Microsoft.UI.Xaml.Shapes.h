@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.h")
-#include "py.Microsoft.UI.Xaml.Media.h"
-#endif
-
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Xaml.h>
 #include <winrt/Microsoft.UI.Xaml.Media.h>
@@ -25,21 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Xaml::Shapes
 {
-}
-
-namespace py::impl::Microsoft::UI::Xaml::Shapes
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Xaml::Shapes
-{
-    using Ellipse = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Ellipse>;
-    using Line = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Line>;
-    using Path = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Path>;
-    using Polygon = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Polygon>;
-    using Polyline = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Polyline>;
-    using Rectangle = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Rectangle>;
-    using Shape = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Shape>;
 }
 
 namespace py
@@ -100,4 +72,35 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.shapes";
         static constexpr const char* type_name = "Shape";
     };
+}
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Media.h")
+#include "py.Microsoft.UI.Xaml.Media.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Xaml::Shapes
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Xaml::Shapes
+{
+    using Ellipse = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Ellipse>;
+    using Line = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Line>;
+    using Path = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Path>;
+    using Polygon = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Polygon>;
+    using Polyline = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Polyline>;
+    using Rectangle = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Rectangle>;
+    using Shape = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Shapes::Shape>;
+}
+
+namespace py
+{
 }

@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.Content.h")
-#include "py.Microsoft.UI.Content.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Input.h")
-#include "py.Microsoft.UI.Input.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
 #include <winrt/Microsoft.UI.Content.h>
 #include <winrt/Microsoft.UI.Input.h>
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
@@ -35,20 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Input::DragDrop
 {
-}
-
-namespace py::impl::Microsoft::UI::Input::DragDrop
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Input::DragDrop
-{
-    using DragDropManager = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DragDropManager>;
-    using DragInfo = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DragInfo>;
-    using DragOperation = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DragOperation>;
-    using DragUIOverride = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DragUIOverride>;
-    using DropOperationTargetRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DropOperationTargetRequestedEventArgs>;
-    using IDropOperationTarget = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::IDropOperationTarget>;
 }
 
 namespace py
@@ -123,4 +88,42 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "_IDropOperationTarget";
     };
+}
+
+#if __has_include("py.Microsoft.UI.Content.h")
+#include "py.Microsoft.UI.Content.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Input.h")
+#include "py.Microsoft.UI.Input.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Input::DragDrop
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Input::DragDrop
+{
+    using DragDropManager = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DragDropManager>;
+    using DragInfo = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DragInfo>;
+    using DragOperation = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DragOperation>;
+    using DragUIOverride = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DragUIOverride>;
+    using DropOperationTargetRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::DropOperationTargetRequestedEventArgs>;
+    using IDropOperationTarget = py::winrt_wrapper<winrt::Microsoft::UI::Input::DragDrop::IDropOperationTarget>;
+}
+
+namespace py
+{
 }

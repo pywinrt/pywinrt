@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Interop.h")
-#include "py.Windows.UI.Xaml.Interop.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.UI.Xaml.h>
@@ -30,122 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Data
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Data
-{
-    struct CurrentChangingEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Data::CurrentChangingEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct PropertyChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Data::PropertyChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Data
-{
-    using Binding = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::Binding>;
-    using BindingBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::BindingBase>;
-    using BindingExpression = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::BindingExpression>;
-    using BindingExpressionBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::BindingExpressionBase>;
-    using BindingOperations = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::BindingOperations>;
-    using CollectionViewSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::CollectionViewSource>;
-    using CurrentChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs>;
-    using ItemIndexRange = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ItemIndexRange>;
-    using PropertyChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgs>;
-    using RelativeSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::RelativeSource>;
-    using ICollectionView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICollectionView>;
-    using ICollectionViewFactory = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICollectionViewFactory>;
-    using ICollectionViewGroup = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICollectionViewGroup>;
-    using ICustomProperty = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICustomProperty>;
-    using ICustomPropertyProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICustomPropertyProvider>;
-    using IItemsRangeInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::IItemsRangeInfo>;
-    using INotifyPropertyChanged = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::INotifyPropertyChanged>;
-    using ISelectionInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ISelectionInfo>;
-    using ISupportIncrementalLoading = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ISupportIncrementalLoading>;
-    using IValueConverter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::IValueConverter>;
-    using LoadMoreItemsResult = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>;
 }
 
 namespace py
@@ -354,6 +221,142 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
         static constexpr const char* type_name = "LoadMoreItemsResult";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Interop.h")
+#include "py.Windows.UI.Xaml.Interop.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Data
+{
+    struct CurrentChangingEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Data::CurrentChangingEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct PropertyChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Data::PropertyChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Data
+{
+    using Binding = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::Binding>;
+    using BindingBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::BindingBase>;
+    using BindingExpression = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::BindingExpression>;
+    using BindingExpressionBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::BindingExpressionBase>;
+    using BindingOperations = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::BindingOperations>;
+    using CollectionViewSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::CollectionViewSource>;
+    using CurrentChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs>;
+    using ItemIndexRange = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ItemIndexRange>;
+    using PropertyChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgs>;
+    using RelativeSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::RelativeSource>;
+    using ICollectionView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICollectionView>;
+    using ICollectionViewFactory = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICollectionViewFactory>;
+    using ICollectionViewGroup = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICollectionViewGroup>;
+    using ICustomProperty = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICustomProperty>;
+    using ICustomPropertyProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ICustomPropertyProvider>;
+    using IItemsRangeInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::IItemsRangeInfo>;
+    using INotifyPropertyChanged = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::INotifyPropertyChanged>;
+    using ISelectionInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ISelectionInfo>;
+    using ISupportIncrementalLoading = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::ISupportIncrementalLoading>;
+    using IValueConverter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Data::IValueConverter>;
+    using LoadMoreItemsResult = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Data::CurrentChangingEventHandler>
     {

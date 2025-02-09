@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Appointments.h")
-#include "py.Windows.ApplicationModel.Appointments.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Email.h")
-#include "py.Windows.ApplicationModel.Email.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Appointments.h>
 #include <winrt/Windows.ApplicationModel.Email.h>
 #include <winrt/Windows.Foundation.h>
@@ -35,35 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Phone::Notification::Management
 {
-}
-
-namespace py::impl::Windows::Phone::Notification::Management
-{
-}
-
-namespace py::wrapper::Windows::Phone::Notification::Management
-{
-    using AccessoryManager = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::AccessoryManager>;
-    using AlarmNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails>;
-    using AppNotificationInfo = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::AppNotificationInfo>;
-    using BinaryId = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::BinaryId>;
-    using CalendarChangedNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails>;
-    using CortanaTileNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails>;
-    using EmailAccountInfo = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::EmailAccountInfo>;
-    using EmailFolderInfo = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::EmailFolderInfo>;
-    using EmailNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails>;
-    using EmailReadNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails>;
-    using MediaControlsTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::MediaControlsTriggerDetails>;
-    using MediaMetadata = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::MediaMetadata>;
-    using PhoneCallDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::PhoneCallDetails>;
-    using PhoneLineDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::PhoneLineDetails>;
-    using PhoneNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails>;
-    using ReminderNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails>;
-    using SpeedDialEntry = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::SpeedDialEntry>;
-    using TextResponse = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::TextResponse>;
-    using ToastNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails>;
-    using VolumeInfo = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::VolumeInfo>;
-    using IAccessoryNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>;
 }
 
 namespace py
@@ -390,4 +340,57 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "_IAccessoryNotificationTriggerDetails";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Appointments.h")
+#include "py.Windows.ApplicationModel.Appointments.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Email.h")
+#include "py.Windows.ApplicationModel.Email.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Phone::Notification::Management
+{
+}
+
+namespace py::wrapper::Windows::Phone::Notification::Management
+{
+    using AccessoryManager = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::AccessoryManager>;
+    using AlarmNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails>;
+    using AppNotificationInfo = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::AppNotificationInfo>;
+    using BinaryId = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::BinaryId>;
+    using CalendarChangedNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails>;
+    using CortanaTileNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails>;
+    using EmailAccountInfo = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::EmailAccountInfo>;
+    using EmailFolderInfo = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::EmailFolderInfo>;
+    using EmailNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails>;
+    using EmailReadNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails>;
+    using MediaControlsTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::MediaControlsTriggerDetails>;
+    using MediaMetadata = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::MediaMetadata>;
+    using PhoneCallDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::PhoneCallDetails>;
+    using PhoneLineDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::PhoneLineDetails>;
+    using PhoneNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails>;
+    using ReminderNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails>;
+    using SpeedDialEntry = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::SpeedDialEntry>;
+    using TextResponse = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::TextResponse>;
+    using ToastNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails>;
+    using VolumeInfo = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::VolumeInfo>;
+    using IAccessoryNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>;
+}
+
+namespace py
+{
 }

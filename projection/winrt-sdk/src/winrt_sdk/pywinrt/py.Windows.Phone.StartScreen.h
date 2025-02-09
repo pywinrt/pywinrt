@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Notifications.h")
-#include "py.Windows.UI.Notifications.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.Notifications.h>
 
@@ -20,16 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Phone::StartScreen
 {
-}
-
-namespace py::impl::Windows::Phone::StartScreen
-{
-}
-
-namespace py::wrapper::Windows::Phone::StartScreen
-{
-    using DualSimTile = py::winrt_wrapper<winrt::Windows::Phone::StartScreen::DualSimTile>;
-    using IToastNotificationManagerStatics3 = py::winrt_wrapper<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>;
 }
 
 namespace py
@@ -50,4 +31,26 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.startscreen";
         static constexpr const char* type_name = "_IToastNotificationManagerStatics3";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.Notifications.h")
+#include "py.Windows.UI.Notifications.h"
+#endif
+
+namespace py::impl::Windows::Phone::StartScreen
+{
+}
+
+namespace py::wrapper::Windows::Phone::StartScreen
+{
+    using DualSimTile = py::winrt_wrapper<winrt::Windows::Phone::StartScreen::DualSimTile>;
+    using IToastNotificationManagerStatics3 = py::winrt_wrapper<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>;
+}
+
+namespace py
+{
 }

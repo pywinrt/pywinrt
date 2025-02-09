@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,50 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Popups
 {
-}
-
-namespace py::impl::Windows::UI::Popups
-{
-    struct UICommandInvokedHandler
-    {
-        static winrt::Windows::UI::Popups::UICommandInvokedHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::UI::Popups::IUICommand const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::UI::Popups
-{
-    using MessageDialog = py::winrt_wrapper<winrt::Windows::UI::Popups::MessageDialog>;
-    using PopupMenu = py::winrt_wrapper<winrt::Windows::UI::Popups::PopupMenu>;
-    using UICommand = py::winrt_wrapper<winrt::Windows::UI::Popups::UICommand>;
-    using UICommandSeparator = py::winrt_wrapper<winrt::Windows::UI::Popups::UICommandSeparator>;
-    using IUICommand = py::winrt_wrapper<winrt::Windows::UI::Popups::IUICommand>;
 }
 
 namespace py
@@ -130,6 +77,62 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.popups";
         static constexpr const char* type_name = "_IUICommand";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::UI::Popups
+{
+    struct UICommandInvokedHandler
+    {
+        static winrt::Windows::UI::Popups::UICommandInvokedHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Popups::IUICommand const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::UI::Popups
+{
+    using MessageDialog = py::winrt_wrapper<winrt::Windows::UI::Popups::MessageDialog>;
+    using PopupMenu = py::winrt_wrapper<winrt::Windows::UI::Popups::PopupMenu>;
+    using UICommand = py::winrt_wrapper<winrt::Windows::UI::Popups::UICommand>;
+    using UICommandSeparator = py::winrt_wrapper<winrt::Windows::UI::Popups::UICommandSeparator>;
+    using IUICommand = py::winrt_wrapper<winrt::Windows::UI::Popups::IUICommand>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::UI::Popups::UICommandInvokedHandler>
     {

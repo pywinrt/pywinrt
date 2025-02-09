@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Haptics.h")
-#include "py.Windows.Devices.Haptics.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Input.h")
-#include "py.Windows.Devices.Input.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #include <winrt/Windows.Devices.Haptics.h>
 #include <winrt/Windows.Devices.Input.h>
 #include <winrt/Windows.Foundation.h>
@@ -45,59 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Input
 {
-}
-
-namespace py::impl::Windows::UI::Input
-{
-}
-
-namespace py::wrapper::Windows::UI::Input
-{
-    using AttachableInputObject = py::winrt_wrapper<winrt::Windows::UI::Input::AttachableInputObject>;
-    using CrossSlidingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::CrossSlidingEventArgs>;
-    using DraggingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::DraggingEventArgs>;
-    using EdgeGesture = py::winrt_wrapper<winrt::Windows::UI::Input::EdgeGesture>;
-    using EdgeGestureEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::EdgeGestureEventArgs>;
-    using GestureRecognizer = py::winrt_wrapper<winrt::Windows::UI::Input::GestureRecognizer>;
-    using HoldingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::HoldingEventArgs>;
-    using InputActivationListener = py::winrt_wrapper<winrt::Windows::UI::Input::InputActivationListener>;
-    using InputActivationListenerActivationChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>;
-    using KeyboardDeliveryInterceptor = py::winrt_wrapper<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor>;
-    using ManipulationCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationCompletedEventArgs>;
-    using ManipulationInertiaStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>;
-    using ManipulationStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationStartedEventArgs>;
-    using ManipulationUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>;
-    using MouseWheelParameters = py::winrt_wrapper<winrt::Windows::UI::Input::MouseWheelParameters>;
-    using PhysicalGestureRecognizer = py::winrt_wrapper<winrt::Windows::UI::Input::PhysicalGestureRecognizer>;
-    using PointerPoint = py::winrt_wrapper<winrt::Windows::UI::Input::PointerPoint>;
-    using PointerPointProperties = py::winrt_wrapper<winrt::Windows::UI::Input::PointerPointProperties>;
-    using PointerVisualizationSettings = py::winrt_wrapper<winrt::Windows::UI::Input::PointerVisualizationSettings>;
-    using RadialController = py::winrt_wrapper<winrt::Windows::UI::Input::RadialController>;
-    using RadialControllerButtonClickedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>;
-    using RadialControllerButtonHoldingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>;
-    using RadialControllerButtonPressedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>;
-    using RadialControllerButtonReleasedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>;
-    using RadialControllerConfiguration = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerConfiguration>;
-    using RadialControllerControlAcquiredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>;
-    using RadialControllerMenu = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerMenu>;
-    using RadialControllerMenuItem = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerMenuItem>;
-    using RadialControllerRotationChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>;
-    using RadialControllerScreenContact = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerScreenContact>;
-    using RadialControllerScreenContactContinuedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>;
-    using RadialControllerScreenContactEndedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>;
-    using RadialControllerScreenContactStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>;
-    using RightTappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RightTappedEventArgs>;
-    using SystemButtonEventController = py::winrt_wrapper<winrt::Windows::UI::Input::SystemButtonEventController>;
-    using SystemFunctionButtonEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>;
-    using SystemFunctionLockChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>;
-    using SystemFunctionLockIndicatorChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>;
-    using TappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::TappedEventArgs>;
-    using TouchpadGesturesController = py::winrt_wrapper<winrt::Windows::UI::Input::TouchpadGesturesController>;
-    using TouchpadGlobalActionEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>;
-    using IPointerPointTransform = py::winrt_wrapper<winrt::Windows::UI::Input::IPointerPointTransform>;
-    using CrossSlideThresholds = py::winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>;
-    using ManipulationDelta = py::winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationDelta>;
-    using ManipulationVelocities = py::winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationVelocities>;
 }
 
 namespace py
@@ -603,4 +521,89 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationVelocities";
     };
+}
+
+#if __has_include("py.Windows.Devices.Haptics.h")
+#include "py.Windows.Devices.Haptics.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Input.h")
+#include "py.Windows.Devices.Input.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+namespace py::impl::Windows::UI::Input
+{
+}
+
+namespace py::wrapper::Windows::UI::Input
+{
+    using AttachableInputObject = py::winrt_wrapper<winrt::Windows::UI::Input::AttachableInputObject>;
+    using CrossSlidingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::CrossSlidingEventArgs>;
+    using DraggingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::DraggingEventArgs>;
+    using EdgeGesture = py::winrt_wrapper<winrt::Windows::UI::Input::EdgeGesture>;
+    using EdgeGestureEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::EdgeGestureEventArgs>;
+    using GestureRecognizer = py::winrt_wrapper<winrt::Windows::UI::Input::GestureRecognizer>;
+    using HoldingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::HoldingEventArgs>;
+    using InputActivationListener = py::winrt_wrapper<winrt::Windows::UI::Input::InputActivationListener>;
+    using InputActivationListenerActivationChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>;
+    using KeyboardDeliveryInterceptor = py::winrt_wrapper<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor>;
+    using ManipulationCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationCompletedEventArgs>;
+    using ManipulationInertiaStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>;
+    using ManipulationStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationStartedEventArgs>;
+    using ManipulationUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>;
+    using MouseWheelParameters = py::winrt_wrapper<winrt::Windows::UI::Input::MouseWheelParameters>;
+    using PhysicalGestureRecognizer = py::winrt_wrapper<winrt::Windows::UI::Input::PhysicalGestureRecognizer>;
+    using PointerPoint = py::winrt_wrapper<winrt::Windows::UI::Input::PointerPoint>;
+    using PointerPointProperties = py::winrt_wrapper<winrt::Windows::UI::Input::PointerPointProperties>;
+    using PointerVisualizationSettings = py::winrt_wrapper<winrt::Windows::UI::Input::PointerVisualizationSettings>;
+    using RadialController = py::winrt_wrapper<winrt::Windows::UI::Input::RadialController>;
+    using RadialControllerButtonClickedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>;
+    using RadialControllerButtonHoldingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>;
+    using RadialControllerButtonPressedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>;
+    using RadialControllerButtonReleasedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>;
+    using RadialControllerConfiguration = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerConfiguration>;
+    using RadialControllerControlAcquiredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>;
+    using RadialControllerMenu = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerMenu>;
+    using RadialControllerMenuItem = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerMenuItem>;
+    using RadialControllerRotationChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>;
+    using RadialControllerScreenContact = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerScreenContact>;
+    using RadialControllerScreenContactContinuedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>;
+    using RadialControllerScreenContactEndedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>;
+    using RadialControllerScreenContactStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>;
+    using RightTappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::RightTappedEventArgs>;
+    using SystemButtonEventController = py::winrt_wrapper<winrt::Windows::UI::Input::SystemButtonEventController>;
+    using SystemFunctionButtonEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>;
+    using SystemFunctionLockChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>;
+    using SystemFunctionLockIndicatorChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>;
+    using TappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::TappedEventArgs>;
+    using TouchpadGesturesController = py::winrt_wrapper<winrt::Windows::UI::Input::TouchpadGesturesController>;
+    using TouchpadGlobalActionEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>;
+    using IPointerPointTransform = py::winrt_wrapper<winrt::Windows::UI::Input::IPointerPointTransform>;
+    using CrossSlideThresholds = py::winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>;
+    using ManipulationDelta = py::winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationDelta>;
+    using ManipulationVelocities = py::winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationVelocities>;
+}
+
+namespace py
+{
 }

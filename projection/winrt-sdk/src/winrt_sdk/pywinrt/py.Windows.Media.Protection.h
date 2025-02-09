@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.Playback.h")
-#include "py.Windows.Media.Playback.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.Playback.h>
@@ -25,144 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Protection
 {
-}
-
-namespace py::impl::Windows::Media::Protection
-{
-    struct ComponentLoadFailedEventHandler
-    {
-        static winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Protection::MediaProtectionManager const& param0, winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct RebootNeededEventHandler
-    {
-        static winrt::Windows::Media::Protection::RebootNeededEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Protection::MediaProtectionManager const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct ServiceRequestedEventHandler
-    {
-        static winrt::Windows::Media::Protection::ServiceRequestedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Protection::MediaProtectionManager const& param0, winrt::Windows::Media::Protection::ServiceRequestedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Media::Protection
-{
-    using ComponentLoadFailedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>;
-    using ComponentRenewal = py::winrt_wrapper<winrt::Windows::Media::Protection::ComponentRenewal>;
-    using HdcpSession = py::winrt_wrapper<winrt::Windows::Media::Protection::HdcpSession>;
-    using MediaProtectionManager = py::winrt_wrapper<winrt::Windows::Media::Protection::MediaProtectionManager>;
-    using MediaProtectionPMPServer = py::winrt_wrapper<winrt::Windows::Media::Protection::MediaProtectionPMPServer>;
-    using MediaProtectionServiceCompletion = py::winrt_wrapper<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>;
-    using ProtectionCapabilities = py::winrt_wrapper<winrt::Windows::Media::Protection::ProtectionCapabilities>;
-    using RevocationAndRenewalInformation = py::winrt_wrapper<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>;
-    using RevocationAndRenewalItem = py::winrt_wrapper<winrt::Windows::Media::Protection::RevocationAndRenewalItem>;
-    using ServiceRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>;
-    using IMediaProtectionServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>;
 }
 
 namespace py
@@ -321,6 +170,160 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "_IMediaProtectionServiceRequest";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.Playback.h")
+#include "py.Windows.Media.Playback.h"
+#endif
+
+namespace py::impl::Windows::Media::Protection
+{
+    struct ComponentLoadFailedEventHandler
+    {
+        static winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Protection::MediaProtectionManager const& param0, winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct RebootNeededEventHandler
+    {
+        static winrt::Windows::Media::Protection::RebootNeededEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Protection::MediaProtectionManager const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct ServiceRequestedEventHandler
+    {
+        static winrt::Windows::Media::Protection::ServiceRequestedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Protection::MediaProtectionManager const& param0, winrt::Windows::Media::Protection::ServiceRequestedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Media::Protection
+{
+    using ComponentLoadFailedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>;
+    using ComponentRenewal = py::winrt_wrapper<winrt::Windows::Media::Protection::ComponentRenewal>;
+    using HdcpSession = py::winrt_wrapper<winrt::Windows::Media::Protection::HdcpSession>;
+    using MediaProtectionManager = py::winrt_wrapper<winrt::Windows::Media::Protection::MediaProtectionManager>;
+    using MediaProtectionPMPServer = py::winrt_wrapper<winrt::Windows::Media::Protection::MediaProtectionPMPServer>;
+    using MediaProtectionServiceCompletion = py::winrt_wrapper<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>;
+    using ProtectionCapabilities = py::winrt_wrapper<winrt::Windows::Media::Protection::ProtectionCapabilities>;
+    using RevocationAndRenewalInformation = py::winrt_wrapper<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>;
+    using RevocationAndRenewalItem = py::winrt_wrapper<winrt::Windows::Media::Protection::RevocationAndRenewalItem>;
+    using ServiceRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>;
+    using IMediaProtectionServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler>
     {

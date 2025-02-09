@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Data.Xml.Dom.h")
-#include "py.Windows.Data.Xml.Dom.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
 #include <winrt/Windows.Data.Xml.Dom.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,31 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Web::Syndication
 {
-}
-
-namespace py::impl::Windows::Web::Syndication
-{
-}
-
-namespace py::wrapper::Windows::Web::Syndication
-{
-    using SyndicationAttribute = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationAttribute>;
-    using SyndicationCategory = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationCategory>;
-    using SyndicationClient = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationClient>;
-    using SyndicationContent = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationContent>;
-    using SyndicationError = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationError>;
-    using SyndicationFeed = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationFeed>;
-    using SyndicationGenerator = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationGenerator>;
-    using SyndicationItem = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationItem>;
-    using SyndicationLink = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationLink>;
-    using SyndicationNode = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationNode>;
-    using SyndicationPerson = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationPerson>;
-    using SyndicationText = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationText>;
-    using ISyndicationClient = py::winrt_wrapper<winrt::Windows::Web::Syndication::ISyndicationClient>;
-    using ISyndicationNode = py::winrt_wrapper<winrt::Windows::Web::Syndication::ISyndicationNode>;
-    using ISyndicationText = py::winrt_wrapper<winrt::Windows::Web::Syndication::ISyndicationText>;
-    using RetrievalProgress = py::winrt_struct_wrapper<winrt::Windows::Web::Syndication::RetrievalProgress>;
-    using TransferProgress = py::winrt_struct_wrapper<winrt::Windows::Web::Syndication::TransferProgress>;
 }
 
 namespace py
@@ -234,4 +192,49 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "TransferProgress";
     };
+}
+
+#if __has_include("py.Windows.Data.Xml.Dom.h")
+#include "py.Windows.Data.Xml.Dom.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+namespace py::impl::Windows::Web::Syndication
+{
+}
+
+namespace py::wrapper::Windows::Web::Syndication
+{
+    using SyndicationAttribute = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationAttribute>;
+    using SyndicationCategory = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationCategory>;
+    using SyndicationClient = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationClient>;
+    using SyndicationContent = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationContent>;
+    using SyndicationError = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationError>;
+    using SyndicationFeed = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationFeed>;
+    using SyndicationGenerator = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationGenerator>;
+    using SyndicationItem = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationItem>;
+    using SyndicationLink = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationLink>;
+    using SyndicationNode = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationNode>;
+    using SyndicationPerson = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationPerson>;
+    using SyndicationText = py::winrt_wrapper<winrt::Windows::Web::Syndication::SyndicationText>;
+    using ISyndicationClient = py::winrt_wrapper<winrt::Windows::Web::Syndication::ISyndicationClient>;
+    using ISyndicationNode = py::winrt_wrapper<winrt::Windows::Web::Syndication::ISyndicationNode>;
+    using ISyndicationText = py::winrt_wrapper<winrt::Windows::Web::Syndication::ISyndicationText>;
+    using RetrievalProgress = py::winrt_struct_wrapper<winrt::Windows::Web::Syndication::RetrievalProgress>;
+    using TransferProgress = py::winrt_struct_wrapper<winrt::Windows::Web::Syndication::TransferProgress>;
+}
+
+namespace py
+{
 }

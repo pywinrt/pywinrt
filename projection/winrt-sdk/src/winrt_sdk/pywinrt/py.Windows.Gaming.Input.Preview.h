@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Gaming.Input.h")
-#include "py.Windows.Gaming.Input.h"
-#endif
-
-#if __has_include("py.Windows.Gaming.Input.Custom.h")
-#include "py.Windows.Gaming.Input.Custom.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Gaming.Input.h>
 #include <winrt/Windows.Gaming.Input.Custom.h>
@@ -30,17 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Gaming::Input::Preview
 {
-}
-
-namespace py::impl::Windows::Gaming::Input::Preview
-{
-}
-
-namespace py::wrapper::Windows::Gaming::Input::Preview
-{
-    using GameControllerProviderInfo = py::winrt_wrapper<winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo>;
-    using LegacyGipGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider>;
-    using HeadsetGeqGains = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains>;
 }
 
 namespace py
@@ -160,4 +132,35 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
         static constexpr const char* type_name = "HeadsetGeqGains";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Gaming.Input.h")
+#include "py.Windows.Gaming.Input.h"
+#endif
+
+#if __has_include("py.Windows.Gaming.Input.Custom.h")
+#include "py.Windows.Gaming.Input.Custom.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Gaming::Input::Preview
+{
+}
+
+namespace py::wrapper::Windows::Gaming::Input::Preview
+{
+    using GameControllerProviderInfo = py::winrt_wrapper<winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo>;
+    using LegacyGipGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider>;
+    using HeadsetGeqGains = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains>;
+}
+
+namespace py
+{
 }

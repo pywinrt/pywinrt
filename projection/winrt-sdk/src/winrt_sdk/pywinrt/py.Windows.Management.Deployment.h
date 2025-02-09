@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,37 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Management::Deployment
 {
-}
-
-namespace py::impl::Windows::Management::Deployment
-{
-}
-
-namespace py::wrapper::Windows::Management::Deployment
-{
-    using AddPackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::AddPackageOptions>;
-    using AppInstallerManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::AppInstallerManager>;
-    using AutoUpdateSettingsOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions>;
-    using CreateSharedPackageContainerOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions>;
-    using CreateSharedPackageContainerResult = py::winrt_wrapper<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>;
-    using DeleteSharedPackageContainerOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions>;
-    using DeleteSharedPackageContainerResult = py::winrt_wrapper<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>;
-    using DeploymentResult = py::winrt_wrapper<winrt::Windows::Management::Deployment::DeploymentResult>;
-    using FindSharedPackageContainerOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions>;
-    using PackageAllUserProvisioningOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions>;
-    using PackageManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageManager>;
-    using PackageManagerDebugSettings = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>;
-    using PackageUserInformation = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageUserInformation>;
-    using PackageVolume = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageVolume>;
-    using RegisterPackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::RegisterPackageOptions>;
-    using RemovePackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::RemovePackageOptions>;
-    using SharedPackageContainer = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainer>;
-    using SharedPackageContainerManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainerManager>;
-    using SharedPackageContainerMember = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainerMember>;
-    using StagePackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::StagePackageOptions>;
-    using UpdateSharedPackageContainerOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions>;
-    using UpdateSharedPackageContainerResult = py::winrt_wrapper<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>;
-    using DeploymentProgress = py::winrt_struct_wrapper<winrt::Windows::Management::Deployment::DeploymentProgress>;
 }
 
 namespace py
@@ -379,4 +335,51 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "DeploymentProgress";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Management::Deployment
+{
+}
+
+namespace py::wrapper::Windows::Management::Deployment
+{
+    using AddPackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::AddPackageOptions>;
+    using AppInstallerManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::AppInstallerManager>;
+    using AutoUpdateSettingsOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions>;
+    using CreateSharedPackageContainerOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions>;
+    using CreateSharedPackageContainerResult = py::winrt_wrapper<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>;
+    using DeleteSharedPackageContainerOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions>;
+    using DeleteSharedPackageContainerResult = py::winrt_wrapper<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>;
+    using DeploymentResult = py::winrt_wrapper<winrt::Windows::Management::Deployment::DeploymentResult>;
+    using FindSharedPackageContainerOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions>;
+    using PackageAllUserProvisioningOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions>;
+    using PackageManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageManager>;
+    using PackageManagerDebugSettings = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>;
+    using PackageUserInformation = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageUserInformation>;
+    using PackageVolume = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageVolume>;
+    using RegisterPackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::RegisterPackageOptions>;
+    using RemovePackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::RemovePackageOptions>;
+    using SharedPackageContainer = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainer>;
+    using SharedPackageContainerManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainerManager>;
+    using SharedPackageContainerMember = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainerMember>;
+    using StagePackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::StagePackageOptions>;
+    using UpdateSharedPackageContainerOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions>;
+    using UpdateSharedPackageContainerResult = py::winrt_wrapper<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>;
+    using DeploymentProgress = py::winrt_struct_wrapper<winrt::Windows::Management::Deployment::DeploymentProgress>;
+}
+
+namespace py
+{
 }

@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,18 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::Windows::AppNotifications
 {
-}
-
-namespace py::impl::Microsoft::Windows::AppNotifications
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::AppNotifications
-{
-    using AppNotification = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotification>;
-    using AppNotificationActivatedEventArgs = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs>;
-    using AppNotificationManager = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager>;
-    using AppNotificationProgressData = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>;
 }
 
 namespace py
@@ -101,4 +80,28 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications";
         static constexpr const char* type_name = "AppNotificationProgressData";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::AppNotifications
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::AppNotifications
+{
+    using AppNotification = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotification>;
+    using AppNotificationActivatedEventArgs = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs>;
+    using AppNotificationManager = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager>;
+    using AppNotificationProgressData = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>;
+}
+
+namespace py
+{
 }

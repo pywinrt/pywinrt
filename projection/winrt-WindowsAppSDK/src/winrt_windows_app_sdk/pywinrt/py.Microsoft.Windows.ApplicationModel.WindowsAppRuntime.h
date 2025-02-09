@@ -4,28 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.h>
 
 namespace py::proj::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 {
-}
-
-namespace py::impl::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
-{
-    using DeploymentInitializeOptions = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions>;
-    using DeploymentManager = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager>;
-    using DeploymentResult = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult>;
 }
 
 namespace py
@@ -65,4 +49,23 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime";
         static constexpr const char* type_name = "DeploymentResult";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
+{
+    using DeploymentInitializeOptions = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions>;
+    using DeploymentManager = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager>;
+    using DeploymentResult = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult>;
+}
+
+namespace py
+{
 }

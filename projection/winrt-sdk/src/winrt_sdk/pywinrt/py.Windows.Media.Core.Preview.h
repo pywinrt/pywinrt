@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Media.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Core::Preview
 {
-}
-
-namespace py::impl::Windows::Media::Core::Preview
-{
-}
-
-namespace py::wrapper::Windows::Media::Core::Preview
-{
-    using SoundLevelBroker = py::winrt_wrapper<winrt::Windows::Media::Core::Preview::SoundLevelBroker>;
 }
 
 namespace py
@@ -41,4 +23,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.core.preview";
         static constexpr const char* type_name = "SoundLevelBroker";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+namespace py::impl::Windows::Media::Core::Preview
+{
+}
+
+namespace py::wrapper::Windows::Media::Core::Preview
+{
+    using SoundLevelBroker = py::winrt_wrapper<winrt::Windows::Media::Core::Preview::SoundLevelBroker>;
+}
+
+namespace py
+{
 }

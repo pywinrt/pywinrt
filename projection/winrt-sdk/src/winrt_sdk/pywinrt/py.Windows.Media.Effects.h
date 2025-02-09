@@ -4,59 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.h")
-#include "py.Windows.Media.Capture.h"
-#endif
-
-#if __has_include("py.Windows.Media.Editing.h")
-#include "py.Windows.Media.Editing.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
-#endif
-
-#if __has_include("py.Windows.Media.Playback.h")
-#include "py.Windows.Media.Playback.h"
-#endif
-
-#if __has_include("py.Windows.Media.Render.h")
-#include "py.Windows.Media.Render.h"
-#endif
-
-#if __has_include("py.Windows.Media.Transcoding.h")
-#include "py.Windows.Media.Transcoding.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
@@ -75,34 +22,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Effects
 {
-}
-
-namespace py::impl::Windows::Media::Effects
-{
-}
-
-namespace py::wrapper::Windows::Media::Effects
-{
-    using AcousticEchoCancellationConfiguration = py::winrt_wrapper<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>;
-    using AudioCaptureEffectsManager = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>;
-    using AudioEffect = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioEffect>;
-    using AudioEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioEffectDefinition>;
-    using AudioEffectsManager = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioEffectsManager>;
-    using AudioRenderEffectsManager = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioRenderEffectsManager>;
-    using CompositeVideoFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::CompositeVideoFrameContext>;
-    using ProcessAudioFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::ProcessAudioFrameContext>;
-    using ProcessVideoFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::ProcessVideoFrameContext>;
-    using SlowMotionEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::SlowMotionEffectDefinition>;
-    using VideoCompositorDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoCompositorDefinition>;
-    using VideoEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoEffectDefinition>;
-    using VideoTransformEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoTransformEffectDefinition>;
-    using VideoTransformSphericalProjection = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>;
-    using IAudioEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::IAudioEffectDefinition>;
-    using IBasicAudioEffect = py::winrt_wrapper<winrt::Windows::Media::Effects::IBasicAudioEffect>;
-    using IBasicVideoEffect = py::winrt_wrapper<winrt::Windows::Media::Effects::IBasicVideoEffect>;
-    using IVideoCompositor = py::winrt_wrapper<winrt::Windows::Media::Effects::IVideoCompositor>;
-    using IVideoCompositorDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::IVideoCompositorDefinition>;
-    using IVideoEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::IVideoEffectDefinition>;
 }
 
 namespace py
@@ -311,4 +230,88 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "_IVideoEffectDefinition";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+#if __has_include("py.Windows.Media.Capture.h")
+#include "py.Windows.Media.Capture.h"
+#endif
+
+#if __has_include("py.Windows.Media.Editing.h")
+#include "py.Windows.Media.Editing.h"
+#endif
+
+#if __has_include("py.Windows.Media.MediaProperties.h")
+#include "py.Windows.Media.MediaProperties.h"
+#endif
+
+#if __has_include("py.Windows.Media.Playback.h")
+#include "py.Windows.Media.Playback.h"
+#endif
+
+#if __has_include("py.Windows.Media.Render.h")
+#include "py.Windows.Media.Render.h"
+#endif
+
+#if __has_include("py.Windows.Media.Transcoding.h")
+#include "py.Windows.Media.Transcoding.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::Media::Effects
+{
+}
+
+namespace py::wrapper::Windows::Media::Effects
+{
+    using AcousticEchoCancellationConfiguration = py::winrt_wrapper<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>;
+    using AudioCaptureEffectsManager = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>;
+    using AudioEffect = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioEffect>;
+    using AudioEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioEffectDefinition>;
+    using AudioEffectsManager = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioEffectsManager>;
+    using AudioRenderEffectsManager = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioRenderEffectsManager>;
+    using CompositeVideoFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::CompositeVideoFrameContext>;
+    using ProcessAudioFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::ProcessAudioFrameContext>;
+    using ProcessVideoFrameContext = py::winrt_wrapper<winrt::Windows::Media::Effects::ProcessVideoFrameContext>;
+    using SlowMotionEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::SlowMotionEffectDefinition>;
+    using VideoCompositorDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoCompositorDefinition>;
+    using VideoEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoEffectDefinition>;
+    using VideoTransformEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoTransformEffectDefinition>;
+    using VideoTransformSphericalProjection = py::winrt_wrapper<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>;
+    using IAudioEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::IAudioEffectDefinition>;
+    using IBasicAudioEffect = py::winrt_wrapper<winrt::Windows::Media::Effects::IBasicAudioEffect>;
+    using IBasicVideoEffect = py::winrt_wrapper<winrt::Windows::Media::Effects::IBasicVideoEffect>;
+    using IVideoCompositor = py::winrt_wrapper<winrt::Windows::Media::Effects::IVideoCompositor>;
+    using IVideoCompositorDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::IVideoCompositorDefinition>;
+    using IVideoEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::IVideoEffectDefinition>;
+}
+
+namespace py
+{
 }

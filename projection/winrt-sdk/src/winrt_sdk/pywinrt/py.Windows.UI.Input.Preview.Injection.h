@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Gaming.Input.h")
-#include "py.Windows.Gaming.Input.h"
-#endif
-
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Gaming.Input.h>
 
@@ -20,23 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Input::Preview::Injection
 {
-}
-
-namespace py::impl::Windows::UI::Input::Preview::Injection
-{
-}
-
-namespace py::wrapper::Windows::UI::Input::Preview::Injection
-{
-    using InjectedInputGamepadInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>;
-    using InjectedInputKeyboardInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>;
-    using InjectedInputMouseInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>;
-    using InjectedInputPenInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>;
-    using InjectedInputTouchInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>;
-    using InputInjector = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InputInjector>;
-    using InjectedInputPoint = py::winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>;
-    using InjectedInputPointerInfo = py::winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>;
-    using InjectedInputRectangle = py::winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>;
 }
 
 namespace py
@@ -221,4 +195,33 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputRectangle";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Gaming.Input.h")
+#include "py.Windows.Gaming.Input.h"
+#endif
+
+namespace py::impl::Windows::UI::Input::Preview::Injection
+{
+}
+
+namespace py::wrapper::Windows::UI::Input::Preview::Injection
+{
+    using InjectedInputGamepadInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>;
+    using InjectedInputKeyboardInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>;
+    using InjectedInputMouseInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>;
+    using InjectedInputPenInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>;
+    using InjectedInputTouchInfo = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>;
+    using InputInjector = py::winrt_wrapper<winrt::Windows::UI::Input::Preview::Injection::InputInjector>;
+    using InjectedInputPoint = py::winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>;
+    using InjectedInputPointerInfo = py::winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>;
+    using InjectedInputRectangle = py::winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>;
+}
+
+namespace py
+{
 }

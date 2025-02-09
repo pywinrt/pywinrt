@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Sensors.h")
-#include "py.Windows.Devices.Sensors.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Devices.Sensors.h>
 #include <winrt/Windows.Foundation.h>
 
@@ -20,17 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::System::Preview
 {
-}
-
-namespace py::impl::Windows::System::Preview
-{
-}
-
-namespace py::wrapper::Windows::System::Preview
-{
-    using TwoPanelHingedDevicePosturePreview = py::winrt_wrapper<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>;
-    using TwoPanelHingedDevicePosturePreviewReading = py::winrt_wrapper<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>;
-    using TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = py::winrt_wrapper<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>;
 }
 
 namespace py
@@ -70,4 +50,27 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.preview";
         static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Devices.Sensors.h")
+#include "py.Windows.Devices.Sensors.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::System::Preview
+{
+}
+
+namespace py::wrapper::Windows::System::Preview
+{
+    using TwoPanelHingedDevicePosturePreview = py::winrt_wrapper<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>;
+    using TwoPanelHingedDevicePosturePreviewReading = py::winrt_wrapper<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>;
+    using TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = py::winrt_wrapper<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>;
+}
+
+namespace py
+{
 }

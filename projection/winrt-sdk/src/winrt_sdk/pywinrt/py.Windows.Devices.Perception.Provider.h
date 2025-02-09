@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Perception.h")
-#include "py.Windows.Devices.Perception.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
 #include <winrt/Windows.Devices.Perception.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -40,91 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Perception::Provider
 {
-}
-
-namespace py::impl::Windows::Devices::Perception::Provider
-{
-    struct PerceptionStartFaceAuthenticationHandler
-    {
-        static winrt::Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-
-                    return py::convert_to<bool>(return_value.get());
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct PerceptionStopFaceAuthenticationHandler
-    {
-        static winrt::Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Devices::Perception::Provider
-{
-    using KnownPerceptionFrameKind = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind>;
-    using PerceptionControlGroup = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup>;
-    using PerceptionCorrelation = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation>;
-    using PerceptionCorrelationGroup = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup>;
-    using PerceptionFaceAuthenticationGroup = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup>;
-    using PerceptionFrame = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>;
-    using PerceptionFrameProviderInfo = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>;
-    using PerceptionFrameProviderManagerService = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService>;
-    using PerceptionPropertyChangeRequest = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>;
-    using PerceptionVideoFrameAllocator = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator>;
-    using IPerceptionFrameProvider = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>;
-    using IPerceptionFrameProviderManager = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>;
 }
 
 namespace py
@@ -225,6 +115,119 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "_IPerceptionFrameProviderManager";
     };
+}
+
+#if __has_include("py.Windows.Devices.Perception.h")
+#include "py.Windows.Devices.Perception.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+namespace py::impl::Windows::Devices::Perception::Provider
+{
+    struct PerceptionStartFaceAuthenticationHandler
+    {
+        static winrt::Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+
+                    return py::convert_to<bool>(return_value.get());
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct PerceptionStopFaceAuthenticationHandler
+    {
+        static winrt::Windows::Devices::Perception::Provider::PerceptionStopFaceAuthenticationHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Devices::Perception::Provider
+{
+    using KnownPerceptionFrameKind = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind>;
+    using PerceptionControlGroup = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup>;
+    using PerceptionCorrelation = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation>;
+    using PerceptionCorrelationGroup = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup>;
+    using PerceptionFaceAuthenticationGroup = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup>;
+    using PerceptionFrame = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>;
+    using PerceptionFrameProviderInfo = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>;
+    using PerceptionFrameProviderManagerService = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService>;
+    using PerceptionPropertyChangeRequest = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>;
+    using PerceptionVideoFrameAllocator = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator>;
+    using IPerceptionFrameProvider = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>;
+    using IPerceptionFrameProviderManager = py::winrt_wrapper<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Devices::Perception::Provider::PerceptionStartFaceAuthenticationHandler>
     {

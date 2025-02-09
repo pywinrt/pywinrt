@@ -5,11 +5,44 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.System.RemoteDesktop.Input.h>
 
 namespace py::proj::Windows::System::RemoteDesktop::Input
 {
+}
+
+namespace py
+{
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes> = "I";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionOptions> = "I";
+
+
+    template<>
+    struct py_type<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.input.RemoteKeyEventAttributes";
+        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.input";
+        static constexpr const char* type_name = "RemoteKeyEventAttributes";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.input.RemoteTextConnectionOptions";
+        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.input";
+        static constexpr const char* type_name = "RemoteTextConnectionOptions";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.input.RemoteTextConnection";
+        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.input";
+        static constexpr const char* type_name = "RemoteTextConnection";
+    };
 }
 
 namespace py::impl::Windows::System::RemoteDesktop::Input
@@ -56,36 +89,6 @@ namespace py::wrapper::Windows::System::RemoteDesktop::Input
 
 namespace py
 {
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionOptions> = "I";
-
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.input.RemoteKeyEventAttributes";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.input";
-        static constexpr const char* type_name = "RemoteKeyEventAttributes";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.input.RemoteTextConnectionOptions";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.input";
-        static constexpr const char* type_name = "RemoteTextConnectionOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.input.RemoteTextConnection";
-        static constexpr const char* module_name = "winrt.windows.system.remotedesktop.input";
-        static constexpr const char* type_name = "RemoteTextConnection";
-    };
     template <>
     struct delegate_python_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler>
     {

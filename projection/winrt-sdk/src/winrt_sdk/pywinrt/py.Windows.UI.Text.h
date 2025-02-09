@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.UI.h>
@@ -25,25 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Text
 {
-}
-
-namespace py::impl::Windows::UI::Text
-{
-}
-
-namespace py::wrapper::Windows::UI::Text
-{
-    using ContentLinkInfo = py::winrt_wrapper<winrt::Windows::UI::Text::ContentLinkInfo>;
-    using FontWeights = py::winrt_wrapper<winrt::Windows::UI::Text::FontWeights>;
-    using RichEditTextDocument = py::winrt_wrapper<winrt::Windows::UI::Text::RichEditTextDocument>;
-    using RichEditTextRange = py::winrt_wrapper<winrt::Windows::UI::Text::RichEditTextRange>;
-    using TextConstants = py::winrt_wrapper<winrt::Windows::UI::Text::TextConstants>;
-    using ITextCharacterFormat = py::winrt_wrapper<winrt::Windows::UI::Text::ITextCharacterFormat>;
-    using ITextDocument = py::winrt_wrapper<winrt::Windows::UI::Text::ITextDocument>;
-    using ITextParagraphFormat = py::winrt_wrapper<winrt::Windows::UI::Text::ITextParagraphFormat>;
-    using ITextRange = py::winrt_wrapper<winrt::Windows::UI::Text::ITextRange>;
-    using ITextSelection = py::winrt_wrapper<winrt::Windows::UI::Text::ITextSelection>;
-    using FontWeight = py::winrt_struct_wrapper<winrt::Windows::UI::Text::FontWeight>;
 }
 
 namespace py
@@ -447,4 +415,39 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.text";
         static constexpr const char* type_name = "FontWeight";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::UI::Text
+{
+}
+
+namespace py::wrapper::Windows::UI::Text
+{
+    using ContentLinkInfo = py::winrt_wrapper<winrt::Windows::UI::Text::ContentLinkInfo>;
+    using FontWeights = py::winrt_wrapper<winrt::Windows::UI::Text::FontWeights>;
+    using RichEditTextDocument = py::winrt_wrapper<winrt::Windows::UI::Text::RichEditTextDocument>;
+    using RichEditTextRange = py::winrt_wrapper<winrt::Windows::UI::Text::RichEditTextRange>;
+    using TextConstants = py::winrt_wrapper<winrt::Windows::UI::Text::TextConstants>;
+    using ITextCharacterFormat = py::winrt_wrapper<winrt::Windows::UI::Text::ITextCharacterFormat>;
+    using ITextDocument = py::winrt_wrapper<winrt::Windows::UI::Text::ITextDocument>;
+    using ITextParagraphFormat = py::winrt_wrapper<winrt::Windows::UI::Text::ITextParagraphFormat>;
+    using ITextRange = py::winrt_wrapper<winrt::Windows::UI::Text::ITextRange>;
+    using ITextSelection = py::winrt_wrapper<winrt::Windows::UI::Text::ITextSelection>;
+    using FontWeight = py::winrt_struct_wrapper<winrt::Windows::UI::Text::FontWeight>;
+}
+
+namespace py
+{
 }

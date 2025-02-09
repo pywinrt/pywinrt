@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -35,46 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Services::Store
 {
-}
-
-namespace py::impl::Windows::Services::Store
-{
-}
-
-namespace py::wrapper::Windows::Services::Store
-{
-    using StoreAcquireLicenseResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreAcquireLicenseResult>;
-    using StoreAppLicense = py::winrt_wrapper<winrt::Windows::Services::Store::StoreAppLicense>;
-    using StoreAvailability = py::winrt_wrapper<winrt::Windows::Services::Store::StoreAvailability>;
-    using StoreCanAcquireLicenseResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreCanAcquireLicenseResult>;
-    using StoreCollectionData = py::winrt_wrapper<winrt::Windows::Services::Store::StoreCollectionData>;
-    using StoreConsumableResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreConsumableResult>;
-    using StoreContext = py::winrt_wrapper<winrt::Windows::Services::Store::StoreContext>;
-    using StoreImage = py::winrt_wrapper<winrt::Windows::Services::Store::StoreImage>;
-    using StoreLicense = py::winrt_wrapper<winrt::Windows::Services::Store::StoreLicense>;
-    using StorePackageInstallOptions = py::winrt_wrapper<winrt::Windows::Services::Store::StorePackageInstallOptions>;
-    using StorePackageLicense = py::winrt_wrapper<winrt::Windows::Services::Store::StorePackageLicense>;
-    using StorePackageUpdate = py::winrt_wrapper<winrt::Windows::Services::Store::StorePackageUpdate>;
-    using StorePackageUpdateResult = py::winrt_wrapper<winrt::Windows::Services::Store::StorePackageUpdateResult>;
-    using StorePrice = py::winrt_wrapper<winrt::Windows::Services::Store::StorePrice>;
-    using StoreProduct = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProduct>;
-    using StoreProductOptions = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProductOptions>;
-    using StoreProductPagedQueryResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProductPagedQueryResult>;
-    using StoreProductQueryResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProductQueryResult>;
-    using StoreProductResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProductResult>;
-    using StorePurchaseProperties = py::winrt_wrapper<winrt::Windows::Services::Store::StorePurchaseProperties>;
-    using StorePurchaseResult = py::winrt_wrapper<winrt::Windows::Services::Store::StorePurchaseResult>;
-    using StoreQueueItem = py::winrt_wrapper<winrt::Windows::Services::Store::StoreQueueItem>;
-    using StoreQueueItemCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs>;
-    using StoreQueueItemStatus = py::winrt_wrapper<winrt::Windows::Services::Store::StoreQueueItemStatus>;
-    using StoreRateAndReviewResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreRateAndReviewResult>;
-    using StoreRequestHelper = py::winrt_wrapper<winrt::Windows::Services::Store::StoreRequestHelper>;
-    using StoreSendRequestResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreSendRequestResult>;
-    using StoreSku = py::winrt_wrapper<winrt::Windows::Services::Store::StoreSku>;
-    using StoreSubscriptionInfo = py::winrt_wrapper<winrt::Windows::Services::Store::StoreSubscriptionInfo>;
-    using StoreUninstallStorePackageResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>;
-    using StoreVideo = py::winrt_wrapper<winrt::Windows::Services::Store::StoreVideo>;
-    using StorePackageUpdateStatus = py::winrt_struct_wrapper<winrt::Windows::Services::Store::StorePackageUpdateStatus>;
 }
 
 namespace py
@@ -448,4 +387,68 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePackageUpdateStatus";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+namespace py::impl::Windows::Services::Store
+{
+}
+
+namespace py::wrapper::Windows::Services::Store
+{
+    using StoreAcquireLicenseResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreAcquireLicenseResult>;
+    using StoreAppLicense = py::winrt_wrapper<winrt::Windows::Services::Store::StoreAppLicense>;
+    using StoreAvailability = py::winrt_wrapper<winrt::Windows::Services::Store::StoreAvailability>;
+    using StoreCanAcquireLicenseResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreCanAcquireLicenseResult>;
+    using StoreCollectionData = py::winrt_wrapper<winrt::Windows::Services::Store::StoreCollectionData>;
+    using StoreConsumableResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreConsumableResult>;
+    using StoreContext = py::winrt_wrapper<winrt::Windows::Services::Store::StoreContext>;
+    using StoreImage = py::winrt_wrapper<winrt::Windows::Services::Store::StoreImage>;
+    using StoreLicense = py::winrt_wrapper<winrt::Windows::Services::Store::StoreLicense>;
+    using StorePackageInstallOptions = py::winrt_wrapper<winrt::Windows::Services::Store::StorePackageInstallOptions>;
+    using StorePackageLicense = py::winrt_wrapper<winrt::Windows::Services::Store::StorePackageLicense>;
+    using StorePackageUpdate = py::winrt_wrapper<winrt::Windows::Services::Store::StorePackageUpdate>;
+    using StorePackageUpdateResult = py::winrt_wrapper<winrt::Windows::Services::Store::StorePackageUpdateResult>;
+    using StorePrice = py::winrt_wrapper<winrt::Windows::Services::Store::StorePrice>;
+    using StoreProduct = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProduct>;
+    using StoreProductOptions = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProductOptions>;
+    using StoreProductPagedQueryResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProductPagedQueryResult>;
+    using StoreProductQueryResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProductQueryResult>;
+    using StoreProductResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreProductResult>;
+    using StorePurchaseProperties = py::winrt_wrapper<winrt::Windows::Services::Store::StorePurchaseProperties>;
+    using StorePurchaseResult = py::winrt_wrapper<winrt::Windows::Services::Store::StorePurchaseResult>;
+    using StoreQueueItem = py::winrt_wrapper<winrt::Windows::Services::Store::StoreQueueItem>;
+    using StoreQueueItemCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs>;
+    using StoreQueueItemStatus = py::winrt_wrapper<winrt::Windows::Services::Store::StoreQueueItemStatus>;
+    using StoreRateAndReviewResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreRateAndReviewResult>;
+    using StoreRequestHelper = py::winrt_wrapper<winrt::Windows::Services::Store::StoreRequestHelper>;
+    using StoreSendRequestResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreSendRequestResult>;
+    using StoreSku = py::winrt_wrapper<winrt::Windows::Services::Store::StoreSku>;
+    using StoreSubscriptionInfo = py::winrt_wrapper<winrt::Windows::Services::Store::StoreSubscriptionInfo>;
+    using StoreUninstallStorePackageResult = py::winrt_wrapper<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>;
+    using StoreVideo = py::winrt_wrapper<winrt::Windows::Services::Store::StoreVideo>;
+    using StorePackageUpdateStatus = py::winrt_struct_wrapper<winrt::Windows::Services::Store::StorePackageUpdateStatus>;
+}
+
+namespace py
+{
 }

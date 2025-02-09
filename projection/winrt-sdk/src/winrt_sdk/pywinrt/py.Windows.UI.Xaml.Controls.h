@@ -4,135 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.h")
-#include "py.Windows.ApplicationModel.Contacts.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Search.h")
-#include "py.Windows.ApplicationModel.Search.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.h")
-#include "py.Windows.Media.Capture.h"
-#endif
-
-#if __has_include("py.Windows.Media.Casting.h")
-#include "py.Windows.Media.Casting.h"
-#endif
-
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
-#endif
-
-#if __has_include("py.Windows.Media.PlayTo.h")
-#include "py.Windows.Media.PlayTo.h"
-#endif
-
-#if __has_include("py.Windows.Media.Playback.h")
-#include "py.Windows.Media.Playback.h"
-#endif
-
-#if __has_include("py.Windows.Media.Protection.h")
-#include "py.Windows.Media.Protection.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
-#if __has_include("py.Windows.UI.Input.Inking.h")
-#include "py.Windows.UI.Input.Inking.h"
-#endif
-
-#if __has_include("py.Windows.UI.Text.h")
-#include "py.Windows.UI.Text.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.h")
-#include "py.Windows.UI.Xaml.Automation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
-#include "py.Windows.UI.Xaml.Automation.Peers.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
-#include "py.Windows.UI.Xaml.Controls.Primitives.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Data.h")
-#include "py.Windows.UI.Xaml.Data.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Documents.h")
-#include "py.Windows.UI.Xaml.Documents.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Input.h")
-#include "py.Windows.UI.Xaml.Input.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Interop.h")
-#include "py.Windows.UI.Xaml.Interop.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.h")
-#include "py.Windows.UI.Xaml.Media.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.Animation.h")
-#include "py.Windows.UI.Xaml.Media.Animation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Navigation.h")
-#include "py.Windows.UI.Xaml.Navigation.h"
-#endif
-
-#if __has_include("py.Windows.Web.h")
-#include "py.Windows.Web.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Contacts.h>
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.ApplicationModel.Search.h>
@@ -170,992 +41,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Controls
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Controls
-{
-    struct BackClickEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::BackClickEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::BackClickEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct CalendarViewDayItemChangingEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::Controls::CalendarView const& param0, winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct CleanUpVirtualizedItemEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct ContextMenuOpeningEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::ContextMenuOpeningEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::ContextMenuEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct DragItemsStartingEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct HubSectionHeaderClickEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct ItemClickEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::ItemClickEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::ItemClickEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct ListViewItemToKeyHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::ListViewItemToKeyHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-
-                    return py::convert_to<winrt::hstring>(return_value.get());
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct ListViewKeyToItemHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::ListViewKeyToItemHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::hstring const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-
-                    return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::IInspectable>>(return_value.get());
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct NotifyEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::NotifyEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::NotifyEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct SectionsInViewChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct SelectionChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::SelectionChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct SemanticZoomViewChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct TextChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::TextChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::TextChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct TextControlPasteEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::TextControlPasteEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::TextControlPasteEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct WebViewNavigationFailedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Controls::WebViewNavigationFailedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::WebViewNavigationFailedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Controls
-{
-    using AnchorRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AnchorRequestedEventArgs>;
-    using AppBar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBar>;
-    using AppBarButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBarButton>;
-    using AppBarElementContainer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBarElementContainer>;
-    using AppBarSeparator = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBarSeparator>;
-    using AppBarToggleButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>;
-    using AutoSuggestBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AutoSuggestBox>;
-    using AutoSuggestBoxQuerySubmittedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxQuerySubmittedEventArgs>;
-    using AutoSuggestBoxSuggestionChosenEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxSuggestionChosenEventArgs>;
-    using AutoSuggestBoxTextChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxTextChangedEventArgs>;
-    using BackClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::BackClickEventArgs>;
-    using BitmapIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::BitmapIcon>;
-    using BitmapIconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::BitmapIconSource>;
-    using Border = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Border>;
-    using Button = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Button>;
-    using CalendarDatePicker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarDatePicker>;
-    using CalendarDatePickerDateChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarDatePickerDateChangedEventArgs>;
-    using CalendarView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarView>;
-    using CalendarViewDayItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarViewDayItem>;
-    using CalendarViewDayItemChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs>;
-    using CalendarViewSelectedDatesChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarViewSelectedDatesChangedEventArgs>;
-    using CandidateWindowBoundsChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CandidateWindowBoundsChangedEventArgs>;
-    using Canvas = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Canvas>;
-    using CaptureElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CaptureElement>;
-    using CheckBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CheckBox>;
-    using ChoosingGroupHeaderContainerEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ChoosingGroupHeaderContainerEventArgs>;
-    using ChoosingItemContainerEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ChoosingItemContainerEventArgs>;
-    using CleanUpVirtualizedItemEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs>;
-    using ColorChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs>;
-    using ColorPicker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ColorPicker>;
-    using ColumnDefinition = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ColumnDefinition>;
-    using ColumnDefinitionCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ColumnDefinitionCollection>;
-    using ComboBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ComboBox>;
-    using ComboBoxItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ComboBoxItem>;
-    using ComboBoxTextSubmittedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ComboBoxTextSubmittedEventArgs>;
-    using CommandBar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CommandBar>;
-    using CommandBarFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>;
-    using CommandBarOverflowPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CommandBarOverflowPresenter>;
-    using ContainerContentChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContainerContentChangingEventArgs>;
-    using ContentControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentControl>;
-    using ContentDialog = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialog>;
-    using ContentDialogButtonClickDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogButtonClickDeferral>;
-    using ContentDialogButtonClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogButtonClickEventArgs>;
-    using ContentDialogClosedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogClosedEventArgs>;
-    using ContentDialogClosingDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogClosingDeferral>;
-    using ContentDialogClosingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogClosingEventArgs>;
-    using ContentDialogOpenedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogOpenedEventArgs>;
-    using ContentLinkChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentLinkChangedEventArgs>;
-    using ContentPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentPresenter>;
-    using ContextMenuEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContextMenuEventArgs>;
-    using Control = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Control>;
-    using ControlTemplate = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ControlTemplate>;
-    using DataTemplateSelector = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DataTemplateSelector>;
-    using DatePickedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickedEventArgs>;
-    using DatePicker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePicker>;
-    using DatePickerFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerFlyout>;
-    using DatePickerFlyoutItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerFlyoutItem>;
-    using DatePickerFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerFlyoutPresenter>;
-    using DatePickerSelectedValueChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerSelectedValueChangedEventArgs>;
-    using DatePickerValueChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerValueChangedEventArgs>;
-    using DragItemsCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DragItemsCompletedEventArgs>;
-    using DragItemsStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventArgs>;
-    using DropDownButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DropDownButton>;
-    using DropDownButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DropDownButtonAutomationPeer>;
-    using DynamicOverflowItemsChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs>;
-    using FlipView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FlipView>;
-    using FlipViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FlipViewItem>;
-    using Flyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Flyout>;
-    using FlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FlyoutPresenter>;
-    using FocusDisengagedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FocusDisengagedEventArgs>;
-    using FocusEngagedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FocusEngagedEventArgs>;
-    using FontIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FontIcon>;
-    using FontIconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FontIconSource>;
-    using Frame = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Frame>;
-    using Grid = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Grid>;
-    using GridView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GridView>;
-    using GridViewHeaderItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GridViewHeaderItem>;
-    using GridViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GridViewItem>;
-    using GroupItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GroupItem>;
-    using GroupStyle = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GroupStyle>;
-    using GroupStyleSelector = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GroupStyleSelector>;
-    using HandwritingPanelClosedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingPanelClosedEventArgs>;
-    using HandwritingPanelOpenedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingPanelOpenedEventArgs>;
-    using HandwritingView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingView>;
-    using HandwritingViewCandidatesChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingViewCandidatesChangedEventArgs>;
-    using HandwritingViewTextSubmittedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingViewTextSubmittedEventArgs>;
-    using Hub = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Hub>;
-    using HubSection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HubSection>;
-    using HubSectionCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HubSectionCollection>;
-    using HubSectionHeaderClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventArgs>;
-    using HyperlinkButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>;
-    using IconElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IconElement>;
-    using IconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IconSource>;
-    using IconSourceElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IconSourceElement>;
-    using Image = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Image>;
-    using InkCanvas = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkCanvas>;
-    using InkToolbar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbar>;
-    using InkToolbarBallpointPenButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton>;
-    using InkToolbarCustomPen = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPen>;
-    using InkToolbarCustomPenButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>;
-    using InkToolbarCustomToggleButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton>;
-    using InkToolbarCustomToolButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>;
-    using InkToolbarEraserButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>;
-    using InkToolbarFlyoutItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>;
-    using InkToolbarHighlighterButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton>;
-    using InkToolbarIsStencilButtonCheckedChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarIsStencilButtonCheckedChangedEventArgs>;
-    using InkToolbarMenuButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>;
-    using InkToolbarPenButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>;
-    using InkToolbarPenConfigurationControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarPenConfigurationControl>;
-    using InkToolbarPencilButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarPencilButton>;
-    using InkToolbarRulerButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton>;
-    using InkToolbarStencilButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>;
-    using InkToolbarToggleButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarToggleButton>;
-    using InkToolbarToolButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>;
-    using IsTextTrimmedChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs>;
-    using ItemClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemClickEventArgs>;
-    using ItemCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemCollection>;
-    using ItemContainerGenerator = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemContainerGenerator>;
-    using ItemsControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsControl>;
-    using ItemsPanelTemplate = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsPanelTemplate>;
-    using ItemsPickedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsPickedEventArgs>;
-    using ItemsPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsPresenter>;
-    using ItemsStackPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsStackPanel>;
-    using ItemsWrapGrid = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsWrapGrid>;
-    using ListBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListBox>;
-    using ListBoxItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListBoxItem>;
-    using ListPickerFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListPickerFlyout>;
-    using ListPickerFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListPickerFlyoutPresenter>;
-    using ListView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListView>;
-    using ListViewBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewBase>;
-    using ListViewBaseHeaderItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewBaseHeaderItem>;
-    using ListViewHeaderItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewHeaderItem>;
-    using ListViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewItem>;
-    using ListViewPersistenceHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewPersistenceHelper>;
-    using MediaElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaElement>;
-    using MediaPlayerElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaPlayerElement>;
-    using MediaPlayerPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaPlayerPresenter>;
-    using MediaTransportControls = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaTransportControls>;
-    using MediaTransportControlsHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaTransportControlsHelper>;
-    using MenuBar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuBar>;
-    using MenuBarItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuBarItem>;
-    using MenuBarItemFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuBarItemFlyout>;
-    using MenuFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyout>;
-    using MenuFlyoutItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem>;
-    using MenuFlyoutItemBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutItemBase>;
-    using MenuFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutPresenter>;
-    using MenuFlyoutSeparator = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutSeparator>;
-    using MenuFlyoutSubItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutSubItem>;
-    using NavigationView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationView>;
-    using NavigationViewBackRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs>;
-    using NavigationViewDisplayModeChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewDisplayModeChangedEventArgs>;
-    using NavigationViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>;
-    using NavigationViewItemBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItemBase>;
-    using NavigationViewItemHeader = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItemHeader>;
-    using NavigationViewItemInvokedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs>;
-    using NavigationViewItemSeparator = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItemSeparator>;
-    using NavigationViewList = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewList>;
-    using NavigationViewPaneClosingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewPaneClosingEventArgs>;
-    using NavigationViewSelectionChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewSelectionChangedEventArgs>;
-    using NavigationViewTemplateSettings = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewTemplateSettings>;
-    using NotifyEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NotifyEventArgs>;
-    using Page = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Page>;
-    using Panel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Panel>;
-    using ParallaxView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ParallaxView>;
-    using PasswordBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PasswordBox>;
-    using PasswordBoxPasswordChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PasswordBoxPasswordChangingEventArgs>;
-    using PathIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PathIcon>;
-    using PathIconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PathIconSource>;
-    using PersonPicture = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PersonPicture>;
-    using PickerConfirmedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PickerConfirmedEventArgs>;
-    using PickerFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PickerFlyout>;
-    using PickerFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PickerFlyoutPresenter>;
-    using Pivot = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Pivot>;
-    using PivotItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PivotItem>;
-    using PivotItemEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PivotItemEventArgs>;
-    using ProgressBar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ProgressBar>;
-    using ProgressRing = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ProgressRing>;
-    using RadioButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RadioButton>;
-    using RatingControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RatingControl>;
-    using RatingItemFontInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RatingItemFontInfo>;
-    using RatingItemImageInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RatingItemImageInfo>;
-    using RatingItemInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RatingItemInfo>;
-    using RefreshContainer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshContainer>;
-    using RefreshInteractionRatioChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs>;
-    using RefreshRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshRequestedEventArgs>;
-    using RefreshStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshStateChangedEventArgs>;
-    using RefreshVisualizer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshVisualizer>;
-    using RelativePanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RelativePanel>;
-    using RichEditBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichEditBox>;
-    using RichEditBoxSelectionChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichEditBoxSelectionChangingEventArgs>;
-    using RichEditBoxTextChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichEditBoxTextChangingEventArgs>;
-    using RichTextBlock = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichTextBlock>;
-    using RichTextBlockOverflow = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichTextBlockOverflow>;
-    using RowDefinition = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RowDefinition>;
-    using RowDefinitionCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RowDefinitionCollection>;
-    using ScrollContentPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollContentPresenter>;
-    using ScrollViewer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollViewer>;
-    using ScrollViewerView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollViewerView>;
-    using ScrollViewerViewChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollViewerViewChangedEventArgs>;
-    using ScrollViewerViewChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollViewerViewChangingEventArgs>;
-    using SearchBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBox>;
-    using SearchBoxQueryChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBoxQueryChangedEventArgs>;
-    using SearchBoxQuerySubmittedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBoxQuerySubmittedEventArgs>;
-    using SearchBoxResultSuggestionChosenEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBoxResultSuggestionChosenEventArgs>;
-    using SearchBoxSuggestionsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBoxSuggestionsRequestedEventArgs>;
-    using SectionsInViewChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventArgs>;
-    using SelectionChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SelectionChangedEventArgs>;
-    using SemanticZoom = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SemanticZoom>;
-    using SemanticZoomLocation = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>;
-    using SemanticZoomViewChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs>;
-    using SettingsFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SettingsFlyout>;
-    using Slider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Slider>;
-    using SplitButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitButton>;
-    using SplitButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitButtonAutomationPeer>;
-    using SplitButtonClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitButtonClickEventArgs>;
-    using SplitView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitView>;
-    using SplitViewPaneClosingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitViewPaneClosingEventArgs>;
-    using StackPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::StackPanel>;
-    using StyleSelector = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::StyleSelector>;
-    using SwapChainBackgroundPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwapChainBackgroundPanel>;
-    using SwapChainPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwapChainPanel>;
-    using SwipeControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwipeControl>;
-    using SwipeItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwipeItem>;
-    using SwipeItemInvokedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwipeItemInvokedEventArgs>;
-    using SwipeItems = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwipeItems>;
-    using SymbolIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SymbolIcon>;
-    using SymbolIconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SymbolIconSource>;
-    using TextBlock = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBlock>;
-    using TextBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBox>;
-    using TextBoxBeforeTextChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBoxBeforeTextChangingEventArgs>;
-    using TextBoxSelectionChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBoxSelectionChangingEventArgs>;
-    using TextBoxTextChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBoxTextChangingEventArgs>;
-    using TextChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextChangedEventArgs>;
-    using TextCommandBarFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextCommandBarFlyout>;
-    using TextCompositionChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextCompositionChangedEventArgs>;
-    using TextCompositionEndedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextCompositionEndedEventArgs>;
-    using TextCompositionStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextCompositionStartedEventArgs>;
-    using TextControlCopyingToClipboardEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextControlCopyingToClipboardEventArgs>;
-    using TextControlCuttingToClipboardEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextControlCuttingToClipboardEventArgs>;
-    using TextControlPasteEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextControlPasteEventArgs>;
-    using TimePickedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickedEventArgs>;
-    using TimePicker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePicker>;
-    using TimePickerFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickerFlyout>;
-    using TimePickerFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickerFlyoutPresenter>;
-    using TimePickerSelectedValueChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs>;
-    using TimePickerValueChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickerValueChangedEventArgs>;
-    using ToggleMenuFlyoutItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem>;
-    using ToggleSplitButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleSplitButton>;
-    using ToggleSplitButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleSplitButtonAutomationPeer>;
-    using ToggleSplitButtonIsCheckedChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs>;
-    using ToggleSwitch = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleSwitch>;
-    using ToolTip = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToolTip>;
-    using ToolTipService = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToolTipService>;
-    using TreeView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeView>;
-    using TreeViewCollapsedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewCollapsedEventArgs>;
-    using TreeViewDragItemsCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewDragItemsCompletedEventArgs>;
-    using TreeViewDragItemsStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewDragItemsStartingEventArgs>;
-    using TreeViewExpandingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewExpandingEventArgs>;
-    using TreeViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewItem>;
-    using TreeViewItemInvokedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewItemInvokedEventArgs>;
-    using TreeViewItemTemplateSettings = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewItemTemplateSettings>;
-    using TreeViewList = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewList>;
-    using TreeViewNode = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewNode>;
-    using TwoPaneView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TwoPaneView>;
-    using UIElementCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::UIElementCollection>;
-    using UserControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::UserControl>;
-    using VariableSizedWrapGrid = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::VariableSizedWrapGrid>;
-    using Viewbox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Viewbox>;
-    using VirtualizingPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::VirtualizingPanel>;
-    using VirtualizingStackPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel>;
-    using WebView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebView>;
-    using WebViewBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewBrush>;
-    using WebViewContentLoadingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewContentLoadingEventArgs>;
-    using WebViewDOMContentLoadedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewDOMContentLoadedEventArgs>;
-    using WebViewDeferredPermissionRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewDeferredPermissionRequest>;
-    using WebViewLongRunningScriptDetectedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewLongRunningScriptDetectedEventArgs>;
-    using WebViewNavigationCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewNavigationCompletedEventArgs>;
-    using WebViewNavigationFailedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewNavigationFailedEventArgs>;
-    using WebViewNavigationStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewNavigationStartingEventArgs>;
-    using WebViewNewWindowRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewNewWindowRequestedEventArgs>;
-    using WebViewPermissionRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewPermissionRequest>;
-    using WebViewPermissionRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewPermissionRequestedEventArgs>;
-    using WebViewSeparateProcessLostEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewSeparateProcessLostEventArgs>;
-    using WebViewSettings = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewSettings>;
-    using WebViewUnsupportedUriSchemeIdentifiedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewUnsupportedUriSchemeIdentifiedEventArgs>;
-    using WebViewUnviewableContentIdentifiedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewUnviewableContentIdentifiedEventArgs>;
-    using WebViewWebResourceRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewWebResourceRequestedEventArgs>;
-    using WrapGrid = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WrapGrid>;
-    using ICommandBarElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ICommandBarElement>;
-    using ICommandBarElement2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ICommandBarElement2>;
-    using IInsertionPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IInsertionPanel>;
-    using IItemContainerMapping = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IItemContainerMapping>;
-    using INavigate = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::INavigate>;
-    using IScrollAnchorProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IScrollAnchorProvider>;
-    using ISemanticZoomInformation = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ISemanticZoomInformation>;
 }
 
 namespace py
@@ -4323,6 +3208,1124 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls";
         static constexpr const char* type_name = "_ISemanticZoomInformation";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Contacts.h")
+#include "py.Windows.ApplicationModel.Contacts.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Search.h")
+#include "py.Windows.ApplicationModel.Search.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Globalization.h")
+#include "py.Windows.Globalization.h"
+#endif
+
+#if __has_include("py.Windows.Media.Capture.h")
+#include "py.Windows.Media.Capture.h"
+#endif
+
+#if __has_include("py.Windows.Media.Casting.h")
+#include "py.Windows.Media.Casting.h"
+#endif
+
+#if __has_include("py.Windows.Media.Core.h")
+#include "py.Windows.Media.Core.h"
+#endif
+
+#if __has_include("py.Windows.Media.PlayTo.h")
+#include "py.Windows.Media.PlayTo.h"
+#endif
+
+#if __has_include("py.Windows.Media.Playback.h")
+#include "py.Windows.Media.Playback.h"
+#endif
+
+#if __has_include("py.Windows.Media.Protection.h")
+#include "py.Windows.Media.Protection.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.Inking.h")
+#include "py.Windows.UI.Input.Inking.h"
+#endif
+
+#if __has_include("py.Windows.UI.Text.h")
+#include "py.Windows.UI.Text.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.h")
+#include "py.Windows.UI.Xaml.Automation.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
+#include "py.Windows.UI.Xaml.Automation.Peers.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
+#include "py.Windows.UI.Xaml.Controls.Primitives.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Data.h")
+#include "py.Windows.UI.Xaml.Data.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Documents.h")
+#include "py.Windows.UI.Xaml.Documents.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Input.h")
+#include "py.Windows.UI.Xaml.Input.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Interop.h")
+#include "py.Windows.UI.Xaml.Interop.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.h")
+#include "py.Windows.UI.Xaml.Media.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.Animation.h")
+#include "py.Windows.UI.Xaml.Media.Animation.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Navigation.h")
+#include "py.Windows.UI.Xaml.Navigation.h"
+#endif
+
+#if __has_include("py.Windows.Web.h")
+#include "py.Windows.Web.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Controls
+{
+    struct BackClickEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::BackClickEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::BackClickEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct CalendarViewDayItemChangingEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::Controls::CalendarView const& param0, winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct CleanUpVirtualizedItemEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct ContextMenuOpeningEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::ContextMenuOpeningEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::ContextMenuEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct DragItemsStartingEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct HubSectionHeaderClickEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct ItemClickEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::ItemClickEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::ItemClickEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct ListViewItemToKeyHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::ListViewItemToKeyHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+
+                    return py::convert_to<winrt::hstring>(return_value.get());
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct ListViewKeyToItemHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::ListViewKeyToItemHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::hstring const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+
+                    return py::convert_to<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::IInspectable>>(return_value.get());
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct NotifyEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::NotifyEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::NotifyEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct SectionsInViewChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct SelectionChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::SelectionChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct SemanticZoomViewChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct TextChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::TextChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::TextChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct TextControlPasteEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::TextControlPasteEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::TextControlPasteEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct WebViewNavigationFailedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Controls::WebViewNavigationFailedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Controls::WebViewNavigationFailedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Controls
+{
+    using AnchorRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AnchorRequestedEventArgs>;
+    using AppBar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBar>;
+    using AppBarButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBarButton>;
+    using AppBarElementContainer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBarElementContainer>;
+    using AppBarSeparator = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBarSeparator>;
+    using AppBarToggleButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AppBarToggleButton>;
+    using AutoSuggestBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AutoSuggestBox>;
+    using AutoSuggestBoxQuerySubmittedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxQuerySubmittedEventArgs>;
+    using AutoSuggestBoxSuggestionChosenEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxSuggestionChosenEventArgs>;
+    using AutoSuggestBoxTextChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxTextChangedEventArgs>;
+    using BackClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::BackClickEventArgs>;
+    using BitmapIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::BitmapIcon>;
+    using BitmapIconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::BitmapIconSource>;
+    using Border = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Border>;
+    using Button = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Button>;
+    using CalendarDatePicker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarDatePicker>;
+    using CalendarDatePickerDateChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarDatePickerDateChangedEventArgs>;
+    using CalendarView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarView>;
+    using CalendarViewDayItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarViewDayItem>;
+    using CalendarViewDayItemChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs>;
+    using CalendarViewSelectedDatesChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CalendarViewSelectedDatesChangedEventArgs>;
+    using CandidateWindowBoundsChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CandidateWindowBoundsChangedEventArgs>;
+    using Canvas = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Canvas>;
+    using CaptureElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CaptureElement>;
+    using CheckBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CheckBox>;
+    using ChoosingGroupHeaderContainerEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ChoosingGroupHeaderContainerEventArgs>;
+    using ChoosingItemContainerEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ChoosingItemContainerEventArgs>;
+    using CleanUpVirtualizedItemEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs>;
+    using ColorChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs>;
+    using ColorPicker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ColorPicker>;
+    using ColumnDefinition = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ColumnDefinition>;
+    using ColumnDefinitionCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ColumnDefinitionCollection>;
+    using ComboBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ComboBox>;
+    using ComboBoxItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ComboBoxItem>;
+    using ComboBoxTextSubmittedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ComboBoxTextSubmittedEventArgs>;
+    using CommandBar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CommandBar>;
+    using CommandBarFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CommandBarFlyout>;
+    using CommandBarOverflowPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::CommandBarOverflowPresenter>;
+    using ContainerContentChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContainerContentChangingEventArgs>;
+    using ContentControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentControl>;
+    using ContentDialog = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialog>;
+    using ContentDialogButtonClickDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogButtonClickDeferral>;
+    using ContentDialogButtonClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogButtonClickEventArgs>;
+    using ContentDialogClosedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogClosedEventArgs>;
+    using ContentDialogClosingDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogClosingDeferral>;
+    using ContentDialogClosingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogClosingEventArgs>;
+    using ContentDialogOpenedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentDialogOpenedEventArgs>;
+    using ContentLinkChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentLinkChangedEventArgs>;
+    using ContentPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContentPresenter>;
+    using ContextMenuEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ContextMenuEventArgs>;
+    using Control = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Control>;
+    using ControlTemplate = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ControlTemplate>;
+    using DataTemplateSelector = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DataTemplateSelector>;
+    using DatePickedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickedEventArgs>;
+    using DatePicker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePicker>;
+    using DatePickerFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerFlyout>;
+    using DatePickerFlyoutItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerFlyoutItem>;
+    using DatePickerFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerFlyoutPresenter>;
+    using DatePickerSelectedValueChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerSelectedValueChangedEventArgs>;
+    using DatePickerValueChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DatePickerValueChangedEventArgs>;
+    using DragItemsCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DragItemsCompletedEventArgs>;
+    using DragItemsStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventArgs>;
+    using DropDownButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DropDownButton>;
+    using DropDownButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DropDownButtonAutomationPeer>;
+    using DynamicOverflowItemsChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs>;
+    using FlipView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FlipView>;
+    using FlipViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FlipViewItem>;
+    using Flyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Flyout>;
+    using FlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FlyoutPresenter>;
+    using FocusDisengagedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FocusDisengagedEventArgs>;
+    using FocusEngagedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FocusEngagedEventArgs>;
+    using FontIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FontIcon>;
+    using FontIconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::FontIconSource>;
+    using Frame = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Frame>;
+    using Grid = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Grid>;
+    using GridView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GridView>;
+    using GridViewHeaderItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GridViewHeaderItem>;
+    using GridViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GridViewItem>;
+    using GroupItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GroupItem>;
+    using GroupStyle = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GroupStyle>;
+    using GroupStyleSelector = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::GroupStyleSelector>;
+    using HandwritingPanelClosedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingPanelClosedEventArgs>;
+    using HandwritingPanelOpenedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingPanelOpenedEventArgs>;
+    using HandwritingView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingView>;
+    using HandwritingViewCandidatesChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingViewCandidatesChangedEventArgs>;
+    using HandwritingViewTextSubmittedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HandwritingViewTextSubmittedEventArgs>;
+    using Hub = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Hub>;
+    using HubSection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HubSection>;
+    using HubSectionCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HubSectionCollection>;
+    using HubSectionHeaderClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventArgs>;
+    using HyperlinkButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::HyperlinkButton>;
+    using IconElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IconElement>;
+    using IconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IconSource>;
+    using IconSourceElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IconSourceElement>;
+    using Image = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Image>;
+    using InkCanvas = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkCanvas>;
+    using InkToolbar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbar>;
+    using InkToolbarBallpointPenButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarBallpointPenButton>;
+    using InkToolbarCustomPen = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPen>;
+    using InkToolbarCustomPenButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton>;
+    using InkToolbarCustomToggleButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToggleButton>;
+    using InkToolbarCustomToolButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarCustomToolButton>;
+    using InkToolbarEraserButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton>;
+    using InkToolbarFlyoutItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem>;
+    using InkToolbarHighlighterButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarHighlighterButton>;
+    using InkToolbarIsStencilButtonCheckedChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarIsStencilButtonCheckedChangedEventArgs>;
+    using InkToolbarMenuButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarMenuButton>;
+    using InkToolbarPenButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarPenButton>;
+    using InkToolbarPenConfigurationControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarPenConfigurationControl>;
+    using InkToolbarPencilButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarPencilButton>;
+    using InkToolbarRulerButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarRulerButton>;
+    using InkToolbarStencilButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton>;
+    using InkToolbarToggleButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarToggleButton>;
+    using InkToolbarToolButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::InkToolbarToolButton>;
+    using IsTextTrimmedChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs>;
+    using ItemClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemClickEventArgs>;
+    using ItemCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemCollection>;
+    using ItemContainerGenerator = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemContainerGenerator>;
+    using ItemsControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsControl>;
+    using ItemsPanelTemplate = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsPanelTemplate>;
+    using ItemsPickedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsPickedEventArgs>;
+    using ItemsPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsPresenter>;
+    using ItemsStackPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsStackPanel>;
+    using ItemsWrapGrid = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ItemsWrapGrid>;
+    using ListBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListBox>;
+    using ListBoxItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListBoxItem>;
+    using ListPickerFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListPickerFlyout>;
+    using ListPickerFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListPickerFlyoutPresenter>;
+    using ListView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListView>;
+    using ListViewBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewBase>;
+    using ListViewBaseHeaderItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewBaseHeaderItem>;
+    using ListViewHeaderItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewHeaderItem>;
+    using ListViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewItem>;
+    using ListViewPersistenceHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ListViewPersistenceHelper>;
+    using MediaElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaElement>;
+    using MediaPlayerElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaPlayerElement>;
+    using MediaPlayerPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaPlayerPresenter>;
+    using MediaTransportControls = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaTransportControls>;
+    using MediaTransportControlsHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MediaTransportControlsHelper>;
+    using MenuBar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuBar>;
+    using MenuBarItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuBarItem>;
+    using MenuBarItemFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuBarItemFlyout>;
+    using MenuFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyout>;
+    using MenuFlyoutItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem>;
+    using MenuFlyoutItemBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutItemBase>;
+    using MenuFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutPresenter>;
+    using MenuFlyoutSeparator = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutSeparator>;
+    using MenuFlyoutSubItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::MenuFlyoutSubItem>;
+    using NavigationView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationView>;
+    using NavigationViewBackRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs>;
+    using NavigationViewDisplayModeChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewDisplayModeChangedEventArgs>;
+    using NavigationViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItem>;
+    using NavigationViewItemBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItemBase>;
+    using NavigationViewItemHeader = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItemHeader>;
+    using NavigationViewItemInvokedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs>;
+    using NavigationViewItemSeparator = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewItemSeparator>;
+    using NavigationViewList = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewList>;
+    using NavigationViewPaneClosingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewPaneClosingEventArgs>;
+    using NavigationViewSelectionChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewSelectionChangedEventArgs>;
+    using NavigationViewTemplateSettings = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NavigationViewTemplateSettings>;
+    using NotifyEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::NotifyEventArgs>;
+    using Page = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Page>;
+    using Panel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Panel>;
+    using ParallaxView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ParallaxView>;
+    using PasswordBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PasswordBox>;
+    using PasswordBoxPasswordChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PasswordBoxPasswordChangingEventArgs>;
+    using PathIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PathIcon>;
+    using PathIconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PathIconSource>;
+    using PersonPicture = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PersonPicture>;
+    using PickerConfirmedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PickerConfirmedEventArgs>;
+    using PickerFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PickerFlyout>;
+    using PickerFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PickerFlyoutPresenter>;
+    using Pivot = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Pivot>;
+    using PivotItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PivotItem>;
+    using PivotItemEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::PivotItemEventArgs>;
+    using ProgressBar = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ProgressBar>;
+    using ProgressRing = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ProgressRing>;
+    using RadioButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RadioButton>;
+    using RatingControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RatingControl>;
+    using RatingItemFontInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RatingItemFontInfo>;
+    using RatingItemImageInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RatingItemImageInfo>;
+    using RatingItemInfo = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RatingItemInfo>;
+    using RefreshContainer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshContainer>;
+    using RefreshInteractionRatioChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs>;
+    using RefreshRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshRequestedEventArgs>;
+    using RefreshStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshStateChangedEventArgs>;
+    using RefreshVisualizer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RefreshVisualizer>;
+    using RelativePanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RelativePanel>;
+    using RichEditBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichEditBox>;
+    using RichEditBoxSelectionChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichEditBoxSelectionChangingEventArgs>;
+    using RichEditBoxTextChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichEditBoxTextChangingEventArgs>;
+    using RichTextBlock = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichTextBlock>;
+    using RichTextBlockOverflow = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RichTextBlockOverflow>;
+    using RowDefinition = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RowDefinition>;
+    using RowDefinitionCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::RowDefinitionCollection>;
+    using ScrollContentPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollContentPresenter>;
+    using ScrollViewer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollViewer>;
+    using ScrollViewerView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollViewerView>;
+    using ScrollViewerViewChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollViewerViewChangedEventArgs>;
+    using ScrollViewerViewChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ScrollViewerViewChangingEventArgs>;
+    using SearchBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBox>;
+    using SearchBoxQueryChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBoxQueryChangedEventArgs>;
+    using SearchBoxQuerySubmittedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBoxQuerySubmittedEventArgs>;
+    using SearchBoxResultSuggestionChosenEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBoxResultSuggestionChosenEventArgs>;
+    using SearchBoxSuggestionsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SearchBoxSuggestionsRequestedEventArgs>;
+    using SectionsInViewChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventArgs>;
+    using SelectionChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SelectionChangedEventArgs>;
+    using SemanticZoom = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SemanticZoom>;
+    using SemanticZoomLocation = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SemanticZoomLocation>;
+    using SemanticZoomViewChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs>;
+    using SettingsFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SettingsFlyout>;
+    using Slider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Slider>;
+    using SplitButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitButton>;
+    using SplitButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitButtonAutomationPeer>;
+    using SplitButtonClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitButtonClickEventArgs>;
+    using SplitView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitView>;
+    using SplitViewPaneClosingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SplitViewPaneClosingEventArgs>;
+    using StackPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::StackPanel>;
+    using StyleSelector = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::StyleSelector>;
+    using SwapChainBackgroundPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwapChainBackgroundPanel>;
+    using SwapChainPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwapChainPanel>;
+    using SwipeControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwipeControl>;
+    using SwipeItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwipeItem>;
+    using SwipeItemInvokedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwipeItemInvokedEventArgs>;
+    using SwipeItems = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SwipeItems>;
+    using SymbolIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SymbolIcon>;
+    using SymbolIconSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::SymbolIconSource>;
+    using TextBlock = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBlock>;
+    using TextBox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBox>;
+    using TextBoxBeforeTextChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBoxBeforeTextChangingEventArgs>;
+    using TextBoxSelectionChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBoxSelectionChangingEventArgs>;
+    using TextBoxTextChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextBoxTextChangingEventArgs>;
+    using TextChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextChangedEventArgs>;
+    using TextCommandBarFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextCommandBarFlyout>;
+    using TextCompositionChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextCompositionChangedEventArgs>;
+    using TextCompositionEndedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextCompositionEndedEventArgs>;
+    using TextCompositionStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextCompositionStartedEventArgs>;
+    using TextControlCopyingToClipboardEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextControlCopyingToClipboardEventArgs>;
+    using TextControlCuttingToClipboardEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextControlCuttingToClipboardEventArgs>;
+    using TextControlPasteEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TextControlPasteEventArgs>;
+    using TimePickedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickedEventArgs>;
+    using TimePicker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePicker>;
+    using TimePickerFlyout = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickerFlyout>;
+    using TimePickerFlyoutPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickerFlyoutPresenter>;
+    using TimePickerSelectedValueChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs>;
+    using TimePickerValueChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TimePickerValueChangedEventArgs>;
+    using ToggleMenuFlyoutItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem>;
+    using ToggleSplitButton = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleSplitButton>;
+    using ToggleSplitButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleSplitButtonAutomationPeer>;
+    using ToggleSplitButtonIsCheckedChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs>;
+    using ToggleSwitch = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToggleSwitch>;
+    using ToolTip = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToolTip>;
+    using ToolTipService = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ToolTipService>;
+    using TreeView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeView>;
+    using TreeViewCollapsedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewCollapsedEventArgs>;
+    using TreeViewDragItemsCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewDragItemsCompletedEventArgs>;
+    using TreeViewDragItemsStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewDragItemsStartingEventArgs>;
+    using TreeViewExpandingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewExpandingEventArgs>;
+    using TreeViewItem = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewItem>;
+    using TreeViewItemInvokedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewItemInvokedEventArgs>;
+    using TreeViewItemTemplateSettings = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewItemTemplateSettings>;
+    using TreeViewList = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewList>;
+    using TreeViewNode = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TreeViewNode>;
+    using TwoPaneView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::TwoPaneView>;
+    using UIElementCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::UIElementCollection>;
+    using UserControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::UserControl>;
+    using VariableSizedWrapGrid = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::VariableSizedWrapGrid>;
+    using Viewbox = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Viewbox>;
+    using VirtualizingPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::VirtualizingPanel>;
+    using VirtualizingStackPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::VirtualizingStackPanel>;
+    using WebView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebView>;
+    using WebViewBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewBrush>;
+    using WebViewContentLoadingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewContentLoadingEventArgs>;
+    using WebViewDOMContentLoadedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewDOMContentLoadedEventArgs>;
+    using WebViewDeferredPermissionRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewDeferredPermissionRequest>;
+    using WebViewLongRunningScriptDetectedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewLongRunningScriptDetectedEventArgs>;
+    using WebViewNavigationCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewNavigationCompletedEventArgs>;
+    using WebViewNavigationFailedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewNavigationFailedEventArgs>;
+    using WebViewNavigationStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewNavigationStartingEventArgs>;
+    using WebViewNewWindowRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewNewWindowRequestedEventArgs>;
+    using WebViewPermissionRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewPermissionRequest>;
+    using WebViewPermissionRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewPermissionRequestedEventArgs>;
+    using WebViewSeparateProcessLostEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewSeparateProcessLostEventArgs>;
+    using WebViewSettings = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewSettings>;
+    using WebViewUnsupportedUriSchemeIdentifiedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewUnsupportedUriSchemeIdentifiedEventArgs>;
+    using WebViewUnviewableContentIdentifiedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewUnviewableContentIdentifiedEventArgs>;
+    using WebViewWebResourceRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WebViewWebResourceRequestedEventArgs>;
+    using WrapGrid = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::WrapGrid>;
+    using ICommandBarElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ICommandBarElement>;
+    using ICommandBarElement2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ICommandBarElement2>;
+    using IInsertionPanel = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IInsertionPanel>;
+    using IItemContainerMapping = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IItemContainerMapping>;
+    using INavigate = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::INavigate>;
+    using IScrollAnchorProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::IScrollAnchorProvider>;
+    using ISemanticZoomInformation = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::ISemanticZoomInformation>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Controls::BackClickEventHandler>
     {

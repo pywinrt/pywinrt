@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Graphics.Imaging.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,18 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Preview::Notes
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Preview::Notes
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Preview::Notes
-{
-    using NotePlacementChangedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>;
-    using NoteVisibilityChangedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>;
-    using NotesWindowManagerPreview = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>;
-    using NotesWindowManagerPreviewShowNoteOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>;
 }
 
 namespace py
@@ -73,4 +48,32 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
         static constexpr const char* type_name = "NotesWindowManagerPreviewShowNoteOptions";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Preview::Notes
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Preview::Notes
+{
+    using NotePlacementChangedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>;
+    using NoteVisibilityChangedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>;
+    using NotesWindowManagerPreview = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>;
+    using NotesWindowManagerPreviewShowNoteOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>;
+}
+
+namespace py
+{
 }

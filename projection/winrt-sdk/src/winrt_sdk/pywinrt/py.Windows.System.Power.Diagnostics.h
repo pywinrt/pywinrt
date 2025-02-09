@@ -5,21 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.System.Power.Diagnostics.h>
 
 namespace py::proj::Windows::System::Power::Diagnostics
 {
-}
-
-namespace py::impl::Windows::System::Power::Diagnostics
-{
-}
-
-namespace py::wrapper::Windows::System::Power::Diagnostics
-{
-    using BackgroundEnergyDiagnostics = py::winrt_wrapper<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>;
-    using ForegroundEnergyDiagnostics = py::winrt_wrapper<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>;
 }
 
 namespace py
@@ -40,4 +29,18 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.power.diagnostics";
         static constexpr const char* type_name = "ForegroundEnergyDiagnostics";
     };
+}
+
+namespace py::impl::Windows::System::Power::Diagnostics
+{
+}
+
+namespace py::wrapper::Windows::System::Power::Diagnostics
+{
+    using BackgroundEnergyDiagnostics = py::winrt_wrapper<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>;
+    using ForegroundEnergyDiagnostics = py::winrt_wrapper<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>;
+}
+
+namespace py
+{
 }

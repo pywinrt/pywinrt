@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Imaging.h>
@@ -30,20 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::SocialInfo
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::SocialInfo
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::SocialInfo
-{
-    using SocialFeedChildItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>;
-    using SocialFeedContent = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>;
-    using SocialFeedItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem>;
-    using SocialFeedSharedItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>;
-    using SocialItemThumbnail = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>;
-    using SocialUserInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>;
 }
 
 namespace py
@@ -140,4 +109,38 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialUserInfo";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::SocialInfo
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::SocialInfo
+{
+    using SocialFeedChildItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>;
+    using SocialFeedContent = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>;
+    using SocialFeedItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem>;
+    using SocialFeedSharedItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>;
+    using SocialItemThumbnail = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>;
+    using SocialUserInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>;
+}
+
+namespace py
+{
 }

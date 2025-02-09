@@ -4,28 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.System.Power.h>
 
 namespace py::proj::Windows::System::Power
 {
-}
-
-namespace py::impl::Windows::System::Power
-{
-}
-
-namespace py::wrapper::Windows::System::Power
-{
-    using BackgroundEnergyManager = py::winrt_wrapper<winrt::Windows::System::Power::BackgroundEnergyManager>;
-    using ForegroundEnergyManager = py::winrt_wrapper<winrt::Windows::System::Power::ForegroundEnergyManager>;
-    using PowerManager = py::winrt_wrapper<winrt::Windows::System::Power::PowerManager>;
 }
 
 namespace py
@@ -87,4 +71,23 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.power";
         static constexpr const char* type_name = "PowerManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::System::Power
+{
+}
+
+namespace py::wrapper::Windows::System::Power
+{
+    using BackgroundEnergyManager = py::winrt_wrapper<winrt::Windows::System::Power::BackgroundEnergyManager>;
+    using ForegroundEnergyManager = py::winrt_wrapper<winrt::Windows::System::Power::ForegroundEnergyManager>;
+    using PowerManager = py::winrt_wrapper<winrt::Windows::System::Power::PowerManager>;
+}
+
+namespace py
+{
 }

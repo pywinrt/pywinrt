@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Networking.h>
@@ -30,23 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Networking::XboxLive
 {
-}
-
-namespace py::impl::Windows::Networking::XboxLive
-{
-}
-
-namespace py::wrapper::Windows::Networking::XboxLive
-{
-    using XboxLiveDeviceAddress = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>;
-    using XboxLiveEndpointPair = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair>;
-    using XboxLiveEndpointPairCreationResult = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>;
-    using XboxLiveEndpointPairStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>;
-    using XboxLiveEndpointPairTemplate = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate>;
-    using XboxLiveInboundEndpointPairCreatedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>;
-    using XboxLiveQualityOfServiceMeasurement = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement>;
-    using XboxLiveQualityOfServiceMetricResult = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult>;
-    using XboxLiveQualityOfServicePrivatePayloadResult = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult>;
 }
 
 namespace py
@@ -200,4 +166,41 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.networking.xboxlive";
         static constexpr const char* type_name = "XboxLiveQualityOfServicePrivatePayloadResult";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Networking::XboxLive
+{
+}
+
+namespace py::wrapper::Windows::Networking::XboxLive
+{
+    using XboxLiveDeviceAddress = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>;
+    using XboxLiveEndpointPair = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair>;
+    using XboxLiveEndpointPairCreationResult = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>;
+    using XboxLiveEndpointPairStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>;
+    using XboxLiveEndpointPairTemplate = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate>;
+    using XboxLiveInboundEndpointPairCreatedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>;
+    using XboxLiveQualityOfServiceMeasurement = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement>;
+    using XboxLiveQualityOfServiceMetricResult = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult>;
+    using XboxLiveQualityOfServicePrivatePayloadResult = py::winrt_wrapper<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult>;
+}
+
+namespace py
+{
 }

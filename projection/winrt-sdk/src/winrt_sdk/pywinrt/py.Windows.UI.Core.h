@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.UI.Input.h")
-#include "py.Windows.UI.Input.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.h>
@@ -45,107 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Core
 {
-}
-
-namespace py::impl::Windows::UI::Core
-{
-    struct DispatchedHandler
-    {
-        static winrt::Windows::UI::Core::DispatchedHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)]()
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct IdleDispatchedHandler
-    {
-        static winrt::Windows::UI::Core::IdleDispatchedHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::UI::Core::IdleDispatchedHandlerArgs const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::UI::Core
-{
-    using AcceleratorKeyEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::AcceleratorKeyEventArgs>;
-    using AutomationProviderRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>;
-    using BackRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::BackRequestedEventArgs>;
-    using CharacterReceivedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::CharacterReceivedEventArgs>;
-    using ClosestInteractiveBoundsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>;
-    using CoreAcceleratorKeys = py::winrt_wrapper<winrt::Windows::UI::Core::CoreAcceleratorKeys>;
-    using CoreComponentInputSource = py::winrt_wrapper<winrt::Windows::UI::Core::CoreComponentInputSource>;
-    using CoreCursor = py::winrt_wrapper<winrt::Windows::UI::Core::CoreCursor>;
-    using CoreDispatcher = py::winrt_wrapper<winrt::Windows::UI::Core::CoreDispatcher>;
-    using CoreIndependentInputSource = py::winrt_wrapper<winrt::Windows::UI::Core::CoreIndependentInputSource>;
-    using CoreIndependentInputSourceController = py::winrt_wrapper<winrt::Windows::UI::Core::CoreIndependentInputSourceController>;
-    using CoreWindow = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindow>;
-    using CoreWindowDialog = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowDialog>;
-    using CoreWindowEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowEventArgs>;
-    using CoreWindowFlyout = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowFlyout>;
-    using CoreWindowPopupShowingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>;
-    using CoreWindowResizeManager = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowResizeManager>;
-    using IdleDispatchedHandlerArgs = py::winrt_wrapper<winrt::Windows::UI::Core::IdleDispatchedHandlerArgs>;
-    using InputEnabledEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::InputEnabledEventArgs>;
-    using KeyEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::KeyEventArgs>;
-    using PointerEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::PointerEventArgs>;
-    using SystemNavigationManager = py::winrt_wrapper<winrt::Windows::UI::Core::SystemNavigationManager>;
-    using TouchHitTestingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::TouchHitTestingEventArgs>;
-    using VisibilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::VisibilityChangedEventArgs>;
-    using WindowActivatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::WindowActivatedEventArgs>;
-    using WindowSizeChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::WindowSizeChangedEventArgs>;
-    using ICoreAcceleratorKeys = py::winrt_wrapper<winrt::Windows::UI::Core::ICoreAcceleratorKeys>;
-    using ICoreInputSourceBase = py::winrt_wrapper<winrt::Windows::UI::Core::ICoreInputSourceBase>;
-    using ICorePointerInputSource = py::winrt_wrapper<winrt::Windows::UI::Core::ICorePointerInputSource>;
-    using ICorePointerInputSource2 = py::winrt_wrapper<winrt::Windows::UI::Core::ICorePointerInputSource2>;
-    using ICorePointerRedirector = py::winrt_wrapper<winrt::Windows::UI::Core::ICorePointerRedirector>;
-    using ICoreWindow = py::winrt_wrapper<winrt::Windows::UI::Core::ICoreWindow>;
-    using ICoreWindowEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::ICoreWindowEventArgs>;
-    using IInitializeWithCoreWindow = py::winrt_wrapper<winrt::Windows::UI::Core::IInitializeWithCoreWindow>;
-    using CorePhysicalKeyStatus = py::winrt_struct_wrapper<winrt::Windows::UI::Core::CorePhysicalKeyStatus>;
-    using CoreProximityEvaluation = py::winrt_struct_wrapper<winrt::Windows::UI::Core::CoreProximityEvaluation>;
 }
 
 namespace py
@@ -576,6 +446,139 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreProximityEvaluation";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.h")
+#include "py.Windows.UI.Input.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+namespace py::impl::Windows::UI::Core
+{
+    struct DispatchedHandler
+    {
+        static winrt::Windows::UI::Core::DispatchedHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)]()
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct IdleDispatchedHandler
+    {
+        static winrt::Windows::UI::Core::IdleDispatchedHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Core::IdleDispatchedHandlerArgs const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::UI::Core
+{
+    using AcceleratorKeyEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::AcceleratorKeyEventArgs>;
+    using AutomationProviderRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>;
+    using BackRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::BackRequestedEventArgs>;
+    using CharacterReceivedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::CharacterReceivedEventArgs>;
+    using ClosestInteractiveBoundsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>;
+    using CoreAcceleratorKeys = py::winrt_wrapper<winrt::Windows::UI::Core::CoreAcceleratorKeys>;
+    using CoreComponentInputSource = py::winrt_wrapper<winrt::Windows::UI::Core::CoreComponentInputSource>;
+    using CoreCursor = py::winrt_wrapper<winrt::Windows::UI::Core::CoreCursor>;
+    using CoreDispatcher = py::winrt_wrapper<winrt::Windows::UI::Core::CoreDispatcher>;
+    using CoreIndependentInputSource = py::winrt_wrapper<winrt::Windows::UI::Core::CoreIndependentInputSource>;
+    using CoreIndependentInputSourceController = py::winrt_wrapper<winrt::Windows::UI::Core::CoreIndependentInputSourceController>;
+    using CoreWindow = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindow>;
+    using CoreWindowDialog = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowDialog>;
+    using CoreWindowEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowEventArgs>;
+    using CoreWindowFlyout = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowFlyout>;
+    using CoreWindowPopupShowingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>;
+    using CoreWindowResizeManager = py::winrt_wrapper<winrt::Windows::UI::Core::CoreWindowResizeManager>;
+    using IdleDispatchedHandlerArgs = py::winrt_wrapper<winrt::Windows::UI::Core::IdleDispatchedHandlerArgs>;
+    using InputEnabledEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::InputEnabledEventArgs>;
+    using KeyEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::KeyEventArgs>;
+    using PointerEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::PointerEventArgs>;
+    using SystemNavigationManager = py::winrt_wrapper<winrt::Windows::UI::Core::SystemNavigationManager>;
+    using TouchHitTestingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::TouchHitTestingEventArgs>;
+    using VisibilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::VisibilityChangedEventArgs>;
+    using WindowActivatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::WindowActivatedEventArgs>;
+    using WindowSizeChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::WindowSizeChangedEventArgs>;
+    using ICoreAcceleratorKeys = py::winrt_wrapper<winrt::Windows::UI::Core::ICoreAcceleratorKeys>;
+    using ICoreInputSourceBase = py::winrt_wrapper<winrt::Windows::UI::Core::ICoreInputSourceBase>;
+    using ICorePointerInputSource = py::winrt_wrapper<winrt::Windows::UI::Core::ICorePointerInputSource>;
+    using ICorePointerInputSource2 = py::winrt_wrapper<winrt::Windows::UI::Core::ICorePointerInputSource2>;
+    using ICorePointerRedirector = py::winrt_wrapper<winrt::Windows::UI::Core::ICorePointerRedirector>;
+    using ICoreWindow = py::winrt_wrapper<winrt::Windows::UI::Core::ICoreWindow>;
+    using ICoreWindowEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::ICoreWindowEventArgs>;
+    using IInitializeWithCoreWindow = py::winrt_wrapper<winrt::Windows::UI::Core::IInitializeWithCoreWindow>;
+    using CorePhysicalKeyStatus = py::winrt_struct_wrapper<winrt::Windows::UI::Core::CorePhysicalKeyStatus>;
+    using CoreProximityEvaluation = py::winrt_struct_wrapper<winrt::Windows::UI::Core::CoreProximityEvaluation>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::UI::Core::DispatchedHandler>
     {

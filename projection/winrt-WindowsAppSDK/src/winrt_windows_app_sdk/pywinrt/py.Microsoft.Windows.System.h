@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Microsoft.Windows.System.h>
 
 namespace py::proj::Microsoft::Windows::System
 {
-}
-
-namespace py::impl::Microsoft::Windows::System
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::System
-{
-    using EnvironmentManager = py::winrt_wrapper<winrt::Microsoft::Windows::System::EnvironmentManager>;
 }
 
 namespace py
@@ -36,4 +22,21 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.system";
         static constexpr const char* type_name = "EnvironmentManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::System
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::System
+{
+    using EnvironmentManager = py::winrt_wrapper<winrt::Microsoft::Windows::System::EnvironmentManager>;
+}
+
+namespace py
+{
 }

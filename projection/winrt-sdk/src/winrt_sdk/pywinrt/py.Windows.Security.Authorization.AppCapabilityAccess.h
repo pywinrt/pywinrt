@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.h>
@@ -25,16 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Authorization::AppCapabilityAccess
 {
-}
-
-namespace py::impl::Windows::Security::Authorization::AppCapabilityAccess
-{
-}
-
-namespace py::wrapper::Windows::Security::Authorization::AppCapabilityAccess
-{
-    using AppCapability = py::winrt_wrapper<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>;
-    using AppCapabilityAccessChangedEventArgs = py::winrt_wrapper<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>;
 }
 
 namespace py
@@ -66,4 +43,30 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
         static constexpr const char* type_name = "AppCapabilityAccessChangedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Security::Authorization::AppCapabilityAccess
+{
+}
+
+namespace py::wrapper::Windows::Security::Authorization::AppCapabilityAccess
+{
+    using AppCapability = py::winrt_wrapper<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>;
+    using AppCapabilityAccessChangedEventArgs = py::winrt_wrapper<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>;
+}
+
+namespace py
+{
 }

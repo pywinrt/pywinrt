@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.h")
-#include "py.Windows.UI.Xaml.Media.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
-#include "py.Windows.UI.Xaml.Media.Media3D.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Xaml.h>
@@ -35,16 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Core::Direct
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Core::Direct
-{
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Core::Direct
-{
-    using XamlDirect = py::winrt_wrapper<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>;
-    using IXamlDirectObject = py::winrt_wrapper<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>;
 }
 
 namespace py
@@ -98,4 +67,38 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
         static constexpr const char* type_name = "_IXamlDirectObject";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.h")
+#include "py.Windows.UI.Xaml.Media.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
+#include "py.Windows.UI.Xaml.Media.Media3D.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Core::Direct
+{
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Core::Direct
+{
+    using XamlDirect = py::winrt_wrapper<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>;
+    using IXamlDirectObject = py::winrt_wrapper<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>;
+}
+
+namespace py
+{
 }

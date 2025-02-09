@@ -4,6 +4,464 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#include <winrt/Microsoft.UI.Input.h>
+#include <winrt/Microsoft.UI.Xaml.h>
+#include <winrt/Microsoft.UI.Xaml.Controls.h>
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.System.h>
+#include <winrt/Windows.UI.Core.h>
+
+#include <winrt/Microsoft.UI.Xaml.Input.h>
+
+namespace py::proj::Microsoft::UI::Xaml::Input
+{
+}
+
+namespace py
+{
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::FocusInputDeviceKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorPlacementMode> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::KeyboardNavigationMode> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::ManipulationModes> = "I";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::XYFocusKeyboardNavigationMode> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategyOverride> = "i";
+
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusInputDeviceKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusInputDeviceKind";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "FocusInputDeviceKind";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusNavigationDirection";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "FocusNavigationDirection";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InputScopeNameValue";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "InputScopeNameValue";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyTipPlacementMode";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "KeyTipPlacementMode";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorPlacementMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyboardAcceleratorPlacementMode";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "KeyboardAcceleratorPlacementMode";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyboardNavigationMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyboardNavigationMode";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "KeyboardNavigationMode";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationModes>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationModes";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationModes";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.StandardUICommandKind";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "StandardUICommandKind";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::XYFocusKeyboardNavigationMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.XYFocusKeyboardNavigationMode";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "XYFocusKeyboardNavigationMode";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.XYFocusNavigationStrategy";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "XYFocusNavigationStrategy";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategyOverride>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.XYFocusNavigationStrategyOverride";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "XYFocusNavigationStrategyOverride";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.AccessKeyDisplayDismissedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "AccessKeyDisplayDismissedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.AccessKeyDisplayRequestedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "AccessKeyDisplayRequestedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::AccessKeyInvokedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.AccessKeyInvokedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "AccessKeyInvokedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::AccessKeyManager>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.AccessKeyManager";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "AccessKeyManager";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::CanExecuteRequestedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.CanExecuteRequestedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "CanExecuteRequestedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.CharacterReceivedRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "CharacterReceivedRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ContextRequestedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ContextRequestedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ContextRequestedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::DoubleTappedRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.DoubleTappedRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "DoubleTappedRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ExecuteRequestedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ExecuteRequestedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ExecuteRequestedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::FindNextElementOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FindNextElementOptions";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "FindNextElementOptions";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusManager>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusManager";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "FocusManager";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusManagerGotFocusEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusManagerGotFocusEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "FocusManagerGotFocusEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusManagerLostFocusEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusManagerLostFocusEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "FocusManagerLostFocusEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusMovementResult>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusMovementResult";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "FocusMovementResult";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::GettingFocusEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.GettingFocusEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "GettingFocusEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::HoldingRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.HoldingRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "HoldingRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::InertiaExpansionBehavior>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InertiaExpansionBehavior";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "InertiaExpansionBehavior";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::InertiaRotationBehavior>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InertiaRotationBehavior";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "InertiaRotationBehavior";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::InertiaTranslationBehavior>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InertiaTranslationBehavior";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "InertiaTranslationBehavior";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::InputScope>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InputScope";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "InputScope";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::InputScopeName>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InputScopeName";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "InputScopeName";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "KeyRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyboardAccelerator";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "KeyboardAccelerator";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyboardAcceleratorInvokedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "KeyboardAcceleratorInvokedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::LosingFocusEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.LosingFocusEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "LosingFocusEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationCompletedRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationCompletedRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationDeltaRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationDeltaRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationInertiaStartingRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationInertiaStartingRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationPivot>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationPivot";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationPivot";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationStartedRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationStartedRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationStartingRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationStartingRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ManipulationStartingRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.NoFocusCandidateFoundEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "NoFocusCandidateFoundEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::Pointer>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.Pointer";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "Pointer";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::PointerRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.PointerRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "PointerRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ProcessKeyboardAcceleratorEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "ProcessKeyboardAcceleratorEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::RightTappedRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.RightTappedRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "RightTappedRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::StandardUICommand>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.StandardUICommand";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "StandardUICommand";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::TappedRoutedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.TappedRoutedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "TappedRoutedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.XamlUICommand";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "XamlUICommand";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Input::ICommand>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input._ICommand";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
+        static constexpr const char* type_name = "_ICommand";
+    };
+}
 
 #if __has_include("py.Microsoft.UI.Input.h")
 #include "py.Microsoft.UI.Input.h"
@@ -32,20 +490,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #if __has_include("py.Windows.UI.Core.h")
 #include "py.Windows.UI.Core.h"
 #endif
-
-#include <winrt/Microsoft.UI.Input.h>
-#include <winrt/Microsoft.UI.Xaml.h>
-#include <winrt/Microsoft.UI.Xaml.Controls.h>
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.System.h>
-#include <winrt/Windows.UI.Core.h>
-
-#include <winrt/Microsoft.UI.Xaml.Input.h>
-
-namespace py::proj::Microsoft::UI::Xaml::Input
-{
-}
 
 namespace py::impl::Microsoft::UI::Xaml::Input
 {
@@ -580,447 +1024,6 @@ namespace py::wrapper::Microsoft::UI::Xaml::Input
 
 namespace py
 {
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::FocusInputDeviceKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorPlacementMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::KeyboardNavigationMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::ManipulationModes> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::XYFocusKeyboardNavigationMode> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategyOverride> = "i";
-
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusInputDeviceKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusInputDeviceKind";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "FocusInputDeviceKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusNavigationDirection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusNavigationDirection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "FocusNavigationDirection";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InputScopeNameValue";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "InputScopeNameValue";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyTipPlacementMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "KeyTipPlacementMode";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorPlacementMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyboardAcceleratorPlacementMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "KeyboardAcceleratorPlacementMode";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyboardNavigationMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyboardNavigationMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "KeyboardNavigationMode";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationModes>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationModes";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ManipulationModes";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.StandardUICommandKind";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "StandardUICommandKind";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::XYFocusKeyboardNavigationMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.XYFocusKeyboardNavigationMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "XYFocusKeyboardNavigationMode";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategy>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.XYFocusNavigationStrategy";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "XYFocusNavigationStrategy";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::XYFocusNavigationStrategyOverride>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.XYFocusNavigationStrategyOverride";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "XYFocusNavigationStrategyOverride";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.AccessKeyDisplayDismissedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "AccessKeyDisplayDismissedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.AccessKeyDisplayRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "AccessKeyDisplayRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::AccessKeyInvokedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.AccessKeyInvokedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "AccessKeyInvokedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::AccessKeyManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.AccessKeyManager";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "AccessKeyManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::CanExecuteRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.CanExecuteRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "CanExecuteRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.CharacterReceivedRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "CharacterReceivedRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ContextRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ContextRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ContextRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::DoubleTappedRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.DoubleTappedRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "DoubleTappedRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ExecuteRequestedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ExecuteRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ExecuteRequestedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::FindNextElementOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FindNextElementOptions";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "FindNextElementOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusManager>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusManager";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "FocusManager";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusManagerGotFocusEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusManagerGotFocusEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "FocusManagerGotFocusEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusManagerLostFocusEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusManagerLostFocusEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "FocusManagerLostFocusEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::FocusMovementResult>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.FocusMovementResult";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "FocusMovementResult";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::GettingFocusEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.GettingFocusEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "GettingFocusEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::HoldingRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.HoldingRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "HoldingRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::InertiaExpansionBehavior>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InertiaExpansionBehavior";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "InertiaExpansionBehavior";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::InertiaRotationBehavior>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InertiaRotationBehavior";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "InertiaRotationBehavior";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::InertiaTranslationBehavior>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InertiaTranslationBehavior";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "InertiaTranslationBehavior";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::InputScope>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InputScope";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "InputScope";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::InputScopeName>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.InputScopeName";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "InputScopeName";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "KeyRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyboardAccelerator";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "KeyboardAccelerator";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.KeyboardAcceleratorInvokedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "KeyboardAcceleratorInvokedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::LosingFocusEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.LosingFocusEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "LosingFocusEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationCompletedRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ManipulationCompletedRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationDeltaRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ManipulationDeltaRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationInertiaStartingRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ManipulationInertiaStartingRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationPivot>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationPivot";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ManipulationPivot";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationStartedRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ManipulationStartedRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ManipulationStartingRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ManipulationStartingRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ManipulationStartingRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.NoFocusCandidateFoundEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "NoFocusCandidateFoundEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::Pointer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.Pointer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "Pointer";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::PointerRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.PointerRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "PointerRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.ProcessKeyboardAcceleratorEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "ProcessKeyboardAcceleratorEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::RightTappedRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.RightTappedRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "RightTappedRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::StandardUICommand>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.StandardUICommand";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "StandardUICommand";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::TappedRoutedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.TappedRoutedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "TappedRoutedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::XamlUICommand>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input.XamlUICommand";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "XamlUICommand";
-    };
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Input::ICommand>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.input._ICommand";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.input";
-        static constexpr const char* type_name = "_ICommand";
-    };
     template <>
     struct delegate_python_type<winrt::Microsoft::UI::Xaml::Input::DoubleTappedEventHandler>
     {

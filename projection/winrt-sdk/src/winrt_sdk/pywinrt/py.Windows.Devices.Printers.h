@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Printing.h")
-#include "py.Windows.Graphics.Printing.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Printing.PrintTicket.h")
-#include "py.Windows.Graphics.Printing.PrintTicket.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Printing.h>
@@ -35,26 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Printers
 {
-}
-
-namespace py::impl::Windows::Devices::Printers
-{
-}
-
-namespace py::wrapper::Windows::Devices::Printers
-{
-    using IppAttributeError = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppAttributeError>;
-    using IppAttributeValue = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppAttributeValue>;
-    using IppIntegerRange = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppIntegerRange>;
-    using IppPrintDevice = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppPrintDevice>;
-    using IppResolution = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppResolution>;
-    using IppSetAttributesResult = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppSetAttributesResult>;
-    using IppTextWithLanguage = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppTextWithLanguage>;
-    using PageConfigurationSettings = py::winrt_wrapper<winrt::Windows::Devices::Printers::PageConfigurationSettings>;
-    using PdlPassthroughProvider = py::winrt_wrapper<winrt::Windows::Devices::Printers::PdlPassthroughProvider>;
-    using PdlPassthroughTarget = py::winrt_wrapper<winrt::Windows::Devices::Printers::PdlPassthroughTarget>;
-    using Print3DDevice = py::winrt_wrapper<winrt::Windows::Devices::Printers::Print3DDevice>;
-    using PrintSchema = py::winrt_wrapper<winrt::Windows::Devices::Printers::PrintSchema>;
 }
 
 namespace py
@@ -210,4 +169,48 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "PrintSchema";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Printing.h")
+#include "py.Windows.Graphics.Printing.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Printing.PrintTicket.h")
+#include "py.Windows.Graphics.Printing.PrintTicket.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::Printers
+{
+}
+
+namespace py::wrapper::Windows::Devices::Printers
+{
+    using IppAttributeError = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppAttributeError>;
+    using IppAttributeValue = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppAttributeValue>;
+    using IppIntegerRange = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppIntegerRange>;
+    using IppPrintDevice = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppPrintDevice>;
+    using IppResolution = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppResolution>;
+    using IppSetAttributesResult = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppSetAttributesResult>;
+    using IppTextWithLanguage = py::winrt_wrapper<winrt::Windows::Devices::Printers::IppTextWithLanguage>;
+    using PageConfigurationSettings = py::winrt_wrapper<winrt::Windows::Devices::Printers::PageConfigurationSettings>;
+    using PdlPassthroughProvider = py::winrt_wrapper<winrt::Windows::Devices::Printers::PdlPassthroughProvider>;
+    using PdlPassthroughTarget = py::winrt_wrapper<winrt::Windows::Devices::Printers::PdlPassthroughTarget>;
+    using Print3DDevice = py::winrt_wrapper<winrt::Windows::Devices::Printers::Print3DDevice>;
+    using PrintSchema = py::winrt_wrapper<winrt::Windows::Devices::Printers::PrintSchema>;
+}
+
+namespace py
+{
 }

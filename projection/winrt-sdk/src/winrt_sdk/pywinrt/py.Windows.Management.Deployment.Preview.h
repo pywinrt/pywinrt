@@ -5,21 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Management.Deployment.Preview.h>
 
 namespace py::proj::Windows::Management::Deployment::Preview
 {
-}
-
-namespace py::impl::Windows::Management::Deployment::Preview
-{
-}
-
-namespace py::wrapper::Windows::Management::Deployment::Preview
-{
-    using ClassicAppManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::Preview::ClassicAppManager>;
-    using InstalledClassicAppInfo = py::winrt_wrapper<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo>;
 }
 
 namespace py
@@ -40,4 +29,18 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.management.deployment.preview";
         static constexpr const char* type_name = "InstalledClassicAppInfo";
     };
+}
+
+namespace py::impl::Windows::Management::Deployment::Preview
+{
+}
+
+namespace py::wrapper::Windows::Management::Deployment::Preview
+{
+    using ClassicAppManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::Preview::ClassicAppManager>;
+    using InstalledClassicAppInfo = py::winrt_wrapper<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo>;
+}
+
+namespace py
+{
 }

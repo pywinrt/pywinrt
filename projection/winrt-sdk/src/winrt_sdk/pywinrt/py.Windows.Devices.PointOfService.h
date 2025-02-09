@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Imaging.h>
@@ -35,88 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::PointOfService
 {
-}
-
-namespace py::impl::Windows::Devices::PointOfService
-{
-}
-
-namespace py::wrapper::Windows::Devices::PointOfService
-{
-    using BarcodeScanner = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScanner>;
-    using BarcodeScannerCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities>;
-    using BarcodeScannerDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs>;
-    using BarcodeScannerErrorOccurredEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs>;
-    using BarcodeScannerImagePreviewReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs>;
-    using BarcodeScannerReport = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>;
-    using BarcodeScannerStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs>;
-    using BarcodeSymbologies = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeSymbologies>;
-    using BarcodeSymbologyAttributes = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>;
-    using CashDrawer = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawer>;
-    using CashDrawerCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities>;
-    using CashDrawerCloseAlarm = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm>;
-    using CashDrawerClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs>;
-    using CashDrawerEventSource = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerEventSource>;
-    using CashDrawerOpenedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs>;
-    using CashDrawerStatus = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerStatus>;
-    using CashDrawerStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs>;
-    using ClaimedBarcodeScanner = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>;
-    using ClaimedBarcodeScannerClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs>;
-    using ClaimedCashDrawer = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer>;
-    using ClaimedCashDrawerClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs>;
-    using ClaimedJournalPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter>;
-    using ClaimedLineDisplay = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay>;
-    using ClaimedLineDisplayClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs>;
-    using ClaimedMagneticStripeReader = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader>;
-    using ClaimedMagneticStripeReaderClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs>;
-    using ClaimedPosPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter>;
-    using ClaimedPosPrinterClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs>;
-    using ClaimedReceiptPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter>;
-    using ClaimedSlipPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter>;
-    using JournalPrintJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::JournalPrintJob>;
-    using JournalPrinterCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities>;
-    using LineDisplay = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplay>;
-    using LineDisplayAttributes = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayAttributes>;
-    using LineDisplayCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities>;
-    using LineDisplayCursor = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayCursor>;
-    using LineDisplayCursorAttributes = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes>;
-    using LineDisplayCustomGlyphs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs>;
-    using LineDisplayMarquee = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayMarquee>;
-    using LineDisplayStatisticsCategorySelector = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector>;
-    using LineDisplayStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs>;
-    using LineDisplayStoredBitmap = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap>;
-    using LineDisplayWindow = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayWindow>;
-    using MagneticStripeReader = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReader>;
-    using MagneticStripeReaderAamvaCardDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs>;
-    using MagneticStripeReaderBankCardDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs>;
-    using MagneticStripeReaderCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities>;
-    using MagneticStripeReaderCardTypes = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes>;
-    using MagneticStripeReaderEncryptionAlgorithms = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms>;
-    using MagneticStripeReaderErrorOccurredEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs>;
-    using MagneticStripeReaderReport = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport>;
-    using MagneticStripeReaderStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs>;
-    using MagneticStripeReaderTrackData = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData>;
-    using MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>;
-    using PosPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinter>;
-    using PosPrinterCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities>;
-    using PosPrinterCharacterSetIds = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds>;
-    using PosPrinterFontProperty = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty>;
-    using PosPrinterPrintOptions = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions>;
-    using PosPrinterReleaseDeviceRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>;
-    using PosPrinterStatus = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterStatus>;
-    using PosPrinterStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>;
-    using ReceiptPrintJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ReceiptPrintJob>;
-    using ReceiptPrinterCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities>;
-    using SlipPrintJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::SlipPrintJob>;
-    using SlipPrinterCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities>;
-    using UnifiedPosErrorData = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData>;
-    using ICashDrawerEventSourceEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>;
-    using ICommonClaimedPosPrinterStation = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>;
-    using ICommonPosPrintStationCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>;
-    using ICommonReceiptSlipCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>;
-    using IPosPrinterJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::IPosPrinterJob>;
-    using IReceiptOrSlipJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>;
-    using SizeUInt32 = py::winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>;
 }
 
 namespace py
@@ -1123,4 +1020,110 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
         static constexpr const char* type_name = "SizeUInt32";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::PointOfService
+{
+}
+
+namespace py::wrapper::Windows::Devices::PointOfService
+{
+    using BarcodeScanner = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScanner>;
+    using BarcodeScannerCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities>;
+    using BarcodeScannerDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs>;
+    using BarcodeScannerErrorOccurredEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs>;
+    using BarcodeScannerImagePreviewReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs>;
+    using BarcodeScannerReport = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerReport>;
+    using BarcodeScannerStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs>;
+    using BarcodeSymbologies = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeSymbologies>;
+    using BarcodeSymbologyAttributes = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>;
+    using CashDrawer = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawer>;
+    using CashDrawerCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities>;
+    using CashDrawerCloseAlarm = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm>;
+    using CashDrawerClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs>;
+    using CashDrawerEventSource = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerEventSource>;
+    using CashDrawerOpenedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs>;
+    using CashDrawerStatus = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerStatus>;
+    using CashDrawerStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs>;
+    using ClaimedBarcodeScanner = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>;
+    using ClaimedBarcodeScannerClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs>;
+    using ClaimedCashDrawer = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer>;
+    using ClaimedCashDrawerClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs>;
+    using ClaimedJournalPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter>;
+    using ClaimedLineDisplay = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay>;
+    using ClaimedLineDisplayClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs>;
+    using ClaimedMagneticStripeReader = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader>;
+    using ClaimedMagneticStripeReaderClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs>;
+    using ClaimedPosPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter>;
+    using ClaimedPosPrinterClosedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs>;
+    using ClaimedReceiptPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter>;
+    using ClaimedSlipPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter>;
+    using JournalPrintJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::JournalPrintJob>;
+    using JournalPrinterCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities>;
+    using LineDisplay = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplay>;
+    using LineDisplayAttributes = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayAttributes>;
+    using LineDisplayCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities>;
+    using LineDisplayCursor = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayCursor>;
+    using LineDisplayCursorAttributes = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes>;
+    using LineDisplayCustomGlyphs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs>;
+    using LineDisplayMarquee = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayMarquee>;
+    using LineDisplayStatisticsCategorySelector = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector>;
+    using LineDisplayStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs>;
+    using LineDisplayStoredBitmap = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap>;
+    using LineDisplayWindow = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::LineDisplayWindow>;
+    using MagneticStripeReader = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReader>;
+    using MagneticStripeReaderAamvaCardDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs>;
+    using MagneticStripeReaderBankCardDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs>;
+    using MagneticStripeReaderCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities>;
+    using MagneticStripeReaderCardTypes = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes>;
+    using MagneticStripeReaderEncryptionAlgorithms = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms>;
+    using MagneticStripeReaderErrorOccurredEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs>;
+    using MagneticStripeReaderReport = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport>;
+    using MagneticStripeReaderStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs>;
+    using MagneticStripeReaderTrackData = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData>;
+    using MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>;
+    using PosPrinter = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinter>;
+    using PosPrinterCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities>;
+    using PosPrinterCharacterSetIds = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds>;
+    using PosPrinterFontProperty = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty>;
+    using PosPrinterPrintOptions = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterPrintOptions>;
+    using PosPrinterReleaseDeviceRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>;
+    using PosPrinterStatus = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterStatus>;
+    using PosPrinterStatusUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>;
+    using ReceiptPrintJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ReceiptPrintJob>;
+    using ReceiptPrinterCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities>;
+    using SlipPrintJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::SlipPrintJob>;
+    using SlipPrinterCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities>;
+    using UnifiedPosErrorData = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::UnifiedPosErrorData>;
+    using ICashDrawerEventSourceEventArgs = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>;
+    using ICommonClaimedPosPrinterStation = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>;
+    using ICommonPosPrintStationCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>;
+    using ICommonReceiptSlipCapabilities = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>;
+    using IPosPrinterJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::IPosPrinterJob>;
+    using IReceiptOrSlipJob = py::winrt_wrapper<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>;
+    using SizeUInt32 = py::winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>;
+}
+
+namespace py
+{
 }

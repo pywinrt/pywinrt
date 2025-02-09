@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.ApplicationModel.ExtendedExecution.Foreground.h>
 
 namespace py::proj::Windows::ApplicationModel::ExtendedExecution::Foreground
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::ExtendedExecution::Foreground
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground
-{
-    using ExtendedExecutionForegroundRevokedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>;
-    using ExtendedExecutionForegroundSession = py::winrt_wrapper<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession>;
 }
 
 namespace py
@@ -78,4 +63,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
         static constexpr const char* type_name = "ExtendedExecutionForegroundSession";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::ExtendedExecution::Foreground
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground
+{
+    using ExtendedExecutionForegroundRevokedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>;
+    using ExtendedExecutionForegroundSession = py::winrt_wrapper<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession>;
+}
+
+namespace py
+{
 }

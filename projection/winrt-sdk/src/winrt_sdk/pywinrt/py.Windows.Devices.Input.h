@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Haptics.h")
-#include "py.Windows.Devices.Haptics.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Devices.Haptics.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,30 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Input
 {
-}
-
-namespace py::impl::Windows::Devices::Input
-{
-}
-
-namespace py::wrapper::Windows::Devices::Input
-{
-    using KeyboardCapabilities = py::winrt_wrapper<winrt::Windows::Devices::Input::KeyboardCapabilities>;
-    using MouseCapabilities = py::winrt_wrapper<winrt::Windows::Devices::Input::MouseCapabilities>;
-    using MouseDevice = py::winrt_wrapper<winrt::Windows::Devices::Input::MouseDevice>;
-    using MouseEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::MouseEventArgs>;
-    using PenButtonListener = py::winrt_wrapper<winrt::Windows::Devices::Input::PenButtonListener>;
-    using PenDevice = py::winrt_wrapper<winrt::Windows::Devices::Input::PenDevice>;
-    using PenDockListener = py::winrt_wrapper<winrt::Windows::Devices::Input::PenDockListener>;
-    using PenDockedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenDockedEventArgs>;
-    using PenTailButtonClickedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>;
-    using PenTailButtonDoubleClickedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>;
-    using PenTailButtonLongPressedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>;
-    using PenUndockedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenUndockedEventArgs>;
-    using PointerDevice = py::winrt_wrapper<winrt::Windows::Devices::Input::PointerDevice>;
-    using TouchCapabilities = py::winrt_wrapper<winrt::Windows::Devices::Input::TouchCapabilities>;
-    using MouseDelta = py::winrt_struct_wrapper<winrt::Windows::Devices::Input::MouseDelta>;
-    using PointerDeviceUsage = py::winrt_struct_wrapper<winrt::Windows::Devices::Input::PointerDeviceUsage>;
 }
 
 namespace py
@@ -198,4 +161,44 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PointerDeviceUsage";
     };
+}
+
+#if __has_include("py.Windows.Devices.Haptics.h")
+#include "py.Windows.Devices.Haptics.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Input
+{
+}
+
+namespace py::wrapper::Windows::Devices::Input
+{
+    using KeyboardCapabilities = py::winrt_wrapper<winrt::Windows::Devices::Input::KeyboardCapabilities>;
+    using MouseCapabilities = py::winrt_wrapper<winrt::Windows::Devices::Input::MouseCapabilities>;
+    using MouseDevice = py::winrt_wrapper<winrt::Windows::Devices::Input::MouseDevice>;
+    using MouseEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::MouseEventArgs>;
+    using PenButtonListener = py::winrt_wrapper<winrt::Windows::Devices::Input::PenButtonListener>;
+    using PenDevice = py::winrt_wrapper<winrt::Windows::Devices::Input::PenDevice>;
+    using PenDockListener = py::winrt_wrapper<winrt::Windows::Devices::Input::PenDockListener>;
+    using PenDockedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenDockedEventArgs>;
+    using PenTailButtonClickedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>;
+    using PenTailButtonDoubleClickedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>;
+    using PenTailButtonLongPressedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>;
+    using PenUndockedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::PenUndockedEventArgs>;
+    using PointerDevice = py::winrt_wrapper<winrt::Windows::Devices::Input::PointerDevice>;
+    using TouchCapabilities = py::winrt_wrapper<winrt::Windows::Devices::Input::TouchCapabilities>;
+    using MouseDelta = py::winrt_struct_wrapper<winrt::Windows::Devices::Input::MouseDelta>;
+    using PointerDeviceUsage = py::winrt_struct_wrapper<winrt::Windows::Devices::Input::PointerDeviceUsage>;
+}
+
+namespace py
+{
 }

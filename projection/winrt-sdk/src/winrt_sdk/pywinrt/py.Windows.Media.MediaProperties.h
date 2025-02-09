@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.Core.h>
@@ -35,29 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::MediaProperties
 {
-}
-
-namespace py::impl::Windows::Media::MediaProperties
-{
-}
-
-namespace py::wrapper::Windows::Media::MediaProperties
-{
-    using AudioEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>;
-    using Av1ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Av1ProfileIds>;
-    using ContainerEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>;
-    using H264ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::H264ProfileIds>;
-    using HevcProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::HevcProfileIds>;
-    using ImageEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>;
-    using MediaEncodingProfile = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>;
-    using MediaEncodingSubtypes = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>;
-    using MediaPropertySet = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaPropertySet>;
-    using MediaRatio = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaRatio>;
-    using Mpeg2ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>;
-    using TimedMetadataEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>;
-    using VideoEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>;
-    using Vp9ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Vp9ProfileIds>;
-    using IMediaEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>;
 }
 
 namespace py
@@ -270,4 +226,51 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "_IMediaEncodingProperties";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.Core.h")
+#include "py.Windows.Media.Core.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media::MediaProperties
+{
+}
+
+namespace py::wrapper::Windows::Media::MediaProperties
+{
+    using AudioEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>;
+    using Av1ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Av1ProfileIds>;
+    using ContainerEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>;
+    using H264ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::H264ProfileIds>;
+    using HevcProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::HevcProfileIds>;
+    using ImageEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>;
+    using MediaEncodingProfile = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>;
+    using MediaEncodingSubtypes = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>;
+    using MediaPropertySet = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaPropertySet>;
+    using MediaRatio = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::MediaRatio>;
+    using Mpeg2ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>;
+    using TimedMetadataEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>;
+    using VideoEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>;
+    using Vp9ProfileIds = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::Vp9ProfileIds>;
+    using IMediaEncodingProperties = py::winrt_wrapper<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>;
+}
+
+namespace py
+{
 }

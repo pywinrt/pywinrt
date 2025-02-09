@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.AppService.h")
-#include "py.Windows.ApplicationModel.AppService.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
-#endif
-
-#if __has_include("py.Windows.Media.SpeechRecognition.h")
-#include "py.Windows.Media.SpeechRecognition.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.AppService.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -40,24 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::VoiceCommands
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::VoiceCommands
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::VoiceCommands
-{
-    using VoiceCommand = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>;
-    using VoiceCommandCompletedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>;
-    using VoiceCommandConfirmationResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>;
-    using VoiceCommandContentTile = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>;
-    using VoiceCommandDefinition = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>;
-    using VoiceCommandDefinitionManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>;
-    using VoiceCommandDisambiguationResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>;
-    using VoiceCommandResponse = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>;
-    using VoiceCommandServiceConnection = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>;
-    using VoiceCommandUserMessage = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>;
 }
 
 namespace py
@@ -164,4 +121,50 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.voicecommands";
         static constexpr const char* type_name = "VoiceCommandUserMessage";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.AppService.h")
+#include "py.Windows.ApplicationModel.AppService.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Globalization.h")
+#include "py.Windows.Globalization.h"
+#endif
+
+#if __has_include("py.Windows.Media.SpeechRecognition.h")
+#include "py.Windows.Media.SpeechRecognition.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::VoiceCommands
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::VoiceCommands
+{
+    using VoiceCommand = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>;
+    using VoiceCommandCompletedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>;
+    using VoiceCommandConfirmationResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>;
+    using VoiceCommandContentTile = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>;
+    using VoiceCommandDefinition = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>;
+    using VoiceCommandDefinitionManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>;
+    using VoiceCommandDisambiguationResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>;
+    using VoiceCommandResponse = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>;
+    using VoiceCommandServiceConnection = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>;
+    using VoiceCommandUserMessage = py::winrt_wrapper<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>;
+}
+
+namespace py
+{
 }

@@ -4,6 +4,82 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#include <winrt/Windows.ApplicationModel.h>
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.Storage.h>
+
+#include <winrt/Windows.Gaming.Preview.GamesEnumeration.h>
+
+namespace py::proj::Windows::Gaming::Preview::GamesEnumeration
+{
+}
+
+namespace py
+{
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState> = "i";
+
+
+    template<>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameListCategory";
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameListCategory";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameListEntryLaunchableState";
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameListEntryLaunchableState";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameList>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameList";
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameList";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameListEntry";
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameListEntry";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameModeConfiguration";
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameModeConfiguration";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameModeUserConfiguration";
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "GameModeUserConfiguration";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration._IGameListEntry";
+        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
+        static constexpr const char* type_name = "_IGameListEntry";
+    };
+}
 
 #if __has_include("py.Windows.ApplicationModel.h")
 #include "py.Windows.ApplicationModel.h"
@@ -20,17 +96,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #if __has_include("py.Windows.Storage.h")
 #include "py.Windows.Storage.h"
 #endif
-
-#include <winrt/Windows.ApplicationModel.h>
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Storage.h>
-
-#include <winrt/Windows.Gaming.Preview.GamesEnumeration.h>
-
-namespace py::proj::Windows::Gaming::Preview::GamesEnumeration
-{
-}
 
 namespace py::impl::Windows::Gaming::Preview::GamesEnumeration
 {
@@ -110,68 +175,6 @@ namespace py::wrapper::Windows::Gaming::Preview::GamesEnumeration
 
 namespace py
 {
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory> = "i";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListCategory>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameListCategory";
-        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
-        static constexpr const char* type_name = "GameListCategory";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntryLaunchableState>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameListEntryLaunchableState";
-        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
-        static constexpr const char* type_name = "GameListEntryLaunchableState";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameList>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameList";
-        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
-        static constexpr const char* type_name = "GameList";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameListEntry";
-        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
-        static constexpr const char* type_name = "GameListEntry";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameModeConfiguration";
-        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
-        static constexpr const char* type_name = "GameModeConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration.GameModeUserConfiguration";
-        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
-        static constexpr const char* type_name = "GameModeUserConfiguration";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.gaming.preview.gamesenumeration._IGameListEntry";
-        static constexpr const char* module_name = "winrt.windows.gaming.preview.gamesenumeration";
-        static constexpr const char* type_name = "_IGameListEntry";
-    };
     template <>
     struct delegate_python_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler>
     {

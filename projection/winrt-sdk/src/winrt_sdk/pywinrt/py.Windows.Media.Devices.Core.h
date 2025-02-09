@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
-#endif
-
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
@@ -35,29 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Devices::Core
 {
-}
-
-namespace py::impl::Windows::Media::Devices::Core
-{
-}
-
-namespace py::wrapper::Windows::Media::Devices::Core
-{
-    using CameraIntrinsics = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::CameraIntrinsics>;
-    using DepthCorrelatedCoordinateMapper = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>;
-    using FrameControlCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>;
-    using FrameController = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameController>;
-    using FrameExposureCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>;
-    using FrameExposureCompensationCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>;
-    using FrameExposureCompensationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>;
-    using FrameExposureControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameExposureControl>;
-    using FrameFlashCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>;
-    using FrameFlashControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameFlashControl>;
-    using FrameFocusCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>;
-    using FrameFocusControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameFocusControl>;
-    using FrameIsoSpeedCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>;
-    using FrameIsoSpeedControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>;
-    using VariablePhotoSequenceController = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>;
 }
 
 namespace py
@@ -193,4 +149,51 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.devices.core";
         static constexpr const char* type_name = "VariablePhotoSequenceController";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Media.MediaProperties.h")
+#include "py.Windows.Media.MediaProperties.h"
+#endif
+
+#if __has_include("py.Windows.Perception.Spatial.h")
+#include "py.Windows.Perception.Spatial.h"
+#endif
+
+namespace py::impl::Windows::Media::Devices::Core
+{
+}
+
+namespace py::wrapper::Windows::Media::Devices::Core
+{
+    using CameraIntrinsics = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::CameraIntrinsics>;
+    using DepthCorrelatedCoordinateMapper = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>;
+    using FrameControlCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>;
+    using FrameController = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameController>;
+    using FrameExposureCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>;
+    using FrameExposureCompensationCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>;
+    using FrameExposureCompensationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>;
+    using FrameExposureControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameExposureControl>;
+    using FrameFlashCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>;
+    using FrameFlashControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameFlashControl>;
+    using FrameFocusCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>;
+    using FrameFocusControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameFocusControl>;
+    using FrameIsoSpeedCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>;
+    using FrameIsoSpeedControl = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>;
+    using VariablePhotoSequenceController = py::winrt_wrapper<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>;
+}
+
+namespace py
+{
 }

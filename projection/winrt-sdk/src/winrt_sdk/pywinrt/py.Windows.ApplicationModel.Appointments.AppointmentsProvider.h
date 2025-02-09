@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Appointments.h")
-#include "py.Windows.ApplicationModel.Appointments.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Appointments.h>
 #include <winrt/Windows.Foundation.h>
 
@@ -20,18 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Appointments::AppointmentsProvider
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Appointments::AppointmentsProvider
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider
-{
-    using AddAppointmentOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation>;
-    using AppointmentsProviderLaunchActionVerbs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs>;
-    using RemoveAppointmentOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation>;
-    using ReplaceAppointmentOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>;
 }
 
 namespace py
@@ -68,4 +47,28 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
         static constexpr const char* type_name = "ReplaceAppointmentOperation";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Appointments.h")
+#include "py.Windows.ApplicationModel.Appointments.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Appointments::AppointmentsProvider
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider
+{
+    using AddAppointmentOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation>;
+    using AppointmentsProviderLaunchActionVerbs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs>;
+    using RemoveAppointmentOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation>;
+    using ReplaceAppointmentOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>;
+}
+
+namespace py
+{
 }

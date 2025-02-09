@@ -5,23 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.UI.UIAutomation.h>
 
 namespace py::proj::Windows::UI::UIAutomation
 {
-}
-
-namespace py::impl::Windows::UI::UIAutomation
-{
-}
-
-namespace py::wrapper::Windows::UI::UIAutomation
-{
-    using AutomationConnection = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::AutomationConnection>;
-    using AutomationConnectionBoundObject = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>;
-    using AutomationElement = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::AutomationElement>;
-    using AutomationTextRange = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::AutomationTextRange>;
 }
 
 namespace py
@@ -58,4 +45,20 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation";
         static constexpr const char* type_name = "AutomationTextRange";
     };
+}
+
+namespace py::impl::Windows::UI::UIAutomation
+{
+}
+
+namespace py::wrapper::Windows::UI::UIAutomation
+{
+    using AutomationConnection = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::AutomationConnection>;
+    using AutomationConnectionBoundObject = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>;
+    using AutomationElement = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::AutomationElement>;
+    using AutomationTextRange = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::AutomationTextRange>;
+}
+
+namespace py
+{
 }

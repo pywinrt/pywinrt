@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Imaging.h>
@@ -35,25 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::AI::MachineLearning::Preview
 {
-}
-
-namespace py::impl::Windows::AI::MachineLearning::Preview
-{
-}
-
-namespace py::wrapper::Windows::AI::MachineLearning::Preview
-{
-    using ImageVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>;
-    using InferencingOptionsPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>;
-    using LearningModelBindingPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview>;
-    using LearningModelDescriptionPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>;
-    using LearningModelEvaluationResultPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>;
-    using LearningModelPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>;
-    using LearningModelVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>;
-    using MapVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>;
-    using SequenceVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>;
-    using TensorVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>;
-    using ILearningModelVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>;
 }
 
 namespace py
@@ -179,4 +139,47 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "_ILearningModelVariableDescriptorPreview";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::AI::MachineLearning::Preview
+{
+}
+
+namespace py::wrapper::Windows::AI::MachineLearning::Preview
+{
+    using ImageVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>;
+    using InferencingOptionsPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>;
+    using LearningModelBindingPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview>;
+    using LearningModelDescriptionPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>;
+    using LearningModelEvaluationResultPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>;
+    using LearningModelPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>;
+    using LearningModelVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>;
+    using MapVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>;
+    using SequenceVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>;
+    using TensorVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>;
+    using ILearningModelVariableDescriptorPreview = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>;
+}
+
+namespace py
+{
 }

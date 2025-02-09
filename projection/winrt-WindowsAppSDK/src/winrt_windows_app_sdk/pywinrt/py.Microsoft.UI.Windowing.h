@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Windows.Foundation.h>
@@ -40,24 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Windowing
 {
-}
-
-namespace py::impl::Microsoft::UI::Windowing
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Windowing
-{
-    using AppWindow = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindow>;
-    using AppWindowChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs>;
-    using AppWindowClosingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs>;
-    using AppWindowPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowPresenter>;
-    using AppWindowTitleBar = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowTitleBar>;
-    using CompactOverlayPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter>;
-    using DisplayArea = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::DisplayArea>;
-    using DisplayAreaWatcher = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::DisplayAreaWatcher>;
-    using FullScreenPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::FullScreenPresenter>;
-    using OverlappedPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::OverlappedPresenter>;
 }
 
 namespace py
@@ -219,4 +176,50 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "OverlappedPresenter";
     };
+}
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Dispatching.h")
+#include "py.Microsoft.UI.Dispatching.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Windowing
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Windowing
+{
+    using AppWindow = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindow>;
+    using AppWindowChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs>;
+    using AppWindowClosingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs>;
+    using AppWindowPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowPresenter>;
+    using AppWindowTitleBar = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::AppWindowTitleBar>;
+    using CompactOverlayPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter>;
+    using DisplayArea = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::DisplayArea>;
+    using DisplayAreaWatcher = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::DisplayAreaWatcher>;
+    using FullScreenPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::FullScreenPresenter>;
+    using OverlappedPresenter = py::winrt_wrapper<winrt::Microsoft::UI::Windowing::OverlappedPresenter>;
+}
+
+namespace py
+{
 }

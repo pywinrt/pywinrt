@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -35,21 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Casting
 {
-}
-
-namespace py::impl::Windows::Media::Casting
-{
-}
-
-namespace py::wrapper::Windows::Media::Casting
-{
-    using CastingConnection = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingConnection>;
-    using CastingConnectionErrorOccurredEventArgs = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>;
-    using CastingDevice = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingDevice>;
-    using CastingDevicePicker = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingDevicePicker>;
-    using CastingDevicePickerFilter = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingDevicePickerFilter>;
-    using CastingDeviceSelectedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>;
-    using CastingSource = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingSource>;
 }
 
 namespace py
@@ -143,4 +107,43 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingSource";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+namespace py::impl::Windows::Media::Casting
+{
+}
+
+namespace py::wrapper::Windows::Media::Casting
+{
+    using CastingConnection = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingConnection>;
+    using CastingConnectionErrorOccurredEventArgs = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>;
+    using CastingDevice = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingDevice>;
+    using CastingDevicePicker = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingDevicePicker>;
+    using CastingDevicePickerFilter = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingDevicePickerFilter>;
+    using CastingDeviceSelectedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>;
+    using CastingSource = py::winrt_wrapper<winrt::Windows::Media::Casting::CastingSource>;
+}
+
+namespace py
+{
 }

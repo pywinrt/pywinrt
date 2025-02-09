@@ -5,25 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Graphics.h>
 
 namespace py::proj::Windows::Graphics
 {
-}
-
-namespace py::impl::Windows::Graphics
-{
-}
-
-namespace py::wrapper::Windows::Graphics
-{
-    using IGeometrySource2D = py::winrt_wrapper<winrt::Windows::Graphics::IGeometrySource2D>;
-    using DisplayAdapterId = py::winrt_struct_wrapper<winrt::Windows::Graphics::DisplayAdapterId>;
-    using DisplayId = py::winrt_struct_wrapper<winrt::Windows::Graphics::DisplayId>;
-    using PointInt32 = py::winrt_struct_wrapper<winrt::Windows::Graphics::PointInt32>;
-    using RectInt32 = py::winrt_struct_wrapper<winrt::Windows::Graphics::RectInt32>;
-    using SizeInt32 = py::winrt_struct_wrapper<winrt::Windows::Graphics::SizeInt32>;
 }
 
 namespace py
@@ -91,4 +76,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics";
         static constexpr const char* type_name = "SizeInt32";
     };
+}
+
+namespace py::impl::Windows::Graphics
+{
+}
+
+namespace py::wrapper::Windows::Graphics
+{
+    using IGeometrySource2D = py::winrt_wrapper<winrt::Windows::Graphics::IGeometrySource2D>;
+    using DisplayAdapterId = py::winrt_struct_wrapper<winrt::Windows::Graphics::DisplayAdapterId>;
+    using DisplayId = py::winrt_struct_wrapper<winrt::Windows::Graphics::DisplayId>;
+    using PointInt32 = py::winrt_struct_wrapper<winrt::Windows::Graphics::PointInt32>;
+    using RectInt32 = py::winrt_struct_wrapper<winrt::Windows::Graphics::RectInt32>;
+    using SizeInt32 = py::winrt_struct_wrapper<winrt::Windows::Graphics::SizeInt32>;
+}
+
+namespace py
+{
 }

@@ -5,21 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Management.Workplace.h>
 
 namespace py::proj::Windows::Management::Workplace
 {
-}
-
-namespace py::impl::Windows::Management::Workplace
-{
-}
-
-namespace py::wrapper::Windows::Management::Workplace
-{
-    using MdmPolicy = py::winrt_wrapper<winrt::Windows::Management::Workplace::MdmPolicy>;
-    using WorkplaceSettings = py::winrt_wrapper<winrt::Windows::Management::Workplace::WorkplaceSettings>;
 }
 
 namespace py
@@ -51,4 +40,18 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.management.workplace";
         static constexpr const char* type_name = "WorkplaceSettings";
     };
+}
+
+namespace py::impl::Windows::Management::Workplace
+{
+}
+
+namespace py::wrapper::Windows::Management::Workplace
+{
+    using MdmPolicy = py::winrt_wrapper<winrt::Windows::Management::Workplace::MdmPolicy>;
+    using WorkplaceSettings = py::winrt_wrapper<winrt::Windows::Management::Workplace::WorkplaceSettings>;
+}
+
+namespace py
+{
 }

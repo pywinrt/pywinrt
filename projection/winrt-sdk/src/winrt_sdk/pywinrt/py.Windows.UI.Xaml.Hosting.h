@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.h")
-#include "py.Windows.UI.Xaml.Controls.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
-#include "py.Windows.UI.Xaml.Controls.Primitives.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.Composition.h>
 #include <winrt/Windows.UI.WindowManagement.h>
@@ -40,28 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Hosting
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Hosting
-{
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Hosting
-{
-    using DesignerAppExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>;
-    using DesignerAppManager = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager>;
-    using DesignerAppView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>;
-    using DesktopWindowXamlSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>;
-    using DesktopWindowXamlSourceGotFocusEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>;
-    using DesktopWindowXamlSourceTakeFocusRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>;
-    using ElementCompositionPreview = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview>;
-    using WindowsXamlManager = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager>;
-    using XamlSourceFocusNavigationRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>;
-    using XamlSourceFocusNavigationResult = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>;
-    using XamlUIPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter>;
-    using IXamlUIPresenterHost = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>;
-    using IXamlUIPresenterHost2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>;
-    using IXamlUIPresenterHost3 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>;
 }
 
 namespace py
@@ -200,4 +153,54 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.hosting";
         static constexpr const char* type_name = "_IXamlUIPresenterHost3";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.WindowManagement.h")
+#include "py.Windows.UI.WindowManagement.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.h")
+#include "py.Windows.UI.Xaml.Controls.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
+#include "py.Windows.UI.Xaml.Controls.Primitives.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Hosting
+{
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Hosting
+{
+    using DesignerAppExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>;
+    using DesignerAppManager = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesignerAppManager>;
+    using DesignerAppView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>;
+    using DesktopWindowXamlSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource>;
+    using DesktopWindowXamlSourceGotFocusEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>;
+    using DesktopWindowXamlSourceTakeFocusRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>;
+    using ElementCompositionPreview = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview>;
+    using WindowsXamlManager = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager>;
+    using XamlSourceFocusNavigationRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>;
+    using XamlSourceFocusNavigationResult = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>;
+    using XamlUIPresenter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter>;
+    using IXamlUIPresenterHost = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>;
+    using IXamlUIPresenterHost2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>;
+    using IXamlUIPresenterHost3 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>;
+}
+
+namespace py
+{
 }

@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,119 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Sms
 {
-}
-
-namespace py::impl::Windows::Devices::Sms
-{
-    struct SmsDeviceStatusChangedEventHandler
-    {
-        static winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Sms::SmsDevice const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct SmsMessageReceivedEventHandler
-    {
-        static winrt::Windows::Devices::Sms::SmsMessageReceivedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Sms::SmsDevice const& param0, winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Devices::Sms
-{
-    using DeleteSmsMessageOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation>;
-    using DeleteSmsMessagesOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation>;
-    using GetSmsDeviceOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::GetSmsDeviceOperation>;
-    using GetSmsMessageOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::GetSmsMessageOperation>;
-    using GetSmsMessagesOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::GetSmsMessagesOperation>;
-    using SendSmsMessageOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::SendSmsMessageOperation>;
-    using SmsAppMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsAppMessage>;
-    using SmsBinaryMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsBinaryMessage>;
-    using SmsBroadcastMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsBroadcastMessage>;
-    using SmsDevice = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsDevice>;
-    using SmsDevice2 = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsDevice2>;
-    using SmsDeviceMessageStore = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsDeviceMessageStore>;
-    using SmsFilterRule = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsFilterRule>;
-    using SmsFilterRules = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsFilterRules>;
-    using SmsMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs>;
-    using SmsMessageReceivedTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>;
-    using SmsMessageRegistration = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsMessageRegistration>;
-    using SmsReceivedEventDetails = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsReceivedEventDetails>;
-    using SmsSendMessageResult = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsSendMessageResult>;
-    using SmsStatusMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsStatusMessage>;
-    using SmsTextMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsTextMessage>;
-    using SmsTextMessage2 = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsTextMessage2>;
-    using SmsVoicemailMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsVoicemailMessage>;
-    using SmsWapMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsWapMessage>;
-    using ISmsBinaryMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsBinaryMessage>;
-    using ISmsDevice = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsDevice>;
-    using ISmsMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsMessage>;
-    using ISmsMessageBase = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsMessageBase>;
-    using ISmsTextMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsTextMessage>;
-    using SmsEncodedLength = py::winrt_struct_wrapper<winrt::Windows::Devices::Sms::SmsEncodedLength>;
 }
 
 namespace py
@@ -506,6 +380,135 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.sms";
         static constexpr const char* type_name = "SmsEncodedLength";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::Sms
+{
+    struct SmsDeviceStatusChangedEventHandler
+    {
+        static winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Sms::SmsDevice const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct SmsMessageReceivedEventHandler
+    {
+        static winrt::Windows::Devices::Sms::SmsMessageReceivedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Devices::Sms::SmsDevice const& param0, winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Devices::Sms
+{
+    using DeleteSmsMessageOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation>;
+    using DeleteSmsMessagesOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation>;
+    using GetSmsDeviceOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::GetSmsDeviceOperation>;
+    using GetSmsMessageOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::GetSmsMessageOperation>;
+    using GetSmsMessagesOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::GetSmsMessagesOperation>;
+    using SendSmsMessageOperation = py::winrt_wrapper<winrt::Windows::Devices::Sms::SendSmsMessageOperation>;
+    using SmsAppMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsAppMessage>;
+    using SmsBinaryMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsBinaryMessage>;
+    using SmsBroadcastMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsBroadcastMessage>;
+    using SmsDevice = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsDevice>;
+    using SmsDevice2 = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsDevice2>;
+    using SmsDeviceMessageStore = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsDeviceMessageStore>;
+    using SmsFilterRule = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsFilterRule>;
+    using SmsFilterRules = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsFilterRules>;
+    using SmsMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs>;
+    using SmsMessageReceivedTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>;
+    using SmsMessageRegistration = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsMessageRegistration>;
+    using SmsReceivedEventDetails = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsReceivedEventDetails>;
+    using SmsSendMessageResult = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsSendMessageResult>;
+    using SmsStatusMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsStatusMessage>;
+    using SmsTextMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsTextMessage>;
+    using SmsTextMessage2 = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsTextMessage2>;
+    using SmsVoicemailMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsVoicemailMessage>;
+    using SmsWapMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::SmsWapMessage>;
+    using ISmsBinaryMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsBinaryMessage>;
+    using ISmsDevice = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsDevice>;
+    using ISmsMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsMessage>;
+    using ISmsMessageBase = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsMessageBase>;
+    using ISmsTextMessage = py::winrt_wrapper<winrt::Windows::Devices::Sms::ISmsTextMessage>;
+    using SmsEncodedLength = py::winrt_struct_wrapper<winrt::Windows::Devices::Sms::SmsEncodedLength>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler>
     {

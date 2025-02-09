@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -30,25 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Gaming::XboxLive::Storage
 {
-}
-
-namespace py::impl::Windows::Gaming::XboxLive::Storage
-{
-}
-
-namespace py::wrapper::Windows::Gaming::XboxLive::Storage
-{
-    using GameSaveBlobGetResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>;
-    using GameSaveBlobInfo = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>;
-    using GameSaveBlobInfoGetResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>;
-    using GameSaveBlobInfoQuery = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>;
-    using GameSaveContainer = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>;
-    using GameSaveContainerInfo = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>;
-    using GameSaveContainerInfoGetResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>;
-    using GameSaveContainerInfoQuery = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>;
-    using GameSaveOperationResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>;
-    using GameSaveProvider = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>;
-    using GameSaveProviderGetResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>;
 }
 
 namespace py
@@ -152,4 +116,43 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveProviderGetResult";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Gaming::XboxLive::Storage
+{
+}
+
+namespace py::wrapper::Windows::Gaming::XboxLive::Storage
+{
+    using GameSaveBlobGetResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>;
+    using GameSaveBlobInfo = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>;
+    using GameSaveBlobInfoGetResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>;
+    using GameSaveBlobInfoQuery = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>;
+    using GameSaveContainer = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>;
+    using GameSaveContainerInfo = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>;
+    using GameSaveContainerInfoGetResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>;
+    using GameSaveContainerInfoQuery = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>;
+    using GameSaveOperationResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>;
+    using GameSaveProvider = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>;
+    using GameSaveProviderGetResult = py::winrt_wrapper<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>;
+}
+
+namespace py
+{
 }

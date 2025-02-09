@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.Core.h>
@@ -40,16 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Transcoding
 {
-}
-
-namespace py::impl::Windows::Media::Transcoding
-{
-}
-
-namespace py::wrapper::Windows::Media::Transcoding
-{
-    using MediaTranscoder = py::winrt_wrapper<winrt::Windows::Media::Transcoding::MediaTranscoder>;
-    using PrepareTranscodeResult = py::winrt_wrapper<winrt::Windows::Media::Transcoding::PrepareTranscodeResult>;
 }
 
 namespace py
@@ -92,4 +57,42 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.transcoding";
         static constexpr const char* type_name = "PrepareTranscodeResult";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.Core.h")
+#include "py.Windows.Media.Core.h"
+#endif
+
+#if __has_include("py.Windows.Media.MediaProperties.h")
+#include "py.Windows.Media.MediaProperties.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media::Transcoding
+{
+}
+
+namespace py::wrapper::Windows::Media::Transcoding
+{
+    using MediaTranscoder = py::winrt_wrapper<winrt::Windows::Media::Transcoding::MediaTranscoder>;
+    using PrepareTranscodeResult = py::winrt_wrapper<winrt::Windows::Media::Transcoding::PrepareTranscodeResult>;
+}
+
+namespace py
+{
 }

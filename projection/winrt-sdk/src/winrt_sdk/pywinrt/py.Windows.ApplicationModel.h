@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Core.h")
-#include "py.Windows.ApplicationModel.Core.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.Foundation.h>
@@ -45,55 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel
 {
-}
-
-namespace py::impl::Windows::ApplicationModel
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel
-{
-    using AppDisplayInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppDisplayInfo>;
-    using AppInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInfo>;
-    using AppInstallerInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInstallerInfo>;
-    using AppInstance = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInstance>;
-    using CameraApplicationManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::CameraApplicationManager>;
-    using DesignMode = py::winrt_wrapper<winrt::Windows::ApplicationModel::DesignMode>;
-    using EnteredBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>;
-    using FindRelatedPackagesOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::FindRelatedPackagesOptions>;
-    using FullTrustProcessLaunchResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::FullTrustProcessLaunchResult>;
-    using FullTrustProcessLauncher = py::winrt_wrapper<winrt::Windows::ApplicationModel::FullTrustProcessLauncher>;
-    using LeavingBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>;
-    using LimitedAccessFeatureRequestResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::LimitedAccessFeatureRequestResult>;
-    using LimitedAccessFeatures = py::winrt_wrapper<winrt::Windows::ApplicationModel::LimitedAccessFeatures>;
-    using Package = py::winrt_wrapper<winrt::Windows::ApplicationModel::Package>;
-    using PackageCatalog = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalog>;
-    using PackageCatalogAddOptionalPackageResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult>;
-    using PackageCatalogAddResourcePackageResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult>;
-    using PackageCatalogRemoveOptionalPackagesResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult>;
-    using PackageCatalogRemoveResourcePackagesResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult>;
-    using PackageContentGroup = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageContentGroup>;
-    using PackageContentGroupStagingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs>;
-    using PackageId = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageId>;
-    using PackageInstallingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageInstallingEventArgs>;
-    using PackageStagingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageStagingEventArgs>;
-    using PackageStatus = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageStatus>;
-    using PackageStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs>;
-    using PackageUninstallingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageUninstallingEventArgs>;
-    using PackageUpdateAvailabilityResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageUpdateAvailabilityResult>;
-    using PackageUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageUpdatingEventArgs>;
-    using StartupTask = py::winrt_wrapper<winrt::Windows::ApplicationModel::StartupTask>;
-    using SuspendingDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::SuspendingDeferral>;
-    using SuspendingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::SuspendingEventArgs>;
-    using SuspendingOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::SuspendingOperation>;
-    using IEnteredBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>;
-    using ILeavingBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>;
-    using IPackageCatalogStatics2 = py::winrt_wrapper<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>;
-    using ISuspendingDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::ISuspendingDeferral>;
-    using ISuspendingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ISuspendingEventArgs>;
-    using ISuspendingOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::ISuspendingOperation>;
-    using PackageInstallProgress = py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageInstallProgress>;
-    using PackageVersion = py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageVersion>;
 }
 
 namespace py
@@ -542,4 +464,85 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageVersion";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Activation.h")
+#include "py.Windows.ApplicationModel.Activation.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Core.h")
+#include "py.Windows.ApplicationModel.Core.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel
+{
+    using AppDisplayInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppDisplayInfo>;
+    using AppInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInfo>;
+    using AppInstallerInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInstallerInfo>;
+    using AppInstance = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppInstance>;
+    using CameraApplicationManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::CameraApplicationManager>;
+    using DesignMode = py::winrt_wrapper<winrt::Windows::ApplicationModel::DesignMode>;
+    using EnteredBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>;
+    using FindRelatedPackagesOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::FindRelatedPackagesOptions>;
+    using FullTrustProcessLaunchResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::FullTrustProcessLaunchResult>;
+    using FullTrustProcessLauncher = py::winrt_wrapper<winrt::Windows::ApplicationModel::FullTrustProcessLauncher>;
+    using LeavingBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>;
+    using LimitedAccessFeatureRequestResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::LimitedAccessFeatureRequestResult>;
+    using LimitedAccessFeatures = py::winrt_wrapper<winrt::Windows::ApplicationModel::LimitedAccessFeatures>;
+    using Package = py::winrt_wrapper<winrt::Windows::ApplicationModel::Package>;
+    using PackageCatalog = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalog>;
+    using PackageCatalogAddOptionalPackageResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult>;
+    using PackageCatalogAddResourcePackageResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult>;
+    using PackageCatalogRemoveOptionalPackagesResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult>;
+    using PackageCatalogRemoveResourcePackagesResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult>;
+    using PackageContentGroup = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageContentGroup>;
+    using PackageContentGroupStagingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs>;
+    using PackageId = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageId>;
+    using PackageInstallingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageInstallingEventArgs>;
+    using PackageStagingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageStagingEventArgs>;
+    using PackageStatus = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageStatus>;
+    using PackageStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs>;
+    using PackageUninstallingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageUninstallingEventArgs>;
+    using PackageUpdateAvailabilityResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageUpdateAvailabilityResult>;
+    using PackageUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageUpdatingEventArgs>;
+    using StartupTask = py::winrt_wrapper<winrt::Windows::ApplicationModel::StartupTask>;
+    using SuspendingDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::SuspendingDeferral>;
+    using SuspendingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::SuspendingEventArgs>;
+    using SuspendingOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::SuspendingOperation>;
+    using IEnteredBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>;
+    using ILeavingBackgroundEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>;
+    using IPackageCatalogStatics2 = py::winrt_wrapper<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>;
+    using ISuspendingDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::ISuspendingDeferral>;
+    using ISuspendingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ISuspendingEventArgs>;
+    using ISuspendingOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::ISuspendingOperation>;
+    using PackageInstallProgress = py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageInstallProgress>;
+    using PackageVersion = py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::PackageVersion>;
+}
+
+namespace py
+{
 }

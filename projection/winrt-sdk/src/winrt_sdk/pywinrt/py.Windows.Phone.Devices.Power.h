@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Phone.Devices.Power.h>
 
 namespace py::proj::Windows::Phone::Devices::Power
 {
-}
-
-namespace py::impl::Windows::Phone::Devices::Power
-{
-}
-
-namespace py::wrapper::Windows::Phone::Devices::Power
-{
-    using Battery = py::winrt_wrapper<winrt::Windows::Phone::Devices::Power::Battery>;
 }
 
 namespace py
@@ -36,4 +22,21 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.devices.power";
         static constexpr const char* type_name = "Battery";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::Phone::Devices::Power
+{
+}
+
+namespace py::wrapper::Windows::Phone::Devices::Power
+{
+    using Battery = py::winrt_wrapper<winrt::Windows::Phone::Devices::Power::Battery>;
+}
+
+namespace py
+{
 }

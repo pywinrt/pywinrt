@@ -4,6 +4,62 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Graphics.Printing.h>
+#include <winrt/Windows.UI.Xaml.h>
+
+#include <winrt/Windows.UI.Xaml.Printing.h>
+
+namespace py::proj::Windows::UI::Xaml::Printing
+{
+}
+
+namespace py
+{
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Printing::PreviewPageCountType> = "i";
+
+
+    template<>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::PreviewPageCountType>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.PreviewPageCountType";
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "PreviewPageCountType";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.AddPagesEventArgs";
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "AddPagesEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.GetPreviewPageEventArgs";
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "GetPreviewPageEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::PaginateEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.PaginateEventArgs";
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "PaginateEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Xaml::Printing::PrintDocument>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.PrintDocument";
+        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
+        static constexpr const char* type_name = "PrintDocument";
+    };
+}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -16,16 +72,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
 #endif
-
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Graphics.Printing.h>
-#include <winrt/Windows.UI.Xaml.h>
-
-#include <winrt/Windows.UI.Xaml.Printing.h>
-
-namespace py::proj::Windows::UI::Xaml::Printing
-{
-}
 
 namespace py::impl::Windows::UI::Xaml::Printing
 {
@@ -172,49 +218,6 @@ namespace py::wrapper::Windows::UI::Xaml::Printing
 
 namespace py
 {
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::Xaml::Printing::PreviewPageCountType> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Printing::PreviewPageCountType>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.PreviewPageCountType";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
-        static constexpr const char* type_name = "PreviewPageCountType";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.AddPagesEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
-        static constexpr const char* type_name = "AddPagesEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.GetPreviewPageEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
-        static constexpr const char* type_name = "GetPreviewPageEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Printing::PaginateEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.PaginateEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
-        static constexpr const char* type_name = "PaginateEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::Xaml::Printing::PrintDocument>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.printing.PrintDocument";
-        static constexpr const char* module_name = "winrt.windows.ui.xaml.printing";
-        static constexpr const char* type_name = "PrintDocument";
-    };
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Printing::AddPagesEventHandler>
     {

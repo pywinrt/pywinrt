@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -30,35 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Data::Xml::Dom
 {
-}
-
-namespace py::impl::Windows::Data::Xml::Dom
-{
-}
-
-namespace py::wrapper::Windows::Data::Xml::Dom
-{
-    using DtdEntity = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::DtdEntity>;
-    using DtdNotation = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::DtdNotation>;
-    using XmlAttribute = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlAttribute>;
-    using XmlCDataSection = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlCDataSection>;
-    using XmlComment = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlComment>;
-    using XmlDocument = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlDocument>;
-    using XmlDocumentFragment = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>;
-    using XmlDocumentType = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlDocumentType>;
-    using XmlDomImplementation = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>;
-    using XmlElement = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlElement>;
-    using XmlEntityReference = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlEntityReference>;
-    using XmlLoadSettings = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>;
-    using XmlNamedNodeMap = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>;
-    using XmlNodeList = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlNodeList>;
-    using XmlProcessingInstruction = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>;
-    using XmlText = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlText>;
-    using IXmlCharacterData = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>;
-    using IXmlNode = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlNode>;
-    using IXmlNodeSelector = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>;
-    using IXmlNodeSerializer = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>;
-    using IXmlText = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlText>;
 }
 
 namespace py
@@ -242,4 +196,53 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.data.xml.dom";
         static constexpr const char* type_name = "_IXmlText";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Data::Xml::Dom
+{
+}
+
+namespace py::wrapper::Windows::Data::Xml::Dom
+{
+    using DtdEntity = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::DtdEntity>;
+    using DtdNotation = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::DtdNotation>;
+    using XmlAttribute = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlAttribute>;
+    using XmlCDataSection = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlCDataSection>;
+    using XmlComment = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlComment>;
+    using XmlDocument = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlDocument>;
+    using XmlDocumentFragment = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>;
+    using XmlDocumentType = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlDocumentType>;
+    using XmlDomImplementation = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>;
+    using XmlElement = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlElement>;
+    using XmlEntityReference = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlEntityReference>;
+    using XmlLoadSettings = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlLoadSettings>;
+    using XmlNamedNodeMap = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>;
+    using XmlNodeList = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlNodeList>;
+    using XmlProcessingInstruction = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>;
+    using XmlText = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::XmlText>;
+    using IXmlCharacterData = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>;
+    using IXmlNode = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlNode>;
+    using IXmlNodeSelector = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>;
+    using IXmlNodeSerializer = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>;
+    using IXmlText = py::winrt_wrapper<winrt::Windows::Data::Xml::Dom::IXmlText>;
+}
+
+namespace py
+{
 }

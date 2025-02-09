@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,21 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Authentication::Identity::Provider
 {
-}
-
-namespace py::impl::Windows::Security::Authentication::Identity::Provider
-{
-}
-
-namespace py::wrapper::Windows::Security::Authentication::Identity::Provider
-{
-    using SecondaryAuthenticationFactorAuthentication = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication>;
-    using SecondaryAuthenticationFactorAuthenticationResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult>;
-    using SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>;
-    using SecondaryAuthenticationFactorAuthenticationStageInfo = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo>;
-    using SecondaryAuthenticationFactorInfo = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo>;
-    using SecondaryAuthenticationFactorRegistration = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration>;
-    using SecondaryAuthenticationFactorRegistrationResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult>;
 }
 
 namespace py
@@ -221,4 +193,35 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorRegistrationResult";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Security::Authentication::Identity::Provider
+{
+}
+
+namespace py::wrapper::Windows::Security::Authentication::Identity::Provider
+{
+    using SecondaryAuthenticationFactorAuthentication = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication>;
+    using SecondaryAuthenticationFactorAuthenticationResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult>;
+    using SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>;
+    using SecondaryAuthenticationFactorAuthenticationStageInfo = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo>;
+    using SecondaryAuthenticationFactorInfo = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo>;
+    using SecondaryAuthenticationFactorRegistration = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration>;
+    using SecondaryAuthenticationFactorRegistrationResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult>;
+}
+
+namespace py
+{
 }

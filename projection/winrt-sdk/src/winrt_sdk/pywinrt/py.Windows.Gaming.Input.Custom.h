@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Gaming.Input.h")
-#include "py.Windows.Gaming.Input.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Gaming.Input.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,27 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Gaming::Input::Custom
 {
-}
-
-namespace py::impl::Windows::Gaming::Input::Custom
-{
-}
-
-namespace py::wrapper::Windows::Gaming::Input::Custom
-{
-    using GameControllerFactoryManager = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>;
-    using GipFirmwareUpdateResult = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>;
-    using GipGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>;
-    using HidGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>;
-    using XusbGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>;
-    using ICustomGameControllerFactory = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>;
-    using IGameControllerInputSink = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>;
-    using IGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>;
-    using IGipGameControllerInputSink = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>;
-    using IHidGameControllerInputSink = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>;
-    using IXusbGameControllerInputSink = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>;
-    using GameControllerVersionInfo = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>;
-    using GipFirmwareUpdateProgress = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>;
 }
 
 namespace py
@@ -204,4 +170,41 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GipFirmwareUpdateProgress";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Gaming.Input.h")
+#include "py.Windows.Gaming.Input.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Gaming::Input::Custom
+{
+}
+
+namespace py::wrapper::Windows::Gaming::Input::Custom
+{
+    using GameControllerFactoryManager = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>;
+    using GipFirmwareUpdateResult = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>;
+    using GipGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>;
+    using HidGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>;
+    using XusbGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>;
+    using ICustomGameControllerFactory = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>;
+    using IGameControllerInputSink = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>;
+    using IGameControllerProvider = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>;
+    using IGipGameControllerInputSink = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>;
+    using IHidGameControllerInputSink = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>;
+    using IXusbGameControllerInputSink = py::winrt_wrapper<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>;
+    using GameControllerVersionInfo = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>;
+    using GipFirmwareUpdateProgress = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>;
+}
+
+namespace py
+{
 }

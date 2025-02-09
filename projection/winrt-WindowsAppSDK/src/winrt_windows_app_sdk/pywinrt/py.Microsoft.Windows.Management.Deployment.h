@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.Windows.ApplicationModel.DynamicDependency.h")
-#include "py.Microsoft.Windows.ApplicationModel.DynamicDependency.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h>
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
@@ -30,29 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::Windows::Management::Deployment
 {
-}
-
-namespace py::impl::Microsoft::Windows::Management::Deployment
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::Management::Deployment
-{
-    using AddPackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>;
-    using EnsureReadyOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>;
-    using PackageDeploymentManager = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager>;
-    using PackageDeploymentResult = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentResult>;
-    using PackageRuntimeManager = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageRuntimeManager>;
-    using PackageSet = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageSet>;
-    using PackageSetItem = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageSetItem>;
-    using PackageSetItemRuntimeDisposition = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition>;
-    using PackageSetRuntimeDisposition = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition>;
-    using PackageVolume = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>;
-    using ProvisionPackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>;
-    using RegisterPackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>;
-    using RemovePackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>;
-    using StagePackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>;
-    using PackageDeploymentProgress = py::winrt_struct_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>;
 }
 
 namespace py
@@ -235,4 +195,47 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentProgress";
     };
+}
+
+#if __has_include("py.Microsoft.Windows.ApplicationModel.DynamicDependency.h")
+#include "py.Microsoft.Windows.ApplicationModel.DynamicDependency.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::Management::Deployment
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::Management::Deployment
+{
+    using AddPackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>;
+    using EnsureReadyOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>;
+    using PackageDeploymentManager = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager>;
+    using PackageDeploymentResult = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentResult>;
+    using PackageRuntimeManager = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageRuntimeManager>;
+    using PackageSet = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageSet>;
+    using PackageSetItem = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageSetItem>;
+    using PackageSetItemRuntimeDisposition = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition>;
+    using PackageSetRuntimeDisposition = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition>;
+    using PackageVolume = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>;
+    using ProvisionPackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>;
+    using RegisterPackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>;
+    using RemovePackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>;
+    using StagePackageOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>;
+    using PackageDeploymentProgress = py::winrt_struct_wrapper<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>;
+}
+
+namespace py
+{
 }

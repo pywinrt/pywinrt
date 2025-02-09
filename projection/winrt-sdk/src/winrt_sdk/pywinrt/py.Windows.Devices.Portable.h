@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.Storage.h>
 
 #include <winrt/Windows.Devices.Portable.h>
 
 namespace py::proj::Windows::Devices::Portable
 {
-}
-
-namespace py::impl::Windows::Devices::Portable
-{
-}
-
-namespace py::wrapper::Windows::Devices::Portable
-{
-    using ServiceDevice = py::winrt_wrapper<winrt::Windows::Devices::Portable::ServiceDevice>;
-    using StorageDevice = py::winrt_wrapper<winrt::Windows::Devices::Portable::StorageDevice>;
 }
 
 namespace py
@@ -56,4 +41,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.portable";
         static constexpr const char* type_name = "StorageDevice";
     };
+}
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::Devices::Portable
+{
+}
+
+namespace py::wrapper::Windows::Devices::Portable
+{
+    using ServiceDevice = py::winrt_wrapper<winrt::Windows::Devices::Portable::ServiceDevice>;
+    using StorageDevice = py::winrt_wrapper<winrt::Windows::Devices::Portable::StorageDevice>;
+}
+
+namespace py
+{
 }

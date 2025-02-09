@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -30,18 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::DataProtection
 {
-}
-
-namespace py::impl::Windows::Security::DataProtection
-{
-}
-
-namespace py::wrapper::Windows::Security::DataProtection
-{
-    using UserDataAvailabilityStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>;
-    using UserDataBufferUnprotectResult = py::winrt_wrapper<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>;
-    using UserDataProtectionManager = py::winrt_wrapper<winrt::Windows::Security::DataProtection::UserDataProtectionManager>;
-    using UserDataStorageItemProtectionInfo = py::winrt_wrapper<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>;
 }
 
 namespace py
@@ -111,4 +82,36 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.dataprotection";
         static constexpr const char* type_name = "UserDataStorageItemProtectionInfo";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Security::DataProtection
+{
+}
+
+namespace py::wrapper::Windows::Security::DataProtection
+{
+    using UserDataAvailabilityStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>;
+    using UserDataBufferUnprotectResult = py::winrt_wrapper<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>;
+    using UserDataProtectionManager = py::winrt_wrapper<winrt::Windows::Security::DataProtection::UserDataProtectionManager>;
+    using UserDataStorageItemProtectionInfo = py::winrt_wrapper<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>;
+}
+
+namespace py
+{
 }

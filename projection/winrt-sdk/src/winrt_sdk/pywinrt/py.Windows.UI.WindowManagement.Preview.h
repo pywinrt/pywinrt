@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.WindowManagement.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::WindowManagement::Preview
 {
-}
-
-namespace py::impl::Windows::UI::WindowManagement::Preview
-{
-}
-
-namespace py::wrapper::Windows::UI::WindowManagement::Preview
-{
-    using WindowManagementPreview = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::Preview::WindowManagementPreview>;
 }
 
 namespace py
@@ -41,4 +23,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement.preview";
         static constexpr const char* type_name = "WindowManagementPreview";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.WindowManagement.h")
+#include "py.Windows.UI.WindowManagement.h"
+#endif
+
+namespace py::impl::Windows::UI::WindowManagement::Preview
+{
+}
+
+namespace py::wrapper::Windows::UI::WindowManagement::Preview
+{
+    using WindowManagementPreview = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::Preview::WindowManagementPreview>;
+}
+
+namespace py
+{
 }

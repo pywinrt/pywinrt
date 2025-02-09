@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.UI.Text.h")
-#include "py.Windows.UI.Text.h"
-#endif
-
 #include <winrt/Windows.UI.Text.h>
 
 #include <winrt/Windows.Globalization.Fonts.h>
 
 namespace py::proj::Windows::Globalization::Fonts
 {
-}
-
-namespace py::impl::Windows::Globalization::Fonts
-{
-}
-
-namespace py::wrapper::Windows::Globalization::Fonts
-{
-    using LanguageFont = py::winrt_wrapper<winrt::Windows::Globalization::Fonts::LanguageFont>;
-    using LanguageFontGroup = py::winrt_wrapper<winrt::Windows::Globalization::Fonts::LanguageFontGroup>;
 }
 
 namespace py
@@ -45,4 +30,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.globalization.fonts";
         static constexpr const char* type_name = "LanguageFontGroup";
     };
+}
+
+#if __has_include("py.Windows.UI.Text.h")
+#include "py.Windows.UI.Text.h"
+#endif
+
+namespace py::impl::Windows::Globalization::Fonts
+{
+}
+
+namespace py::wrapper::Windows::Globalization::Fonts
+{
+    using LanguageFont = py::winrt_wrapper<winrt::Windows::Globalization::Fonts::LanguageFont>;
+    using LanguageFontGroup = py::winrt_wrapper<winrt::Windows::Globalization::Fonts::LanguageFontGroup>;
+}
+
+namespace py
+{
 }

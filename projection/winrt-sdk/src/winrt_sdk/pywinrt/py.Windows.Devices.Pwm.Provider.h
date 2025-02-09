@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Pwm.Provider.h>
 
 namespace py::proj::Windows::Devices::Pwm::Provider
 {
-}
-
-namespace py::impl::Windows::Devices::Pwm::Provider
-{
-}
-
-namespace py::wrapper::Windows::Devices::Pwm::Provider
-{
-    using IPwmControllerProvider = py::winrt_wrapper<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>;
-    using IPwmProvider = py::winrt_wrapper<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>;
 }
 
 namespace py
@@ -45,4 +30,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.pwm.provider";
         static constexpr const char* type_name = "_IPwmProvider";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Pwm::Provider
+{
+}
+
+namespace py::wrapper::Windows::Devices::Pwm::Provider
+{
+    using IPwmControllerProvider = py::winrt_wrapper<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>;
+    using IPwmProvider = py::winrt_wrapper<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>;
+}
+
+namespace py
+{
 }

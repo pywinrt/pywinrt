@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
@@ -50,30 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Content
 {
-}
-
-namespace py::impl::Microsoft::UI::Content
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Content
-{
-    using ContentCoordinateConverter = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentCoordinateConverter>;
-    using ContentDeferral = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentDeferral>;
-    using ContentEnvironmentSettingChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>;
-    using ContentEnvironmentStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>;
-    using ContentIsland = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIsland>;
-    using ContentIslandAutomationProviderRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>;
-    using ContentIslandEnvironment = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIslandEnvironment>;
-    using ContentIslandStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIslandStateChangedEventArgs>;
-    using ContentSite = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSite>;
-    using ContentSiteEnvironment = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteEnvironment>;
-    using ContentSiteEnvironmentView = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>;
-    using ContentSiteRequestedStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>;
-    using ContentSiteView = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteView>;
-    using DesktopChildSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>;
-    using DesktopSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::DesktopSiteBridge>;
-    using IContentSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentSiteBridge>;
 }
 
 namespace py
@@ -239,4 +182,64 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "_IContentSiteBridge";
     };
+}
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Dispatching.h")
+#include "py.Microsoft.UI.Dispatching.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Content
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Content
+{
+    using ContentCoordinateConverter = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentCoordinateConverter>;
+    using ContentDeferral = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentDeferral>;
+    using ContentEnvironmentSettingChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>;
+    using ContentEnvironmentStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>;
+    using ContentIsland = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIsland>;
+    using ContentIslandAutomationProviderRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>;
+    using ContentIslandEnvironment = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIslandEnvironment>;
+    using ContentIslandStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentIslandStateChangedEventArgs>;
+    using ContentSite = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSite>;
+    using ContentSiteEnvironment = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteEnvironment>;
+    using ContentSiteEnvironmentView = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>;
+    using ContentSiteRequestedStateChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>;
+    using ContentSiteView = py::winrt_wrapper<winrt::Microsoft::UI::Content::ContentSiteView>;
+    using DesktopChildSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>;
+    using DesktopSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::DesktopSiteBridge>;
+    using IContentSiteBridge = py::winrt_wrapper<winrt::Microsoft::UI::Content::IContentSiteBridge>;
+}
+
+namespace py
+{
 }

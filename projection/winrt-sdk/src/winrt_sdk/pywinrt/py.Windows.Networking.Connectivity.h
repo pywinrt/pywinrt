@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Networking.h>
@@ -30,71 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Networking::Connectivity
 {
-}
-
-namespace py::impl::Windows::Networking::Connectivity
-{
-    struct NetworkStatusChangedEventHandler
-    {
-        static winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Networking::Connectivity
-{
-    using AttributedNetworkUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>;
-    using CellularApnContext = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::CellularApnContext>;
-    using ConnectionCost = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectionCost>;
-    using ConnectionProfile = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectionProfile>;
-    using ConnectionProfileFilter = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectionProfileFilter>;
-    using ConnectionSession = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectionSession>;
-    using ConnectivityInterval = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectivityInterval>;
-    using ConnectivityManager = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectivityManager>;
-    using DataPlanStatus = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::DataPlanStatus>;
-    using DataPlanUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::DataPlanUsage>;
-    using DataUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::DataUsage>;
-    using IPInformation = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::IPInformation>;
-    using LanIdentifier = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::LanIdentifier>;
-    using LanIdentifierData = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::LanIdentifierData>;
-    using NetworkAdapter = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkAdapter>;
-    using NetworkInformation = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkInformation>;
-    using NetworkItem = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkItem>;
-    using NetworkSecuritySettings = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkSecuritySettings>;
-    using NetworkStateChangeEventDetails = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails>;
-    using NetworkUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsage>;
-    using ProviderNetworkUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>;
-    using ProxyConfiguration = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ProxyConfiguration>;
-    using RoutePolicy = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::RoutePolicy>;
-    using WlanConnectionProfileDetails = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails>;
-    using WwanConnectionProfileDetails = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails>;
-    using NetworkUsageStates = py::winrt_struct_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsageStates>;
 }
 
 namespace py
@@ -475,6 +393,91 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkUsageStates";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Networking::Connectivity
+{
+    struct NetworkStatusChangedEventHandler
+    {
+        static winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Networking::Connectivity
+{
+    using AttributedNetworkUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>;
+    using CellularApnContext = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::CellularApnContext>;
+    using ConnectionCost = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectionCost>;
+    using ConnectionProfile = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectionProfile>;
+    using ConnectionProfileFilter = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectionProfileFilter>;
+    using ConnectionSession = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectionSession>;
+    using ConnectivityInterval = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectivityInterval>;
+    using ConnectivityManager = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ConnectivityManager>;
+    using DataPlanStatus = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::DataPlanStatus>;
+    using DataPlanUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::DataPlanUsage>;
+    using DataUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::DataUsage>;
+    using IPInformation = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::IPInformation>;
+    using LanIdentifier = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::LanIdentifier>;
+    using LanIdentifierData = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::LanIdentifierData>;
+    using NetworkAdapter = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkAdapter>;
+    using NetworkInformation = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkInformation>;
+    using NetworkItem = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkItem>;
+    using NetworkSecuritySettings = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkSecuritySettings>;
+    using NetworkStateChangeEventDetails = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails>;
+    using NetworkUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsage>;
+    using ProviderNetworkUsage = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>;
+    using ProxyConfiguration = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::ProxyConfiguration>;
+    using RoutePolicy = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::RoutePolicy>;
+    using WlanConnectionProfileDetails = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails>;
+    using WwanConnectionProfileDetails = py::winrt_wrapper<winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails>;
+    using NetworkUsageStates = py::winrt_struct_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsageStates>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler>
     {

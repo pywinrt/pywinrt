@@ -5,21 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Globalization.PhoneNumberFormatting.h>
 
 namespace py::proj::Windows::Globalization::PhoneNumberFormatting
 {
-}
-
-namespace py::impl::Windows::Globalization::PhoneNumberFormatting
-{
-}
-
-namespace py::wrapper::Windows::Globalization::PhoneNumberFormatting
-{
-    using PhoneNumberFormatter = py::winrt_wrapper<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter>;
-    using PhoneNumberInfo = py::winrt_wrapper<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>;
 }
 
 namespace py
@@ -84,4 +73,18 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
         static constexpr const char* type_name = "PhoneNumberInfo";
     };
+}
+
+namespace py::impl::Windows::Globalization::PhoneNumberFormatting
+{
+}
+
+namespace py::wrapper::Windows::Globalization::PhoneNumberFormatting
+{
+    using PhoneNumberFormatter = py::winrt_wrapper<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter>;
+    using PhoneNumberInfo = py::winrt_wrapper<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>;
+}
+
+namespace py
+{
 }

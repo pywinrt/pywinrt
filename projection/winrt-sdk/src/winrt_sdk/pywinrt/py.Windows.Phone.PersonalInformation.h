@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,24 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Phone::PersonalInformation
 {
-}
-
-namespace py::impl::Windows::Phone::PersonalInformation
-{
-}
-
-namespace py::wrapper::Windows::Phone::PersonalInformation
-{
-    using ContactAddress = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactAddress>;
-    using ContactChangeRecord = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactChangeRecord>;
-    using ContactInformation = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactInformation>;
-    using ContactQueryOptions = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactQueryOptions>;
-    using ContactQueryResult = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactQueryResult>;
-    using ContactStore = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactStore>;
-    using KnownContactProperties = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::KnownContactProperties>;
-    using StoredContact = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::StoredContact>;
-    using IContactInformation = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::IContactInformation>;
-    using IContactInformation2 = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::IContactInformation2>;
 }
 
 namespace py
@@ -182,4 +151,38 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "_IContactInformation2";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Phone::PersonalInformation
+{
+}
+
+namespace py::wrapper::Windows::Phone::PersonalInformation
+{
+    using ContactAddress = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactAddress>;
+    using ContactChangeRecord = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactChangeRecord>;
+    using ContactInformation = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactInformation>;
+    using ContactQueryOptions = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactQueryOptions>;
+    using ContactQueryResult = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactQueryResult>;
+    using ContactStore = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::ContactStore>;
+    using KnownContactProperties = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::KnownContactProperties>;
+    using StoredContact = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::StoredContact>;
+    using IContactInformation = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::IContactInformation>;
+    using IContactInformation2 = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::IContactInformation2>;
+}
+
+namespace py
+{
 }

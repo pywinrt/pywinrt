@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -30,31 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::System::Profile
 {
-}
-
-namespace py::impl::Windows::System::Profile
-{
-}
-
-namespace py::wrapper::Windows::System::Profile
-{
-    using AnalyticsInfo = py::winrt_wrapper<winrt::Windows::System::Profile::AnalyticsInfo>;
-    using AnalyticsVersionInfo = py::winrt_wrapper<winrt::Windows::System::Profile::AnalyticsVersionInfo>;
-    using AppApplicability = py::winrt_wrapper<winrt::Windows::System::Profile::AppApplicability>;
-    using EducationSettings = py::winrt_wrapper<winrt::Windows::System::Profile::EducationSettings>;
-    using HardwareIdentification = py::winrt_wrapper<winrt::Windows::System::Profile::HardwareIdentification>;
-    using HardwareToken = py::winrt_wrapper<winrt::Windows::System::Profile::HardwareToken>;
-    using KnownRetailInfoProperties = py::winrt_wrapper<winrt::Windows::System::Profile::KnownRetailInfoProperties>;
-    using PlatformAutomaticAppSignInManager = py::winrt_wrapper<winrt::Windows::System::Profile::PlatformAutomaticAppSignInManager>;
-    using PlatformDiagnosticsAndUsageDataSettings = py::winrt_wrapper<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>;
-    using RetailInfo = py::winrt_wrapper<winrt::Windows::System::Profile::RetailInfo>;
-    using SharedModeSettings = py::winrt_wrapper<winrt::Windows::System::Profile::SharedModeSettings>;
-    using SmartAppControlPolicy = py::winrt_wrapper<winrt::Windows::System::Profile::SmartAppControlPolicy>;
-    using SystemIdentification = py::winrt_wrapper<winrt::Windows::System::Profile::SystemIdentification>;
-    using SystemIdentificationInfo = py::winrt_wrapper<winrt::Windows::System::Profile::SystemIdentificationInfo>;
-    using SystemSetupInfo = py::winrt_wrapper<winrt::Windows::System::Profile::SystemSetupInfo>;
-    using UnsupportedAppRequirement = py::winrt_wrapper<winrt::Windows::System::Profile::UnsupportedAppRequirement>;
-    using WindowsIntegrityPolicy = py::winrt_wrapper<winrt::Windows::System::Profile::WindowsIntegrityPolicy>;
 }
 
 namespace py
@@ -250,4 +208,49 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "WindowsIntegrityPolicy";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::System::Profile
+{
+}
+
+namespace py::wrapper::Windows::System::Profile
+{
+    using AnalyticsInfo = py::winrt_wrapper<winrt::Windows::System::Profile::AnalyticsInfo>;
+    using AnalyticsVersionInfo = py::winrt_wrapper<winrt::Windows::System::Profile::AnalyticsVersionInfo>;
+    using AppApplicability = py::winrt_wrapper<winrt::Windows::System::Profile::AppApplicability>;
+    using EducationSettings = py::winrt_wrapper<winrt::Windows::System::Profile::EducationSettings>;
+    using HardwareIdentification = py::winrt_wrapper<winrt::Windows::System::Profile::HardwareIdentification>;
+    using HardwareToken = py::winrt_wrapper<winrt::Windows::System::Profile::HardwareToken>;
+    using KnownRetailInfoProperties = py::winrt_wrapper<winrt::Windows::System::Profile::KnownRetailInfoProperties>;
+    using PlatformAutomaticAppSignInManager = py::winrt_wrapper<winrt::Windows::System::Profile::PlatformAutomaticAppSignInManager>;
+    using PlatformDiagnosticsAndUsageDataSettings = py::winrt_wrapper<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>;
+    using RetailInfo = py::winrt_wrapper<winrt::Windows::System::Profile::RetailInfo>;
+    using SharedModeSettings = py::winrt_wrapper<winrt::Windows::System::Profile::SharedModeSettings>;
+    using SmartAppControlPolicy = py::winrt_wrapper<winrt::Windows::System::Profile::SmartAppControlPolicy>;
+    using SystemIdentification = py::winrt_wrapper<winrt::Windows::System::Profile::SystemIdentification>;
+    using SystemIdentificationInfo = py::winrt_wrapper<winrt::Windows::System::Profile::SystemIdentificationInfo>;
+    using SystemSetupInfo = py::winrt_wrapper<winrt::Windows::System::Profile::SystemSetupInfo>;
+    using UnsupportedAppRequirement = py::winrt_wrapper<winrt::Windows::System::Profile::UnsupportedAppRequirement>;
+    using WindowsIntegrityPolicy = py::winrt_wrapper<winrt::Windows::System::Profile::WindowsIntegrityPolicy>;
+}
+
+namespace py
+{
 }

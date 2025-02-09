@@ -5,27 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Foundation.Numerics.h>
 
 namespace py::proj::Windows::Foundation::Numerics
 {
-}
-
-namespace py::impl::Windows::Foundation::Numerics
-{
-}
-
-namespace py::wrapper::Windows::Foundation::Numerics
-{
-    using Matrix3x2 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>;
-    using Matrix4x4 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>;
-    using Plane = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>;
-    using Quaternion = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>;
-    using Rational = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::Rational>;
-    using Vector2 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>;
-    using Vector3 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>;
-    using Vector4 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>;
 }
 
 namespace py
@@ -118,4 +101,24 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Vector4";
     };
+}
+
+namespace py::impl::Windows::Foundation::Numerics
+{
+}
+
+namespace py::wrapper::Windows::Foundation::Numerics
+{
+    using Matrix3x2 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>;
+    using Matrix4x4 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>;
+    using Plane = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>;
+    using Quaternion = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>;
+    using Rational = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::Rational>;
+    using Vector2 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>;
+    using Vector3 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>;
+    using Vector4 = py::winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>;
+}
+
+namespace py
+{
 }

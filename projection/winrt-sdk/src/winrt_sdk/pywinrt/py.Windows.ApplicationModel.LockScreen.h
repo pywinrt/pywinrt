@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,19 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::LockScreen
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::LockScreen
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::LockScreen
-{
-    using LockApplicationHost = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>;
-    using LockScreenBadge = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>;
-    using LockScreenInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>;
-    using LockScreenUnlockingDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>;
-    using LockScreenUnlockingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>;
 }
 
 namespace py
@@ -82,4 +56,33 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
         static constexpr const char* type_name = "LockScreenUnlockingEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::LockScreen
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::LockScreen
+{
+    using LockApplicationHost = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>;
+    using LockScreenBadge = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>;
+    using LockScreenInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>;
+    using LockScreenUnlockingDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>;
+    using LockScreenUnlockingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>;
+}
+
+namespace py
+{
 }

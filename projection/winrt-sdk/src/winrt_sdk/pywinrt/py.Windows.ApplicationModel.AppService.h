@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.System.RemoteSystems.h")
-#include "py.Windows.System.RemoteSystems.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -35,23 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::AppService
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::AppService
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::AppService
-{
-    using AppServiceCatalog = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>;
-    using AppServiceClosedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>;
-    using AppServiceConnection = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>;
-    using AppServiceDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>;
-    using AppServiceRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>;
-    using AppServiceRequestReceivedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>;
-    using AppServiceResponse = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>;
-    using AppServiceTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>;
-    using StatelessAppServiceResponse = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>;
 }
 
 namespace py
@@ -172,4 +134,45 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appservice";
         static constexpr const char* type_name = "StatelessAppServiceResponse";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.System.RemoteSystems.h")
+#include "py.Windows.System.RemoteSystems.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::AppService
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::AppService
+{
+    using AppServiceCatalog = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>;
+    using AppServiceClosedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>;
+    using AppServiceConnection = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceConnection>;
+    using AppServiceDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>;
+    using AppServiceRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>;
+    using AppServiceRequestReceivedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>;
+    using AppServiceResponse = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>;
+    using AppServiceTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>;
+    using StatelessAppServiceResponse = py::winrt_wrapper<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>;
+}
+
+namespace py
+{
 }

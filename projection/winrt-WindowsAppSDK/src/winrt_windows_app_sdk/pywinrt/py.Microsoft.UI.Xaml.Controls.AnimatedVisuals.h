@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.h")
-#include "py.Microsoft.UI.Xaml.Controls.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Xaml.Controls.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,22 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 {
-}
-
-namespace py::impl::Microsoft::UI::Xaml::Controls::AnimatedVisuals
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals
-{
-    using AnimatedAcceptVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedAcceptVisualSource>;
-    using AnimatedBackVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedBackVisualSource>;
-    using AnimatedChevronDownSmallVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronDownSmallVisualSource>;
-    using AnimatedChevronRightDownSmallVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronRightDownSmallVisualSource>;
-    using AnimatedChevronUpDownSmallVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronUpDownSmallVisualSource>;
-    using AnimatedFindVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedFindVisualSource>;
-    using AnimatedGlobalNavigationButtonVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedGlobalNavigationButtonVisualSource>;
-    using AnimatedSettingsVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedSettingsVisualSource>;
 }
 
 namespace py
@@ -114,4 +81,40 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedSettingsVisualSource";
     };
+}
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Controls.h")
+#include "py.Microsoft.UI.Xaml.Controls.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Xaml::Controls::AnimatedVisuals
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals
+{
+    using AnimatedAcceptVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedAcceptVisualSource>;
+    using AnimatedBackVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedBackVisualSource>;
+    using AnimatedChevronDownSmallVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronDownSmallVisualSource>;
+    using AnimatedChevronRightDownSmallVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronRightDownSmallVisualSource>;
+    using AnimatedChevronUpDownSmallVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronUpDownSmallVisualSource>;
+    using AnimatedFindVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedFindVisualSource>;
+    using AnimatedGlobalNavigationButtonVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedGlobalNavigationButtonVisualSource>;
+    using AnimatedSettingsVisualSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedSettingsVisualSource>;
+}
+
+namespace py
+{
 }

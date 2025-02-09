@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Perception.Spatial.h>
@@ -25,16 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Preview::Holographic
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Preview::Holographic
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Preview::Holographic
-{
-    using HolographicApplicationPreview = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview>;
-    using HolographicKeyboardPlacementOverridePreview = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview>;
 }
 
 namespace py
@@ -55,4 +32,30 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.holographic";
         static constexpr const char* type_name = "HolographicKeyboardPlacementOverridePreview";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Activation.h")
+#include "py.Windows.ApplicationModel.Activation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Perception.Spatial.h")
+#include "py.Windows.Perception.Spatial.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Preview::Holographic
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Preview::Holographic
+{
+    using HolographicApplicationPreview = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview>;
+    using HolographicKeyboardPlacementOverridePreview = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview>;
+}
+
+namespace py
+{
 }

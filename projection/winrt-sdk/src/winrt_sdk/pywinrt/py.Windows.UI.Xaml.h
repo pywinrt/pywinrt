@@ -4,99 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Core.h")
-#include "py.Windows.ApplicationModel.Core.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.h")
-#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
-#if __has_include("py.Windows.UI.Input.h")
-#include "py.Windows.UI.Input.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
-#include "py.Windows.UI.Xaml.Automation.Peers.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.h")
-#include "py.Windows.UI.Xaml.Controls.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
-#include "py.Windows.UI.Xaml.Controls.Primitives.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Data.h")
-#include "py.Windows.UI.Xaml.Data.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Input.h")
-#include "py.Windows.UI.Xaml.Input.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Interop.h")
-#include "py.Windows.UI.Xaml.Interop.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.h")
-#include "py.Windows.UI.Xaml.Media.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.Animation.h")
-#include "py.Windows.UI.Xaml.Media.Animation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.Imaging.h")
-#include "py.Windows.UI.Xaml.Media.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
-#include "py.Windows.UI.Xaml.Media.Media3D.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.ApplicationModel.Core.h>
@@ -125,899 +32,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml
 {
-}
-
-namespace py::impl::Windows::UI::Xaml
-{
-    struct ApplicationInitializationCallback
-    {
-        static winrt::Windows::UI::Xaml::ApplicationInitializationCallback get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct BindingFailedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::BindingFailedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::BindingFailedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct CreateDefaultValueCallback
-    {
-        static winrt::Windows::UI::Xaml::CreateDefaultValueCallback get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)]()
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-
-                    return py::convert_to<winrt::Windows::Foundation::IInspectable>(return_value.get());
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct DependencyPropertyChangedCallback
-    {
-        static winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::DependencyObject const& param0, winrt::Windows::UI::Xaml::DependencyProperty const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct DependencyPropertyChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::DependencyPropertyChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct DragEventHandler
-    {
-        static winrt::Windows::UI::Xaml::DragEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::DragEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct EnteredBackgroundEventHandler
-    {
-        static winrt::Windows::UI::Xaml::EnteredBackgroundEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct ExceptionRoutedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::ExceptionRoutedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct LeavingBackgroundEventHandler
-    {
-        static winrt::Windows::UI::Xaml::LeavingBackgroundEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct PropertyChangedCallback
-    {
-        static winrt::Windows::UI::Xaml::PropertyChangedCallback get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::DependencyObject const& param0, winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct RoutedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::RoutedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::RoutedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct SizeChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::SizeChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::SizeChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct SuspendingEventHandler
-    {
-        static winrt::Windows::UI::Xaml::SuspendingEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::SuspendingEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct UnhandledExceptionEventHandler
-    {
-        static winrt::Windows::UI::Xaml::UnhandledExceptionEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct VisualStateChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::VisualStateChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::VisualStateChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct WindowActivatedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::WindowActivatedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::WindowActivatedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct WindowClosedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::WindowClosedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::CoreWindowEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct WindowSizeChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::WindowSizeChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::WindowSizeChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct WindowVisibilityChangedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::WindowVisibilityChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::VisibilityChangedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::UI::Xaml
-{
-    using AdaptiveTrigger = py::winrt_wrapper<winrt::Windows::UI::Xaml::AdaptiveTrigger>;
-    using Application = py::winrt_wrapper<winrt::Windows::UI::Xaml::Application>;
-    using ApplicationInitializationCallbackParams = py::winrt_wrapper<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams>;
-    using BindingFailedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::BindingFailedEventArgs>;
-    using BringIntoViewOptions = py::winrt_wrapper<winrt::Windows::UI::Xaml::BringIntoViewOptions>;
-    using BringIntoViewRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>;
-    using BrushTransition = py::winrt_wrapper<winrt::Windows::UI::Xaml::BrushTransition>;
-    using ColorPaletteResources = py::winrt_wrapper<winrt::Windows::UI::Xaml::ColorPaletteResources>;
-    using CornerRadiusHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::CornerRadiusHelper>;
-    using DataContextChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DataContextChangedEventArgs>;
-    using DataTemplate = py::winrt_wrapper<winrt::Windows::UI::Xaml::DataTemplate>;
-    using DataTemplateKey = py::winrt_wrapper<winrt::Windows::UI::Xaml::DataTemplateKey>;
-    using DebugSettings = py::winrt_wrapper<winrt::Windows::UI::Xaml::DebugSettings>;
-    using DependencyObject = py::winrt_wrapper<winrt::Windows::UI::Xaml::DependencyObject>;
-    using DependencyObjectCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::DependencyObjectCollection>;
-    using DependencyProperty = py::winrt_wrapper<winrt::Windows::UI::Xaml::DependencyProperty>;
-    using DependencyPropertyChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs>;
-    using DispatcherTimer = py::winrt_wrapper<winrt::Windows::UI::Xaml::DispatcherTimer>;
-    using DragEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragEventArgs>;
-    using DragOperationDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragOperationDeferral>;
-    using DragStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragStartingEventArgs>;
-    using DragUI = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragUI>;
-    using DragUIOverride = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragUIOverride>;
-    using DropCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DropCompletedEventArgs>;
-    using DurationHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::DurationHelper>;
-    using EffectiveViewportChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs>;
-    using ElementFactoryGetArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::ElementFactoryGetArgs>;
-    using ElementFactoryRecycleArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs>;
-    using ElementSoundPlayer = py::winrt_wrapper<winrt::Windows::UI::Xaml::ElementSoundPlayer>;
-    using EventTrigger = py::winrt_wrapper<winrt::Windows::UI::Xaml::EventTrigger>;
-    using ExceptionRoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs>;
-    using FrameworkElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::FrameworkElement>;
-    using FrameworkTemplate = py::winrt_wrapper<winrt::Windows::UI::Xaml::FrameworkTemplate>;
-    using FrameworkView = py::winrt_wrapper<winrt::Windows::UI::Xaml::FrameworkView>;
-    using FrameworkViewSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::FrameworkViewSource>;
-    using GridLengthHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::GridLengthHelper>;
-    using MediaFailedRoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs>;
-    using PointHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::PointHelper>;
-    using PropertyMetadata = py::winrt_wrapper<winrt::Windows::UI::Xaml::PropertyMetadata>;
-    using PropertyPath = py::winrt_wrapper<winrt::Windows::UI::Xaml::PropertyPath>;
-    using RectHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::RectHelper>;
-    using ResourceDictionary = py::winrt_wrapper<winrt::Windows::UI::Xaml::ResourceDictionary>;
-    using RoutedEvent = py::winrt_wrapper<winrt::Windows::UI::Xaml::RoutedEvent>;
-    using RoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::RoutedEventArgs>;
-    using ScalarTransition = py::winrt_wrapper<winrt::Windows::UI::Xaml::ScalarTransition>;
-    using Setter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Setter>;
-    using SetterBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::SetterBase>;
-    using SetterBaseCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::SetterBaseCollection>;
-    using SizeChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::SizeChangedEventArgs>;
-    using SizeHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::SizeHelper>;
-    using StateTrigger = py::winrt_wrapper<winrt::Windows::UI::Xaml::StateTrigger>;
-    using StateTriggerBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::StateTriggerBase>;
-    using Style = py::winrt_wrapper<winrt::Windows::UI::Xaml::Style>;
-    using TargetPropertyPath = py::winrt_wrapper<winrt::Windows::UI::Xaml::TargetPropertyPath>;
-    using ThicknessHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::ThicknessHelper>;
-    using TriggerAction = py::winrt_wrapper<winrt::Windows::UI::Xaml::TriggerAction>;
-    using TriggerActionCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::TriggerActionCollection>;
-    using TriggerBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::TriggerBase>;
-    using TriggerCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::TriggerCollection>;
-    using UIElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::UIElement>;
-    using UIElementWeakCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::UIElementWeakCollection>;
-    using UnhandledExceptionEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs>;
-    using Vector3Transition = py::winrt_wrapper<winrt::Windows::UI::Xaml::Vector3Transition>;
-    using VisualState = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualState>;
-    using VisualStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualStateChangedEventArgs>;
-    using VisualStateGroup = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualStateGroup>;
-    using VisualStateManager = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualStateManager>;
-    using VisualTransition = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualTransition>;
-    using Window = py::winrt_wrapper<winrt::Windows::UI::Xaml::Window>;
-    using WindowCreatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::WindowCreatedEventArgs>;
-    using XamlRoot = py::winrt_wrapper<winrt::Windows::UI::Xaml::XamlRoot>;
-    using XamlRootChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs>;
-    using IDataTemplateExtension = py::winrt_wrapper<winrt::Windows::UI::Xaml::IDataTemplateExtension>;
-    using IElementFactory = py::winrt_wrapper<winrt::Windows::UI::Xaml::IElementFactory>;
-    using CornerRadius = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::CornerRadius>;
-    using Duration = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Duration>;
-    using GridLength = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::GridLength>;
-    using Thickness = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Thickness>;
 }
 
 namespace py
@@ -2021,6 +1035,995 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml";
         static constexpr const char* type_name = "Thickness";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Activation.h")
+#include "py.Windows.ApplicationModel.Activation.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Core.h")
+#include "py.Windows.ApplicationModel.Core.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.h")
+#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.h")
+#include "py.Windows.UI.Input.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
+#include "py.Windows.UI.Xaml.Automation.Peers.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.h")
+#include "py.Windows.UI.Xaml.Controls.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
+#include "py.Windows.UI.Xaml.Controls.Primitives.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Data.h")
+#include "py.Windows.UI.Xaml.Data.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Input.h")
+#include "py.Windows.UI.Xaml.Input.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Interop.h")
+#include "py.Windows.UI.Xaml.Interop.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.h")
+#include "py.Windows.UI.Xaml.Media.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.Animation.h")
+#include "py.Windows.UI.Xaml.Media.Animation.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.Imaging.h")
+#include "py.Windows.UI.Xaml.Media.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
+#include "py.Windows.UI.Xaml.Media.Media3D.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml
+{
+    struct ApplicationInitializationCallback
+    {
+        static winrt::Windows::UI::Xaml::ApplicationInitializationCallback get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct BindingFailedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::BindingFailedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::BindingFailedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct CreateDefaultValueCallback
+    {
+        static winrt::Windows::UI::Xaml::CreateDefaultValueCallback get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)]()
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+
+                    return py::convert_to<winrt::Windows::Foundation::IInspectable>(return_value.get());
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct DependencyPropertyChangedCallback
+    {
+        static winrt::Windows::UI::Xaml::DependencyPropertyChangedCallback get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::DependencyObject const& param0, winrt::Windows::UI::Xaml::DependencyProperty const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct DependencyPropertyChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::DependencyPropertyChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct DragEventHandler
+    {
+        static winrt::Windows::UI::Xaml::DragEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::DragEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct EnteredBackgroundEventHandler
+    {
+        static winrt::Windows::UI::Xaml::EnteredBackgroundEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct ExceptionRoutedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::ExceptionRoutedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct LeavingBackgroundEventHandler
+    {
+        static winrt::Windows::UI::Xaml::LeavingBackgroundEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct PropertyChangedCallback
+    {
+        static winrt::Windows::UI::Xaml::PropertyChangedCallback get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::UI::Xaml::DependencyObject const& param0, winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct RoutedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::RoutedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::RoutedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct SizeChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::SizeChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::SizeChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct SuspendingEventHandler
+    {
+        static winrt::Windows::UI::Xaml::SuspendingEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::ApplicationModel::SuspendingEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct UnhandledExceptionEventHandler
+    {
+        static winrt::Windows::UI::Xaml::UnhandledExceptionEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct VisualStateChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::VisualStateChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::VisualStateChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct WindowActivatedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::WindowActivatedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::WindowActivatedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct WindowClosedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::WindowClosedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::CoreWindowEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct WindowSizeChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::WindowSizeChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::WindowSizeChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct WindowVisibilityChangedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::WindowVisibilityChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Core::VisibilityChangedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::UI::Xaml
+{
+    using AdaptiveTrigger = py::winrt_wrapper<winrt::Windows::UI::Xaml::AdaptiveTrigger>;
+    using Application = py::winrt_wrapper<winrt::Windows::UI::Xaml::Application>;
+    using ApplicationInitializationCallbackParams = py::winrt_wrapper<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams>;
+    using BindingFailedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::BindingFailedEventArgs>;
+    using BringIntoViewOptions = py::winrt_wrapper<winrt::Windows::UI::Xaml::BringIntoViewOptions>;
+    using BringIntoViewRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>;
+    using BrushTransition = py::winrt_wrapper<winrt::Windows::UI::Xaml::BrushTransition>;
+    using ColorPaletteResources = py::winrt_wrapper<winrt::Windows::UI::Xaml::ColorPaletteResources>;
+    using CornerRadiusHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::CornerRadiusHelper>;
+    using DataContextChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DataContextChangedEventArgs>;
+    using DataTemplate = py::winrt_wrapper<winrt::Windows::UI::Xaml::DataTemplate>;
+    using DataTemplateKey = py::winrt_wrapper<winrt::Windows::UI::Xaml::DataTemplateKey>;
+    using DebugSettings = py::winrt_wrapper<winrt::Windows::UI::Xaml::DebugSettings>;
+    using DependencyObject = py::winrt_wrapper<winrt::Windows::UI::Xaml::DependencyObject>;
+    using DependencyObjectCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::DependencyObjectCollection>;
+    using DependencyProperty = py::winrt_wrapper<winrt::Windows::UI::Xaml::DependencyProperty>;
+    using DependencyPropertyChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs>;
+    using DispatcherTimer = py::winrt_wrapper<winrt::Windows::UI::Xaml::DispatcherTimer>;
+    using DragEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragEventArgs>;
+    using DragOperationDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragOperationDeferral>;
+    using DragStartingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragStartingEventArgs>;
+    using DragUI = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragUI>;
+    using DragUIOverride = py::winrt_wrapper<winrt::Windows::UI::Xaml::DragUIOverride>;
+    using DropCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::DropCompletedEventArgs>;
+    using DurationHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::DurationHelper>;
+    using EffectiveViewportChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs>;
+    using ElementFactoryGetArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::ElementFactoryGetArgs>;
+    using ElementFactoryRecycleArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs>;
+    using ElementSoundPlayer = py::winrt_wrapper<winrt::Windows::UI::Xaml::ElementSoundPlayer>;
+    using EventTrigger = py::winrt_wrapper<winrt::Windows::UI::Xaml::EventTrigger>;
+    using ExceptionRoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs>;
+    using FrameworkElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::FrameworkElement>;
+    using FrameworkTemplate = py::winrt_wrapper<winrt::Windows::UI::Xaml::FrameworkTemplate>;
+    using FrameworkView = py::winrt_wrapper<winrt::Windows::UI::Xaml::FrameworkView>;
+    using FrameworkViewSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::FrameworkViewSource>;
+    using GridLengthHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::GridLengthHelper>;
+    using MediaFailedRoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs>;
+    using PointHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::PointHelper>;
+    using PropertyMetadata = py::winrt_wrapper<winrt::Windows::UI::Xaml::PropertyMetadata>;
+    using PropertyPath = py::winrt_wrapper<winrt::Windows::UI::Xaml::PropertyPath>;
+    using RectHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::RectHelper>;
+    using ResourceDictionary = py::winrt_wrapper<winrt::Windows::UI::Xaml::ResourceDictionary>;
+    using RoutedEvent = py::winrt_wrapper<winrt::Windows::UI::Xaml::RoutedEvent>;
+    using RoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::RoutedEventArgs>;
+    using ScalarTransition = py::winrt_wrapper<winrt::Windows::UI::Xaml::ScalarTransition>;
+    using Setter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Setter>;
+    using SetterBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::SetterBase>;
+    using SetterBaseCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::SetterBaseCollection>;
+    using SizeChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::SizeChangedEventArgs>;
+    using SizeHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::SizeHelper>;
+    using StateTrigger = py::winrt_wrapper<winrt::Windows::UI::Xaml::StateTrigger>;
+    using StateTriggerBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::StateTriggerBase>;
+    using Style = py::winrt_wrapper<winrt::Windows::UI::Xaml::Style>;
+    using TargetPropertyPath = py::winrt_wrapper<winrt::Windows::UI::Xaml::TargetPropertyPath>;
+    using ThicknessHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::ThicknessHelper>;
+    using TriggerAction = py::winrt_wrapper<winrt::Windows::UI::Xaml::TriggerAction>;
+    using TriggerActionCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::TriggerActionCollection>;
+    using TriggerBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::TriggerBase>;
+    using TriggerCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::TriggerCollection>;
+    using UIElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::UIElement>;
+    using UIElementWeakCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::UIElementWeakCollection>;
+    using UnhandledExceptionEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs>;
+    using Vector3Transition = py::winrt_wrapper<winrt::Windows::UI::Xaml::Vector3Transition>;
+    using VisualState = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualState>;
+    using VisualStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualStateChangedEventArgs>;
+    using VisualStateGroup = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualStateGroup>;
+    using VisualStateManager = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualStateManager>;
+    using VisualTransition = py::winrt_wrapper<winrt::Windows::UI::Xaml::VisualTransition>;
+    using Window = py::winrt_wrapper<winrt::Windows::UI::Xaml::Window>;
+    using WindowCreatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::WindowCreatedEventArgs>;
+    using XamlRoot = py::winrt_wrapper<winrt::Windows::UI::Xaml::XamlRoot>;
+    using XamlRootChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs>;
+    using IDataTemplateExtension = py::winrt_wrapper<winrt::Windows::UI::Xaml::IDataTemplateExtension>;
+    using IElementFactory = py::winrt_wrapper<winrt::Windows::UI::Xaml::IElementFactory>;
+    using CornerRadius = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::CornerRadius>;
+    using Duration = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Duration>;
+    using GridLength = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::GridLength>;
+    using Thickness = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Thickness>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::ApplicationInitializationCallback>
     {

@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -35,18 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Lights
 {
-}
-
-namespace py::impl::Windows::Devices::Lights
-{
-}
-
-namespace py::wrapper::Windows::Devices::Lights
-{
-    using Lamp = py::winrt_wrapper<winrt::Windows::Devices::Lights::Lamp>;
-    using LampArray = py::winrt_wrapper<winrt::Windows::Devices::Lights::LampArray>;
-    using LampAvailabilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>;
-    using LampInfo = py::winrt_wrapper<winrt::Windows::Devices::Lights::LampInfo>;
 }
 
 namespace py
@@ -105,4 +72,40 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.lights";
         static constexpr const char* type_name = "LampInfo";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::Devices::Lights
+{
+}
+
+namespace py::wrapper::Windows::Devices::Lights
+{
+    using Lamp = py::winrt_wrapper<winrt::Windows::Devices::Lights::Lamp>;
+    using LampArray = py::winrt_wrapper<winrt::Windows::Devices::Lights::LampArray>;
+    using LampAvailabilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>;
+    using LampInfo = py::winrt_wrapper<winrt::Windows::Devices::Lights::LampInfo>;
+}
+
+namespace py
+{
 }

@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
-#include "py.Windows.Security.Cryptography.Certificates.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.Filters.h")
-#include "py.Windows.Web.Http.Filters.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.Headers.h")
-#include "py.Windows.Web.Http.Headers.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Networking.Sockets.h>
@@ -45,34 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Web::Http
 {
-}
-
-namespace py::impl::Windows::Web::Http
-{
-}
-
-namespace py::wrapper::Windows::Web::Http
-{
-    using HttpBufferContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpBufferContent>;
-    using HttpClient = py::winrt_wrapper<winrt::Windows::Web::Http::HttpClient>;
-    using HttpCookie = py::winrt_wrapper<winrt::Windows::Web::Http::HttpCookie>;
-    using HttpCookieCollection = py::winrt_wrapper<winrt::Windows::Web::Http::HttpCookieCollection>;
-    using HttpCookieManager = py::winrt_wrapper<winrt::Windows::Web::Http::HttpCookieManager>;
-    using HttpFormUrlEncodedContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpFormUrlEncodedContent>;
-    using HttpGetBufferResult = py::winrt_wrapper<winrt::Windows::Web::Http::HttpGetBufferResult>;
-    using HttpGetInputStreamResult = py::winrt_wrapper<winrt::Windows::Web::Http::HttpGetInputStreamResult>;
-    using HttpGetStringResult = py::winrt_wrapper<winrt::Windows::Web::Http::HttpGetStringResult>;
-    using HttpMethod = py::winrt_wrapper<winrt::Windows::Web::Http::HttpMethod>;
-    using HttpMultipartContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpMultipartContent>;
-    using HttpMultipartFormDataContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpMultipartFormDataContent>;
-    using HttpRequestMessage = py::winrt_wrapper<winrt::Windows::Web::Http::HttpRequestMessage>;
-    using HttpRequestResult = py::winrt_wrapper<winrt::Windows::Web::Http::HttpRequestResult>;
-    using HttpResponseMessage = py::winrt_wrapper<winrt::Windows::Web::Http::HttpResponseMessage>;
-    using HttpStreamContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpStreamContent>;
-    using HttpStringContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpStringContent>;
-    using HttpTransportInformation = py::winrt_wrapper<winrt::Windows::Web::Http::HttpTransportInformation>;
-    using IHttpContent = py::winrt_wrapper<winrt::Windows::Web::Http::IHttpContent>;
-    using HttpProgress = py::winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>;
 }
 
 namespace py
@@ -295,4 +238,64 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpProgress";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.Sockets.h")
+#include "py.Windows.Networking.Sockets.h"
+#endif
+
+#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
+#include "py.Windows.Security.Cryptography.Certificates.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.Filters.h")
+#include "py.Windows.Web.Http.Filters.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.Headers.h")
+#include "py.Windows.Web.Http.Headers.h"
+#endif
+
+namespace py::impl::Windows::Web::Http
+{
+}
+
+namespace py::wrapper::Windows::Web::Http
+{
+    using HttpBufferContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpBufferContent>;
+    using HttpClient = py::winrt_wrapper<winrt::Windows::Web::Http::HttpClient>;
+    using HttpCookie = py::winrt_wrapper<winrt::Windows::Web::Http::HttpCookie>;
+    using HttpCookieCollection = py::winrt_wrapper<winrt::Windows::Web::Http::HttpCookieCollection>;
+    using HttpCookieManager = py::winrt_wrapper<winrt::Windows::Web::Http::HttpCookieManager>;
+    using HttpFormUrlEncodedContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpFormUrlEncodedContent>;
+    using HttpGetBufferResult = py::winrt_wrapper<winrt::Windows::Web::Http::HttpGetBufferResult>;
+    using HttpGetInputStreamResult = py::winrt_wrapper<winrt::Windows::Web::Http::HttpGetInputStreamResult>;
+    using HttpGetStringResult = py::winrt_wrapper<winrt::Windows::Web::Http::HttpGetStringResult>;
+    using HttpMethod = py::winrt_wrapper<winrt::Windows::Web::Http::HttpMethod>;
+    using HttpMultipartContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpMultipartContent>;
+    using HttpMultipartFormDataContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpMultipartFormDataContent>;
+    using HttpRequestMessage = py::winrt_wrapper<winrt::Windows::Web::Http::HttpRequestMessage>;
+    using HttpRequestResult = py::winrt_wrapper<winrt::Windows::Web::Http::HttpRequestResult>;
+    using HttpResponseMessage = py::winrt_wrapper<winrt::Windows::Web::Http::HttpResponseMessage>;
+    using HttpStreamContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpStreamContent>;
+    using HttpStringContent = py::winrt_wrapper<winrt::Windows::Web::Http::HttpStringContent>;
+    using HttpTransportInformation = py::winrt_wrapper<winrt::Windows::Web::Http::HttpTransportInformation>;
+    using IHttpContent = py::winrt_wrapper<winrt::Windows::Web::Http::IHttpContent>;
+    using HttpProgress = py::winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>;
+}
+
+namespace py
+{
 }

@@ -5,21 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Microsoft.Windows.Security.AccessControl.h>
 
 namespace py::proj::Microsoft::Windows::Security::AccessControl
 {
-}
-
-namespace py::impl::Microsoft::Windows::Security::AccessControl
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::Security::AccessControl
-{
-    using SecurityDescriptorHelpers = py::winrt_wrapper<winrt::Microsoft::Windows::Security::AccessControl::SecurityDescriptorHelpers>;
-    using AppContainerNameAndAccess = py::winrt_struct_wrapper<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess>;
 }
 
 namespace py
@@ -43,4 +32,18 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.security.accesscontrol";
         static constexpr const char* type_name = "AppContainerNameAndAccess";
     };
+}
+
+namespace py::impl::Microsoft::Windows::Security::AccessControl
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::Security::AccessControl
+{
+    using SecurityDescriptorHelpers = py::winrt_wrapper<winrt::Microsoft::Windows::Security::AccessControl::SecurityDescriptorHelpers>;
+    using AppContainerNameAndAccess = py::winrt_struct_wrapper<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess>;
+}
+
+namespace py
+{
 }

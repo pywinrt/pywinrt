@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Globalization.h>
@@ -40,47 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Web::Http::Headers
 {
-}
-
-namespace py::impl::Windows::Web::Http::Headers
-{
-}
-
-namespace py::wrapper::Windows::Web::Http::Headers
-{
-    using HttpCacheDirectiveHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>;
-    using HttpChallengeHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>;
-    using HttpChallengeHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>;
-    using HttpConnectionOptionHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>;
-    using HttpConnectionOptionHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>;
-    using HttpContentCodingHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>;
-    using HttpContentCodingHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>;
-    using HttpContentCodingWithQualityHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>;
-    using HttpContentCodingWithQualityHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>;
-    using HttpContentDispositionHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>;
-    using HttpContentHeaderCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection>;
-    using HttpContentRangeHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>;
-    using HttpCookiePairHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>;
-    using HttpCookiePairHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>;
-    using HttpCredentialsHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>;
-    using HttpDateOrDeltaHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>;
-    using HttpExpectationHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>;
-    using HttpExpectationHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>;
-    using HttpLanguageHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>;
-    using HttpLanguageRangeWithQualityHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>;
-    using HttpLanguageRangeWithQualityHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>;
-    using HttpMediaTypeHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>;
-    using HttpMediaTypeWithQualityHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>;
-    using HttpMediaTypeWithQualityHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>;
-    using HttpMethodHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>;
-    using HttpNameValueHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>;
-    using HttpProductHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpProductHeaderValue>;
-    using HttpProductInfoHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>;
-    using HttpProductInfoHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>;
-    using HttpRequestHeaderCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>;
-    using HttpResponseHeaderCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>;
-    using HttpTransferCodingHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>;
-    using HttpTransferCodingHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>;
 }
 
 namespace py
@@ -349,4 +283,73 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.web.http.headers";
         static constexpr const char* type_name = "HttpTransferCodingHeaderValueCollection";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Globalization.h")
+#include "py.Windows.Globalization.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+namespace py::impl::Windows::Web::Http::Headers
+{
+}
+
+namespace py::wrapper::Windows::Web::Http::Headers
+{
+    using HttpCacheDirectiveHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>;
+    using HttpChallengeHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>;
+    using HttpChallengeHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>;
+    using HttpConnectionOptionHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>;
+    using HttpConnectionOptionHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>;
+    using HttpContentCodingHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>;
+    using HttpContentCodingHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>;
+    using HttpContentCodingWithQualityHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>;
+    using HttpContentCodingWithQualityHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>;
+    using HttpContentDispositionHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue>;
+    using HttpContentHeaderCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection>;
+    using HttpContentRangeHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue>;
+    using HttpCookiePairHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>;
+    using HttpCookiePairHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>;
+    using HttpCredentialsHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue>;
+    using HttpDateOrDeltaHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>;
+    using HttpExpectationHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>;
+    using HttpExpectationHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>;
+    using HttpLanguageHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>;
+    using HttpLanguageRangeWithQualityHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>;
+    using HttpLanguageRangeWithQualityHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>;
+    using HttpMediaTypeHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue>;
+    using HttpMediaTypeWithQualityHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>;
+    using HttpMediaTypeWithQualityHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>;
+    using HttpMethodHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>;
+    using HttpNameValueHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>;
+    using HttpProductHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpProductHeaderValue>;
+    using HttpProductInfoHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>;
+    using HttpProductInfoHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>;
+    using HttpRequestHeaderCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>;
+    using HttpResponseHeaderCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>;
+    using HttpTransferCodingHeaderValue = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>;
+    using HttpTransferCodingHeaderValueCollection = py::winrt_wrapper<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>;
+}
+
+namespace py
+{
 }

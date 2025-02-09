@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.UI.Input.h")
-#include "py.Windows.UI.Input.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
@@ -35,33 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Composition::Interactions
 {
-}
-
-namespace py::impl::Windows::UI::Composition::Interactions
-{
-}
-
-namespace py::wrapper::Windows::UI::Composition::Interactions
-{
-    using CompositionConditionalValue = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>;
-    using CompositionInteractionSourceCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>;
-    using InteractionSourceConfiguration = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration>;
-    using InteractionTracker = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTracker>;
-    using InteractionTrackerCustomAnimationStateEnteredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>;
-    using InteractionTrackerIdleStateEnteredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>;
-    using InteractionTrackerInertiaModifier = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier>;
-    using InteractionTrackerInertiaMotion = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion>;
-    using InteractionTrackerInertiaNaturalMotion = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>;
-    using InteractionTrackerInertiaRestingValue = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>;
-    using InteractionTrackerInertiaStateEnteredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>;
-    using InteractionTrackerInteractingStateEnteredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>;
-    using InteractionTrackerRequestIgnoredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>;
-    using InteractionTrackerValuesChangedArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>;
-    using InteractionTrackerVector2InertiaModifier = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>;
-    using InteractionTrackerVector2InertiaNaturalMotion = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>;
-    using VisualInteractionSource = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::VisualInteractionSource>;
-    using ICompositionInteractionSource = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>;
-    using IInteractionTrackerOwner = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>;
 }
 
 namespace py
@@ -295,4 +247,55 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.composition.interactions";
         static constexpr const char* type_name = "_IInteractionTrackerOwner";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.h")
+#include "py.Windows.UI.Input.h"
+#endif
+
+namespace py::impl::Windows::UI::Composition::Interactions
+{
+}
+
+namespace py::wrapper::Windows::UI::Composition::Interactions
+{
+    using CompositionConditionalValue = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>;
+    using CompositionInteractionSourceCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>;
+    using InteractionSourceConfiguration = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration>;
+    using InteractionTracker = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTracker>;
+    using InteractionTrackerCustomAnimationStateEnteredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>;
+    using InteractionTrackerIdleStateEnteredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>;
+    using InteractionTrackerInertiaModifier = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier>;
+    using InteractionTrackerInertiaMotion = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion>;
+    using InteractionTrackerInertiaNaturalMotion = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>;
+    using InteractionTrackerInertiaRestingValue = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>;
+    using InteractionTrackerInertiaStateEnteredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>;
+    using InteractionTrackerInteractingStateEnteredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>;
+    using InteractionTrackerRequestIgnoredArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>;
+    using InteractionTrackerValuesChangedArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>;
+    using InteractionTrackerVector2InertiaModifier = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>;
+    using InteractionTrackerVector2InertiaNaturalMotion = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>;
+    using VisualInteractionSource = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::VisualInteractionSource>;
+    using ICompositionInteractionSource = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>;
+    using IInteractionTrackerOwner = py::winrt_wrapper<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>;
+}
+
+namespace py
+{
 }

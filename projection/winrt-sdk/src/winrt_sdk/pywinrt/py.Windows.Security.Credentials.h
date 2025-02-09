@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Core.h")
-#include "py.Windows.Security.Cryptography.Core.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Security.Cryptography.Core.h>
@@ -35,25 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Credentials
 {
-}
-
-namespace py::impl::Windows::Security::Credentials
-{
-}
-
-namespace py::wrapper::Windows::Security::Credentials
-{
-    using KeyCredential = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredential>;
-    using KeyCredentialAttestationResult = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>;
-    using KeyCredentialManager = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredentialManager>;
-    using KeyCredentialOperationResult = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>;
-    using KeyCredentialRetrievalResult = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>;
-    using PasswordCredential = py::winrt_wrapper<winrt::Windows::Security::Credentials::PasswordCredential>;
-    using PasswordCredentialPropertyStore = py::winrt_wrapper<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore>;
-    using PasswordVault = py::winrt_wrapper<winrt::Windows::Security::Credentials::PasswordVault>;
-    using WebAccount = py::winrt_wrapper<winrt::Windows::Security::Credentials::WebAccount>;
-    using WebAccountProvider = py::winrt_wrapper<winrt::Windows::Security::Credentials::WebAccountProvider>;
-    using IWebAccount = py::winrt_wrapper<winrt::Windows::Security::Credentials::IWebAccount>;
 }
 
 namespace py
@@ -201,4 +161,47 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "_IWebAccount";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Cryptography.Core.h")
+#include "py.Windows.Security.Cryptography.Core.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Security::Credentials
+{
+}
+
+namespace py::wrapper::Windows::Security::Credentials
+{
+    using KeyCredential = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredential>;
+    using KeyCredentialAttestationResult = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>;
+    using KeyCredentialManager = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredentialManager>;
+    using KeyCredentialOperationResult = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>;
+    using KeyCredentialRetrievalResult = py::winrt_wrapper<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>;
+    using PasswordCredential = py::winrt_wrapper<winrt::Windows::Security::Credentials::PasswordCredential>;
+    using PasswordCredentialPropertyStore = py::winrt_wrapper<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore>;
+    using PasswordVault = py::winrt_wrapper<winrt::Windows::Security::Credentials::PasswordVault>;
+    using WebAccount = py::winrt_wrapper<winrt::Windows::Security::Credentials::WebAccount>;
+    using WebAccountProvider = py::winrt_wrapper<winrt::Windows::Security::Credentials::WebAccountProvider>;
+    using IWebAccount = py::winrt_wrapper<winrt::Windows::Security::Credentials::IWebAccount>;
+}
+
+namespace py
+{
 }

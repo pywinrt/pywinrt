@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,30 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::PlayTo
 {
-}
-
-namespace py::impl::Windows::Media::PlayTo
-{
-}
-
-namespace py::wrapper::Windows::Media::PlayTo
-{
-    using CurrentTimeChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>;
-    using MuteChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs>;
-    using PlayToConnection = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToConnection>;
-    using PlayToConnectionErrorEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs>;
-    using PlayToConnectionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs>;
-    using PlayToConnectionTransferredEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs>;
-    using PlayToManager = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToManager>;
-    using PlayToReceiver = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToReceiver>;
-    using PlayToSource = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSource>;
-    using PlayToSourceDeferral = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSourceDeferral>;
-    using PlayToSourceRequest = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSourceRequest>;
-    using PlayToSourceRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs>;
-    using PlayToSourceSelectedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs>;
-    using PlaybackRateChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs>;
-    using SourceChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs>;
-    using VolumeChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs>;
 }
 
 namespace py
@@ -203,4 +166,44 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.playto";
         static constexpr const char* type_name = "VolumeChangeRequestedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media::PlayTo
+{
+}
+
+namespace py::wrapper::Windows::Media::PlayTo
+{
+    using CurrentTimeChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>;
+    using MuteChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs>;
+    using PlayToConnection = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToConnection>;
+    using PlayToConnectionErrorEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs>;
+    using PlayToConnectionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs>;
+    using PlayToConnectionTransferredEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs>;
+    using PlayToManager = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToManager>;
+    using PlayToReceiver = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToReceiver>;
+    using PlayToSource = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSource>;
+    using PlayToSourceDeferral = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSourceDeferral>;
+    using PlayToSourceRequest = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSourceRequest>;
+    using PlayToSourceRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs>;
+    using PlayToSourceSelectedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs>;
+    using PlaybackRateChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs>;
+    using SourceChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs>;
+    using VolumeChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs>;
+}
+
+namespace py
+{
 }

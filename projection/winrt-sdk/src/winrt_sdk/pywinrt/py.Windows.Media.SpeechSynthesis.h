@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.h>
@@ -35,18 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::SpeechSynthesis
 {
-}
-
-namespace py::impl::Windows::Media::SpeechSynthesis
-{
-}
-
-namespace py::wrapper::Windows::Media::SpeechSynthesis
-{
-    using SpeechSynthesisStream = py::winrt_wrapper<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>;
-    using SpeechSynthesizer = py::winrt_wrapper<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer>;
-    using SpeechSynthesizerOptions = py::winrt_wrapper<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>;
-    using VoiceInformation = py::winrt_wrapper<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>;
 }
 
 namespace py
@@ -116,4 +83,40 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
         static constexpr const char* type_name = "VoiceInformation";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+#if __has_include("py.Windows.Media.Core.h")
+#include "py.Windows.Media.Core.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media::SpeechSynthesis
+{
+}
+
+namespace py::wrapper::Windows::Media::SpeechSynthesis
+{
+    using SpeechSynthesisStream = py::winrt_wrapper<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>;
+    using SpeechSynthesizer = py::winrt_wrapper<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer>;
+    using SpeechSynthesizerOptions = py::winrt_wrapper<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>;
+    using VoiceInformation = py::winrt_wrapper<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>;
+}
+
+namespace py
+{
 }

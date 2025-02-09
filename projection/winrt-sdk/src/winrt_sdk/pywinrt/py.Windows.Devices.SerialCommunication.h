@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
 
@@ -20,17 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::SerialCommunication
 {
-}
-
-namespace py::impl::Windows::Devices::SerialCommunication
-{
-}
-
-namespace py::wrapper::Windows::Devices::SerialCommunication
-{
-    using ErrorReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>;
-    using PinChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>;
-    using SerialDevice = py::winrt_wrapper<winrt::Windows::Devices::SerialCommunication::SerialDevice>;
 }
 
 namespace py
@@ -114,4 +94,27 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "SerialDevice";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::SerialCommunication
+{
+}
+
+namespace py::wrapper::Windows::Devices::SerialCommunication
+{
+    using ErrorReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>;
+    using PinChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>;
+    using SerialDevice = py::winrt_wrapper<winrt::Windows::Devices::SerialCommunication::SerialDevice>;
+}
+
+namespace py
+{
 }

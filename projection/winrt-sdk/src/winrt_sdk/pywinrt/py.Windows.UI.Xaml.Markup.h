@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Interop.h")
-#include "py.Windows.UI.Xaml.Interop.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -35,29 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Markup
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Markup
-{
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Markup
-{
-    using MarkupExtension = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::MarkupExtension>;
-    using XamlBinaryWriter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriter>;
-    using XamlBindingHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::XamlBindingHelper>;
-    using XamlMarkupHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::XamlMarkupHelper>;
-    using XamlReader = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::XamlReader>;
-    using IComponentConnector = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IComponentConnector>;
-    using IComponentConnector2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>;
-    using IDataTemplateComponent = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>;
-    using IXamlBindScopeDiagnostics = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>;
-    using IXamlMember = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlMember>;
-    using IXamlMetadataProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>;
-    using IXamlType = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlType>;
-    using IXamlType2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlType2>;
-    using XamlBinaryWriterErrorInformation = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>;
-    using XmlnsDefinition = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>;
 }
 
 namespace py
@@ -188,4 +144,51 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.markup";
         static constexpr const char* type_name = "XmlnsDefinition";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Interop.h")
+#include "py.Windows.UI.Xaml.Interop.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Markup
+{
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Markup
+{
+    using MarkupExtension = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::MarkupExtension>;
+    using XamlBinaryWriter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriter>;
+    using XamlBindingHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::XamlBindingHelper>;
+    using XamlMarkupHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::XamlMarkupHelper>;
+    using XamlReader = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::XamlReader>;
+    using IComponentConnector = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IComponentConnector>;
+    using IComponentConnector2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>;
+    using IDataTemplateComponent = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>;
+    using IXamlBindScopeDiagnostics = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>;
+    using IXamlMember = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlMember>;
+    using IXamlMetadataProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>;
+    using IXamlType = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlType>;
+    using IXamlType2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Markup::IXamlType2>;
+    using XamlBinaryWriterErrorInformation = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>;
+    using XmlnsDefinition = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Markup::XmlnsDefinition>;
+}
+
+namespace py
+{
 }

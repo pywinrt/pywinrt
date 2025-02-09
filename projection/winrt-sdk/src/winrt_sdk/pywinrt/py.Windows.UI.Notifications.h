@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.Data.Xml.Dom.h")
-#include "py.Windows.Data.Xml.Dom.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Data.Xml.Dom.h>
 #include <winrt/Windows.Foundation.h>
@@ -35,52 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Notifications
 {
-}
-
-namespace py::impl::Windows::UI::Notifications
-{
-}
-
-namespace py::wrapper::Windows::UI::Notifications
-{
-    using AdaptiveNotificationText = py::winrt_wrapper<winrt::Windows::UI::Notifications::AdaptiveNotificationText>;
-    using BadgeNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::BadgeNotification>;
-    using BadgeUpdateManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::BadgeUpdateManager>;
-    using BadgeUpdateManagerForUser = py::winrt_wrapper<winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser>;
-    using BadgeUpdater = py::winrt_wrapper<winrt::Windows::UI::Notifications::BadgeUpdater>;
-    using KnownAdaptiveNotificationHints = py::winrt_wrapper<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints>;
-    using KnownAdaptiveNotificationTextStyles = py::winrt_wrapper<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles>;
-    using KnownNotificationBindings = py::winrt_wrapper<winrt::Windows::UI::Notifications::KnownNotificationBindings>;
-    using Notification = py::winrt_wrapper<winrt::Windows::UI::Notifications::Notification>;
-    using NotificationBinding = py::winrt_wrapper<winrt::Windows::UI::Notifications::NotificationBinding>;
-    using NotificationData = py::winrt_wrapper<winrt::Windows::UI::Notifications::NotificationData>;
-    using NotificationVisual = py::winrt_wrapper<winrt::Windows::UI::Notifications::NotificationVisual>;
-    using ScheduledTileNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::ScheduledTileNotification>;
-    using ScheduledToastNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::ScheduledToastNotification>;
-    using ScheduledToastNotificationShowingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>;
-    using ShownTileNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::ShownTileNotification>;
-    using TileFlyoutNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileFlyoutNotification>;
-    using TileFlyoutUpdateManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileFlyoutUpdateManager>;
-    using TileFlyoutUpdater = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileFlyoutUpdater>;
-    using TileNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileNotification>;
-    using TileUpdateManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileUpdateManager>;
-    using TileUpdateManagerForUser = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileUpdateManagerForUser>;
-    using TileUpdater = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileUpdater>;
-    using ToastActivatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastActivatedEventArgs>;
-    using ToastCollection = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastCollection>;
-    using ToastCollectionManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastCollectionManager>;
-    using ToastDismissedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastDismissedEventArgs>;
-    using ToastFailedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastFailedEventArgs>;
-    using ToastNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotification>;
-    using ToastNotificationActionTriggerDetail = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail>;
-    using ToastNotificationHistory = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationHistory>;
-    using ToastNotificationHistoryChangedTriggerDetail = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail>;
-    using ToastNotificationManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationManager>;
-    using ToastNotificationManagerForUser = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser>;
-    using ToastNotifier = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotifier>;
-    using UserNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::UserNotification>;
-    using UserNotificationChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>;
-    using IAdaptiveNotificationContent = py::winrt_wrapper<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>;
 }
 
 namespace py
@@ -554,4 +487,74 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "_IAdaptiveNotificationContent";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.Data.Xml.Dom.h")
+#include "py.Windows.Data.Xml.Dom.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::UI::Notifications
+{
+}
+
+namespace py::wrapper::Windows::UI::Notifications
+{
+    using AdaptiveNotificationText = py::winrt_wrapper<winrt::Windows::UI::Notifications::AdaptiveNotificationText>;
+    using BadgeNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::BadgeNotification>;
+    using BadgeUpdateManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::BadgeUpdateManager>;
+    using BadgeUpdateManagerForUser = py::winrt_wrapper<winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser>;
+    using BadgeUpdater = py::winrt_wrapper<winrt::Windows::UI::Notifications::BadgeUpdater>;
+    using KnownAdaptiveNotificationHints = py::winrt_wrapper<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints>;
+    using KnownAdaptiveNotificationTextStyles = py::winrt_wrapper<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles>;
+    using KnownNotificationBindings = py::winrt_wrapper<winrt::Windows::UI::Notifications::KnownNotificationBindings>;
+    using Notification = py::winrt_wrapper<winrt::Windows::UI::Notifications::Notification>;
+    using NotificationBinding = py::winrt_wrapper<winrt::Windows::UI::Notifications::NotificationBinding>;
+    using NotificationData = py::winrt_wrapper<winrt::Windows::UI::Notifications::NotificationData>;
+    using NotificationVisual = py::winrt_wrapper<winrt::Windows::UI::Notifications::NotificationVisual>;
+    using ScheduledTileNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::ScheduledTileNotification>;
+    using ScheduledToastNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::ScheduledToastNotification>;
+    using ScheduledToastNotificationShowingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>;
+    using ShownTileNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::ShownTileNotification>;
+    using TileFlyoutNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileFlyoutNotification>;
+    using TileFlyoutUpdateManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileFlyoutUpdateManager>;
+    using TileFlyoutUpdater = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileFlyoutUpdater>;
+    using TileNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileNotification>;
+    using TileUpdateManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileUpdateManager>;
+    using TileUpdateManagerForUser = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileUpdateManagerForUser>;
+    using TileUpdater = py::winrt_wrapper<winrt::Windows::UI::Notifications::TileUpdater>;
+    using ToastActivatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastActivatedEventArgs>;
+    using ToastCollection = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastCollection>;
+    using ToastCollectionManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastCollectionManager>;
+    using ToastDismissedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastDismissedEventArgs>;
+    using ToastFailedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastFailedEventArgs>;
+    using ToastNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotification>;
+    using ToastNotificationActionTriggerDetail = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail>;
+    using ToastNotificationHistory = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationHistory>;
+    using ToastNotificationHistoryChangedTriggerDetail = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail>;
+    using ToastNotificationManager = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationManager>;
+    using ToastNotificationManagerForUser = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser>;
+    using ToastNotifier = py::winrt_wrapper<winrt::Windows::UI::Notifications::ToastNotifier>;
+    using UserNotification = py::winrt_wrapper<winrt::Windows::UI::Notifications::UserNotification>;
+    using UserNotificationChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>;
+    using IAdaptiveNotificationContent = py::winrt_wrapper<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>;
+}
+
+namespace py
+{
 }

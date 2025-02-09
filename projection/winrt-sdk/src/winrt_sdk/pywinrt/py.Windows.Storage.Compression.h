@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
 
@@ -20,16 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage::Compression
 {
-}
-
-namespace py::impl::Windows::Storage::Compression
-{
-}
-
-namespace py::wrapper::Windows::Storage::Compression
-{
-    using Compressor = py::winrt_wrapper<winrt::Windows::Storage::Compression::Compressor>;
-    using Decompressor = py::winrt_wrapper<winrt::Windows::Storage::Compression::Decompressor>;
 }
 
 namespace py
@@ -61,4 +42,26 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage.compression";
         static constexpr const char* type_name = "Decompressor";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Storage::Compression
+{
+}
+
+namespace py::wrapper::Windows::Storage::Compression
+{
+    using Compressor = py::winrt_wrapper<winrt::Windows::Storage::Compression::Compressor>;
+    using Decompressor = py::winrt_wrapper<winrt::Windows::Storage::Compression::Decompressor>;
+}
+
+namespace py
+{
 }

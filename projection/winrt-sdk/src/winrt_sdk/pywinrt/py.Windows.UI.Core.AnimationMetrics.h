@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,20 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Core::AnimationMetrics
 {
-}
-
-namespace py::impl::Windows::UI::Core::AnimationMetrics
-{
-}
-
-namespace py::wrapper::Windows::UI::Core::AnimationMetrics
-{
-    using AnimationDescription = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription>;
-    using OpacityAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>;
-    using PropertyAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>;
-    using ScaleAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>;
-    using TranslationAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>;
-    using IPropertyAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>;
 }
 
 namespace py
@@ -119,4 +96,30 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "_IPropertyAnimation";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::UI::Core::AnimationMetrics
+{
+}
+
+namespace py::wrapper::Windows::UI::Core::AnimationMetrics
+{
+    using AnimationDescription = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription>;
+    using OpacityAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>;
+    using PropertyAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>;
+    using ScaleAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>;
+    using TranslationAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>;
+    using IPropertyAnimation = py::winrt_wrapper<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>;
+}
+
+namespace py
+{
 }

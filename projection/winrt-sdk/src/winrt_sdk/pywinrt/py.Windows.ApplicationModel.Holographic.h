@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
-#endif
-
 #include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Perception.Spatial.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Holographic
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Holographic
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Holographic
-{
-    using HolographicKeyboard = py::winrt_wrapper<winrt::Windows::ApplicationModel::Holographic::HolographicKeyboard>;
 }
 
 namespace py
@@ -41,4 +23,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.holographic";
         static constexpr const char* type_name = "HolographicKeyboard";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Perception.Spatial.h")
+#include "py.Windows.Perception.Spatial.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Holographic
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Holographic
+{
+    using HolographicKeyboard = py::winrt_wrapper<winrt::Windows::ApplicationModel::Holographic::HolographicKeyboard>;
+}
+
+namespace py
+{
 }

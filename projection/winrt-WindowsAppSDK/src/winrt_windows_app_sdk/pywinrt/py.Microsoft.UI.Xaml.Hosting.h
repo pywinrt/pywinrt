@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Content.h")
-#include "py.Microsoft.UI.Content.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.h")
-#include "py.Microsoft.UI.Xaml.Controls.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.h")
-#include "py.Microsoft.UI.Xaml.Media.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Content.h>
@@ -45,22 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Xaml::Hosting
 {
-}
-
-namespace py::impl::Microsoft::UI::Xaml::Hosting
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Xaml::Hosting
-{
-    using DesktopWindowXamlSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>;
-    using DesktopWindowXamlSourceGotFocusEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>;
-    using DesktopWindowXamlSourceTakeFocusRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>;
-    using ElementCompositionPreview = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::ElementCompositionPreview>;
-    using WindowsXamlManager = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager>;
-    using XamlShutdownCompletedOnThreadEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>;
-    using XamlSourceFocusNavigationRequest = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>;
-    using XamlSourceFocusNavigationResult = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>;
 }
 
 namespace py
@@ -140,4 +95,52 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "XamlSourceFocusNavigationResult";
     };
+}
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Content.h")
+#include "py.Microsoft.UI.Content.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Controls.h")
+#include "py.Microsoft.UI.Xaml.Controls.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Media.h")
+#include "py.Microsoft.UI.Xaml.Media.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Xaml::Hosting
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Xaml::Hosting
+{
+    using DesktopWindowXamlSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>;
+    using DesktopWindowXamlSourceGotFocusEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>;
+    using DesktopWindowXamlSourceTakeFocusRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>;
+    using ElementCompositionPreview = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::ElementCompositionPreview>;
+    using WindowsXamlManager = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager>;
+    using XamlShutdownCompletedOnThreadEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>;
+    using XamlSourceFocusNavigationRequest = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>;
+    using XamlSourceFocusNavigationResult = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>;
+}
+
+namespace py
+{
 }

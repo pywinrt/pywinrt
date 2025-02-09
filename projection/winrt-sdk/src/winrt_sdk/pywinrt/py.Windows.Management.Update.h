@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,30 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Management::Update
 {
-}
-
-namespace py::impl::Windows::Management::Update
-{
-}
-
-namespace py::wrapper::Windows::Management::Update
-{
-    using PreviewBuildsManager = py::winrt_wrapper<winrt::Windows::Management::Update::PreviewBuildsManager>;
-    using PreviewBuildsState = py::winrt_wrapper<winrt::Windows::Management::Update::PreviewBuildsState>;
-    using WindowsUpdate = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdate>;
-    using WindowsUpdateActionCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>;
-    using WindowsUpdateActionProgress = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateActionProgress>;
-    using WindowsUpdateActionResult = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateActionResult>;
-    using WindowsUpdateAdministrator = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateAdministrator>;
-    using WindowsUpdateApprovalData = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateApprovalData>;
-    using WindowsUpdateAttentionRequiredInfo = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo>;
-    using WindowsUpdateAttentionRequiredReasonChangedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>;
-    using WindowsUpdateGetAdministratorResult = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult>;
-    using WindowsUpdateItem = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateItem>;
-    using WindowsUpdateManager = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateManager>;
-    using WindowsUpdateProgressChangedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>;
-    using WindowsUpdateRestartRequestOptions = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions>;
-    using WindowsUpdateScanCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>;
 }
 
 namespace py
@@ -209,4 +176,40 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateScanCompletedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Management::Update
+{
+}
+
+namespace py::wrapper::Windows::Management::Update
+{
+    using PreviewBuildsManager = py::winrt_wrapper<winrt::Windows::Management::Update::PreviewBuildsManager>;
+    using PreviewBuildsState = py::winrt_wrapper<winrt::Windows::Management::Update::PreviewBuildsState>;
+    using WindowsUpdate = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdate>;
+    using WindowsUpdateActionCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>;
+    using WindowsUpdateActionProgress = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateActionProgress>;
+    using WindowsUpdateActionResult = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateActionResult>;
+    using WindowsUpdateAdministrator = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateAdministrator>;
+    using WindowsUpdateApprovalData = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateApprovalData>;
+    using WindowsUpdateAttentionRequiredInfo = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo>;
+    using WindowsUpdateAttentionRequiredReasonChangedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>;
+    using WindowsUpdateGetAdministratorResult = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult>;
+    using WindowsUpdateItem = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateItem>;
+    using WindowsUpdateManager = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateManager>;
+    using WindowsUpdateProgressChangedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>;
+    using WindowsUpdateRestartRequestOptions = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions>;
+    using WindowsUpdateScanCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>;
+}
+
+namespace py
+{
 }

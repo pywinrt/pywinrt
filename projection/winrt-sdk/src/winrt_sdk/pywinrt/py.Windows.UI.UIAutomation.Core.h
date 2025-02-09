@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.UIAutomation.h")
-#include "py.Windows.UI.UIAutomation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.UIAutomation.h>
 
@@ -20,27 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::UIAutomation::Core
 {
-}
-
-namespace py::impl::Windows::UI::UIAutomation::Core
-{
-}
-
-namespace py::wrapper::Windows::UI::UIAutomation::Core
-{
-    using AutomationRemoteOperationResult = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>;
-    using CoreAutomationRegistrar = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>;
-    using CoreAutomationRemoteOperation = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation>;
-    using CoreAutomationRemoteOperationContext = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>;
-    using RemoteAutomationClientSession = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>;
-    using RemoteAutomationConnectionRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>;
-    using RemoteAutomationDisconnectedEventArgs = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>;
-    using RemoteAutomationServer = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>;
-    using RemoteAutomationWindow = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>;
-    using ICoreAutomationConnectionBoundObjectProvider = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>;
-    using ICoreAutomationRemoteOperationExtensionProvider = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>;
-    using AutomationAnnotationTypeRegistration = py::winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>;
-    using AutomationRemoteOperationOperandId = py::winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>;
 }
 
 namespace py
@@ -166,4 +136,37 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "AutomationRemoteOperationOperandId";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.UIAutomation.h")
+#include "py.Windows.UI.UIAutomation.h"
+#endif
+
+namespace py::impl::Windows::UI::UIAutomation::Core
+{
+}
+
+namespace py::wrapper::Windows::UI::UIAutomation::Core
+{
+    using AutomationRemoteOperationResult = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>;
+    using CoreAutomationRegistrar = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>;
+    using CoreAutomationRemoteOperation = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation>;
+    using CoreAutomationRemoteOperationContext = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>;
+    using RemoteAutomationClientSession = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>;
+    using RemoteAutomationConnectionRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>;
+    using RemoteAutomationDisconnectedEventArgs = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>;
+    using RemoteAutomationServer = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>;
+    using RemoteAutomationWindow = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>;
+    using ICoreAutomationConnectionBoundObjectProvider = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>;
+    using ICoreAutomationRemoteOperationExtensionProvider = py::winrt_wrapper<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>;
+    using AutomationAnnotationTypeRegistration = py::winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>;
+    using AutomationRemoteOperationOperandId = py::winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>;
+}
+
+namespace py
+{
 }

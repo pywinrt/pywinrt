@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Windows.Foundation.h>
@@ -40,19 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Composition::SystemBackdrops
 {
-}
-
-namespace py::impl::Microsoft::UI::Composition::SystemBackdrops
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Composition::SystemBackdrops
-{
-    using DesktopAcrylicController = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController>;
-    using MicaController = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController>;
-    using SystemBackdropConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>;
-    using ISystemBackdropController = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>;
-    using ISystemBackdropControllerWithTargets = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>;
 }
 
 namespace py
@@ -141,4 +103,45 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "_ISystemBackdropControllerWithTargets";
     };
+}
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Composition::SystemBackdrops
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Composition::SystemBackdrops
+{
+    using DesktopAcrylicController = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController>;
+    using MicaController = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController>;
+    using SystemBackdropConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>;
+    using ISystemBackdropController = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>;
+    using ISystemBackdropControllerWithTargets = py::winrt_wrapper<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>;
+}
+
+namespace py
+{
 }

@@ -4,43 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.SystemBackdrops.h")
-#include "py.Microsoft.UI.Composition.SystemBackdrops.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.h")
-#include "py.Microsoft.UI.Xaml.Controls.Primitives.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.Media3D.h")
-#include "py.Microsoft.UI.Xaml.Media.Media3D.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Composition.SystemBackdrops.h>
 #include <winrt/Microsoft.UI.Xaml.h>
@@ -55,78 +18,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Xaml::Media
 {
-}
-
-namespace py::impl::Microsoft::UI::Xaml::Media
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Xaml::Media
-{
-    using AcrylicBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>;
-    using ArcSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ArcSegment>;
-    using BezierSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::BezierSegment>;
-    using BitmapCache = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::BitmapCache>;
-    using Brush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Brush>;
-    using BrushCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::BrushCollection>;
-    using CacheMode = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::CacheMode>;
-    using CompositeTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::CompositeTransform>;
-    using CompositionTarget = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::CompositionTarget>;
-    using DesktopAcrylicBackdrop = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdrop>;
-    using DoubleCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::DoubleCollection>;
-    using EllipseGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::EllipseGeometry>;
-    using FontFamily = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::FontFamily>;
-    using GeneralTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>;
-    using Geometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Geometry>;
-    using GeometryCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GeometryCollection>;
-    using GeometryGroup = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GeometryGroup>;
-    using GradientBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GradientBrush>;
-    using GradientStop = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GradientStop>;
-    using GradientStopCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GradientStopCollection>;
-    using ImageBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ImageBrush>;
-    using ImageSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ImageSource>;
-    using LineGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LineGeometry>;
-    using LineSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LineSegment>;
-    using LinearGradientBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LinearGradientBrush>;
-    using LoadedImageSourceLoadCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>;
-    using LoadedImageSurface = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LoadedImageSurface>;
-    using Matrix3DProjection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Matrix3DProjection>;
-    using MatrixHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::MatrixHelper>;
-    using MatrixTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::MatrixTransform>;
-    using MediaTransportControlsThumbnailRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>;
-    using MicaBackdrop = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::MicaBackdrop>;
-    using PathFigure = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathFigure>;
-    using PathFigureCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathFigureCollection>;
-    using PathGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathGeometry>;
-    using PathSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathSegment>;
-    using PathSegmentCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathSegmentCollection>;
-    using PlaneProjection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PlaneProjection>;
-    using PointCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PointCollection>;
-    using PolyBezierSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PolyBezierSegment>;
-    using PolyLineSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PolyLineSegment>;
-    using PolyQuadraticBezierSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PolyQuadraticBezierSegment>;
-    using Projection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Projection>;
-    using QuadraticBezierSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::QuadraticBezierSegment>;
-    using RadialGradientBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>;
-    using RectangleGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry>;
-    using RenderedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RenderedEventArgs>;
-    using RenderingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RenderingEventArgs>;
-    using RotateTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RotateTransform>;
-    using ScaleTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ScaleTransform>;
-    using Shadow = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Shadow>;
-    using SkewTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::SkewTransform>;
-    using SolidColorBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::SolidColorBrush>;
-    using SystemBackdrop = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>;
-    using ThemeShadow = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ThemeShadow>;
-    using TileBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::TileBrush>;
-    using Transform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Transform>;
-    using TransformCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::TransformCollection>;
-    using TransformGroup = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::TransformGroup>;
-    using TranslateTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::TranslateTransform>;
-    using VisualTreeHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper>;
-    using XamlCompositionBrushBase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase>;
-    using XamlLight = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::XamlLight>;
-    using Matrix = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Matrix>;
 }
 
 namespace py
@@ -800,4 +691,116 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media";
         static constexpr const char* type_name = "Matrix";
     };
+}
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.SystemBackdrops.h")
+#include "py.Microsoft.UI.Composition.SystemBackdrops.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.h")
+#include "py.Microsoft.UI.Xaml.Controls.Primitives.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Media.Media3D.h")
+#include "py.Microsoft.UI.Xaml.Media.Media3D.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Xaml::Media
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Xaml::Media
+{
+    using AcrylicBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>;
+    using ArcSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ArcSegment>;
+    using BezierSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::BezierSegment>;
+    using BitmapCache = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::BitmapCache>;
+    using Brush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Brush>;
+    using BrushCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::BrushCollection>;
+    using CacheMode = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::CacheMode>;
+    using CompositeTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::CompositeTransform>;
+    using CompositionTarget = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::CompositionTarget>;
+    using DesktopAcrylicBackdrop = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdrop>;
+    using DoubleCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::DoubleCollection>;
+    using EllipseGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::EllipseGeometry>;
+    using FontFamily = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::FontFamily>;
+    using GeneralTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>;
+    using Geometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Geometry>;
+    using GeometryCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GeometryCollection>;
+    using GeometryGroup = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GeometryGroup>;
+    using GradientBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GradientBrush>;
+    using GradientStop = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GradientStop>;
+    using GradientStopCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::GradientStopCollection>;
+    using ImageBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ImageBrush>;
+    using ImageSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ImageSource>;
+    using LineGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LineGeometry>;
+    using LineSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LineSegment>;
+    using LinearGradientBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LinearGradientBrush>;
+    using LoadedImageSourceLoadCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>;
+    using LoadedImageSurface = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::LoadedImageSurface>;
+    using Matrix3DProjection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Matrix3DProjection>;
+    using MatrixHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::MatrixHelper>;
+    using MatrixTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::MatrixTransform>;
+    using MediaTransportControlsThumbnailRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>;
+    using MicaBackdrop = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::MicaBackdrop>;
+    using PathFigure = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathFigure>;
+    using PathFigureCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathFigureCollection>;
+    using PathGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathGeometry>;
+    using PathSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathSegment>;
+    using PathSegmentCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PathSegmentCollection>;
+    using PlaneProjection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PlaneProjection>;
+    using PointCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PointCollection>;
+    using PolyBezierSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PolyBezierSegment>;
+    using PolyLineSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PolyLineSegment>;
+    using PolyQuadraticBezierSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::PolyQuadraticBezierSegment>;
+    using Projection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Projection>;
+    using QuadraticBezierSegment = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::QuadraticBezierSegment>;
+    using RadialGradientBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>;
+    using RectangleGeometry = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RectangleGeometry>;
+    using RenderedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RenderedEventArgs>;
+    using RenderingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RenderingEventArgs>;
+    using RotateTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::RotateTransform>;
+    using ScaleTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ScaleTransform>;
+    using Shadow = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Shadow>;
+    using SkewTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::SkewTransform>;
+    using SolidColorBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::SolidColorBrush>;
+    using SystemBackdrop = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>;
+    using ThemeShadow = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::ThemeShadow>;
+    using TileBrush = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::TileBrush>;
+    using Transform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Transform>;
+    using TransformCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::TransformCollection>;
+    using TransformGroup = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::TransformGroup>;
+    using TranslateTransform = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::TranslateTransform>;
+    using VisualTreeHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper>;
+    using XamlCompositionBrushBase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase>;
+    using XamlLight = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::XamlLight>;
+    using Matrix = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Matrix>;
+}
+
+namespace py
+{
 }

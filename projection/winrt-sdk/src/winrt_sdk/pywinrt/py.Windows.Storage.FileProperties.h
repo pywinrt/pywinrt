@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -35,23 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage::FileProperties
 {
-}
-
-namespace py::impl::Windows::Storage::FileProperties
-{
-}
-
-namespace py::wrapper::Windows::Storage::FileProperties
-{
-    using BasicProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::BasicProperties>;
-    using DocumentProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::DocumentProperties>;
-    using GeotagHelper = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::GeotagHelper>;
-    using ImageProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::ImageProperties>;
-    using MusicProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::MusicProperties>;
-    using StorageItemContentProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::StorageItemContentProperties>;
-    using StorageItemThumbnail = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>;
-    using VideoProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::VideoProperties>;
-    using IStorageItemExtraProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>;
 }
 
 namespace py
@@ -194,4 +156,45 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage.fileproperties";
         static constexpr const char* type_name = "_IStorageItemExtraProperties";
     };
+}
+
+#if __has_include("py.Windows.Devices.Geolocation.h")
+#include "py.Windows.Devices.Geolocation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Storage::FileProperties
+{
+}
+
+namespace py::wrapper::Windows::Storage::FileProperties
+{
+    using BasicProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::BasicProperties>;
+    using DocumentProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::DocumentProperties>;
+    using GeotagHelper = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::GeotagHelper>;
+    using ImageProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::ImageProperties>;
+    using MusicProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::MusicProperties>;
+    using StorageItemContentProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::StorageItemContentProperties>;
+    using StorageItemThumbnail = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>;
+    using VideoProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::VideoProperties>;
+    using IStorageItemExtraProperties = py::winrt_wrapper<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>;
+}
+
+namespace py
+{
 }

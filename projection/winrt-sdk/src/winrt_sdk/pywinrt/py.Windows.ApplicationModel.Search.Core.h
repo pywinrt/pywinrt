@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Search.h")
-#include "py.Windows.ApplicationModel.Search.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Search.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,18 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Search::Core
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Search::Core
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Search::Core
-{
-    using RequestingFocusOnKeyboardInputEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>;
-    using SearchSuggestion = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>;
-    using SearchSuggestionManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager>;
-    using SearchSuggestionsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>;
 }
 
 namespace py
@@ -89,4 +60,36 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
         static constexpr const char* type_name = "SearchSuggestionsRequestedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Search.h")
+#include "py.Windows.ApplicationModel.Search.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Search::Core
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Search::Core
+{
+    using RequestingFocusOnKeyboardInputEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>;
+    using SearchSuggestion = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>;
+    using SearchSuggestionManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager>;
+    using SearchSuggestionsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>;
+}
+
+namespace py
+{
 }

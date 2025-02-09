@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,23 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::Windows::ApplicationModel::Resources
 {
-}
-
-namespace py::impl::Microsoft::Windows::ApplicationModel::Resources
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::ApplicationModel::Resources
-{
-    using KnownResourceQualifierName = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName>;
-    using ResourceCandidate = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate>;
-    using ResourceContext = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>;
-    using ResourceLoader = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader>;
-    using ResourceManager = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager>;
-    using ResourceMap = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceMap>;
-    using ResourceNotFoundEventArgs = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceNotFoundEventArgs>;
-    using IResourceContext = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>;
-    using IResourceManager = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>;
 }
 
 namespace py
@@ -124,4 +98,33 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.resources";
         static constexpr const char* type_name = "_IResourceManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::ApplicationModel::Resources
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::ApplicationModel::Resources
+{
+    using KnownResourceQualifierName = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::KnownResourceQualifierName>;
+    using ResourceCandidate = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate>;
+    using ResourceContext = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>;
+    using ResourceLoader = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader>;
+    using ResourceManager = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceManager>;
+    using ResourceMap = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceMap>;
+    using ResourceNotFoundEventArgs = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceNotFoundEventArgs>;
+    using IResourceContext = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceContext>;
+    using IResourceManager = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceManager>;
+}
+
+namespace py
+{
 }

@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.MediaProperties.h>
@@ -35,51 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Chat
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Chat
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Chat
-{
-    using ChatCapabilities = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>;
-    using ChatCapabilitiesManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager>;
-    using ChatConversation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatConversation>;
-    using ChatConversationReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatConversationReader>;
-    using ChatConversationThreadingInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo>;
-    using ChatMessage = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessage>;
-    using ChatMessageAttachment = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment>;
-    using ChatMessageBlocking = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking>;
-    using ChatMessageChange = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>;
-    using ChatMessageChangeReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeReader>;
-    using ChatMessageChangeTracker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeTracker>;
-    using ChatMessageChangedDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral>;
-    using ChatMessageChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs>;
-    using ChatMessageManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageManager>;
-    using ChatMessageNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails>;
-    using ChatMessageReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageReader>;
-    using ChatMessageStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageStore>;
-    using ChatMessageStoreChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs>;
-    using ChatMessageTransport = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageTransport>;
-    using ChatMessageTransportConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration>;
-    using ChatMessageValidationResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageValidationResult>;
-    using ChatQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatQueryOptions>;
-    using ChatRecipientDeliveryInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo>;
-    using ChatSearchReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatSearchReader>;
-    using ChatSyncConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration>;
-    using ChatSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatSyncManager>;
-    using RcsEndUserMessage = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessage>;
-    using RcsEndUserMessageAction = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>;
-    using RcsEndUserMessageAvailableEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs>;
-    using RcsEndUserMessageAvailableTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails>;
-    using RcsEndUserMessageManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager>;
-    using RcsManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsManager>;
-    using RcsServiceKindSupportedChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs>;
-    using RcsTransport = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsTransport>;
-    using RcsTransportConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsTransportConfiguration>;
-    using RemoteParticipantComposingChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs>;
-    using IChatItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::IChatItem>;
 }
 
 namespace py
@@ -523,4 +457,73 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "_IChatItem";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.MediaProperties.h")
+#include "py.Windows.Media.MediaProperties.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Chat
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Chat
+{
+    using ChatCapabilities = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>;
+    using ChatCapabilitiesManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager>;
+    using ChatConversation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatConversation>;
+    using ChatConversationReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatConversationReader>;
+    using ChatConversationThreadingInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo>;
+    using ChatMessage = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessage>;
+    using ChatMessageAttachment = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment>;
+    using ChatMessageBlocking = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking>;
+    using ChatMessageChange = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>;
+    using ChatMessageChangeReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeReader>;
+    using ChatMessageChangeTracker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeTracker>;
+    using ChatMessageChangedDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral>;
+    using ChatMessageChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs>;
+    using ChatMessageManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageManager>;
+    using ChatMessageNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails>;
+    using ChatMessageReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageReader>;
+    using ChatMessageStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageStore>;
+    using ChatMessageStoreChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs>;
+    using ChatMessageTransport = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageTransport>;
+    using ChatMessageTransportConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration>;
+    using ChatMessageValidationResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatMessageValidationResult>;
+    using ChatQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatQueryOptions>;
+    using ChatRecipientDeliveryInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo>;
+    using ChatSearchReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatSearchReader>;
+    using ChatSyncConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration>;
+    using ChatSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::ChatSyncManager>;
+    using RcsEndUserMessage = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessage>;
+    using RcsEndUserMessageAction = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>;
+    using RcsEndUserMessageAvailableEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs>;
+    using RcsEndUserMessageAvailableTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails>;
+    using RcsEndUserMessageManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager>;
+    using RcsManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsManager>;
+    using RcsServiceKindSupportedChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs>;
+    using RcsTransport = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsTransport>;
+    using RcsTransportConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RcsTransportConfiguration>;
+    using RemoteParticipantComposingChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs>;
+    using IChatItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::Chat::IChatItem>;
+}
+
+namespace py
+{
 }

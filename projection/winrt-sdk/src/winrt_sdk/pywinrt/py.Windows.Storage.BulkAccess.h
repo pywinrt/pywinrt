@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.FileProperties.h")
-#include "py.Windows.Storage.FileProperties.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Search.h")
-#include "py.Windows.Storage.Search.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -40,18 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage::BulkAccess
 {
-}
-
-namespace py::impl::Windows::Storage::BulkAccess
-{
-}
-
-namespace py::wrapper::Windows::Storage::BulkAccess
-{
-    using FileInformation = py::winrt_wrapper<winrt::Windows::Storage::BulkAccess::FileInformation>;
-    using FileInformationFactory = py::winrt_wrapper<winrt::Windows::Storage::BulkAccess::FileInformationFactory>;
-    using FolderInformation = py::winrt_wrapper<winrt::Windows::Storage::BulkAccess::FolderInformation>;
-    using IStorageItemInformation = py::winrt_wrapper<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>;
 }
 
 namespace py
@@ -88,4 +51,44 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
         static constexpr const char* type_name = "_IStorageItemInformation";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.FileProperties.h")
+#include "py.Windows.Storage.FileProperties.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Search.h")
+#include "py.Windows.Storage.Search.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Storage::BulkAccess
+{
+}
+
+namespace py::wrapper::Windows::Storage::BulkAccess
+{
+    using FileInformation = py::winrt_wrapper<winrt::Windows::Storage::BulkAccess::FileInformation>;
+    using FileInformationFactory = py::winrt_wrapper<winrt::Windows::Storage::BulkAccess::FileInformationFactory>;
+    using FolderInformation = py::winrt_wrapper<winrt::Windows::Storage::BulkAccess::FolderInformation>;
+    using IStorageItemInformation = py::winrt_wrapper<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>;
+}
+
+namespace py
+{
 }

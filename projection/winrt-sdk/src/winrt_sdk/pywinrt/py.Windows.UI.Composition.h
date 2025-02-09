@@ -4,43 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Effects.h")
-#include "py.Windows.Graphics.Effects.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
@@ -55,127 +18,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Composition
 {
-}
-
-namespace py::impl::Windows::UI::Composition
-{
-}
-
-namespace py::wrapper::Windows::UI::Composition
-{
-    using AmbientLight = py::winrt_wrapper<winrt::Windows::UI::Composition::AmbientLight>;
-    using AnimationController = py::winrt_wrapper<winrt::Windows::UI::Composition::AnimationController>;
-    using AnimationPropertyInfo = py::winrt_wrapper<winrt::Windows::UI::Composition::AnimationPropertyInfo>;
-    using BackEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::BackEasingFunction>;
-    using BooleanKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::BooleanKeyFrameAnimation>;
-    using BounceEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::BounceEasingFunction>;
-    using BounceScalarNaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation>;
-    using BounceVector2NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation>;
-    using BounceVector3NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation>;
-    using CircleEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::CircleEasingFunction>;
-    using ColorKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::ColorKeyFrameAnimation>;
-    using CompositionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionAnimation>;
-    using CompositionAnimationGroup = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionAnimationGroup>;
-    using CompositionBackdropBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionBackdropBrush>;
-    using CompositionBatchCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs>;
-    using CompositionBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionBrush>;
-    using CompositionCapabilities = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionCapabilities>;
-    using CompositionClip = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionClip>;
-    using CompositionColorBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionColorBrush>;
-    using CompositionColorGradientStop = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionColorGradientStop>;
-    using CompositionColorGradientStopCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionColorGradientStopCollection>;
-    using CompositionCommitBatch = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionCommitBatch>;
-    using CompositionContainerShape = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionContainerShape>;
-    using CompositionDrawingSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionDrawingSurface>;
-    using CompositionEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEasingFunction>;
-    using CompositionEffectBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEffectBrush>;
-    using CompositionEffectFactory = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEffectFactory>;
-    using CompositionEffectSourceParameter = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEffectSourceParameter>;
-    using CompositionEllipseGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEllipseGeometry>;
-    using CompositionGeometricClip = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionGeometricClip>;
-    using CompositionGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionGeometry>;
-    using CompositionGradientBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionGradientBrush>;
-    using CompositionGraphicsDevice = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionGraphicsDevice>;
-    using CompositionLight = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionLight>;
-    using CompositionLineGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionLineGeometry>;
-    using CompositionLinearGradientBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionLinearGradientBrush>;
-    using CompositionMaskBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionMaskBrush>;
-    using CompositionMipmapSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionMipmapSurface>;
-    using CompositionNineGridBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionNineGridBrush>;
-    using CompositionObject = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionObject>;
-    using CompositionPath = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionPath>;
-    using CompositionPathGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionPathGeometry>;
-    using CompositionProjectedShadow = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadow>;
-    using CompositionProjectedShadowCaster = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster>;
-    using CompositionProjectedShadowCasterCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection>;
-    using CompositionProjectedShadowReceiver = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver>;
-    using CompositionProjectedShadowReceiverUnorderedCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>;
-    using CompositionPropertySet = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionPropertySet>;
-    using CompositionRadialGradientBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionRadialGradientBrush>;
-    using CompositionRectangleGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionRectangleGeometry>;
-    using CompositionRoundedRectangleGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry>;
-    using CompositionScopedBatch = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionScopedBatch>;
-    using CompositionShadow = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionShadow>;
-    using CompositionShape = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionShape>;
-    using CompositionShapeCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionShapeCollection>;
-    using CompositionSpriteShape = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionSpriteShape>;
-    using CompositionStrokeDashArray = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionStrokeDashArray>;
-    using CompositionSurfaceBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionSurfaceBrush>;
-    using CompositionTarget = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTarget>;
-    using CompositionTexture = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTexture>;
-    using CompositionTransform = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTransform>;
-    using CompositionViewBox = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionViewBox>;
-    using CompositionVirtualDrawingSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>;
-    using CompositionVisualSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionVisualSurface>;
-    using Compositor = py::winrt_wrapper<winrt::Windows::UI::Composition::Compositor>;
-    using ContainerVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::ContainerVisual>;
-    using CubicBezierEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::CubicBezierEasingFunction>;
-    using DelegatedInkTrailVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::DelegatedInkTrailVisual>;
-    using DistantLight = py::winrt_wrapper<winrt::Windows::UI::Composition::DistantLight>;
-    using DropShadow = py::winrt_wrapper<winrt::Windows::UI::Composition::DropShadow>;
-    using ElasticEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::ElasticEasingFunction>;
-    using ExponentialEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::ExponentialEasingFunction>;
-    using ExpressionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::ExpressionAnimation>;
-    using ImplicitAnimationCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::ImplicitAnimationCollection>;
-    using InitialValueExpressionCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::InitialValueExpressionCollection>;
-    using InsetClip = py::winrt_wrapper<winrt::Windows::UI::Composition::InsetClip>;
-    using KeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::KeyFrameAnimation>;
-    using LayerVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::LayerVisual>;
-    using LinearEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::LinearEasingFunction>;
-    using NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::NaturalMotionAnimation>;
-    using PathKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::PathKeyFrameAnimation>;
-    using PointLight = py::winrt_wrapper<winrt::Windows::UI::Composition::PointLight>;
-    using PowerEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::PowerEasingFunction>;
-    using QuaternionKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation>;
-    using RectangleClip = py::winrt_wrapper<winrt::Windows::UI::Composition::RectangleClip>;
-    using RedirectVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::RedirectVisual>;
-    using RenderingDeviceReplacedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs>;
-    using ScalarKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::ScalarKeyFrameAnimation>;
-    using ScalarNaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>;
-    using ShapeVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::ShapeVisual>;
-    using SineEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::SineEasingFunction>;
-    using SpotLight = py::winrt_wrapper<winrt::Windows::UI::Composition::SpotLight>;
-    using SpringScalarNaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation>;
-    using SpringVector2NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation>;
-    using SpringVector3NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation>;
-    using SpriteVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::SpriteVisual>;
-    using StepEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::StepEasingFunction>;
-    using Vector2KeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector2KeyFrameAnimation>;
-    using Vector2NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>;
-    using Vector3KeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector3KeyFrameAnimation>;
-    using Vector3NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>;
-    using Vector4KeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector4KeyFrameAnimation>;
-    using Visual = py::winrt_wrapper<winrt::Windows::UI::Composition::Visual>;
-    using VisualCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::VisualCollection>;
-    using VisualUnorderedCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::VisualUnorderedCollection>;
-    using IAnimationObject = py::winrt_wrapper<winrt::Windows::UI::Composition::IAnimationObject>;
-    using ICompositionAnimationBase = py::winrt_wrapper<winrt::Windows::UI::Composition::ICompositionAnimationBase>;
-    using ICompositionSupportsSystemBackdrop = py::winrt_wrapper<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>;
-    using ICompositionSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::ICompositionSurface>;
-    using ICompositionSurfaceFacade = py::winrt_wrapper<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>;
-    using IVisualElement = py::winrt_wrapper<winrt::Windows::UI::Composition::IVisualElement>;
-    using IVisualElement2 = py::winrt_wrapper<winrt::Windows::UI::Composition::IVisualElement2>;
-    using InkTrailPoint = py::winrt_struct_wrapper<winrt::Windows::UI::Composition::InkTrailPoint>;
 }
 
 namespace py
@@ -1318,4 +1160,165 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "InkTrailPoint";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.h")
+#include "py.Windows.Graphics.DirectX.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Effects.h")
+#include "py.Windows.Graphics.Effects.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+namespace py::impl::Windows::UI::Composition
+{
+}
+
+namespace py::wrapper::Windows::UI::Composition
+{
+    using AmbientLight = py::winrt_wrapper<winrt::Windows::UI::Composition::AmbientLight>;
+    using AnimationController = py::winrt_wrapper<winrt::Windows::UI::Composition::AnimationController>;
+    using AnimationPropertyInfo = py::winrt_wrapper<winrt::Windows::UI::Composition::AnimationPropertyInfo>;
+    using BackEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::BackEasingFunction>;
+    using BooleanKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::BooleanKeyFrameAnimation>;
+    using BounceEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::BounceEasingFunction>;
+    using BounceScalarNaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation>;
+    using BounceVector2NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation>;
+    using BounceVector3NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation>;
+    using CircleEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::CircleEasingFunction>;
+    using ColorKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::ColorKeyFrameAnimation>;
+    using CompositionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionAnimation>;
+    using CompositionAnimationGroup = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionAnimationGroup>;
+    using CompositionBackdropBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionBackdropBrush>;
+    using CompositionBatchCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs>;
+    using CompositionBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionBrush>;
+    using CompositionCapabilities = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionCapabilities>;
+    using CompositionClip = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionClip>;
+    using CompositionColorBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionColorBrush>;
+    using CompositionColorGradientStop = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionColorGradientStop>;
+    using CompositionColorGradientStopCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionColorGradientStopCollection>;
+    using CompositionCommitBatch = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionCommitBatch>;
+    using CompositionContainerShape = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionContainerShape>;
+    using CompositionDrawingSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionDrawingSurface>;
+    using CompositionEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEasingFunction>;
+    using CompositionEffectBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEffectBrush>;
+    using CompositionEffectFactory = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEffectFactory>;
+    using CompositionEffectSourceParameter = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEffectSourceParameter>;
+    using CompositionEllipseGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionEllipseGeometry>;
+    using CompositionGeometricClip = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionGeometricClip>;
+    using CompositionGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionGeometry>;
+    using CompositionGradientBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionGradientBrush>;
+    using CompositionGraphicsDevice = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionGraphicsDevice>;
+    using CompositionLight = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionLight>;
+    using CompositionLineGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionLineGeometry>;
+    using CompositionLinearGradientBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionLinearGradientBrush>;
+    using CompositionMaskBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionMaskBrush>;
+    using CompositionMipmapSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionMipmapSurface>;
+    using CompositionNineGridBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionNineGridBrush>;
+    using CompositionObject = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionObject>;
+    using CompositionPath = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionPath>;
+    using CompositionPathGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionPathGeometry>;
+    using CompositionProjectedShadow = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadow>;
+    using CompositionProjectedShadowCaster = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster>;
+    using CompositionProjectedShadowCasterCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection>;
+    using CompositionProjectedShadowReceiver = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver>;
+    using CompositionProjectedShadowReceiverUnorderedCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>;
+    using CompositionPropertySet = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionPropertySet>;
+    using CompositionRadialGradientBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionRadialGradientBrush>;
+    using CompositionRectangleGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionRectangleGeometry>;
+    using CompositionRoundedRectangleGeometry = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry>;
+    using CompositionScopedBatch = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionScopedBatch>;
+    using CompositionShadow = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionShadow>;
+    using CompositionShape = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionShape>;
+    using CompositionShapeCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionShapeCollection>;
+    using CompositionSpriteShape = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionSpriteShape>;
+    using CompositionStrokeDashArray = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionStrokeDashArray>;
+    using CompositionSurfaceBrush = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionSurfaceBrush>;
+    using CompositionTarget = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTarget>;
+    using CompositionTexture = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTexture>;
+    using CompositionTransform = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionTransform>;
+    using CompositionViewBox = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionViewBox>;
+    using CompositionVirtualDrawingSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>;
+    using CompositionVisualSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::CompositionVisualSurface>;
+    using Compositor = py::winrt_wrapper<winrt::Windows::UI::Composition::Compositor>;
+    using ContainerVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::ContainerVisual>;
+    using CubicBezierEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::CubicBezierEasingFunction>;
+    using DelegatedInkTrailVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::DelegatedInkTrailVisual>;
+    using DistantLight = py::winrt_wrapper<winrt::Windows::UI::Composition::DistantLight>;
+    using DropShadow = py::winrt_wrapper<winrt::Windows::UI::Composition::DropShadow>;
+    using ElasticEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::ElasticEasingFunction>;
+    using ExponentialEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::ExponentialEasingFunction>;
+    using ExpressionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::ExpressionAnimation>;
+    using ImplicitAnimationCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::ImplicitAnimationCollection>;
+    using InitialValueExpressionCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::InitialValueExpressionCollection>;
+    using InsetClip = py::winrt_wrapper<winrt::Windows::UI::Composition::InsetClip>;
+    using KeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::KeyFrameAnimation>;
+    using LayerVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::LayerVisual>;
+    using LinearEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::LinearEasingFunction>;
+    using NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::NaturalMotionAnimation>;
+    using PathKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::PathKeyFrameAnimation>;
+    using PointLight = py::winrt_wrapper<winrt::Windows::UI::Composition::PointLight>;
+    using PowerEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::PowerEasingFunction>;
+    using QuaternionKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation>;
+    using RectangleClip = py::winrt_wrapper<winrt::Windows::UI::Composition::RectangleClip>;
+    using RedirectVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::RedirectVisual>;
+    using RenderingDeviceReplacedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs>;
+    using ScalarKeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::ScalarKeyFrameAnimation>;
+    using ScalarNaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>;
+    using ShapeVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::ShapeVisual>;
+    using SineEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::SineEasingFunction>;
+    using SpotLight = py::winrt_wrapper<winrt::Windows::UI::Composition::SpotLight>;
+    using SpringScalarNaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation>;
+    using SpringVector2NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation>;
+    using SpringVector3NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation>;
+    using SpriteVisual = py::winrt_wrapper<winrt::Windows::UI::Composition::SpriteVisual>;
+    using StepEasingFunction = py::winrt_wrapper<winrt::Windows::UI::Composition::StepEasingFunction>;
+    using Vector2KeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector2KeyFrameAnimation>;
+    using Vector2NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>;
+    using Vector3KeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector3KeyFrameAnimation>;
+    using Vector3NaturalMotionAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>;
+    using Vector4KeyFrameAnimation = py::winrt_wrapper<winrt::Windows::UI::Composition::Vector4KeyFrameAnimation>;
+    using Visual = py::winrt_wrapper<winrt::Windows::UI::Composition::Visual>;
+    using VisualCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::VisualCollection>;
+    using VisualUnorderedCollection = py::winrt_wrapper<winrt::Windows::UI::Composition::VisualUnorderedCollection>;
+    using IAnimationObject = py::winrt_wrapper<winrt::Windows::UI::Composition::IAnimationObject>;
+    using ICompositionAnimationBase = py::winrt_wrapper<winrt::Windows::UI::Composition::ICompositionAnimationBase>;
+    using ICompositionSupportsSystemBackdrop = py::winrt_wrapper<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>;
+    using ICompositionSurface = py::winrt_wrapper<winrt::Windows::UI::Composition::ICompositionSurface>;
+    using ICompositionSurfaceFacade = py::winrt_wrapper<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>;
+    using IVisualElement = py::winrt_wrapper<winrt::Windows::UI::Composition::IVisualElement>;
+    using IVisualElement2 = py::winrt_wrapper<winrt::Windows::UI::Composition::IVisualElement2>;
+    using InkTrailPoint = py::winrt_struct_wrapper<winrt::Windows::UI::Composition::InkTrailPoint>;
+}
+
+namespace py
+{
 }

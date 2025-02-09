@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,36 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Usb
 {
-}
-
-namespace py::impl::Windows::Devices::Usb
-{
-}
-
-namespace py::wrapper::Windows::Devices::Usb
-{
-    using UsbBulkInEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>;
-    using UsbBulkInPipe = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbBulkInPipe>;
-    using UsbBulkOutEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>;
-    using UsbBulkOutPipe = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbBulkOutPipe>;
-    using UsbConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbConfiguration>;
-    using UsbConfigurationDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor>;
-    using UsbControlRequestType = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbControlRequestType>;
-    using UsbDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDescriptor>;
-    using UsbDevice = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDevice>;
-    using UsbDeviceClass = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDeviceClass>;
-    using UsbDeviceClasses = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDeviceClasses>;
-    using UsbDeviceDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDeviceDescriptor>;
-    using UsbEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbEndpointDescriptor>;
-    using UsbInterface = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterface>;
-    using UsbInterfaceDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor>;
-    using UsbInterfaceSetting = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterfaceSetting>;
-    using UsbInterruptInEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>;
-    using UsbInterruptInEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>;
-    using UsbInterruptInPipe = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptInPipe>;
-    using UsbInterruptOutEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>;
-    using UsbInterruptOutPipe = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptOutPipe>;
-    using UsbSetupPacket = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbSetupPacket>;
 }
 
 namespace py
@@ -301,4 +258,50 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbSetupPacket";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::Usb
+{
+}
+
+namespace py::wrapper::Windows::Devices::Usb
+{
+    using UsbBulkInEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>;
+    using UsbBulkInPipe = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbBulkInPipe>;
+    using UsbBulkOutEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>;
+    using UsbBulkOutPipe = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbBulkOutPipe>;
+    using UsbConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbConfiguration>;
+    using UsbConfigurationDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor>;
+    using UsbControlRequestType = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbControlRequestType>;
+    using UsbDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDescriptor>;
+    using UsbDevice = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDevice>;
+    using UsbDeviceClass = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDeviceClass>;
+    using UsbDeviceClasses = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDeviceClasses>;
+    using UsbDeviceDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbDeviceDescriptor>;
+    using UsbEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbEndpointDescriptor>;
+    using UsbInterface = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterface>;
+    using UsbInterfaceDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor>;
+    using UsbInterfaceSetting = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterfaceSetting>;
+    using UsbInterruptInEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>;
+    using UsbInterruptInEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>;
+    using UsbInterruptInPipe = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptInPipe>;
+    using UsbInterruptOutEndpointDescriptor = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>;
+    using UsbInterruptOutPipe = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbInterruptOutPipe>;
+    using UsbSetupPacket = py::winrt_wrapper<winrt::Windows::Devices::Usb::UsbSetupPacket>;
+}
+
+namespace py
+{
 }

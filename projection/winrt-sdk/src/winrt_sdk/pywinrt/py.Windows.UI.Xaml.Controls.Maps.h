@@ -4,47 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Services.Maps.h")
-#include "py.Windows.Services.Maps.h"
-#endif
-
-#if __has_include("py.Windows.Services.Maps.LocalSearch.h")
-#include "py.Windows.Services.Maps.LocalSearch.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.h")
-#include "py.Windows.UI.Xaml.Controls.h"
-#endif
-
 #include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -60,69 +19,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Controls::Maps
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Controls::Maps
-{
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Controls::Maps
-{
-    using CustomMapTileDataSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>;
-    using HttpMapTileDataSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>;
-    using LocalMapTileDataSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>;
-    using MapActualCameraChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs>;
-    using MapActualCameraChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs>;
-    using MapBillboard = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard>;
-    using MapCamera = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapCamera>;
-    using MapContextRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs>;
-    using MapControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControl>;
-    using MapControlBusinessLandmarkClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs>;
-    using MapControlBusinessLandmarkPointerEnteredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs>;
-    using MapControlBusinessLandmarkPointerExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs>;
-    using MapControlBusinessLandmarkRightTappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs>;
-    using MapControlDataHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper>;
-    using MapControlTransitFeatureClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs>;
-    using MapControlTransitFeaturePointerEnteredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs>;
-    using MapControlTransitFeaturePointerExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs>;
-    using MapControlTransitFeatureRightTappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs>;
-    using MapCustomExperience = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>;
-    using MapCustomExperienceChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs>;
-    using MapElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>;
-    using MapElement3D = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D>;
-    using MapElementClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs>;
-    using MapElementPointerEnteredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs>;
-    using MapElementPointerExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs>;
-    using MapElementsLayer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer>;
-    using MapElementsLayerClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs>;
-    using MapElementsLayerContextRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs>;
-    using MapElementsLayerPointerEnteredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs>;
-    using MapElementsLayerPointerExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs>;
-    using MapIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapIcon>;
-    using MapInputEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>;
-    using MapItemsControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl>;
-    using MapLayer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>;
-    using MapModel3D = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>;
-    using MapPolygon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon>;
-    using MapPolyline = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline>;
-    using MapRightTappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs>;
-    using MapRouteView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>;
-    using MapScene = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>;
-    using MapStyleSheet = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>;
-    using MapStyleSheetEntries = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>;
-    using MapStyleSheetEntryStates = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>;
-    using MapTargetCameraChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs>;
-    using MapTileBitmapRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest>;
-    using MapTileBitmapRequestDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral>;
-    using MapTileBitmapRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs>;
-    using MapTileDataSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>;
-    using MapTileSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>;
-    using MapTileUriRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest>;
-    using MapTileUriRequestDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral>;
-    using MapTileUriRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>;
-    using StreetsideExperience = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience>;
-    using StreetsidePanorama = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>;
-    using MapZoomLevelRange = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>;
 }
 
 namespace py
@@ -724,4 +620,111 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapZoomLevelRange";
     };
+}
+
+#if __has_include("py.Windows.Devices.Geolocation.h")
+#include "py.Windows.Devices.Geolocation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Services.Maps.h")
+#include "py.Windows.Services.Maps.h"
+#endif
+
+#if __has_include("py.Windows.Services.Maps.LocalSearch.h")
+#include "py.Windows.Services.Maps.LocalSearch.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.h")
+#include "py.Windows.UI.Xaml.Controls.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Controls::Maps
+{
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Controls::Maps
+{
+    using CustomMapTileDataSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>;
+    using HttpMapTileDataSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>;
+    using LocalMapTileDataSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>;
+    using MapActualCameraChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs>;
+    using MapActualCameraChangingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs>;
+    using MapBillboard = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard>;
+    using MapCamera = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapCamera>;
+    using MapContextRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs>;
+    using MapControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControl>;
+    using MapControlBusinessLandmarkClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs>;
+    using MapControlBusinessLandmarkPointerEnteredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs>;
+    using MapControlBusinessLandmarkPointerExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs>;
+    using MapControlBusinessLandmarkRightTappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs>;
+    using MapControlDataHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper>;
+    using MapControlTransitFeatureClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs>;
+    using MapControlTransitFeaturePointerEnteredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs>;
+    using MapControlTransitFeaturePointerExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs>;
+    using MapControlTransitFeatureRightTappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs>;
+    using MapCustomExperience = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>;
+    using MapCustomExperienceChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs>;
+    using MapElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>;
+    using MapElement3D = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D>;
+    using MapElementClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs>;
+    using MapElementPointerEnteredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs>;
+    using MapElementPointerExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs>;
+    using MapElementsLayer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer>;
+    using MapElementsLayerClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs>;
+    using MapElementsLayerContextRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs>;
+    using MapElementsLayerPointerEnteredEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs>;
+    using MapElementsLayerPointerExitedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs>;
+    using MapIcon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapIcon>;
+    using MapInputEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>;
+    using MapItemsControl = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl>;
+    using MapLayer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>;
+    using MapModel3D = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>;
+    using MapPolygon = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon>;
+    using MapPolyline = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline>;
+    using MapRightTappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs>;
+    using MapRouteView = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>;
+    using MapScene = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>;
+    using MapStyleSheet = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>;
+    using MapStyleSheetEntries = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>;
+    using MapStyleSheetEntryStates = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>;
+    using MapTargetCameraChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs>;
+    using MapTileBitmapRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest>;
+    using MapTileBitmapRequestDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral>;
+    using MapTileBitmapRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs>;
+    using MapTileDataSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>;
+    using MapTileSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>;
+    using MapTileUriRequest = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest>;
+    using MapTileUriRequestDeferral = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral>;
+    using MapTileUriRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>;
+    using StreetsideExperience = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience>;
+    using StreetsidePanorama = py::winrt_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>;
+    using MapZoomLevelRange = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>;
+}
+
+namespace py
+{
 }

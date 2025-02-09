@@ -5,18 +5,9 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Microsoft.Windows.Widgets.h>
 
 namespace py::proj::Microsoft::Windows::Widgets
-{
-}
-
-namespace py::impl::Microsoft::Windows::Widgets
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::Widgets
 {
 }
 
@@ -33,4 +24,16 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets";
         static constexpr const char* type_name = "WidgetSize";
     };
+}
+
+namespace py::impl::Microsoft::Windows::Widgets
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::Widgets
+{
+}
+
+namespace py
+{
 }

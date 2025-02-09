@@ -5,11 +5,22 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Phone.System.Profile.h>
 
 namespace py::proj::Windows::Phone::System::Profile
 {
+}
+
+namespace py
+{
+
+    template<>
+    struct py_type<winrt::Windows::Phone::System::Profile::RetailMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.profile.RetailMode";
+        static constexpr const char* module_name = "winrt.windows.phone.system.profile";
+        static constexpr const char* type_name = "RetailMode";
+    };
 }
 
 namespace py::impl::Windows::Phone::System::Profile
@@ -23,12 +34,4 @@ namespace py::wrapper::Windows::Phone::System::Profile
 
 namespace py
 {
-
-    template<>
-    struct py_type<winrt::Windows::Phone::System::Profile::RetailMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.profile.RetailMode";
-        static constexpr const char* module_name = "winrt.windows.phone.system.profile";
-        static constexpr const char* type_name = "RetailMode";
-    };
 }

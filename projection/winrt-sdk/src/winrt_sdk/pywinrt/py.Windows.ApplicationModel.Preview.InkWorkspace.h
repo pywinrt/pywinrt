@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Graphics.Imaging.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Preview::InkWorkspace
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Preview::InkWorkspace
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Preview::InkWorkspace
-{
-    using InkWorkspaceHostedAppManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager>;
 }
 
 namespace py
@@ -41,4 +23,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.inkworkspace";
         static constexpr const char* type_name = "InkWorkspaceHostedAppManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Preview::InkWorkspace
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Preview::InkWorkspace
+{
+    using InkWorkspaceHostedAppManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager>;
+}
+
+namespace py
+{
 }

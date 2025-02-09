@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.h")
-#include "py.Microsoft.UI.Xaml.Media.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Background.h")
-#include "py.Windows.ApplicationModel.Background.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Microsoft.UI.Xaml.h>
 #include <winrt/Microsoft.UI.Xaml.Media.h>
 #include <winrt/Windows.ApplicationModel.Background.h>
@@ -40,69 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Xaml::Media::Imaging
 {
-}
-
-namespace py::impl::Microsoft::UI::Xaml::Media::Imaging
-{
-    struct DownloadProgressEventHandler
-    {
-        static winrt::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Microsoft::UI::Xaml::Media::Imaging
-{
-    using BitmapImage = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage>;
-    using BitmapSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapSource>;
-    using DownloadProgressEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>;
-    using RenderTargetBitmap = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::RenderTargetBitmap>;
-    using SoftwareBitmapSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SoftwareBitmapSource>;
-    using SurfaceImageSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource>;
-    using SvgImageSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>;
-    using SvgImageSourceFailedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>;
-    using SvgImageSourceOpenedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>;
-    using VirtualSurfaceImageSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource>;
-    using WriteableBitmap = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::WriteableBitmap>;
-    using XamlRenderingBackgroundTask = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>;
 }
 
 namespace py
@@ -236,6 +148,97 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.imaging";
         static constexpr const char* type_name = "XamlRenderingBackgroundTask";
     };
+}
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Media.h")
+#include "py.Microsoft.UI.Xaml.Media.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Background.h")
+#include "py.Windows.ApplicationModel.Background.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Xaml::Media::Imaging
+{
+    struct DownloadProgressEventHandler
+    {
+        static winrt::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Microsoft::UI::Xaml::Media::Imaging
+{
+    using BitmapImage = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapImage>;
+    using BitmapSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapSource>;
+    using DownloadProgressEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>;
+    using RenderTargetBitmap = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::RenderTargetBitmap>;
+    using SoftwareBitmapSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SoftwareBitmapSource>;
+    using SurfaceImageSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource>;
+    using SvgImageSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>;
+    using SvgImageSourceFailedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>;
+    using SvgImageSourceOpenedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>;
+    using VirtualSurfaceImageSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource>;
+    using WriteableBitmap = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::WriteableBitmap>;
+    using XamlRenderingBackgroundTask = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Microsoft::UI::Xaml::Media::Imaging::DownloadProgressEventHandler>
     {

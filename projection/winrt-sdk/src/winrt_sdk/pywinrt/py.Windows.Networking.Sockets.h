@@ -4,43 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Background.h")
-#include "py.Windows.ApplicationModel.Background.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Connectivity.h")
-#include "py.Windows.Networking.Connectivity.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
-#include "py.Windows.Security.Cryptography.Certificates.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.Web.h")
-#include "py.Windows.Web.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Background.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -55,55 +18,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Networking::Sockets
 {
-}
-
-namespace py::impl::Windows::Networking::Sockets
-{
-}
-
-namespace py::wrapper::Windows::Networking::Sockets
-{
-    using ControlChannelTrigger = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ControlChannelTrigger>;
-    using DatagramSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::DatagramSocket>;
-    using DatagramSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::DatagramSocketControl>;
-    using DatagramSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::DatagramSocketInformation>;
-    using DatagramSocketMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>;
-    using MessageWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::MessageWebSocket>;
-    using MessageWebSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::MessageWebSocketControl>;
-    using MessageWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::MessageWebSocketInformation>;
-    using MessageWebSocketMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>;
-    using ServerMessageWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerMessageWebSocket>;
-    using ServerMessageWebSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl>;
-    using ServerMessageWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation>;
-    using ServerStreamWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerStreamWebSocket>;
-    using ServerStreamWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation>;
-    using SocketActivityContext = py::winrt_wrapper<winrt::Windows::Networking::Sockets::SocketActivityContext>;
-    using SocketActivityInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::SocketActivityInformation>;
-    using SocketActivityTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails>;
-    using SocketError = py::winrt_wrapper<winrt::Windows::Networking::Sockets::SocketError>;
-    using StreamSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocket>;
-    using StreamSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketControl>;
-    using StreamSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketInformation>;
-    using StreamSocketListener = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketListener>;
-    using StreamSocketListenerConnectionReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>;
-    using StreamSocketListenerControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketListenerControl>;
-    using StreamSocketListenerInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketListenerInformation>;
-    using StreamWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamWebSocket>;
-    using StreamWebSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamWebSocketControl>;
-    using StreamWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamWebSocketInformation>;
-    using WebSocketClosedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>;
-    using WebSocketError = py::winrt_wrapper<winrt::Windows::Networking::Sockets::WebSocketError>;
-    using WebSocketKeepAlive = py::winrt_wrapper<winrt::Windows::Networking::Sockets::WebSocketKeepAlive>;
-    using WebSocketServerCustomValidationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>;
-    using IControlChannelTriggerEventDetails = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>;
-    using IControlChannelTriggerResetEventDetails = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>;
-    using IWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocket>;
-    using IWebSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocketControl>;
-    using IWebSocketControl2 = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocketControl2>;
-    using IWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocketInformation>;
-    using IWebSocketInformation2 = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocketInformation2>;
-    using BandwidthStatistics = py::winrt_struct_wrapper<winrt::Windows::Networking::Sockets::BandwidthStatistics>;
-    using RoundTripTimeStatistics = py::winrt_struct_wrapper<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>;
 }
 
 namespace py
@@ -574,4 +488,93 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "RoundTripTimeStatistics";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Background.h")
+#include "py.Windows.ApplicationModel.Background.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Networking.Connectivity.h")
+#include "py.Windows.Networking.Connectivity.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
+#include "py.Windows.Security.Cryptography.Certificates.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.Web.h")
+#include "py.Windows.Web.h"
+#endif
+
+namespace py::impl::Windows::Networking::Sockets
+{
+}
+
+namespace py::wrapper::Windows::Networking::Sockets
+{
+    using ControlChannelTrigger = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ControlChannelTrigger>;
+    using DatagramSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::DatagramSocket>;
+    using DatagramSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::DatagramSocketControl>;
+    using DatagramSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::DatagramSocketInformation>;
+    using DatagramSocketMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>;
+    using MessageWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::MessageWebSocket>;
+    using MessageWebSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::MessageWebSocketControl>;
+    using MessageWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::MessageWebSocketInformation>;
+    using MessageWebSocketMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>;
+    using ServerMessageWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerMessageWebSocket>;
+    using ServerMessageWebSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl>;
+    using ServerMessageWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation>;
+    using ServerStreamWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerStreamWebSocket>;
+    using ServerStreamWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation>;
+    using SocketActivityContext = py::winrt_wrapper<winrt::Windows::Networking::Sockets::SocketActivityContext>;
+    using SocketActivityInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::SocketActivityInformation>;
+    using SocketActivityTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails>;
+    using SocketError = py::winrt_wrapper<winrt::Windows::Networking::Sockets::SocketError>;
+    using StreamSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocket>;
+    using StreamSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketControl>;
+    using StreamSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketInformation>;
+    using StreamSocketListener = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketListener>;
+    using StreamSocketListenerConnectionReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>;
+    using StreamSocketListenerControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketListenerControl>;
+    using StreamSocketListenerInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamSocketListenerInformation>;
+    using StreamWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamWebSocket>;
+    using StreamWebSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamWebSocketControl>;
+    using StreamWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::StreamWebSocketInformation>;
+    using WebSocketClosedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>;
+    using WebSocketError = py::winrt_wrapper<winrt::Windows::Networking::Sockets::WebSocketError>;
+    using WebSocketKeepAlive = py::winrt_wrapper<winrt::Windows::Networking::Sockets::WebSocketKeepAlive>;
+    using WebSocketServerCustomValidationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>;
+    using IControlChannelTriggerEventDetails = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>;
+    using IControlChannelTriggerResetEventDetails = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>;
+    using IWebSocket = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocket>;
+    using IWebSocketControl = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocketControl>;
+    using IWebSocketControl2 = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocketControl2>;
+    using IWebSocketInformation = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocketInformation>;
+    using IWebSocketInformation2 = py::winrt_wrapper<winrt::Windows::Networking::Sockets::IWebSocketInformation2>;
+    using BandwidthStatistics = py::winrt_struct_wrapper<winrt::Windows::Networking::Sockets::BandwidthStatistics>;
+    using RoundTripTimeStatistics = py::winrt_struct_wrapper<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>;
+}
+
+namespace py
+{
 }

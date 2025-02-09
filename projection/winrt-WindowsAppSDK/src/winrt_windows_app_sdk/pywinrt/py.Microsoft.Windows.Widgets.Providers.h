@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.Windows.Widgets.h")
-#include "py.Microsoft.Windows.Widgets.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Microsoft.Windows.Widgets.h>
 #include <winrt/Windows.Foundation.h>
 
@@ -20,28 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::Windows::Widgets::Providers
 {
-}
-
-namespace py::impl::Microsoft::Windows::Widgets::Providers
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::Widgets::Providers
-{
-    using WidgetActionInvokedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs>;
-    using WidgetAnalyticsInfoReportedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetAnalyticsInfoReportedArgs>;
-    using WidgetContext = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetContext>;
-    using WidgetContextChangedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetContextChangedArgs>;
-    using WidgetCustomizationRequestedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetCustomizationRequestedArgs>;
-    using WidgetErrorInfoReportedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs>;
-    using WidgetInfo = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetInfo>;
-    using WidgetManager = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetManager>;
-    using WidgetUpdateRequestOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions>;
-    using IWidgetManager = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>;
-    using IWidgetProvider = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>;
-    using IWidgetProvider2 = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>;
-    using IWidgetProviderAnalytics = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>;
-    using IWidgetProviderErrors = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>;
 }
 
 namespace py
@@ -158,4 +127,38 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.providers";
         static constexpr const char* type_name = "_IWidgetProviderErrors";
     };
+}
+
+#if __has_include("py.Microsoft.Windows.Widgets.h")
+#include "py.Microsoft.Windows.Widgets.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::Widgets::Providers
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::Widgets::Providers
+{
+    using WidgetActionInvokedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetActionInvokedArgs>;
+    using WidgetAnalyticsInfoReportedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetAnalyticsInfoReportedArgs>;
+    using WidgetContext = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetContext>;
+    using WidgetContextChangedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetContextChangedArgs>;
+    using WidgetCustomizationRequestedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetCustomizationRequestedArgs>;
+    using WidgetErrorInfoReportedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs>;
+    using WidgetInfo = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetInfo>;
+    using WidgetManager = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetManager>;
+    using WidgetUpdateRequestOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions>;
+    using IWidgetManager = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>;
+    using IWidgetProvider = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>;
+    using IWidgetProvider2 = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>;
+    using IWidgetProviderAnalytics = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>;
+    using IWidgetProviderErrors = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>;
+}
+
+namespace py
+{
 }

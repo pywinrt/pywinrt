@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Web.Http.h>
 
@@ -20,18 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::System::Implementation::FileExplorer
 {
-}
-
-namespace py::impl::Windows::System::Implementation::FileExplorer
-{
-}
-
-namespace py::wrapper::Windows::System::Implementation::FileExplorer
-{
-    using SysStorageProviderEventReceivedEventArgs = py::winrt_wrapper<winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs>;
-    using ISysStorageProviderEventSource = py::winrt_wrapper<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>;
-    using ISysStorageProviderHandlerFactory = py::winrt_wrapper<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>;
-    using ISysStorageProviderHttpRequestProvider = py::winrt_wrapper<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>;
 }
 
 namespace py
@@ -68,4 +47,28 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.implementation.fileexplorer";
         static constexpr const char* type_name = "_ISysStorageProviderHttpRequestProvider";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+namespace py::impl::Windows::System::Implementation::FileExplorer
+{
+}
+
+namespace py::wrapper::Windows::System::Implementation::FileExplorer
+{
+    using SysStorageProviderEventReceivedEventArgs = py::winrt_wrapper<winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs>;
+    using ISysStorageProviderEventSource = py::winrt_wrapper<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>;
+    using ISysStorageProviderHandlerFactory = py::winrt_wrapper<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>;
+    using ISysStorageProviderHttpRequestProvider = py::winrt_wrapper<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>;
+}
+
+namespace py
+{
 }

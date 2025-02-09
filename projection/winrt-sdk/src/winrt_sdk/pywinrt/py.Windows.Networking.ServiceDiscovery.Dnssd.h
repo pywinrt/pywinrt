@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Connectivity.h")
-#include "py.Windows.Networking.Connectivity.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Networking.h>
@@ -35,18 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Networking::ServiceDiscovery::Dnssd
 {
-}
-
-namespace py::impl::Windows::Networking::ServiceDiscovery::Dnssd
-{
-}
-
-namespace py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd
-{
-    using DnssdRegistrationResult = py::winrt_wrapper<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult>;
-    using DnssdServiceInstance = py::winrt_wrapper<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>;
-    using DnssdServiceInstanceCollection = py::winrt_wrapper<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>;
-    using DnssdServiceWatcher = py::winrt_wrapper<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>;
 }
 
 namespace py
@@ -105,4 +72,40 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
         static constexpr const char* type_name = "DnssdServiceWatcher";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Networking.Connectivity.h")
+#include "py.Windows.Networking.Connectivity.h"
+#endif
+
+#if __has_include("py.Windows.Networking.Sockets.h")
+#include "py.Windows.Networking.Sockets.h"
+#endif
+
+namespace py::impl::Windows::Networking::ServiceDiscovery::Dnssd
+{
+}
+
+namespace py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd
+{
+    using DnssdRegistrationResult = py::winrt_wrapper<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult>;
+    using DnssdServiceInstance = py::winrt_wrapper<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>;
+    using DnssdServiceInstanceCollection = py::winrt_wrapper<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>;
+    using DnssdServiceWatcher = py::winrt_wrapper<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>;
+}
+
+namespace py
+{
 }

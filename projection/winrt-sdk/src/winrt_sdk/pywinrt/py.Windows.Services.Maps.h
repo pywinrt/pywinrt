@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
 #include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,30 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Services::Maps
 {
-}
-
-namespace py::impl::Windows::Services::Maps
-{
-}
-
-namespace py::wrapper::Windows::Services::Maps
-{
-    using EnhancedWaypoint = py::winrt_wrapper<winrt::Windows::Services::Maps::EnhancedWaypoint>;
-    using ManeuverWarning = py::winrt_wrapper<winrt::Windows::Services::Maps::ManeuverWarning>;
-    using MapAddress = py::winrt_wrapper<winrt::Windows::Services::Maps::MapAddress>;
-    using MapLocation = py::winrt_wrapper<winrt::Windows::Services::Maps::MapLocation>;
-    using MapLocationFinder = py::winrt_wrapper<winrt::Windows::Services::Maps::MapLocationFinder>;
-    using MapLocationFinderResult = py::winrt_wrapper<winrt::Windows::Services::Maps::MapLocationFinderResult>;
-    using MapManager = py::winrt_wrapper<winrt::Windows::Services::Maps::MapManager>;
-    using MapRoute = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRoute>;
-    using MapRouteDrivingOptions = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteDrivingOptions>;
-    using MapRouteFinder = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteFinder>;
-    using MapRouteFinderResult = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteFinderResult>;
-    using MapRouteLeg = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteLeg>;
-    using MapRouteManeuver = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteManeuver>;
-    using MapService = py::winrt_wrapper<winrt::Windows::Services::Maps::MapService>;
-    using PlaceInfo = py::winrt_wrapper<winrt::Windows::Services::Maps::PlaceInfo>;
-    using PlaceInfoCreateOptions = py::winrt_wrapper<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>;
 }
 
 namespace py
@@ -318,4 +277,48 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "PlaceInfoCreateOptions";
     };
+}
+
+#if __has_include("py.Windows.Devices.Geolocation.h")
+#include "py.Windows.Devices.Geolocation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+namespace py::impl::Windows::Services::Maps
+{
+}
+
+namespace py::wrapper::Windows::Services::Maps
+{
+    using EnhancedWaypoint = py::winrt_wrapper<winrt::Windows::Services::Maps::EnhancedWaypoint>;
+    using ManeuverWarning = py::winrt_wrapper<winrt::Windows::Services::Maps::ManeuverWarning>;
+    using MapAddress = py::winrt_wrapper<winrt::Windows::Services::Maps::MapAddress>;
+    using MapLocation = py::winrt_wrapper<winrt::Windows::Services::Maps::MapLocation>;
+    using MapLocationFinder = py::winrt_wrapper<winrt::Windows::Services::Maps::MapLocationFinder>;
+    using MapLocationFinderResult = py::winrt_wrapper<winrt::Windows::Services::Maps::MapLocationFinderResult>;
+    using MapManager = py::winrt_wrapper<winrt::Windows::Services::Maps::MapManager>;
+    using MapRoute = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRoute>;
+    using MapRouteDrivingOptions = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteDrivingOptions>;
+    using MapRouteFinder = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteFinder>;
+    using MapRouteFinderResult = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteFinderResult>;
+    using MapRouteLeg = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteLeg>;
+    using MapRouteManeuver = py::winrt_wrapper<winrt::Windows::Services::Maps::MapRouteManeuver>;
+    using MapService = py::winrt_wrapper<winrt::Windows::Services::Maps::MapService>;
+    using PlaceInfo = py::winrt_wrapper<winrt::Windows::Services::Maps::PlaceInfo>;
+    using PlaceInfoCreateOptions = py::winrt_wrapper<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>;
+}
+
+namespace py
+{
 }

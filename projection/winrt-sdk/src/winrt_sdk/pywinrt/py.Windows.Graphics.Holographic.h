@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
-#endif
-
-#if __has_include("py.Windows.Perception.h")
-#include "py.Windows.Perception.h"
-#endif
-
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
@@ -50,35 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Graphics::Holographic
 {
-}
-
-namespace py::impl::Windows::Graphics::Holographic
-{
-}
-
-namespace py::wrapper::Windows::Graphics::Holographic
-{
-    using HolographicCamera = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicCamera>;
-    using HolographicCameraPose = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicCameraPose>;
-    using HolographicCameraRenderingParameters = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>;
-    using HolographicCameraViewportParameters = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>;
-    using HolographicDisplay = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicDisplay>;
-    using HolographicFrame = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrame>;
-    using HolographicFramePrediction = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>;
-    using HolographicFramePresentationMonitor = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>;
-    using HolographicFramePresentationReport = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>;
-    using HolographicFrameRenderingReport = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>;
-    using HolographicFrameScanoutMonitor = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>;
-    using HolographicFrameScanoutReport = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>;
-    using HolographicQuadLayer = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicQuadLayer>;
-    using HolographicQuadLayerUpdateParameters = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>;
-    using HolographicSpace = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicSpace>;
-    using HolographicSpaceCameraAddedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>;
-    using HolographicSpaceCameraRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>;
-    using HolographicViewConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>;
-    using HolographicAdapterId = py::winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicAdapterId>;
-    using HolographicFrameId = py::winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameId>;
-    using HolographicStereoTransform = py::winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>;
 }
 
 namespace py
@@ -326,4 +264,69 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicStereoTransform";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.h")
+#include "py.Windows.Graphics.DirectX.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#endif
+
+#if __has_include("py.Windows.Perception.h")
+#include "py.Windows.Perception.h"
+#endif
+
+#if __has_include("py.Windows.Perception.Spatial.h")
+#include "py.Windows.Perception.Spatial.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+namespace py::impl::Windows::Graphics::Holographic
+{
+}
+
+namespace py::wrapper::Windows::Graphics::Holographic
+{
+    using HolographicCamera = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicCamera>;
+    using HolographicCameraPose = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicCameraPose>;
+    using HolographicCameraRenderingParameters = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>;
+    using HolographicCameraViewportParameters = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>;
+    using HolographicDisplay = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicDisplay>;
+    using HolographicFrame = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrame>;
+    using HolographicFramePrediction = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>;
+    using HolographicFramePresentationMonitor = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>;
+    using HolographicFramePresentationReport = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>;
+    using HolographicFrameRenderingReport = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>;
+    using HolographicFrameScanoutMonitor = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>;
+    using HolographicFrameScanoutReport = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>;
+    using HolographicQuadLayer = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicQuadLayer>;
+    using HolographicQuadLayerUpdateParameters = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>;
+    using HolographicSpace = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicSpace>;
+    using HolographicSpaceCameraAddedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>;
+    using HolographicSpaceCameraRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>;
+    using HolographicViewConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>;
+    using HolographicAdapterId = py::winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicAdapterId>;
+    using HolographicFrameId = py::winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameId>;
+    using HolographicStereoTransform = py::winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>;
+}
+
+namespace py
+{
 }

@@ -4,31 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 
 #include <winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h>
 
 namespace py::proj::Microsoft::Windows::ApplicationModel::DynamicDependency
 {
-}
-
-namespace py::impl::Microsoft::Windows::ApplicationModel::DynamicDependency
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency
-{
-    using AddPackageDependencyOptions = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions>;
-    using CreatePackageDependencyOptions = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>;
-    using PackageDependency = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency>;
-    using PackageDependencyContext = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext>;
-    using PackageDependencyRank = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyRank>;
-    using PackageDependencyContextId = py::winrt_struct_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>;
 }
 
 namespace py
@@ -106,4 +87,26 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "PackageDependencyContextId";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::ApplicationModel::DynamicDependency
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency
+{
+    using AddPackageDependencyOptions = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions>;
+    using CreatePackageDependencyOptions = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>;
+    using PackageDependency = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency>;
+    using PackageDependencyContext = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext>;
+    using PackageDependencyRank = py::winrt_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyRank>;
+    using PackageDependencyContextId = py::winrt_struct_wrapper<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>;
+}
+
+namespace py
+{
 }

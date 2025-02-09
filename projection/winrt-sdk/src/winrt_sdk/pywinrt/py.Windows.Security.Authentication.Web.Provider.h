@@ -4,43 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Authentication.Web.h")
-#include "py.Windows.Security.Authentication.Web.h"
-#endif
-
-#if __has_include("py.Windows.Security.Authentication.Web.Core.h")
-#include "py.Windows.Security.Authentication.Web.Core.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Core.h")
-#include "py.Windows.Security.Cryptography.Core.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Security.Authentication.Web.h>
@@ -55,33 +18,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Authentication::Web::Provider
 {
-}
-
-namespace py::impl::Windows::Security::Authentication::Web::Provider
-{
-}
-
-namespace py::wrapper::Windows::Security::Authentication::Web::Provider
-{
-    using WebAccountClientView = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView>;
-    using WebAccountManager = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager>;
-    using WebAccountProviderAddAccountOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation>;
-    using WebAccountProviderDeleteAccountOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation>;
-    using WebAccountProviderGetTokenSilentOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation>;
-    using WebAccountProviderManageAccountOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation>;
-    using WebAccountProviderRequestTokenOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation>;
-    using WebAccountProviderRetrieveCookiesOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation>;
-    using WebAccountProviderSignOutAccountOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation>;
-    using WebAccountProviderTriggerDetails = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails>;
-    using WebProviderTokenRequest = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest>;
-    using WebProviderTokenResponse = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse>;
-    using IWebAccountProviderBaseReportOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>;
-    using IWebAccountProviderOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>;
-    using IWebAccountProviderSilentReportOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>;
-    using IWebAccountProviderTokenObjects = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>;
-    using IWebAccountProviderTokenObjects2 = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>;
-    using IWebAccountProviderTokenOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>;
-    using IWebAccountProviderUIReportOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>;
 }
 
 namespace py
@@ -282,4 +218,71 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.provider";
         static constexpr const char* type_name = "_IWebAccountProviderUIReportOperation";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Authentication.Web.h")
+#include "py.Windows.Security.Authentication.Web.h"
+#endif
+
+#if __has_include("py.Windows.Security.Authentication.Web.Core.h")
+#include "py.Windows.Security.Authentication.Web.Core.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.Security.Cryptography.Core.h")
+#include "py.Windows.Security.Cryptography.Core.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+namespace py::impl::Windows::Security::Authentication::Web::Provider
+{
+}
+
+namespace py::wrapper::Windows::Security::Authentication::Web::Provider
+{
+    using WebAccountClientView = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView>;
+    using WebAccountManager = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager>;
+    using WebAccountProviderAddAccountOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation>;
+    using WebAccountProviderDeleteAccountOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation>;
+    using WebAccountProviderGetTokenSilentOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation>;
+    using WebAccountProviderManageAccountOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation>;
+    using WebAccountProviderRequestTokenOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation>;
+    using WebAccountProviderRetrieveCookiesOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation>;
+    using WebAccountProviderSignOutAccountOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation>;
+    using WebAccountProviderTriggerDetails = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails>;
+    using WebProviderTokenRequest = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest>;
+    using WebProviderTokenResponse = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse>;
+    using IWebAccountProviderBaseReportOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>;
+    using IWebAccountProviderOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>;
+    using IWebAccountProviderSilentReportOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>;
+    using IWebAccountProviderTokenObjects = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>;
+    using IWebAccountProviderTokenObjects2 = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>;
+    using IWebAccountProviderTokenOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>;
+    using IWebAccountProviderUIReportOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>;
+}
+
+namespace py
+{
 }

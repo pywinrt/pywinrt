@@ -5,22 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.System.Diagnostics.Telemetry.h>
 
 namespace py::proj::Windows::System::Diagnostics::Telemetry
 {
-}
-
-namespace py::impl::Windows::System::Diagnostics::Telemetry
-{
-}
-
-namespace py::wrapper::Windows::System::Diagnostics::Telemetry
-{
-    using PlatformTelemetryClient = py::winrt_wrapper<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>;
-    using PlatformTelemetryRegistrationResult = py::winrt_wrapper<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>;
-    using PlatformTelemetryRegistrationSettings = py::winrt_wrapper<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings>;
 }
 
 namespace py
@@ -60,4 +48,19 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
         static constexpr const char* type_name = "PlatformTelemetryRegistrationSettings";
     };
+}
+
+namespace py::impl::Windows::System::Diagnostics::Telemetry
+{
+}
+
+namespace py::wrapper::Windows::System::Diagnostics::Telemetry
+{
+    using PlatformTelemetryClient = py::winrt_wrapper<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>;
+    using PlatformTelemetryRegistrationResult = py::winrt_wrapper<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>;
+    using PlatformTelemetryRegistrationSettings = py::winrt_wrapper<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings>;
+}
+
+namespace py
+{
 }

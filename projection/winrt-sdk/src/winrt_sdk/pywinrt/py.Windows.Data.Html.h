@@ -5,11 +5,22 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Data.Html.h>
 
 namespace py::proj::Windows::Data::Html
 {
+}
+
+namespace py
+{
+
+    template<>
+    struct py_type<winrt::Windows::Data::Html::HtmlUtilities>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.html.HtmlUtilities";
+        static constexpr const char* module_name = "winrt.windows.data.html";
+        static constexpr const char* type_name = "HtmlUtilities";
+    };
 }
 
 namespace py::impl::Windows::Data::Html
@@ -23,12 +34,4 @@ namespace py::wrapper::Windows::Data::Html
 
 namespace py
 {
-
-    template<>
-    struct py_type<winrt::Windows::Data::Html::HtmlUtilities>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.data.html.HtmlUtilities";
-        static constexpr const char* module_name = "winrt.windows.data.html";
-        static constexpr const char* type_name = "HtmlUtilities";
-    };
 }

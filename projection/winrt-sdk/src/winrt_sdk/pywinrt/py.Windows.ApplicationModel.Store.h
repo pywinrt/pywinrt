@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -25,48 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Store
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Store
-{
-    struct LicenseChangedEventHandler
-    {
-        static winrt::Windows::ApplicationModel::Store::LicenseChangedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)]()
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Store
-{
-    using CurrentApp = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::CurrentApp>;
-    using CurrentAppSimulator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::CurrentAppSimulator>;
-    using LicenseInformation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::LicenseInformation>;
-    using ListingInformation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::ListingInformation>;
-    using ProductLicense = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::ProductLicense>;
-    using ProductListing = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::ProductListing>;
-    using ProductPurchaseDisplayProperties = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties>;
-    using PurchaseResults = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::PurchaseResults>;
-    using UnfulfilledConsumable = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::UnfulfilledConsumable>;
 }
 
 namespace py
@@ -176,6 +121,64 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "UnfulfilledConsumable";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Store
+{
+    struct LicenseChangedEventHandler
+    {
+        static winrt::Windows::ApplicationModel::Store::LicenseChangedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)]()
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Store
+{
+    using CurrentApp = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::CurrentApp>;
+    using CurrentAppSimulator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::CurrentAppSimulator>;
+    using LicenseInformation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::LicenseInformation>;
+    using ListingInformation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::ListingInformation>;
+    using ProductLicense = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::ProductLicense>;
+    using ProductListing = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::ProductListing>;
+    using ProductPurchaseDisplayProperties = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties>;
+    using PurchaseResults = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::PurchaseResults>;
+    using UnfulfilledConsumable = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::UnfulfilledConsumable>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::ApplicationModel::Store::LicenseChangedEventHandler>
     {

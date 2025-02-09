@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,32 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Geolocation
 {
-}
-
-namespace py::impl::Windows::Devices::Geolocation
-{
-}
-
-namespace py::wrapper::Windows::Devices::Geolocation
-{
-    using CivicAddress = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::CivicAddress>;
-    using GeoboundingBox = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeoboundingBox>;
-    using Geocircle = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geocircle>;
-    using Geocoordinate = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geocoordinate>;
-    using GeocoordinateSatelliteData = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeocoordinateSatelliteData>;
-    using Geolocator = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geolocator>;
-    using Geopath = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geopath>;
-    using Geopoint = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geopoint>;
-    using Geoposition = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geoposition>;
-    using Geovisit = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geovisit>;
-    using GeovisitMonitor = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeovisitMonitor>;
-    using GeovisitStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs>;
-    using GeovisitTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeovisitTriggerDetails>;
-    using PositionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::PositionChangedEventArgs>;
-    using StatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::StatusChangedEventArgs>;
-    using VenueData = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::VenueData>;
-    using IGeoshape = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::IGeoshape>;
-    using BasicGeoposition = py::winrt_struct_wrapper<winrt::Windows::Devices::Geolocation::BasicGeoposition>;
 }
 
 namespace py
@@ -285,4 +250,42 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "BasicGeoposition";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Geolocation
+{
+}
+
+namespace py::wrapper::Windows::Devices::Geolocation
+{
+    using CivicAddress = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::CivicAddress>;
+    using GeoboundingBox = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeoboundingBox>;
+    using Geocircle = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geocircle>;
+    using Geocoordinate = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geocoordinate>;
+    using GeocoordinateSatelliteData = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeocoordinateSatelliteData>;
+    using Geolocator = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geolocator>;
+    using Geopath = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geopath>;
+    using Geopoint = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geopoint>;
+    using Geoposition = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geoposition>;
+    using Geovisit = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::Geovisit>;
+    using GeovisitMonitor = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeovisitMonitor>;
+    using GeovisitStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs>;
+    using GeovisitTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::GeovisitTriggerDetails>;
+    using PositionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::PositionChangedEventArgs>;
+    using StatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::StatusChangedEventArgs>;
+    using VenueData = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::VenueData>;
+    using IGeoshape = py::winrt_wrapper<winrt::Windows::Devices::Geolocation::IGeoshape>;
+    using BasicGeoposition = py::winrt_struct_wrapper<winrt::Windows::Devices::Geolocation::BasicGeoposition>;
+}
+
+namespace py
+{
 }

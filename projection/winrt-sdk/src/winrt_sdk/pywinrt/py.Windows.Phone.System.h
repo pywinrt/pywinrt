@@ -5,11 +5,22 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Phone.System.h>
 
 namespace py::proj::Windows::Phone::System
 {
+}
+
+namespace py
+{
+
+    template<>
+    struct py_type<winrt::Windows::Phone::System::SystemProtection>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.SystemProtection";
+        static constexpr const char* module_name = "winrt.windows.phone.system";
+        static constexpr const char* type_name = "SystemProtection";
+    };
 }
 
 namespace py::impl::Windows::Phone::System
@@ -23,12 +34,4 @@ namespace py::wrapper::Windows::Phone::System
 
 namespace py
 {
-
-    template<>
-    struct py_type<winrt::Windows::Phone::System::SystemProtection>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.SystemProtection";
-        static constexpr const char* module_name = "winrt.windows.phone.system";
-        static constexpr const char* type_name = "SystemProtection";
-    };
 }

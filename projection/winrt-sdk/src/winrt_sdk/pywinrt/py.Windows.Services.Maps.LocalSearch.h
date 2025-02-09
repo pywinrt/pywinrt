@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
-#endif
-
-#if __has_include("py.Windows.Services.Maps.h")
-#include "py.Windows.Services.Maps.h"
-#endif
-
 #include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -35,21 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Services::Maps::LocalSearch
 {
-}
-
-namespace py::impl::Windows::Services::Maps::LocalSearch
-{
-}
-
-namespace py::wrapper::Windows::Services::Maps::LocalSearch
-{
-    using LocalCategories = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>;
-    using LocalLocation = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>;
-    using LocalLocationFinder = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>;
-    using LocalLocationFinderResult = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>;
-    using LocalLocationHoursOfOperationItem = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>;
-    using LocalLocationRatingInfo = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>;
-    using PlaceInfoHelper = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>;
 }
 
 namespace py
@@ -121,4 +85,43 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "PlaceInfoHelper";
     };
+}
+
+#if __has_include("py.Windows.Devices.Geolocation.h")
+#include "py.Windows.Devices.Geolocation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Globalization.h")
+#include "py.Windows.Globalization.h"
+#endif
+
+#if __has_include("py.Windows.Services.Maps.h")
+#include "py.Windows.Services.Maps.h"
+#endif
+
+namespace py::impl::Windows::Services::Maps::LocalSearch
+{
+}
+
+namespace py::wrapper::Windows::Services::Maps::LocalSearch
+{
+    using LocalCategories = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>;
+    using LocalLocation = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>;
+    using LocalLocationFinder = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>;
+    using LocalLocationFinderResult = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>;
+    using LocalLocationHoursOfOperationItem = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>;
+    using LocalLocationRatingInfo = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>;
+    using PlaceInfoHelper = py::winrt_wrapper<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>;
+}
+
+namespace py
+{
 }

@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
-#if __has_include("py.Windows.UI.Input.h")
-#include "py.Windows.UI.Input.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
@@ -45,42 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Input::Inking
 {
-}
-
-namespace py::impl::Windows::UI::Input::Inking
-{
-}
-
-namespace py::wrapper::Windows::UI::Input::Inking
-{
-    using InkDrawingAttributes = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>;
-    using InkDrawingAttributesPencilProperties = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties>;
-    using InkInputConfiguration = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkInputConfiguration>;
-    using InkInputProcessingConfiguration = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkInputProcessingConfiguration>;
-    using InkManager = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkManager>;
-    using InkModelerAttributes = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkModelerAttributes>;
-    using InkPoint = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkPoint>;
-    using InkPresenter = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkPresenter>;
-    using InkPresenterProtractor = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkPresenterProtractor>;
-    using InkPresenterRuler = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkPresenterRuler>;
-    using InkRecognitionResult = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkRecognitionResult>;
-    using InkRecognizer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkRecognizer>;
-    using InkRecognizerContainer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkRecognizerContainer>;
-    using InkStroke = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStroke>;
-    using InkStrokeBuilder = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokeBuilder>;
-    using InkStrokeContainer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokeContainer>;
-    using InkStrokeInput = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokeInput>;
-    using InkStrokeRenderingSegment = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokeRenderingSegment>;
-    using InkStrokesCollectedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>;
-    using InkStrokesErasedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>;
-    using InkSynchronizer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkSynchronizer>;
-    using InkUnprocessedInput = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkUnprocessedInput>;
-    using PenAndInkSettings = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::PenAndInkSettings>;
-    using IInkPointFactory = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkPointFactory>;
-    using IInkPresenterRulerFactory = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>;
-    using IInkPresenterStencil = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>;
-    using IInkRecognizerContainer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>;
-    using IInkStrokeContainer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>;
 }
 
 namespace py
@@ -441,4 +376,72 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.input.inking";
         static constexpr const char* type_name = "_IInkStrokeContainer";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.h")
+#include "py.Windows.UI.Input.h"
+#endif
+
+namespace py::impl::Windows::UI::Input::Inking
+{
+}
+
+namespace py::wrapper::Windows::UI::Input::Inking
+{
+    using InkDrawingAttributes = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>;
+    using InkDrawingAttributesPencilProperties = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties>;
+    using InkInputConfiguration = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkInputConfiguration>;
+    using InkInputProcessingConfiguration = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkInputProcessingConfiguration>;
+    using InkManager = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkManager>;
+    using InkModelerAttributes = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkModelerAttributes>;
+    using InkPoint = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkPoint>;
+    using InkPresenter = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkPresenter>;
+    using InkPresenterProtractor = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkPresenterProtractor>;
+    using InkPresenterRuler = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkPresenterRuler>;
+    using InkRecognitionResult = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkRecognitionResult>;
+    using InkRecognizer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkRecognizer>;
+    using InkRecognizerContainer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkRecognizerContainer>;
+    using InkStroke = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStroke>;
+    using InkStrokeBuilder = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokeBuilder>;
+    using InkStrokeContainer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokeContainer>;
+    using InkStrokeInput = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokeInput>;
+    using InkStrokeRenderingSegment = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokeRenderingSegment>;
+    using InkStrokesCollectedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>;
+    using InkStrokesErasedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>;
+    using InkSynchronizer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkSynchronizer>;
+    using InkUnprocessedInput = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::InkUnprocessedInput>;
+    using PenAndInkSettings = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::PenAndInkSettings>;
+    using IInkPointFactory = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkPointFactory>;
+    using IInkPresenterRulerFactory = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>;
+    using IInkPresenterStencil = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>;
+    using IInkRecognizerContainer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>;
+    using IInkStrokeContainer = py::winrt_wrapper<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>;
+}
+
+namespace py
+{
 }

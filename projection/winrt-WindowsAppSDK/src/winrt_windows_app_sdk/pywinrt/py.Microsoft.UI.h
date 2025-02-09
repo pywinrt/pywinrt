@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.h>
 
@@ -20,45 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI
 {
-}
-
-namespace py::impl::Microsoft::UI
-{
-    struct ClosableNotifierHandler
-    {
-        static winrt::Microsoft::UI::ClosableNotifierHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)]()
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Microsoft::UI
-{
-    using ColorHelper = py::winrt_wrapper<winrt::Microsoft::UI::ColorHelper>;
-    using Colors = py::winrt_wrapper<winrt::Microsoft::UI::Colors>;
-    using IClosableNotifier = py::winrt_wrapper<winrt::Microsoft::UI::IClosableNotifier>;
-    using DisplayId = py::winrt_struct_wrapper<winrt::Microsoft::UI::DisplayId>;
-    using IconId = py::winrt_struct_wrapper<winrt::Microsoft::UI::IconId>;
-    using WindowId = py::winrt_struct_wrapper<winrt::Microsoft::UI::WindowId>;
 }
 
 namespace py
@@ -120,6 +72,57 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui";
         static constexpr const char* type_name = "WindowId";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Microsoft::UI
+{
+    struct ClosableNotifierHandler
+    {
+        static winrt::Microsoft::UI::ClosableNotifierHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)]()
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Microsoft::UI
+{
+    using ColorHelper = py::winrt_wrapper<winrt::Microsoft::UI::ColorHelper>;
+    using Colors = py::winrt_wrapper<winrt::Microsoft::UI::Colors>;
+    using IClosableNotifier = py::winrt_wrapper<winrt::Microsoft::UI::IClosableNotifier>;
+    using DisplayId = py::winrt_struct_wrapper<winrt::Microsoft::UI::DisplayId>;
+    using IconId = py::winrt_struct_wrapper<winrt::Microsoft::UI::IconId>;
+    using WindowId = py::winrt_struct_wrapper<winrt::Microsoft::UI::WindowId>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Microsoft::UI::ClosableNotifierHandler>
     {

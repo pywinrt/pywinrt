@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Data.Xml.Dom.h")
-#include "py.Windows.Data.Xml.Dom.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Data.Xml.Dom.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,22 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Graphics::Printing::PrintTicket
 {
-}
-
-namespace py::impl::Windows::Graphics::Printing::PrintTicket
-{
-}
-
-namespace py::wrapper::Windows::Graphics::Printing::PrintTicket
-{
-    using PrintTicketCapabilities = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities>;
-    using PrintTicketFeature = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature>;
-    using PrintTicketOption = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>;
-    using PrintTicketParameterDefinition = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition>;
-    using PrintTicketParameterInitializer = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer>;
-    using PrintTicketValue = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>;
-    using WorkflowPrintTicket = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>;
-    using WorkflowPrintTicketValidationResult = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>;
 }
 
 namespace py
@@ -142,4 +113,36 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "WorkflowPrintTicketValidationResult";
     };
+}
+
+#if __has_include("py.Windows.Data.Xml.Dom.h")
+#include "py.Windows.Data.Xml.Dom.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Graphics::Printing::PrintTicket
+{
+}
+
+namespace py::wrapper::Windows::Graphics::Printing::PrintTicket
+{
+    using PrintTicketCapabilities = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities>;
+    using PrintTicketFeature = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature>;
+    using PrintTicketOption = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>;
+    using PrintTicketParameterDefinition = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition>;
+    using PrintTicketParameterInitializer = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer>;
+    using PrintTicketValue = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>;
+    using WorkflowPrintTicket = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>;
+    using WorkflowPrintTicketValidationResult = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>;
+}
+
+namespace py
+{
 }

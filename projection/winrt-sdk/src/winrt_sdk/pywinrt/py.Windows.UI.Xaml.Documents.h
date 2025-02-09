@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
-#if __has_include("py.Windows.UI.Text.h")
-#include "py.Windows.UI.Text.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Input.h")
-#include "py.Windows.UI.Xaml.Input.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.h")
-#include "py.Windows.UI.Xaml.Media.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.UI.Core.h>
@@ -45,41 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Documents
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Documents
-{
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Documents
-{
-    using Block = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Block>;
-    using BlockCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::BlockCollection>;
-    using Bold = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Bold>;
-    using ContactContentLinkProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider>;
-    using ContentLink = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContentLink>;
-    using ContentLinkInvokedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>;
-    using ContentLinkProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>;
-    using ContentLinkProviderCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection>;
-    using Glyphs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Glyphs>;
-    using Hyperlink = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Hyperlink>;
-    using HyperlinkClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>;
-    using Inline = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Inline>;
-    using InlineCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::InlineCollection>;
-    using InlineUIContainer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::InlineUIContainer>;
-    using Italic = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Italic>;
-    using LineBreak = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::LineBreak>;
-    using Paragraph = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Paragraph>;
-    using PlaceContentLinkProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider>;
-    using Run = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Run>;
-    using Span = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Span>;
-    using TextElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::TextElement>;
-    using TextHighlighter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::TextHighlighter>;
-    using TextHighlighterBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>;
-    using TextPointer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::TextPointer>;
-    using Typography = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Typography>;
-    using Underline = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Underline>;
-    using TextRange = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Documents::TextRange>;
 }
 
 namespace py
@@ -325,4 +261,71 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "TextRange";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+#if __has_include("py.Windows.UI.Text.h")
+#include "py.Windows.UI.Text.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Input.h")
+#include "py.Windows.UI.Xaml.Input.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.h")
+#include "py.Windows.UI.Xaml.Media.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Documents
+{
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Documents
+{
+    using Block = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Block>;
+    using BlockCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::BlockCollection>;
+    using Bold = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Bold>;
+    using ContactContentLinkProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider>;
+    using ContentLink = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContentLink>;
+    using ContentLinkInvokedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>;
+    using ContentLinkProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>;
+    using ContentLinkProviderCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection>;
+    using Glyphs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Glyphs>;
+    using Hyperlink = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Hyperlink>;
+    using HyperlinkClickEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>;
+    using Inline = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Inline>;
+    using InlineCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::InlineCollection>;
+    using InlineUIContainer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::InlineUIContainer>;
+    using Italic = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Italic>;
+    using LineBreak = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::LineBreak>;
+    using Paragraph = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Paragraph>;
+    using PlaceContentLinkProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider>;
+    using Run = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Run>;
+    using Span = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Span>;
+    using TextElement = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::TextElement>;
+    using TextHighlighter = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::TextHighlighter>;
+    using TextHighlighterBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>;
+    using TextPointer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::TextPointer>;
+    using Typography = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Typography>;
+    using Underline = py::winrt_wrapper<winrt::Windows::UI::Xaml::Documents::Underline>;
+    using TextRange = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Documents::TextRange>;
+}
+
+namespace py
+{
 }

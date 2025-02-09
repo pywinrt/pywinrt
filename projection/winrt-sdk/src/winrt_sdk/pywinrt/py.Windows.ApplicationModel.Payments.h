@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,74 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Payments
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Payments
-{
-    struct PaymentRequestChangedHandler
-    {
-        static winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Payments::PaymentRequest const& param0, winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Payments
-{
-    using PaymentAddress = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentAddress>;
-    using PaymentCanMakePaymentResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>;
-    using PaymentCurrencyAmount = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>;
-    using PaymentDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentDetails>;
-    using PaymentDetailsModifier = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>;
-    using PaymentItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentItem>;
-    using PaymentMediator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentMediator>;
-    using PaymentMerchantInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>;
-    using PaymentMethodData = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>;
-    using PaymentOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentOptions>;
-    using PaymentRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentRequest>;
-    using PaymentRequestChangedArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>;
-    using PaymentRequestChangedResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>;
-    using PaymentRequestSubmitResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>;
-    using PaymentResponse = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentResponse>;
-    using PaymentShippingOption = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>;
-    using PaymentToken = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentToken>;
 }
 
 namespace py
@@ -294,6 +217,86 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentToken";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Payments
+{
+    struct PaymentRequestChangedHandler
+    {
+        static winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Payments::PaymentRequest const& param0, winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Payments
+{
+    using PaymentAddress = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentAddress>;
+    using PaymentCanMakePaymentResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>;
+    using PaymentCurrencyAmount = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>;
+    using PaymentDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentDetails>;
+    using PaymentDetailsModifier = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>;
+    using PaymentItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentItem>;
+    using PaymentMediator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentMediator>;
+    using PaymentMerchantInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>;
+    using PaymentMethodData = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>;
+    using PaymentOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentOptions>;
+    using PaymentRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentRequest>;
+    using PaymentRequestChangedArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>;
+    using PaymentRequestChangedResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>;
+    using PaymentRequestSubmitResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>;
+    using PaymentResponse = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentResponse>;
+    using PaymentShippingOption = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>;
+    using PaymentToken = py::winrt_wrapper<winrt::Windows::ApplicationModel::Payments::PaymentToken>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler>
     {

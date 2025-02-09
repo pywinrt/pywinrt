@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::ClosedCaptioning
 {
-}
-
-namespace py::impl::Windows::Media::ClosedCaptioning
-{
-}
-
-namespace py::wrapper::Windows::Media::ClosedCaptioning
-{
-    using ClosedCaptionProperties = py::winrt_wrapper<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>;
 }
 
 namespace py
@@ -96,4 +78,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
         static constexpr const char* type_name = "ClosedCaptionProperties";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::Media::ClosedCaptioning
+{
+}
+
+namespace py::wrapper::Windows::Media::ClosedCaptioning
+{
+    using ClosedCaptionProperties = py::winrt_wrapper<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>;
+}
+
+namespace py
+{
 }

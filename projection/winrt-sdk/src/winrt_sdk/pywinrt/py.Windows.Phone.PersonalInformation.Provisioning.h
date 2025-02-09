@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Phone.PersonalInformation.h")
-#include "py.Windows.Phone.PersonalInformation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Phone.PersonalInformation.h>
@@ -30,16 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Phone::PersonalInformation::Provisioning
 {
-}
-
-namespace py::impl::Windows::Phone::PersonalInformation::Provisioning
-{
-}
-
-namespace py::wrapper::Windows::Phone::PersonalInformation::Provisioning
-{
-    using ContactPartnerProvisioningManager = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager>;
-    using MessagePartnerProvisioningManager = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager>;
 }
 
 namespace py
@@ -60,4 +33,34 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation.provisioning";
         static constexpr const char* type_name = "MessagePartnerProvisioningManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Phone.PersonalInformation.h")
+#include "py.Windows.Phone.PersonalInformation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Phone::PersonalInformation::Provisioning
+{
+}
+
+namespace py::wrapper::Windows::Phone::PersonalInformation::Provisioning
+{
+    using ContactPartnerProvisioningManager = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager>;
+    using MessagePartnerProvisioningManager = py::winrt_wrapper<winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager>;
+}
+
+namespace py
+{
 }

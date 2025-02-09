@@ -5,18 +5,9 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Microsoft.UI.Xaml.Automation.Text.h>
 
 namespace py::proj::Microsoft::UI::Xaml::Automation::Text
-{
-}
-
-namespace py::impl::Microsoft::UI::Xaml::Automation::Text
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Xaml::Automation::Text
 {
 }
 
@@ -44,4 +35,16 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.text";
         static constexpr const char* type_name = "TextUnit";
     };
+}
+
+namespace py::impl::Microsoft::UI::Xaml::Automation::Text
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Xaml::Automation::Text
+{
+}
+
+namespace py
+{
 }

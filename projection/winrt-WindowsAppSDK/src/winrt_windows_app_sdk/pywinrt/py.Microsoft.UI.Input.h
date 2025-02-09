@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Content.h")
-#include "py.Microsoft.UI.Content.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Content.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
@@ -50,64 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Input
 {
-}
-
-namespace py::impl::Microsoft::UI::Input
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Input
-{
-    using CharacterReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs>;
-    using ContextMenuKeyEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs>;
-    using CrossSlidingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>;
-    using DraggingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::DraggingEventArgs>;
-    using EnteredMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>;
-    using EnteringMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>;
-    using ExitedMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>;
-    using FocusChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusChangedEventArgs>;
-    using FocusNavigationRequest = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusNavigationRequest>;
-    using FocusNavigationRequestEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>;
-    using GestureRecognizer = py::winrt_wrapper<winrt::Microsoft::UI::Input::GestureRecognizer>;
-    using HoldingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::HoldingEventArgs>;
-    using InputActivationListener = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputActivationListener>;
-    using InputActivationListenerActivationChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputActivationListenerActivationChangedEventArgs>;
-    using InputCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputCursor>;
-    using InputCustomCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputCustomCursor>;
-    using InputDesktopNamedResourceCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor>;
-    using InputDesktopResourceCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputDesktopResourceCursor>;
-    using InputFocusController = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputFocusController>;
-    using InputFocusNavigationHost = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputFocusNavigationHost>;
-    using InputKeyboardSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputKeyboardSource>;
-    using InputLightDismissAction = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputLightDismissAction>;
-    using InputLightDismissEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputLightDismissEventArgs>;
-    using InputNonClientPointerSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputNonClientPointerSource>;
-    using InputObject = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputObject>;
-    using InputPointerSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputPointerSource>;
-    using InputPreTranslateKeyboardSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource>;
-    using InputSystemCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputSystemCursor>;
-    using KeyEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::KeyEventArgs>;
-    using ManipulationCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ManipulationCompletedEventArgs>;
-    using ManipulationInertiaStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ManipulationInertiaStartingEventArgs>;
-    using ManipulationStartedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ManipulationStartedEventArgs>;
-    using ManipulationUpdatedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ManipulationUpdatedEventArgs>;
-    using MouseWheelParameters = py::winrt_wrapper<winrt::Microsoft::UI::Input::MouseWheelParameters>;
-    using NonClientCaptionTappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::NonClientCaptionTappedEventArgs>;
-    using NonClientPointerEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::NonClientPointerEventArgs>;
-    using NonClientRegionsChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::NonClientRegionsChangedEventArgs>;
-    using PointerEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerEventArgs>;
-    using PointerPoint = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerPoint>;
-    using PointerPointProperties = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerPointProperties>;
-    using PointerPredictor = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerPredictor>;
-    using RightTappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::RightTappedEventArgs>;
-    using TappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::TappedEventArgs>;
-    using WindowRectChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>;
-    using WindowRectChangingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>;
-    using IPointerPointTransform = py::winrt_wrapper<winrt::Microsoft::UI::Input::IPointerPointTransform>;
-    using CrossSlideThresholds = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::CrossSlideThresholds>;
-    using ManipulationDelta = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::ManipulationDelta>;
-    using ManipulationVelocities = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::ManipulationVelocities>;
-    using PhysicalKeyStatus = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::PhysicalKeyStatus>;
 }
 
 namespace py
@@ -678,4 +587,98 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.input";
         static constexpr const char* type_name = "PhysicalKeyStatus";
     };
+}
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Content.h")
+#include "py.Microsoft.UI.Content.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Dispatching.h")
+#include "py.Microsoft.UI.Dispatching.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Input
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Input
+{
+    using CharacterReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs>;
+    using ContextMenuKeyEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs>;
+    using CrossSlidingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>;
+    using DraggingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::DraggingEventArgs>;
+    using EnteredMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>;
+    using EnteringMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>;
+    using ExitedMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>;
+    using FocusChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusChangedEventArgs>;
+    using FocusNavigationRequest = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusNavigationRequest>;
+    using FocusNavigationRequestEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>;
+    using GestureRecognizer = py::winrt_wrapper<winrt::Microsoft::UI::Input::GestureRecognizer>;
+    using HoldingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::HoldingEventArgs>;
+    using InputActivationListener = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputActivationListener>;
+    using InputActivationListenerActivationChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputActivationListenerActivationChangedEventArgs>;
+    using InputCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputCursor>;
+    using InputCustomCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputCustomCursor>;
+    using InputDesktopNamedResourceCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor>;
+    using InputDesktopResourceCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputDesktopResourceCursor>;
+    using InputFocusController = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputFocusController>;
+    using InputFocusNavigationHost = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputFocusNavigationHost>;
+    using InputKeyboardSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputKeyboardSource>;
+    using InputLightDismissAction = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputLightDismissAction>;
+    using InputLightDismissEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputLightDismissEventArgs>;
+    using InputNonClientPointerSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputNonClientPointerSource>;
+    using InputObject = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputObject>;
+    using InputPointerSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputPointerSource>;
+    using InputPreTranslateKeyboardSource = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource>;
+    using InputSystemCursor = py::winrt_wrapper<winrt::Microsoft::UI::Input::InputSystemCursor>;
+    using KeyEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::KeyEventArgs>;
+    using ManipulationCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ManipulationCompletedEventArgs>;
+    using ManipulationInertiaStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ManipulationInertiaStartingEventArgs>;
+    using ManipulationStartedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ManipulationStartedEventArgs>;
+    using ManipulationUpdatedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ManipulationUpdatedEventArgs>;
+    using MouseWheelParameters = py::winrt_wrapper<winrt::Microsoft::UI::Input::MouseWheelParameters>;
+    using NonClientCaptionTappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::NonClientCaptionTappedEventArgs>;
+    using NonClientPointerEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::NonClientPointerEventArgs>;
+    using NonClientRegionsChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::NonClientRegionsChangedEventArgs>;
+    using PointerEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerEventArgs>;
+    using PointerPoint = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerPoint>;
+    using PointerPointProperties = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerPointProperties>;
+    using PointerPredictor = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerPredictor>;
+    using RightTappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::RightTappedEventArgs>;
+    using TappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::TappedEventArgs>;
+    using WindowRectChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>;
+    using WindowRectChangingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>;
+    using IPointerPointTransform = py::winrt_wrapper<winrt::Microsoft::UI::Input::IPointerPointTransform>;
+    using CrossSlideThresholds = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::CrossSlideThresholds>;
+    using ManipulationDelta = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::ManipulationDelta>;
+    using ManipulationVelocities = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::ManipulationVelocities>;
+    using PhysicalKeyStatus = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::PhysicalKeyStatus>;
+}
+
+namespace py
+{
 }

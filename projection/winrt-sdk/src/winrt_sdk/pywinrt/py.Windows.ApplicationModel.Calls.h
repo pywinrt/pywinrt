@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.h")
-#include "py.Windows.ApplicationModel.Contacts.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Contacts.h>
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
@@ -40,51 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Calls
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Calls
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Calls
-{
-    using AcceptedVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions>;
-    using AppInitiatedVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions>;
-    using CallAnswerEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>;
-    using CallRejectEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>;
-    using CallStateChangeEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>;
-    using IncomingVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions>;
-    using LockScreenCallEndCallDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>;
-    using LockScreenCallEndRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>;
-    using LockScreenCallUI = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>;
-    using MuteChangeEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>;
-    using OutgoingVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions>;
-    using PhoneCall = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCall>;
-    using PhoneCallBlocking = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>;
-    using PhoneCallHistoryEntry = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>;
-    using PhoneCallHistoryEntryAddress = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress>;
-    using PhoneCallHistoryEntryQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions>;
-    using PhoneCallHistoryEntryReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader>;
-    using PhoneCallHistoryManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager>;
-    using PhoneCallHistoryManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser>;
-    using PhoneCallHistoryStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore>;
-    using PhoneCallInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallInfo>;
-    using PhoneCallManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallManager>;
-    using PhoneCallStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallStore>;
-    using PhoneCallVideoCapabilities = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities>;
-    using PhoneCallVideoCapabilitiesManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager>;
-    using PhoneCallsResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallsResult>;
-    using PhoneDialOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneDialOptions>;
-    using PhoneLine = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLine>;
-    using PhoneLineCellularDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails>;
-    using PhoneLineConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration>;
-    using PhoneLineDialResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult>;
-    using PhoneLineTransportDevice = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice>;
-    using PhoneLineWatcher = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher>;
-    using PhoneLineWatcherEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>;
-    using PhoneVoicemail = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail>;
-    using VoipCallCoordinator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator>;
-    using VoipPhoneCall = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall>;
 }
 
 namespace py
@@ -693,4 +623,77 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "VoipPhoneCall";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Contacts.h")
+#include "py.Windows.ApplicationModel.Contacts.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Calls
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Calls
+{
+    using AcceptedVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions>;
+    using AppInitiatedVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions>;
+    using CallAnswerEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>;
+    using CallRejectEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>;
+    using CallStateChangeEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>;
+    using IncomingVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions>;
+    using LockScreenCallEndCallDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>;
+    using LockScreenCallEndRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>;
+    using LockScreenCallUI = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>;
+    using MuteChangeEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>;
+    using OutgoingVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions>;
+    using PhoneCall = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCall>;
+    using PhoneCallBlocking = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>;
+    using PhoneCallHistoryEntry = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>;
+    using PhoneCallHistoryEntryAddress = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress>;
+    using PhoneCallHistoryEntryQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions>;
+    using PhoneCallHistoryEntryReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader>;
+    using PhoneCallHistoryManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager>;
+    using PhoneCallHistoryManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser>;
+    using PhoneCallHistoryStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore>;
+    using PhoneCallInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallInfo>;
+    using PhoneCallManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallManager>;
+    using PhoneCallStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallStore>;
+    using PhoneCallVideoCapabilities = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities>;
+    using PhoneCallVideoCapabilitiesManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager>;
+    using PhoneCallsResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallsResult>;
+    using PhoneDialOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneDialOptions>;
+    using PhoneLine = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLine>;
+    using PhoneLineCellularDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails>;
+    using PhoneLineConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration>;
+    using PhoneLineDialResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult>;
+    using PhoneLineTransportDevice = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice>;
+    using PhoneLineWatcher = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher>;
+    using PhoneLineWatcherEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>;
+    using PhoneVoicemail = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail>;
+    using VoipCallCoordinator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator>;
+    using VoipPhoneCall = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall>;
+}
+
+namespace py
+{
 }

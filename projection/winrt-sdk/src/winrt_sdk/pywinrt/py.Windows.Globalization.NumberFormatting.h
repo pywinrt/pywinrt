@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,29 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Globalization::NumberFormatting
 {
-}
-
-namespace py::impl::Windows::Globalization::NumberFormatting
-{
-}
-
-namespace py::wrapper::Windows::Globalization::NumberFormatting
-{
-    using CurrencyFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter>;
-    using DecimalFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter>;
-    using IncrementNumberRounder = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder>;
-    using NumeralSystemTranslator = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator>;
-    using PercentFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::PercentFormatter>;
-    using PermilleFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter>;
-    using SignificantDigitsNumberRounder = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder>;
-    using INumberFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>;
-    using INumberFormatter2 = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>;
-    using INumberFormatterOptions = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>;
-    using INumberParser = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberParser>;
-    using INumberRounder = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberRounder>;
-    using INumberRounderOption = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>;
-    using ISignedZeroOption = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>;
-    using ISignificantDigitsOption = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>;
 }
 
 namespace py
@@ -189,4 +157,39 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "_ISignificantDigitsOption";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Globalization::NumberFormatting
+{
+}
+
+namespace py::wrapper::Windows::Globalization::NumberFormatting
+{
+    using CurrencyFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter>;
+    using DecimalFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter>;
+    using IncrementNumberRounder = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder>;
+    using NumeralSystemTranslator = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator>;
+    using PercentFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::PercentFormatter>;
+    using PermilleFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter>;
+    using SignificantDigitsNumberRounder = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder>;
+    using INumberFormatter = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>;
+    using INumberFormatter2 = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>;
+    using INumberFormatterOptions = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>;
+    using INumberParser = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberParser>;
+    using INumberRounder = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberRounder>;
+    using INumberRounderOption = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>;
+    using ISignedZeroOption = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>;
+    using ISignificantDigitsOption = py::winrt_wrapper<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>;
+}
+
+namespace py
+{
 }
