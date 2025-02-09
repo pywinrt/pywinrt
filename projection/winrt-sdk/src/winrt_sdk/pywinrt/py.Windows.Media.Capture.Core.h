@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.h")
-#include "py.Windows.Media.Capture.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Media.Capture.h>
 
@@ -20,16 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Capture::Core
 {
-}
-
-namespace py::impl::Windows::Media::Capture::Core
-{
-}
-
-namespace py::wrapper::Windows::Media::Capture::Core
-{
-    using VariablePhotoCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>;
-    using VariablePhotoSequenceCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture>;
 }
 
 namespace py
@@ -50,4 +31,26 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.capture.core";
         static constexpr const char* type_name = "VariablePhotoSequenceCapture";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Media.Capture.h")
+#include "py.Windows.Media.Capture.h"
+#endif
+
+namespace py::impl::Windows::Media::Capture::Core
+{
+}
+
+namespace py::wrapper::Windows::Media::Capture::Core
+{
+    using VariablePhotoCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>;
+    using VariablePhotoSequenceCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture>;
+}
+
+namespace py
+{
 }

@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,18 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Spi::Provider
 {
-}
-
-namespace py::impl::Windows::Devices::Spi::Provider
-{
-}
-
-namespace py::wrapper::Windows::Devices::Spi::Provider
-{
-    using ProviderSpiConnectionSettings = py::winrt_wrapper<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>;
-    using ISpiControllerProvider = py::winrt_wrapper<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>;
-    using ISpiDeviceProvider = py::winrt_wrapper<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>;
-    using ISpiProvider = py::winrt_wrapper<winrt::Windows::Devices::Spi::Provider::ISpiProvider>;
 }
 
 namespace py
@@ -90,4 +69,28 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
         static constexpr const char* type_name = "_ISpiProvider";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Spi::Provider
+{
+}
+
+namespace py::wrapper::Windows::Devices::Spi::Provider
+{
+    using ProviderSpiConnectionSettings = py::winrt_wrapper<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>;
+    using ISpiControllerProvider = py::winrt_wrapper<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>;
+    using ISpiDeviceProvider = py::winrt_wrapper<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>;
+    using ISpiProvider = py::winrt_wrapper<winrt::Windows::Devices::Spi::Provider::ISpiProvider>;
+}
+
+namespace py
+{
 }

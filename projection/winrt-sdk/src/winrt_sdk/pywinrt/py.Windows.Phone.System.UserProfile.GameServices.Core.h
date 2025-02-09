@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
 
@@ -20,16 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Phone::System::UserProfile::GameServices::Core
 {
-}
-
-namespace py::impl::Windows::Phone::System::UserProfile::GameServices::Core
-{
-}
-
-namespace py::wrapper::Windows::Phone::System::UserProfile::GameServices::Core
-{
-    using GameService = py::winrt_wrapper<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService>;
-    using GameServicePropertyCollection = py::winrt_wrapper<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection>;
 }
 
 namespace py
@@ -72,4 +53,26 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.system.userprofile.gameservices.core";
         static constexpr const char* type_name = "GameServicePropertyCollection";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Phone::System::UserProfile::GameServices::Core
+{
+}
+
+namespace py::wrapper::Windows::Phone::System::UserProfile::GameServices::Core
+{
+    using GameService = py::winrt_wrapper<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService>;
+    using GameServicePropertyCollection = py::winrt_wrapper<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection>;
+}
+
+namespace py
+{
 }

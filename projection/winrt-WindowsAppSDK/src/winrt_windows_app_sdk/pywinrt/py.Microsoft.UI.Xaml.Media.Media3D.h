@@ -4,30 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
-
 #include <winrt/Microsoft.UI.Xaml.h>
 
 #include <winrt/Microsoft.UI.Xaml.Media.Media3D.h>
 
 namespace py::proj::Microsoft::UI::Xaml::Media::Media3D
 {
-}
-
-namespace py::impl::Microsoft::UI::Xaml::Media::Media3D
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Xaml::Media::Media3D
-{
-    using CompositeTransform3D = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D>;
-    using Matrix3DHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper>;
-    using PerspectiveTransform3D = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D>;
-    using Transform3D = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3D>;
-    using Matrix3D = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>;
 }
 
 namespace py
@@ -75,4 +57,25 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "Matrix3D";
     };
+}
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Xaml::Media::Media3D
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Xaml::Media::Media3D
+{
+    using CompositeTransform3D = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D>;
+    using Matrix3DHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper>;
+    using PerspectiveTransform3D = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D>;
+    using Transform3D = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3D>;
+    using Matrix3D = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>;
+}
+
+namespace py
+{
 }

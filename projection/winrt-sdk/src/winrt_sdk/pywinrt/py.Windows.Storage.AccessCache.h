@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -30,21 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage::AccessCache
 {
-}
-
-namespace py::impl::Windows::Storage::AccessCache
-{
-}
-
-namespace py::wrapper::Windows::Storage::AccessCache
-{
-    using AccessListEntryView = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntryView>;
-    using ItemRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>;
-    using StorageApplicationPermissions = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>;
-    using StorageItemAccessList = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::StorageItemAccessList>;
-    using StorageItemMostRecentlyUsedList = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>;
-    using IStorageItemAccessList = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>;
-    using AccessListEntry = py::winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>;
 }
 
 namespace py
@@ -130,4 +98,39 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "AccessListEntry";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Storage::AccessCache
+{
+}
+
+namespace py::wrapper::Windows::Storage::AccessCache
+{
+    using AccessListEntryView = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntryView>;
+    using ItemRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>;
+    using StorageApplicationPermissions = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>;
+    using StorageItemAccessList = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::StorageItemAccessList>;
+    using StorageItemMostRecentlyUsedList = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>;
+    using IStorageItemAccessList = py::winrt_wrapper<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>;
+    using AccessListEntry = py::winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>;
+}
+
+namespace py
+{
 }

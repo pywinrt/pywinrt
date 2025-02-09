@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,17 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Management
 {
-}
-
-namespace py::impl::Windows::Management
-{
-}
-
-namespace py::wrapper::Windows::Management
-{
-    using MdmAlert = py::winrt_wrapper<winrt::Windows::Management::MdmAlert>;
-    using MdmSession = py::winrt_wrapper<winrt::Windows::Management::MdmSession>;
-    using MdmSessionManager = py::winrt_wrapper<winrt::Windows::Management::MdmSessionManager>;
 }
 
 namespace py
@@ -92,4 +72,27 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.management";
         static constexpr const char* type_name = "MdmSessionManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Management
+{
+}
+
+namespace py::wrapper::Windows::Management
+{
+    using MdmAlert = py::winrt_wrapper<winrt::Windows::Management::MdmAlert>;
+    using MdmSession = py::winrt_wrapper<winrt::Windows::Management::MdmSession>;
+    using MdmSessionManager = py::winrt_wrapper<winrt::Windows::Management::MdmSessionManager>;
+}
+
+namespace py
+{
 }

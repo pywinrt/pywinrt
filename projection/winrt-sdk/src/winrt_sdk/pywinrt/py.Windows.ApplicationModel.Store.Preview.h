@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Authentication.Web.Core.h")
-#include "py.Windows.Security.Authentication.Web.Core.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Security.Authentication.Web.Core.h>
@@ -45,22 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Store::Preview
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Store::Preview
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Store::Preview
-{
-    using DeliveryOptimizationSettings = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>;
-    using StoreConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>;
-    using StoreHardwareManufacturerInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>;
-    using StorePreview = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>;
-    using StorePreviewProductInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>;
-    using StorePreviewPurchaseResults = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>;
-    using StorePreviewSkuInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>;
-    using WebAuthenticationCoreManagerHelper = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>;
 }
 
 namespace py
@@ -184,4 +139,52 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "WebAuthenticationCoreManagerHelper";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Authentication.Web.Core.h")
+#include "py.Windows.Security.Authentication.Web.Core.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Store::Preview
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Store::Preview
+{
+    using DeliveryOptimizationSettings = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>;
+    using StoreConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>;
+    using StoreHardwareManufacturerInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>;
+    using StorePreview = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>;
+    using StorePreviewProductInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>;
+    using StorePreviewPurchaseResults = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>;
+    using StorePreviewSkuInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>;
+    using WebAuthenticationCoreManagerHelper = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>;
+}
+
+namespace py
+{
 }

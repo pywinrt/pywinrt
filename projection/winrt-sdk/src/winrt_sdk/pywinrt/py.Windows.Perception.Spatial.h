@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Perception.h")
-#include "py.Windows.Perception.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.RemoteSystems.h")
-#include "py.Windows.System.RemoteSystems.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
@@ -40,40 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Perception::Spatial
 {
-}
-
-namespace py::impl::Windows::Perception::Spatial
-{
-}
-
-namespace py::wrapper::Windows::Perception::Spatial
-{
-    using SpatialAnchor = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchor>;
-    using SpatialAnchorExportSufficiency = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency>;
-    using SpatialAnchorExporter = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorExporter>;
-    using SpatialAnchorManager = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorManager>;
-    using SpatialAnchorRawCoordinateSystemAdjustedEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>;
-    using SpatialAnchorStore = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorStore>;
-    using SpatialAnchorTransferManager = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager>;
-    using SpatialBoundingVolume = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>;
-    using SpatialCoordinateSystem = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>;
-    using SpatialEntity = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntity>;
-    using SpatialEntityAddedEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>;
-    using SpatialEntityRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>;
-    using SpatialEntityStore = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityStore>;
-    using SpatialEntityUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>;
-    using SpatialEntityWatcher = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityWatcher>;
-    using SpatialLocation = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialLocation>;
-    using SpatialLocator = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialLocator>;
-    using SpatialLocatorAttachedFrameOfReference = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference>;
-    using SpatialLocatorPositionalTrackingDeactivatingEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>;
-    using SpatialStageFrameOfReference = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference>;
-    using SpatialStationaryFrameOfReference = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference>;
-    using SpatialBoundingBox = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingBox>;
-    using SpatialBoundingFrustum = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>;
-    using SpatialBoundingOrientedBox = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>;
-    using SpatialBoundingSphere = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>;
-    using SpatialRay = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialRay>;
 }
 
 namespace py
@@ -367,4 +308,66 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialRay";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Perception.h")
+#include "py.Windows.Perception.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.RemoteSystems.h")
+#include "py.Windows.System.RemoteSystems.h"
+#endif
+
+namespace py::impl::Windows::Perception::Spatial
+{
+}
+
+namespace py::wrapper::Windows::Perception::Spatial
+{
+    using SpatialAnchor = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchor>;
+    using SpatialAnchorExportSufficiency = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency>;
+    using SpatialAnchorExporter = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorExporter>;
+    using SpatialAnchorManager = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorManager>;
+    using SpatialAnchorRawCoordinateSystemAdjustedEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>;
+    using SpatialAnchorStore = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorStore>;
+    using SpatialAnchorTransferManager = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager>;
+    using SpatialBoundingVolume = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>;
+    using SpatialCoordinateSystem = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>;
+    using SpatialEntity = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntity>;
+    using SpatialEntityAddedEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>;
+    using SpatialEntityRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>;
+    using SpatialEntityStore = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityStore>;
+    using SpatialEntityUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>;
+    using SpatialEntityWatcher = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialEntityWatcher>;
+    using SpatialLocation = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialLocation>;
+    using SpatialLocator = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialLocator>;
+    using SpatialLocatorAttachedFrameOfReference = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference>;
+    using SpatialLocatorPositionalTrackingDeactivatingEventArgs = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>;
+    using SpatialStageFrameOfReference = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference>;
+    using SpatialStationaryFrameOfReference = py::winrt_wrapper<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference>;
+    using SpatialBoundingBox = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingBox>;
+    using SpatialBoundingFrustum = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>;
+    using SpatialBoundingOrientedBox = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>;
+    using SpatialBoundingSphere = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>;
+    using SpatialRay = py::winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialRay>;
+}
+
+namespace py
+{
 }

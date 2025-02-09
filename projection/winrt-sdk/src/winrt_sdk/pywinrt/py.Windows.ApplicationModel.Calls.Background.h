@@ -4,31 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.ApplicationModel.Calls.Background.h>
 
 namespace py::proj::Windows::ApplicationModel::Calls::Background
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Calls::Background
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Calls::Background
-{
-    using PhoneCallBlockedTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>;
-    using PhoneCallOriginDataRequestTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>;
-    using PhoneIncomingCallDismissedTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>;
-    using PhoneIncomingCallNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>;
-    using PhoneLineChangedTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>;
-    using PhoneNewVoicemailMessageTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>;
 }
 
 namespace py
@@ -136,4 +117,26 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.background";
         static constexpr const char* type_name = "PhoneNewVoicemailMessageTriggerDetails";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Calls::Background
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Calls::Background
+{
+    using PhoneCallBlockedTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>;
+    using PhoneCallOriginDataRequestTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>;
+    using PhoneIncomingCallDismissedTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>;
+    using PhoneIncomingCallNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>;
+    using PhoneLineChangedTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>;
+    using PhoneNewVoicemailMessageTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>;
+}
+
+namespace py
+{
 }

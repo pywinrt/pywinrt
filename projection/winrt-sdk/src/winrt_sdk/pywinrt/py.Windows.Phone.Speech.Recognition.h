@@ -5,18 +5,9 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Phone.Speech.Recognition.h>
 
 namespace py::proj::Windows::Phone::Speech::Recognition
-{
-}
-
-namespace py::impl::Windows::Phone::Speech::Recognition
-{
-}
-
-namespace py::wrapper::Windows::Phone::Speech::Recognition
 {
 }
 
@@ -33,4 +24,16 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.speech.recognition";
         static constexpr const char* type_name = "SpeechRecognitionUIStatus";
     };
+}
+
+namespace py::impl::Windows::Phone::Speech::Recognition
+{
+}
+
+namespace py::wrapper::Windows::Phone::Speech::Recognition
+{
+}
+
+namespace py
+{
 }

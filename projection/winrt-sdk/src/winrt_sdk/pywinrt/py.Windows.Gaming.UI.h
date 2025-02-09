@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,19 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Gaming::UI
 {
-}
-
-namespace py::impl::Windows::Gaming::UI
-{
-}
-
-namespace py::wrapper::Windows::Gaming::UI
-{
-    using GameBar = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameBar>;
-    using GameChatMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>;
-    using GameChatOverlay = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameChatOverlay>;
-    using GameChatOverlayMessageSource = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource>;
-    using GameUIProviderActivatedEventArgs = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>;
 }
 
 namespace py
@@ -104,4 +78,33 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.gaming.ui";
         static constexpr const char* type_name = "GameUIProviderActivatedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Activation.h")
+#include "py.Windows.ApplicationModel.Activation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Gaming::UI
+{
+}
+
+namespace py::wrapper::Windows::Gaming::UI
+{
+    using GameBar = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameBar>;
+    using GameChatMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>;
+    using GameChatOverlay = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameChatOverlay>;
+    using GameChatOverlayMessageSource = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource>;
+    using GameUIProviderActivatedEventArgs = py::winrt_wrapper<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>;
+}
+
+namespace py
+{
 }

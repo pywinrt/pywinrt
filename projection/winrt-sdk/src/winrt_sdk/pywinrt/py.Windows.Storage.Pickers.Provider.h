@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -25,23 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage::Pickers::Provider
 {
-}
-
-namespace py::impl::Windows::Storage::Pickers::Provider
-{
-}
-
-namespace py::wrapper::Windows::Storage::Pickers::Provider
-{
-    using FileOpenPickerUI = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>;
-    using FileRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>;
-    using FileSavePickerUI = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>;
-    using PickerClosingDeferral = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>;
-    using PickerClosingEventArgs = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>;
-    using PickerClosingOperation = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>;
-    using TargetFileRequest = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>;
-    using TargetFileRequestDeferral = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>;
-    using TargetFileRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>;
 }
 
 namespace py
@@ -151,4 +121,37 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "TargetFileRequestedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::Storage::Pickers::Provider
+{
+}
+
+namespace py::wrapper::Windows::Storage::Pickers::Provider
+{
+    using FileOpenPickerUI = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>;
+    using FileRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>;
+    using FileSavePickerUI = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>;
+    using PickerClosingDeferral = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>;
+    using PickerClosingEventArgs = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>;
+    using PickerClosingOperation = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>;
+    using TargetFileRequest = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>;
+    using TargetFileRequestDeferral = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>;
+    using TargetFileRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>;
+}
+
+namespace py
+{
 }

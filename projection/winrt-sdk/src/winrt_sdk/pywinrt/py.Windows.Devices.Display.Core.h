@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Display.h")
-#include "py.Windows.Devices.Display.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Devices.Display.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -50,39 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Display::Core
 {
-}
-
-namespace py::impl::Windows::Devices::Display::Core
-{
-}
-
-namespace py::wrapper::Windows::Devices::Display::Core
-{
-    using DisplayAdapter = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayAdapter>;
-    using DisplayDevice = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayDevice>;
-    using DisplayFence = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayFence>;
-    using DisplayManager = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManager>;
-    using DisplayManagerChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>;
-    using DisplayManagerDisabledEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>;
-    using DisplayManagerEnabledEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>;
-    using DisplayManagerPathsFailedOrInvalidatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>;
-    using DisplayManagerResultWithState = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>;
-    using DisplayModeInfo = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayModeInfo>;
-    using DisplayMuxDevice = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayMuxDevice>;
-    using DisplayPath = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayPath>;
-    using DisplayPrimaryDescription = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription>;
-    using DisplayScanout = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayScanout>;
-    using DisplaySource = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplaySource>;
-    using DisplayState = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayState>;
-    using DisplayStateOperationResult = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayStateOperationResult>;
-    using DisplaySurface = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplaySurface>;
-    using DisplayTarget = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayTarget>;
-    using DisplayTask = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayTask>;
-    using DisplayTaskPool = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayTaskPool>;
-    using DisplayTaskResult = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayTaskResult>;
-    using DisplayView = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayView>;
-    using DisplayWireFormat = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayWireFormat>;
-    using DisplayPresentationRate = py::winrt_struct_wrapper<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>;
 }
 
 namespace py
@@ -510,4 +444,73 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayPresentationRate";
     };
+}
+
+#if __has_include("py.Windows.Devices.Display.h")
+#include "py.Windows.Devices.Display.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.h")
+#include "py.Windows.Graphics.DirectX.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::Display::Core
+{
+}
+
+namespace py::wrapper::Windows::Devices::Display::Core
+{
+    using DisplayAdapter = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayAdapter>;
+    using DisplayDevice = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayDevice>;
+    using DisplayFence = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayFence>;
+    using DisplayManager = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManager>;
+    using DisplayManagerChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>;
+    using DisplayManagerDisabledEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>;
+    using DisplayManagerEnabledEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>;
+    using DisplayManagerPathsFailedOrInvalidatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>;
+    using DisplayManagerResultWithState = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>;
+    using DisplayModeInfo = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayModeInfo>;
+    using DisplayMuxDevice = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayMuxDevice>;
+    using DisplayPath = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayPath>;
+    using DisplayPrimaryDescription = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription>;
+    using DisplayScanout = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayScanout>;
+    using DisplaySource = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplaySource>;
+    using DisplayState = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayState>;
+    using DisplayStateOperationResult = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayStateOperationResult>;
+    using DisplaySurface = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplaySurface>;
+    using DisplayTarget = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayTarget>;
+    using DisplayTask = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayTask>;
+    using DisplayTaskPool = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayTaskPool>;
+    using DisplayTaskResult = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayTaskResult>;
+    using DisplayView = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayView>;
+    using DisplayWireFormat = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayWireFormat>;
+    using DisplayPresentationRate = py::winrt_struct_wrapper<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>;
+}
+
+namespace py
+{
 }

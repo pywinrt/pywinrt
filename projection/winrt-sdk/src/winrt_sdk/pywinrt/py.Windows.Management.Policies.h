@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.System.h>
@@ -25,16 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Management::Policies
 {
-}
-
-namespace py::impl::Windows::Management::Policies
-{
-}
-
-namespace py::wrapper::Windows::Management::Policies
-{
-    using NamedPolicy = py::winrt_wrapper<winrt::Windows::Management::Policies::NamedPolicy>;
-    using NamedPolicyData = py::winrt_wrapper<winrt::Windows::Management::Policies::NamedPolicyData>;
 }
 
 namespace py
@@ -66,4 +43,30 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.management.policies";
         static constexpr const char* type_name = "NamedPolicyData";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Management::Policies
+{
+}
+
+namespace py::wrapper::Windows::Management::Policies
+{
+    using NamedPolicy = py::winrt_wrapper<winrt::Windows::Management::Policies::NamedPolicy>;
+    using NamedPolicyData = py::winrt_wrapper<winrt::Windows::Management::Policies::NamedPolicyData>;
+}
+
+namespace py
+{
 }

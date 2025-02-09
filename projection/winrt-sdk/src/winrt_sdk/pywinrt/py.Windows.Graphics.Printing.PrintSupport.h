@@ -4,47 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.Data.Xml.Dom.h")
-#include "py.Windows.Data.Xml.Dom.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Printers.h")
-#include "py.Windows.Devices.Printers.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Printing.PrintTicket.h")
-#include "py.Windows.Graphics.Printing.PrintTicket.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Shell.h")
-#include "py.Windows.UI.Shell.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Data.Xml.Dom.h>
@@ -60,28 +19,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Graphics::Printing::PrintSupport
 {
-}
-
-namespace py::impl::Windows::Graphics::Printing::PrintSupport
-{
-}
-
-namespace py::wrapper::Windows::Graphics::Printing::PrintSupport
-{
-    using PrintSupportCommunicationErrorDetectedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>;
-    using PrintSupportExtensionSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>;
-    using PrintSupportExtensionTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>;
-    using PrintSupportIppCommunicationConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>;
-    using PrintSupportIppCommunicationTimeouts = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>;
-    using PrintSupportMxdcImageQualityConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration>;
-    using PrintSupportPrintDeviceCapabilitiesChangedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>;
-    using PrintSupportPrintDeviceCapabilitiesUpdatePolicy = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>;
-    using PrintSupportPrintTicketElement = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>;
-    using PrintSupportPrintTicketValidationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>;
-    using PrintSupportPrinterSelectedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>;
-    using PrintSupportSessionInfo = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>;
-    using PrintSupportSettingsActivatedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>;
-    using PrintSupportSettingsUISession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>;
 }
 
 namespace py
@@ -253,4 +190,70 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportSettingsUISession";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Activation.h")
+#include "py.Windows.ApplicationModel.Activation.h"
+#endif
+
+#if __has_include("py.Windows.Data.Xml.Dom.h")
+#include "py.Windows.Data.Xml.Dom.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Printers.h")
+#include "py.Windows.Devices.Printers.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Printing.PrintTicket.h")
+#include "py.Windows.Graphics.Printing.PrintTicket.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Shell.h")
+#include "py.Windows.UI.Shell.h"
+#endif
+
+namespace py::impl::Windows::Graphics::Printing::PrintSupport
+{
+}
+
+namespace py::wrapper::Windows::Graphics::Printing::PrintSupport
+{
+    using PrintSupportCommunicationErrorDetectedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>;
+    using PrintSupportExtensionSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>;
+    using PrintSupportExtensionTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>;
+    using PrintSupportIppCommunicationConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>;
+    using PrintSupportIppCommunicationTimeouts = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>;
+    using PrintSupportMxdcImageQualityConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration>;
+    using PrintSupportPrintDeviceCapabilitiesChangedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>;
+    using PrintSupportPrintDeviceCapabilitiesUpdatePolicy = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>;
+    using PrintSupportPrintTicketElement = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>;
+    using PrintSupportPrintTicketValidationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>;
+    using PrintSupportPrinterSelectedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>;
+    using PrintSupportSessionInfo = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>;
+    using PrintSupportSettingsActivatedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>;
+    using PrintSupportSettingsUISession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>;
+}
+
+namespace py
+{
 }

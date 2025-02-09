@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Graphics.Effects.h")
-#include "py.Windows.Graphics.Effects.h"
-#endif
-
 #include <winrt/Windows.Graphics.Effects.h>
 
 #include <winrt/Microsoft.UI.Composition.Effects.h>
 
 namespace py::proj::Microsoft::UI::Composition::Effects
 {
-}
-
-namespace py::impl::Microsoft::UI::Composition::Effects
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Composition::Effects
-{
-    using SceneLightingEffect = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Effects::SceneLightingEffect>;
 }
 
 namespace py
@@ -47,4 +33,21 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.effects";
         static constexpr const char* type_name = "SceneLightingEffect";
     };
+}
+
+#if __has_include("py.Windows.Graphics.Effects.h")
+#include "py.Windows.Graphics.Effects.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Composition::Effects
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Composition::Effects
+{
+    using SceneLightingEffect = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Effects::SceneLightingEffect>;
+}
+
+namespace py
+{
 }

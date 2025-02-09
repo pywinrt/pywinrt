@@ -4,79 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Calls.Background.h")
-#include "py.Windows.ApplicationModel.Calls.Background.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.h")
-#include "py.Windows.Devices.Bluetooth.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.Advertisement.h")
-#include "py.Windows.Devices.Bluetooth.Advertisement.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.Background.h")
-#include "py.Windows.Devices.Bluetooth.Background.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.GenericAttributeProfile.h")
-#include "py.Windows.Devices.Bluetooth.GenericAttributeProfile.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Sensors.h")
-#include "py.Windows.Devices.Sensors.h"
-#endif
-
-#if __has_include("py.Windows.Devices.SmartCards.h")
-#include "py.Windows.Devices.SmartCards.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Sms.h")
-#include "py.Windows.Devices.Sms.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Provider.h")
-#include "py.Windows.Storage.Provider.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.Notifications.h")
-#include "py.Windows.UI.Notifications.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.ApplicationModel.Calls.Background.h>
 #include <winrt/Windows.Devices.Bluetooth.h>
@@ -100,222 +27,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Background
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Background
-{
-    struct BackgroundTaskCanceledEventHandler
-    {
-        static winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct BackgroundTaskCompletedEventHandler
-    {
-        static winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct BackgroundTaskProgressEventHandler
-    {
-        static winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Background
-{
-    using ActivitySensorTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ActivitySensorTrigger>;
-    using AlarmApplicationManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::AlarmApplicationManager>;
-    using AppBroadcastTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::AppBroadcastTrigger>;
-    using AppBroadcastTriggerProviderInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>;
-    using ApplicationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ApplicationTrigger>;
-    using ApplicationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails>;
-    using AppointmentStoreNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger>;
-    using BackgroundExecutionManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager>;
-    using BackgroundTaskBuilder = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder>;
-    using BackgroundTaskCompletedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs>;
-    using BackgroundTaskDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral>;
-    using BackgroundTaskProgressEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs>;
-    using BackgroundTaskRegistration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>;
-    using BackgroundTaskRegistrationGroup = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup>;
-    using BackgroundWorkCost = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundWorkCost>;
-    using BluetoothLEAdvertisementPublisherTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger>;
-    using BluetoothLEAdvertisementWatcherTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger>;
-    using CachedFileUpdaterTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger>;
-    using CachedFileUpdaterTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails>;
-    using ChatMessageNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger>;
-    using ChatMessageReceivedNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger>;
-    using CommunicationBlockingAppSetAsActiveTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger>;
-    using ContactStoreNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger>;
-    using ContentPrefetchTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger>;
-    using ConversationalAgentTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger>;
-    using CustomSystemEventTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger>;
-    using DeviceConnectionChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>;
-    using DeviceManufacturerNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger>;
-    using DeviceServicingTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceServicingTrigger>;
-    using DeviceUseTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceUseTrigger>;
-    using DeviceWatcherTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger>;
-    using EmailStoreNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger>;
-    using GattCharacteristicNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger>;
-    using GattServiceProviderTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger>;
-    using GattServiceProviderTriggerResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>;
-    using GeovisitTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::GeovisitTrigger>;
-    using LocationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::LocationTrigger>;
-    using MaintenanceTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MaintenanceTrigger>;
-    using MediaProcessingTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MediaProcessingTrigger>;
-    using MobileBroadbandDeviceServiceNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger>;
-    using MobileBroadbandPcoDataChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger>;
-    using MobileBroadbandPinLockStateChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger>;
-    using MobileBroadbandRadioStateChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger>;
-    using MobileBroadbandRegistrationStateChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger>;
-    using NetworkOperatorDataUsageTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger>;
-    using NetworkOperatorHotspotAuthenticationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger>;
-    using NetworkOperatorNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger>;
-    using PaymentAppCanMakePaymentTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger>;
-    using PhoneTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::PhoneTrigger>;
-    using PushNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::PushNotificationTrigger>;
-    using RcsEndUserMessageAvailableTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger>;
-    using RfcommConnectionTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::RfcommConnectionTrigger>;
-    using SecondaryAuthenticationFactorAuthenticationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger>;
-    using SensorDataThresholdTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger>;
-    using SmartCardTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SmartCardTrigger>;
-    using SmsMessageReceivedTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger>;
-    using SocketActivityTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SocketActivityTrigger>;
-    using StorageLibraryChangeTrackerTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger>;
-    using StorageLibraryContentChangedTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger>;
-    using SystemCondition = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SystemCondition>;
-    using SystemTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SystemTrigger>;
-    using TetheringEntitlementCheckTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger>;
-    using TimeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::TimeTrigger>;
-    using ToastNotificationActionTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger>;
-    using ToastNotificationHistoryChangedTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger>;
-    using UserNotificationChangedTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::UserNotificationChangedTrigger>;
-    using WiFiOnDemandHotspotConnectTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger>;
-    using WiFiOnDemandHotspotUpdateMetadataTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger>;
-    using IBackgroundCondition = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>;
-    using IBackgroundTask = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTask>;
-    using IBackgroundTaskInstance = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>;
-    using IBackgroundTaskInstance2 = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>;
-    using IBackgroundTaskInstance4 = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>;
-    using IBackgroundTaskRegistration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>;
-    using IBackgroundTaskRegistration2 = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>;
-    using IBackgroundTaskRegistration3 = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>;
-    using IBackgroundTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>;
 }
 
 namespace py
@@ -1090,6 +801,298 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "_IBackgroundTrigger";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Activation.h")
+#include "py.Windows.ApplicationModel.Activation.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Calls.Background.h")
+#include "py.Windows.ApplicationModel.Calls.Background.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Bluetooth.h")
+#include "py.Windows.Devices.Bluetooth.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Bluetooth.Advertisement.h")
+#include "py.Windows.Devices.Bluetooth.Advertisement.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Bluetooth.Background.h")
+#include "py.Windows.Devices.Bluetooth.Background.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Bluetooth.GenericAttributeProfile.h")
+#include "py.Windows.Devices.Bluetooth.GenericAttributeProfile.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Geolocation.h")
+#include "py.Windows.Devices.Geolocation.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Sensors.h")
+#include "py.Windows.Devices.Sensors.h"
+#endif
+
+#if __has_include("py.Windows.Devices.SmartCards.h")
+#include "py.Windows.Devices.SmartCards.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Sms.h")
+#include "py.Windows.Devices.Sms.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Networking.Sockets.h")
+#include "py.Windows.Networking.Sockets.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Provider.h")
+#include "py.Windows.Storage.Provider.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.Notifications.h")
+#include "py.Windows.UI.Notifications.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Background
+{
+    struct BackgroundTaskCanceledEventHandler
+    {
+        static winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct BackgroundTaskCompletedEventHandler
+    {
+        static winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct BackgroundTaskProgressEventHandler
+    {
+        static winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration const& param0, winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Background
+{
+    using ActivitySensorTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ActivitySensorTrigger>;
+    using AlarmApplicationManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::AlarmApplicationManager>;
+    using AppBroadcastTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::AppBroadcastTrigger>;
+    using AppBroadcastTriggerProviderInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>;
+    using ApplicationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ApplicationTrigger>;
+    using ApplicationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails>;
+    using AppointmentStoreNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger>;
+    using BackgroundExecutionManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager>;
+    using BackgroundTaskBuilder = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder>;
+    using BackgroundTaskCompletedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs>;
+    using BackgroundTaskDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral>;
+    using BackgroundTaskProgressEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs>;
+    using BackgroundTaskRegistration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>;
+    using BackgroundTaskRegistrationGroup = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup>;
+    using BackgroundWorkCost = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BackgroundWorkCost>;
+    using BluetoothLEAdvertisementPublisherTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger>;
+    using BluetoothLEAdvertisementWatcherTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger>;
+    using CachedFileUpdaterTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger>;
+    using CachedFileUpdaterTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails>;
+    using ChatMessageNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger>;
+    using ChatMessageReceivedNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger>;
+    using CommunicationBlockingAppSetAsActiveTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger>;
+    using ContactStoreNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger>;
+    using ContentPrefetchTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger>;
+    using ConversationalAgentTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger>;
+    using CustomSystemEventTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger>;
+    using DeviceConnectionChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>;
+    using DeviceManufacturerNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger>;
+    using DeviceServicingTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceServicingTrigger>;
+    using DeviceUseTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceUseTrigger>;
+    using DeviceWatcherTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger>;
+    using EmailStoreNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger>;
+    using GattCharacteristicNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger>;
+    using GattServiceProviderTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger>;
+    using GattServiceProviderTriggerResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>;
+    using GeovisitTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::GeovisitTrigger>;
+    using LocationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::LocationTrigger>;
+    using MaintenanceTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MaintenanceTrigger>;
+    using MediaProcessingTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MediaProcessingTrigger>;
+    using MobileBroadbandDeviceServiceNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger>;
+    using MobileBroadbandPcoDataChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger>;
+    using MobileBroadbandPinLockStateChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger>;
+    using MobileBroadbandRadioStateChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger>;
+    using MobileBroadbandRegistrationStateChangeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger>;
+    using NetworkOperatorDataUsageTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger>;
+    using NetworkOperatorHotspotAuthenticationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger>;
+    using NetworkOperatorNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger>;
+    using PaymentAppCanMakePaymentTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger>;
+    using PhoneTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::PhoneTrigger>;
+    using PushNotificationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::PushNotificationTrigger>;
+    using RcsEndUserMessageAvailableTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger>;
+    using RfcommConnectionTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::RfcommConnectionTrigger>;
+    using SecondaryAuthenticationFactorAuthenticationTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger>;
+    using SensorDataThresholdTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger>;
+    using SmartCardTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SmartCardTrigger>;
+    using SmsMessageReceivedTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger>;
+    using SocketActivityTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SocketActivityTrigger>;
+    using StorageLibraryChangeTrackerTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger>;
+    using StorageLibraryContentChangedTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger>;
+    using SystemCondition = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SystemCondition>;
+    using SystemTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::SystemTrigger>;
+    using TetheringEntitlementCheckTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger>;
+    using TimeTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::TimeTrigger>;
+    using ToastNotificationActionTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger>;
+    using ToastNotificationHistoryChangedTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger>;
+    using UserNotificationChangedTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::UserNotificationChangedTrigger>;
+    using WiFiOnDemandHotspotConnectTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger>;
+    using WiFiOnDemandHotspotUpdateMetadataTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger>;
+    using IBackgroundCondition = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>;
+    using IBackgroundTask = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTask>;
+    using IBackgroundTaskInstance = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>;
+    using IBackgroundTaskInstance2 = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>;
+    using IBackgroundTaskInstance4 = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>;
+    using IBackgroundTaskRegistration = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>;
+    using IBackgroundTaskRegistration2 = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>;
+    using IBackgroundTaskRegistration3 = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>;
+    using IBackgroundTrigger = py::winrt_wrapper<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>
     {

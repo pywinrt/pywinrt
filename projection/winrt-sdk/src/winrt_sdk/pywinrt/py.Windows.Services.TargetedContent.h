@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,28 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Services::TargetedContent
 {
-}
-
-namespace py::impl::Windows::Services::TargetedContent
-{
-}
-
-namespace py::wrapper::Windows::Services::TargetedContent
-{
-    using TargetedContentAction = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentAction>;
-    using TargetedContentAvailabilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>;
-    using TargetedContentChangedEventArgs = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>;
-    using TargetedContentCollection = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentCollection>;
-    using TargetedContentContainer = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentContainer>;
-    using TargetedContentFile = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentFile>;
-    using TargetedContentImage = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentImage>;
-    using TargetedContentItem = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentItem>;
-    using TargetedContentItemState = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentItemState>;
-    using TargetedContentObject = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentObject>;
-    using TargetedContentStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>;
-    using TargetedContentSubscription = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>;
-    using TargetedContentSubscriptionOptions = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>;
-    using TargetedContentValue = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentValue>;
 }
 
 namespace py
@@ -218,4 +183,42 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentValue";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Services::TargetedContent
+{
+}
+
+namespace py::wrapper::Windows::Services::TargetedContent
+{
+    using TargetedContentAction = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentAction>;
+    using TargetedContentAvailabilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>;
+    using TargetedContentChangedEventArgs = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>;
+    using TargetedContentCollection = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentCollection>;
+    using TargetedContentContainer = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentContainer>;
+    using TargetedContentFile = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentFile>;
+    using TargetedContentImage = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentImage>;
+    using TargetedContentItem = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentItem>;
+    using TargetedContentItemState = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentItemState>;
+    using TargetedContentObject = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentObject>;
+    using TargetedContentStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>;
+    using TargetedContentSubscription = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>;
+    using TargetedContentSubscriptionOptions = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>;
+    using TargetedContentValue = py::winrt_wrapper<winrt::Windows::Services::TargetedContent::TargetedContentValue>;
+}
+
+namespace py
+{
 }

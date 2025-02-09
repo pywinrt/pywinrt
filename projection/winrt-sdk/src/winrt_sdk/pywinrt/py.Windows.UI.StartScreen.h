@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Core.h")
-#include "py.Windows.ApplicationModel.Core.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Core.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -45,23 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::StartScreen
 {
-}
-
-namespace py::impl::Windows::UI::StartScreen
-{
-}
-
-namespace py::wrapper::Windows::UI::StartScreen
-{
-    using JumpList = py::winrt_wrapper<winrt::Windows::UI::StartScreen::JumpList>;
-    using JumpListItem = py::winrt_wrapper<winrt::Windows::UI::StartScreen::JumpListItem>;
-    using SecondaryTile = py::winrt_wrapper<winrt::Windows::UI::StartScreen::SecondaryTile>;
-    using SecondaryTileVisualElements = py::winrt_wrapper<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>;
-    using StartScreenManager = py::winrt_wrapper<winrt::Windows::UI::StartScreen::StartScreenManager>;
-    using TileMixedRealityModel = py::winrt_wrapper<winrt::Windows::UI::StartScreen::TileMixedRealityModel>;
-    using VisualElementsRequest = py::winrt_wrapper<winrt::Windows::UI::StartScreen::VisualElementsRequest>;
-    using VisualElementsRequestDeferral = py::winrt_wrapper<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>;
-    using VisualElementsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>;
 }
 
 namespace py
@@ -204,4 +158,53 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "VisualElementsRequestedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Core.h")
+#include "py.Windows.ApplicationModel.Core.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Perception.Spatial.h")
+#include "py.Windows.Perception.Spatial.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+namespace py::impl::Windows::UI::StartScreen
+{
+}
+
+namespace py::wrapper::Windows::UI::StartScreen
+{
+    using JumpList = py::winrt_wrapper<winrt::Windows::UI::StartScreen::JumpList>;
+    using JumpListItem = py::winrt_wrapper<winrt::Windows::UI::StartScreen::JumpListItem>;
+    using SecondaryTile = py::winrt_wrapper<winrt::Windows::UI::StartScreen::SecondaryTile>;
+    using SecondaryTileVisualElements = py::winrt_wrapper<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>;
+    using StartScreenManager = py::winrt_wrapper<winrt::Windows::UI::StartScreen::StartScreenManager>;
+    using TileMixedRealityModel = py::winrt_wrapper<winrt::Windows::UI::StartScreen::TileMixedRealityModel>;
+    using VisualElementsRequest = py::winrt_wrapper<winrt::Windows::UI::StartScreen::VisualElementsRequest>;
+    using VisualElementsRequestDeferral = py::winrt_wrapper<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>;
+    using VisualElementsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>;
+}
+
+namespace py
+{
 }

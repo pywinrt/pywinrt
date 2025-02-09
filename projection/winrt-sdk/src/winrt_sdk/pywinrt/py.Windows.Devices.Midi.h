@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,38 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Midi
 {
-}
-
-namespace py::impl::Windows::Devices::Midi
-{
-}
-
-namespace py::wrapper::Windows::Devices::Midi
-{
-    using MidiActiveSensingMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiActiveSensingMessage>;
-    using MidiChannelPressureMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiChannelPressureMessage>;
-    using MidiContinueMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiContinueMessage>;
-    using MidiControlChangeMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiControlChangeMessage>;
-    using MidiInPort = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiInPort>;
-    using MidiMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>;
-    using MidiNoteOffMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiNoteOffMessage>;
-    using MidiNoteOnMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiNoteOnMessage>;
-    using MidiOutPort = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiOutPort>;
-    using MidiPitchBendChangeMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage>;
-    using MidiPolyphonicKeyPressureMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage>;
-    using MidiProgramChangeMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiProgramChangeMessage>;
-    using MidiSongPositionPointerMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage>;
-    using MidiSongSelectMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSongSelectMessage>;
-    using MidiStartMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiStartMessage>;
-    using MidiStopMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiStopMessage>;
-    using MidiSynthesizer = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSynthesizer>;
-    using MidiSystemExclusiveMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage>;
-    using MidiSystemResetMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSystemResetMessage>;
-    using MidiTimeCodeMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiTimeCodeMessage>;
-    using MidiTimingClockMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiTimingClockMessage>;
-    using MidiTuneRequestMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiTuneRequestMessage>;
-    using IMidiMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::IMidiMessage>;
-    using IMidiOutPort = py::winrt_wrapper<winrt::Windows::Devices::Midi::IMidiOutPort>;
 }
 
 namespace py
@@ -264,4 +219,52 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "_IMidiOutPort";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::Midi
+{
+}
+
+namespace py::wrapper::Windows::Devices::Midi
+{
+    using MidiActiveSensingMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiActiveSensingMessage>;
+    using MidiChannelPressureMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiChannelPressureMessage>;
+    using MidiContinueMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiContinueMessage>;
+    using MidiControlChangeMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiControlChangeMessage>;
+    using MidiInPort = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiInPort>;
+    using MidiMessageReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>;
+    using MidiNoteOffMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiNoteOffMessage>;
+    using MidiNoteOnMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiNoteOnMessage>;
+    using MidiOutPort = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiOutPort>;
+    using MidiPitchBendChangeMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage>;
+    using MidiPolyphonicKeyPressureMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage>;
+    using MidiProgramChangeMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiProgramChangeMessage>;
+    using MidiSongPositionPointerMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage>;
+    using MidiSongSelectMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSongSelectMessage>;
+    using MidiStartMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiStartMessage>;
+    using MidiStopMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiStopMessage>;
+    using MidiSynthesizer = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSynthesizer>;
+    using MidiSystemExclusiveMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage>;
+    using MidiSystemResetMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiSystemResetMessage>;
+    using MidiTimeCodeMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiTimeCodeMessage>;
+    using MidiTimingClockMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiTimingClockMessage>;
+    using MidiTuneRequestMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::MidiTuneRequestMessage>;
+    using IMidiMessage = py::winrt_wrapper<winrt::Windows::Devices::Midi::IMidiMessage>;
+    using IMidiOutPort = py::winrt_wrapper<winrt::Windows::Devices::Midi::IMidiOutPort>;
+}
+
+namespace py
+{
 }

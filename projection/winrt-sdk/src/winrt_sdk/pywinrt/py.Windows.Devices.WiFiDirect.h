@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -40,24 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::WiFiDirect
 {
-}
-
-namespace py::impl::Windows::Devices::WiFiDirect
-{
-}
-
-namespace py::wrapper::Windows::Devices::WiFiDirect
-{
-    using WiFiDirectAdvertisement = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>;
-    using WiFiDirectAdvertisementPublisher = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>;
-    using WiFiDirectAdvertisementPublisherStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>;
-    using WiFiDirectConnectionListener = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>;
-    using WiFiDirectConnectionParameters = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>;
-    using WiFiDirectConnectionRequest = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>;
-    using WiFiDirectConnectionRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>;
-    using WiFiDirectDevice = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>;
-    using WiFiDirectInformationElement = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>;
-    using WiFiDirectLegacySettings = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>;
 }
 
 namespace py
@@ -219,4 +176,50 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.wifidirect";
         static constexpr const char* type_name = "WiFiDirectLegacySettings";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::WiFiDirect
+{
+}
+
+namespace py::wrapper::Windows::Devices::WiFiDirect
+{
+    using WiFiDirectAdvertisement = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>;
+    using WiFiDirectAdvertisementPublisher = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher>;
+    using WiFiDirectAdvertisementPublisherStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>;
+    using WiFiDirectConnectionListener = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener>;
+    using WiFiDirectConnectionParameters = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>;
+    using WiFiDirectConnectionRequest = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>;
+    using WiFiDirectConnectionRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>;
+    using WiFiDirectDevice = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>;
+    using WiFiDirectInformationElement = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>;
+    using WiFiDirectLegacySettings = py::winrt_wrapper<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>;
+}
+
+namespace py
+{
 }

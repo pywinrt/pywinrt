@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.UI.h>
 
 #include <winrt/Windows.UI.Notifications.Preview.h>
 
 namespace py::proj::Windows::UI::Notifications::Preview
 {
-}
-
-namespace py::impl::Windows::UI::Notifications::Preview
-{
-}
-
-namespace py::wrapper::Windows::UI::Notifications::Preview
-{
-    using ToastOcclusionManagerPreview = py::winrt_wrapper<winrt::Windows::UI::Notifications::Preview::ToastOcclusionManagerPreview>;
 }
 
 namespace py
@@ -36,4 +22,21 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.notifications.preview";
         static constexpr const char* type_name = "ToastOcclusionManagerPreview";
     };
+}
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::UI::Notifications::Preview
+{
+}
+
+namespace py::wrapper::Windows::UI::Notifications::Preview
+{
+    using ToastOcclusionManagerPreview = py::winrt_wrapper<winrt::Windows::UI::Notifications::Preview::ToastOcclusionManagerPreview>;
+}
+
+namespace py
+{
 }

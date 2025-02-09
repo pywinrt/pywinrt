@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Printing.h")
-#include "py.Windows.Graphics.Printing.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Printing.h>
@@ -30,38 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Graphics::Printing::OptionDetails
 {
-}
-
-namespace py::impl::Windows::Graphics::Printing::OptionDetails
-{
-}
-
-namespace py::wrapper::Windows::Graphics::Printing::OptionDetails
-{
-    using PrintBindingOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails>;
-    using PrintBorderingOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails>;
-    using PrintCollationOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails>;
-    using PrintColorModeOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails>;
-    using PrintCopiesOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails>;
-    using PrintCustomItemDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails>;
-    using PrintCustomItemListOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails>;
-    using PrintCustomTextOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails>;
-    using PrintCustomToggleOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails>;
-    using PrintDuplexOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails>;
-    using PrintHolePunchOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails>;
-    using PrintMediaSizeOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails>;
-    using PrintMediaTypeOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails>;
-    using PrintOrientationOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails>;
-    using PrintPageRangeOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails>;
-    using PrintQualityOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails>;
-    using PrintStapleOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails>;
-    using PrintTaskOptionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs>;
-    using PrintTaskOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails>;
-    using IPrintCustomOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>;
-    using IPrintItemListOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>;
-    using IPrintNumberOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>;
-    using IPrintOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>;
-    using IPrintTextOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>;
 }
 
 namespace py
@@ -280,4 +231,56 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.printing.optiondetails";
         static constexpr const char* type_name = "_IPrintTextOptionDetails";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Printing.h")
+#include "py.Windows.Graphics.Printing.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Graphics::Printing::OptionDetails
+{
+}
+
+namespace py::wrapper::Windows::Graphics::Printing::OptionDetails
+{
+    using PrintBindingOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails>;
+    using PrintBorderingOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails>;
+    using PrintCollationOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails>;
+    using PrintColorModeOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails>;
+    using PrintCopiesOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails>;
+    using PrintCustomItemDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails>;
+    using PrintCustomItemListOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails>;
+    using PrintCustomTextOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails>;
+    using PrintCustomToggleOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails>;
+    using PrintDuplexOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails>;
+    using PrintHolePunchOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails>;
+    using PrintMediaSizeOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails>;
+    using PrintMediaTypeOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails>;
+    using PrintOrientationOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails>;
+    using PrintPageRangeOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails>;
+    using PrintQualityOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails>;
+    using PrintStapleOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails>;
+    using PrintTaskOptionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs>;
+    using PrintTaskOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails>;
+    using IPrintCustomOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>;
+    using IPrintItemListOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>;
+    using IPrintNumberOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>;
+    using IPrintOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>;
+    using IPrintTextOptionDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>;
+}
+
+namespace py
+{
 }

@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -25,17 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::ContentRestrictions
 {
-}
-
-namespace py::impl::Windows::Media::ContentRestrictions
-{
-}
-
-namespace py::wrapper::Windows::Media::ContentRestrictions
-{
-    using ContentRestrictionsBrowsePolicy = py::winrt_wrapper<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>;
-    using RatedContentDescription = py::winrt_wrapper<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>;
-    using RatedContentRestrictions = py::winrt_wrapper<winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions>;
 }
 
 namespace py
@@ -86,4 +62,31 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
         static constexpr const char* type_name = "RatedContentRestrictions";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media::ContentRestrictions
+{
+}
+
+namespace py::wrapper::Windows::Media::ContentRestrictions
+{
+    using ContentRestrictionsBrowsePolicy = py::winrt_wrapper<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>;
+    using RatedContentDescription = py::winrt_wrapper<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>;
+    using RatedContentRestrictions = py::winrt_wrapper<winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions>;
+}
+
+namespace py
+{
 }

@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Networking.h>
@@ -35,30 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::EnterpriseData
 {
-}
-
-namespace py::impl::Windows::Security::EnterpriseData
-{
-}
-
-namespace py::wrapper::Windows::Security::EnterpriseData
-{
-    using BufferProtectUnprotectResult = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>;
-    using DataProtectionInfo = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>;
-    using DataProtectionManager = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::DataProtectionManager>;
-    using FileProtectionInfo = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>;
-    using FileProtectionManager = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::FileProtectionManager>;
-    using FileRevocationManager = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::FileRevocationManager>;
-    using FileUnprotectOptions = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::FileUnprotectOptions>;
-    using ProtectedAccessResumedEventArgs = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>;
-    using ProtectedAccessSuspendingEventArgs = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>;
-    using ProtectedContainerExportResult = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>;
-    using ProtectedContainerImportResult = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>;
-    using ProtectedContentRevokedEventArgs = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>;
-    using ProtectedFileCreateResult = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>;
-    using ProtectionPolicyAuditInfo = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>;
-    using ProtectionPolicyManager = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager>;
-    using ThreadNetworkContext = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ThreadNetworkContext>;
 }
 
 namespace py
@@ -268,4 +223,52 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ThreadNetworkContext";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Security::EnterpriseData
+{
+}
+
+namespace py::wrapper::Windows::Security::EnterpriseData
+{
+    using BufferProtectUnprotectResult = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>;
+    using DataProtectionInfo = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>;
+    using DataProtectionManager = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::DataProtectionManager>;
+    using FileProtectionInfo = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>;
+    using FileProtectionManager = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::FileProtectionManager>;
+    using FileRevocationManager = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::FileRevocationManager>;
+    using FileUnprotectOptions = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::FileUnprotectOptions>;
+    using ProtectedAccessResumedEventArgs = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>;
+    using ProtectedAccessSuspendingEventArgs = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>;
+    using ProtectedContainerExportResult = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>;
+    using ProtectedContainerImportResult = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>;
+    using ProtectedContentRevokedEventArgs = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>;
+    using ProtectedFileCreateResult = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>;
+    using ProtectionPolicyAuditInfo = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>;
+    using ProtectionPolicyManager = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager>;
+    using ThreadNetworkContext = py::winrt_wrapper<winrt::Windows::Security::EnterpriseData::ThreadNetworkContext>;
+}
+
+namespace py
+{
 }

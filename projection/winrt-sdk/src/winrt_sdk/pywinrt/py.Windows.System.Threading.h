@@ -4,11 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.System.Threading.h>
@@ -16,6 +11,52 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 namespace py::proj::Windows::System::Threading
 {
 }
+
+namespace py
+{
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::System::Threading::WorkItemOptions> = "I";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::System::Threading::WorkItemPriority> = "i";
+
+
+    template<>
+    struct py_type<winrt::Windows::System::Threading::WorkItemOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.WorkItemOptions";
+        static constexpr const char* module_name = "winrt.windows.system.threading";
+        static constexpr const char* type_name = "WorkItemOptions";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::System::Threading::WorkItemPriority>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.WorkItemPriority";
+        static constexpr const char* module_name = "winrt.windows.system.threading";
+        static constexpr const char* type_name = "WorkItemPriority";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::System::Threading::ThreadPool>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.ThreadPool";
+        static constexpr const char* module_name = "winrt.windows.system.threading";
+        static constexpr const char* type_name = "ThreadPool";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::System::Threading::ThreadPoolTimer>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.ThreadPoolTimer";
+        static constexpr const char* module_name = "winrt.windows.system.threading";
+        static constexpr const char* type_name = "ThreadPoolTimer";
+    };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
 
 namespace py::impl::Windows::System::Threading
 {
@@ -124,44 +165,6 @@ namespace py::wrapper::Windows::System::Threading
 
 namespace py
 {
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Threading::WorkItemOptions> = "I";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::System::Threading::WorkItemPriority> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::System::Threading::WorkItemOptions>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.WorkItemOptions";
-        static constexpr const char* module_name = "winrt.windows.system.threading";
-        static constexpr const char* type_name = "WorkItemOptions";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Threading::WorkItemPriority>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.WorkItemPriority";
-        static constexpr const char* module_name = "winrt.windows.system.threading";
-        static constexpr const char* type_name = "WorkItemPriority";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Threading::ThreadPool>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.ThreadPool";
-        static constexpr const char* module_name = "winrt.windows.system.threading";
-        static constexpr const char* type_name = "ThreadPool";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Threading::ThreadPoolTimer>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.ThreadPoolTimer";
-        static constexpr const char* module_name = "winrt.windows.system.threading";
-        static constexpr const char* type_name = "ThreadPoolTimer";
-    };
     template <>
     struct delegate_python_type<winrt::Windows::System::Threading::TimerDestroyedHandler>
     {

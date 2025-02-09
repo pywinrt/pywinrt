@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -21,6 +12,139 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 namespace py::proj::TestComponent
 {
 }
+
+namespace py
+{
+    template<>
+    inline constexpr const char* buffer_format<winrt::TestComponent::Blittable> = "T{B:a:H:b:I:c:Q:d:h:e:i:f:q:g:f:h:d:i:T{I2H8B}:j:}";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::TestComponent::Nested> = "T{T{B:a:H:b:I:c:Q:d:h:e:i:f:q:g:f:h:d:i:T{I2H8B}:j:}:blittable:T{?:a:u:b:P:c:P:d:}:non_blittable:}";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::TestComponent::NonBlittable> = "T{?:a:u:b:P:c:P:d:}";
+
+
+    template<>
+    struct py_type<winrt::TestComponent::Class>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Class";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Class";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::Composable>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Composable";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Composable";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::Derived>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Derived";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Derived";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::OverloadClass>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.OverloadClass";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "OverloadClass";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::Override>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Override";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Override";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::TestRunner>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.TestRunner";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "TestRunner";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::IRequiredFour>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredFour";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "_IRequiredFour";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::IRequiredOne>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredOne";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "_IRequiredOne";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::IRequiredThree>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredThree";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "_IRequiredThree";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::IRequiredTwo>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredTwo";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "_IRequiredTwo";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::ITests>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent._ITests";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "_ITests";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::Blittable>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Blittable";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Blittable";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::Nested>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Nested";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Nested";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::NonBlittable>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.NonBlittable";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "NonBlittable";
+    };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
 
 namespace py::impl::TestComponent
 {
@@ -1877,127 +2001,6 @@ namespace py::wrapper::TestComponent
 
 namespace py
 {
-    template<>
-    inline constexpr const char* buffer_format<winrt::TestComponent::Blittable> = "T{B:a:H:b:I:c:Q:d:h:e:i:f:q:g:f:h:d:i:T{I2H8B}:j:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::TestComponent::Nested> = "T{T{B:a:H:b:I:c:Q:d:h:e:i:f:q:g:f:h:d:i:T{I2H8B}:j:}:blittable:T{?:a:u:b:P:c:P:d:}:non_blittable:}";
-
-    template<>
-    inline constexpr const char* buffer_format<winrt::TestComponent::NonBlittable> = "T{?:a:u:b:P:c:P:d:}";
-
-
-    template<>
-    struct py_type<winrt::TestComponent::Class>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.Class";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "Class";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::Composable>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.Composable";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "Composable";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::Derived>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.Derived";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "Derived";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::OverloadClass>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.OverloadClass";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "OverloadClass";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::Override>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.Override";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "Override";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::TestRunner>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.TestRunner";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "TestRunner";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::IRequiredFour>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredFour";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "_IRequiredFour";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::IRequiredOne>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredOne";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "_IRequiredOne";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::IRequiredThree>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredThree";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "_IRequiredThree";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::IRequiredTwo>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent._IRequiredTwo";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "_IRequiredTwo";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::ITests>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent._ITests";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "_ITests";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::Blittable>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.Blittable";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "Blittable";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::Nested>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.Nested";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "Nested";
-    };
-
-    template<>
-    struct py_type<winrt::TestComponent::NonBlittable>
-    {
-        static constexpr std::string_view qualified_name = "winrt.testcomponent.NonBlittable";
-        static constexpr const char* module_name = "winrt.testcomponent";
-        static constexpr const char* type_name = "NonBlittable";
-    };
     template <>
     struct delegate_python_type<winrt::TestComponent::Array10Handler>
     {

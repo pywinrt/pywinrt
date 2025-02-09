@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,64 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Graphics::Printing
 {
-}
-
-namespace py::impl::Windows::Graphics::Printing
-{
-    struct PrintTaskSourceRequestedHandler
-    {
-        static winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Graphics::Printing
-{
-    using PrintManager = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintManager>;
-    using PrintPageInfo = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintPageInfo>;
-    using PrintPageRange = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintPageRange>;
-    using PrintPageRangeOptions = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintPageRangeOptions>;
-    using PrintTask = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTask>;
-    using PrintTaskCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskCompletedEventArgs>;
-    using PrintTaskOptions = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskOptions>;
-    using PrintTaskProgressingEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskProgressingEventArgs>;
-    using PrintTaskRequest = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskRequest>;
-    using PrintTaskRequestedDeferral = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskRequestedDeferral>;
-    using PrintTaskRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskRequestedEventArgs>;
-    using PrintTaskSourceRequestedArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>;
-    using PrintTaskSourceRequestedDeferral = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>;
-    using StandardPrintTaskOptions = py::winrt_wrapper<winrt::Windows::Graphics::Printing::StandardPrintTaskOptions>;
-    using IPrintDocumentSource = py::winrt_wrapper<winrt::Windows::Graphics::Printing::IPrintDocumentSource>;
-    using IPrintTaskOptionsCore = py::winrt_wrapper<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>;
-    using IPrintTaskOptionsCoreProperties = py::winrt_wrapper<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>;
-    using IPrintTaskOptionsCoreUIConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>;
-    using PrintPageDescription = py::winrt_struct_wrapper<winrt::Windows::Graphics::Printing::PrintPageDescription>;
 }
 
 namespace py
@@ -379,6 +304,84 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintPageDescription";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Graphics::Printing
+{
+    struct PrintTaskSourceRequestedHandler
+    {
+        static winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Graphics::Printing
+{
+    using PrintManager = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintManager>;
+    using PrintPageInfo = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintPageInfo>;
+    using PrintPageRange = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintPageRange>;
+    using PrintPageRangeOptions = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintPageRangeOptions>;
+    using PrintTask = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTask>;
+    using PrintTaskCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskCompletedEventArgs>;
+    using PrintTaskOptions = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskOptions>;
+    using PrintTaskProgressingEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskProgressingEventArgs>;
+    using PrintTaskRequest = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskRequest>;
+    using PrintTaskRequestedDeferral = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskRequestedDeferral>;
+    using PrintTaskRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskRequestedEventArgs>;
+    using PrintTaskSourceRequestedArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>;
+    using PrintTaskSourceRequestedDeferral = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>;
+    using StandardPrintTaskOptions = py::winrt_wrapper<winrt::Windows::Graphics::Printing::StandardPrintTaskOptions>;
+    using IPrintDocumentSource = py::winrt_wrapper<winrt::Windows::Graphics::Printing::IPrintDocumentSource>;
+    using IPrintTaskOptionsCore = py::winrt_wrapper<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>;
+    using IPrintTaskOptionsCoreProperties = py::winrt_wrapper<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>;
+    using IPrintTaskOptionsCoreUIConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>;
+    using PrintPageDescription = py::winrt_struct_wrapper<winrt::Windows::Graphics::Printing::PrintPageDescription>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedHandler>
     {

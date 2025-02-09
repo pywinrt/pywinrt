@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,19 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::I2c::Provider
 {
-}
-
-namespace py::impl::Windows::Devices::I2c::Provider
-{
-}
-
-namespace py::wrapper::Windows::Devices::I2c::Provider
-{
-    using ProviderI2cConnectionSettings = py::winrt_wrapper<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>;
-    using II2cControllerProvider = py::winrt_wrapper<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>;
-    using II2cDeviceProvider = py::winrt_wrapper<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>;
-    using II2cProvider = py::winrt_wrapper<winrt::Windows::Devices::I2c::Provider::II2cProvider>;
-    using ProviderI2cTransferResult = py::winrt_struct_wrapper<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>;
 }
 
 namespace py
@@ -113,4 +91,29 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.i2c.provider";
         static constexpr const char* type_name = "ProviderI2cTransferResult";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::I2c::Provider
+{
+}
+
+namespace py::wrapper::Windows::Devices::I2c::Provider
+{
+    using ProviderI2cConnectionSettings = py::winrt_wrapper<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>;
+    using II2cControllerProvider = py::winrt_wrapper<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>;
+    using II2cDeviceProvider = py::winrt_wrapper<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>;
+    using II2cProvider = py::winrt_wrapper<winrt::Windows::Devices::I2c::Provider::II2cProvider>;
+    using ProviderI2cTransferResult = py::winrt_struct_wrapper<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferResult>;
+}
+
+namespace py
+{
 }

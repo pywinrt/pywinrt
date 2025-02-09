@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.h>
@@ -25,25 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Globalization
 {
-}
-
-namespace py::impl::Windows::Globalization
-{
-}
-
-namespace py::wrapper::Windows::Globalization
-{
-    using ApplicationLanguages = py::winrt_wrapper<winrt::Windows::Globalization::ApplicationLanguages>;
-    using Calendar = py::winrt_wrapper<winrt::Windows::Globalization::Calendar>;
-    using CalendarIdentifiers = py::winrt_wrapper<winrt::Windows::Globalization::CalendarIdentifiers>;
-    using ClockIdentifiers = py::winrt_wrapper<winrt::Windows::Globalization::ClockIdentifiers>;
-    using CurrencyAmount = py::winrt_wrapper<winrt::Windows::Globalization::CurrencyAmount>;
-    using CurrencyIdentifiers = py::winrt_wrapper<winrt::Windows::Globalization::CurrencyIdentifiers>;
-    using GeographicRegion = py::winrt_wrapper<winrt::Windows::Globalization::GeographicRegion>;
-    using JapanesePhoneme = py::winrt_wrapper<winrt::Windows::Globalization::JapanesePhoneme>;
-    using JapanesePhoneticAnalyzer = py::winrt_wrapper<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>;
-    using Language = py::winrt_wrapper<winrt::Windows::Globalization::Language>;
-    using NumeralSystemIdentifiers = py::winrt_wrapper<winrt::Windows::Globalization::NumeralSystemIdentifiers>;
 }
 
 namespace py
@@ -158,4 +126,39 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "NumeralSystemIdentifiers";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Globalization
+{
+}
+
+namespace py::wrapper::Windows::Globalization
+{
+    using ApplicationLanguages = py::winrt_wrapper<winrt::Windows::Globalization::ApplicationLanguages>;
+    using Calendar = py::winrt_wrapper<winrt::Windows::Globalization::Calendar>;
+    using CalendarIdentifiers = py::winrt_wrapper<winrt::Windows::Globalization::CalendarIdentifiers>;
+    using ClockIdentifiers = py::winrt_wrapper<winrt::Windows::Globalization::ClockIdentifiers>;
+    using CurrencyAmount = py::winrt_wrapper<winrt::Windows::Globalization::CurrencyAmount>;
+    using CurrencyIdentifiers = py::winrt_wrapper<winrt::Windows::Globalization::CurrencyIdentifiers>;
+    using GeographicRegion = py::winrt_wrapper<winrt::Windows::Globalization::GeographicRegion>;
+    using JapanesePhoneme = py::winrt_wrapper<winrt::Windows::Globalization::JapanesePhoneme>;
+    using JapanesePhoneticAnalyzer = py::winrt_wrapper<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>;
+    using Language = py::winrt_wrapper<winrt::Windows::Globalization::Language>;
+    using NumeralSystemIdentifiers = py::winrt_wrapper<winrt::Windows::Globalization::NumeralSystemIdentifiers>;
+}
+
+namespace py
+{
 }

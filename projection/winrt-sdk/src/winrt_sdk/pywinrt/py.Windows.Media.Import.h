@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -30,28 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Import
 {
-}
-
-namespace py::impl::Windows::Media::Import
-{
-}
-
-namespace py::wrapper::Windows::Media::Import
-{
-    using PhotoImportDeleteImportedItemsFromSourceResult = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>;
-    using PhotoImportFindItemsResult = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportFindItemsResult>;
-    using PhotoImportImportItemsResult = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportImportItemsResult>;
-    using PhotoImportItem = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportItem>;
-    using PhotoImportItemImportedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>;
-    using PhotoImportManager = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportManager>;
-    using PhotoImportOperation = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportOperation>;
-    using PhotoImportSelectionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>;
-    using PhotoImportSession = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportSession>;
-    using PhotoImportSidecar = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportSidecar>;
-    using PhotoImportSource = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportSource>;
-    using PhotoImportStorageMedium = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportStorageMedium>;
-    using PhotoImportVideoSegment = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportVideoSegment>;
-    using PhotoImportProgress = py::winrt_struct_wrapper<winrt::Windows::Media::Import::PhotoImportProgress>;
 }
 
 namespace py
@@ -303,4 +264,46 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.import_";
         static constexpr const char* type_name = "PhotoImportProgress";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media::Import
+{
+}
+
+namespace py::wrapper::Windows::Media::Import
+{
+    using PhotoImportDeleteImportedItemsFromSourceResult = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>;
+    using PhotoImportFindItemsResult = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportFindItemsResult>;
+    using PhotoImportImportItemsResult = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportImportItemsResult>;
+    using PhotoImportItem = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportItem>;
+    using PhotoImportItemImportedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>;
+    using PhotoImportManager = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportManager>;
+    using PhotoImportOperation = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportOperation>;
+    using PhotoImportSelectionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>;
+    using PhotoImportSession = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportSession>;
+    using PhotoImportSidecar = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportSidecar>;
+    using PhotoImportSource = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportSource>;
+    using PhotoImportStorageMedium = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportStorageMedium>;
+    using PhotoImportVideoSegment = py::winrt_wrapper<winrt::Windows::Media::Import::PhotoImportVideoSegment>;
+    using PhotoImportProgress = py::winrt_struct_wrapper<winrt::Windows::Media::Import::PhotoImportProgress>;
+}
+
+namespace py
+{
 }

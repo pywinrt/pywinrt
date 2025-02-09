@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Printers.h")
-#include "py.Windows.Devices.Printers.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Printing.PrintTicket.h")
-#include "py.Windows.Graphics.Printing.PrintTicket.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Devices.Printers.h>
 #include <winrt/Windows.Foundation.h>
@@ -50,48 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Graphics::Printing::Workflow
 {
-}
-
-namespace py::impl::Windows::Graphics::Printing::Workflow
-{
-}
-
-namespace py::wrapper::Windows::Graphics::Printing::Workflow
-{
-    using PrintWorkflowBackgroundSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession>;
-    using PrintWorkflowBackgroundSetupRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs>;
-    using PrintWorkflowConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration>;
-    using PrintWorkflowForegroundSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession>;
-    using PrintWorkflowForegroundSetupRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>;
-    using PrintWorkflowJobActivatedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>;
-    using PrintWorkflowJobBackgroundSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>;
-    using PrintWorkflowJobIssueDetectedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs>;
-    using PrintWorkflowJobNotificationEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>;
-    using PrintWorkflowJobStartingEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>;
-    using PrintWorkflowJobTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>;
-    using PrintWorkflowJobUISession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession>;
-    using PrintWorkflowObjectModelSourceFileContent = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent>;
-    using PrintWorkflowObjectModelTargetPackage = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage>;
-    using PrintWorkflowPdlConverter = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter>;
-    using PrintWorkflowPdlDataAvailableEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs>;
-    using PrintWorkflowPdlModificationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs>;
-    using PrintWorkflowPdlSourceContent = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent>;
-    using PrintWorkflowPdlTargetStream = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream>;
-    using PrintWorkflowPrinterJob = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob>;
-    using PrintWorkflowSourceContent = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent>;
-    using PrintWorkflowSpoolStreamContent = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent>;
-    using PrintWorkflowStreamTarget = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget>;
-    using PrintWorkflowSubmittedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs>;
-    using PrintWorkflowSubmittedOperation = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation>;
-    using PrintWorkflowTarget = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget>;
-    using PrintWorkflowTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails>;
-    using PrintWorkflowUIActivatedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs>;
-    using PrintWorkflowUILauncher = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher>;
-    using PrintWorkflowVirtualPrinterDataAvailableEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterDataAvailableEventArgs>;
-    using PrintWorkflowVirtualPrinterSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterSession>;
-    using PrintWorkflowVirtualPrinterTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterTriggerDetails>;
-    using PrintWorkflowVirtualPrinterUIEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterUIEventArgs>;
-    using PrintWorkflowXpsDataAvailableEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs>;
 }
 
 namespace py
@@ -467,4 +392,82 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowXpsDataAvailableEventArgs";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Activation.h")
+#include "py.Windows.ApplicationModel.Activation.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Printers.h")
+#include "py.Windows.Devices.Printers.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Printing.PrintTicket.h")
+#include "py.Windows.Graphics.Printing.PrintTicket.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Graphics::Printing::Workflow
+{
+}
+
+namespace py::wrapper::Windows::Graphics::Printing::Workflow
+{
+    using PrintWorkflowBackgroundSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession>;
+    using PrintWorkflowBackgroundSetupRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs>;
+    using PrintWorkflowConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration>;
+    using PrintWorkflowForegroundSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession>;
+    using PrintWorkflowForegroundSetupRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>;
+    using PrintWorkflowJobActivatedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>;
+    using PrintWorkflowJobBackgroundSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>;
+    using PrintWorkflowJobIssueDetectedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs>;
+    using PrintWorkflowJobNotificationEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>;
+    using PrintWorkflowJobStartingEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>;
+    using PrintWorkflowJobTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>;
+    using PrintWorkflowJobUISession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession>;
+    using PrintWorkflowObjectModelSourceFileContent = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent>;
+    using PrintWorkflowObjectModelTargetPackage = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage>;
+    using PrintWorkflowPdlConverter = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter>;
+    using PrintWorkflowPdlDataAvailableEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs>;
+    using PrintWorkflowPdlModificationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs>;
+    using PrintWorkflowPdlSourceContent = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent>;
+    using PrintWorkflowPdlTargetStream = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream>;
+    using PrintWorkflowPrinterJob = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob>;
+    using PrintWorkflowSourceContent = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent>;
+    using PrintWorkflowSpoolStreamContent = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent>;
+    using PrintWorkflowStreamTarget = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget>;
+    using PrintWorkflowSubmittedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs>;
+    using PrintWorkflowSubmittedOperation = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation>;
+    using PrintWorkflowTarget = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget>;
+    using PrintWorkflowTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails>;
+    using PrintWorkflowUIActivatedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs>;
+    using PrintWorkflowUILauncher = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher>;
+    using PrintWorkflowVirtualPrinterDataAvailableEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterDataAvailableEventArgs>;
+    using PrintWorkflowVirtualPrinterSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterSession>;
+    using PrintWorkflowVirtualPrinterTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterTriggerDetails>;
+    using PrintWorkflowVirtualPrinterUIEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterUIEventArgs>;
+    using PrintWorkflowXpsDataAvailableEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs>;
+}
+
+namespace py
+{
 }

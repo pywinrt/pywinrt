@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.Diagnostics.h")
-#include "py.Windows.System.Diagnostics.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.Diagnostics.h>
@@ -30,20 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Web::Http::Diagnostics
 {
-}
-
-namespace py::impl::Windows::Web::Http::Diagnostics
-{
-}
-
-namespace py::wrapper::Windows::Web::Http::Diagnostics
-{
-    using HttpDiagnosticProvider = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>;
-    using HttpDiagnosticProviderRequestResponseCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>;
-    using HttpDiagnosticProviderRequestResponseTimestamps = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>;
-    using HttpDiagnosticProviderRequestSentEventArgs = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>;
-    using HttpDiagnosticProviderResponseReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>;
-    using HttpDiagnosticSourceLocation = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>;
 }
 
 namespace py
@@ -107,4 +76,38 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
         static constexpr const char* type_name = "HttpDiagnosticSourceLocation";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.Diagnostics.h")
+#include "py.Windows.System.Diagnostics.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+namespace py::impl::Windows::Web::Http::Diagnostics
+{
+}
+
+namespace py::wrapper::Windows::Web::Http::Diagnostics
+{
+    using HttpDiagnosticProvider = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>;
+    using HttpDiagnosticProviderRequestResponseCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>;
+    using HttpDiagnosticProviderRequestResponseTimestamps = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>;
+    using HttpDiagnosticProviderRequestSentEventArgs = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>;
+    using HttpDiagnosticProviderResponseReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>;
+    using HttpDiagnosticSourceLocation = py::winrt_wrapper<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>;
+}
+
+namespace py
+{
 }

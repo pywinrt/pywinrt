@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Phone.Media.Devices.h>
 
 namespace py::proj::Windows::Phone::Media::Devices
 {
-}
-
-namespace py::impl::Windows::Phone::Media::Devices
-{
-}
-
-namespace py::wrapper::Windows::Phone::Media::Devices
-{
-    using AudioRoutingManager = py::winrt_wrapper<winrt::Windows::Phone::Media::Devices::AudioRoutingManager>;
 }
 
 namespace py
@@ -58,4 +44,21 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.media.devices";
         static constexpr const char* type_name = "AudioRoutingManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::Phone::Media::Devices
+{
+}
+
+namespace py::wrapper::Windows::Phone::Media::Devices
+{
+    using AudioRoutingManager = py::winrt_wrapper<winrt::Windows::Phone::Media::Devices::AudioRoutingManager>;
+}
+
+namespace py
+{
 }

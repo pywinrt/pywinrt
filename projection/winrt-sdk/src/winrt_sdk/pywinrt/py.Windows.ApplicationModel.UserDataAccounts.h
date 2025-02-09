@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Appointments.h")
-#include "py.Windows.ApplicationModel.Appointments.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.h")
-#include "py.Windows.ApplicationModel.Contacts.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Email.h")
-#include "py.Windows.ApplicationModel.Email.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.UserDataTasks.h")
-#include "py.Windows.ApplicationModel.UserDataTasks.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Appointments.h>
 #include <winrt/Windows.ApplicationModel.Contacts.h>
 #include <winrt/Windows.ApplicationModel.Email.h>
@@ -50,19 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::UserDataAccounts
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::UserDataAccounts
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::UserDataAccounts
-{
-    using UserDataAccount = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>;
-    using UserDataAccountManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager>;
-    using UserDataAccountManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>;
-    using UserDataAccountStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>;
-    using UserDataAccountStoreChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>;
 }
 
 namespace py
@@ -140,4 +94,53 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccountStoreChangedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Appointments.h")
+#include "py.Windows.ApplicationModel.Appointments.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Contacts.h")
+#include "py.Windows.ApplicationModel.Contacts.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Email.h")
+#include "py.Windows.ApplicationModel.Email.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.UserDataTasks.h")
+#include "py.Windows.ApplicationModel.UserDataTasks.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::UserDataAccounts
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::UserDataAccounts
+{
+    using UserDataAccount = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>;
+    using UserDataAccountManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager>;
+    using UserDataAccountManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>;
+    using UserDataAccountStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>;
+    using UserDataAccountStoreChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>;
+}
+
+namespace py
+{
 }

@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.h>
@@ -30,56 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Graphics::Display
 {
-}
-
-namespace py::impl::Windows::Graphics::Display
-{
-    struct DisplayPropertiesEventHandler
-    {
-        static winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Graphics::Display
-{
-    using AdvancedColorInfo = py::winrt_wrapper<winrt::Windows::Graphics::Display::AdvancedColorInfo>;
-    using BrightnessOverride = py::winrt_wrapper<winrt::Windows::Graphics::Display::BrightnessOverride>;
-    using BrightnessOverrideSettings = py::winrt_wrapper<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>;
-    using ColorOverrideSettings = py::winrt_wrapper<winrt::Windows::Graphics::Display::ColorOverrideSettings>;
-    using DisplayEnhancementOverride = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>;
-    using DisplayEnhancementOverrideCapabilities = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>;
-    using DisplayEnhancementOverrideCapabilitiesChangedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>;
-    using DisplayInformation = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayInformation>;
-    using DisplayProperties = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayProperties>;
-    using DisplayServices = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayServices>;
-    using NitRange = py::winrt_struct_wrapper<winrt::Windows::Graphics::Display::NitRange>;
 }
 
 namespace py
@@ -263,6 +196,76 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.display";
         static constexpr const char* type_name = "NitRange";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Graphics::Display
+{
+    struct DisplayPropertiesEventHandler
+    {
+        static winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Graphics::Display
+{
+    using AdvancedColorInfo = py::winrt_wrapper<winrt::Windows::Graphics::Display::AdvancedColorInfo>;
+    using BrightnessOverride = py::winrt_wrapper<winrt::Windows::Graphics::Display::BrightnessOverride>;
+    using BrightnessOverrideSettings = py::winrt_wrapper<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>;
+    using ColorOverrideSettings = py::winrt_wrapper<winrt::Windows::Graphics::Display::ColorOverrideSettings>;
+    using DisplayEnhancementOverride = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>;
+    using DisplayEnhancementOverrideCapabilities = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>;
+    using DisplayEnhancementOverrideCapabilitiesChangedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>;
+    using DisplayInformation = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayInformation>;
+    using DisplayProperties = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayProperties>;
+    using DisplayServices = py::winrt_wrapper<winrt::Windows::Graphics::Display::DisplayServices>;
+    using NitRange = py::winrt_struct_wrapper<winrt::Windows::Graphics::Display::NitRange>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>
     {

@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Services.Maps.h")
-#include "py.Windows.Services.Maps.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -35,25 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Services::Maps::Guidance
 {
-}
-
-namespace py::impl::Windows::Services::Maps::Guidance
-{
-}
-
-namespace py::wrapper::Windows::Services::Maps::Guidance
-{
-    using GuidanceAudioNotificationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>;
-    using GuidanceLaneInfo = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo>;
-    using GuidanceManeuver = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceManeuver>;
-    using GuidanceMapMatchedCoordinate = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>;
-    using GuidanceNavigator = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator>;
-    using GuidanceReroutedEventArgs = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>;
-    using GuidanceRoadSegment = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment>;
-    using GuidanceRoadSignpost = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost>;
-    using GuidanceRoute = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>;
-    using GuidanceTelemetryCollector = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>;
-    using GuidanceUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>;
 }
 
 namespace py
@@ -212,4 +172,47 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.services.maps.guidance";
         static constexpr const char* type_name = "GuidanceUpdatedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Devices.Geolocation.h")
+#include "py.Windows.Devices.Geolocation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Services.Maps.h")
+#include "py.Windows.Services.Maps.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::Services::Maps::Guidance
+{
+}
+
+namespace py::wrapper::Windows::Services::Maps::Guidance
+{
+    using GuidanceAudioNotificationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>;
+    using GuidanceLaneInfo = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo>;
+    using GuidanceManeuver = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceManeuver>;
+    using GuidanceMapMatchedCoordinate = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>;
+    using GuidanceNavigator = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator>;
+    using GuidanceReroutedEventArgs = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>;
+    using GuidanceRoadSegment = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment>;
+    using GuidanceRoadSignpost = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost>;
+    using GuidanceRoute = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>;
+    using GuidanceTelemetryCollector = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>;
+    using GuidanceUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>;
+}
+
+namespace py
+{
 }

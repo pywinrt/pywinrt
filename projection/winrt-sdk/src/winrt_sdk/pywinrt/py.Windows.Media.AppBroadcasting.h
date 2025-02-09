@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.System.h>
 
@@ -20,18 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::AppBroadcasting
 {
-}
-
-namespace py::impl::Windows::Media::AppBroadcasting
-{
-}
-
-namespace py::wrapper::Windows::Media::AppBroadcasting
-{
-    using AppBroadcastingMonitor = py::winrt_wrapper<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor>;
-    using AppBroadcastingStatus = py::winrt_wrapper<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>;
-    using AppBroadcastingStatusDetails = py::winrt_wrapper<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>;
-    using AppBroadcastingUI = py::winrt_wrapper<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>;
 }
 
 namespace py
@@ -68,4 +47,28 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
         static constexpr const char* type_name = "AppBroadcastingUI";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Media::AppBroadcasting
+{
+}
+
+namespace py::wrapper::Windows::Media::AppBroadcasting
+{
+    using AppBroadcastingMonitor = py::winrt_wrapper<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor>;
+    using AppBroadcastingStatus = py::winrt_wrapper<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>;
+    using AppBroadcastingStatusDetails = py::winrt_wrapper<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>;
+    using AppBroadcastingUI = py::winrt_wrapper<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>;
+}
+
+namespace py
+{
 }

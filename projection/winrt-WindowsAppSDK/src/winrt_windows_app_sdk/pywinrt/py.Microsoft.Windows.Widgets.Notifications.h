@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.Windows.Widgets.Notifications.h>
 
 namespace py::proj::Microsoft::Windows::Widgets::Notifications
 {
-}
-
-namespace py::impl::Microsoft::Windows::Widgets::Notifications
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::Widgets::Notifications
-{
-    using FeedAnnouncement = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement>;
-    using FeedAnnouncementInvokedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncementInvokedArgs>;
 }
 
 namespace py
@@ -67,4 +52,22 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.notifications";
         static constexpr const char* type_name = "FeedAnnouncementInvokedArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::Widgets::Notifications
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::Widgets::Notifications
+{
+    using FeedAnnouncement = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement>;
+    using FeedAnnouncementInvokedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncementInvokedArgs>;
+}
+
+namespace py
+{
 }

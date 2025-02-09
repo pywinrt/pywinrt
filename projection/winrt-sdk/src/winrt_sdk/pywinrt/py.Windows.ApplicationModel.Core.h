@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.Activation.h")
-#include "py.Windows.ApplicationModel.Activation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Foundation.h>
@@ -40,24 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Core
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Core
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Core
-{
-    using AppListEntry = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::AppListEntry>;
-    using CoreApplication = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::CoreApplication>;
-    using CoreApplicationView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::CoreApplicationView>;
-    using CoreApplicationViewTitleBar = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>;
-    using HostedViewClosingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>;
-    using UnhandledError = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::UnhandledError>;
-    using UnhandledErrorDetectedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>;
-    using ICoreApplicationUnhandledError = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>;
-    using IFrameworkView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::IFrameworkView>;
-    using IFrameworkViewSource = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>;
 }
 
 namespace py
@@ -153,4 +110,50 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "_IFrameworkViewSource";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.Activation.h")
+#include "py.Windows.ApplicationModel.Activation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Core
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Core
+{
+    using AppListEntry = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::AppListEntry>;
+    using CoreApplication = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::CoreApplication>;
+    using CoreApplicationView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::CoreApplicationView>;
+    using CoreApplicationViewTitleBar = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>;
+    using HostedViewClosingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>;
+    using UnhandledError = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::UnhandledError>;
+    using UnhandledErrorDetectedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>;
+    using ICoreApplicationUnhandledError = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>;
+    using IFrameworkView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::IFrameworkView>;
+    using IFrameworkViewSource = py::winrt_wrapper<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>;
+}
+
+namespace py
+{
 }

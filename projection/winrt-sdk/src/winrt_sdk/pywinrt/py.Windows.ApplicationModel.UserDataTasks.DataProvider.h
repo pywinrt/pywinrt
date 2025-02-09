@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.UserDataTasks.h")
-#include "py.Windows.ApplicationModel.UserDataTasks.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.UserDataTasks.h>
 #include <winrt/Windows.Foundation.h>
 
@@ -20,26 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::UserDataTasks::DataProvider
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::UserDataTasks::DataProvider
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider
-{
-    using UserDataTaskDataProviderConnection = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection>;
-    using UserDataTaskDataProviderTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails>;
-    using UserDataTaskListCompleteTaskRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest>;
-    using UserDataTaskListCompleteTaskRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs>;
-    using UserDataTaskListCreateOrUpdateTaskRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest>;
-    using UserDataTaskListCreateOrUpdateTaskRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs>;
-    using UserDataTaskListDeleteTaskRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest>;
-    using UserDataTaskListDeleteTaskRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs>;
-    using UserDataTaskListSkipOccurrenceRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest>;
-    using UserDataTaskListSkipOccurrenceRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs>;
-    using UserDataTaskListSyncManagerSyncRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest>;
-    using UserDataTaskListSyncManagerSyncRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs>;
 }
 
 namespace py
@@ -140,4 +111,36 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks.dataprovider";
         static constexpr const char* type_name = "UserDataTaskListSyncManagerSyncRequestEventArgs";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.UserDataTasks.h")
+#include "py.Windows.ApplicationModel.UserDataTasks.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::UserDataTasks::DataProvider
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider
+{
+    using UserDataTaskDataProviderConnection = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection>;
+    using UserDataTaskDataProviderTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails>;
+    using UserDataTaskListCompleteTaskRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest>;
+    using UserDataTaskListCompleteTaskRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs>;
+    using UserDataTaskListCreateOrUpdateTaskRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest>;
+    using UserDataTaskListCreateOrUpdateTaskRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs>;
+    using UserDataTaskListDeleteTaskRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest>;
+    using UserDataTaskListDeleteTaskRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs>;
+    using UserDataTaskListSkipOccurrenceRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest>;
+    using UserDataTaskListSkipOccurrenceRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs>;
+    using UserDataTaskListSyncManagerSyncRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest>;
+    using UserDataTaskListSyncManagerSyncRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs>;
+}
+
+namespace py
+{
 }

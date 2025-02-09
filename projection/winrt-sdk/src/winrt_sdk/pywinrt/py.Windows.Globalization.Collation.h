@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Globalization.Collation.h>
 
 namespace py::proj::Windows::Globalization::Collation
 {
-}
-
-namespace py::impl::Windows::Globalization::Collation
-{
-}
-
-namespace py::wrapper::Windows::Globalization::Collation
-{
-    using CharacterGrouping = py::winrt_wrapper<winrt::Windows::Globalization::Collation::CharacterGrouping>;
-    using CharacterGroupings = py::winrt_wrapper<winrt::Windows::Globalization::Collation::CharacterGroupings>;
 }
 
 namespace py
@@ -45,4 +30,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.globalization.collation";
         static constexpr const char* type_name = "CharacterGroupings";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Globalization::Collation
+{
+}
+
+namespace py::wrapper::Windows::Globalization::Collation
+{
+    using CharacterGrouping = py::winrt_wrapper<winrt::Windows::Globalization::Collation::CharacterGrouping>;
+    using CharacterGroupings = py::winrt_wrapper<winrt::Windows::Globalization::Collation::CharacterGroupings>;
+}
+
+namespace py
+{
 }

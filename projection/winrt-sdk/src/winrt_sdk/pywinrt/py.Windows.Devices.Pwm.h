@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Pwm.Provider.h")
-#include "py.Windows.Devices.Pwm.Provider.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Devices.Pwm.Provider.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,16 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Pwm
 {
-}
-
-namespace py::impl::Windows::Devices::Pwm
-{
-}
-
-namespace py::wrapper::Windows::Devices::Pwm
-{
-    using PwmController = py::winrt_wrapper<winrt::Windows::Devices::Pwm::PwmController>;
-    using PwmPin = py::winrt_wrapper<winrt::Windows::Devices::Pwm::PwmPin>;
 }
 
 namespace py
@@ -66,4 +43,30 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.pwm";
         static constexpr const char* type_name = "PwmPin";
     };
+}
+
+#if __has_include("py.Windows.Devices.Pwm.Provider.h")
+#include "py.Windows.Devices.Pwm.Provider.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Pwm
+{
+}
+
+namespace py::wrapper::Windows::Devices::Pwm
+{
+    using PwmController = py::winrt_wrapper<winrt::Windows::Devices::Pwm::PwmController>;
+    using PwmPin = py::winrt_wrapper<winrt::Windows::Devices::Pwm::PwmPin>;
+}
+
+namespace py
+{
 }

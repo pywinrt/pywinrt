@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Perception.h")
-#include "py.Windows.Perception.h"
-#endif
-
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
-#endif
-
-#if __has_include("py.Windows.UI.Input.h")
-#include "py.Windows.UI.Input.h"
-#endif
-
-#if __has_include("py.Windows.UI.Input.Spatial.h")
-#include "py.Windows.UI.Input.Spatial.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Perception.h>
@@ -40,21 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Perception::People
 {
-}
-
-namespace py::impl::Windows::Perception::People
-{
-}
-
-namespace py::wrapper::Windows::Perception::People
-{
-    using EyesPose = py::winrt_wrapper<winrt::Windows::Perception::People::EyesPose>;
-    using HandMeshObserver = py::winrt_wrapper<winrt::Windows::Perception::People::HandMeshObserver>;
-    using HandMeshVertexState = py::winrt_wrapper<winrt::Windows::Perception::People::HandMeshVertexState>;
-    using HandPose = py::winrt_wrapper<winrt::Windows::Perception::People::HandPose>;
-    using HeadPose = py::winrt_wrapper<winrt::Windows::Perception::People::HeadPose>;
-    using HandMeshVertex = py::winrt_struct_wrapper<winrt::Windows::Perception::People::HandMeshVertex>;
-    using JointPose = py::winrt_struct_wrapper<winrt::Windows::Perception::People::JointPose>;
 }
 
 namespace py
@@ -143,4 +103,47 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.perception.people";
         static constexpr const char* type_name = "JointPose";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Perception.h")
+#include "py.Windows.Perception.h"
+#endif
+
+#if __has_include("py.Windows.Perception.Spatial.h")
+#include "py.Windows.Perception.Spatial.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.h")
+#include "py.Windows.UI.Input.h"
+#endif
+
+#if __has_include("py.Windows.UI.Input.Spatial.h")
+#include "py.Windows.UI.Input.Spatial.h"
+#endif
+
+namespace py::impl::Windows::Perception::People
+{
+}
+
+namespace py::wrapper::Windows::Perception::People
+{
+    using EyesPose = py::winrt_wrapper<winrt::Windows::Perception::People::EyesPose>;
+    using HandMeshObserver = py::winrt_wrapper<winrt::Windows::Perception::People::HandMeshObserver>;
+    using HandMeshVertexState = py::winrt_wrapper<winrt::Windows::Perception::People::HandMeshVertexState>;
+    using HandPose = py::winrt_wrapper<winrt::Windows::Perception::People::HandPose>;
+    using HeadPose = py::winrt_wrapper<winrt::Windows::Perception::People::HeadPose>;
+    using HandMeshVertex = py::winrt_struct_wrapper<winrt::Windows::Perception::People::HandMeshVertex>;
+    using JointPose = py::winrt_struct_wrapper<winrt::Windows::Perception::People::JointPose>;
+}
+
+namespace py
+{
 }

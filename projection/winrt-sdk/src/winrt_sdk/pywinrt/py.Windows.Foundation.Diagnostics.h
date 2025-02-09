@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.h>
 
@@ -20,31 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Foundation::Diagnostics
 {
-}
-
-namespace py::impl::Windows::Foundation::Diagnostics
-{
-}
-
-namespace py::wrapper::Windows::Foundation::Diagnostics
-{
-    using AsyncCausalityTracer = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>;
-    using ErrorDetails = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::ErrorDetails>;
-    using FileLoggingSession = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::FileLoggingSession>;
-    using LogFileGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>;
-    using LoggingActivity = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingActivity>;
-    using LoggingChannel = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingChannel>;
-    using LoggingChannelOptions = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions>;
-    using LoggingFields = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingFields>;
-    using LoggingOptions = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingOptions>;
-    using LoggingSession = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingSession>;
-    using RuntimeBrokerErrorSettings = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings>;
-    using TracingStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>;
-    using IErrorReportingSettings = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>;
-    using IFileLoggingSession = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>;
-    using ILoggingChannel = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>;
-    using ILoggingSession = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::ILoggingSession>;
-    using ILoggingTarget = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>;
 }
 
 namespace py
@@ -273,4 +239,41 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "_ILoggingTarget";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::Foundation::Diagnostics
+{
+}
+
+namespace py::wrapper::Windows::Foundation::Diagnostics
+{
+    using AsyncCausalityTracer = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>;
+    using ErrorDetails = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::ErrorDetails>;
+    using FileLoggingSession = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::FileLoggingSession>;
+    using LogFileGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>;
+    using LoggingActivity = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingActivity>;
+    using LoggingChannel = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingChannel>;
+    using LoggingChannelOptions = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions>;
+    using LoggingFields = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingFields>;
+    using LoggingOptions = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingOptions>;
+    using LoggingSession = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::LoggingSession>;
+    using RuntimeBrokerErrorSettings = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings>;
+    using TracingStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>;
+    using IErrorReportingSettings = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>;
+    using IFileLoggingSession = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>;
+    using ILoggingChannel = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>;
+    using ILoggingSession = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::ILoggingSession>;
+    using ILoggingTarget = py::winrt_wrapper<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>;
+}
+
+namespace py
+{
 }

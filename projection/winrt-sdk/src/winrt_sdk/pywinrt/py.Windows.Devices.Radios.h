@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Radios
 {
-}
-
-namespace py::impl::Windows::Devices::Radios
-{
-}
-
-namespace py::wrapper::Windows::Devices::Radios
-{
-    using Radio = py::winrt_wrapper<winrt::Windows::Devices::Radios::Radio>;
 }
 
 namespace py
@@ -74,4 +56,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.radios";
         static constexpr const char* type_name = "Radio";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Radios
+{
+}
+
+namespace py::wrapper::Windows::Devices::Radios
+{
+    using Radio = py::winrt_wrapper<winrt::Windows::Devices::Radios::Radio>;
+}
+
+namespace py
+{
 }

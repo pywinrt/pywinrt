@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,18 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Haptics
 {
-}
-
-namespace py::impl::Windows::Devices::Haptics
-{
-}
-
-namespace py::wrapper::Windows::Devices::Haptics
-{
-    using KnownSimpleHapticsControllerWaveforms = py::winrt_wrapper<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>;
-    using SimpleHapticsController = py::winrt_wrapper<winrt::Windows::Devices::Haptics::SimpleHapticsController>;
-    using SimpleHapticsControllerFeedback = py::winrt_wrapper<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>;
-    using VibrationDevice = py::winrt_wrapper<winrt::Windows::Devices::Haptics::VibrationDevice>;
 }
 
 namespace py
@@ -79,4 +58,28 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.haptics";
         static constexpr const char* type_name = "VibrationDevice";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Haptics
+{
+}
+
+namespace py::wrapper::Windows::Devices::Haptics
+{
+    using KnownSimpleHapticsControllerWaveforms = py::winrt_wrapper<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>;
+    using SimpleHapticsController = py::winrt_wrapper<winrt::Windows::Devices::Haptics::SimpleHapticsController>;
+    using SimpleHapticsControllerFeedback = py::winrt_wrapper<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>;
+    using VibrationDevice = py::winrt_wrapper<winrt::Windows::Devices::Haptics::VibrationDevice>;
+}
+
+namespace py
+{
 }

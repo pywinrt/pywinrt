@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,121 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Isolation
 {
-}
-
-namespace py::impl::Windows::Security::Isolation
-{
-    struct HostMessageReceivedCallback
-    {
-        static winrt::Windows::Security::Isolation::HostMessageReceivedCallback get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::guid param0, winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable> const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct MessageReceivedCallback
-    {
-        static winrt::Windows::Security::Isolation::MessageReceivedCallback get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::guid param0, winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable> const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Security::Isolation
-{
-    using IsolatedWindowsEnvironment = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment>;
-    using IsolatedWindowsEnvironmentCreateResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult>;
-    using IsolatedWindowsEnvironmentFile = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile>;
-    using IsolatedWindowsEnvironmentHost = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost>;
-    using IsolatedWindowsEnvironmentLaunchFileResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult>;
-    using IsolatedWindowsEnvironmentOptions = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>;
-    using IsolatedWindowsEnvironmentOwnerRegistration = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration>;
-    using IsolatedWindowsEnvironmentOwnerRegistrationData = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData>;
-    using IsolatedWindowsEnvironmentOwnerRegistrationResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult>;
-    using IsolatedWindowsEnvironmentPostMessageResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult>;
-    using IsolatedWindowsEnvironmentProcess = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess>;
-    using IsolatedWindowsEnvironmentShareFileRequestOptions = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions>;
-    using IsolatedWindowsEnvironmentShareFileResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>;
-    using IsolatedWindowsEnvironmentShareFolderRequestOptions = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions>;
-    using IsolatedWindowsEnvironmentShareFolderResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult>;
-    using IsolatedWindowsEnvironmentStartProcessResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult>;
-    using IsolatedWindowsEnvironmentTelemetryParameters = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>;
-    using IsolatedWindowsEnvironmentUserInfo = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo>;
-    using IsolatedWindowsHostMessenger = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger>;
-    using IsolatedWindowsEnvironmentCreateProgress = py::winrt_struct_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>;
 }
 
 namespace py
@@ -478,6 +354,133 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentCreateProgress";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Security::Isolation
+{
+    struct HostMessageReceivedCallback
+    {
+        static winrt::Windows::Security::Isolation::HostMessageReceivedCallback get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::guid param0, winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable> const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct MessageReceivedCallback
+    {
+        static winrt::Windows::Security::Isolation::MessageReceivedCallback get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::guid param0, winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable> const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Security::Isolation
+{
+    using IsolatedWindowsEnvironment = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment>;
+    using IsolatedWindowsEnvironmentCreateResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult>;
+    using IsolatedWindowsEnvironmentFile = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile>;
+    using IsolatedWindowsEnvironmentHost = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost>;
+    using IsolatedWindowsEnvironmentLaunchFileResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult>;
+    using IsolatedWindowsEnvironmentOptions = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>;
+    using IsolatedWindowsEnvironmentOwnerRegistration = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration>;
+    using IsolatedWindowsEnvironmentOwnerRegistrationData = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData>;
+    using IsolatedWindowsEnvironmentOwnerRegistrationResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult>;
+    using IsolatedWindowsEnvironmentPostMessageResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult>;
+    using IsolatedWindowsEnvironmentProcess = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess>;
+    using IsolatedWindowsEnvironmentShareFileRequestOptions = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions>;
+    using IsolatedWindowsEnvironmentShareFileResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>;
+    using IsolatedWindowsEnvironmentShareFolderRequestOptions = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions>;
+    using IsolatedWindowsEnvironmentShareFolderResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult>;
+    using IsolatedWindowsEnvironmentStartProcessResult = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult>;
+    using IsolatedWindowsEnvironmentTelemetryParameters = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>;
+    using IsolatedWindowsEnvironmentUserInfo = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo>;
+    using IsolatedWindowsHostMessenger = py::winrt_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger>;
+    using IsolatedWindowsEnvironmentCreateProgress = py::winrt_struct_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Security::Isolation::HostMessageReceivedCallback>
     {

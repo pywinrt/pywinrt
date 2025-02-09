@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.h")
-#include "py.Windows.UI.Xaml.Automation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.Provider.h")
-#include "py.Windows.UI.Xaml.Automation.Provider.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.h")
-#include "py.Windows.UI.Xaml.Controls.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
-#include "py.Windows.UI.Xaml.Controls.Primitives.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.UI.Xaml.h>
@@ -45,105 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Automation::Peers
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Automation::Peers
-{
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Automation::Peers
-{
-    using AppBarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>;
-    using AppBarButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>;
-    using AppBarToggleButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer>;
-    using AutoSuggestBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer>;
-    using AutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>;
-    using AutomationPeerAnnotation = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>;
-    using ButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer>;
-    using ButtonBaseAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>;
-    using CalendarDatePickerAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>;
-    using CaptureElementAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer>;
-    using CheckBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer>;
-    using ColorPickerSliderAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer>;
-    using ColorSpectrumAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer>;
-    using ComboBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>;
-    using ComboBoxItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer>;
-    using ComboBoxItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>;
-    using DatePickerAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer>;
-    using DatePickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>;
-    using FlipViewAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>;
-    using FlipViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer>;
-    using FlipViewItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>;
-    using FlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer>;
-    using FrameworkElementAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>;
-    using GridViewAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer>;
-    using GridViewHeaderItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer>;
-    using GridViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer>;
-    using GridViewItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>;
-    using GroupItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer>;
-    using HubAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer>;
-    using HubSectionAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>;
-    using HyperlinkButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>;
-    using ImageAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer>;
-    using InkToolbarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>;
-    using ItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>;
-    using ItemsControlAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>;
-    using ListBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>;
-    using ListBoxItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer>;
-    using ListBoxItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>;
-    using ListPickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>;
-    using ListViewAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer>;
-    using ListViewBaseAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>;
-    using ListViewBaseHeaderItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>;
-    using ListViewHeaderItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer>;
-    using ListViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer>;
-    using ListViewItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>;
-    using LoopingSelectorAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>;
-    using LoopingSelectorItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>;
-    using LoopingSelectorItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>;
-    using MapControlAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>;
-    using MediaElementAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer>;
-    using MediaPlayerElementAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer>;
-    using MediaTransportControlsAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer>;
-    using MenuBarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer>;
-    using MenuBarItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>;
-    using MenuFlyoutItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>;
-    using MenuFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer>;
-    using NavigationViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>;
-    using PasswordBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>;
-    using PersonPictureAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>;
-    using PickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>;
-    using PivotAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer>;
-    using PivotItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer>;
-    using PivotItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer>;
-    using ProgressBarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer>;
-    using ProgressRingAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer>;
-    using RadioButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>;
-    using RangeBaseAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>;
-    using RatingControlAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer>;
-    using RepeatButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>;
-    using RichEditBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer>;
-    using RichTextBlockAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>;
-    using RichTextBlockOverflowAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>;
-    using ScrollBarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>;
-    using ScrollViewerAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>;
-    using SearchBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer>;
-    using SelectorAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>;
-    using SelectorItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>;
-    using SemanticZoomAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>;
-    using SettingsFlyoutAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer>;
-    using SliderAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer>;
-    using TextBlockAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer>;
-    using TextBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer>;
-    using ThumbAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer>;
-    using TimePickerAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer>;
-    using TimePickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>;
-    using ToggleButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>;
-    using ToggleMenuFlyoutItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>;
-    using ToggleSwitchAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>;
-    using TreeViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>;
-    using TreeViewListAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>;
-    using RawElementProviderRuntimeId = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>;
 }
 
 namespace py
@@ -1011,4 +883,135 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RawElementProviderRuntimeId";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.h")
+#include "py.Windows.UI.Xaml.Automation.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.Provider.h")
+#include "py.Windows.UI.Xaml.Automation.Provider.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.h")
+#include "py.Windows.UI.Xaml.Controls.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
+#include "py.Windows.UI.Xaml.Controls.Primitives.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Automation::Peers
+{
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Automation::Peers
+{
+    using AppBarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>;
+    using AppBarButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>;
+    using AppBarToggleButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer>;
+    using AutoSuggestBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer>;
+    using AutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>;
+    using AutomationPeerAnnotation = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>;
+    using ButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer>;
+    using ButtonBaseAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>;
+    using CalendarDatePickerAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>;
+    using CaptureElementAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer>;
+    using CheckBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer>;
+    using ColorPickerSliderAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer>;
+    using ColorSpectrumAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer>;
+    using ComboBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>;
+    using ComboBoxItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer>;
+    using ComboBoxItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>;
+    using DatePickerAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer>;
+    using DatePickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>;
+    using FlipViewAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>;
+    using FlipViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer>;
+    using FlipViewItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>;
+    using FlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer>;
+    using FrameworkElementAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>;
+    using GridViewAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer>;
+    using GridViewHeaderItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer>;
+    using GridViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer>;
+    using GridViewItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>;
+    using GroupItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer>;
+    using HubAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer>;
+    using HubSectionAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>;
+    using HyperlinkButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>;
+    using ImageAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer>;
+    using InkToolbarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>;
+    using ItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>;
+    using ItemsControlAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>;
+    using ListBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>;
+    using ListBoxItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer>;
+    using ListBoxItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>;
+    using ListPickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>;
+    using ListViewAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer>;
+    using ListViewBaseAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>;
+    using ListViewBaseHeaderItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>;
+    using ListViewHeaderItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer>;
+    using ListViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer>;
+    using ListViewItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>;
+    using LoopingSelectorAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>;
+    using LoopingSelectorItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>;
+    using LoopingSelectorItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>;
+    using MapControlAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>;
+    using MediaElementAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer>;
+    using MediaPlayerElementAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer>;
+    using MediaTransportControlsAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer>;
+    using MenuBarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer>;
+    using MenuBarItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>;
+    using MenuFlyoutItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>;
+    using MenuFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer>;
+    using NavigationViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>;
+    using PasswordBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>;
+    using PersonPictureAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>;
+    using PickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>;
+    using PivotAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer>;
+    using PivotItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer>;
+    using PivotItemDataAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer>;
+    using ProgressBarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer>;
+    using ProgressRingAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer>;
+    using RadioButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>;
+    using RangeBaseAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>;
+    using RatingControlAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer>;
+    using RepeatButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>;
+    using RichEditBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer>;
+    using RichTextBlockAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>;
+    using RichTextBlockOverflowAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>;
+    using ScrollBarAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>;
+    using ScrollViewerAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>;
+    using SearchBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer>;
+    using SelectorAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>;
+    using SelectorItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>;
+    using SemanticZoomAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>;
+    using SettingsFlyoutAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer>;
+    using SliderAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer>;
+    using TextBlockAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer>;
+    using TextBoxAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer>;
+    using ThumbAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer>;
+    using TimePickerAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer>;
+    using TimePickerFlyoutPresenterAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>;
+    using ToggleButtonAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>;
+    using ToggleMenuFlyoutItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>;
+    using ToggleSwitchAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>;
+    using TreeViewItemAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>;
+    using TreeViewListAutomationPeer = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>;
+    using RawElementProviderRuntimeId = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>;
+}
+
+namespace py
+{
 }

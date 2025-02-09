@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Windows.Foundation.h>
@@ -30,16 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::Graphics::Display
 {
-}
-
-namespace py::impl::Microsoft::Graphics::Display
-{
-}
-
-namespace py::wrapper::Microsoft::Graphics::Display
-{
-    using DisplayAdvancedColorInfo = py::winrt_wrapper<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorInfo>;
-    using DisplayInformation = py::winrt_wrapper<winrt::Microsoft::Graphics::Display::DisplayInformation>;
 }
 
 namespace py
@@ -82,4 +55,34 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayInformation";
     };
+}
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Dispatching.h")
+#include "py.Microsoft.UI.Dispatching.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Microsoft::Graphics::Display
+{
+}
+
+namespace py::wrapper::Microsoft::Graphics::Display
+{
+    using DisplayAdvancedColorInfo = py::winrt_wrapper<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorInfo>;
+    using DisplayInformation = py::winrt_wrapper<winrt::Microsoft::Graphics::Display::DisplayInformation>;
+}
+
+namespace py
+{
 }

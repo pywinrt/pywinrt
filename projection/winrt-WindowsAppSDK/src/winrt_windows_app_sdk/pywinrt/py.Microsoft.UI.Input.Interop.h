@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.Input.h")
-#include "py.Microsoft.UI.Input.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Input.h")
-#include "py.Windows.Devices.Input.h"
-#endif
-
 #include <winrt/Microsoft.UI.Input.h>
 #include <winrt/Windows.Devices.Input.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Input::Interop
 {
-}
-
-namespace py::impl::Microsoft::UI::Input::Interop
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Input::Interop
-{
-    using PenDeviceInterop = py::winrt_wrapper<winrt::Microsoft::UI::Input::Interop::PenDeviceInterop>;
 }
 
 namespace py
@@ -41,4 +23,25 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.input.interop";
         static constexpr const char* type_name = "PenDeviceInterop";
     };
+}
+
+#if __has_include("py.Microsoft.UI.Input.h")
+#include "py.Microsoft.UI.Input.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Input.h")
+#include "py.Windows.Devices.Input.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Input::Interop
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Input::Interop
+{
+    using PenDeviceInterop = py::winrt_wrapper<winrt::Microsoft::UI::Input::Interop::PenDeviceInterop>;
+}
+
+namespace py
+{
 }

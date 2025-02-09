@@ -4,55 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.UI.Dispatching.h>
 
 namespace py::proj::Microsoft::UI::Dispatching
 {
-}
-
-namespace py::impl::Microsoft::UI::Dispatching
-{
-    struct DispatcherQueueHandler
-    {
-        static winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)]()
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Microsoft::UI::Dispatching
-{
-    using DispatcherExitDeferral = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral>;
-    using DispatcherQueue = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherQueue>;
-    using DispatcherQueueController = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherQueueController>;
-    using DispatcherQueueShutdownStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>;
-    using DispatcherQueueTimer = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherQueueTimer>;
 }
 
 namespace py
@@ -119,6 +76,52 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.dispatching";
         static constexpr const char* type_name = "DispatcherQueueTimer";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Dispatching
+{
+    struct DispatcherQueueHandler
+    {
+        static winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)]()
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Microsoft::UI::Dispatching
+{
+    using DispatcherExitDeferral = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral>;
+    using DispatcherQueue = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherQueue>;
+    using DispatcherQueueController = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherQueueController>;
+    using DispatcherQueueShutdownStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>;
+    using DispatcherQueueTimer = py::winrt_wrapper<winrt::Microsoft::UI::Dispatching::DispatcherQueueTimer>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Microsoft::UI::Dispatching::DispatcherQueueHandler>
     {

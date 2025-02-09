@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -35,29 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Resources::Core
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Resources::Core
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Resources::Core
-{
-    using NamedResource = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>;
-    using ResourceCandidate = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>;
-    using ResourceCandidateVectorView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>;
-    using ResourceContext = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>;
-    using ResourceContextLanguagesVectorView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>;
-    using ResourceManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>;
-    using ResourceMap = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>;
-    using ResourceMapIterator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>;
-    using ResourceMapMapView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>;
-    using ResourceMapMapViewIterator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>;
-    using ResourceQualifier = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>;
-    using ResourceQualifierMapView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>;
-    using ResourceQualifierObservableMap = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>;
-    using ResourceQualifierVectorView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>;
-    using ResourceLayoutInfo = py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>;
 }
 
 namespace py
@@ -207,4 +163,51 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceLayoutInfo";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Resources::Core
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Resources::Core
+{
+    using NamedResource = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>;
+    using ResourceCandidate = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>;
+    using ResourceCandidateVectorView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>;
+    using ResourceContext = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>;
+    using ResourceContextLanguagesVectorView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>;
+    using ResourceManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>;
+    using ResourceMap = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>;
+    using ResourceMapIterator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>;
+    using ResourceMapMapView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>;
+    using ResourceMapMapViewIterator = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>;
+    using ResourceQualifier = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>;
+    using ResourceQualifierMapView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>;
+    using ResourceQualifierObservableMap = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>;
+    using ResourceQualifierVectorView = py::winrt_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>;
+    using ResourceLayoutInfo = py::winrt_struct_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>;
+}
+
+namespace py
+{
 }

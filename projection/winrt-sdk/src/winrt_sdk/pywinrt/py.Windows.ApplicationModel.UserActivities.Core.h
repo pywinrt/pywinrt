@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.UserActivities.h")
-#include "py.Windows.ApplicationModel.UserActivities.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.UserActivities.h>
 #include <winrt/Windows.Foundation.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::UserActivities::Core
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::UserActivities::Core
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::UserActivities::Core
-{
-    using CoreUserActivityManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager>;
 }
 
 namespace py
@@ -41,4 +23,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities.core";
         static constexpr const char* type_name = "CoreUserActivityManager";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.UserActivities.h")
+#include "py.Windows.ApplicationModel.UserActivities.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::UserActivities::Core
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::UserActivities::Core
+{
+    using CoreUserActivityManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager>;
+}
+
+namespace py
+{
 }

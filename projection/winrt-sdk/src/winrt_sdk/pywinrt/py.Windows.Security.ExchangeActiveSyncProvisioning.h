@@ -4,28 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Security.ExchangeActiveSyncProvisioning.h>
 
 namespace py::proj::Windows::Security::ExchangeActiveSyncProvisioning
 {
-}
-
-namespace py::impl::Windows::Security::ExchangeActiveSyncProvisioning
-{
-}
-
-namespace py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning
-{
-    using EasClientDeviceInformation = py::winrt_wrapper<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>;
-    using EasClientSecurityPolicy = py::winrt_wrapper<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>;
-    using EasComplianceResults = py::winrt_wrapper<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>;
 }
 
 namespace py
@@ -153,4 +137,23 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasComplianceResults";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::Security::ExchangeActiveSyncProvisioning
+{
+}
+
+namespace py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning
+{
+    using EasClientDeviceInformation = py::winrt_wrapper<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>;
+    using EasClientSecurityPolicy = py::winrt_wrapper<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>;
+    using EasComplianceResults = py::winrt_wrapper<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>;
+}
+
+namespace py
+{
 }

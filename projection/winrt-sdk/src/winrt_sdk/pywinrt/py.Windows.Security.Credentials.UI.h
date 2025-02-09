@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
 
@@ -20,18 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Credentials::UI
 {
-}
-
-namespace py::impl::Windows::Security::Credentials::UI
-{
-}
-
-namespace py::wrapper::Windows::Security::Credentials::UI
-{
-    using CredentialPicker = py::winrt_wrapper<winrt::Windows::Security::Credentials::UI::CredentialPicker>;
-    using CredentialPickerOptions = py::winrt_wrapper<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>;
-    using CredentialPickerResults = py::winrt_wrapper<winrt::Windows::Security::Credentials::UI::CredentialPickerResults>;
-    using UserConsentVerifier = py::winrt_wrapper<winrt::Windows::Security::Credentials::UI::UserConsentVerifier>;
 }
 
 namespace py
@@ -112,4 +91,28 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "UserConsentVerifier";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Security::Credentials::UI
+{
+}
+
+namespace py::wrapper::Windows::Security::Credentials::UI
+{
+    using CredentialPicker = py::winrt_wrapper<winrt::Windows::Security::Credentials::UI::CredentialPicker>;
+    using CredentialPickerOptions = py::winrt_wrapper<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>;
+    using CredentialPickerResults = py::winrt_wrapper<winrt::Windows::Security::Credentials::UI::CredentialPickerResults>;
+    using UserConsentVerifier = py::winrt_wrapper<winrt::Windows::Security::Credentials::UI::UserConsentVerifier>;
+}
+
+namespace py
+{
 }

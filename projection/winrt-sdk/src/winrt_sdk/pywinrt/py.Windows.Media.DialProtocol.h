@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -35,22 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::DialProtocol
 {
-}
-
-namespace py::impl::Windows::Media::DialProtocol
-{
-}
-
-namespace py::wrapper::Windows::Media::DialProtocol
-{
-    using DialApp = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialApp>;
-    using DialAppStateDetails = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialAppStateDetails>;
-    using DialDevice = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDevice>;
-    using DialDevicePicker = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDevicePicker>;
-    using DialDevicePickerFilter = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>;
-    using DialDeviceSelectedEventArgs = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>;
-    using DialDisconnectButtonClickedEventArgs = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>;
-    using DialReceiverApp = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialReceiverApp>;
 }
 
 namespace py
@@ -163,4 +126,44 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialReceiverApp";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+namespace py::impl::Windows::Media::DialProtocol
+{
+}
+
+namespace py::wrapper::Windows::Media::DialProtocol
+{
+    using DialApp = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialApp>;
+    using DialAppStateDetails = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialAppStateDetails>;
+    using DialDevice = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDevice>;
+    using DialDevicePicker = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDevicePicker>;
+    using DialDevicePickerFilter = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>;
+    using DialDeviceSelectedEventArgs = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>;
+    using DialDisconnectButtonClickedEventArgs = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>;
+    using DialReceiverApp = py::winrt_wrapper<winrt::Windows::Media::DialProtocol::DialReceiverApp>;
+}
+
+namespace py
+{
 }

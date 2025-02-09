@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Management.Deployment.h")
-#include "py.Windows.Management.Deployment.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Management.Deployment.h>
@@ -30,21 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Store::Preview::InstallControl
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Store::Preview::InstallControl
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl
-{
-    using AppInstallItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>;
-    using AppInstallManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager>;
-    using AppInstallManagerItemEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>;
-    using AppInstallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>;
-    using AppInstallStatus = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>;
-    using AppUpdateOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>;
-    using GetEntitlementResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>;
 }
 
 namespace py
@@ -160,4 +128,39 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview.installcontrol";
         static constexpr const char* type_name = "GetEntitlementResult";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Management.Deployment.h")
+#include "py.Windows.Management.Deployment.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Store::Preview::InstallControl
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl
+{
+    using AppInstallItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>;
+    using AppInstallManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager>;
+    using AppInstallManagerItemEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>;
+    using AppInstallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>;
+    using AppInstallStatus = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>;
+    using AppUpdateOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>;
+    using GetEntitlementResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>;
+}
+
+namespace py
+{
 }

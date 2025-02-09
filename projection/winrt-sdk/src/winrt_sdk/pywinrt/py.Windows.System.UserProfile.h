@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Globalization.h>
@@ -40,24 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::System::UserProfile
 {
-}
-
-namespace py::impl::Windows::System::UserProfile
-{
-}
-
-namespace py::wrapper::Windows::System::UserProfile
-{
-    using AdvertisingManager = py::winrt_wrapper<winrt::Windows::System::UserProfile::AdvertisingManager>;
-    using AdvertisingManagerForUser = py::winrt_wrapper<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>;
-    using AssignedAccessSettings = py::winrt_wrapper<winrt::Windows::System::UserProfile::AssignedAccessSettings>;
-    using DiagnosticsSettings = py::winrt_wrapper<winrt::Windows::System::UserProfile::DiagnosticsSettings>;
-    using FirstSignInSettings = py::winrt_wrapper<winrt::Windows::System::UserProfile::FirstSignInSettings>;
-    using GlobalizationPreferences = py::winrt_wrapper<winrt::Windows::System::UserProfile::GlobalizationPreferences>;
-    using GlobalizationPreferencesForUser = py::winrt_wrapper<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>;
-    using LockScreen = py::winrt_wrapper<winrt::Windows::System::UserProfile::LockScreen>;
-    using UserInformation = py::winrt_wrapper<winrt::Windows::System::UserProfile::UserInformation>;
-    using UserProfilePersonalizationSettings = py::winrt_wrapper<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>;
 }
 
 namespace py
@@ -175,4 +132,50 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "UserProfilePersonalizationSettings";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Globalization.h")
+#include "py.Windows.Globalization.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::System::UserProfile
+{
+}
+
+namespace py::wrapper::Windows::System::UserProfile
+{
+    using AdvertisingManager = py::winrt_wrapper<winrt::Windows::System::UserProfile::AdvertisingManager>;
+    using AdvertisingManagerForUser = py::winrt_wrapper<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>;
+    using AssignedAccessSettings = py::winrt_wrapper<winrt::Windows::System::UserProfile::AssignedAccessSettings>;
+    using DiagnosticsSettings = py::winrt_wrapper<winrt::Windows::System::UserProfile::DiagnosticsSettings>;
+    using FirstSignInSettings = py::winrt_wrapper<winrt::Windows::System::UserProfile::FirstSignInSettings>;
+    using GlobalizationPreferences = py::winrt_wrapper<winrt::Windows::System::UserProfile::GlobalizationPreferences>;
+    using GlobalizationPreferencesForUser = py::winrt_wrapper<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>;
+    using LockScreen = py::winrt_wrapper<winrt::Windows::System::UserProfile::LockScreen>;
+    using UserInformation = py::winrt_wrapper<winrt::Windows::System::UserProfile::UserInformation>;
+    using UserProfilePersonalizationSettings = py::winrt_wrapper<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>;
+}
+
+namespace py
+{
 }

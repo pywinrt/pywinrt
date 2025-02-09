@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,17 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::System::Update
 {
-}
-
-namespace py::impl::Windows::System::Update
-{
-}
-
-namespace py::wrapper::Windows::System::Update
-{
-    using SystemUpdateItem = py::winrt_wrapper<winrt::Windows::System::Update::SystemUpdateItem>;
-    using SystemUpdateLastErrorInfo = py::winrt_wrapper<winrt::Windows::System::Update::SystemUpdateLastErrorInfo>;
-    using SystemUpdateManager = py::winrt_wrapper<winrt::Windows::System::Update::SystemUpdateManager>;
 }
 
 namespace py
@@ -103,4 +83,27 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.update";
         static constexpr const char* type_name = "SystemUpdateManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::System::Update
+{
+}
+
+namespace py::wrapper::Windows::System::Update
+{
+    using SystemUpdateItem = py::winrt_wrapper<winrt::Windows::System::Update::SystemUpdateItem>;
+    using SystemUpdateLastErrorInfo = py::winrt_wrapper<winrt::Windows::System::Update::SystemUpdateLastErrorInfo>;
+    using SystemUpdateManager = py::winrt_wrapper<winrt::Windows::System::Update::SystemUpdateManager>;
+}
+
+namespace py
+{
 }

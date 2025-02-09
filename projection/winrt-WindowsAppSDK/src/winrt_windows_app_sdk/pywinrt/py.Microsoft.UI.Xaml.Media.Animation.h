@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.h")
-#include "py.Microsoft.UI.Xaml.Controls.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.h")
-#include "py.Microsoft.UI.Xaml.Controls.Primitives.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Xaml.h>
 #include <winrt/Microsoft.UI.Xaml.Controls.h>
@@ -45,103 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Xaml::Media::Animation
 {
-}
-
-namespace py::impl::Microsoft::UI::Xaml::Media::Animation
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Xaml::Media::Animation
-{
-    using AddDeleteThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::AddDeleteThemeTransition>;
-    using BackEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::BackEase>;
-    using BasicConnectedAnimationConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration>;
-    using BeginStoryboard = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::BeginStoryboard>;
-    using BounceEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::BounceEase>;
-    using CircleEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::CircleEase>;
-    using ColorAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ColorAnimation>;
-    using ColorAnimationUsingKeyFrames = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames>;
-    using ColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame>;
-    using ColorKeyFrameCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection>;
-    using CommonNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo>;
-    using ConnectedAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimation>;
-    using ConnectedAnimationConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>;
-    using ConnectedAnimationService = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationService>;
-    using ContentThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ContentThemeTransition>;
-    using ContinuumNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo>;
-    using CubicEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::CubicEase>;
-    using DirectConnectedAnimationConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration>;
-    using DiscreteColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DiscreteColorKeyFrame>;
-    using DiscreteDoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame>;
-    using DiscreteObjectKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame>;
-    using DiscretePointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DiscretePointKeyFrame>;
-    using DoubleAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleAnimation>;
-    using DoubleAnimationUsingKeyFrames = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames>;
-    using DoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame>;
-    using DoubleKeyFrameCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection>;
-    using DragItemThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DragItemThemeAnimation>;
-    using DragOverThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DragOverThemeAnimation>;
-    using DrillInNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo>;
-    using DrillInThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DrillInThemeAnimation>;
-    using DrillOutThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DrillOutThemeAnimation>;
-    using DropTargetItemThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation>;
-    using EasingColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EasingColorKeyFrame>;
-    using EasingDoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EasingDoubleKeyFrame>;
-    using EasingFunctionBase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase>;
-    using EasingPointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EasingPointKeyFrame>;
-    using EdgeUIThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EdgeUIThemeTransition>;
-    using ElasticEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ElasticEase>;
-    using EntranceNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo>;
-    using EntranceThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EntranceThemeTransition>;
-    using ExponentialEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ExponentialEase>;
-    using FadeInThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::FadeInThemeAnimation>;
-    using FadeOutThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::FadeOutThemeAnimation>;
-    using GravityConnectedAnimationConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>;
-    using KeySpline = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::KeySpline>;
-    using KeyTimeHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTimeHelper>;
-    using LinearColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::LinearColorKeyFrame>;
-    using LinearDoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::LinearDoubleKeyFrame>;
-    using LinearPointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::LinearPointKeyFrame>;
-    using NavigationThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::NavigationThemeTransition>;
-    using NavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::NavigationTransitionInfo>;
-    using ObjectAnimationUsingKeyFrames = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames>;
-    using ObjectKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame>;
-    using ObjectKeyFrameCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection>;
-    using PaneThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PaneThemeTransition>;
-    using PointAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointAnimation>;
-    using PointAnimationUsingKeyFrames = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames>;
-    using PointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame>;
-    using PointKeyFrameCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection>;
-    using PointerDownThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointerDownThemeAnimation>;
-    using PointerUpThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointerUpThemeAnimation>;
-    using PopInThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PopInThemeAnimation>;
-    using PopOutThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PopOutThemeAnimation>;
-    using PopupThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PopupThemeTransition>;
-    using PowerEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PowerEase>;
-    using QuadraticEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::QuadraticEase>;
-    using QuarticEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::QuarticEase>;
-    using QuinticEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::QuinticEase>;
-    using ReorderThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ReorderThemeTransition>;
-    using RepeatBehaviorHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepeatBehaviorHelper>;
-    using RepositionThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepositionThemeAnimation>;
-    using RepositionThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepositionThemeTransition>;
-    using SineEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SineEase>;
-    using SlideNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo>;
-    using SplineColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplineColorKeyFrame>;
-    using SplineDoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplineDoubleKeyFrame>;
-    using SplinePointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplinePointKeyFrame>;
-    using SplitCloseThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplitCloseThemeAnimation>;
-    using SplitOpenThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplitOpenThemeAnimation>;
-    using Storyboard = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::Storyboard>;
-    using SuppressNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo>;
-    using SwipeBackThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SwipeBackThemeAnimation>;
-    using SwipeHintThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SwipeHintThemeAnimation>;
-    using Timeline = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>;
-    using TimelineCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::TimelineCollection>;
-    using Transition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::Transition>;
-    using TransitionCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::TransitionCollection>;
-    using KeyTime = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTime>;
-    using RepeatBehavior = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepeatBehavior>;
 }
 
 namespace py
@@ -930,4 +804,133 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.animation";
         static constexpr const char* type_name = "RepeatBehavior";
     };
+}
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Controls.h")
+#include "py.Microsoft.UI.Xaml.Controls.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.h")
+#include "py.Microsoft.UI.Xaml.Controls.Primitives.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Xaml::Media::Animation
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Xaml::Media::Animation
+{
+    using AddDeleteThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::AddDeleteThemeTransition>;
+    using BackEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::BackEase>;
+    using BasicConnectedAnimationConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration>;
+    using BeginStoryboard = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::BeginStoryboard>;
+    using BounceEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::BounceEase>;
+    using CircleEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::CircleEase>;
+    using ColorAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ColorAnimation>;
+    using ColorAnimationUsingKeyFrames = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames>;
+    using ColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame>;
+    using ColorKeyFrameCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection>;
+    using CommonNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo>;
+    using ConnectedAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimation>;
+    using ConnectedAnimationConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>;
+    using ConnectedAnimationService = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationService>;
+    using ContentThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ContentThemeTransition>;
+    using ContinuumNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo>;
+    using CubicEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::CubicEase>;
+    using DirectConnectedAnimationConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration>;
+    using DiscreteColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DiscreteColorKeyFrame>;
+    using DiscreteDoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame>;
+    using DiscreteObjectKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame>;
+    using DiscretePointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DiscretePointKeyFrame>;
+    using DoubleAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleAnimation>;
+    using DoubleAnimationUsingKeyFrames = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames>;
+    using DoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame>;
+    using DoubleKeyFrameCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection>;
+    using DragItemThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DragItemThemeAnimation>;
+    using DragOverThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DragOverThemeAnimation>;
+    using DrillInNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo>;
+    using DrillInThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DrillInThemeAnimation>;
+    using DrillOutThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DrillOutThemeAnimation>;
+    using DropTargetItemThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation>;
+    using EasingColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EasingColorKeyFrame>;
+    using EasingDoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EasingDoubleKeyFrame>;
+    using EasingFunctionBase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase>;
+    using EasingPointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EasingPointKeyFrame>;
+    using EdgeUIThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EdgeUIThemeTransition>;
+    using ElasticEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ElasticEase>;
+    using EntranceNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo>;
+    using EntranceThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::EntranceThemeTransition>;
+    using ExponentialEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ExponentialEase>;
+    using FadeInThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::FadeInThemeAnimation>;
+    using FadeOutThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::FadeOutThemeAnimation>;
+    using GravityConnectedAnimationConfiguration = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>;
+    using KeySpline = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::KeySpline>;
+    using KeyTimeHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTimeHelper>;
+    using LinearColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::LinearColorKeyFrame>;
+    using LinearDoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::LinearDoubleKeyFrame>;
+    using LinearPointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::LinearPointKeyFrame>;
+    using NavigationThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::NavigationThemeTransition>;
+    using NavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::NavigationTransitionInfo>;
+    using ObjectAnimationUsingKeyFrames = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames>;
+    using ObjectKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame>;
+    using ObjectKeyFrameCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection>;
+    using PaneThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PaneThemeTransition>;
+    using PointAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointAnimation>;
+    using PointAnimationUsingKeyFrames = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames>;
+    using PointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame>;
+    using PointKeyFrameCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection>;
+    using PointerDownThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointerDownThemeAnimation>;
+    using PointerUpThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PointerUpThemeAnimation>;
+    using PopInThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PopInThemeAnimation>;
+    using PopOutThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PopOutThemeAnimation>;
+    using PopupThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PopupThemeTransition>;
+    using PowerEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::PowerEase>;
+    using QuadraticEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::QuadraticEase>;
+    using QuarticEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::QuarticEase>;
+    using QuinticEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::QuinticEase>;
+    using ReorderThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::ReorderThemeTransition>;
+    using RepeatBehaviorHelper = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepeatBehaviorHelper>;
+    using RepositionThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepositionThemeAnimation>;
+    using RepositionThemeTransition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepositionThemeTransition>;
+    using SineEase = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SineEase>;
+    using SlideNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo>;
+    using SplineColorKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplineColorKeyFrame>;
+    using SplineDoubleKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplineDoubleKeyFrame>;
+    using SplinePointKeyFrame = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplinePointKeyFrame>;
+    using SplitCloseThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplitCloseThemeAnimation>;
+    using SplitOpenThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SplitOpenThemeAnimation>;
+    using Storyboard = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::Storyboard>;
+    using SuppressNavigationTransitionInfo = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo>;
+    using SwipeBackThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SwipeBackThemeAnimation>;
+    using SwipeHintThemeAnimation = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::SwipeHintThemeAnimation>;
+    using Timeline = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>;
+    using TimelineCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::TimelineCollection>;
+    using Transition = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::Transition>;
+    using TransitionCollection = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::TransitionCollection>;
+    using KeyTime = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTime>;
+    using RepeatBehavior = py::winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepeatBehavior>;
+}
+
+namespace py
+{
 }

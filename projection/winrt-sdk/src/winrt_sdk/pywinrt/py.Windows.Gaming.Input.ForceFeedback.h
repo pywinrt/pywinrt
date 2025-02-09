@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Numerics.h>
 
@@ -20,20 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Gaming::Input::ForceFeedback
 {
-}
-
-namespace py::impl::Windows::Gaming::Input::ForceFeedback
-{
-}
-
-namespace py::wrapper::Windows::Gaming::Input::ForceFeedback
-{
-    using ConditionForceEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect>;
-    using ConstantForceEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect>;
-    using ForceFeedbackMotor = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor>;
-    using PeriodicForceEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect>;
-    using RampForceEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::RampForceEffect>;
-    using IForceFeedbackEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>;
 }
 
 namespace py
@@ -141,4 +118,30 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.gaming.input.forcefeedback";
         static constexpr const char* type_name = "_IForceFeedbackEffect";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+namespace py::impl::Windows::Gaming::Input::ForceFeedback
+{
+}
+
+namespace py::wrapper::Windows::Gaming::Input::ForceFeedback
+{
+    using ConditionForceEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect>;
+    using ConstantForceEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect>;
+    using ForceFeedbackMotor = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor>;
+    using PeriodicForceEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect>;
+    using RampForceEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::RampForceEffect>;
+    using IForceFeedbackEffect = py::winrt_wrapper<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>;
+}
+
+namespace py
+{
 }

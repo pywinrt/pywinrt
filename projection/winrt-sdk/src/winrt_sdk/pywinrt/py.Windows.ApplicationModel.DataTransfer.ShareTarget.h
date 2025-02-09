@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Contacts.h")
-#include "py.Windows.ApplicationModel.Contacts.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Contacts.h>
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,16 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::DataTransfer::ShareTarget
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::DataTransfer::ShareTarget
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget
-{
-    using QuickLink = py::winrt_wrapper<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>;
-    using ShareOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>;
 }
 
 namespace py
@@ -60,4 +33,34 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.sharetarget";
         static constexpr const char* type_name = "ShareOperation";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Contacts.h")
+#include "py.Windows.ApplicationModel.Contacts.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::DataTransfer::ShareTarget
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget
+{
+    using QuickLink = py::winrt_wrapper<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>;
+    using ShareOperation = py::winrt_wrapper<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>;
+}
+
+namespace py
+{
 }

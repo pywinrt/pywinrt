@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -30,18 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Data::Pdf
 {
-}
-
-namespace py::impl::Windows::Data::Pdf
-{
-}
-
-namespace py::wrapper::Windows::Data::Pdf
-{
-    using PdfDocument = py::winrt_wrapper<winrt::Windows::Data::Pdf::PdfDocument>;
-    using PdfPage = py::winrt_wrapper<winrt::Windows::Data::Pdf::PdfPage>;
-    using PdfPageDimensions = py::winrt_wrapper<winrt::Windows::Data::Pdf::PdfPageDimensions>;
-    using PdfPageRenderOptions = py::winrt_wrapper<winrt::Windows::Data::Pdf::PdfPageRenderOptions>;
 }
 
 namespace py
@@ -89,4 +60,36 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.data.pdf";
         static constexpr const char* type_name = "PdfPageRenderOptions";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::Data::Pdf
+{
+}
+
+namespace py::wrapper::Windows::Data::Pdf
+{
+    using PdfDocument = py::winrt_wrapper<winrt::Windows::Data::Pdf::PdfDocument>;
+    using PdfPage = py::winrt_wrapper<winrt::Windows::Data::Pdf::PdfPage>;
+    using PdfPageDimensions = py::winrt_wrapper<winrt::Windows::Data::Pdf::PdfPageDimensions>;
+    using PdfPageRenderOptions = py::winrt_wrapper<winrt::Windows::Data::Pdf::PdfPageRenderOptions>;
+}
+
+namespace py
+{
 }

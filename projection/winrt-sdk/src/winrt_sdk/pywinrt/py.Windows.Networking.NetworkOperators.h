@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Data.Xml.Dom.h")
-#include "py.Windows.Data.Xml.Dom.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Sms.h")
-#include "py.Windows.Devices.Sms.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Connectivity.h")
-#include "py.Windows.Networking.Connectivity.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Data.Xml.Dom.h>
 #include <winrt/Windows.Devices.Sms.h>
 #include <winrt/Windows.Foundation.h>
@@ -45,100 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Networking::NetworkOperators
 {
-}
-
-namespace py::impl::Windows::Networking::NetworkOperators
-{
-}
-
-namespace py::wrapper::Windows::Networking::NetworkOperators
-{
-    using ESim = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESim>;
-    using ESimAddedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>;
-    using ESimDiscoverEvent = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent>;
-    using ESimDiscoverResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>;
-    using ESimDownloadProfileMetadataResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>;
-    using ESimManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimManager>;
-    using ESimOperationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimOperationResult>;
-    using ESimPolicy = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimPolicy>;
-    using ESimProfile = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfile>;
-    using ESimProfileMetadata = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata>;
-    using ESimProfilePolicy = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy>;
-    using ESimRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>;
-    using ESimServiceInfo = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>;
-    using ESimUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>;
-    using ESimWatcher = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimWatcher>;
-    using FdnAccessManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>;
-    using HotspotAuthenticationContext = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>;
-    using HotspotAuthenticationEventDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>;
-    using HotspotCredentialsAuthenticationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>;
-    using KnownCSimFilePaths = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths>;
-    using KnownRuimFilePaths = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths>;
-    using KnownSimFilePaths = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths>;
-    using KnownUSimFilePaths = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths>;
-    using MobileBroadbandAccount = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount>;
-    using MobileBroadbandAccountEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>;
-    using MobileBroadbandAccountUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>;
-    using MobileBroadbandAccountWatcher = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher>;
-    using MobileBroadbandAntennaSar = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar>;
-    using MobileBroadbandCellCdma = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma>;
-    using MobileBroadbandCellGsm = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm>;
-    using MobileBroadbandCellLte = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte>;
-    using MobileBroadbandCellNR = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR>;
-    using MobileBroadbandCellTdscdma = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma>;
-    using MobileBroadbandCellUmts = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts>;
-    using MobileBroadbandCellsInfo = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo>;
-    using MobileBroadbandCurrentSlotIndexChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>;
-    using MobileBroadbandDeviceInformation = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>;
-    using MobileBroadbandDeviceService = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>;
-    using MobileBroadbandDeviceServiceCommandEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>;
-    using MobileBroadbandDeviceServiceCommandResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>;
-    using MobileBroadbandDeviceServiceCommandSession = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>;
-    using MobileBroadbandDeviceServiceDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>;
-    using MobileBroadbandDeviceServiceDataSession = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession>;
-    using MobileBroadbandDeviceServiceInformation = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation>;
-    using MobileBroadbandDeviceServiceTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails>;
-    using MobileBroadbandModem = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem>;
-    using MobileBroadbandModemConfiguration = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration>;
-    using MobileBroadbandModemIsolation = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation>;
-    using MobileBroadbandNetwork = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork>;
-    using MobileBroadbandNetworkRegistrationStateChange = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange>;
-    using MobileBroadbandNetworkRegistrationStateChangeTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails>;
-    using MobileBroadbandPco = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco>;
-    using MobileBroadbandPcoDataChangeTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails>;
-    using MobileBroadbandPin = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin>;
-    using MobileBroadbandPinLockStateChange = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange>;
-    using MobileBroadbandPinLockStateChangeTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails>;
-    using MobileBroadbandPinManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager>;
-    using MobileBroadbandPinOperationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult>;
-    using MobileBroadbandRadioStateChange = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange>;
-    using MobileBroadbandRadioStateChangeTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails>;
-    using MobileBroadbandSarManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager>;
-    using MobileBroadbandSlotInfo = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo>;
-    using MobileBroadbandSlotInfoChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>;
-    using MobileBroadbandSlotManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager>;
-    using MobileBroadbandTransmissionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>;
-    using MobileBroadbandUicc = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc>;
-    using MobileBroadbandUiccApp = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp>;
-    using MobileBroadbandUiccAppReadRecordResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult>;
-    using MobileBroadbandUiccAppRecordDetailsResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult>;
-    using MobileBroadbandUiccAppsResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult>;
-    using NetworkOperatorDataUsageTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails>;
-    using NetworkOperatorNotificationEventDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails>;
-    using NetworkOperatorTetheringAccessPointConfiguration = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration>;
-    using NetworkOperatorTetheringClient = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>;
-    using NetworkOperatorTetheringManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>;
-    using NetworkOperatorTetheringOperationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>;
-    using NetworkOperatorTetheringSessionAccessPointConfiguration = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration>;
-    using ProvisionFromXmlDocumentResults = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>;
-    using ProvisionedProfile = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>;
-    using ProvisioningAgent = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisioningAgent>;
-    using TetheringEntitlementCheckTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails>;
-    using UssdMessage = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::UssdMessage>;
-    using UssdReply = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::UssdReply>;
-    using UssdSession = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::UssdSession>;
-    using ESimProfileInstallProgress = py::winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>;
-    using ProfileUsage = py::winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ProfileUsage>;
 }
 
 namespace py
@@ -1211,4 +1088,130 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ProfileUsage";
     };
+}
+
+#if __has_include("py.Windows.Data.Xml.Dom.h")
+#include "py.Windows.Data.Xml.Dom.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Sms.h")
+#include "py.Windows.Devices.Sms.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Networking.Connectivity.h")
+#include "py.Windows.Networking.Connectivity.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Networking::NetworkOperators
+{
+}
+
+namespace py::wrapper::Windows::Networking::NetworkOperators
+{
+    using ESim = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESim>;
+    using ESimAddedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>;
+    using ESimDiscoverEvent = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent>;
+    using ESimDiscoverResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>;
+    using ESimDownloadProfileMetadataResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>;
+    using ESimManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimManager>;
+    using ESimOperationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimOperationResult>;
+    using ESimPolicy = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimPolicy>;
+    using ESimProfile = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfile>;
+    using ESimProfileMetadata = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata>;
+    using ESimProfilePolicy = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy>;
+    using ESimRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>;
+    using ESimServiceInfo = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>;
+    using ESimUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>;
+    using ESimWatcher = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ESimWatcher>;
+    using FdnAccessManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>;
+    using HotspotAuthenticationContext = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>;
+    using HotspotAuthenticationEventDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>;
+    using HotspotCredentialsAuthenticationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>;
+    using KnownCSimFilePaths = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths>;
+    using KnownRuimFilePaths = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths>;
+    using KnownSimFilePaths = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths>;
+    using KnownUSimFilePaths = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths>;
+    using MobileBroadbandAccount = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount>;
+    using MobileBroadbandAccountEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>;
+    using MobileBroadbandAccountUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>;
+    using MobileBroadbandAccountWatcher = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher>;
+    using MobileBroadbandAntennaSar = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar>;
+    using MobileBroadbandCellCdma = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma>;
+    using MobileBroadbandCellGsm = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm>;
+    using MobileBroadbandCellLte = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte>;
+    using MobileBroadbandCellNR = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR>;
+    using MobileBroadbandCellTdscdma = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma>;
+    using MobileBroadbandCellUmts = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts>;
+    using MobileBroadbandCellsInfo = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo>;
+    using MobileBroadbandCurrentSlotIndexChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>;
+    using MobileBroadbandDeviceInformation = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>;
+    using MobileBroadbandDeviceService = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>;
+    using MobileBroadbandDeviceServiceCommandEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>;
+    using MobileBroadbandDeviceServiceCommandResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>;
+    using MobileBroadbandDeviceServiceCommandSession = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>;
+    using MobileBroadbandDeviceServiceDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>;
+    using MobileBroadbandDeviceServiceDataSession = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession>;
+    using MobileBroadbandDeviceServiceInformation = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation>;
+    using MobileBroadbandDeviceServiceTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails>;
+    using MobileBroadbandModem = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem>;
+    using MobileBroadbandModemConfiguration = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration>;
+    using MobileBroadbandModemIsolation = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation>;
+    using MobileBroadbandNetwork = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork>;
+    using MobileBroadbandNetworkRegistrationStateChange = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange>;
+    using MobileBroadbandNetworkRegistrationStateChangeTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails>;
+    using MobileBroadbandPco = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco>;
+    using MobileBroadbandPcoDataChangeTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails>;
+    using MobileBroadbandPin = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin>;
+    using MobileBroadbandPinLockStateChange = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange>;
+    using MobileBroadbandPinLockStateChangeTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails>;
+    using MobileBroadbandPinManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager>;
+    using MobileBroadbandPinOperationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult>;
+    using MobileBroadbandRadioStateChange = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange>;
+    using MobileBroadbandRadioStateChangeTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails>;
+    using MobileBroadbandSarManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager>;
+    using MobileBroadbandSlotInfo = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo>;
+    using MobileBroadbandSlotInfoChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>;
+    using MobileBroadbandSlotManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager>;
+    using MobileBroadbandTransmissionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>;
+    using MobileBroadbandUicc = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc>;
+    using MobileBroadbandUiccApp = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp>;
+    using MobileBroadbandUiccAppReadRecordResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult>;
+    using MobileBroadbandUiccAppRecordDetailsResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult>;
+    using MobileBroadbandUiccAppsResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult>;
+    using NetworkOperatorDataUsageTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails>;
+    using NetworkOperatorNotificationEventDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails>;
+    using NetworkOperatorTetheringAccessPointConfiguration = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration>;
+    using NetworkOperatorTetheringClient = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>;
+    using NetworkOperatorTetheringManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>;
+    using NetworkOperatorTetheringOperationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>;
+    using NetworkOperatorTetheringSessionAccessPointConfiguration = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration>;
+    using ProvisionFromXmlDocumentResults = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>;
+    using ProvisionedProfile = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>;
+    using ProvisioningAgent = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisioningAgent>;
+    using TetheringEntitlementCheckTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails>;
+    using UssdMessage = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::UssdMessage>;
+    using UssdReply = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::UssdReply>;
+    using UssdSession = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::UssdSession>;
+    using ESimProfileInstallProgress = py::winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>;
+    using ProfileUsage = py::winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ProfileUsage>;
+}
+
+namespace py
+{
 }

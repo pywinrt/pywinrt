@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Spi.Provider.h")
-#include "py.Windows.Devices.Spi.Provider.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Devices.Spi.Provider.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,19 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Spi
 {
-}
-
-namespace py::impl::Windows::Devices::Spi
-{
-}
-
-namespace py::wrapper::Windows::Devices::Spi
-{
-    using SpiBusInfo = py::winrt_wrapper<winrt::Windows::Devices::Spi::SpiBusInfo>;
-    using SpiConnectionSettings = py::winrt_wrapper<winrt::Windows::Devices::Spi::SpiConnectionSettings>;
-    using SpiController = py::winrt_wrapper<winrt::Windows::Devices::Spi::SpiController>;
-    using SpiDevice = py::winrt_wrapper<winrt::Windows::Devices::Spi::SpiDevice>;
-    using ISpiDeviceStatics = py::winrt_wrapper<winrt::Windows::Devices::Spi::ISpiDeviceStatics>;
 }
 
 namespace py
@@ -104,4 +78,33 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.spi";
         static constexpr const char* type_name = "_ISpiDeviceStatics";
     };
+}
+
+#if __has_include("py.Windows.Devices.Spi.Provider.h")
+#include "py.Windows.Devices.Spi.Provider.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Spi
+{
+}
+
+namespace py::wrapper::Windows::Devices::Spi
+{
+    using SpiBusInfo = py::winrt_wrapper<winrt::Windows::Devices::Spi::SpiBusInfo>;
+    using SpiConnectionSettings = py::winrt_wrapper<winrt::Windows::Devices::Spi::SpiConnectionSettings>;
+    using SpiController = py::winrt_wrapper<winrt::Windows::Devices::Spi::SpiController>;
+    using SpiDevice = py::winrt_wrapper<winrt::Windows::Devices::Spi::SpiDevice>;
+    using ISpiDeviceStatics = py::winrt_wrapper<winrt::Windows::Devices::Spi::ISpiDeviceStatics>;
+}
+
+namespace py
+{
 }

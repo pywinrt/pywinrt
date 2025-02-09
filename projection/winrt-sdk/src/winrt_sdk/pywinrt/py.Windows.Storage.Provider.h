@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -35,73 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage::Provider
 {
-}
-
-namespace py::impl::Windows::Storage::Provider
-{
-    struct StorageProviderKnownFolderSyncRequestedHandler
-    {
-        static winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Storage::Provider
-{
-    using CachedFileUpdater = py::winrt_wrapper<winrt::Windows::Storage::Provider::CachedFileUpdater>;
-    using CachedFileUpdaterUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>;
-    using FileUpdateRequest = py::winrt_wrapper<winrt::Windows::Storage::Provider::FileUpdateRequest>;
-    using FileUpdateRequestDeferral = py::winrt_wrapper<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>;
-    using FileUpdateRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>;
-    using StorageProviderFileTypeInfo = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo>;
-    using StorageProviderGetContentInfoForPathResult = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult>;
-    using StorageProviderGetPathForContentUriResult = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult>;
-    using StorageProviderItemProperties = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderItemProperties>;
-    using StorageProviderItemProperty = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderItemProperty>;
-    using StorageProviderItemPropertyDefinition = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition>;
-    using StorageProviderKnownFolderEntry = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry>;
-    using StorageProviderKnownFolderSyncInfo = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo>;
-    using StorageProviderKnownFolderSyncRequestArgs = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs>;
-    using StorageProviderMoreInfoUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI>;
-    using StorageProviderQuotaUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>;
-    using StorageProviderStatusUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderStatusUI>;
-    using StorageProviderSyncRootInfo = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>;
-    using StorageProviderSyncRootManager = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>;
-    using IStorageProviderItemPropertySource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>;
-    using IStorageProviderKnownFolderSyncInfoSource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>;
-    using IStorageProviderKnownFolderSyncInfoSourceFactory = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>;
-    using IStorageProviderPropertyCapabilities = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>;
-    using IStorageProviderShareLinkSource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>;
-    using IStorageProviderStatusUISource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>;
-    using IStorageProviderStatusUISourceFactory = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>;
-    using IStorageProviderUICommand = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderUICommand>;
-    using IStorageProviderUriSource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderUriSource>;
 }
 
 namespace py
@@ -517,6 +429,97 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "_IStorageProviderUriSource";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+namespace py::impl::Windows::Storage::Provider
+{
+    struct StorageProviderKnownFolderSyncRequestedHandler
+    {
+        static winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Storage::Provider
+{
+    using CachedFileUpdater = py::winrt_wrapper<winrt::Windows::Storage::Provider::CachedFileUpdater>;
+    using CachedFileUpdaterUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>;
+    using FileUpdateRequest = py::winrt_wrapper<winrt::Windows::Storage::Provider::FileUpdateRequest>;
+    using FileUpdateRequestDeferral = py::winrt_wrapper<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>;
+    using FileUpdateRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>;
+    using StorageProviderFileTypeInfo = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo>;
+    using StorageProviderGetContentInfoForPathResult = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult>;
+    using StorageProviderGetPathForContentUriResult = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult>;
+    using StorageProviderItemProperties = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderItemProperties>;
+    using StorageProviderItemProperty = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderItemProperty>;
+    using StorageProviderItemPropertyDefinition = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition>;
+    using StorageProviderKnownFolderEntry = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry>;
+    using StorageProviderKnownFolderSyncInfo = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo>;
+    using StorageProviderKnownFolderSyncRequestArgs = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs>;
+    using StorageProviderMoreInfoUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI>;
+    using StorageProviderQuotaUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>;
+    using StorageProviderStatusUI = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderStatusUI>;
+    using StorageProviderSyncRootInfo = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>;
+    using StorageProviderSyncRootManager = py::winrt_wrapper<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>;
+    using IStorageProviderItemPropertySource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>;
+    using IStorageProviderKnownFolderSyncInfoSource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>;
+    using IStorageProviderKnownFolderSyncInfoSourceFactory = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>;
+    using IStorageProviderPropertyCapabilities = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>;
+    using IStorageProviderShareLinkSource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>;
+    using IStorageProviderStatusUISource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>;
+    using IStorageProviderStatusUISourceFactory = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>;
+    using IStorageProviderUICommand = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderUICommand>;
+    using IStorageProviderUriSource = py::winrt_wrapper<winrt::Windows::Storage::Provider::IStorageProviderUriSource>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestedHandler>
     {

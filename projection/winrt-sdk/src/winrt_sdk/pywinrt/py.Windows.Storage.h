@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.FileProperties.h")
-#include "py.Windows.Storage.FileProperties.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Provider.h")
-#include "py.Windows.Storage.Provider.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Search.h")
-#include "py.Windows.Storage.Search.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.FileProperties.h>
@@ -45,121 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage
 {
-}
-
-namespace py::impl::Windows::Storage
-{
-    struct ApplicationDataSetVersionHandler
-    {
-        static winrt::Windows::Storage::ApplicationDataSetVersionHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Storage::SetVersionRequest const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct StreamedFileDataRequestedHandler
-    {
-        static winrt::Windows::Storage::StreamedFileDataRequestedHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Storage::StreamedFileDataRequest const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Storage
-{
-    using AppDataPaths = py::winrt_wrapper<winrt::Windows::Storage::AppDataPaths>;
-    using ApplicationData = py::winrt_wrapper<winrt::Windows::Storage::ApplicationData>;
-    using ApplicationDataCompositeValue = py::winrt_wrapper<winrt::Windows::Storage::ApplicationDataCompositeValue>;
-    using ApplicationDataContainer = py::winrt_wrapper<winrt::Windows::Storage::ApplicationDataContainer>;
-    using ApplicationDataContainerSettings = py::winrt_wrapper<winrt::Windows::Storage::ApplicationDataContainerSettings>;
-    using CachedFileManager = py::winrt_wrapper<winrt::Windows::Storage::CachedFileManager>;
-    using DownloadsFolder = py::winrt_wrapper<winrt::Windows::Storage::DownloadsFolder>;
-    using FileIO = py::winrt_wrapper<winrt::Windows::Storage::FileIO>;
-    using KnownFolders = py::winrt_wrapper<winrt::Windows::Storage::KnownFolders>;
-    using PathIO = py::winrt_wrapper<winrt::Windows::Storage::PathIO>;
-    using SetVersionDeferral = py::winrt_wrapper<winrt::Windows::Storage::SetVersionDeferral>;
-    using SetVersionRequest = py::winrt_wrapper<winrt::Windows::Storage::SetVersionRequest>;
-    using StorageFile = py::winrt_wrapper<winrt::Windows::Storage::StorageFile>;
-    using StorageFolder = py::winrt_wrapper<winrt::Windows::Storage::StorageFolder>;
-    using StorageLibrary = py::winrt_wrapper<winrt::Windows::Storage::StorageLibrary>;
-    using StorageLibraryChange = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryChange>;
-    using StorageLibraryChangeReader = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryChangeReader>;
-    using StorageLibraryChangeTracker = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryChangeTracker>;
-    using StorageLibraryChangeTrackerOptions = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryChangeTrackerOptions>;
-    using StorageLibraryLastChangeId = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryLastChangeId>;
-    using StorageProvider = py::winrt_wrapper<winrt::Windows::Storage::StorageProvider>;
-    using StorageStreamTransaction = py::winrt_wrapper<winrt::Windows::Storage::StorageStreamTransaction>;
-    using StreamedFileDataRequest = py::winrt_wrapper<winrt::Windows::Storage::StreamedFileDataRequest>;
-    using SystemAudioProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemAudioProperties>;
-    using SystemDataPaths = py::winrt_wrapper<winrt::Windows::Storage::SystemDataPaths>;
-    using SystemGPSProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemGPSProperties>;
-    using SystemImageProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemImageProperties>;
-    using SystemMediaProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemMediaProperties>;
-    using SystemMusicProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemMusicProperties>;
-    using SystemPhotoProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemPhotoProperties>;
-    using SystemProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemProperties>;
-    using SystemVideoProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemVideoProperties>;
-    using UserDataPaths = py::winrt_wrapper<winrt::Windows::Storage::UserDataPaths>;
-    using IStorageFile = py::winrt_wrapper<winrt::Windows::Storage::IStorageFile>;
-    using IStorageFile2 = py::winrt_wrapper<winrt::Windows::Storage::IStorageFile2>;
-    using IStorageFilePropertiesWithAvailability = py::winrt_wrapper<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>;
-    using IStorageFolder = py::winrt_wrapper<winrt::Windows::Storage::IStorageFolder>;
-    using IStorageFolder2 = py::winrt_wrapper<winrt::Windows::Storage::IStorageFolder2>;
-    using IStorageItem = py::winrt_wrapper<winrt::Windows::Storage::IStorageItem>;
-    using IStorageItem2 = py::winrt_wrapper<winrt::Windows::Storage::IStorageItem2>;
-    using IStorageItemProperties = py::winrt_wrapper<winrt::Windows::Storage::IStorageItemProperties>;
-    using IStorageItemProperties2 = py::winrt_wrapper<winrt::Windows::Storage::IStorageItemProperties2>;
-    using IStorageItemPropertiesWithProvider = py::winrt_wrapper<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>;
-    using IStreamedFileDataRequest = py::winrt_wrapper<winrt::Windows::Storage::IStreamedFileDataRequest>;
 }
 
 namespace py
@@ -670,6 +526,153 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage";
         static constexpr const char* type_name = "_IStreamedFileDataRequest";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.FileProperties.h")
+#include "py.Windows.Storage.FileProperties.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Provider.h")
+#include "py.Windows.Storage.Provider.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Search.h")
+#include "py.Windows.Storage.Search.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Storage
+{
+    struct ApplicationDataSetVersionHandler
+    {
+        static winrt::Windows::Storage::ApplicationDataSetVersionHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Storage::SetVersionRequest const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct StreamedFileDataRequestedHandler
+    {
+        static winrt::Windows::Storage::StreamedFileDataRequestedHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Storage::StreamedFileDataRequest const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Storage
+{
+    using AppDataPaths = py::winrt_wrapper<winrt::Windows::Storage::AppDataPaths>;
+    using ApplicationData = py::winrt_wrapper<winrt::Windows::Storage::ApplicationData>;
+    using ApplicationDataCompositeValue = py::winrt_wrapper<winrt::Windows::Storage::ApplicationDataCompositeValue>;
+    using ApplicationDataContainer = py::winrt_wrapper<winrt::Windows::Storage::ApplicationDataContainer>;
+    using ApplicationDataContainerSettings = py::winrt_wrapper<winrt::Windows::Storage::ApplicationDataContainerSettings>;
+    using CachedFileManager = py::winrt_wrapper<winrt::Windows::Storage::CachedFileManager>;
+    using DownloadsFolder = py::winrt_wrapper<winrt::Windows::Storage::DownloadsFolder>;
+    using FileIO = py::winrt_wrapper<winrt::Windows::Storage::FileIO>;
+    using KnownFolders = py::winrt_wrapper<winrt::Windows::Storage::KnownFolders>;
+    using PathIO = py::winrt_wrapper<winrt::Windows::Storage::PathIO>;
+    using SetVersionDeferral = py::winrt_wrapper<winrt::Windows::Storage::SetVersionDeferral>;
+    using SetVersionRequest = py::winrt_wrapper<winrt::Windows::Storage::SetVersionRequest>;
+    using StorageFile = py::winrt_wrapper<winrt::Windows::Storage::StorageFile>;
+    using StorageFolder = py::winrt_wrapper<winrt::Windows::Storage::StorageFolder>;
+    using StorageLibrary = py::winrt_wrapper<winrt::Windows::Storage::StorageLibrary>;
+    using StorageLibraryChange = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryChange>;
+    using StorageLibraryChangeReader = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryChangeReader>;
+    using StorageLibraryChangeTracker = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryChangeTracker>;
+    using StorageLibraryChangeTrackerOptions = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryChangeTrackerOptions>;
+    using StorageLibraryLastChangeId = py::winrt_wrapper<winrt::Windows::Storage::StorageLibraryLastChangeId>;
+    using StorageProvider = py::winrt_wrapper<winrt::Windows::Storage::StorageProvider>;
+    using StorageStreamTransaction = py::winrt_wrapper<winrt::Windows::Storage::StorageStreamTransaction>;
+    using StreamedFileDataRequest = py::winrt_wrapper<winrt::Windows::Storage::StreamedFileDataRequest>;
+    using SystemAudioProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemAudioProperties>;
+    using SystemDataPaths = py::winrt_wrapper<winrt::Windows::Storage::SystemDataPaths>;
+    using SystemGPSProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemGPSProperties>;
+    using SystemImageProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemImageProperties>;
+    using SystemMediaProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemMediaProperties>;
+    using SystemMusicProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemMusicProperties>;
+    using SystemPhotoProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemPhotoProperties>;
+    using SystemProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemProperties>;
+    using SystemVideoProperties = py::winrt_wrapper<winrt::Windows::Storage::SystemVideoProperties>;
+    using UserDataPaths = py::winrt_wrapper<winrt::Windows::Storage::UserDataPaths>;
+    using IStorageFile = py::winrt_wrapper<winrt::Windows::Storage::IStorageFile>;
+    using IStorageFile2 = py::winrt_wrapper<winrt::Windows::Storage::IStorageFile2>;
+    using IStorageFilePropertiesWithAvailability = py::winrt_wrapper<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>;
+    using IStorageFolder = py::winrt_wrapper<winrt::Windows::Storage::IStorageFolder>;
+    using IStorageFolder2 = py::winrt_wrapper<winrt::Windows::Storage::IStorageFolder2>;
+    using IStorageItem = py::winrt_wrapper<winrt::Windows::Storage::IStorageItem>;
+    using IStorageItem2 = py::winrt_wrapper<winrt::Windows::Storage::IStorageItem2>;
+    using IStorageItemProperties = py::winrt_wrapper<winrt::Windows::Storage::IStorageItemProperties>;
+    using IStorageItemProperties2 = py::winrt_wrapper<winrt::Windows::Storage::IStorageItemProperties2>;
+    using IStorageItemPropertiesWithProvider = py::winrt_wrapper<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>;
+    using IStreamedFileDataRequest = py::winrt_wrapper<winrt::Windows::Storage::IStreamedFileDataRequest>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Storage::ApplicationDataSetVersionHandler>
     {

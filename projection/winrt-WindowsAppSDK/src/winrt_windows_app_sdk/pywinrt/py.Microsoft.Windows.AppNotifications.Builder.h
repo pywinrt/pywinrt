@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.Windows.AppNotifications.h")
-#include "py.Microsoft.Windows.AppNotifications.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Microsoft.Windows.AppNotifications.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,19 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::Windows::AppNotifications::Builder
 {
-}
-
-namespace py::impl::Microsoft::Windows::AppNotifications::Builder
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::AppNotifications::Builder
-{
-    using AppNotificationBuilder = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder>;
-    using AppNotificationButton = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton>;
-    using AppNotificationComboBox = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox>;
-    using AppNotificationProgressBar = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar>;
-    using AppNotificationTextProperties = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties>;
 }
 
 namespace py
@@ -148,4 +122,33 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationTextProperties";
     };
+}
+
+#if __has_include("py.Microsoft.Windows.AppNotifications.h")
+#include "py.Microsoft.Windows.AppNotifications.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::AppNotifications::Builder
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::AppNotifications::Builder
+{
+    using AppNotificationBuilder = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder>;
+    using AppNotificationButton = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton>;
+    using AppNotificationComboBox = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox>;
+    using AppNotificationProgressBar = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar>;
+    using AppNotificationTextProperties = py::winrt_wrapper<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties>;
+}
+
+namespace py
+{
 }

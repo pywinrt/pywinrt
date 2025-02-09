@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.Audio.h")
-#include "py.Windows.Media.Audio.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.Audio.h>
@@ -30,25 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::ConversationalAgent
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::ConversationalAgent
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::ConversationalAgent
-{
-    using ActivationSignalDetectionConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>;
-    using ActivationSignalDetectionConfigurationCreationResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>;
-    using ActivationSignalDetector = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>;
-    using ConversationalAgentDetectorManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>;
-    using ConversationalAgentSession = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>;
-    using ConversationalAgentSessionInterruptedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>;
-    using ConversationalAgentSignal = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>;
-    using ConversationalAgentSignalDetectedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>;
-    using ConversationalAgentSystemStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>;
-    using DetectionConfigurationAvailabilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>;
-    using DetectionConfigurationAvailabilityInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>;
 }
 
 namespace py
@@ -317,4 +281,43 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "DetectionConfigurationAvailabilityInfo";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.Audio.h")
+#include "py.Windows.Media.Audio.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::ConversationalAgent
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::ConversationalAgent
+{
+    using ActivationSignalDetectionConfiguration = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>;
+    using ActivationSignalDetectionConfigurationCreationResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>;
+    using ActivationSignalDetector = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>;
+    using ConversationalAgentDetectorManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>;
+    using ConversationalAgentSession = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>;
+    using ConversationalAgentSessionInterruptedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>;
+    using ConversationalAgentSignal = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>;
+    using ConversationalAgentSignalDetectedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>;
+    using ConversationalAgentSystemStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>;
+    using DetectionConfigurationAvailabilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>;
+    using DetectionConfigurationAvailabilityInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>;
+}
+
+namespace py
+{
 }

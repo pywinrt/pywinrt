@@ -5,18 +5,9 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.h>
 
 namespace py::proj::Windows::ApplicationModel::DataTransfer::DragDrop
-{
-}
-
-namespace py::impl::Windows::ApplicationModel::DataTransfer::DragDrop
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop
 {
 }
 
@@ -33,4 +24,16 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop";
         static constexpr const char* type_name = "DragDropModifiers";
     };
+}
+
+namespace py::impl::Windows::ApplicationModel::DataTransfer::DragDrop
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop
+{
+}
+
+namespace py
+{
 }

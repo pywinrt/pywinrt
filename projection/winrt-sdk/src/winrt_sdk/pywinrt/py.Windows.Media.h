@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.AppService.h")
-#include "py.Windows.ApplicationModel.AppService.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.AppService.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -50,41 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media
 {
-}
-
-namespace py::impl::Windows::Media
-{
-}
-
-namespace py::wrapper::Windows::Media
-{
-    using AudioBuffer = py::winrt_wrapper<winrt::Windows::Media::AudioBuffer>;
-    using AudioFrame = py::winrt_wrapper<winrt::Windows::Media::AudioFrame>;
-    using AutoRepeatModeChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::AutoRepeatModeChangeRequestedEventArgs>;
-    using ImageDisplayProperties = py::winrt_wrapper<winrt::Windows::Media::ImageDisplayProperties>;
-    using MediaControl = py::winrt_wrapper<winrt::Windows::Media::MediaControl>;
-    using MediaExtensionManager = py::winrt_wrapper<winrt::Windows::Media::MediaExtensionManager>;
-    using MediaMarkerTypes = py::winrt_wrapper<winrt::Windows::Media::MediaMarkerTypes>;
-    using MediaProcessingTriggerDetails = py::winrt_wrapper<winrt::Windows::Media::MediaProcessingTriggerDetails>;
-    using MediaTimelineController = py::winrt_wrapper<winrt::Windows::Media::MediaTimelineController>;
-    using MediaTimelineControllerFailedEventArgs = py::winrt_wrapper<winrt::Windows::Media::MediaTimelineControllerFailedEventArgs>;
-    using MusicDisplayProperties = py::winrt_wrapper<winrt::Windows::Media::MusicDisplayProperties>;
-    using PlaybackPositionChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlaybackPositionChangeRequestedEventArgs>;
-    using PlaybackRateChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlaybackRateChangeRequestedEventArgs>;
-    using ShuffleEnabledChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::ShuffleEnabledChangeRequestedEventArgs>;
-    using SystemMediaTransportControls = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControls>;
-    using SystemMediaTransportControlsButtonPressedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControlsButtonPressedEventArgs>;
-    using SystemMediaTransportControlsDisplayUpdater = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControlsDisplayUpdater>;
-    using SystemMediaTransportControlsPropertyChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControlsPropertyChangedEventArgs>;
-    using SystemMediaTransportControlsTimelineProperties = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControlsTimelineProperties>;
-    using VideoDisplayProperties = py::winrt_wrapper<winrt::Windows::Media::VideoDisplayProperties>;
-    using VideoEffects = py::winrt_wrapper<winrt::Windows::Media::VideoEffects>;
-    using VideoFrame = py::winrt_wrapper<winrt::Windows::Media::VideoFrame>;
-    using IMediaExtension = py::winrt_wrapper<winrt::Windows::Media::IMediaExtension>;
-    using IMediaFrame = py::winrt_wrapper<winrt::Windows::Media::IMediaFrame>;
-    using IMediaMarker = py::winrt_wrapper<winrt::Windows::Media::IMediaMarker>;
-    using IMediaMarkers = py::winrt_wrapper<winrt::Windows::Media::IMediaMarkers>;
-    using MediaTimeRange = py::winrt_struct_wrapper<winrt::Windows::Media::MediaTimeRange>;
 }
 
 namespace py
@@ -407,4 +339,75 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media";
         static constexpr const char* type_name = "MediaTimeRange";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.AppService.h")
+#include "py.Windows.ApplicationModel.AppService.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.h")
+#include "py.Windows.Graphics.DirectX.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media
+{
+}
+
+namespace py::wrapper::Windows::Media
+{
+    using AudioBuffer = py::winrt_wrapper<winrt::Windows::Media::AudioBuffer>;
+    using AudioFrame = py::winrt_wrapper<winrt::Windows::Media::AudioFrame>;
+    using AutoRepeatModeChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::AutoRepeatModeChangeRequestedEventArgs>;
+    using ImageDisplayProperties = py::winrt_wrapper<winrt::Windows::Media::ImageDisplayProperties>;
+    using MediaControl = py::winrt_wrapper<winrt::Windows::Media::MediaControl>;
+    using MediaExtensionManager = py::winrt_wrapper<winrt::Windows::Media::MediaExtensionManager>;
+    using MediaMarkerTypes = py::winrt_wrapper<winrt::Windows::Media::MediaMarkerTypes>;
+    using MediaProcessingTriggerDetails = py::winrt_wrapper<winrt::Windows::Media::MediaProcessingTriggerDetails>;
+    using MediaTimelineController = py::winrt_wrapper<winrt::Windows::Media::MediaTimelineController>;
+    using MediaTimelineControllerFailedEventArgs = py::winrt_wrapper<winrt::Windows::Media::MediaTimelineControllerFailedEventArgs>;
+    using MusicDisplayProperties = py::winrt_wrapper<winrt::Windows::Media::MusicDisplayProperties>;
+    using PlaybackPositionChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlaybackPositionChangeRequestedEventArgs>;
+    using PlaybackRateChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::PlaybackRateChangeRequestedEventArgs>;
+    using ShuffleEnabledChangeRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::ShuffleEnabledChangeRequestedEventArgs>;
+    using SystemMediaTransportControls = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControls>;
+    using SystemMediaTransportControlsButtonPressedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControlsButtonPressedEventArgs>;
+    using SystemMediaTransportControlsDisplayUpdater = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControlsDisplayUpdater>;
+    using SystemMediaTransportControlsPropertyChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControlsPropertyChangedEventArgs>;
+    using SystemMediaTransportControlsTimelineProperties = py::winrt_wrapper<winrt::Windows::Media::SystemMediaTransportControlsTimelineProperties>;
+    using VideoDisplayProperties = py::winrt_wrapper<winrt::Windows::Media::VideoDisplayProperties>;
+    using VideoEffects = py::winrt_wrapper<winrt::Windows::Media::VideoEffects>;
+    using VideoFrame = py::winrt_wrapper<winrt::Windows::Media::VideoFrame>;
+    using IMediaExtension = py::winrt_wrapper<winrt::Windows::Media::IMediaExtension>;
+    using IMediaFrame = py::winrt_wrapper<winrt::Windows::Media::IMediaFrame>;
+    using IMediaMarker = py::winrt_wrapper<winrt::Windows::Media::IMediaMarker>;
+    using IMediaMarkers = py::winrt_wrapper<winrt::Windows::Media::IMediaMarkers>;
+    using MediaTimeRange = py::winrt_struct_wrapper<winrt::Windows::Media::MediaTimeRange>;
+}
+
+namespace py
+{
 }

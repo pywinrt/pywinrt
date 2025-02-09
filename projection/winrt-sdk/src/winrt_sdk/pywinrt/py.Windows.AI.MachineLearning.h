@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.h>
@@ -50,42 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::AI::MachineLearning
 {
-}
-
-namespace py::impl::Windows::AI::MachineLearning
-{
-}
-
-namespace py::wrapper::Windows::AI::MachineLearning
-{
-    using ImageFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>;
-    using ImageFeatureValue = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ImageFeatureValue>;
-    using LearningModel = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModel>;
-    using LearningModelBinding = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelBinding>;
-    using LearningModelDevice = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelDevice>;
-    using LearningModelEvaluationResult = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult>;
-    using LearningModelSession = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelSession>;
-    using LearningModelSessionOptions = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions>;
-    using MapFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor>;
-    using SequenceFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor>;
-    using TensorBoolean = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorBoolean>;
-    using TensorDouble = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorDouble>;
-    using TensorFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor>;
-    using TensorFloat = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorFloat>;
-    using TensorFloat16Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorFloat16Bit>;
-    using TensorInt16Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorInt16Bit>;
-    using TensorInt32Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorInt32Bit>;
-    using TensorInt64Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorInt64Bit>;
-    using TensorInt8Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorInt8Bit>;
-    using TensorString = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorString>;
-    using TensorUInt16Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorUInt16Bit>;
-    using TensorUInt32Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorUInt32Bit>;
-    using TensorUInt64Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorUInt64Bit>;
-    using TensorUInt8Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorUInt8Bit>;
-    using ILearningModelFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>;
-    using ILearningModelFeatureValue = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>;
-    using ILearningModelOperatorProvider = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>;
-    using ITensor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ITensor>;
 }
 
 namespace py
@@ -358,4 +289,76 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "_ITensor";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::AI::MachineLearning
+{
+}
+
+namespace py::wrapper::Windows::AI::MachineLearning
+{
+    using ImageFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>;
+    using ImageFeatureValue = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ImageFeatureValue>;
+    using LearningModel = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModel>;
+    using LearningModelBinding = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelBinding>;
+    using LearningModelDevice = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelDevice>;
+    using LearningModelEvaluationResult = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult>;
+    using LearningModelSession = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelSession>;
+    using LearningModelSessionOptions = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions>;
+    using MapFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor>;
+    using SequenceFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor>;
+    using TensorBoolean = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorBoolean>;
+    using TensorDouble = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorDouble>;
+    using TensorFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor>;
+    using TensorFloat = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorFloat>;
+    using TensorFloat16Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorFloat16Bit>;
+    using TensorInt16Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorInt16Bit>;
+    using TensorInt32Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorInt32Bit>;
+    using TensorInt64Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorInt64Bit>;
+    using TensorInt8Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorInt8Bit>;
+    using TensorString = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorString>;
+    using TensorUInt16Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorUInt16Bit>;
+    using TensorUInt32Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorUInt32Bit>;
+    using TensorUInt64Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorUInt64Bit>;
+    using TensorUInt8Bit = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::TensorUInt8Bit>;
+    using ILearningModelFeatureDescriptor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>;
+    using ILearningModelFeatureValue = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>;
+    using ILearningModelOperatorProvider = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>;
+    using ITensor = py::winrt_wrapper<winrt::Windows::AI::MachineLearning::ITensor>;
+}
+
+namespace py
+{
 }

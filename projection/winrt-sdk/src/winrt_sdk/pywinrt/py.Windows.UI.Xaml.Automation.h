@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
-#include "py.Windows.UI.Xaml.Automation.Peers.h"
-#endif
-
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.UI.Xaml.h>
 #include <winrt/Windows.UI.Xaml.Automation.Peers.h>
@@ -25,39 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Automation
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Automation
-{
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Automation
-{
-    using AnnotationPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers>;
-    using AutomationAnnotation = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AutomationAnnotation>;
-    using AutomationElementIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AutomationElementIdentifiers>;
-    using AutomationProperties = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AutomationProperties>;
-    using AutomationProperty = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AutomationProperty>;
-    using DockPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::DockPatternIdentifiers>;
-    using DragPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::DragPatternIdentifiers>;
-    using DropTargetPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers>;
-    using ExpandCollapsePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers>;
-    using GridItemPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers>;
-    using GridPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::GridPatternIdentifiers>;
-    using MultipleViewPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers>;
-    using RangeValuePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers>;
-    using ScrollPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers>;
-    using SelectionItemPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers>;
-    using SelectionPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers>;
-    using SpreadsheetItemPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers>;
-    using StylesPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::StylesPatternIdentifiers>;
-    using TableItemPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers>;
-    using TablePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TablePatternIdentifiers>;
-    using TogglePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TogglePatternIdentifiers>;
-    using TransformPattern2Identifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TransformPattern2Identifiers>;
-    using TransformPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TransformPatternIdentifiers>;
-    using ValuePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::ValuePatternIdentifiers>;
-    using WindowPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::WindowPatternIdentifiers>;
 }
 
 namespace py
@@ -493,4 +447,53 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation";
         static constexpr const char* type_name = "WindowPatternIdentifiers";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
+#include "py.Windows.UI.Xaml.Automation.Peers.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Automation
+{
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Automation
+{
+    using AnnotationPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers>;
+    using AutomationAnnotation = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AutomationAnnotation>;
+    using AutomationElementIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AutomationElementIdentifiers>;
+    using AutomationProperties = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AutomationProperties>;
+    using AutomationProperty = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::AutomationProperty>;
+    using DockPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::DockPatternIdentifiers>;
+    using DragPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::DragPatternIdentifiers>;
+    using DropTargetPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers>;
+    using ExpandCollapsePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers>;
+    using GridItemPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers>;
+    using GridPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::GridPatternIdentifiers>;
+    using MultipleViewPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers>;
+    using RangeValuePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers>;
+    using ScrollPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers>;
+    using SelectionItemPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers>;
+    using SelectionPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers>;
+    using SpreadsheetItemPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers>;
+    using StylesPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::StylesPatternIdentifiers>;
+    using TableItemPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers>;
+    using TablePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TablePatternIdentifiers>;
+    using TogglePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TogglePatternIdentifiers>;
+    using TransformPattern2Identifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TransformPattern2Identifiers>;
+    using TransformPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::TransformPatternIdentifiers>;
+    using ValuePatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::ValuePatternIdentifiers>;
+    using WindowPatternIdentifiers = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::WindowPatternIdentifiers>;
+}
+
+namespace py
+{
 }

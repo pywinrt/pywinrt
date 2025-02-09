@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
 #include <winrt/Windows.UI.Composition.h>
 
 #include <winrt/Windows.UI.Composition.Diagnostics.h>
 
 namespace py::proj::Windows::UI::Composition::Diagnostics
 {
-}
-
-namespace py::impl::Windows::UI::Composition::Diagnostics
-{
-}
-
-namespace py::wrapper::Windows::UI::Composition::Diagnostics
-{
-    using CompositionDebugHeatMaps = py::winrt_wrapper<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps>;
-    using CompositionDebugSettings = py::winrt_wrapper<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugSettings>;
 }
 
 namespace py
@@ -56,4 +41,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.composition.diagnostics";
         static constexpr const char* type_name = "CompositionDebugSettings";
     };
+}
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+namespace py::impl::Windows::UI::Composition::Diagnostics
+{
+}
+
+namespace py::wrapper::Windows::UI::Composition::Diagnostics
+{
+    using CompositionDebugHeatMaps = py::winrt_wrapper<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps>;
+    using CompositionDebugSettings = py::winrt_wrapper<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugSettings>;
+}
+
+namespace py
+{
 }

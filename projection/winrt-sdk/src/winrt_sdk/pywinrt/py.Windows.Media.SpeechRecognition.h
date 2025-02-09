@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Globalization.h>
@@ -30,34 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::SpeechRecognition
 {
-}
-
-namespace py::impl::Windows::Media::SpeechRecognition
-{
-}
-
-namespace py::wrapper::Windows::Media::SpeechRecognition
-{
-    using SpeechContinuousRecognitionCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>;
-    using SpeechContinuousRecognitionResultGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>;
-    using SpeechContinuousRecognitionSession = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession>;
-    using SpeechRecognitionCompilationResult = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>;
-    using SpeechRecognitionGrammarFileConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint>;
-    using SpeechRecognitionHypothesis = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis>;
-    using SpeechRecognitionHypothesisGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>;
-    using SpeechRecognitionListConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint>;
-    using SpeechRecognitionQualityDegradingEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>;
-    using SpeechRecognitionResult = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>;
-    using SpeechRecognitionSemanticInterpretation = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation>;
-    using SpeechRecognitionTopicConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint>;
-    using SpeechRecognitionVoiceCommandDefinitionConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint>;
-    using SpeechRecognizer = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer>;
-    using SpeechRecognizerStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>;
-    using SpeechRecognizerTimeouts = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>;
-    using SpeechRecognizerUIOptions = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>;
-    using VoiceCommandManager = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>;
-    using VoiceCommandSet = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>;
-    using ISpeechRecognitionConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>;
 }
 
 namespace py
@@ -310,4 +265,52 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "_ISpeechRecognitionConstraint";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Globalization.h")
+#include "py.Windows.Globalization.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::Media::SpeechRecognition
+{
+}
+
+namespace py::wrapper::Windows::Media::SpeechRecognition
+{
+    using SpeechContinuousRecognitionCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>;
+    using SpeechContinuousRecognitionResultGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>;
+    using SpeechContinuousRecognitionSession = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession>;
+    using SpeechRecognitionCompilationResult = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>;
+    using SpeechRecognitionGrammarFileConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint>;
+    using SpeechRecognitionHypothesis = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis>;
+    using SpeechRecognitionHypothesisGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>;
+    using SpeechRecognitionListConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint>;
+    using SpeechRecognitionQualityDegradingEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>;
+    using SpeechRecognitionResult = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>;
+    using SpeechRecognitionSemanticInterpretation = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation>;
+    using SpeechRecognitionTopicConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint>;
+    using SpeechRecognitionVoiceCommandDefinitionConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint>;
+    using SpeechRecognizer = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer>;
+    using SpeechRecognizerStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>;
+    using SpeechRecognizerTimeouts = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>;
+    using SpeechRecognizerUIOptions = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>;
+    using VoiceCommandManager = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>;
+    using VoiceCommandSet = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>;
+    using ISpeechRecognitionConstraint = py::winrt_wrapper<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>;
+}
+
+namespace py
+{
 }

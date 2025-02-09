@@ -5,21 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Graphics.Effects.h>
 
 namespace py::proj::Windows::Graphics::Effects
 {
-}
-
-namespace py::impl::Windows::Graphics::Effects
-{
-}
-
-namespace py::wrapper::Windows::Graphics::Effects
-{
-    using IGraphicsEffect = py::winrt_wrapper<winrt::Windows::Graphics::Effects::IGraphicsEffect>;
-    using IGraphicsEffectSource = py::winrt_wrapper<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>;
 }
 
 namespace py
@@ -40,4 +29,18 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.effects";
         static constexpr const char* type_name = "_IGraphicsEffectSource";
     };
+}
+
+namespace py::impl::Windows::Graphics::Effects
+{
+}
+
+namespace py::wrapper::Windows::Graphics::Effects
+{
+    using IGraphicsEffect = py::winrt_wrapper<winrt::Windows::Graphics::Effects::IGraphicsEffect>;
+    using IGraphicsEffectSource = py::winrt_wrapper<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>;
+}
+
+namespace py
+{
 }

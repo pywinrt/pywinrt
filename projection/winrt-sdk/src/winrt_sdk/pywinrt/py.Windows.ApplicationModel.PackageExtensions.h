@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,21 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::PackageExtensions
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::PackageExtensions
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::PackageExtensions
-{
-    using PackageExtension = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtension>;
-    using PackageExtensionCatalog = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionCatalog>;
-    using PackageExtensionPackageInstalledEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageInstalledEventArgs>;
-    using PackageExtensionPackageStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageStatusChangedEventArgs>;
-    using PackageExtensionPackageUninstallingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUninstallingEventArgs>;
-    using PackageExtensionPackageUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUpdatedEventArgs>;
-    using PackageExtensionPackageUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUpdatingEventArgs>;
 }
 
 namespace py
@@ -105,4 +73,39 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.packageextensions";
         static constexpr const char* type_name = "PackageExtensionPackageUpdatingEventArgs";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::PackageExtensions
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::PackageExtensions
+{
+    using PackageExtension = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtension>;
+    using PackageExtensionCatalog = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionCatalog>;
+    using PackageExtensionPackageInstalledEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageInstalledEventArgs>;
+    using PackageExtensionPackageStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageStatusChangedEventArgs>;
+    using PackageExtensionPackageUninstallingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUninstallingEventArgs>;
+    using PackageExtensionPackageUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUpdatedEventArgs>;
+    using PackageExtensionPackageUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::PackageExtensions::PackageExtensionPackageUpdatingEventArgs>;
+}
+
+namespace py
+{
 }

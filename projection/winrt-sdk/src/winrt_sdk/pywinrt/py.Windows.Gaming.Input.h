@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Haptics.h")
-#include "py.Windows.Devices.Haptics.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Power.h")
-#include "py.Windows.Devices.Power.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Gaming.Input.ForceFeedback.h")
-#include "py.Windows.Gaming.Input.ForceFeedback.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Devices.Haptics.h>
 #include <winrt/Windows.Devices.Power.h>
 #include <winrt/Windows.Foundation.h>
@@ -40,29 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Gaming::Input
 {
-}
-
-namespace py::impl::Windows::Gaming::Input
-{
-}
-
-namespace py::wrapper::Windows::Gaming::Input
-{
-    using ArcadeStick = py::winrt_wrapper<winrt::Windows::Gaming::Input::ArcadeStick>;
-    using FlightStick = py::winrt_wrapper<winrt::Windows::Gaming::Input::FlightStick>;
-    using Gamepad = py::winrt_wrapper<winrt::Windows::Gaming::Input::Gamepad>;
-    using Headset = py::winrt_wrapper<winrt::Windows::Gaming::Input::Headset>;
-    using RacingWheel = py::winrt_wrapper<winrt::Windows::Gaming::Input::RacingWheel>;
-    using RawGameController = py::winrt_wrapper<winrt::Windows::Gaming::Input::RawGameController>;
-    using UINavigationController = py::winrt_wrapper<winrt::Windows::Gaming::Input::UINavigationController>;
-    using IGameController = py::winrt_wrapper<winrt::Windows::Gaming::Input::IGameController>;
-    using IGameControllerBatteryInfo = py::winrt_wrapper<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>;
-    using ArcadeStickReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::ArcadeStickReading>;
-    using FlightStickReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::FlightStickReading>;
-    using GamepadReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadReading>;
-    using GamepadVibration = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadVibration>;
-    using RacingWheelReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::RacingWheelReading>;
-    using UINavigationReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::UINavigationReading>;
 }
 
 namespace py
@@ -304,4 +256,55 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "UINavigationReading";
     };
+}
+
+#if __has_include("py.Windows.Devices.Haptics.h")
+#include "py.Windows.Devices.Haptics.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Power.h")
+#include "py.Windows.Devices.Power.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Gaming.Input.ForceFeedback.h")
+#include "py.Windows.Gaming.Input.ForceFeedback.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Gaming::Input
+{
+}
+
+namespace py::wrapper::Windows::Gaming::Input
+{
+    using ArcadeStick = py::winrt_wrapper<winrt::Windows::Gaming::Input::ArcadeStick>;
+    using FlightStick = py::winrt_wrapper<winrt::Windows::Gaming::Input::FlightStick>;
+    using Gamepad = py::winrt_wrapper<winrt::Windows::Gaming::Input::Gamepad>;
+    using Headset = py::winrt_wrapper<winrt::Windows::Gaming::Input::Headset>;
+    using RacingWheel = py::winrt_wrapper<winrt::Windows::Gaming::Input::RacingWheel>;
+    using RawGameController = py::winrt_wrapper<winrt::Windows::Gaming::Input::RawGameController>;
+    using UINavigationController = py::winrt_wrapper<winrt::Windows::Gaming::Input::UINavigationController>;
+    using IGameController = py::winrt_wrapper<winrt::Windows::Gaming::Input::IGameController>;
+    using IGameControllerBatteryInfo = py::winrt_wrapper<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>;
+    using ArcadeStickReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::ArcadeStickReading>;
+    using FlightStickReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::FlightStickReading>;
+    using GamepadReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadReading>;
+    using GamepadVibration = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadVibration>;
+    using RacingWheelReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::RacingWheelReading>;
+    using UINavigationReading = py::winrt_struct_wrapper<winrt::Windows::Gaming::Input::UINavigationReading>;
+}
+
+namespace py
+{
 }

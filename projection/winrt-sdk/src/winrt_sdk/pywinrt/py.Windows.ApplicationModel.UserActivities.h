@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Shell.h")
-#include "py.Windows.UI.Shell.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Security.Credentials.h>
@@ -40,25 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::UserActivities
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::UserActivities
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::UserActivities
-{
-    using UserActivity = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivity>;
-    using UserActivityAttribution = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>;
-    using UserActivityChannel = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>;
-    using UserActivityContentInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>;
-    using UserActivityRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>;
-    using UserActivityRequestManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>;
-    using UserActivityRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>;
-    using UserActivitySession = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>;
-    using UserActivitySessionHistoryItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>;
-    using UserActivityVisualElements = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>;
-    using IUserActivityContentInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>;
 }
 
 namespace py
@@ -162,4 +118,51 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "_IUserActivityContentInfo";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Shell.h")
+#include "py.Windows.UI.Shell.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::UserActivities
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::UserActivities
+{
+    using UserActivity = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivity>;
+    using UserActivityAttribution = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>;
+    using UserActivityChannel = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>;
+    using UserActivityContentInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>;
+    using UserActivityRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>;
+    using UserActivityRequestManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>;
+    using UserActivityRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>;
+    using UserActivitySession = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>;
+    using UserActivitySessionHistoryItem = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>;
+    using UserActivityVisualElements = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>;
+    using IUserActivityContentInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>;
+}
+
+namespace py
+{
 }

@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Background.h")
-#include "py.Windows.ApplicationModel.Background.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.Notifications.h")
-#include "py.Windows.UI.Notifications.h"
-#endif
-
-#if __has_include("py.Windows.Web.h")
-#include "py.Windows.Web.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Background.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -50,34 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Networking::BackgroundTransfer
 {
-}
-
-namespace py::impl::Windows::Networking::BackgroundTransfer
-{
-}
-
-namespace py::wrapper::Windows::Networking::BackgroundTransfer
-{
-    using BackgroundDownloader = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader>;
-    using BackgroundTransferCompletionGroup = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup>;
-    using BackgroundTransferCompletionGroupTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>;
-    using BackgroundTransferContentPart = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>;
-    using BackgroundTransferError = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>;
-    using BackgroundTransferGroup = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>;
-    using BackgroundTransferRangesDownloadedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>;
-    using BackgroundUploader = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader>;
-    using ContentPrefetcher = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>;
-    using DownloadOperation = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>;
-    using ResponseInformation = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>;
-    using UnconstrainedTransferRequestResult = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>;
-    using UploadOperation = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>;
-    using IBackgroundTransferBase = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>;
-    using IBackgroundTransferContentPartFactory = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>;
-    using IBackgroundTransferOperation = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>;
-    using IBackgroundTransferOperationPriority = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>;
-    using BackgroundDownloadProgress = py::winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>;
-    using BackgroundTransferFileRange = py::winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>;
-    using BackgroundUploadProgress = py::winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>;
 }
 
 namespace py
@@ -295,4 +234,68 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
         static constexpr const char* type_name = "BackgroundUploadProgress";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Background.h")
+#include "py.Windows.ApplicationModel.Background.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.Notifications.h")
+#include "py.Windows.UI.Notifications.h"
+#endif
+
+#if __has_include("py.Windows.Web.h")
+#include "py.Windows.Web.h"
+#endif
+
+namespace py::impl::Windows::Networking::BackgroundTransfer
+{
+}
+
+namespace py::wrapper::Windows::Networking::BackgroundTransfer
+{
+    using BackgroundDownloader = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader>;
+    using BackgroundTransferCompletionGroup = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup>;
+    using BackgroundTransferCompletionGroupTriggerDetails = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>;
+    using BackgroundTransferContentPart = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>;
+    using BackgroundTransferError = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>;
+    using BackgroundTransferGroup = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>;
+    using BackgroundTransferRangesDownloadedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>;
+    using BackgroundUploader = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader>;
+    using ContentPrefetcher = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>;
+    using DownloadOperation = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>;
+    using ResponseInformation = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>;
+    using UnconstrainedTransferRequestResult = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>;
+    using UploadOperation = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>;
+    using IBackgroundTransferBase = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>;
+    using IBackgroundTransferContentPartFactory = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>;
+    using IBackgroundTransferOperation = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>;
+    using IBackgroundTransferOperationPriority = py::winrt_wrapper<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>;
+    using BackgroundDownloadProgress = py::winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>;
+    using BackgroundTransferFileRange = py::winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>;
+    using BackgroundUploadProgress = py::winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>;
+}
+
+namespace py
+{
 }

@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
@@ -30,28 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Streaming::Adaptive
 {
-}
-
-namespace py::impl::Windows::Media::Streaming::Adaptive
-{
-}
-
-namespace py::wrapper::Windows::Media::Streaming::Adaptive
-{
-    using AdaptiveMediaSource = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>;
-    using AdaptiveMediaSourceAdvancedSettings = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>;
-    using AdaptiveMediaSourceCorrelatedTimes = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>;
-    using AdaptiveMediaSourceCreationResult = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>;
-    using AdaptiveMediaSourceDiagnosticAvailableEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>;
-    using AdaptiveMediaSourceDiagnostics = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>;
-    using AdaptiveMediaSourceDownloadBitrateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>;
-    using AdaptiveMediaSourceDownloadCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>;
-    using AdaptiveMediaSourceDownloadFailedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>;
-    using AdaptiveMediaSourceDownloadRequestedDeferral = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>;
-    using AdaptiveMediaSourceDownloadRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>;
-    using AdaptiveMediaSourceDownloadResult = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>;
-    using AdaptiveMediaSourceDownloadStatistics = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>;
-    using AdaptiveMediaSourcePlaybackBitrateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>;
 }
 
 namespace py
@@ -212,4 +173,46 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.streaming.adaptive";
         static constexpr const char* type_name = "AdaptiveMediaSourcePlaybackBitrateChangedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+namespace py::impl::Windows::Media::Streaming::Adaptive
+{
+}
+
+namespace py::wrapper::Windows::Media::Streaming::Adaptive
+{
+    using AdaptiveMediaSource = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>;
+    using AdaptiveMediaSourceAdvancedSettings = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>;
+    using AdaptiveMediaSourceCorrelatedTimes = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>;
+    using AdaptiveMediaSourceCreationResult = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>;
+    using AdaptiveMediaSourceDiagnosticAvailableEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>;
+    using AdaptiveMediaSourceDiagnostics = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>;
+    using AdaptiveMediaSourceDownloadBitrateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>;
+    using AdaptiveMediaSourceDownloadCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>;
+    using AdaptiveMediaSourceDownloadFailedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>;
+    using AdaptiveMediaSourceDownloadRequestedDeferral = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>;
+    using AdaptiveMediaSourceDownloadRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>;
+    using AdaptiveMediaSourceDownloadResult = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>;
+    using AdaptiveMediaSourceDownloadStatistics = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>;
+    using AdaptiveMediaSourcePlaybackBitrateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>;
+}
+
+namespace py
+{
 }

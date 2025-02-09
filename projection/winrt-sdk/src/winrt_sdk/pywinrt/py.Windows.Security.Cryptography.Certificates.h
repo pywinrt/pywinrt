@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.h")
-#include "py.Windows.Networking.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Networking.h>
@@ -30,37 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Cryptography::Certificates
 {
-}
-
-namespace py::impl::Windows::Security::Cryptography::Certificates
-{
-}
-
-namespace py::wrapper::Windows::Security::Cryptography::Certificates
-{
-    using Certificate = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::Certificate>;
-    using CertificateChain = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateChain>;
-    using CertificateEnrollmentManager = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager>;
-    using CertificateExtension = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateExtension>;
-    using CertificateKeyUsages = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateKeyUsages>;
-    using CertificateQuery = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateQuery>;
-    using CertificateRequestProperties = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>;
-    using CertificateStore = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateStore>;
-    using CertificateStores = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateStores>;
-    using ChainBuildingParameters = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters>;
-    using ChainValidationParameters = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters>;
-    using CmsAttachedSignature = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature>;
-    using CmsDetachedSignature = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature>;
-    using CmsSignerInfo = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo>;
-    using CmsTimestampInfo = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CmsTimestampInfo>;
-    using KeyAlgorithmNames = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames>;
-    using KeyAttestationHelper = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper>;
-    using KeyStorageProviderNames = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames>;
-    using PfxImportParameters = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>;
-    using StandardCertificateStoreNames = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames>;
-    using SubjectAlternativeNameInfo = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo>;
-    using UserCertificateEnrollmentManager = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager>;
-    using UserCertificateStore = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::UserCertificateStore>;
 }
 
 namespace py
@@ -337,4 +289,55 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "UserCertificateStore";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.h")
+#include "py.Windows.Networking.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Security::Cryptography::Certificates
+{
+}
+
+namespace py::wrapper::Windows::Security::Cryptography::Certificates
+{
+    using Certificate = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::Certificate>;
+    using CertificateChain = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateChain>;
+    using CertificateEnrollmentManager = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager>;
+    using CertificateExtension = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateExtension>;
+    using CertificateKeyUsages = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateKeyUsages>;
+    using CertificateQuery = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateQuery>;
+    using CertificateRequestProperties = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>;
+    using CertificateStore = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateStore>;
+    using CertificateStores = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CertificateStores>;
+    using ChainBuildingParameters = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters>;
+    using ChainValidationParameters = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters>;
+    using CmsAttachedSignature = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature>;
+    using CmsDetachedSignature = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature>;
+    using CmsSignerInfo = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo>;
+    using CmsTimestampInfo = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::CmsTimestampInfo>;
+    using KeyAlgorithmNames = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames>;
+    using KeyAttestationHelper = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper>;
+    using KeyStorageProviderNames = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames>;
+    using PfxImportParameters = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>;
+    using StandardCertificateStoreNames = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames>;
+    using SubjectAlternativeNameInfo = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo>;
+    using UserCertificateEnrollmentManager = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager>;
+    using UserCertificateStore = py::winrt_wrapper<winrt::Windows::Security::Cryptography::Certificates::UserCertificateStore>;
+}
+
+namespace py
+{
 }

@@ -5,11 +5,22 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Microsoft.UI.Xaml.Resources.h>
 
 namespace py::proj::Microsoft::UI::Xaml::Resources
 {
+}
+
+namespace py
+{
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.resources.CustomXamlResourceLoader";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.resources";
+        static constexpr const char* type_name = "CustomXamlResourceLoader";
+    };
 }
 
 namespace py::impl::Microsoft::UI::Xaml::Resources
@@ -23,12 +34,4 @@ namespace py::wrapper::Microsoft::UI::Xaml::Resources
 
 namespace py
 {
-
-    template<>
-    struct py_type<winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader>
-    {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.resources.CustomXamlResourceLoader";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.resources";
-        static constexpr const char* type_name = "CustomXamlResourceLoader";
-    };
 }

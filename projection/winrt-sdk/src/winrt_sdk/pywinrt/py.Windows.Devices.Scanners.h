@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Printing.h")
-#include "py.Windows.Graphics.Printing.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Printing.h>
@@ -35,23 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Scanners
 {
-}
-
-namespace py::impl::Windows::Devices::Scanners
-{
-}
-
-namespace py::wrapper::Windows::Devices::Scanners
-{
-    using ImageScanner = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScanner>;
-    using ImageScannerAutoConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>;
-    using ImageScannerFeederConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>;
-    using ImageScannerFlatbedConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>;
-    using ImageScannerPreviewResult = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>;
-    using ImageScannerScanResult = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerScanResult>;
-    using IImageScannerFormatConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>;
-    using IImageScannerSourceConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>;
-    using ImageScannerResolution = py::winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>;
 }
 
 namespace py
@@ -175,4 +137,45 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerResolution";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Printing.h")
+#include "py.Windows.Graphics.Printing.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::Scanners
+{
+}
+
+namespace py::wrapper::Windows::Devices::Scanners
+{
+    using ImageScanner = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScanner>;
+    using ImageScannerAutoConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>;
+    using ImageScannerFeederConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>;
+    using ImageScannerFlatbedConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>;
+    using ImageScannerPreviewResult = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>;
+    using ImageScannerScanResult = py::winrt_wrapper<winrt::Windows::Devices::Scanners::ImageScannerScanResult>;
+    using IImageScannerFormatConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>;
+    using IImageScannerSourceConfiguration = py::winrt_wrapper<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>;
+    using ImageScannerResolution = py::winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>;
+}
+
+namespace py
+{
 }

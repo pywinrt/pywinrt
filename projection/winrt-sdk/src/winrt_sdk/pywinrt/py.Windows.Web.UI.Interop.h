@@ -4,47 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
-#if __has_include("py.Windows.Web.h")
-#include "py.Windows.Web.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
-#if __has_include("py.Windows.Web.UI.h")
-#include "py.Windows.Web.UI.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -60,19 +19,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Web::UI::Interop
 {
-}
-
-namespace py::impl::Windows::Web::UI::Interop
-{
-}
-
-namespace py::wrapper::Windows::Web::UI::Interop
-{
-    using WebViewControl = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControl>;
-    using WebViewControlAcceleratorKeyPressedEventArgs = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs>;
-    using WebViewControlMoveFocusRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs>;
-    using WebViewControlProcess = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControlProcess>;
-    using WebViewControlProcessOptions = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions>;
 }
 
 namespace py
@@ -150,4 +96,61 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControlProcessOptions";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+#if __has_include("py.Windows.Web.h")
+#include "py.Windows.Web.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+#if __has_include("py.Windows.Web.UI.h")
+#include "py.Windows.Web.UI.h"
+#endif
+
+namespace py::impl::Windows::Web::UI::Interop
+{
+}
+
+namespace py::wrapper::Windows::Web::UI::Interop
+{
+    using WebViewControl = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControl>;
+    using WebViewControlAcceleratorKeyPressedEventArgs = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs>;
+    using WebViewControlMoveFocusRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs>;
+    using WebViewControlProcess = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControlProcess>;
+    using WebViewControlProcessOptions = py::winrt_wrapper<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions>;
+}
+
+namespace py
+{
 }

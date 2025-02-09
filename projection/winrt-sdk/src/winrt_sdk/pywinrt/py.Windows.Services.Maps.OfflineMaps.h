@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Geolocation.h")
-#include "py.Windows.Devices.Geolocation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Devices.Geolocation.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,17 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Services::Maps::OfflineMaps
 {
-}
-
-namespace py::impl::Windows::Services::Maps::OfflineMaps
-{
-}
-
-namespace py::wrapper::Windows::Services::Maps::OfflineMaps
-{
-    using OfflineMapPackage = py::winrt_wrapper<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage>;
-    using OfflineMapPackageQueryResult = py::winrt_wrapper<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult>;
-    using OfflineMapPackageStartDownloadResult = py::winrt_wrapper<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult>;
 }
 
 namespace py
@@ -97,4 +73,31 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
         static constexpr const char* type_name = "OfflineMapPackageStartDownloadResult";
     };
+}
+
+#if __has_include("py.Windows.Devices.Geolocation.h")
+#include "py.Windows.Devices.Geolocation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Services::Maps::OfflineMaps
+{
+}
+
+namespace py::wrapper::Windows::Services::Maps::OfflineMaps
+{
+    using OfflineMapPackage = py::winrt_wrapper<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage>;
+    using OfflineMapPackageQueryResult = py::winrt_wrapper<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult>;
+    using OfflineMapPackageStartDownloadResult = py::winrt_wrapper<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult>;
+}
+
+namespace py
+{
 }

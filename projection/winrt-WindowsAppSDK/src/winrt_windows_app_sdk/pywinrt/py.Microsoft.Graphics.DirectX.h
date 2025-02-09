@@ -5,18 +5,9 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Microsoft.Graphics.DirectX.h>
 
 namespace py::proj::Microsoft::Graphics::DirectX
-{
-}
-
-namespace py::impl::Microsoft::Graphics::DirectX
-{
-}
-
-namespace py::wrapper::Microsoft::Graphics::DirectX
 {
 }
 
@@ -66,4 +57,16 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.graphics.directx";
         static constexpr const char* type_name = "DirectXPrimitiveTopology";
     };
+}
+
+namespace py::impl::Microsoft::Graphics::DirectX
+{
+}
+
+namespace py::wrapper::Microsoft::Graphics::DirectX
+{
+}
+
+namespace py
+{
 }

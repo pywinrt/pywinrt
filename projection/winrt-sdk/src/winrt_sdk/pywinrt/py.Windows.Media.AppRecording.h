@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -25,20 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::AppRecording
 {
-}
-
-namespace py::impl::Windows::Media::AppRecording
-{
-}
-
-namespace py::wrapper::Windows::Media::AppRecording
-{
-    using AppRecordingManager = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingManager>;
-    using AppRecordingResult = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingResult>;
-    using AppRecordingSaveScreenshotResult = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>;
-    using AppRecordingSavedScreenshotInfo = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>;
-    using AppRecordingStatus = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingStatus>;
-    using AppRecordingStatusDetails = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>;
 }
 
 namespace py
@@ -102,4 +75,34 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.apprecording";
         static constexpr const char* type_name = "AppRecordingStatusDetails";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::Media::AppRecording
+{
+}
+
+namespace py::wrapper::Windows::Media::AppRecording
+{
+    using AppRecordingManager = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingManager>;
+    using AppRecordingResult = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingResult>;
+    using AppRecordingSaveScreenshotResult = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>;
+    using AppRecordingSavedScreenshotInfo = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>;
+    using AppRecordingStatus = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingStatus>;
+    using AppRecordingStatusDetails = py::winrt_wrapper<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>;
+}
+
+namespace py
+{
 }

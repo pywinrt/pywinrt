@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Data.Text.h")
-#include "py.Windows.Data.Text.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
-#if __has_include("py.Windows.UI.ViewManagement.h")
-#include "py.Windows.UI.ViewManagement.h"
-#endif
-
 #include <winrt/Windows.Data.Text.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -50,66 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Contacts
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Contacts
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Contacts
-{
-    using AggregateContactManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>;
-    using Contact = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::Contact>;
-    using ContactAddress = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactAddress>;
-    using ContactAnnotation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>;
-    using ContactAnnotationList = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>;
-    using ContactAnnotationStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>;
-    using ContactBatch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactBatch>;
-    using ContactCardDelayedDataLoader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>;
-    using ContactCardOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactCardOptions>;
-    using ContactChange = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChange>;
-    using ContactChangeReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>;
-    using ContactChangeTracker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>;
-    using ContactChangedDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>;
-    using ContactChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>;
-    using ContactConnectedServiceAccount = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount>;
-    using ContactDate = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactDate>;
-    using ContactEmail = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactEmail>;
-    using ContactField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactField>;
-    using ContactFieldFactory = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory>;
-    using ContactGroup = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactGroup>;
-    using ContactInformation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactInformation>;
-    using ContactInstantMessageField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField>;
-    using ContactJobInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactJobInfo>;
-    using ContactLaunchActionVerbs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>;
-    using ContactList = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactList>;
-    using ContactListLimitedWriteOperations = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>;
-    using ContactListSyncConstraints = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>;
-    using ContactListSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>;
-    using ContactLocationField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactLocationField>;
-    using ContactManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactManager>;
-    using ContactManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>;
-    using ContactMatchReason = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>;
-    using ContactPanel = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPanel>;
-    using ContactPanelClosingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>;
-    using ContactPanelLaunchFullAppRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>;
-    using ContactPhone = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPhone>;
-    using ContactPicker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPicker>;
-    using ContactQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions>;
-    using ContactQueryTextSearch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>;
-    using ContactReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactReader>;
-    using ContactSignificantOther = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther>;
-    using ContactStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactStore>;
-    using ContactStoreNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>;
-    using ContactWebsite = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactWebsite>;
-    using FullContactCardOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions>;
-    using KnownContactField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::KnownContactField>;
-    using PinnedContactIdsQueryResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>;
-    using PinnedContactManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>;
-    using IContactField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::IContactField>;
-    using IContactFieldFactory = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>;
-    using IContactInstantMessageFieldFactory = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>;
-    using IContactLocationFieldFactory = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>;
 }
 
 namespace py
@@ -794,4 +701,100 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "_IContactLocationFieldFactory";
     };
+}
+
+#if __has_include("py.Windows.Data.Text.h")
+#include "py.Windows.Data.Text.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+#if __has_include("py.Windows.UI.ViewManagement.h")
+#include "py.Windows.UI.ViewManagement.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Contacts
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Contacts
+{
+    using AggregateContactManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>;
+    using Contact = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::Contact>;
+    using ContactAddress = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactAddress>;
+    using ContactAnnotation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>;
+    using ContactAnnotationList = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>;
+    using ContactAnnotationStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>;
+    using ContactBatch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactBatch>;
+    using ContactCardDelayedDataLoader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>;
+    using ContactCardOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactCardOptions>;
+    using ContactChange = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChange>;
+    using ContactChangeReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>;
+    using ContactChangeTracker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>;
+    using ContactChangedDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>;
+    using ContactChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>;
+    using ContactConnectedServiceAccount = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount>;
+    using ContactDate = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactDate>;
+    using ContactEmail = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactEmail>;
+    using ContactField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactField>;
+    using ContactFieldFactory = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory>;
+    using ContactGroup = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactGroup>;
+    using ContactInformation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactInformation>;
+    using ContactInstantMessageField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField>;
+    using ContactJobInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactJobInfo>;
+    using ContactLaunchActionVerbs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>;
+    using ContactList = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactList>;
+    using ContactListLimitedWriteOperations = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>;
+    using ContactListSyncConstraints = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>;
+    using ContactListSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>;
+    using ContactLocationField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactLocationField>;
+    using ContactManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactManager>;
+    using ContactManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>;
+    using ContactMatchReason = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>;
+    using ContactPanel = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPanel>;
+    using ContactPanelClosingEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>;
+    using ContactPanelLaunchFullAppRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>;
+    using ContactPhone = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPhone>;
+    using ContactPicker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactPicker>;
+    using ContactQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions>;
+    using ContactQueryTextSearch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>;
+    using ContactReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactReader>;
+    using ContactSignificantOther = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther>;
+    using ContactStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactStore>;
+    using ContactStoreNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>;
+    using ContactWebsite = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::ContactWebsite>;
+    using FullContactCardOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions>;
+    using KnownContactField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::KnownContactField>;
+    using PinnedContactIdsQueryResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>;
+    using PinnedContactManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>;
+    using IContactField = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::IContactField>;
+    using IContactFieldFactory = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>;
+    using IContactInstantMessageFieldFactory = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>;
+    using IContactLocationFieldFactory = py::winrt_wrapper<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>;
+}
+
+namespace py
+{
 }

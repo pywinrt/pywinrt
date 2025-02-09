@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -30,29 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Search
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Search
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Search
-{
-    using LocalContentSuggestionSettings = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings>;
-    using SearchPane = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPane>;
-    using SearchPaneQueryChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>;
-    using SearchPaneQueryLinguisticDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>;
-    using SearchPaneQuerySubmittedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>;
-    using SearchPaneResultSuggestionChosenEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>;
-    using SearchPaneSuggestionsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>;
-    using SearchPaneSuggestionsRequestDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>;
-    using SearchPaneSuggestionsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>;
-    using SearchPaneVisibilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>;
-    using SearchQueryLinguisticDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails>;
-    using SearchSuggestionCollection = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>;
-    using SearchSuggestionsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>;
-    using SearchSuggestionsRequestDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>;
-    using ISearchPaneQueryChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>;
 }
 
 namespace py
@@ -177,4 +137,47 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "_ISearchPaneQueryChangedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Search
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Search
+{
+    using LocalContentSuggestionSettings = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings>;
+    using SearchPane = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPane>;
+    using SearchPaneQueryChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>;
+    using SearchPaneQueryLinguisticDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>;
+    using SearchPaneQuerySubmittedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>;
+    using SearchPaneResultSuggestionChosenEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>;
+    using SearchPaneSuggestionsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>;
+    using SearchPaneSuggestionsRequestDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>;
+    using SearchPaneSuggestionsRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>;
+    using SearchPaneVisibilityChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>;
+    using SearchQueryLinguisticDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails>;
+    using SearchSuggestionCollection = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>;
+    using SearchSuggestionsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>;
+    using SearchSuggestionsRequestDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>;
+    using ISearchPaneQueryChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>;
+}
+
+namespace py
+{
 }

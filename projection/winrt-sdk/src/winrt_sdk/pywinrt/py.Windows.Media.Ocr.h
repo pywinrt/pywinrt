@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Globalization.h>
@@ -30,18 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Ocr
 {
-}
-
-namespace py::impl::Windows::Media::Ocr
-{
-}
-
-namespace py::wrapper::Windows::Media::Ocr
-{
-    using OcrEngine = py::winrt_wrapper<winrt::Windows::Media::Ocr::OcrEngine>;
-    using OcrLine = py::winrt_wrapper<winrt::Windows::Media::Ocr::OcrLine>;
-    using OcrResult = py::winrt_wrapper<winrt::Windows::Media::Ocr::OcrResult>;
-    using OcrWord = py::winrt_wrapper<winrt::Windows::Media::Ocr::OcrWord>;
 }
 
 namespace py
@@ -78,4 +49,36 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.ocr";
         static constexpr const char* type_name = "OcrWord";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Globalization.h")
+#include "py.Windows.Globalization.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+namespace py::impl::Windows::Media::Ocr
+{
+}
+
+namespace py::wrapper::Windows::Media::Ocr
+{
+    using OcrEngine = py::winrt_wrapper<winrt::Windows::Media::Ocr::OcrEngine>;
+    using OcrLine = py::winrt_wrapper<winrt::Windows::Media::Ocr::OcrLine>;
+    using OcrResult = py::winrt_wrapper<winrt::Windows::Media::Ocr::OcrResult>;
+    using OcrWord = py::winrt_wrapper<winrt::Windows::Media::Ocr::OcrWord>;
+}
+
+namespace py
+{
 }

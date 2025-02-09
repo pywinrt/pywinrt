@@ -4,27 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Devices.Adc.Provider.h>
 
 namespace py::proj::Windows::Devices::Adc::Provider
 {
-}
-
-namespace py::impl::Windows::Devices::Adc::Provider
-{
-}
-
-namespace py::wrapper::Windows::Devices::Adc::Provider
-{
-    using IAdcControllerProvider = py::winrt_wrapper<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>;
-    using IAdcProvider = py::winrt_wrapper<winrt::Windows::Devices::Adc::Provider::IAdcProvider>;
 }
 
 namespace py
@@ -56,4 +41,22 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.adc.provider";
         static constexpr const char* type_name = "_IAdcProvider";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Adc::Provider
+{
+}
+
+namespace py::wrapper::Windows::Devices::Adc::Provider
+{
+    using IAdcControllerProvider = py::winrt_wrapper<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>;
+    using IAdcProvider = py::winrt_wrapper<winrt::Windows::Devices::Adc::Provider::IAdcProvider>;
+}
+
+namespace py
+{
 }

@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -30,20 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage::Pickers
 {
-}
-
-namespace py::impl::Windows::Storage::Pickers
-{
-}
-
-namespace py::wrapper::Windows::Storage::Pickers
-{
-    using FileExtensionVector = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FileExtensionVector>;
-    using FileOpenPicker = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FileOpenPicker>;
-    using FilePickerFileTypesOrderedMap = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>;
-    using FilePickerSelectedFilesArray = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>;
-    using FileSavePicker = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FileSavePicker>;
-    using FolderPicker = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FolderPicker>;
 }
 
 namespace py
@@ -118,4 +87,38 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "FolderPicker";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Storage::Pickers
+{
+}
+
+namespace py::wrapper::Windows::Storage::Pickers
+{
+    using FileExtensionVector = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FileExtensionVector>;
+    using FileOpenPicker = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FileOpenPicker>;
+    using FilePickerFileTypesOrderedMap = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>;
+    using FilePickerSelectedFilesArray = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>;
+    using FileSavePicker = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FileSavePicker>;
+    using FolderPicker = py::winrt_wrapper<winrt::Windows::Storage::Pickers::FolderPicker>;
+}
+
+namespace py
+{
 }

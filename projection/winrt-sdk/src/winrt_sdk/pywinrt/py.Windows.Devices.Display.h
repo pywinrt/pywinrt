@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.h")
-#include "py.Windows.Graphics.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Graphics.h>
 
@@ -20,15 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Display
 {
-}
-
-namespace py::impl::Windows::Devices::Display
-{
-}
-
-namespace py::wrapper::Windows::Devices::Display
-{
-    using DisplayMonitor = py::winrt_wrapper<winrt::Windows::Devices::Display::DisplayMonitor>;
 }
 
 namespace py
@@ -85,4 +67,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.display";
         static constexpr const char* type_name = "DisplayMonitor";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.h")
+#include "py.Windows.Graphics.h"
+#endif
+
+namespace py::impl::Windows::Devices::Display
+{
+}
+
+namespace py::wrapper::Windows::Devices::Display
+{
+    using DisplayMonitor = py::winrt_wrapper<winrt::Windows::Devices::Display::DisplayMonitor>;
+}
+
+namespace py
+{
 }

@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -30,39 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Storage::Streams
 {
-}
-
-namespace py::impl::Windows::Storage::Streams
-{
-}
-
-namespace py::wrapper::Windows::Storage::Streams
-{
-    using Buffer = py::winrt_wrapper<winrt::Windows::Storage::Streams::Buffer>;
-    using DataReader = py::winrt_wrapper<winrt::Windows::Storage::Streams::DataReader>;
-    using DataReaderLoadOperation = py::winrt_wrapper<winrt::Windows::Storage::Streams::DataReaderLoadOperation>;
-    using DataWriter = py::winrt_wrapper<winrt::Windows::Storage::Streams::DataWriter>;
-    using DataWriterStoreOperation = py::winrt_wrapper<winrt::Windows::Storage::Streams::DataWriterStoreOperation>;
-    using FileInputStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::FileInputStream>;
-    using FileOutputStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::FileOutputStream>;
-    using FileRandomAccessStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::FileRandomAccessStream>;
-    using InMemoryRandomAccessStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::InMemoryRandomAccessStream>;
-    using InputStreamOverStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::InputStreamOverStream>;
-    using OutputStreamOverStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::OutputStreamOverStream>;
-    using RandomAccessStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::RandomAccessStream>;
-    using RandomAccessStreamOverStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::RandomAccessStreamOverStream>;
-    using RandomAccessStreamReference = py::winrt_wrapper<winrt::Windows::Storage::Streams::RandomAccessStreamReference>;
-    using IBuffer = py::winrt_wrapper<winrt::Windows::Storage::Streams::IBuffer>;
-    using IContentTypeProvider = py::winrt_wrapper<winrt::Windows::Storage::Streams::IContentTypeProvider>;
-    using IDataReader = py::winrt_wrapper<winrt::Windows::Storage::Streams::IDataReader>;
-    using IDataWriter = py::winrt_wrapper<winrt::Windows::Storage::Streams::IDataWriter>;
-    using IInputStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::IInputStream>;
-    using IInputStreamReference = py::winrt_wrapper<winrt::Windows::Storage::Streams::IInputStreamReference>;
-    using IOutputStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::IOutputStream>;
-    using IPropertySetSerializer = py::winrt_wrapper<winrt::Windows::Storage::Streams::IPropertySetSerializer>;
-    using IRandomAccessStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::IRandomAccessStream>;
-    using IRandomAccessStreamReference = py::winrt_wrapper<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>;
-    using IRandomAccessStreamWithContentType = py::winrt_wrapper<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>;
 }
 
 namespace py
@@ -311,4 +261,57 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "_IRandomAccessStreamWithContentType";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Storage::Streams
+{
+}
+
+namespace py::wrapper::Windows::Storage::Streams
+{
+    using Buffer = py::winrt_wrapper<winrt::Windows::Storage::Streams::Buffer>;
+    using DataReader = py::winrt_wrapper<winrt::Windows::Storage::Streams::DataReader>;
+    using DataReaderLoadOperation = py::winrt_wrapper<winrt::Windows::Storage::Streams::DataReaderLoadOperation>;
+    using DataWriter = py::winrt_wrapper<winrt::Windows::Storage::Streams::DataWriter>;
+    using DataWriterStoreOperation = py::winrt_wrapper<winrt::Windows::Storage::Streams::DataWriterStoreOperation>;
+    using FileInputStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::FileInputStream>;
+    using FileOutputStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::FileOutputStream>;
+    using FileRandomAccessStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::FileRandomAccessStream>;
+    using InMemoryRandomAccessStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::InMemoryRandomAccessStream>;
+    using InputStreamOverStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::InputStreamOverStream>;
+    using OutputStreamOverStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::OutputStreamOverStream>;
+    using RandomAccessStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::RandomAccessStream>;
+    using RandomAccessStreamOverStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::RandomAccessStreamOverStream>;
+    using RandomAccessStreamReference = py::winrt_wrapper<winrt::Windows::Storage::Streams::RandomAccessStreamReference>;
+    using IBuffer = py::winrt_wrapper<winrt::Windows::Storage::Streams::IBuffer>;
+    using IContentTypeProvider = py::winrt_wrapper<winrt::Windows::Storage::Streams::IContentTypeProvider>;
+    using IDataReader = py::winrt_wrapper<winrt::Windows::Storage::Streams::IDataReader>;
+    using IDataWriter = py::winrt_wrapper<winrt::Windows::Storage::Streams::IDataWriter>;
+    using IInputStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::IInputStream>;
+    using IInputStreamReference = py::winrt_wrapper<winrt::Windows::Storage::Streams::IInputStreamReference>;
+    using IOutputStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::IOutputStream>;
+    using IPropertySetSerializer = py::winrt_wrapper<winrt::Windows::Storage::Streams::IPropertySetSerializer>;
+    using IRandomAccessStream = py::winrt_wrapper<winrt::Windows::Storage::Streams::IRandomAccessStream>;
+    using IRandomAccessStreamReference = py::winrt_wrapper<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>;
+    using IRandomAccessStreamWithContentType = py::winrt_wrapper<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>;
+}
+
+namespace py
+{
 }

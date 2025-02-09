@@ -4,59 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.h")
-#include "py.Windows.Media.Capture.h"
-#endif
-
-#if __has_include("py.Windows.Media.Devices.h")
-#include "py.Windows.Media.Devices.h"
-#endif
-
-#if __has_include("py.Windows.Media.Devices.Core.h")
-#include "py.Windows.Media.Devices.Core.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
-#endif
-
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -75,33 +22,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Capture::Frames
 {
-}
-
-namespace py::impl::Windows::Media::Capture::Frames
-{
-}
-
-namespace py::wrapper::Windows::Media::Capture::Frames
-{
-    using AudioMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>;
-    using BufferMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>;
-    using DepthMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>;
-    using DepthMediaFrameFormat = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>;
-    using InfraredMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>;
-    using MediaFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>;
-    using MediaFrameFormat = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>;
-    using MediaFrameReader = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameReader>;
-    using MediaFrameReference = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameReference>;
-    using MediaFrameSource = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSource>;
-    using MediaFrameSourceController = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>;
-    using MediaFrameSourceGetPropertyResult = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>;
-    using MediaFrameSourceGroup = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>;
-    using MediaFrameSourceInfo = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>;
-    using MultiSourceMediaFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>;
-    using MultiSourceMediaFrameReader = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>;
-    using MultiSourceMediaFrameReference = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>;
-    using VideoMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>;
-    using VideoMediaFrameFormat = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>;
 }
 
 namespace py
@@ -324,4 +244,87 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "VideoMediaFrameFormat";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+#if __has_include("py.Windows.Media.Capture.h")
+#include "py.Windows.Media.Capture.h"
+#endif
+
+#if __has_include("py.Windows.Media.Devices.h")
+#include "py.Windows.Media.Devices.h"
+#endif
+
+#if __has_include("py.Windows.Media.Devices.Core.h")
+#include "py.Windows.Media.Devices.Core.h"
+#endif
+
+#if __has_include("py.Windows.Media.MediaProperties.h")
+#include "py.Windows.Media.MediaProperties.h"
+#endif
+
+#if __has_include("py.Windows.Perception.Spatial.h")
+#include "py.Windows.Perception.Spatial.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.WindowManagement.h")
+#include "py.Windows.UI.WindowManagement.h"
+#endif
+
+namespace py::impl::Windows::Media::Capture::Frames
+{
+}
+
+namespace py::wrapper::Windows::Media::Capture::Frames
+{
+    using AudioMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>;
+    using BufferMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>;
+    using DepthMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>;
+    using DepthMediaFrameFormat = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>;
+    using InfraredMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>;
+    using MediaFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>;
+    using MediaFrameFormat = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>;
+    using MediaFrameReader = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameReader>;
+    using MediaFrameReference = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameReference>;
+    using MediaFrameSource = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSource>;
+    using MediaFrameSourceController = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>;
+    using MediaFrameSourceGetPropertyResult = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>;
+    using MediaFrameSourceGroup = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>;
+    using MediaFrameSourceInfo = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>;
+    using MultiSourceMediaFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>;
+    using MultiSourceMediaFrameReader = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>;
+    using MultiSourceMediaFrameReference = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>;
+    using VideoMediaFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>;
+    using VideoMediaFrameFormat = py::winrt_wrapper<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>;
+}
+
+namespace py
+{
 }

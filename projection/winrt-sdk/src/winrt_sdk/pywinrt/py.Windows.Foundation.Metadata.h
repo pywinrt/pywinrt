@@ -5,20 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Foundation.Metadata.h>
 
 namespace py::proj::Windows::Foundation::Metadata
 {
-}
-
-namespace py::impl::Windows::Foundation::Metadata
-{
-}
-
-namespace py::wrapper::Windows::Foundation::Metadata
-{
-    using ApiInformation = py::winrt_wrapper<winrt::Windows::Foundation::Metadata::ApiInformation>;
 }
 
 namespace py
@@ -119,4 +109,17 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "ApiInformation";
     };
+}
+
+namespace py::impl::Windows::Foundation::Metadata
+{
+}
+
+namespace py::wrapper::Windows::Foundation::Metadata
+{
+    using ApiInformation = py::winrt_wrapper<winrt::Windows::Foundation::Metadata::ApiInformation>;
+}
+
+namespace py
+{
 }

@@ -528,16 +528,6 @@ static class FileWriters
 
         foreach (var rns in referencedNamespaces)
         {
-            w.WriteBlankLine();
-            w.WriteLine($"#if __has_include(\"py.{rns}.h\")");
-            w.WriteLine($"#include \"py.{rns}.h\"");
-            w.WriteLine("#endif");
-        }
-
-        w.WriteBlankLine();
-
-        foreach (var rns in referencedNamespaces)
-        {
             w.WriteLine($"#include <winrt/{rns}.h>");
         }
 
@@ -562,6 +552,39 @@ static class FileWriters
                 w.WriteGenericInterfaceDecl(iface);
             }
         });
+
+        w.WriteBlankLine();
+        w.WriteLine("namespace py");
+        w.WriteBlock(() =>
+        {
+            foreach (var type in members.Enums)
+            {
+                w.WriteEnumBufferFormat(type);
+            }
+
+            foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+            {
+                w.WriteStructBufferFormat(type);
+            }
+
+            foreach (
+                var type in members
+                    .Enums.Concat(members.Classes)
+                    .Concat(members.Interfaces)
+                    .Concat(members.Structs)
+            )
+            {
+                w.WritePyTypeSpecializationStruct(type);
+            }
+        });
+
+        foreach (var rns in referencedNamespaces)
+        {
+            w.WriteBlankLine();
+            w.WriteLine($"#if __has_include(\"py.{rns}.h\")");
+            w.WriteLine($"#include \"py.{rns}.h\"");
+            w.WriteLine("#endif");
+        }
 
         w.WriteBlankLine();
         w.WriteLine($"namespace py::impl::{ns.ToCppNamespace()}");
@@ -608,26 +631,6 @@ static class FileWriters
         w.WriteLine("namespace py");
         w.WriteBlock(() =>
         {
-            foreach (var type in members.Enums)
-            {
-                w.WriteEnumBufferFormat(type);
-            }
-
-            foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
-            {
-                w.WriteStructBufferFormat(type);
-            }
-
-            foreach (
-                var type in members
-                    .Enums.Concat(members.Classes)
-                    .Concat(members.Interfaces)
-                    .Concat(members.Structs)
-            )
-            {
-                w.WritePyTypeSpecializationStruct(type);
-            }
-
             foreach (var type in members.Interfaces.Where(i => i.IsGeneric))
             {
                 w.WriteGenericInterfaceTypeMapper(type);

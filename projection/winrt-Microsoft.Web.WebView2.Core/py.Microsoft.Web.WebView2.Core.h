@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
-#include "py.Windows.ApplicationModel.DataTransfer.h"
-#endif
-
-#if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.h")
-#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
-#include "py.Windows.Security.Cryptography.Certificates.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
 #include <winrt/Windows.ApplicationModel.DataTransfer.DragDrop.Core.h>
 #include <winrt/Windows.Foundation.h>
@@ -50,82 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::Web::WebView2::Core
 {
-}
-
-namespace py::impl::Microsoft::Web::WebView2::Core
-{
-}
-
-namespace py::wrapper::Microsoft::Web::WebView2::Core
-{
-    using CoreWebView2 = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2>;
-    using CoreWebView2AcceleratorKeyPressedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs>;
-    using CoreWebView2BasicAuthenticationRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs>;
-    using CoreWebView2BasicAuthenticationResponse = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse>;
-    using CoreWebView2BrowserExtension = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>;
-    using CoreWebView2BrowserProcessExitedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserProcessExitedEventArgs>;
-    using CoreWebView2Certificate = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Certificate>;
-    using CoreWebView2ClientCertificate = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate>;
-    using CoreWebView2ClientCertificateRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs>;
-    using CoreWebView2CompositionController = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController>;
-    using CoreWebView2ContentLoadingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs>;
-    using CoreWebView2ContextMenuItem = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem>;
-    using CoreWebView2ContextMenuRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs>;
-    using CoreWebView2ContextMenuTarget = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget>;
-    using CoreWebView2Controller = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>;
-    using CoreWebView2ControllerOptions = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions>;
-    using CoreWebView2ControllerWindowReference = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>;
-    using CoreWebView2Cookie = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Cookie>;
-    using CoreWebView2CookieManager = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager>;
-    using CoreWebView2CustomSchemeRegistration = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration>;
-    using CoreWebView2DOMContentLoadedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DOMContentLoadedEventArgs>;
-    using CoreWebView2DevToolsProtocolEventReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceivedEventArgs>;
-    using CoreWebView2DevToolsProtocolEventReceiver = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceiver>;
-    using CoreWebView2DownloadOperation = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation>;
-    using CoreWebView2DownloadStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs>;
-    using CoreWebView2Environment = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment>;
-    using CoreWebView2EnvironmentOptions = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions>;
-    using CoreWebView2ExecuteScriptResult = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ExecuteScriptResult>;
-    using CoreWebView2File = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2File>;
-    using CoreWebView2FileSystemHandle = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandle>;
-    using CoreWebView2Frame = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame>;
-    using CoreWebView2FrameCreatedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs>;
-    using CoreWebView2FrameInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo>;
-    using CoreWebView2HttpHeadersCollectionIterator = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator>;
-    using CoreWebView2HttpRequestHeaders = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders>;
-    using CoreWebView2HttpResponseHeaders = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HttpResponseHeaders>;
-    using CoreWebView2LaunchingExternalUriSchemeEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs>;
-    using CoreWebView2MoveFocusRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs>;
-    using CoreWebView2NavigationCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs>;
-    using CoreWebView2NavigationStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>;
-    using CoreWebView2NewWindowRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs>;
-    using CoreWebView2NonClientRegionChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionChangedEventArgs>;
-    using CoreWebView2Notification = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification>;
-    using CoreWebView2NotificationReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs>;
-    using CoreWebView2PermissionRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs>;
-    using CoreWebView2PermissionSetting = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting>;
-    using CoreWebView2PointerInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo>;
-    using CoreWebView2PrintSettings = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>;
-    using CoreWebView2ProcessExtendedInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>;
-    using CoreWebView2ProcessFailedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs>;
-    using CoreWebView2ProcessInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo>;
-    using CoreWebView2Profile = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile>;
-    using CoreWebView2SaveAsUIShowingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs>;
-    using CoreWebView2ScriptDialogOpeningEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs>;
-    using CoreWebView2ScriptException = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException>;
-    using CoreWebView2ServerCertificateErrorDetectedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs>;
-    using CoreWebView2Settings = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Settings>;
-    using CoreWebView2SharedBuffer = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer>;
-    using CoreWebView2SourceChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SourceChangedEventArgs>;
-    using CoreWebView2WebMessageReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs>;
-    using CoreWebView2WebResourceRequest = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest>;
-    using CoreWebView2WebResourceRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs>;
-    using CoreWebView2WebResourceResponse = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse>;
-    using CoreWebView2WebResourceResponseReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseReceivedEventArgs>;
-    using CoreWebView2WebResourceResponseView = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseView>;
-    using CoreWebView2WindowFeatures = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures>;
-    using ICoreWebView2DispatchAdapter = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>;
-    using CoreWebView2PhysicalKeyStatus = py::winrt_struct_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>;
 }
 
 namespace py
@@ -1238,4 +1129,116 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
         static constexpr const char* type_name = "CoreWebView2PhysicalKeyStatus";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.h")
+#include "py.Windows.ApplicationModel.DataTransfer.h"
+#endif
+
+#if __has_include("py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.h")
+#include "py.Windows.ApplicationModel.DataTransfer.DragDrop.Core.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
+#include "py.Windows.Security.Cryptography.Certificates.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+namespace py::impl::Microsoft::Web::WebView2::Core
+{
+}
+
+namespace py::wrapper::Microsoft::Web::WebView2::Core
+{
+    using CoreWebView2 = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2>;
+    using CoreWebView2AcceleratorKeyPressedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs>;
+    using CoreWebView2BasicAuthenticationRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs>;
+    using CoreWebView2BasicAuthenticationResponse = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationResponse>;
+    using CoreWebView2BrowserExtension = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>;
+    using CoreWebView2BrowserProcessExitedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserProcessExitedEventArgs>;
+    using CoreWebView2Certificate = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Certificate>;
+    using CoreWebView2ClientCertificate = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate>;
+    using CoreWebView2ClientCertificateRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs>;
+    using CoreWebView2CompositionController = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController>;
+    using CoreWebView2ContentLoadingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContentLoadingEventArgs>;
+    using CoreWebView2ContextMenuItem = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuItem>;
+    using CoreWebView2ContextMenuRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs>;
+    using CoreWebView2ContextMenuTarget = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTarget>;
+    using CoreWebView2Controller = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>;
+    using CoreWebView2ControllerOptions = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions>;
+    using CoreWebView2ControllerWindowReference = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>;
+    using CoreWebView2Cookie = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Cookie>;
+    using CoreWebView2CookieManager = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager>;
+    using CoreWebView2CustomSchemeRegistration = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CustomSchemeRegistration>;
+    using CoreWebView2DOMContentLoadedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DOMContentLoadedEventArgs>;
+    using CoreWebView2DevToolsProtocolEventReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceivedEventArgs>;
+    using CoreWebView2DevToolsProtocolEventReceiver = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DevToolsProtocolEventReceiver>;
+    using CoreWebView2DownloadOperation = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation>;
+    using CoreWebView2DownloadStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs>;
+    using CoreWebView2Environment = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment>;
+    using CoreWebView2EnvironmentOptions = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions>;
+    using CoreWebView2ExecuteScriptResult = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ExecuteScriptResult>;
+    using CoreWebView2File = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2File>;
+    using CoreWebView2FileSystemHandle = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandle>;
+    using CoreWebView2Frame = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame>;
+    using CoreWebView2FrameCreatedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs>;
+    using CoreWebView2FrameInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo>;
+    using CoreWebView2HttpHeadersCollectionIterator = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator>;
+    using CoreWebView2HttpRequestHeaders = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders>;
+    using CoreWebView2HttpResponseHeaders = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2HttpResponseHeaders>;
+    using CoreWebView2LaunchingExternalUriSchemeEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs>;
+    using CoreWebView2MoveFocusRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs>;
+    using CoreWebView2NavigationCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs>;
+    using CoreWebView2NavigationStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs>;
+    using CoreWebView2NewWindowRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs>;
+    using CoreWebView2NonClientRegionChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionChangedEventArgs>;
+    using CoreWebView2Notification = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification>;
+    using CoreWebView2NotificationReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs>;
+    using CoreWebView2PermissionRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs>;
+    using CoreWebView2PermissionSetting = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting>;
+    using CoreWebView2PointerInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo>;
+    using CoreWebView2PrintSettings = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PrintSettings>;
+    using CoreWebView2ProcessExtendedInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>;
+    using CoreWebView2ProcessFailedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs>;
+    using CoreWebView2ProcessInfo = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo>;
+    using CoreWebView2Profile = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile>;
+    using CoreWebView2SaveAsUIShowingEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs>;
+    using CoreWebView2ScriptDialogOpeningEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs>;
+    using CoreWebView2ScriptException = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException>;
+    using CoreWebView2ServerCertificateErrorDetectedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs>;
+    using CoreWebView2Settings = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Settings>;
+    using CoreWebView2SharedBuffer = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer>;
+    using CoreWebView2SourceChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SourceChangedEventArgs>;
+    using CoreWebView2WebMessageReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs>;
+    using CoreWebView2WebResourceRequest = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequest>;
+    using CoreWebView2WebResourceRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs>;
+    using CoreWebView2WebResourceResponse = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponse>;
+    using CoreWebView2WebResourceResponseReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseReceivedEventArgs>;
+    using CoreWebView2WebResourceResponseView = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseView>;
+    using CoreWebView2WindowFeatures = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WindowFeatures>;
+    using ICoreWebView2DispatchAdapter = py::winrt_wrapper<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter>;
+    using CoreWebView2PhysicalKeyStatus = py::winrt_struct_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>;
+}
+
+namespace py
+{
 }

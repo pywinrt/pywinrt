@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.HumanInterfaceDevice.h")
-#include "py.Windows.Devices.HumanInterfaceDevice.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Devices.HumanInterfaceDevice.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,24 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Input::Preview
 {
-}
-
-namespace py::impl::Windows::Devices::Input::Preview
-{
-}
-
-namespace py::wrapper::Windows::Devices::Input::Preview
-{
-    using GazeDevicePreview = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDevicePreview>;
-    using GazeDeviceWatcherAddedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>;
-    using GazeDeviceWatcherPreview = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>;
-    using GazeDeviceWatcherRemovedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>;
-    using GazeDeviceWatcherUpdatedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>;
-    using GazeEnteredPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>;
-    using GazeExitedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>;
-    using GazeInputSourcePreview = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview>;
-    using GazeMovedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>;
-    using GazePointPreview = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazePointPreview>;
 }
 
 namespace py
@@ -138,4 +107,38 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.input.preview";
         static constexpr const char* type_name = "GazePointPreview";
     };
+}
+
+#if __has_include("py.Windows.Devices.HumanInterfaceDevice.h")
+#include "py.Windows.Devices.HumanInterfaceDevice.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Input::Preview
+{
+}
+
+namespace py::wrapper::Windows::Devices::Input::Preview
+{
+    using GazeDevicePreview = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDevicePreview>;
+    using GazeDeviceWatcherAddedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>;
+    using GazeDeviceWatcherPreview = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>;
+    using GazeDeviceWatcherRemovedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>;
+    using GazeDeviceWatcherUpdatedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>;
+    using GazeEnteredPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>;
+    using GazeExitedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>;
+    using GazeInputSourcePreview = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview>;
+    using GazeMovedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>;
+    using GazePointPreview = py::winrt_wrapper<winrt::Windows::Devices::Input::Preview::GazePointPreview>;
+}
+
+namespace py
+{
 }

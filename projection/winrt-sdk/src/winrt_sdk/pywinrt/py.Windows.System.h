@@ -4,47 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.h")
-#include "py.Windows.ApplicationModel.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Search.h")
-#include "py.Windows.Storage.Search.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.Diagnostics.h")
-#include "py.Windows.System.Diagnostics.h"
-#endif
-
-#if __has_include("py.Windows.System.RemoteSystems.h")
-#include "py.Windows.System.RemoteSystems.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
-#if __has_include("py.Windows.UI.ViewManagement.h")
-#include "py.Windows.UI.ViewManagement.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -60,86 +19,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::System
 {
-}
-
-namespace py::impl::Windows::System
-{
-    struct DispatcherQueueHandler
-    {
-        static winrt::Windows::System::DispatcherQueueHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)]()
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::System
-{
-    using AppActivationResult = py::winrt_wrapper<winrt::Windows::System::AppActivationResult>;
-    using AppDiagnosticInfo = py::winrt_wrapper<winrt::Windows::System::AppDiagnosticInfo>;
-    using AppDiagnosticInfoWatcher = py::winrt_wrapper<winrt::Windows::System::AppDiagnosticInfoWatcher>;
-    using AppDiagnosticInfoWatcherEventArgs = py::winrt_wrapper<winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs>;
-    using AppExecutionStateChangeResult = py::winrt_wrapper<winrt::Windows::System::AppExecutionStateChangeResult>;
-    using AppMemoryReport = py::winrt_wrapper<winrt::Windows::System::AppMemoryReport>;
-    using AppMemoryUsageLimitChangingEventArgs = py::winrt_wrapper<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs>;
-    using AppResourceGroupBackgroundTaskReport = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupBackgroundTaskReport>;
-    using AppResourceGroupInfo = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupInfo>;
-    using AppResourceGroupInfoWatcher = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupInfoWatcher>;
-    using AppResourceGroupInfoWatcherEventArgs = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs>;
-    using AppResourceGroupInfoWatcherExecutionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs>;
-    using AppResourceGroupMemoryReport = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupMemoryReport>;
-    using AppResourceGroupStateReport = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupStateReport>;
-    using AppUriHandlerHost = py::winrt_wrapper<winrt::Windows::System::AppUriHandlerHost>;
-    using AppUriHandlerRegistration = py::winrt_wrapper<winrt::Windows::System::AppUriHandlerRegistration>;
-    using AppUriHandlerRegistrationManager = py::winrt_wrapper<winrt::Windows::System::AppUriHandlerRegistrationManager>;
-    using DateTimeSettings = py::winrt_wrapper<winrt::Windows::System::DateTimeSettings>;
-    using DispatcherQueue = py::winrt_wrapper<winrt::Windows::System::DispatcherQueue>;
-    using DispatcherQueueController = py::winrt_wrapper<winrt::Windows::System::DispatcherQueueController>;
-    using DispatcherQueueShutdownStartingEventArgs = py::winrt_wrapper<winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs>;
-    using DispatcherQueueTimer = py::winrt_wrapper<winrt::Windows::System::DispatcherQueueTimer>;
-    using FolderLauncherOptions = py::winrt_wrapper<winrt::Windows::System::FolderLauncherOptions>;
-    using KnownUserProperties = py::winrt_wrapper<winrt::Windows::System::KnownUserProperties>;
-    using LaunchUriResult = py::winrt_wrapper<winrt::Windows::System::LaunchUriResult>;
-    using Launcher = py::winrt_wrapper<winrt::Windows::System::Launcher>;
-    using LauncherOptions = py::winrt_wrapper<winrt::Windows::System::LauncherOptions>;
-    using LauncherUIOptions = py::winrt_wrapper<winrt::Windows::System::LauncherUIOptions>;
-    using MemoryManager = py::winrt_wrapper<winrt::Windows::System::MemoryManager>;
-    using ProcessLauncher = py::winrt_wrapper<winrt::Windows::System::ProcessLauncher>;
-    using ProcessLauncherOptions = py::winrt_wrapper<winrt::Windows::System::ProcessLauncherOptions>;
-    using ProcessLauncherResult = py::winrt_wrapper<winrt::Windows::System::ProcessLauncherResult>;
-    using ProcessMemoryReport = py::winrt_wrapper<winrt::Windows::System::ProcessMemoryReport>;
-    using ProtocolForResultsOperation = py::winrt_wrapper<winrt::Windows::System::ProtocolForResultsOperation>;
-    using RemoteLauncher = py::winrt_wrapper<winrt::Windows::System::RemoteLauncher>;
-    using RemoteLauncherOptions = py::winrt_wrapper<winrt::Windows::System::RemoteLauncherOptions>;
-    using ShutdownManager = py::winrt_wrapper<winrt::Windows::System::ShutdownManager>;
-    using TimeZoneSettings = py::winrt_wrapper<winrt::Windows::System::TimeZoneSettings>;
-    using User = py::winrt_wrapper<winrt::Windows::System::User>;
-    using UserAuthenticationStatusChangeDeferral = py::winrt_wrapper<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>;
-    using UserAuthenticationStatusChangingEventArgs = py::winrt_wrapper<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>;
-    using UserChangedEventArgs = py::winrt_wrapper<winrt::Windows::System::UserChangedEventArgs>;
-    using UserDeviceAssociation = py::winrt_wrapper<winrt::Windows::System::UserDeviceAssociation>;
-    using UserDeviceAssociationChangedEventArgs = py::winrt_wrapper<winrt::Windows::System::UserDeviceAssociationChangedEventArgs>;
-    using UserPicker = py::winrt_wrapper<winrt::Windows::System::UserPicker>;
-    using UserWatcher = py::winrt_wrapper<winrt::Windows::System::UserWatcher>;
-    using ILauncherViewOptions = py::winrt_wrapper<winrt::Windows::System::ILauncherViewOptions>;
 }
 
 namespace py
@@ -795,6 +674,130 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "_ILauncherViewOptions";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.h")
+#include "py.Windows.ApplicationModel.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Search.h")
+#include "py.Windows.Storage.Search.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.Diagnostics.h")
+#include "py.Windows.System.Diagnostics.h"
+#endif
+
+#if __has_include("py.Windows.System.RemoteSystems.h")
+#include "py.Windows.System.RemoteSystems.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+#if __has_include("py.Windows.UI.ViewManagement.h")
+#include "py.Windows.UI.ViewManagement.h"
+#endif
+
+namespace py::impl::Windows::System
+{
+    struct DispatcherQueueHandler
+    {
+        static winrt::Windows::System::DispatcherQueueHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)]()
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle return_value{PyObject_CallNoArgs(delegate.callable())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::System
+{
+    using AppActivationResult = py::winrt_wrapper<winrt::Windows::System::AppActivationResult>;
+    using AppDiagnosticInfo = py::winrt_wrapper<winrt::Windows::System::AppDiagnosticInfo>;
+    using AppDiagnosticInfoWatcher = py::winrt_wrapper<winrt::Windows::System::AppDiagnosticInfoWatcher>;
+    using AppDiagnosticInfoWatcherEventArgs = py::winrt_wrapper<winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs>;
+    using AppExecutionStateChangeResult = py::winrt_wrapper<winrt::Windows::System::AppExecutionStateChangeResult>;
+    using AppMemoryReport = py::winrt_wrapper<winrt::Windows::System::AppMemoryReport>;
+    using AppMemoryUsageLimitChangingEventArgs = py::winrt_wrapper<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs>;
+    using AppResourceGroupBackgroundTaskReport = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupBackgroundTaskReport>;
+    using AppResourceGroupInfo = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupInfo>;
+    using AppResourceGroupInfoWatcher = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupInfoWatcher>;
+    using AppResourceGroupInfoWatcherEventArgs = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs>;
+    using AppResourceGroupInfoWatcherExecutionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs>;
+    using AppResourceGroupMemoryReport = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupMemoryReport>;
+    using AppResourceGroupStateReport = py::winrt_wrapper<winrt::Windows::System::AppResourceGroupStateReport>;
+    using AppUriHandlerHost = py::winrt_wrapper<winrt::Windows::System::AppUriHandlerHost>;
+    using AppUriHandlerRegistration = py::winrt_wrapper<winrt::Windows::System::AppUriHandlerRegistration>;
+    using AppUriHandlerRegistrationManager = py::winrt_wrapper<winrt::Windows::System::AppUriHandlerRegistrationManager>;
+    using DateTimeSettings = py::winrt_wrapper<winrt::Windows::System::DateTimeSettings>;
+    using DispatcherQueue = py::winrt_wrapper<winrt::Windows::System::DispatcherQueue>;
+    using DispatcherQueueController = py::winrt_wrapper<winrt::Windows::System::DispatcherQueueController>;
+    using DispatcherQueueShutdownStartingEventArgs = py::winrt_wrapper<winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs>;
+    using DispatcherQueueTimer = py::winrt_wrapper<winrt::Windows::System::DispatcherQueueTimer>;
+    using FolderLauncherOptions = py::winrt_wrapper<winrt::Windows::System::FolderLauncherOptions>;
+    using KnownUserProperties = py::winrt_wrapper<winrt::Windows::System::KnownUserProperties>;
+    using LaunchUriResult = py::winrt_wrapper<winrt::Windows::System::LaunchUriResult>;
+    using Launcher = py::winrt_wrapper<winrt::Windows::System::Launcher>;
+    using LauncherOptions = py::winrt_wrapper<winrt::Windows::System::LauncherOptions>;
+    using LauncherUIOptions = py::winrt_wrapper<winrt::Windows::System::LauncherUIOptions>;
+    using MemoryManager = py::winrt_wrapper<winrt::Windows::System::MemoryManager>;
+    using ProcessLauncher = py::winrt_wrapper<winrt::Windows::System::ProcessLauncher>;
+    using ProcessLauncherOptions = py::winrt_wrapper<winrt::Windows::System::ProcessLauncherOptions>;
+    using ProcessLauncherResult = py::winrt_wrapper<winrt::Windows::System::ProcessLauncherResult>;
+    using ProcessMemoryReport = py::winrt_wrapper<winrt::Windows::System::ProcessMemoryReport>;
+    using ProtocolForResultsOperation = py::winrt_wrapper<winrt::Windows::System::ProtocolForResultsOperation>;
+    using RemoteLauncher = py::winrt_wrapper<winrt::Windows::System::RemoteLauncher>;
+    using RemoteLauncherOptions = py::winrt_wrapper<winrt::Windows::System::RemoteLauncherOptions>;
+    using ShutdownManager = py::winrt_wrapper<winrt::Windows::System::ShutdownManager>;
+    using TimeZoneSettings = py::winrt_wrapper<winrt::Windows::System::TimeZoneSettings>;
+    using User = py::winrt_wrapper<winrt::Windows::System::User>;
+    using UserAuthenticationStatusChangeDeferral = py::winrt_wrapper<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>;
+    using UserAuthenticationStatusChangingEventArgs = py::winrt_wrapper<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>;
+    using UserChangedEventArgs = py::winrt_wrapper<winrt::Windows::System::UserChangedEventArgs>;
+    using UserDeviceAssociation = py::winrt_wrapper<winrt::Windows::System::UserDeviceAssociation>;
+    using UserDeviceAssociationChangedEventArgs = py::winrt_wrapper<winrt::Windows::System::UserDeviceAssociationChangedEventArgs>;
+    using UserPicker = py::winrt_wrapper<winrt::Windows::System::UserPicker>;
+    using UserWatcher = py::winrt_wrapper<winrt::Windows::System::UserWatcher>;
+    using ILauncherViewOptions = py::winrt_wrapper<winrt::Windows::System::ILauncherViewOptions>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::System::DispatcherQueueHandler>
     {

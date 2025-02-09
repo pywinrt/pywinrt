@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Perception.Automation.Core.h>
 
 namespace py::proj::Windows::Perception::Automation::Core
 {
-}
-
-namespace py::impl::Windows::Perception::Automation::Core
-{
-}
-
-namespace py::wrapper::Windows::Perception::Automation::Core
-{
-    using CorePerceptionAutomation = py::winrt_wrapper<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation>;
 }
 
 namespace py
@@ -36,4 +22,21 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.perception.automation.core";
         static constexpr const char* type_name = "CorePerceptionAutomation";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::Perception::Automation::Core
+{
+}
+
+namespace py::wrapper::Windows::Perception::Automation::Core
+{
+    using CorePerceptionAutomation = py::winrt_wrapper<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation>;
+}
+
+namespace py
+{
 }

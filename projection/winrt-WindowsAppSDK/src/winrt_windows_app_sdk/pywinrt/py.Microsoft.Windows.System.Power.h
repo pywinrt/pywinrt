@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Microsoft.Windows.System.Power.h>
 
 namespace py::proj::Microsoft::Windows::System::Power
 {
-}
-
-namespace py::impl::Microsoft::Windows::System::Power
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::System::Power
-{
-    using PowerManager = py::winrt_wrapper<winrt::Microsoft::Windows::System::Power::PowerManager>;
 }
 
 namespace py
@@ -124,4 +110,21 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
         static constexpr const char* type_name = "PowerManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::System::Power
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::System::Power
+{
+    using PowerManager = py::winrt_wrapper<winrt::Microsoft::Windows::System::Power::PowerManager>;
+}
+
+namespace py
+{
 }

@@ -4,43 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.Playback.h")
-#include "py.Windows.Media.Playback.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
-#include "py.Windows.UI.Xaml.Controls.Primitives.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
-#include "py.Windows.UI.Xaml.Media.Media3D.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.Playback.h>
@@ -55,169 +18,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Media
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Media
-{
-    struct RateChangedRoutedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct TimelineMarkerRoutedEventHandler
-    {
-        static winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Media
-{
-    using AcrylicBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::AcrylicBrush>;
-    using ArcSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ArcSegment>;
-    using BezierSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::BezierSegment>;
-    using BitmapCache = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::BitmapCache>;
-    using Brush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Brush>;
-    using BrushCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::BrushCollection>;
-    using CacheMode = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::CacheMode>;
-    using CompositeTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::CompositeTransform>;
-    using CompositionTarget = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::CompositionTarget>;
-    using DoubleCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::DoubleCollection>;
-    using EllipseGeometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::EllipseGeometry>;
-    using FontFamily = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::FontFamily>;
-    using GeneralTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GeneralTransform>;
-    using Geometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Geometry>;
-    using GeometryCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GeometryCollection>;
-    using GeometryGroup = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GeometryGroup>;
-    using GradientBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GradientBrush>;
-    using GradientStop = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GradientStop>;
-    using GradientStopCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GradientStopCollection>;
-    using ImageBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ImageBrush>;
-    using ImageSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ImageSource>;
-    using LineGeometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LineGeometry>;
-    using LineSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LineSegment>;
-    using LinearGradientBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LinearGradientBrush>;
-    using LoadedImageSourceLoadCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>;
-    using LoadedImageSurface = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>;
-    using Matrix3DProjection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Matrix3DProjection>;
-    using MatrixHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::MatrixHelper>;
-    using MatrixTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::MatrixTransform>;
-    using MediaTransportControlsThumbnailRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>;
-    using PartialMediaFailureDetectedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs>;
-    using PathFigure = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathFigure>;
-    using PathFigureCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathFigureCollection>;
-    using PathGeometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathGeometry>;
-    using PathSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathSegment>;
-    using PathSegmentCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathSegmentCollection>;
-    using PlaneProjection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PlaneProjection>;
-    using PointCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PointCollection>;
-    using PolyBezierSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PolyBezierSegment>;
-    using PolyLineSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PolyLineSegment>;
-    using PolyQuadraticBezierSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment>;
-    using Projection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Projection>;
-    using QuadraticBezierSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment>;
-    using RateChangedRoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs>;
-    using RectangleGeometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RectangleGeometry>;
-    using RenderedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>;
-    using RenderingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>;
-    using RevealBackgroundBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush>;
-    using RevealBorderBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RevealBorderBrush>;
-    using RevealBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RevealBrush>;
-    using RotateTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RotateTransform>;
-    using ScaleTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ScaleTransform>;
-    using Shadow = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Shadow>;
-    using SkewTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::SkewTransform>;
-    using SolidColorBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::SolidColorBrush>;
-    using ThemeShadow = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ThemeShadow>;
-    using TileBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TileBrush>;
-    using TimelineMarker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TimelineMarker>;
-    using TimelineMarkerCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection>;
-    using TimelineMarkerRoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs>;
-    using Transform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Transform>;
-    using TransformCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TransformCollection>;
-    using TransformGroup = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TransformGroup>;
-    using TranslateTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TranslateTransform>;
-    using VisualTreeHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>;
-    using XamlCompositionBrushBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>;
-    using XamlLight = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::XamlLight>;
-    using Matrix = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Matrix>;
 }
 
 namespace py
@@ -1011,6 +811,209 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Matrix";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.Playback.h")
+#include "py.Windows.Media.Playback.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
+#include "py.Windows.UI.Xaml.Controls.Primitives.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
+#include "py.Windows.UI.Xaml.Media.Media3D.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Media
+{
+    struct RateChangedRoutedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct TimelineMarkerRoutedEventHandler
+    {
+        static winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Foundation::IInspectable const& param0, winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Media
+{
+    using AcrylicBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::AcrylicBrush>;
+    using ArcSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ArcSegment>;
+    using BezierSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::BezierSegment>;
+    using BitmapCache = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::BitmapCache>;
+    using Brush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Brush>;
+    using BrushCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::BrushCollection>;
+    using CacheMode = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::CacheMode>;
+    using CompositeTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::CompositeTransform>;
+    using CompositionTarget = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::CompositionTarget>;
+    using DoubleCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::DoubleCollection>;
+    using EllipseGeometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::EllipseGeometry>;
+    using FontFamily = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::FontFamily>;
+    using GeneralTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GeneralTransform>;
+    using Geometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Geometry>;
+    using GeometryCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GeometryCollection>;
+    using GeometryGroup = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GeometryGroup>;
+    using GradientBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GradientBrush>;
+    using GradientStop = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GradientStop>;
+    using GradientStopCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::GradientStopCollection>;
+    using ImageBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ImageBrush>;
+    using ImageSource = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ImageSource>;
+    using LineGeometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LineGeometry>;
+    using LineSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LineSegment>;
+    using LinearGradientBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LinearGradientBrush>;
+    using LoadedImageSourceLoadCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>;
+    using LoadedImageSurface = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>;
+    using Matrix3DProjection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Matrix3DProjection>;
+    using MatrixHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::MatrixHelper>;
+    using MatrixTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::MatrixTransform>;
+    using MediaTransportControlsThumbnailRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>;
+    using PartialMediaFailureDetectedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs>;
+    using PathFigure = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathFigure>;
+    using PathFigureCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathFigureCollection>;
+    using PathGeometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathGeometry>;
+    using PathSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathSegment>;
+    using PathSegmentCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PathSegmentCollection>;
+    using PlaneProjection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PlaneProjection>;
+    using PointCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PointCollection>;
+    using PolyBezierSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PolyBezierSegment>;
+    using PolyLineSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PolyLineSegment>;
+    using PolyQuadraticBezierSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment>;
+    using Projection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Projection>;
+    using QuadraticBezierSegment = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment>;
+    using RateChangedRoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs>;
+    using RectangleGeometry = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RectangleGeometry>;
+    using RenderedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>;
+    using RenderingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>;
+    using RevealBackgroundBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush>;
+    using RevealBorderBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RevealBorderBrush>;
+    using RevealBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RevealBrush>;
+    using RotateTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::RotateTransform>;
+    using ScaleTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ScaleTransform>;
+    using Shadow = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Shadow>;
+    using SkewTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::SkewTransform>;
+    using SolidColorBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::SolidColorBrush>;
+    using ThemeShadow = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::ThemeShadow>;
+    using TileBrush = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TileBrush>;
+    using TimelineMarker = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TimelineMarker>;
+    using TimelineMarkerCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection>;
+    using TimelineMarkerRoutedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs>;
+    using Transform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::Transform>;
+    using TransformCollection = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TransformCollection>;
+    using TransformGroup = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TransformGroup>;
+    using TranslateTransform = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::TranslateTransform>;
+    using VisualTreeHelper = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>;
+    using XamlCompositionBrushBase = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>;
+    using XamlLight = py::winrt_wrapper<winrt::Windows::UI::Xaml::Media::XamlLight>;
+    using Matrix = py::winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Matrix>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventHandler>
     {

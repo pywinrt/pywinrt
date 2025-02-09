@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Background.h")
-#include "py.Windows.ApplicationModel.Background.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Background.h>
 #include <winrt/Windows.Foundation.h>
 
@@ -20,19 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::Windows::PushNotifications
 {
-}
-
-namespace py::impl::Microsoft::Windows::PushNotifications
-{
-}
-
-namespace py::wrapper::Microsoft::Windows::PushNotifications
-{
-    using PushNotificationChannel = py::winrt_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannel>;
-    using PushNotificationCreateChannelResult = py::winrt_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelResult>;
-    using PushNotificationManager = py::winrt_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationManager>;
-    using PushNotificationReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs>;
-    using PushNotificationCreateChannelStatus = py::winrt_struct_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>;
 }
 
 namespace py
@@ -91,4 +69,29 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.windows.pushnotifications";
         static constexpr const char* type_name = "PushNotificationCreateChannelStatus";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Background.h")
+#include "py.Windows.ApplicationModel.Background.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Microsoft::Windows::PushNotifications
+{
+}
+
+namespace py::wrapper::Microsoft::Windows::PushNotifications
+{
+    using PushNotificationChannel = py::winrt_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannel>;
+    using PushNotificationCreateChannelResult = py::winrt_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelResult>;
+    using PushNotificationManager = py::winrt_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationManager>;
+    using PushNotificationReceivedEventArgs = py::winrt_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs>;
+    using PushNotificationCreateChannelStatus = py::winrt_struct_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>;
+}
+
+namespace py
+{
 }

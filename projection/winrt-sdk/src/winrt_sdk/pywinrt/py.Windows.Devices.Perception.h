@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
-#if __has_include("py.Windows.Media.Devices.Core.h")
-#include "py.Windows.Media.Devices.Core.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -45,48 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Perception
 {
-}
-
-namespace py::impl::Windows::Devices::Perception
-{
-}
-
-namespace py::wrapper::Windows::Devices::Perception
-{
-    using KnownCameraIntrinsicsProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>;
-    using KnownPerceptionColorFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>;
-    using KnownPerceptionDepthFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>;
-    using KnownPerceptionFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>;
-    using KnownPerceptionInfraredFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>;
-    using KnownPerceptionVideoFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>;
-    using KnownPerceptionVideoProfileProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>;
-    using PerceptionColorFrame = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrame>;
-    using PerceptionColorFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>;
-    using PerceptionColorFrameReader = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>;
-    using PerceptionColorFrameSource = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>;
-    using PerceptionColorFrameSourceAddedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>;
-    using PerceptionColorFrameSourceRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>;
-    using PerceptionColorFrameSourceWatcher = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>;
-    using PerceptionControlSession = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionControlSession>;
-    using PerceptionDepthCorrelatedCameraIntrinsics = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>;
-    using PerceptionDepthCorrelatedCoordinateMapper = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>;
-    using PerceptionDepthFrame = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrame>;
-    using PerceptionDepthFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>;
-    using PerceptionDepthFrameReader = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>;
-    using PerceptionDepthFrameSource = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>;
-    using PerceptionDepthFrameSourceAddedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>;
-    using PerceptionDepthFrameSourceRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>;
-    using PerceptionDepthFrameSourceWatcher = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>;
-    using PerceptionFrameSourcePropertiesChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>;
-    using PerceptionFrameSourcePropertyChangeResult = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>;
-    using PerceptionInfraredFrame = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>;
-    using PerceptionInfraredFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>;
-    using PerceptionInfraredFrameReader = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>;
-    using PerceptionInfraredFrameSource = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>;
-    using PerceptionInfraredFrameSourceAddedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>;
-    using PerceptionInfraredFrameSourceRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>;
-    using PerceptionInfraredFrameSourceWatcher = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>;
-    using PerceptionVideoProfile = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionVideoProfile>;
 }
 
 namespace py
@@ -385,4 +314,78 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionVideoProfile";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+#if __has_include("py.Windows.Media.Devices.Core.h")
+#include "py.Windows.Media.Devices.Core.h"
+#endif
+
+namespace py::impl::Windows::Devices::Perception
+{
+}
+
+namespace py::wrapper::Windows::Devices::Perception
+{
+    using KnownCameraIntrinsicsProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>;
+    using KnownPerceptionColorFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>;
+    using KnownPerceptionDepthFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>;
+    using KnownPerceptionFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>;
+    using KnownPerceptionInfraredFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>;
+    using KnownPerceptionVideoFrameSourceProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>;
+    using KnownPerceptionVideoProfileProperties = py::winrt_wrapper<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>;
+    using PerceptionColorFrame = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrame>;
+    using PerceptionColorFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>;
+    using PerceptionColorFrameReader = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>;
+    using PerceptionColorFrameSource = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>;
+    using PerceptionColorFrameSourceAddedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>;
+    using PerceptionColorFrameSourceRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>;
+    using PerceptionColorFrameSourceWatcher = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>;
+    using PerceptionControlSession = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionControlSession>;
+    using PerceptionDepthCorrelatedCameraIntrinsics = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>;
+    using PerceptionDepthCorrelatedCoordinateMapper = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>;
+    using PerceptionDepthFrame = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrame>;
+    using PerceptionDepthFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>;
+    using PerceptionDepthFrameReader = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>;
+    using PerceptionDepthFrameSource = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>;
+    using PerceptionDepthFrameSourceAddedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>;
+    using PerceptionDepthFrameSourceRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>;
+    using PerceptionDepthFrameSourceWatcher = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>;
+    using PerceptionFrameSourcePropertiesChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>;
+    using PerceptionFrameSourcePropertyChangeResult = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>;
+    using PerceptionInfraredFrame = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>;
+    using PerceptionInfraredFrameArrivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>;
+    using PerceptionInfraredFrameReader = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>;
+    using PerceptionInfraredFrameSource = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>;
+    using PerceptionInfraredFrameSourceAddedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>;
+    using PerceptionInfraredFrameSourceRemovedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>;
+    using PerceptionInfraredFrameSourceWatcher = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>;
+    using PerceptionVideoProfile = py::winrt_wrapper<winrt::Windows::Devices::Perception::PerceptionVideoProfile>;
+}
+
+namespace py
+{
 }

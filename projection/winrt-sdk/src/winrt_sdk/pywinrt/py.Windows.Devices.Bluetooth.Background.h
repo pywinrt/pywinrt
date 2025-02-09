@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Bluetooth.h")
-#include "py.Windows.Devices.Bluetooth.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.Advertisement.h")
-#include "py.Windows.Devices.Bluetooth.Advertisement.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.GenericAttributeProfile.h")
-#include "py.Windows.Devices.Bluetooth.GenericAttributeProfile.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Bluetooth.Rfcomm.h")
-#include "py.Windows.Devices.Bluetooth.Rfcomm.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Devices.Bluetooth.h>
 #include <winrt/Windows.Devices.Bluetooth.Advertisement.h>
 #include <winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h>
@@ -50,22 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Bluetooth::Background
 {
-}
-
-namespace py::impl::Windows::Devices::Bluetooth::Background
-{
-}
-
-namespace py::wrapper::Windows::Devices::Bluetooth::Background
-{
-    using BluetoothLEAdvertisementPublisherTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>;
-    using BluetoothLEAdvertisementWatcherTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails>;
-    using GattCharacteristicNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails>;
-    using GattServiceProviderConnection = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection>;
-    using GattServiceProviderTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails>;
-    using RfcommConnectionTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails>;
-    using RfcommInboundConnectionInformation = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation>;
-    using RfcommOutboundConnectionInformation = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation>;
 }
 
 namespace py
@@ -145,4 +96,56 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "RfcommOutboundConnectionInformation";
     };
+}
+
+#if __has_include("py.Windows.Devices.Bluetooth.h")
+#include "py.Windows.Devices.Bluetooth.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Bluetooth.Advertisement.h")
+#include "py.Windows.Devices.Bluetooth.Advertisement.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Bluetooth.GenericAttributeProfile.h")
+#include "py.Windows.Devices.Bluetooth.GenericAttributeProfile.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Bluetooth.Rfcomm.h")
+#include "py.Windows.Devices.Bluetooth.Rfcomm.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.Sockets.h")
+#include "py.Windows.Networking.Sockets.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::Bluetooth::Background
+{
+}
+
+namespace py::wrapper::Windows::Devices::Bluetooth::Background
+{
+    using BluetoothLEAdvertisementPublisherTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>;
+    using BluetoothLEAdvertisementWatcherTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails>;
+    using GattCharacteristicNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails>;
+    using GattServiceProviderConnection = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection>;
+    using GattServiceProviderTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails>;
+    using RfcommConnectionTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails>;
+    using RfcommInboundConnectionInformation = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation>;
+    using RfcommOutboundConnectionInformation = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation>;
+}
+
+namespace py
+{
 }

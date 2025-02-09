@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.h")
-#include "py.Windows.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.h")
-#include "py.Windows.UI.Xaml.Automation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
-#include "py.Windows.UI.Xaml.Automation.Peers.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.Text.h")
-#include "py.Windows.UI.Xaml.Automation.Text.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Xaml.h>
@@ -40,50 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Xaml::Automation::Provider
 {
-}
-
-namespace py::impl::Windows::UI::Xaml::Automation::Provider
-{
-}
-
-namespace py::wrapper::Windows::UI::Xaml::Automation::Provider
-{
-    using IRawElementProviderSimple = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>;
-    using IAnnotationProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>;
-    using ICustomNavigationProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>;
-    using IDockProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>;
-    using IDragProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>;
-    using IDropTargetProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>;
-    using IExpandCollapseProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>;
-    using IGridItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>;
-    using IGridProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>;
-    using IInvokeProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>;
-    using IItemContainerProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>;
-    using IMultipleViewProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>;
-    using IObjectModelProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>;
-    using IRangeValueProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>;
-    using IScrollItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>;
-    using IScrollProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>;
-    using ISelectionItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>;
-    using ISelectionProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>;
-    using ISpreadsheetItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>;
-    using ISpreadsheetProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>;
-    using IStylesProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>;
-    using ISynchronizedInputProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>;
-    using ITableItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>;
-    using ITableProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>;
-    using ITextChildProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>;
-    using ITextEditProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>;
-    using ITextProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>;
-    using ITextProvider2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>;
-    using ITextRangeProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>;
-    using ITextRangeProvider2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>;
-    using IToggleProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>;
-    using ITransformProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>;
-    using ITransformProvider2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>;
-    using IValueProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>;
-    using IVirtualizedItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>;
-    using IWindowProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>;
 }
 
 namespace py
@@ -376,4 +307,76 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "_IWindowProvider";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.h")
+#include "py.Windows.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.h")
+#include "py.Windows.UI.Xaml.Automation.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
+#include "py.Windows.UI.Xaml.Automation.Peers.h"
+#endif
+
+#if __has_include("py.Windows.UI.Xaml.Automation.Text.h")
+#include "py.Windows.UI.Xaml.Automation.Text.h"
+#endif
+
+namespace py::impl::Windows::UI::Xaml::Automation::Provider
+{
+}
+
+namespace py::wrapper::Windows::UI::Xaml::Automation::Provider
+{
+    using IRawElementProviderSimple = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>;
+    using IAnnotationProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>;
+    using ICustomNavigationProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>;
+    using IDockProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>;
+    using IDragProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>;
+    using IDropTargetProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>;
+    using IExpandCollapseProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>;
+    using IGridItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>;
+    using IGridProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>;
+    using IInvokeProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>;
+    using IItemContainerProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>;
+    using IMultipleViewProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>;
+    using IObjectModelProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>;
+    using IRangeValueProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>;
+    using IScrollItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>;
+    using IScrollProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>;
+    using ISelectionItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>;
+    using ISelectionProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>;
+    using ISpreadsheetItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>;
+    using ISpreadsheetProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>;
+    using IStylesProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>;
+    using ISynchronizedInputProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>;
+    using ITableItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>;
+    using ITableProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>;
+    using ITextChildProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>;
+    using ITextEditProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>;
+    using ITextProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>;
+    using ITextProvider2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>;
+    using ITextRangeProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>;
+    using ITextRangeProvider2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>;
+    using IToggleProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>;
+    using ITransformProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>;
+    using ITransformProvider2 = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>;
+    using IValueProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>;
+    using IVirtualizedItemProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>;
+    using IWindowProvider = py::winrt_wrapper<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>;
+}
+
+namespace py
+{
 }

@@ -4,28 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 
 #include <winrt/Windows.Phone.UI.Input.h>
 
 namespace py::proj::Windows::Phone::UI::Input
 {
-}
-
-namespace py::impl::Windows::Phone::UI::Input
-{
-}
-
-namespace py::wrapper::Windows::Phone::UI::Input
-{
-    using BackPressedEventArgs = py::winrt_wrapper<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>;
-    using CameraEventArgs = py::winrt_wrapper<winrt::Windows::Phone::UI::Input::CameraEventArgs>;
-    using HardwareButtons = py::winrt_wrapper<winrt::Windows::Phone::UI::Input::HardwareButtons>;
 }
 
 namespace py
@@ -54,4 +38,23 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.phone.ui.input";
         static constexpr const char* type_name = "HardwareButtons";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+namespace py::impl::Windows::Phone::UI::Input
+{
+}
+
+namespace py::wrapper::Windows::Phone::UI::Input
+{
+    using BackPressedEventArgs = py::winrt_wrapper<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>;
+    using CameraEventArgs = py::winrt_wrapper<winrt::Windows::Phone::UI::Input::CameraEventArgs>;
+    using HardwareButtons = py::winrt_wrapper<winrt::Windows::Phone::UI::Input::HardwareButtons>;
+}
+
+namespace py
+{
 }

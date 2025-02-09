@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.h>
@@ -25,25 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::UserDataTasks
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::UserDataTasks
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::UserDataTasks
-{
-    using UserDataTask = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>;
-    using UserDataTaskBatch = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch>;
-    using UserDataTaskList = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>;
-    using UserDataTaskListLimitedWriteOperations = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations>;
-    using UserDataTaskListSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager>;
-    using UserDataTaskManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager>;
-    using UserDataTaskQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions>;
-    using UserDataTaskReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader>;
-    using UserDataTaskRecurrenceProperties = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties>;
-    using UserDataTaskRegenerationProperties = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties>;
-    using UserDataTaskStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore>;
 }
 
 namespace py
@@ -290,4 +258,39 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskStore";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::UserDataTasks
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::UserDataTasks
+{
+    using UserDataTask = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>;
+    using UserDataTaskBatch = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch>;
+    using UserDataTaskList = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>;
+    using UserDataTaskListLimitedWriteOperations = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations>;
+    using UserDataTaskListSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager>;
+    using UserDataTaskManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager>;
+    using UserDataTaskQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions>;
+    using UserDataTaskReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader>;
+    using UserDataTaskRecurrenceProperties = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties>;
+    using UserDataTaskRegenerationProperties = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties>;
+    using UserDataTaskStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore>;
+}
+
+namespace py
+{
 }

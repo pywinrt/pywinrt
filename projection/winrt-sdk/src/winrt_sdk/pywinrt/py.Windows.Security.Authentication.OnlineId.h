@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.h>
@@ -25,24 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Authentication::OnlineId
 {
-}
-
-namespace py::impl::Windows::Security::Authentication::OnlineId
-{
-}
-
-namespace py::wrapper::Windows::Security::Authentication::OnlineId
-{
-    using OnlineIdAuthenticator = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator>;
-    using OnlineIdServiceTicket = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>;
-    using OnlineIdServiceTicketRequest = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>;
-    using OnlineIdSystemAuthenticator = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>;
-    using OnlineIdSystemAuthenticatorForUser = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>;
-    using OnlineIdSystemIdentity = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>;
-    using OnlineIdSystemTicketResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>;
-    using SignOutUserOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>;
-    using UserAuthenticationOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>;
-    using UserIdentity = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>;
 }
 
 namespace py
@@ -149,4 +118,38 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "UserIdentity";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::Security::Authentication::OnlineId
+{
+}
+
+namespace py::wrapper::Windows::Security::Authentication::OnlineId
+{
+    using OnlineIdAuthenticator = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator>;
+    using OnlineIdServiceTicket = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>;
+    using OnlineIdServiceTicketRequest = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>;
+    using OnlineIdSystemAuthenticator = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>;
+    using OnlineIdSystemAuthenticatorForUser = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>;
+    using OnlineIdSystemIdentity = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>;
+    using OnlineIdSystemTicketResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>;
+    using SignOutUserOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>;
+    using UserAuthenticationOperation = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>;
+    using UserIdentity = py::winrt_wrapper<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>;
+}
+
+namespace py
+{
 }

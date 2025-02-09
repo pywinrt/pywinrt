@@ -5,18 +5,9 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
-
 #include <winrt/Windows.Media.Render.h>
 
 namespace py::proj::Windows::Media::Render
-{
-}
-
-namespace py::impl::Windows::Media::Render
-{
-}
-
-namespace py::wrapper::Windows::Media::Render
 {
 }
 
@@ -33,4 +24,16 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.render";
         static constexpr const char* type_name = "AudioRenderCategory";
     };
+}
+
+namespace py::impl::Windows::Media::Render
+{
+}
+
+namespace py::wrapper::Windows::Media::Render
+{
+}
+
+namespace py
+{
 }

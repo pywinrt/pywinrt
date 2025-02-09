@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.h>
@@ -30,24 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::HumanInterfaceDevice
 {
-}
-
-namespace py::impl::Windows::Devices::HumanInterfaceDevice
-{
-}
-
-namespace py::wrapper::Windows::Devices::HumanInterfaceDevice
-{
-    using HidBooleanControl = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>;
-    using HidBooleanControlDescription = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>;
-    using HidCollection = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>;
-    using HidDevice = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>;
-    using HidFeatureReport = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>;
-    using HidInputReport = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>;
-    using HidInputReportReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>;
-    using HidNumericControl = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>;
-    using HidNumericControlDescription = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>;
-    using HidOutputReport = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>;
 }
 
 namespace py
@@ -154,4 +119,42 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidOutputReport";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Devices::HumanInterfaceDevice
+{
+}
+
+namespace py::wrapper::Windows::Devices::HumanInterfaceDevice
+{
+    using HidBooleanControl = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>;
+    using HidBooleanControlDescription = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>;
+    using HidCollection = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>;
+    using HidDevice = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>;
+    using HidFeatureReport = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>;
+    using HidInputReport = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>;
+    using HidInputReportReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>;
+    using HidNumericControl = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>;
+    using HidNumericControlDescription = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>;
+    using HidOutputReport = py::winrt_wrapper<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>;
+}
+
+namespace py
+{
 }

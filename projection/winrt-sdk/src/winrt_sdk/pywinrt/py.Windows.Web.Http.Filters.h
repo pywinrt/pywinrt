@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Networking.Sockets.h")
-#include "py.Windows.Networking.Sockets.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
-#include "py.Windows.Security.Cryptography.Certificates.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.Web.Http.h")
-#include "py.Windows.Web.Http.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Networking.Sockets.h>
@@ -45,18 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Web::Http::Filters
 {
-}
-
-namespace py::impl::Windows::Web::Http::Filters
-{
-}
-
-namespace py::wrapper::Windows::Web::Http::Filters
-{
-    using HttpBaseProtocolFilter = py::winrt_wrapper<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter>;
-    using HttpCacheControl = py::winrt_wrapper<winrt::Windows::Web::Http::Filters::HttpCacheControl>;
-    using HttpServerCustomValidationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>;
-    using IHttpFilter = py::winrt_wrapper<winrt::Windows::Web::Http::Filters::IHttpFilter>;
 }
 
 namespace py
@@ -126,4 +85,48 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
         static constexpr const char* type_name = "_IHttpFilter";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Networking.Sockets.h")
+#include "py.Windows.Networking.Sockets.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
+#include "py.Windows.Security.Cryptography.Certificates.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.Web.Http.h")
+#include "py.Windows.Web.Http.h"
+#endif
+
+namespace py::impl::Windows::Web::Http::Filters
+{
+}
+
+namespace py::wrapper::Windows::Web::Http::Filters
+{
+    using HttpBaseProtocolFilter = py::winrt_wrapper<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter>;
+    using HttpCacheControl = py::winrt_wrapper<winrt::Windows::Web::Http::Filters::HttpCacheControl>;
+    using HttpServerCustomValidationRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>;
+    using IHttpFilter = py::winrt_wrapper<winrt::Windows::Web::Http::Filters::IHttpFilter>;
+}
+
+namespace py
+{
 }

@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,53 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Management::Setup
 {
-}
-
-namespace py::impl::Windows::Management::Setup
-{
-    struct DeploymentSessionHeartbeatRequested
-    {
-        static winrt::Windows::Management::Setup::DeploymentSessionHeartbeatRequested get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Management::Setup::DeploymentSessionHeartbeatRequestedEventArgs const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Management::Setup
-{
-    using AgentProvisioningProgressReport = py::winrt_wrapper<winrt::Windows::Management::Setup::AgentProvisioningProgressReport>;
-    using DeploymentSessionConnectionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentSessionConnectionChangedEventArgs>;
-    using DeploymentSessionHeartbeatRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentSessionHeartbeatRequestedEventArgs>;
-    using DeploymentSessionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentSessionStateChangedEventArgs>;
-    using DeploymentWorkload = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentWorkload>;
-    using DeploymentWorkloadBatch = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentWorkloadBatch>;
-    using DevicePreparationExecutionContext = py::winrt_wrapper<winrt::Windows::Management::Setup::DevicePreparationExecutionContext>;
-    using MachineProvisioningProgressReporter = py::winrt_wrapper<winrt::Windows::Management::Setup::MachineProvisioningProgressReporter>;
 }
 
 namespace py
@@ -179,6 +123,65 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.management.setup";
         static constexpr const char* type_name = "MachineProvisioningProgressReporter";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Management::Setup
+{
+    struct DeploymentSessionHeartbeatRequested
+    {
+        static winrt::Windows::Management::Setup::DeploymentSessionHeartbeatRequested get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Management::Setup::DeploymentSessionHeartbeatRequestedEventArgs const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Management::Setup
+{
+    using AgentProvisioningProgressReport = py::winrt_wrapper<winrt::Windows::Management::Setup::AgentProvisioningProgressReport>;
+    using DeploymentSessionConnectionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentSessionConnectionChangedEventArgs>;
+    using DeploymentSessionHeartbeatRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentSessionHeartbeatRequestedEventArgs>;
+    using DeploymentSessionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentSessionStateChangedEventArgs>;
+    using DeploymentWorkload = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentWorkload>;
+    using DeploymentWorkloadBatch = py::winrt_wrapper<winrt::Windows::Management::Setup::DeploymentWorkloadBatch>;
+    using DevicePreparationExecutionContext = py::winrt_wrapper<winrt::Windows::Management::Setup::DevicePreparationExecutionContext>;
+    using MachineProvisioningProgressReporter = py::winrt_wrapper<winrt::Windows::Management::Setup::MachineProvisioningProgressReporter>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Management::Setup::DeploymentSessionHeartbeatRequested>
     {

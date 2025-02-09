@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Imaging.h>
@@ -30,17 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::FaceAnalysis
 {
-}
-
-namespace py::impl::Windows::Media::FaceAnalysis
-{
-}
-
-namespace py::wrapper::Windows::Media::FaceAnalysis
-{
-    using DetectedFace = py::winrt_wrapper<winrt::Windows::Media::FaceAnalysis::DetectedFace>;
-    using FaceDetector = py::winrt_wrapper<winrt::Windows::Media::FaceAnalysis::FaceDetector>;
-    using FaceTracker = py::winrt_wrapper<winrt::Windows::Media::FaceAnalysis::FaceTracker>;
 }
 
 namespace py
@@ -69,4 +41,35 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
         static constexpr const char* type_name = "FaceTracker";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+namespace py::impl::Windows::Media::FaceAnalysis
+{
+}
+
+namespace py::wrapper::Windows::Media::FaceAnalysis
+{
+    using DetectedFace = py::winrt_wrapper<winrt::Windows::Media::FaceAnalysis::DetectedFace>;
+    using FaceDetector = py::winrt_wrapper<winrt::Windows::Media::FaceAnalysis::FaceDetector>;
+    using FaceTracker = py::winrt_wrapper<winrt::Windows::Media::FaceAnalysis::FaceTracker>;
+}
+
+namespace py
+{
 }

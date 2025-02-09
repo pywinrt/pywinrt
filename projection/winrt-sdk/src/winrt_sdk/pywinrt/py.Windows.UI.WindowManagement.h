@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Composition.h")
-#include "py.Windows.UI.Composition.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.h>
@@ -35,33 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::WindowManagement
 {
-}
-
-namespace py::impl::Windows::UI::WindowManagement
-{
-}
-
-namespace py::wrapper::Windows::UI::WindowManagement
-{
-    using AppWindow = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindow>;
-    using AppWindowChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>;
-    using AppWindowCloseRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>;
-    using AppWindowClosedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>;
-    using AppWindowFrame = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowFrame>;
-    using AppWindowPlacement = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowPlacement>;
-    using AppWindowPresentationConfiguration = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>;
-    using AppWindowPresenter = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowPresenter>;
-    using AppWindowTitleBar = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>;
-    using AppWindowTitleBarOcclusion = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>;
-    using CompactOverlayPresentationConfiguration = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration>;
-    using DefaultPresentationConfiguration = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration>;
-    using DisplayRegion = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::DisplayRegion>;
-    using FullScreenPresentationConfiguration = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration>;
-    using WindowServices = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowServices>;
-    using WindowingEnvironment = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowingEnvironment>;
-    using WindowingEnvironmentAddedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>;
-    using WindowingEnvironmentChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>;
-    using WindowingEnvironmentRemovedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>;
 }
 
 namespace py
@@ -273,4 +225,55 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "WindowingEnvironmentRemovedEventArgs";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Composition.h")
+#include "py.Windows.UI.Composition.h"
+#endif
+
+namespace py::impl::Windows::UI::WindowManagement
+{
+}
+
+namespace py::wrapper::Windows::UI::WindowManagement
+{
+    using AppWindow = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindow>;
+    using AppWindowChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>;
+    using AppWindowCloseRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>;
+    using AppWindowClosedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>;
+    using AppWindowFrame = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowFrame>;
+    using AppWindowPlacement = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowPlacement>;
+    using AppWindowPresentationConfiguration = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>;
+    using AppWindowPresenter = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowPresenter>;
+    using AppWindowTitleBar = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>;
+    using AppWindowTitleBarOcclusion = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>;
+    using CompactOverlayPresentationConfiguration = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration>;
+    using DefaultPresentationConfiguration = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration>;
+    using DisplayRegion = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::DisplayRegion>;
+    using FullScreenPresentationConfiguration = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration>;
+    using WindowServices = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowServices>;
+    using WindowingEnvironment = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowingEnvironment>;
+    using WindowingEnvironmentAddedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>;
+    using WindowingEnvironmentChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>;
+    using WindowingEnvironmentRemovedEventArgs = py::winrt_wrapper<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>;
+}
+
+namespace py
+{
 }

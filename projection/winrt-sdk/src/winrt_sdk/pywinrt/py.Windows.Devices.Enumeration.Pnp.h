@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -25,18 +12,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices::Enumeration::Pnp
 {
-}
-
-namespace py::impl::Windows::Devices::Enumeration::Pnp
-{
-}
-
-namespace py::wrapper::Windows::Devices::Enumeration::Pnp
-{
-    using PnpObject = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>;
-    using PnpObjectCollection = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectCollection>;
-    using PnpObjectUpdate = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate>;
-    using PnpObjectWatcher = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher>;
 }
 
 namespace py
@@ -84,4 +59,32 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
         static constexpr const char* type_name = "PnpObjectWatcher";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Devices::Enumeration::Pnp
+{
+}
+
+namespace py::wrapper::Windows::Devices::Enumeration::Pnp
+{
+    using PnpObject = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>;
+    using PnpObjectCollection = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectCollection>;
+    using PnpObjectUpdate = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate>;
+    using PnpObjectWatcher = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher>;
+}
+
+namespace py
+{
 }

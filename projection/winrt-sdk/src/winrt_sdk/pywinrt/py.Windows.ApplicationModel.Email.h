@@ -4,31 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Appointments.h")
-#include "py.Windows.ApplicationModel.Appointments.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
-#include "py.Windows.Security.Cryptography.Certificates.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Appointments.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -40,47 +15,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Email
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Email
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Email
-{
-    using EmailAttachment = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailAttachment>;
-    using EmailConversation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailConversation>;
-    using EmailConversationBatch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailConversationBatch>;
-    using EmailConversationReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailConversationReader>;
-    using EmailFolder = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailFolder>;
-    using EmailIrmInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailIrmInfo>;
-    using EmailIrmTemplate = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate>;
-    using EmailItemCounts = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailItemCounts>;
-    using EmailMailbox = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailbox>;
-    using EmailMailboxAction = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxAction>;
-    using EmailMailboxAutoReply = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply>;
-    using EmailMailboxAutoReplySettings = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>;
-    using EmailMailboxCapabilities = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities>;
-    using EmailMailboxChange = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChange>;
-    using EmailMailboxChangeReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader>;
-    using EmailMailboxChangeTracker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker>;
-    using EmailMailboxChangedDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral>;
-    using EmailMailboxChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs>;
-    using EmailMailboxCreateFolderResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>;
-    using EmailMailboxPolicies = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies>;
-    using EmailMailboxSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager>;
-    using EmailManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailManager>;
-    using EmailManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailManagerForUser>;
-    using EmailMeetingInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo>;
-    using EmailMessage = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMessage>;
-    using EmailMessageBatch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMessageBatch>;
-    using EmailMessageReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMessageReader>;
-    using EmailQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>;
-    using EmailQueryTextSearch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch>;
-    using EmailRecipient = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailRecipient>;
-    using EmailRecipientResolutionResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult>;
-    using EmailStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailStore>;
-    using EmailStoreNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails>;
 }
 
 namespace py
@@ -679,4 +613,73 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailStoreNotificationTriggerDetails";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Appointments.h")
+#include "py.Windows.ApplicationModel.Appointments.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
+#include "py.Windows.Security.Cryptography.Certificates.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Email
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Email
+{
+    using EmailAttachment = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailAttachment>;
+    using EmailConversation = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailConversation>;
+    using EmailConversationBatch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailConversationBatch>;
+    using EmailConversationReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailConversationReader>;
+    using EmailFolder = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailFolder>;
+    using EmailIrmInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailIrmInfo>;
+    using EmailIrmTemplate = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate>;
+    using EmailItemCounts = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailItemCounts>;
+    using EmailMailbox = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailbox>;
+    using EmailMailboxAction = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxAction>;
+    using EmailMailboxAutoReply = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply>;
+    using EmailMailboxAutoReplySettings = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>;
+    using EmailMailboxCapabilities = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities>;
+    using EmailMailboxChange = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChange>;
+    using EmailMailboxChangeReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader>;
+    using EmailMailboxChangeTracker = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker>;
+    using EmailMailboxChangedDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral>;
+    using EmailMailboxChangedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs>;
+    using EmailMailboxCreateFolderResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>;
+    using EmailMailboxPolicies = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies>;
+    using EmailMailboxSyncManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager>;
+    using EmailManager = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailManager>;
+    using EmailManagerForUser = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailManagerForUser>;
+    using EmailMeetingInfo = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo>;
+    using EmailMessage = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMessage>;
+    using EmailMessageBatch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMessageBatch>;
+    using EmailMessageReader = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailMessageReader>;
+    using EmailQueryOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>;
+    using EmailQueryTextSearch = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch>;
+    using EmailRecipient = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailRecipient>;
+    using EmailRecipientResolutionResult = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult>;
+    using EmailStore = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailStore>;
+    using EmailStoreNotificationTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails>;
+}
+
+namespace py
+{
 }

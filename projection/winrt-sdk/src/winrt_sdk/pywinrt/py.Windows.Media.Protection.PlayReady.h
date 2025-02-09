@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
-#endif
-
-#if __has_include("py.Windows.Media.Protection.h")
-#include "py.Windows.Media.Protection.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.Core.h>
@@ -35,66 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Protection::PlayReady
 {
-}
-
-namespace py::impl::Windows::Media::Protection::PlayReady
-{
-}
-
-namespace py::wrapper::Windows::Media::Protection::PlayReady
-{
-    using NDClient = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDClient>;
-    using NDCustomData = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDCustomData>;
-    using NDDownloadEngineNotifier = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier>;
-    using NDLicenseFetchDescriptor = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor>;
-    using NDStorageFileHelper = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDStorageFileHelper>;
-    using NDStreamParserNotifier = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDStreamParserNotifier>;
-    using NDTCPMessenger = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDTCPMessenger>;
-    using PlayReadyContentHeader = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>;
-    using PlayReadyContentResolver = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>;
-    using PlayReadyDomain = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>;
-    using PlayReadyDomainIterable = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable>;
-    using PlayReadyDomainIterator = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>;
-    using PlayReadyDomainJoinServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest>;
-    using PlayReadyDomainLeaveServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest>;
-    using PlayReadyITADataGenerator = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator>;
-    using PlayReadyIndividualizationServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest>;
-    using PlayReadyLicense = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>;
-    using PlayReadyLicenseAcquisitionServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest>;
-    using PlayReadyLicenseIterable = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable>;
-    using PlayReadyLicenseIterator = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>;
-    using PlayReadyLicenseManagement = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>;
-    using PlayReadyLicenseSession = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession>;
-    using PlayReadyMeteringReportServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest>;
-    using PlayReadyRevocationServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest>;
-    using PlayReadySecureStopIterable = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable>;
-    using PlayReadySecureStopIterator = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>;
-    using PlayReadySecureStopServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest>;
-    using PlayReadySoapMessage = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>;
-    using PlayReadyStatics = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>;
-    using INDClosedCaptionDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>;
-    using INDCustomData = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDCustomData>;
-    using INDDownloadEngine = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>;
-    using INDDownloadEngineNotifier = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>;
-    using INDLicenseFetchCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>;
-    using INDLicenseFetchDescriptor = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>;
-    using INDLicenseFetchResult = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>;
-    using INDMessenger = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDMessenger>;
-    using INDProximityDetectionCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>;
-    using INDRegistrationCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>;
-    using INDSendResult = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDSendResult>;
-    using INDStartResult = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDStartResult>;
-    using INDStorageFileHelper = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>;
-    using INDStreamParser = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>;
-    using INDStreamParserNotifier = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>;
-    using INDTransmitterProperties = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>;
-    using IPlayReadyDomain = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>;
-    using IPlayReadyLicense = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>;
-    using IPlayReadyLicenseAcquisitionServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>;
-    using IPlayReadyLicenseSession = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>;
-    using IPlayReadyLicenseSession2 = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>;
-    using IPlayReadySecureStopServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>;
-    using IPlayReadyServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>;
 }
 
 namespace py
@@ -647,4 +566,88 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.protection.playready";
         static constexpr const char* type_name = "_IPlayReadyServiceRequest";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.Core.h")
+#include "py.Windows.Media.Core.h"
+#endif
+
+#if __has_include("py.Windows.Media.Protection.h")
+#include "py.Windows.Media.Protection.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+namespace py::impl::Windows::Media::Protection::PlayReady
+{
+}
+
+namespace py::wrapper::Windows::Media::Protection::PlayReady
+{
+    using NDClient = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDClient>;
+    using NDCustomData = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDCustomData>;
+    using NDDownloadEngineNotifier = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier>;
+    using NDLicenseFetchDescriptor = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor>;
+    using NDStorageFileHelper = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDStorageFileHelper>;
+    using NDStreamParserNotifier = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDStreamParserNotifier>;
+    using NDTCPMessenger = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::NDTCPMessenger>;
+    using PlayReadyContentHeader = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentHeader>;
+    using PlayReadyContentResolver = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>;
+    using PlayReadyDomain = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>;
+    using PlayReadyDomainIterable = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable>;
+    using PlayReadyDomainIterator = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>;
+    using PlayReadyDomainJoinServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest>;
+    using PlayReadyDomainLeaveServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest>;
+    using PlayReadyITADataGenerator = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator>;
+    using PlayReadyIndividualizationServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest>;
+    using PlayReadyLicense = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>;
+    using PlayReadyLicenseAcquisitionServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest>;
+    using PlayReadyLicenseIterable = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable>;
+    using PlayReadyLicenseIterator = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>;
+    using PlayReadyLicenseManagement = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>;
+    using PlayReadyLicenseSession = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession>;
+    using PlayReadyMeteringReportServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest>;
+    using PlayReadyRevocationServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest>;
+    using PlayReadySecureStopIterable = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable>;
+    using PlayReadySecureStopIterator = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>;
+    using PlayReadySecureStopServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest>;
+    using PlayReadySoapMessage = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>;
+    using PlayReadyStatics = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>;
+    using INDClosedCaptionDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>;
+    using INDCustomData = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDCustomData>;
+    using INDDownloadEngine = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>;
+    using INDDownloadEngineNotifier = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>;
+    using INDLicenseFetchCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>;
+    using INDLicenseFetchDescriptor = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>;
+    using INDLicenseFetchResult = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>;
+    using INDMessenger = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDMessenger>;
+    using INDProximityDetectionCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>;
+    using INDRegistrationCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>;
+    using INDSendResult = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDSendResult>;
+    using INDStartResult = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDStartResult>;
+    using INDStorageFileHelper = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>;
+    using INDStreamParser = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>;
+    using INDStreamParserNotifier = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>;
+    using INDTransmitterProperties = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>;
+    using IPlayReadyDomain = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>;
+    using IPlayReadyLicense = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>;
+    using IPlayReadyLicenseAcquisitionServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>;
+    using IPlayReadyLicenseSession = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>;
+    using IPlayReadyLicenseSession2 = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>;
+    using IPlayReadySecureStopServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>;
+    using IPlayReadyServiceRequest = py::winrt_wrapper<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>;
+}
+
+namespace py
+{
 }

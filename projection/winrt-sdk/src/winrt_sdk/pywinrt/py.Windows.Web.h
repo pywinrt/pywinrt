@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
 
@@ -20,16 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Web
 {
-}
-
-namespace py::impl::Windows::Web
-{
-}
-
-namespace py::wrapper::Windows::Web
-{
-    using WebError = py::winrt_wrapper<winrt::Windows::Web::WebError>;
-    using IUriToStreamResolver = py::winrt_wrapper<winrt::Windows::Web::IUriToStreamResolver>;
 }
 
 namespace py
@@ -61,4 +42,26 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.web";
         static constexpr const char* type_name = "_IUriToStreamResolver";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Web
+{
+}
+
+namespace py::wrapper::Windows::Web
+{
+    using WebError = py::winrt_wrapper<winrt::Windows::Web::WebError>;
+    using IUriToStreamResolver = py::winrt_wrapper<winrt::Windows::Web::IUriToStreamResolver>;
+}
+
+namespace py
+{
 }

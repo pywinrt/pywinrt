@@ -4,39 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.h")
-#include "py.Windows.Media.Capture.h"
-#endif
-
-#if __has_include("py.Windows.Media.Devices.Core.h")
-#include "py.Windows.Media.Devices.Core.h"
-#endif
-
-#if __has_include("py.Windows.Media.Effects.h")
-#include "py.Windows.Media.Effects.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -50,225 +17,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Devices
 {
-}
-
-namespace py::impl::Windows::Media::Devices
-{
-    struct CallControlEventHandler
-    {
-        static winrt::Windows::Media::Devices::CallControlEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct DialRequestedEventHandler
-    {
-        static winrt::Windows::Media::Devices::DialRequestedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::DialRequestedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct KeypadPressedEventHandler
-    {
-        static winrt::Windows::Media::Devices::KeypadPressedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::KeypadPressedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct RedialRequestedEventHandler
-    {
-        static winrt::Windows::Media::Devices::RedialRequestedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::RedialRequestedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Media::Devices
-{
-    using AdvancedPhotoCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings>;
-    using AdvancedPhotoControl = py::winrt_wrapper<winrt::Windows::Media::Devices::AdvancedPhotoControl>;
-    using AudioDeviceController = py::winrt_wrapper<winrt::Windows::Media::Devices::AudioDeviceController>;
-    using AudioDeviceModule = py::winrt_wrapper<winrt::Windows::Media::Devices::AudioDeviceModule>;
-    using AudioDeviceModuleNotificationEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>;
-    using AudioDeviceModulesManager = py::winrt_wrapper<winrt::Windows::Media::Devices::AudioDeviceModulesManager>;
-    using CallControl = py::winrt_wrapper<winrt::Windows::Media::Devices::CallControl>;
-    using CameraOcclusionInfo = py::winrt_wrapper<winrt::Windows::Media::Devices::CameraOcclusionInfo>;
-    using CameraOcclusionState = py::winrt_wrapper<winrt::Windows::Media::Devices::CameraOcclusionState>;
-    using CameraOcclusionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>;
-    using DefaultAudioCaptureDeviceChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>;
-    using DefaultAudioRenderDeviceChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>;
-    using DialRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::DialRequestedEventArgs>;
-    using DigitalWindowBounds = py::winrt_wrapper<winrt::Windows::Media::Devices::DigitalWindowBounds>;
-    using DigitalWindowCapability = py::winrt_wrapper<winrt::Windows::Media::Devices::DigitalWindowCapability>;
-    using DigitalWindowControl = py::winrt_wrapper<winrt::Windows::Media::Devices::DigitalWindowControl>;
-    using ExposureCompensationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::ExposureCompensationControl>;
-    using ExposureControl = py::winrt_wrapper<winrt::Windows::Media::Devices::ExposureControl>;
-    using ExposurePriorityVideoControl = py::winrt_wrapper<winrt::Windows::Media::Devices::ExposurePriorityVideoControl>;
-    using FlashControl = py::winrt_wrapper<winrt::Windows::Media::Devices::FlashControl>;
-    using FocusControl = py::winrt_wrapper<winrt::Windows::Media::Devices::FocusControl>;
-    using FocusSettings = py::winrt_wrapper<winrt::Windows::Media::Devices::FocusSettings>;
-    using HdrVideoControl = py::winrt_wrapper<winrt::Windows::Media::Devices::HdrVideoControl>;
-    using InfraredTorchControl = py::winrt_wrapper<winrt::Windows::Media::Devices::InfraredTorchControl>;
-    using IsoSpeedControl = py::winrt_wrapper<winrt::Windows::Media::Devices::IsoSpeedControl>;
-    using KeypadPressedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::KeypadPressedEventArgs>;
-    using LowLagPhotoControl = py::winrt_wrapper<winrt::Windows::Media::Devices::LowLagPhotoControl>;
-    using LowLagPhotoSequenceControl = py::winrt_wrapper<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl>;
-    using MediaDevice = py::winrt_wrapper<winrt::Windows::Media::Devices::MediaDevice>;
-    using MediaDeviceControl = py::winrt_wrapper<winrt::Windows::Media::Devices::MediaDeviceControl>;
-    using MediaDeviceControlCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities>;
-    using ModuleCommandResult = py::winrt_wrapper<winrt::Windows::Media::Devices::ModuleCommandResult>;
-    using OpticalImageStabilizationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::OpticalImageStabilizationControl>;
-    using PanelBasedOptimizationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::PanelBasedOptimizationControl>;
-    using PhotoConfirmationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::PhotoConfirmationControl>;
-    using RedialRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::RedialRequestedEventArgs>;
-    using RegionOfInterest = py::winrt_wrapper<winrt::Windows::Media::Devices::RegionOfInterest>;
-    using RegionsOfInterestControl = py::winrt_wrapper<winrt::Windows::Media::Devices::RegionsOfInterestControl>;
-    using SceneModeControl = py::winrt_wrapper<winrt::Windows::Media::Devices::SceneModeControl>;
-    using TorchControl = py::winrt_wrapper<winrt::Windows::Media::Devices::TorchControl>;
-    using VideoDeviceController = py::winrt_wrapper<winrt::Windows::Media::Devices::VideoDeviceController>;
-    using VideoDeviceControllerGetDevicePropertyResult = py::winrt_wrapper<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult>;
-    using VideoTemporalDenoisingControl = py::winrt_wrapper<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl>;
-    using WhiteBalanceControl = py::winrt_wrapper<winrt::Windows::Media::Devices::WhiteBalanceControl>;
-    using ZoomControl = py::winrt_wrapper<winrt::Windows::Media::Devices::ZoomControl>;
-    using ZoomSettings = py::winrt_wrapper<winrt::Windows::Media::Devices::ZoomSettings>;
-    using IDefaultAudioDeviceChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>;
-    using IMediaDeviceController = py::winrt_wrapper<winrt::Windows::Media::Devices::IMediaDeviceController>;
 }
 
 namespace py
@@ -943,6 +691,261 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "_IMediaDeviceController";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Media.Capture.h")
+#include "py.Windows.Media.Capture.h"
+#endif
+
+#if __has_include("py.Windows.Media.Devices.Core.h")
+#include "py.Windows.Media.Devices.Core.h"
+#endif
+
+#if __has_include("py.Windows.Media.Effects.h")
+#include "py.Windows.Media.Effects.h"
+#endif
+
+#if __has_include("py.Windows.Media.MediaProperties.h")
+#include "py.Windows.Media.MediaProperties.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Media::Devices
+{
+    struct CallControlEventHandler
+    {
+        static winrt::Windows::Media::Devices::CallControlEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct DialRequestedEventHandler
+    {
+        static winrt::Windows::Media::Devices::DialRequestedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::DialRequestedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct KeypadPressedEventHandler
+    {
+        static winrt::Windows::Media::Devices::KeypadPressedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::KeypadPressedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct RedialRequestedEventHandler
+    {
+        static winrt::Windows::Media::Devices::RedialRequestedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Devices::CallControl const& param0, winrt::Windows::Media::Devices::RedialRequestedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Media::Devices
+{
+    using AdvancedPhotoCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings>;
+    using AdvancedPhotoControl = py::winrt_wrapper<winrt::Windows::Media::Devices::AdvancedPhotoControl>;
+    using AudioDeviceController = py::winrt_wrapper<winrt::Windows::Media::Devices::AudioDeviceController>;
+    using AudioDeviceModule = py::winrt_wrapper<winrt::Windows::Media::Devices::AudioDeviceModule>;
+    using AudioDeviceModuleNotificationEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>;
+    using AudioDeviceModulesManager = py::winrt_wrapper<winrt::Windows::Media::Devices::AudioDeviceModulesManager>;
+    using CallControl = py::winrt_wrapper<winrt::Windows::Media::Devices::CallControl>;
+    using CameraOcclusionInfo = py::winrt_wrapper<winrt::Windows::Media::Devices::CameraOcclusionInfo>;
+    using CameraOcclusionState = py::winrt_wrapper<winrt::Windows::Media::Devices::CameraOcclusionState>;
+    using CameraOcclusionStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>;
+    using DefaultAudioCaptureDeviceChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>;
+    using DefaultAudioRenderDeviceChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>;
+    using DialRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::DialRequestedEventArgs>;
+    using DigitalWindowBounds = py::winrt_wrapper<winrt::Windows::Media::Devices::DigitalWindowBounds>;
+    using DigitalWindowCapability = py::winrt_wrapper<winrt::Windows::Media::Devices::DigitalWindowCapability>;
+    using DigitalWindowControl = py::winrt_wrapper<winrt::Windows::Media::Devices::DigitalWindowControl>;
+    using ExposureCompensationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::ExposureCompensationControl>;
+    using ExposureControl = py::winrt_wrapper<winrt::Windows::Media::Devices::ExposureControl>;
+    using ExposurePriorityVideoControl = py::winrt_wrapper<winrt::Windows::Media::Devices::ExposurePriorityVideoControl>;
+    using FlashControl = py::winrt_wrapper<winrt::Windows::Media::Devices::FlashControl>;
+    using FocusControl = py::winrt_wrapper<winrt::Windows::Media::Devices::FocusControl>;
+    using FocusSettings = py::winrt_wrapper<winrt::Windows::Media::Devices::FocusSettings>;
+    using HdrVideoControl = py::winrt_wrapper<winrt::Windows::Media::Devices::HdrVideoControl>;
+    using InfraredTorchControl = py::winrt_wrapper<winrt::Windows::Media::Devices::InfraredTorchControl>;
+    using IsoSpeedControl = py::winrt_wrapper<winrt::Windows::Media::Devices::IsoSpeedControl>;
+    using KeypadPressedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::KeypadPressedEventArgs>;
+    using LowLagPhotoControl = py::winrt_wrapper<winrt::Windows::Media::Devices::LowLagPhotoControl>;
+    using LowLagPhotoSequenceControl = py::winrt_wrapper<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl>;
+    using MediaDevice = py::winrt_wrapper<winrt::Windows::Media::Devices::MediaDevice>;
+    using MediaDeviceControl = py::winrt_wrapper<winrt::Windows::Media::Devices::MediaDeviceControl>;
+    using MediaDeviceControlCapabilities = py::winrt_wrapper<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities>;
+    using ModuleCommandResult = py::winrt_wrapper<winrt::Windows::Media::Devices::ModuleCommandResult>;
+    using OpticalImageStabilizationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::OpticalImageStabilizationControl>;
+    using PanelBasedOptimizationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::PanelBasedOptimizationControl>;
+    using PhotoConfirmationControl = py::winrt_wrapper<winrt::Windows::Media::Devices::PhotoConfirmationControl>;
+    using RedialRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::RedialRequestedEventArgs>;
+    using RegionOfInterest = py::winrt_wrapper<winrt::Windows::Media::Devices::RegionOfInterest>;
+    using RegionsOfInterestControl = py::winrt_wrapper<winrt::Windows::Media::Devices::RegionsOfInterestControl>;
+    using SceneModeControl = py::winrt_wrapper<winrt::Windows::Media::Devices::SceneModeControl>;
+    using TorchControl = py::winrt_wrapper<winrt::Windows::Media::Devices::TorchControl>;
+    using VideoDeviceController = py::winrt_wrapper<winrt::Windows::Media::Devices::VideoDeviceController>;
+    using VideoDeviceControllerGetDevicePropertyResult = py::winrt_wrapper<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult>;
+    using VideoTemporalDenoisingControl = py::winrt_wrapper<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl>;
+    using WhiteBalanceControl = py::winrt_wrapper<winrt::Windows::Media::Devices::WhiteBalanceControl>;
+    using ZoomControl = py::winrt_wrapper<winrt::Windows::Media::Devices::ZoomControl>;
+    using ZoomSettings = py::winrt_wrapper<winrt::Windows::Media::Devices::ZoomSettings>;
+    using IDefaultAudioDeviceChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>;
+    using IMediaDeviceController = py::winrt_wrapper<winrt::Windows::Media::Devices::IMediaDeviceController>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Media::Devices::CallControlEventHandler>
     {

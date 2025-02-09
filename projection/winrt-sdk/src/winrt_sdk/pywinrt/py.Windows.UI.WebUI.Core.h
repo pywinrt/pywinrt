@@ -4,6 +4,102 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.UI.h>
+
+#include <winrt/Windows.UI.WebUI.Core.h>
+
+namespace py::proj::Windows::UI::WebUI::Core
+{
+}
+
+namespace py
+{
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode> = "i";
+
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarClosedDisplayMode";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarClosedDisplayMode";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBar";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBar";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarBitmapIcon";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarBitmapIcon";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarConfirmationButton";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarConfirmationButton";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarIconButton";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarIconButton";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarItemInvokedEventArgs";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarItemInvokedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarSizeChangedEventArgs";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarSizeChangedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarSymbolIcon";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "WebUICommandBarSymbolIcon";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core._IWebUICommandBarElement";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "_IWebUICommandBarElement";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core._IWebUICommandBarIcon";
+        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
+        static constexpr const char* type_name = "_IWebUICommandBarIcon";
+    };
+}
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -16,16 +112,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #if __has_include("py.Windows.UI.h")
 #include "py.Windows.UI.h"
 #endif
-
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.UI.h>
-
-#include <winrt/Windows.UI.WebUI.Core.h>
-
-namespace py::proj::Windows::UI::WebUI::Core
-{
-}
 
 namespace py::impl::Windows::UI::WebUI::Core
 {
@@ -129,89 +215,6 @@ namespace py::wrapper::Windows::UI::WebUI::Core
 
 namespace py
 {
-    template<>
-    inline constexpr const char* buffer_format<winrt::Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode> = "i";
-
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarClosedDisplayMode>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarClosedDisplayMode";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "WebUICommandBarClosedDisplayMode";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBar";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "WebUICommandBar";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarBitmapIcon";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "WebUICommandBarBitmapIcon";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarConfirmationButton";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "WebUICommandBarConfirmationButton";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarIconButton>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarIconButton";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "WebUICommandBarIconButton";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarItemInvokedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "WebUICommandBarItemInvokedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarSizeChangedEventArgs";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "WebUICommandBarSizeChangedEventArgs";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core.WebUICommandBarSymbolIcon";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "WebUICommandBarSymbolIcon";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core._IWebUICommandBarElement";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "_IWebUICommandBarElement";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.ui.webui.core._IWebUICommandBarIcon";
-        static constexpr const char* module_name = "winrt.windows.ui.webui.core";
-        static constexpr const char* type_name = "_IWebUICommandBarIcon";
-    };
     template <>
     struct delegate_python_type<winrt::Windows::UI::WebUI::Core::MenuClosedEventHandler>
     {

@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Globalization.h")
-#include "py.Windows.Globalization.h"
-#endif
-
-#if __has_include("py.Windows.UI.Text.h")
-#include "py.Windows.UI.Text.h"
-#endif
-
-#if __has_include("py.Windows.UI.ViewManagement.h")
-#include "py.Windows.UI.ViewManagement.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Globalization.h>
@@ -35,31 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Text::Core
 {
-}
-
-namespace py::impl::Windows::UI::Text::Core
-{
-}
-
-namespace py::wrapper::Windows::UI::Text::Core
-{
-    using CoreTextCompositionCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>;
-    using CoreTextCompositionSegment = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>;
-    using CoreTextCompositionStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>;
-    using CoreTextEditContext = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextEditContext>;
-    using CoreTextFormatUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>;
-    using CoreTextLayoutBounds = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>;
-    using CoreTextLayoutRequest = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>;
-    using CoreTextLayoutRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>;
-    using CoreTextSelectionRequest = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>;
-    using CoreTextSelectionRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>;
-    using CoreTextSelectionUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>;
-    using CoreTextServicesConstants = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>;
-    using CoreTextServicesManager = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextServicesManager>;
-    using CoreTextTextRequest = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextTextRequest>;
-    using CoreTextTextRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>;
-    using CoreTextTextUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>;
-    using CoreTextRange = py::winrt_struct_wrapper<winrt::Windows::UI::Text::Core::CoreTextRange>;
 }
 
 namespace py
@@ -269,4 +223,53 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextRange";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Globalization.h")
+#include "py.Windows.Globalization.h"
+#endif
+
+#if __has_include("py.Windows.UI.Text.h")
+#include "py.Windows.UI.Text.h"
+#endif
+
+#if __has_include("py.Windows.UI.ViewManagement.h")
+#include "py.Windows.UI.ViewManagement.h"
+#endif
+
+namespace py::impl::Windows::UI::Text::Core
+{
+}
+
+namespace py::wrapper::Windows::UI::Text::Core
+{
+    using CoreTextCompositionCompletedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>;
+    using CoreTextCompositionSegment = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>;
+    using CoreTextCompositionStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>;
+    using CoreTextEditContext = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextEditContext>;
+    using CoreTextFormatUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>;
+    using CoreTextLayoutBounds = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>;
+    using CoreTextLayoutRequest = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>;
+    using CoreTextLayoutRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>;
+    using CoreTextSelectionRequest = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>;
+    using CoreTextSelectionRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>;
+    using CoreTextSelectionUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>;
+    using CoreTextServicesConstants = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>;
+    using CoreTextServicesManager = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextServicesManager>;
+    using CoreTextTextRequest = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextTextRequest>;
+    using CoreTextTextRequestedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>;
+    using CoreTextTextUpdatingEventArgs = py::winrt_wrapper<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>;
+    using CoreTextRange = py::winrt_struct_wrapper<winrt::Windows::UI::Text::Core::CoreTextRange>;
+}
+
+namespace py
+{
 }

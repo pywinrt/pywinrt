@@ -4,35 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.UI.h")
-#include "py.Windows.UI.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
-#if __has_include("py.Windows.UI.Popups.h")
-#include "py.Windows.UI.Popups.h"
-#endif
-
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -45,33 +16,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::ViewManagement
 {
-}
-
-namespace py::impl::Windows::UI::ViewManagement
-{
-}
-
-namespace py::wrapper::Windows::UI::ViewManagement
-{
-    using AccessibilitySettings = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::AccessibilitySettings>;
-    using ActivationViewSwitcher = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>;
-    using ApplicationView = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationView>;
-    using ApplicationViewConsolidatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs>;
-    using ApplicationViewScaling = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewScaling>;
-    using ApplicationViewSwitcher = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher>;
-    using ApplicationViewTitleBar = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar>;
-    using ApplicationViewTransferContext = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext>;
-    using InputPane = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::InputPane>;
-    using InputPaneVisibilityEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>;
-    using ProjectionManager = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ProjectionManager>;
-    using StatusBar = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::StatusBar>;
-    using StatusBarProgressIndicator = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>;
-    using UISettings = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettings>;
-    using UISettingsAnimationsEnabledChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>;
-    using UISettingsAutoHideScrollBarsChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>;
-    using UISettingsMessageDurationChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs>;
-    using UIViewSettings = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UIViewSettings>;
-    using ViewModePreferences = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ViewModePreferences>;
 }
 
 namespace py
@@ -371,4 +315,63 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ViewModePreferences";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
+#if __has_include("py.Windows.UI.Popups.h")
+#include "py.Windows.UI.Popups.h"
+#endif
+
+#if __has_include("py.Windows.UI.WindowManagement.h")
+#include "py.Windows.UI.WindowManagement.h"
+#endif
+
+namespace py::impl::Windows::UI::ViewManagement
+{
+}
+
+namespace py::wrapper::Windows::UI::ViewManagement
+{
+    using AccessibilitySettings = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::AccessibilitySettings>;
+    using ActivationViewSwitcher = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>;
+    using ApplicationView = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationView>;
+    using ApplicationViewConsolidatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs>;
+    using ApplicationViewScaling = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewScaling>;
+    using ApplicationViewSwitcher = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher>;
+    using ApplicationViewTitleBar = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar>;
+    using ApplicationViewTransferContext = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext>;
+    using InputPane = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::InputPane>;
+    using InputPaneVisibilityEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>;
+    using ProjectionManager = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ProjectionManager>;
+    using StatusBar = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::StatusBar>;
+    using StatusBarProgressIndicator = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>;
+    using UISettings = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettings>;
+    using UISettingsAnimationsEnabledChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>;
+    using UISettingsAutoHideScrollBarsChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>;
+    using UISettingsMessageDurationChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs>;
+    using UIViewSettings = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::UIViewSettings>;
+    using ViewModePreferences = py::winrt_wrapper<winrt::Windows::UI::ViewManagement::ViewModePreferences>;
+}
+
+namespace py
+{
 }

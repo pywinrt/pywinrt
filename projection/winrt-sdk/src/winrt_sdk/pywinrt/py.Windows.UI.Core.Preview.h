@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.WindowManagement.h>
 
@@ -20,17 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::UI::Core::Preview
 {
-}
-
-namespace py::impl::Windows::UI::Core::Preview
-{
-}
-
-namespace py::wrapper::Windows::UI::Core::Preview
-{
-    using CoreAppWindowPreview = py::winrt_wrapper<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>;
-    using SystemNavigationCloseRequestedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>;
-    using SystemNavigationManagerPreview = py::winrt_wrapper<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>;
 }
 
 namespace py
@@ -59,4 +39,27 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.ui.core.preview";
         static constexpr const char* type_name = "SystemNavigationManagerPreview";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.UI.WindowManagement.h")
+#include "py.Windows.UI.WindowManagement.h"
+#endif
+
+namespace py::impl::Windows::UI::Core::Preview
+{
+}
+
+namespace py::wrapper::Windows::UI::Core::Preview
+{
+    using CoreAppWindowPreview = py::winrt_wrapper<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>;
+    using SystemNavigationCloseRequestedPreviewEventArgs = py::winrt_wrapper<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>;
+    using SystemNavigationManagerPreview = py::winrt_wrapper<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>;
+}
+
+namespace py
+{
 }

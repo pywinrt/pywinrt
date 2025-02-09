@@ -4,30 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.Collections.h>
 
 #include <winrt/Windows.Data.Json.h>
 
 namespace py::proj::Windows::Data::Json
 {
-}
-
-namespace py::impl::Windows::Data::Json
-{
-}
-
-namespace py::wrapper::Windows::Data::Json
-{
-    using JsonArray = py::winrt_wrapper<winrt::Windows::Data::Json::JsonArray>;
-    using JsonError = py::winrt_wrapper<winrt::Windows::Data::Json::JsonError>;
-    using JsonObject = py::winrt_wrapper<winrt::Windows::Data::Json::JsonObject>;
-    using JsonValue = py::winrt_wrapper<winrt::Windows::Data::Json::JsonValue>;
-    using IJsonValue = py::winrt_wrapper<winrt::Windows::Data::Json::IJsonValue>;
 }
 
 namespace py
@@ -94,4 +76,25 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.data.json";
         static constexpr const char* type_name = "_IJsonValue";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Data::Json
+{
+}
+
+namespace py::wrapper::Windows::Data::Json
+{
+    using JsonArray = py::winrt_wrapper<winrt::Windows::Data::Json::JsonArray>;
+    using JsonError = py::winrt_wrapper<winrt::Windows::Data::Json::JsonError>;
+    using JsonObject = py::winrt_wrapper<winrt::Windows::Data::Json::JsonObject>;
+    using JsonValue = py::winrt_wrapper<winrt::Windows::Data::Json::JsonValue>;
+    using IJsonValue = py::winrt_wrapper<winrt::Windows::Data::Json::IJsonValue>;
+}
+
+namespace py
+{
 }

@@ -4,79 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Enumeration.h")
-#include "py.Windows.Devices.Enumeration.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
-#include "py.Windows.Graphics.DirectX.Direct3D11.h"
-#endif
-
-#if __has_include("py.Windows.Graphics.Imaging.h")
-#include "py.Windows.Graphics.Imaging.h"
-#endif
-
-#if __has_include("py.Windows.Media.h")
-#include "py.Windows.Media.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.Core.h")
-#include "py.Windows.Media.Capture.Core.h"
-#endif
-
-#if __has_include("py.Windows.Media.Capture.Frames.h")
-#include "py.Windows.Media.Capture.Frames.h"
-#endif
-
-#if __has_include("py.Windows.Media.Core.h")
-#include "py.Windows.Media.Core.h"
-#endif
-
-#if __has_include("py.Windows.Media.Devices.h")
-#include "py.Windows.Media.Devices.h"
-#endif
-
-#if __has_include("py.Windows.Media.Effects.h")
-#include "py.Windows.Media.Effects.h"
-#endif
-
-#if __has_include("py.Windows.Media.MediaProperties.h")
-#include "py.Windows.Media.MediaProperties.h"
-#endif
-
-#if __has_include("py.Windows.Security.Authentication.Web.h")
-#include "py.Windows.Security.Authentication.Web.h"
-#endif
-
-#if __has_include("py.Windows.Security.Credentials.h")
-#include "py.Windows.Security.Credentials.h"
-#endif
-
-#if __has_include("py.Windows.Storage.h")
-#include "py.Windows.Storage.h"
-#endif
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
-#if __has_include("py.Windows.UI.WindowManagement.h")
-#include "py.Windows.UI.WindowManagement.h"
-#endif
-
 #include <winrt/Windows.Devices.Enumeration.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -100,164 +27,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Media::Capture
 {
-}
-
-namespace py::impl::Windows::Media::Capture
-{
-    struct MediaCaptureFailedEventHandler
-    {
-        static winrt::Windows::Media::Capture::MediaCaptureFailedEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Capture::MediaCapture const& param0, winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs const& param1)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle py_param1{py::convert(param1)};
-                    if (!py_param1)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
-                    if (!args)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-
-    struct RecordLimitationExceededEventHandler
-    {
-        static winrt::Windows::Media::Capture::RecordLimitationExceededEventHandler get(PyObject* callable)
-        {
-            py::delegate_callable _delegate{ callable };
-
-            return [delegate = std::move(_delegate)](winrt::Windows::Media::Capture::MediaCapture const& param0)
-            {
-                auto gil = py::ensure_gil();
-
-                try
-                {
-                    py::pyobj_handle py_param0{py::convert(param0)};
-                    if (!py_param0)
-                    {
-                        throw python_exception();
-                    }
-
-                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
-                    if (!return_value)
-                    {
-                        throw python_exception();
-                    }
-                }
-                catch (python_exception)
-                {
-                    py::write_unraisable_and_throw();
-                }
-            };
-        };
-    };
-}
-
-namespace py::wrapper::Windows::Media::Capture
-{
-    using AdvancedCapturedPhoto = py::winrt_wrapper<winrt::Windows::Media::Capture::AdvancedCapturedPhoto>;
-    using AdvancedPhotoCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::AdvancedPhotoCapture>;
-    using AppBroadcastBackgroundService = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastBackgroundService>;
-    using AppBroadcastBackgroundServiceSignInInfo = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo>;
-    using AppBroadcastBackgroundServiceStreamInfo = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo>;
-    using AppBroadcastCameraCaptureStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs>;
-    using AppBroadcastGlobalSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings>;
-    using AppBroadcastHeartbeatRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs>;
-    using AppBroadcastManager = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastManager>;
-    using AppBroadcastMicrophoneCaptureStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs>;
-    using AppBroadcastPlugIn = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPlugIn>;
-    using AppBroadcastPlugInManager = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPlugInManager>;
-    using AppBroadcastPlugInStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs>;
-    using AppBroadcastPreview = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreview>;
-    using AppBroadcastPreviewStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs>;
-    using AppBroadcastPreviewStreamReader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader>;
-    using AppBroadcastPreviewStreamVideoFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame>;
-    using AppBroadcastPreviewStreamVideoHeader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader>;
-    using AppBroadcastProviderSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastProviderSettings>;
-    using AppBroadcastServices = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastServices>;
-    using AppBroadcastSignInStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs>;
-    using AppBroadcastState = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastState>;
-    using AppBroadcastStreamAudioFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame>;
-    using AppBroadcastStreamAudioHeader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader>;
-    using AppBroadcastStreamReader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamReader>;
-    using AppBroadcastStreamStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs>;
-    using AppBroadcastStreamVideoFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame>;
-    using AppBroadcastStreamVideoHeader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader>;
-    using AppBroadcastTriggerDetails = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails>;
-    using AppBroadcastViewerCountChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs>;
-    using AppCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCapture>;
-    using AppCaptureAlternateShortcutKeys = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys>;
-    using AppCaptureDurationGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs>;
-    using AppCaptureFileGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs>;
-    using AppCaptureManager = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureManager>;
-    using AppCaptureMetadataWriter = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureMetadataWriter>;
-    using AppCaptureMicrophoneCaptureStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs>;
-    using AppCaptureRecordOperation = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureRecordOperation>;
-    using AppCaptureRecordingStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs>;
-    using AppCaptureServices = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureServices>;
-    using AppCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureSettings>;
-    using AppCaptureState = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureState>;
-    using CameraCaptureUI = py::winrt_wrapper<winrt::Windows::Media::Capture::CameraCaptureUI>;
-    using CameraCaptureUIPhotoCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings>;
-    using CameraCaptureUIVideoCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings>;
-    using CameraOptionsUI = py::winrt_wrapper<winrt::Windows::Media::Capture::CameraOptionsUI>;
-    using CapturedFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::CapturedFrame>;
-    using CapturedFrameControlValues = py::winrt_wrapper<winrt::Windows::Media::Capture::CapturedFrameControlValues>;
-    using CapturedPhoto = py::winrt_wrapper<winrt::Windows::Media::Capture::CapturedPhoto>;
-    using GameBarServices = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServices>;
-    using GameBarServicesCommandEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs>;
-    using GameBarServicesManager = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServicesManager>;
-    using GameBarServicesManagerGameBarServicesCreatedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs>;
-    using GameBarServicesTargetInfo = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServicesTargetInfo>;
-    using LowLagMediaRecording = py::winrt_wrapper<winrt::Windows::Media::Capture::LowLagMediaRecording>;
-    using LowLagPhotoCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::LowLagPhotoCapture>;
-    using LowLagPhotoSequenceCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture>;
-    using MediaCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCapture>;
-    using MediaCaptureDeviceExclusiveControlStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs>;
-    using MediaCaptureFailedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs>;
-    using MediaCaptureFocusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs>;
-    using MediaCaptureInitializationSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureInitializationSettings>;
-    using MediaCapturePauseResult = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCapturePauseResult>;
-    using MediaCaptureRelativePanelWatcher = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher>;
-    using MediaCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureSettings>;
-    using MediaCaptureStopResult = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureStopResult>;
-    using MediaCaptureVideoProfile = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureVideoProfile>;
-    using MediaCaptureVideoProfileMediaDescription = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>;
-    using OptionalReferencePhotoCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs>;
-    using PhotoCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::PhotoCapturedEventArgs>;
-    using PhotoConfirmationCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs>;
-    using ScreenCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::ScreenCapture>;
-    using SourceSuspensionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>;
-    using VideoStreamConfiguration = py::winrt_wrapper<winrt::Windows::Media::Capture::VideoStreamConfiguration>;
-    using WhiteBalanceGain = py::winrt_struct_wrapper<winrt::Windows::Media::Capture::WhiteBalanceGain>;
 }
 
 namespace py
@@ -1349,6 +1118,240 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "WhiteBalanceGain";
     };
+}
+
+#if __has_include("py.Windows.Devices.Enumeration.h")
+#include "py.Windows.Devices.Enumeration.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.DirectX.Direct3D11.h")
+#include "py.Windows.Graphics.DirectX.Direct3D11.h"
+#endif
+
+#if __has_include("py.Windows.Graphics.Imaging.h")
+#include "py.Windows.Graphics.Imaging.h"
+#endif
+
+#if __has_include("py.Windows.Media.h")
+#include "py.Windows.Media.h"
+#endif
+
+#if __has_include("py.Windows.Media.Capture.Core.h")
+#include "py.Windows.Media.Capture.Core.h"
+#endif
+
+#if __has_include("py.Windows.Media.Capture.Frames.h")
+#include "py.Windows.Media.Capture.Frames.h"
+#endif
+
+#if __has_include("py.Windows.Media.Core.h")
+#include "py.Windows.Media.Core.h"
+#endif
+
+#if __has_include("py.Windows.Media.Devices.h")
+#include "py.Windows.Media.Devices.h"
+#endif
+
+#if __has_include("py.Windows.Media.Effects.h")
+#include "py.Windows.Media.Effects.h"
+#endif
+
+#if __has_include("py.Windows.Media.MediaProperties.h")
+#include "py.Windows.Media.MediaProperties.h"
+#endif
+
+#if __has_include("py.Windows.Security.Authentication.Web.h")
+#include "py.Windows.Security.Authentication.Web.h"
+#endif
+
+#if __has_include("py.Windows.Security.Credentials.h")
+#include "py.Windows.Security.Credentials.h"
+#endif
+
+#if __has_include("py.Windows.Storage.h")
+#include "py.Windows.Storage.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+#if __has_include("py.Windows.UI.WindowManagement.h")
+#include "py.Windows.UI.WindowManagement.h"
+#endif
+
+namespace py::impl::Windows::Media::Capture
+{
+    struct MediaCaptureFailedEventHandler
+    {
+        static winrt::Windows::Media::Capture::MediaCaptureFailedEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Capture::MediaCapture const& param0, winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs const& param1)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle py_param1{py::convert(param1)};
+                    if (!py_param1)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                    if (!args)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallObject(delegate.callable(), args.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+
+    struct RecordLimitationExceededEventHandler
+    {
+        static winrt::Windows::Media::Capture::RecordLimitationExceededEventHandler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::Windows::Media::Capture::MediaCapture const& param0)
+            {
+                auto gil = py::ensure_gil();
+
+                try
+                {
+                    py::pyobj_handle py_param0{py::convert(param0)};
+                    if (!py_param0)
+                    {
+                        throw python_exception();
+                    }
+
+                    py::pyobj_handle return_value{PyObject_CallOneArg(delegate.callable(), py_param0.get())};
+                    if (!return_value)
+                    {
+                        throw python_exception();
+                    }
+                }
+                catch (python_exception)
+                {
+                    py::write_unraisable_and_throw();
+                }
+            };
+        };
+    };
+}
+
+namespace py::wrapper::Windows::Media::Capture
+{
+    using AdvancedCapturedPhoto = py::winrt_wrapper<winrt::Windows::Media::Capture::AdvancedCapturedPhoto>;
+    using AdvancedPhotoCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::AdvancedPhotoCapture>;
+    using AppBroadcastBackgroundService = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastBackgroundService>;
+    using AppBroadcastBackgroundServiceSignInInfo = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo>;
+    using AppBroadcastBackgroundServiceStreamInfo = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo>;
+    using AppBroadcastCameraCaptureStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs>;
+    using AppBroadcastGlobalSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings>;
+    using AppBroadcastHeartbeatRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs>;
+    using AppBroadcastManager = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastManager>;
+    using AppBroadcastMicrophoneCaptureStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs>;
+    using AppBroadcastPlugIn = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPlugIn>;
+    using AppBroadcastPlugInManager = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPlugInManager>;
+    using AppBroadcastPlugInStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs>;
+    using AppBroadcastPreview = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreview>;
+    using AppBroadcastPreviewStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs>;
+    using AppBroadcastPreviewStreamReader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader>;
+    using AppBroadcastPreviewStreamVideoFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame>;
+    using AppBroadcastPreviewStreamVideoHeader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader>;
+    using AppBroadcastProviderSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastProviderSettings>;
+    using AppBroadcastServices = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastServices>;
+    using AppBroadcastSignInStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs>;
+    using AppBroadcastState = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastState>;
+    using AppBroadcastStreamAudioFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame>;
+    using AppBroadcastStreamAudioHeader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader>;
+    using AppBroadcastStreamReader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamReader>;
+    using AppBroadcastStreamStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs>;
+    using AppBroadcastStreamVideoFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame>;
+    using AppBroadcastStreamVideoHeader = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader>;
+    using AppBroadcastTriggerDetails = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails>;
+    using AppBroadcastViewerCountChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs>;
+    using AppCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCapture>;
+    using AppCaptureAlternateShortcutKeys = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys>;
+    using AppCaptureDurationGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs>;
+    using AppCaptureFileGeneratedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs>;
+    using AppCaptureManager = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureManager>;
+    using AppCaptureMetadataWriter = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureMetadataWriter>;
+    using AppCaptureMicrophoneCaptureStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs>;
+    using AppCaptureRecordOperation = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureRecordOperation>;
+    using AppCaptureRecordingStateChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs>;
+    using AppCaptureServices = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureServices>;
+    using AppCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureSettings>;
+    using AppCaptureState = py::winrt_wrapper<winrt::Windows::Media::Capture::AppCaptureState>;
+    using CameraCaptureUI = py::winrt_wrapper<winrt::Windows::Media::Capture::CameraCaptureUI>;
+    using CameraCaptureUIPhotoCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings>;
+    using CameraCaptureUIVideoCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings>;
+    using CameraOptionsUI = py::winrt_wrapper<winrt::Windows::Media::Capture::CameraOptionsUI>;
+    using CapturedFrame = py::winrt_wrapper<winrt::Windows::Media::Capture::CapturedFrame>;
+    using CapturedFrameControlValues = py::winrt_wrapper<winrt::Windows::Media::Capture::CapturedFrameControlValues>;
+    using CapturedPhoto = py::winrt_wrapper<winrt::Windows::Media::Capture::CapturedPhoto>;
+    using GameBarServices = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServices>;
+    using GameBarServicesCommandEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs>;
+    using GameBarServicesManager = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServicesManager>;
+    using GameBarServicesManagerGameBarServicesCreatedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs>;
+    using GameBarServicesTargetInfo = py::winrt_wrapper<winrt::Windows::Media::Capture::GameBarServicesTargetInfo>;
+    using LowLagMediaRecording = py::winrt_wrapper<winrt::Windows::Media::Capture::LowLagMediaRecording>;
+    using LowLagPhotoCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::LowLagPhotoCapture>;
+    using LowLagPhotoSequenceCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture>;
+    using MediaCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCapture>;
+    using MediaCaptureDeviceExclusiveControlStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs>;
+    using MediaCaptureFailedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs>;
+    using MediaCaptureFocusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs>;
+    using MediaCaptureInitializationSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureInitializationSettings>;
+    using MediaCapturePauseResult = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCapturePauseResult>;
+    using MediaCaptureRelativePanelWatcher = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher>;
+    using MediaCaptureSettings = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureSettings>;
+    using MediaCaptureStopResult = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureStopResult>;
+    using MediaCaptureVideoProfile = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureVideoProfile>;
+    using MediaCaptureVideoProfileMediaDescription = py::winrt_wrapper<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>;
+    using OptionalReferencePhotoCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs>;
+    using PhotoCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::PhotoCapturedEventArgs>;
+    using PhotoConfirmationCapturedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs>;
+    using ScreenCapture = py::winrt_wrapper<winrt::Windows::Media::Capture::ScreenCapture>;
+    using SourceSuspensionChangedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>;
+    using VideoStreamConfiguration = py::winrt_wrapper<winrt::Windows::Media::Capture::VideoStreamConfiguration>;
+    using WhiteBalanceGain = py::winrt_struct_wrapper<winrt::Windows::Media::Capture::WhiteBalanceGain>;
+}
+
+namespace py
+{
     template <>
     struct delegate_python_type<winrt::Windows::Media::Capture::MediaCaptureFailedEventHandler>
     {

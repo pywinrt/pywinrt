@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Microsoft.Graphics.DirectX.h")
-#include "py.Microsoft.Graphics.DirectX.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
 #include <winrt/Microsoft.Graphics.DirectX.h>
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Windows.Foundation.h>
@@ -35,31 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Microsoft::UI::Composition::Scenes
 {
-}
-
-namespace py::impl::Microsoft::UI::Composition::Scenes
-{
-}
-
-namespace py::wrapper::Microsoft::UI::Composition::Scenes
-{
-    using SceneBoundingBox = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneBoundingBox>;
-    using SceneComponent = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneComponent>;
-    using SceneComponentCollection = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneComponentCollection>;
-    using SceneMaterial = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMaterial>;
-    using SceneMaterialInput = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMaterialInput>;
-    using SceneMesh = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMesh>;
-    using SceneMeshMaterialAttributeMap = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap>;
-    using SceneMeshRendererComponent = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent>;
-    using SceneMetallicRoughnessMaterial = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial>;
-    using SceneModelTransform = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneModelTransform>;
-    using SceneNode = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneNode>;
-    using SceneNodeCollection = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneNodeCollection>;
-    using SceneObject = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneObject>;
-    using ScenePbrMaterial = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::ScenePbrMaterial>;
-    using SceneRendererComponent = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneRendererComponent>;
-    using SceneSurfaceMaterialInput = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput>;
-    using SceneVisual = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneVisual>;
 }
 
 namespace py
@@ -244,4 +198,53 @@ namespace py
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneVisual";
     };
+}
+
+#if __has_include("py.Microsoft.Graphics.DirectX.h")
+#include "py.Microsoft.Graphics.DirectX.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+namespace py::impl::Microsoft::UI::Composition::Scenes
+{
+}
+
+namespace py::wrapper::Microsoft::UI::Composition::Scenes
+{
+    using SceneBoundingBox = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneBoundingBox>;
+    using SceneComponent = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneComponent>;
+    using SceneComponentCollection = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneComponentCollection>;
+    using SceneMaterial = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMaterial>;
+    using SceneMaterialInput = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMaterialInput>;
+    using SceneMesh = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMesh>;
+    using SceneMeshMaterialAttributeMap = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap>;
+    using SceneMeshRendererComponent = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent>;
+    using SceneMetallicRoughnessMaterial = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial>;
+    using SceneModelTransform = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneModelTransform>;
+    using SceneNode = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneNode>;
+    using SceneNodeCollection = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneNodeCollection>;
+    using SceneObject = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneObject>;
+    using ScenePbrMaterial = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::ScenePbrMaterial>;
+    using SceneRendererComponent = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneRendererComponent>;
+    using SceneSurfaceMaterialInput = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput>;
+    using SceneVisual = py::winrt_wrapper<winrt::Microsoft::UI::Composition::Scenes::SceneVisual>;
+}
+
+namespace py
+{
 }

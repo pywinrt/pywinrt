@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.ApplicationModel.Email.h")
-#include "py.Windows.ApplicationModel.Email.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
-#include "py.Windows.Security.Cryptography.Certificates.h"
-#endif
-
 #include <winrt/Windows.ApplicationModel.Email.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,46 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::ApplicationModel::Email::DataProvider
 {
-}
-
-namespace py::impl::Windows::ApplicationModel::Email::DataProvider
-{
-}
-
-namespace py::wrapper::Windows::ApplicationModel::Email::DataProvider
-{
-    using EmailDataProviderConnection = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection>;
-    using EmailDataProviderTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails>;
-    using EmailMailboxCreateFolderRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest>;
-    using EmailMailboxCreateFolderRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>;
-    using EmailMailboxDeleteFolderRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest>;
-    using EmailMailboxDeleteFolderRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>;
-    using EmailMailboxDownloadAttachmentRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest>;
-    using EmailMailboxDownloadAttachmentRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>;
-    using EmailMailboxDownloadMessageRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest>;
-    using EmailMailboxDownloadMessageRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>;
-    using EmailMailboxEmptyFolderRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest>;
-    using EmailMailboxEmptyFolderRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>;
-    using EmailMailboxForwardMeetingRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest>;
-    using EmailMailboxForwardMeetingRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>;
-    using EmailMailboxGetAutoReplySettingsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest>;
-    using EmailMailboxGetAutoReplySettingsRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>;
-    using EmailMailboxMoveFolderRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest>;
-    using EmailMailboxMoveFolderRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>;
-    using EmailMailboxProposeNewTimeForMeetingRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest>;
-    using EmailMailboxProposeNewTimeForMeetingRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>;
-    using EmailMailboxResolveRecipientsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest>;
-    using EmailMailboxResolveRecipientsRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>;
-    using EmailMailboxServerSearchReadBatchRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest>;
-    using EmailMailboxServerSearchReadBatchRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>;
-    using EmailMailboxSetAutoReplySettingsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest>;
-    using EmailMailboxSetAutoReplySettingsRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>;
-    using EmailMailboxSyncManagerSyncRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest>;
-    using EmailMailboxSyncManagerSyncRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>;
-    using EmailMailboxUpdateMeetingResponseRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest>;
-    using EmailMailboxUpdateMeetingResponseRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>;
-    using EmailMailboxValidateCertificatesRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest>;
-    using EmailMailboxValidateCertificatesRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>;
 }
 
 namespace py
@@ -330,4 +273,64 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxValidateCertificatesRequestEventArgs";
     };
+}
+
+#if __has_include("py.Windows.ApplicationModel.Email.h")
+#include "py.Windows.ApplicationModel.Email.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Security.Cryptography.Certificates.h")
+#include "py.Windows.Security.Cryptography.Certificates.h"
+#endif
+
+namespace py::impl::Windows::ApplicationModel::Email::DataProvider
+{
+}
+
+namespace py::wrapper::Windows::ApplicationModel::Email::DataProvider
+{
+    using EmailDataProviderConnection = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection>;
+    using EmailDataProviderTriggerDetails = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails>;
+    using EmailMailboxCreateFolderRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest>;
+    using EmailMailboxCreateFolderRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>;
+    using EmailMailboxDeleteFolderRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest>;
+    using EmailMailboxDeleteFolderRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>;
+    using EmailMailboxDownloadAttachmentRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest>;
+    using EmailMailboxDownloadAttachmentRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>;
+    using EmailMailboxDownloadMessageRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest>;
+    using EmailMailboxDownloadMessageRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>;
+    using EmailMailboxEmptyFolderRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest>;
+    using EmailMailboxEmptyFolderRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>;
+    using EmailMailboxForwardMeetingRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest>;
+    using EmailMailboxForwardMeetingRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>;
+    using EmailMailboxGetAutoReplySettingsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest>;
+    using EmailMailboxGetAutoReplySettingsRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>;
+    using EmailMailboxMoveFolderRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest>;
+    using EmailMailboxMoveFolderRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>;
+    using EmailMailboxProposeNewTimeForMeetingRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest>;
+    using EmailMailboxProposeNewTimeForMeetingRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>;
+    using EmailMailboxResolveRecipientsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest>;
+    using EmailMailboxResolveRecipientsRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>;
+    using EmailMailboxServerSearchReadBatchRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest>;
+    using EmailMailboxServerSearchReadBatchRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>;
+    using EmailMailboxSetAutoReplySettingsRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest>;
+    using EmailMailboxSetAutoReplySettingsRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>;
+    using EmailMailboxSyncManagerSyncRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest>;
+    using EmailMailboxSyncManagerSyncRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>;
+    using EmailMailboxUpdateMeetingResponseRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest>;
+    using EmailMailboxUpdateMeetingResponseRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>;
+    using EmailMailboxValidateCertificatesRequest = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest>;
+    using EmailMailboxValidateCertificatesRequestEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>;
+}
+
+namespace py
+{
 }

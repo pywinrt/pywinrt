@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Data.Xml.Dom.h")
-#include "py.Windows.Data.Xml.Dom.h"
-#endif
-
 #include <winrt/Windows.Data.Xml.Dom.h>
 
 #include <winrt/Windows.Data.Xml.Xsl.h>
 
 namespace py::proj::Windows::Data::Xml::Xsl
 {
-}
-
-namespace py::impl::Windows::Data::Xml::Xsl
-{
-}
-
-namespace py::wrapper::Windows::Data::Xml::Xsl
-{
-    using XsltProcessor = py::winrt_wrapper<winrt::Windows::Data::Xml::Xsl::XsltProcessor>;
 }
 
 namespace py
@@ -36,4 +22,21 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.data.xml.xsl";
         static constexpr const char* type_name = "XsltProcessor";
     };
+}
+
+#if __has_include("py.Windows.Data.Xml.Dom.h")
+#include "py.Windows.Data.Xml.Dom.h"
+#endif
+
+namespace py::impl::Windows::Data::Xml::Xsl
+{
+}
+
+namespace py::wrapper::Windows::Data::Xml::Xsl
+{
+    using XsltProcessor = py::winrt_wrapper<winrt::Windows::Data::Xml::Xsl::XsltProcessor>;
+}
+
+namespace py
+{
 }

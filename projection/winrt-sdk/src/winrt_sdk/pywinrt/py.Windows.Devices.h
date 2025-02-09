@@ -4,27 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Devices.Adc.Provider.h")
-#include "py.Windows.Devices.Adc.Provider.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Gpio.Provider.h")
-#include "py.Windows.Devices.Gpio.Provider.h"
-#endif
-
-#if __has_include("py.Windows.Devices.I2c.Provider.h")
-#include "py.Windows.Devices.I2c.Provider.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Pwm.Provider.h")
-#include "py.Windows.Devices.Pwm.Provider.h"
-#endif
-
-#if __has_include("py.Windows.Devices.Spi.Provider.h")
-#include "py.Windows.Devices.Spi.Provider.h"
-#endif
-
 #include <winrt/Windows.Devices.Adc.Provider.h>
 #include <winrt/Windows.Devices.Gpio.Provider.h>
 #include <winrt/Windows.Devices.I2c.Provider.h>
@@ -35,17 +14,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Devices
 {
-}
-
-namespace py::impl::Windows::Devices
-{
-}
-
-namespace py::wrapper::Windows::Devices
-{
-    using LowLevelDevicesAggregateProvider = py::winrt_wrapper<winrt::Windows::Devices::LowLevelDevicesAggregateProvider>;
-    using LowLevelDevicesController = py::winrt_wrapper<winrt::Windows::Devices::LowLevelDevicesController>;
-    using ILowLevelDevicesAggregateProvider = py::winrt_wrapper<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>;
 }
 
 namespace py
@@ -74,4 +42,39 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices";
         static constexpr const char* type_name = "_ILowLevelDevicesAggregateProvider";
     };
+}
+
+#if __has_include("py.Windows.Devices.Adc.Provider.h")
+#include "py.Windows.Devices.Adc.Provider.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Gpio.Provider.h")
+#include "py.Windows.Devices.Gpio.Provider.h"
+#endif
+
+#if __has_include("py.Windows.Devices.I2c.Provider.h")
+#include "py.Windows.Devices.I2c.Provider.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Pwm.Provider.h")
+#include "py.Windows.Devices.Pwm.Provider.h"
+#endif
+
+#if __has_include("py.Windows.Devices.Spi.Provider.h")
+#include "py.Windows.Devices.Spi.Provider.h"
+#endif
+
+namespace py::impl::Windows::Devices
+{
+}
+
+namespace py::wrapper::Windows::Devices
+{
+    using LowLevelDevicesAggregateProvider = py::winrt_wrapper<winrt::Windows::Devices::LowLevelDevicesAggregateProvider>;
+    using LowLevelDevicesController = py::winrt_wrapper<winrt::Windows::Devices::LowLevelDevicesController>;
+    using ILowLevelDevicesAggregateProvider = py::winrt_wrapper<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>;
+}
+
+namespace py
+{
 }

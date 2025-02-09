@@ -4,26 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Storage.Streams.h")
-#include "py.Windows.Storage.Streams.h"
-#endif
-
 #include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Security.Cryptography.h>
 
 namespace py::proj::Windows::Security::Cryptography
 {
-}
-
-namespace py::impl::Windows::Security::Cryptography
-{
-}
-
-namespace py::wrapper::Windows::Security::Cryptography
-{
-    using CryptographicBuffer = py::winrt_wrapper<winrt::Windows::Security::Cryptography::CryptographicBuffer>;
 }
 
 namespace py
@@ -47,4 +33,21 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.cryptography";
         static constexpr const char* type_name = "CryptographicBuffer";
     };
+}
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
+#endif
+
+namespace py::impl::Windows::Security::Cryptography
+{
+}
+
+namespace py::wrapper::Windows::Security::Cryptography
+{
+    using CryptographicBuffer = py::winrt_wrapper<winrt::Windows::Security::Cryptography::CryptographicBuffer>;
+}
+
+namespace py
+{
 }

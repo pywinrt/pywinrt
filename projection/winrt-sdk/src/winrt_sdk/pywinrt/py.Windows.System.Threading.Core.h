@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.System.Threading.h")
-#include "py.Windows.System.Threading.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.System.Threading.h>
 
@@ -21,6 +12,34 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 namespace py::proj::Windows::System::Threading::Core
 {
 }
+
+namespace py
+{
+
+    template<>
+    struct py_type<winrt::Windows::System::Threading::Core::PreallocatedWorkItem>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.core.PreallocatedWorkItem";
+        static constexpr const char* module_name = "winrt.windows.system.threading.core";
+        static constexpr const char* type_name = "PreallocatedWorkItem";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::System::Threading::Core::SignalNotifier>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.core.SignalNotifier";
+        static constexpr const char* module_name = "winrt.windows.system.threading.core";
+        static constexpr const char* type_name = "SignalNotifier";
+    };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.System.Threading.h")
+#include "py.Windows.System.Threading.h"
+#endif
 
 namespace py::impl::Windows::System::Threading::Core
 {
@@ -77,22 +96,6 @@ namespace py::wrapper::Windows::System::Threading::Core
 
 namespace py
 {
-
-    template<>
-    struct py_type<winrt::Windows::System::Threading::Core::PreallocatedWorkItem>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.core.PreallocatedWorkItem";
-        static constexpr const char* module_name = "winrt.windows.system.threading.core";
-        static constexpr const char* type_name = "PreallocatedWorkItem";
-    };
-
-    template<>
-    struct py_type<winrt::Windows::System::Threading::Core::SignalNotifier>
-    {
-        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.core.SignalNotifier";
-        static constexpr const char* module_name = "winrt.windows.system.threading.core";
-        static constexpr const char* type_name = "SignalNotifier";
-    };
     template <>
     struct delegate_python_type<winrt::Windows::System::Threading::Core::SignalHandler>
     {

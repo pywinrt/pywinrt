@@ -4,23 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Data.Json.h")
-#include "py.Windows.Data.Json.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #include <winrt/Windows.Data.Json.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
@@ -30,28 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::System::Diagnostics
 {
-}
-
-namespace py::impl::Windows::System::Diagnostics
-{
-}
-
-namespace py::wrapper::Windows::System::Diagnostics
-{
-    using DiagnosticActionResult = py::winrt_wrapper<winrt::Windows::System::Diagnostics::DiagnosticActionResult>;
-    using DiagnosticInvoker = py::winrt_wrapper<winrt::Windows::System::Diagnostics::DiagnosticInvoker>;
-    using ProcessCpuUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessCpuUsage>;
-    using ProcessCpuUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessCpuUsageReport>;
-    using ProcessDiagnosticInfo = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>;
-    using ProcessDiskUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessDiskUsage>;
-    using ProcessDiskUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessDiskUsageReport>;
-    using ProcessMemoryUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessMemoryUsage>;
-    using ProcessMemoryUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport>;
-    using SystemCpuUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemCpuUsage>;
-    using SystemCpuUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemCpuUsageReport>;
-    using SystemDiagnosticInfo = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemDiagnosticInfo>;
-    using SystemMemoryUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemMemoryUsage>;
-    using SystemMemoryUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemMemoryUsageReport>;
 }
 
 namespace py
@@ -179,4 +140,46 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.system.diagnostics";
         static constexpr const char* type_name = "SystemMemoryUsageReport";
     };
+}
+
+#if __has_include("py.Windows.Data.Json.h")
+#include "py.Windows.Data.Json.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.System.h")
+#include "py.Windows.System.h"
+#endif
+
+namespace py::impl::Windows::System::Diagnostics
+{
+}
+
+namespace py::wrapper::Windows::System::Diagnostics
+{
+    using DiagnosticActionResult = py::winrt_wrapper<winrt::Windows::System::Diagnostics::DiagnosticActionResult>;
+    using DiagnosticInvoker = py::winrt_wrapper<winrt::Windows::System::Diagnostics::DiagnosticInvoker>;
+    using ProcessCpuUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessCpuUsage>;
+    using ProcessCpuUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessCpuUsageReport>;
+    using ProcessDiagnosticInfo = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>;
+    using ProcessDiskUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessDiskUsage>;
+    using ProcessDiskUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessDiskUsageReport>;
+    using ProcessMemoryUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessMemoryUsage>;
+    using ProcessMemoryUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport>;
+    using SystemCpuUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemCpuUsage>;
+    using SystemCpuUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemCpuUsageReport>;
+    using SystemDiagnosticInfo = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemDiagnosticInfo>;
+    using SystemMemoryUsage = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemMemoryUsage>;
+    using SystemMemoryUsageReport = py::winrt_wrapper<winrt::Windows::System::Diagnostics::SystemMemoryUsageReport>;
+}
+
+namespace py
+{
 }

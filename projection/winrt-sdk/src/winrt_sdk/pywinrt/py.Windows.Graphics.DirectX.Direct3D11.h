@@ -4,29 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Graphics.DirectX.h")
-#include "py.Windows.Graphics.DirectX.h"
-#endif
-
 #include <winrt/Windows.Graphics.DirectX.h>
 
 #include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
 
 namespace py::proj::Windows::Graphics::DirectX::Direct3D11
 {
-}
-
-namespace py::impl::Windows::Graphics::DirectX::Direct3D11
-{
-}
-
-namespace py::wrapper::Windows::Graphics::DirectX::Direct3D11
-{
-    using IDirect3DDevice = py::winrt_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>;
-    using IDirect3DSurface = py::winrt_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>;
-    using Direct3DMultisampleDescription = py::winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>;
-    using Direct3DSurfaceDescription = py::winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>;
 }
 
 namespace py
@@ -91,4 +74,24 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "Direct3DSurfaceDescription";
     };
+}
+
+#if __has_include("py.Windows.Graphics.DirectX.h")
+#include "py.Windows.Graphics.DirectX.h"
+#endif
+
+namespace py::impl::Windows::Graphics::DirectX::Direct3D11
+{
+}
+
+namespace py::wrapper::Windows::Graphics::DirectX::Direct3D11
+{
+    using IDirect3DDevice = py::winrt_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>;
+    using IDirect3DSurface = py::winrt_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>;
+    using Direct3DMultisampleDescription = py::winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>;
+    using Direct3DSurfaceDescription = py::winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>;
+}
+
+namespace py
+{
 }

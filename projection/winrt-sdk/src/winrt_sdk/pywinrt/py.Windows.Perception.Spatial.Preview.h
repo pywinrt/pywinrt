@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
-#if __has_include("py.Windows.Perception.Spatial.h")
-#include "py.Windows.Perception.Spatial.h"
-#endif
-
 #include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Perception.Spatial.h>
 
@@ -20,16 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Perception::Spatial::Preview
 {
-}
-
-namespace py::impl::Windows::Perception::Spatial::Preview
-{
-}
-
-namespace py::wrapper::Windows::Perception::Spatial::Preview
-{
-    using SpatialGraphInteropFrameOfReferencePreview = py::winrt_wrapper<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview>;
-    using SpatialGraphInteropPreview = py::winrt_wrapper<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview>;
 }
 
 namespace py
@@ -50,4 +31,26 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.perception.spatial.preview";
         static constexpr const char* type_name = "SpatialGraphInteropPreview";
     };
+}
+
+#if __has_include("py.Windows.Foundation.Numerics.h")
+#include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Windows.Perception.Spatial.h")
+#include "py.Windows.Perception.Spatial.h"
+#endif
+
+namespace py::impl::Windows::Perception::Spatial::Preview
+{
+}
+
+namespace py::wrapper::Windows::Perception::Spatial::Preview
+{
+    using SpatialGraphInteropFrameOfReferencePreview = py::winrt_wrapper<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview>;
+    using SpatialGraphInteropPreview = py::winrt_wrapper<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview>;
+}
+
+namespace py
+{
 }

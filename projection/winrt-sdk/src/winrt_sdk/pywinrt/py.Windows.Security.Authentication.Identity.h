@@ -4,15 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-
-#if __has_include("py.Windows.Foundation.h")
-#include "py.Windows.Foundation.h"
-#endif
-
-#if __has_include("py.Windows.Foundation.Collections.h")
-#include "py.Windows.Foundation.Collections.h"
-#endif
-
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 
@@ -20,16 +11,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 namespace py::proj::Windows::Security::Authentication::Identity
 {
-}
-
-namespace py::impl::Windows::Security::Authentication::Identity
-{
-}
-
-namespace py::wrapper::Windows::Security::Authentication::Identity
-{
-    using EnterpriseKeyCredentialRegistrationInfo = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>;
-    using EnterpriseKeyCredentialRegistrationManager = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager>;
 }
 
 namespace py
@@ -50,4 +31,26 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity";
         static constexpr const char* type_name = "EnterpriseKeyCredentialRegistrationManager";
     };
+}
+
+#if __has_include("py.Windows.Foundation.h")
+#include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+namespace py::impl::Windows::Security::Authentication::Identity
+{
+}
+
+namespace py::wrapper::Windows::Security::Authentication::Identity
+{
+    using EnterpriseKeyCredentialRegistrationInfo = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>;
+    using EnterpriseKeyCredentialRegistrationManager = py::winrt_wrapper<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager>;
+}
+
+namespace py
+{
 }
