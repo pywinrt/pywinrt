@@ -3732,9 +3732,50 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
+    PyObject* unpack_GameControllerVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Major{convert(self->obj.Major)};
+        if (!Major)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Minor{convert(self->obj.Minor)};
+        if (!Minor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Build{convert(self->obj.Build)};
+        if (!Build)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Revision{convert(self->obj.Revision)};
+        if (!Revision)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Major.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Minor.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Build.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Revision.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_GameControllerVersionInfo[] = {
         { "_assign_array_", _assign_array_GameControllerVersionInfo, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_GameControllerVersionInfo), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_GameControllerVersionInfo), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* GameControllerVersionInfo_get_Major(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, void* /*unused*/) noexcept
@@ -3978,9 +4019,36 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         }
     }
 
+    PyObject* unpack_GipFirmwareUpdateProgress(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle PercentCompleted{convert(self->obj.PercentCompleted)};
+        if (!PercentCompleted)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle CurrentComponentId{convert(self->obj.CurrentComponentId)};
+        if (!CurrentComponentId)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, PercentCompleted.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, CurrentComponentId.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_GipFirmwareUpdateProgress[] = {
         { "_assign_array_", _assign_array_GipFirmwareUpdateProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_GipFirmwareUpdateProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_GipFirmwareUpdateProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* GipFirmwareUpdateProgress_get_PercentCompleted(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, void* /*unused*/) noexcept

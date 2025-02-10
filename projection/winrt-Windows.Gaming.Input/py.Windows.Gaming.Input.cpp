@@ -6047,9 +6047,36 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    PyObject* unpack_ArcadeStickReading(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Timestamp{convert(self->obj.Timestamp)};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Buttons{convert(self->obj.Buttons)};
+        if (!Buttons)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Timestamp.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Buttons.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_ArcadeStickReading[] = {
         { "_assign_array_", _assign_array_ArcadeStickReading, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_ArcadeStickReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_ArcadeStickReading), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* ArcadeStickReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, void* /*unused*/) noexcept
@@ -6278,9 +6305,71 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    PyObject* unpack_FlightStickReading(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Timestamp{convert(self->obj.Timestamp)};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Buttons{convert(self->obj.Buttons)};
+        if (!Buttons)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HatSwitch{convert(self->obj.HatSwitch)};
+        if (!HatSwitch)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Roll{convert(self->obj.Roll)};
+        if (!Roll)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Pitch{convert(self->obj.Pitch)};
+        if (!Pitch)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Yaw{convert(self->obj.Yaw)};
+        if (!Yaw)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Throttle{convert(self->obj.Throttle)};
+        if (!Throttle)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(7)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Timestamp.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Buttons.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, HatSwitch.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Roll.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, Pitch.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, Yaw.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, Throttle.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_FlightStickReading[] = {
         { "_assign_array_", _assign_array_FlightStickReading, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_FlightStickReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_FlightStickReading), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* FlightStickReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, void* /*unused*/) noexcept
@@ -6614,9 +6703,78 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    PyObject* unpack_GamepadReading(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Timestamp{convert(self->obj.Timestamp)};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Buttons{convert(self->obj.Buttons)};
+        if (!Buttons)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LeftTrigger{convert(self->obj.LeftTrigger)};
+        if (!LeftTrigger)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightTrigger{convert(self->obj.RightTrigger)};
+        if (!RightTrigger)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LeftThumbstickX{convert(self->obj.LeftThumbstickX)};
+        if (!LeftThumbstickX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LeftThumbstickY{convert(self->obj.LeftThumbstickY)};
+        if (!LeftThumbstickY)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightThumbstickX{convert(self->obj.RightThumbstickX)};
+        if (!RightThumbstickX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightThumbstickY{convert(self->obj.RightThumbstickY)};
+        if (!RightThumbstickY)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(8)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Timestamp.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Buttons.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, LeftTrigger.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, RightTrigger.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, LeftThumbstickX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, LeftThumbstickY.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, RightThumbstickX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 7, RightThumbstickY.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_GamepadReading[] = {
         { "_assign_array_", _assign_array_GamepadReading, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_GamepadReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_GamepadReading), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* GamepadReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::GamepadReading* self, void* /*unused*/) noexcept
@@ -6950,9 +7108,50 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    PyObject* unpack_GamepadVibration(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle LeftMotor{convert(self->obj.LeftMotor)};
+        if (!LeftMotor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightMotor{convert(self->obj.RightMotor)};
+        if (!RightMotor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LeftTrigger{convert(self->obj.LeftTrigger)};
+        if (!LeftTrigger)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RightTrigger{convert(self->obj.RightTrigger)};
+        if (!RightTrigger)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, LeftMotor.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, RightMotor.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, LeftTrigger.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, RightTrigger.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_GamepadVibration[] = {
         { "_assign_array_", _assign_array_GamepadVibration, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_GamepadVibration), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_GamepadVibration), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* GamepadVibration_get_LeftMotor(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, void* /*unused*/) noexcept
@@ -7226,9 +7425,78 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    PyObject* unpack_RacingWheelReading(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Timestamp{convert(self->obj.Timestamp)};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Buttons{convert(self->obj.Buttons)};
+        if (!Buttons)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PatternShifterGear{convert(self->obj.PatternShifterGear)};
+        if (!PatternShifterGear)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Wheel{convert(self->obj.Wheel)};
+        if (!Wheel)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Throttle{convert(self->obj.Throttle)};
+        if (!Throttle)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Brake{convert(self->obj.Brake)};
+        if (!Brake)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Clutch{convert(self->obj.Clutch)};
+        if (!Clutch)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Handbrake{convert(self->obj.Handbrake)};
+        if (!Handbrake)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(8)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Timestamp.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Buttons.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, PatternShifterGear.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Wheel.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, Throttle.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, Brake.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, Clutch.detach());
+        PyTuple_SET_ITEM(tuple.get(), 7, Handbrake.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_RacingWheelReading[] = {
         { "_assign_array_", _assign_array_RacingWheelReading, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_RacingWheelReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_RacingWheelReading), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* RacingWheelReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, void* /*unused*/) noexcept
@@ -7557,9 +7825,43 @@ namespace py::cpp::Windows::Gaming::Input
         }
     }
 
+    PyObject* unpack_UINavigationReading(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Timestamp{convert(self->obj.Timestamp)};
+        if (!Timestamp)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RequiredButtons{convert(self->obj.RequiredButtons)};
+        if (!RequiredButtons)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OptionalButtons{convert(self->obj.OptionalButtons)};
+        if (!OptionalButtons)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Timestamp.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, RequiredButtons.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, OptionalButtons.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_UINavigationReading[] = {
         { "_assign_array_", _assign_array_UINavigationReading, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_UINavigationReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_UINavigationReading), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* UINavigationReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, void* /*unused*/) noexcept

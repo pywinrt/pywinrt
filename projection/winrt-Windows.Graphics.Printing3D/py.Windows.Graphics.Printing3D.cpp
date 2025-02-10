@@ -7463,9 +7463,36 @@ namespace py::cpp::Windows::Graphics::Printing3D
         }
     }
 
+    PyObject* unpack_Printing3DBufferDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Format{convert(self->obj.Format)};
+        if (!Format)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Stride{convert(self->obj.Stride)};
+        if (!Stride)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Format.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Stride.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Printing3DBufferDescription[] = {
         { "_assign_array_", _assign_array_Printing3DBufferDescription, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Printing3DBufferDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Printing3DBufferDescription), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Printing3DBufferDescription_get_Format(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, void* /*unused*/) noexcept

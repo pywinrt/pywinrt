@@ -229,9 +229,36 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    PyObject* unpack_DisplayAdapterId(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle LowPart{convert(self->obj.LowPart)};
+        if (!LowPart)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HighPart{convert(self->obj.HighPart)};
+        if (!HighPart)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, LowPart.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, HighPart.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_DisplayAdapterId[] = {
         { "_assign_array_", _assign_array_DisplayAdapterId, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayAdapterId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_DisplayAdapterId), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* DisplayAdapterId_get_LowPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, void* /*unused*/) noexcept
@@ -616,9 +643,36 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    PyObject* unpack_PointInt32(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.X)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.Y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_PointInt32[] = {
         { "_assign_array_", _assign_array_PointInt32, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_PointInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_PointInt32), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* PointInt32_get_X(py::wrapper::Windows::Graphics::PointInt32* self, void* /*unused*/) noexcept
@@ -832,9 +886,50 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    PyObject* unpack_RectInt32(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.X)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.Y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Height.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_RectInt32[] = {
         { "_assign_array_", _assign_array_RectInt32, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_RectInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_RectInt32), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* RectInt32_get_X(py::wrapper::Windows::Graphics::RectInt32* self, void* /*unused*/) noexcept
@@ -1078,9 +1173,36 @@ namespace py::cpp::Windows::Graphics
         }
     }
 
+    PyObject* unpack_SizeInt32(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Height.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SizeInt32[] = {
         { "_assign_array_", _assign_array_SizeInt32, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SizeInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SizeInt32), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SizeInt32_get_Width(py::wrapper::Windows::Graphics::SizeInt32* self, void* /*unused*/) noexcept

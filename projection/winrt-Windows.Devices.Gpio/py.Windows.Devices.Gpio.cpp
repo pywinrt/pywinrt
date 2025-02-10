@@ -2241,9 +2241,36 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
+    PyObject* unpack_GpioChangeCount(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Count{convert(self->obj.Count)};
+        if (!Count)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RelativeTime{convert(self->obj.RelativeTime)};
+        if (!RelativeTime)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Count.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, RelativeTime.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_GpioChangeCount[] = {
         { "_assign_array_", _assign_array_GpioChangeCount, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_GpioChangeCount), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_GpioChangeCount), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* GpioChangeCount_get_Count(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, void* /*unused*/) noexcept
@@ -2447,9 +2474,36 @@ namespace py::cpp::Windows::Devices::Gpio
         }
     }
 
+    PyObject* unpack_GpioChangeRecord(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle RelativeTime{convert(self->obj.RelativeTime)};
+        if (!RelativeTime)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Edge{convert(self->obj.Edge)};
+        if (!Edge)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, RelativeTime.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Edge.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_GpioChangeRecord[] = {
         { "_assign_array_", _assign_array_GpioChangeRecord, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_GpioChangeRecord), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_GpioChangeRecord), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* GpioChangeRecord_get_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, void* /*unused*/) noexcept

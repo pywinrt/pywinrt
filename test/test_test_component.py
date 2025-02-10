@@ -550,3 +550,11 @@ class TestTestComponent(unittest.TestCase):
         cpy = copy.replace(orig, j=UUID("20000000-2000-2000-2000-200000000000"))
         self.assertEqual(cpy.a, 1)
         self.assertEqual(cpy.j, UUID("20000000-2000-2000-2000-200000000000"))
+
+    def test_struct_unpack(self):
+        nb = tc.NonBlittable(True, "b", "c", 4)
+        a, b, c, d = nb.unpack()
+        self.assertIs(a, True)
+        self.assertEqual(b, "b")
+        self.assertEqual(c, "c")
+        self.assertEqual(d, 4)

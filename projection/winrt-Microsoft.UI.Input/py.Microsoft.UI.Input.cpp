@@ -13801,9 +13801,50 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    PyObject* unpack_CrossSlideThresholds(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle SelectionStart{convert(self->obj.SelectionStart)};
+        if (!SelectionStart)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle SpeedBumpStart{convert(self->obj.SpeedBumpStart)};
+        if (!SpeedBumpStart)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle SpeedBumpEnd{convert(self->obj.SpeedBumpEnd)};
+        if (!SpeedBumpEnd)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RearrangeStart{convert(self->obj.RearrangeStart)};
+        if (!RearrangeStart)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, SelectionStart.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, SpeedBumpStart.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, SpeedBumpEnd.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, RearrangeStart.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_CrossSlideThresholds[] = {
         { "_assign_array_", _assign_array_CrossSlideThresholds, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_CrossSlideThresholds), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_CrossSlideThresholds), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* CrossSlideThresholds_get_SelectionStart(py::wrapper::Microsoft::UI::Input::CrossSlideThresholds* self, void* /*unused*/) noexcept
@@ -14057,9 +14098,50 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    PyObject* unpack_ManipulationDelta(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Translation{convert(self->obj.Translation)};
+        if (!Translation)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Scale{convert(self->obj.Scale)};
+        if (!Scale)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Rotation{convert(self->obj.Rotation)};
+        if (!Rotation)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Expansion{convert(self->obj.Expansion)};
+        if (!Expansion)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Translation.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Scale.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Rotation.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Expansion.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_ManipulationDelta[] = {
         { "_assign_array_", _assign_array_ManipulationDelta, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_ManipulationDelta), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_ManipulationDelta), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* ManipulationDelta_get_Translation(py::wrapper::Microsoft::UI::Input::ManipulationDelta* self, void* /*unused*/) noexcept
@@ -14308,9 +14390,43 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    PyObject* unpack_ManipulationVelocities(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Linear{convert(self->obj.Linear)};
+        if (!Linear)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Angular{convert(self->obj.Angular)};
+        if (!Angular)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Expansion{convert(self->obj.Expansion)};
+        if (!Expansion)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Linear.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Angular.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Expansion.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_ManipulationVelocities[] = {
         { "_assign_array_", _assign_array_ManipulationVelocities, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_ManipulationVelocities), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_ManipulationVelocities), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* ManipulationVelocities_get_Linear(py::wrapper::Microsoft::UI::Input::ManipulationVelocities* self, void* /*unused*/) noexcept
@@ -14554,9 +14670,64 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    PyObject* unpack_PhysicalKeyStatus(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle RepeatCount{convert(self->obj.RepeatCount)};
+        if (!RepeatCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ScanCode{convert(self->obj.ScanCode)};
+        if (!ScanCode)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsExtendedKey{convert(self->obj.IsExtendedKey)};
+        if (!IsExtendedKey)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsMenuKeyDown{convert(self->obj.IsMenuKeyDown)};
+        if (!IsMenuKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle WasKeyDown{convert(self->obj.WasKeyDown)};
+        if (!WasKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsKeyReleased{convert(self->obj.IsKeyReleased)};
+        if (!IsKeyReleased)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(6)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, RepeatCount.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, ScanCode.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, IsExtendedKey.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, IsMenuKeyDown.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, WasKeyDown.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, IsKeyReleased.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_PhysicalKeyStatus[] = {
         { "_assign_array_", _assign_array_PhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_PhysicalKeyStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_PhysicalKeyStatus), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* PhysicalKeyStatus_get_RepeatCount(py::wrapper::Microsoft::UI::Input::PhysicalKeyStatus* self, void* /*unused*/) noexcept

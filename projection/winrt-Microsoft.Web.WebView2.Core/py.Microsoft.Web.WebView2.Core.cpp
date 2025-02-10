@@ -21712,9 +21712,64 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         }
     }
 
+    PyObject* unpack_CoreWebView2PhysicalKeyStatus(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle RepeatCount{convert(self->obj.RepeatCount)};
+        if (!RepeatCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ScanCode{convert(self->obj.ScanCode)};
+        if (!ScanCode)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsExtendedKey{convert(self->obj.IsExtendedKey)};
+        if (!IsExtendedKey)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsMenuKeyDown{convert(self->obj.IsMenuKeyDown)};
+        if (!IsMenuKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle WasKeyDown{convert(self->obj.WasKeyDown)};
+        if (!WasKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsKeyReleased{convert(self->obj.IsKeyReleased)};
+        if (!IsKeyReleased)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(6)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, RepeatCount.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, ScanCode.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, IsExtendedKey.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, IsMenuKeyDown.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, WasKeyDown.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, IsKeyReleased.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_CoreWebView2PhysicalKeyStatus[] = {
         { "_assign_array_", _assign_array_CoreWebView2PhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_CoreWebView2PhysicalKeyStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_CoreWebView2PhysicalKeyStatus), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* CoreWebView2PhysicalKeyStatus_get_RepeatCount(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus* self, void* /*unused*/) noexcept

@@ -11462,9 +11462,36 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
+    PyObject* unpack_DeploymentProgress(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle state{convert(self->obj.state)};
+        if (!state)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle percentage{convert(self->obj.percentage)};
+        if (!percentage)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, state.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, percentage.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_DeploymentProgress[] = {
         { "_assign_array_", _assign_array_DeploymentProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_DeploymentProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_DeploymentProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* DeploymentProgress_get_state(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, void* /*unused*/) noexcept

@@ -26765,9 +26765,36 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    PyObject* unpack_MseTimeRange(py::wrapper::Windows::Media::Core::MseTimeRange* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Start{convert(self->obj.Start)};
+        if (!Start)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle End{convert(self->obj.End)};
+        if (!End)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Start.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, End.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_MseTimeRange[] = {
         { "_assign_array_", _assign_array_MseTimeRange, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_MseTimeRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_MseTimeRange), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* MseTimeRange_get_Start(py::wrapper::Windows::Media::Core::MseTimeRange* self, void* /*unused*/) noexcept
@@ -26971,9 +26998,36 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    PyObject* unpack_TimedTextDouble(py::wrapper::Windows::Media::Core::TimedTextDouble* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Value{convert(self->obj.Value)};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{convert(self->obj.Unit)};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Value.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Unit.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_TimedTextDouble[] = {
         { "_assign_array_", _assign_array_TimedTextDouble, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextDouble), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_TimedTextDouble), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* TimedTextDouble_get_Value(py::wrapper::Windows::Media::Core::TimedTextDouble* self, void* /*unused*/) noexcept
@@ -27192,9 +27246,57 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    PyObject* unpack_TimedTextPadding(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Before{convert(self->obj.Before)};
+        if (!Before)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle After{convert(self->obj.After)};
+        if (!After)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Start{convert(self->obj.Start)};
+        if (!Start)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle End{convert(self->obj.End)};
+        if (!End)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{convert(self->obj.Unit)};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(5)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Before.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, After.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Start.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, End.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, Unit.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_TimedTextPadding[] = {
         { "_assign_array_", _assign_array_TimedTextPadding, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextPadding), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_TimedTextPadding), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* TimedTextPadding_get_Before(py::wrapper::Windows::Media::Core::TimedTextPadding* self, void* /*unused*/) noexcept
@@ -27463,9 +27565,43 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    PyObject* unpack_TimedTextPoint(py::wrapper::Windows::Media::Core::TimedTextPoint* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.X)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.Y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{convert(self->obj.Unit)};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Unit.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_TimedTextPoint[] = {
         { "_assign_array_", _assign_array_TimedTextPoint, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextPoint), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_TimedTextPoint), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* TimedTextPoint_get_X(py::wrapper::Windows::Media::Core::TimedTextPoint* self, void* /*unused*/) noexcept
@@ -27694,9 +27830,43 @@ namespace py::cpp::Windows::Media::Core
         }
     }
 
+    PyObject* unpack_TimedTextSize(py::wrapper::Windows::Media::Core::TimedTextSize* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{convert(self->obj.Unit)};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Height.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Unit.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_TimedTextSize[] = {
         { "_assign_array_", _assign_array_TimedTextSize, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextSize), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_TimedTextSize), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* TimedTextSize_get_Height(py::wrapper::Windows::Media::Core::TimedTextSize* self, void* /*unused*/) noexcept

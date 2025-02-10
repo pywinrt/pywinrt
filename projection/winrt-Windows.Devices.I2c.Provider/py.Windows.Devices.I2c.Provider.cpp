@@ -1505,9 +1505,36 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         }
     }
 
+    PyObject* unpack_ProviderI2cTransferResult(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Status{convert(self->obj.Status)};
+        if (!Status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesTransferred{convert(self->obj.BytesTransferred)};
+        if (!BytesTransferred)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Status.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, BytesTransferred.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_ProviderI2cTransferResult[] = {
         { "_assign_array_", _assign_array_ProviderI2cTransferResult, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_ProviderI2cTransferResult), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_ProviderI2cTransferResult), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* ProviderI2cTransferResult_get_Status(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, void* /*unused*/) noexcept

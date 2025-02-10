@@ -18950,9 +18950,64 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
+    PyObject* unpack_CorePhysicalKeyStatus(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle RepeatCount{convert(self->obj.RepeatCount)};
+        if (!RepeatCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ScanCode{convert(self->obj.ScanCode)};
+        if (!ScanCode)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsExtendedKey{convert(self->obj.IsExtendedKey)};
+        if (!IsExtendedKey)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsMenuKeyDown{convert(self->obj.IsMenuKeyDown)};
+        if (!IsMenuKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle WasKeyDown{convert(self->obj.WasKeyDown)};
+        if (!WasKeyDown)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle IsKeyReleased{convert(self->obj.IsKeyReleased)};
+        if (!IsKeyReleased)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(6)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, RepeatCount.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, ScanCode.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, IsExtendedKey.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, IsMenuKeyDown.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, WasKeyDown.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, IsKeyReleased.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_CorePhysicalKeyStatus[] = {
         { "_assign_array_", _assign_array_CorePhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_CorePhysicalKeyStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_CorePhysicalKeyStatus), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* CorePhysicalKeyStatus_get_RepeatCount(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, void* /*unused*/) noexcept
@@ -19236,9 +19291,36 @@ namespace py::cpp::Windows::UI::Core
         }
     }
 
+    PyObject* unpack_CoreProximityEvaluation(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Score{convert(self->obj.Score)};
+        if (!Score)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle AdjustedPoint{convert(self->obj.AdjustedPoint)};
+        if (!AdjustedPoint)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Score.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, AdjustedPoint.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_CoreProximityEvaluation[] = {
         { "_assign_array_", _assign_array_CoreProximityEvaluation, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_CoreProximityEvaluation), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_CoreProximityEvaluation), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* CoreProximityEvaluation_get_Score(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, void* /*unused*/) noexcept

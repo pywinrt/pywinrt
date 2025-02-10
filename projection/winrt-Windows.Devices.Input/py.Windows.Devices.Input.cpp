@@ -2585,9 +2585,36 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
+    PyObject* unpack_MouseDelta(py::wrapper::Windows::Devices::Input::MouseDelta* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.X)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.Y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_MouseDelta[] = {
         { "_assign_array_", _assign_array_MouseDelta, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_MouseDelta), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_MouseDelta), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* MouseDelta_get_X(py::wrapper::Windows::Devices::Input::MouseDelta* self, void* /*unused*/) noexcept
@@ -2821,9 +2848,78 @@ namespace py::cpp::Windows::Devices::Input
         }
     }
 
+    PyObject* unpack_PointerDeviceUsage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle UsagePage{convert(self->obj.UsagePage)};
+        if (!UsagePage)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Usage{convert(self->obj.Usage)};
+        if (!Usage)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MinLogical{convert(self->obj.MinLogical)};
+        if (!MinLogical)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxLogical{convert(self->obj.MaxLogical)};
+        if (!MaxLogical)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MinPhysical{convert(self->obj.MinPhysical)};
+        if (!MinPhysical)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxPhysical{convert(self->obj.MaxPhysical)};
+        if (!MaxPhysical)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Unit{convert(self->obj.Unit)};
+        if (!Unit)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PhysicalMultiplier{convert(self->obj.PhysicalMultiplier)};
+        if (!PhysicalMultiplier)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(8)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, UsagePage.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Usage.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, MinLogical.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, MaxLogical.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, MinPhysical.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, MaxPhysical.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, Unit.detach());
+        PyTuple_SET_ITEM(tuple.get(), 7, PhysicalMultiplier.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_PointerDeviceUsage[] = {
         { "_assign_array_", _assign_array_PointerDeviceUsage, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_PointerDeviceUsage), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_PointerDeviceUsage), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* PointerDeviceUsage_get_UsagePage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, void* /*unused*/) noexcept

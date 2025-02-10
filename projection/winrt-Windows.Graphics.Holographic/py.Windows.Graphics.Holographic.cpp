@@ -6070,9 +6070,36 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
+    PyObject* unpack_HolographicAdapterId(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle LowPart{convert(self->obj.LowPart)};
+        if (!LowPart)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HighPart{convert(self->obj.HighPart)};
+        if (!HighPart)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, LowPart.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, HighPart.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_HolographicAdapterId[] = {
         { "_assign_array_", _assign_array_HolographicAdapterId, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_HolographicAdapterId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_HolographicAdapterId), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* HolographicAdapterId_get_LowPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, void* /*unused*/) noexcept
@@ -6457,9 +6484,36 @@ namespace py::cpp::Windows::Graphics::Holographic
         }
     }
 
+    PyObject* unpack_HolographicStereoTransform(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Left{convert(self->obj.Left)};
+        if (!Left)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Right{convert(self->obj.Right)};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Left.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Right.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_HolographicStereoTransform[] = {
         { "_assign_array_", _assign_array_HolographicStereoTransform, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_HolographicStereoTransform), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_HolographicStereoTransform), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* HolographicStereoTransform_get_Left(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, void* /*unused*/) noexcept

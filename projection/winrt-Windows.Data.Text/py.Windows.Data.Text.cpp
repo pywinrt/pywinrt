@@ -3022,9 +3022,36 @@ namespace py::cpp::Windows::Data::Text
         }
     }
 
+    PyObject* unpack_TextSegment(py::wrapper::Windows::Data::Text::TextSegment* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle StartPosition{convert(self->obj.StartPosition)};
+        if (!StartPosition)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Length{convert(self->obj.Length)};
+        if (!Length)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, StartPosition.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Length.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_TextSegment[] = {
         { "_assign_array_", _assign_array_TextSegment, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_TextSegment), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_TextSegment), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* TextSegment_get_StartPosition(py::wrapper::Windows::Data::Text::TextSegment* self, void* /*unused*/) noexcept

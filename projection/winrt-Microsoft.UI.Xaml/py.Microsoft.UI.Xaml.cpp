@@ -42270,9 +42270,50 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    PyObject* unpack_CornerRadius(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle TopLeft{convert(self->obj.TopLeft)};
+        if (!TopLeft)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TopRight{convert(self->obj.TopRight)};
+        if (!TopRight)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BottomRight{convert(self->obj.BottomRight)};
+        if (!BottomRight)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BottomLeft{convert(self->obj.BottomLeft)};
+        if (!BottomLeft)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, TopLeft.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, TopRight.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, BottomRight.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, BottomLeft.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_CornerRadius[] = {
         { "_assign_array_", _assign_array_CornerRadius, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_CornerRadius), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_CornerRadius), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* CornerRadius_get_TopLeft(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, void* /*unused*/) noexcept
@@ -42516,9 +42557,36 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    PyObject* unpack_Duration(py::wrapper::Microsoft::UI::Xaml::Duration* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle TimeSpan{convert(self->obj.TimeSpan)};
+        if (!TimeSpan)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Type{convert(self->obj.Type)};
+        if (!Type)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, TimeSpan.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Type.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Duration[] = {
         { "_assign_array_", _assign_array_Duration, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Duration), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Duration), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Duration_get_TimeSpan(py::wrapper::Microsoft::UI::Xaml::Duration* self, void* /*unused*/) noexcept
@@ -42722,9 +42790,36 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    PyObject* unpack_GridLength(py::wrapper::Microsoft::UI::Xaml::GridLength* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Value{convert(self->obj.Value)};
+        if (!Value)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle GridUnitType{convert(self->obj.GridUnitType)};
+        if (!GridUnitType)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Value.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, GridUnitType.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_GridLength[] = {
         { "_assign_array_", _assign_array_GridLength, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_GridLength), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_GridLength), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* GridLength_get_Value(py::wrapper::Microsoft::UI::Xaml::GridLength* self, void* /*unused*/) noexcept
@@ -42938,9 +43033,50 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    PyObject* unpack_Thickness(py::wrapper::Microsoft::UI::Xaml::Thickness* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Left{convert(self->obj.Left)};
+        if (!Left)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Top{convert(self->obj.Top)};
+        if (!Top)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Right{convert(self->obj.Right)};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Bottom{convert(self->obj.Bottom)};
+        if (!Bottom)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Left.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Top.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Right.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Bottom.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Thickness[] = {
         { "_assign_array_", _assign_array_Thickness, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Thickness), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Thickness), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Thickness_get_Left(py::wrapper::Microsoft::UI::Xaml::Thickness* self, void* /*unused*/) noexcept

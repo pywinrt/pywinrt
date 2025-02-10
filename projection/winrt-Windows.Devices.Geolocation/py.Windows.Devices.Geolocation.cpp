@@ -4640,9 +4640,43 @@ namespace py::cpp::Windows::Devices::Geolocation
         }
     }
 
+    PyObject* unpack_BasicGeoposition(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Latitude{convert(self->obj.Latitude)};
+        if (!Latitude)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Longitude{convert(self->obj.Longitude)};
+        if (!Longitude)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Altitude{convert(self->obj.Altitude)};
+        if (!Altitude)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Latitude.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Longitude.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Altitude.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_BasicGeoposition[] = {
         { "_assign_array_", _assign_array_BasicGeoposition, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_BasicGeoposition), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_BasicGeoposition), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* BasicGeoposition_get_Latitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, void* /*unused*/) noexcept

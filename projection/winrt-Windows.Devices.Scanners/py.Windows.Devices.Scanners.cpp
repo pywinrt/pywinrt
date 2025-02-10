@@ -6290,9 +6290,36 @@ namespace py::cpp::Windows::Devices::Scanners
         }
     }
 
+    PyObject* unpack_ImageScannerResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle DpiX{convert(self->obj.DpiX)};
+        if (!DpiX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle DpiY{convert(self->obj.DpiY)};
+        if (!DpiY)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, DpiX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, DpiY.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_ImageScannerResolution[] = {
         { "_assign_array_", _assign_array_ImageScannerResolution, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_ImageScannerResolution), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_ImageScannerResolution), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* ImageScannerResolution_get_DpiX(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, void* /*unused*/) noexcept

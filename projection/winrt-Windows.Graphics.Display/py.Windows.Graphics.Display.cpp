@@ -4400,9 +4400,43 @@ namespace py::cpp::Windows::Graphics::Display
         }
     }
 
+    PyObject* unpack_NitRange(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle MinNits{convert(self->obj.MinNits)};
+        if (!MinNits)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxNits{convert(self->obj.MaxNits)};
+        if (!MaxNits)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle StepSizeNits{convert(self->obj.StepSizeNits)};
+        if (!StepSizeNits)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, MinNits.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, MaxNits.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, StepSizeNits.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_NitRange[] = {
         { "_assign_array_", _assign_array_NitRange, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_NitRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_NitRange), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* NitRange_get_MinNits(py::wrapper::Windows::Graphics::Display::NitRange* self, void* /*unused*/) noexcept

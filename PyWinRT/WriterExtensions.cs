@@ -371,6 +371,13 @@ static class WriterExtensions
             w.WriteLine(
                 $"{{ \"__replace__\", reinterpret_cast<PyCFunction>(_replace_{type.Name}), METH_VARARGS | METH_KEYWORDS, nullptr }},"
             );
+
+            if (type.Type.Fields.Count > 1)
+            {
+                w.WriteLine(
+                    $"{{ \"unpack\", reinterpret_cast<PyCFunction>(unpack_{type.Name}), METH_NOARGS, nullptr }},"
+                );
+            }
         }
 
         // TODO: support _from for generic types

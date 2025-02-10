@@ -4942,9 +4942,36 @@ namespace py::cpp::Windows::Security::Isolation
         }
     }
 
+    PyObject* unpack_IsolatedWindowsEnvironmentCreateProgress(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle State{convert(self->obj.State)};
+        if (!State)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PercentComplete{convert(self->obj.PercentComplete)};
+        if (!PercentComplete)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, State.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, PercentComplete.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_IsolatedWindowsEnvironmentCreateProgress[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentCreateProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_IsolatedWindowsEnvironmentCreateProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_IsolatedWindowsEnvironmentCreateProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* IsolatedWindowsEnvironmentCreateProgress_get_State(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, void* /*unused*/) noexcept

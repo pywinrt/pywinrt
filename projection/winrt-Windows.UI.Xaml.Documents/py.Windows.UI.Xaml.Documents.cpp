@@ -17972,9 +17972,36 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         }
     }
 
+    PyObject* unpack_TextRange(py::wrapper::Windows::UI::Xaml::Documents::TextRange* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle StartIndex{convert(self->obj.StartIndex)};
+        if (!StartIndex)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Length{convert(self->obj.Length)};
+        if (!Length)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, StartIndex.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Length.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_TextRange[] = {
         { "_assign_array_", _assign_array_TextRange, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_TextRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_TextRange), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* TextRange_get_StartIndex(py::wrapper::Windows::UI::Xaml::Documents::TextRange* self, void* /*unused*/) noexcept

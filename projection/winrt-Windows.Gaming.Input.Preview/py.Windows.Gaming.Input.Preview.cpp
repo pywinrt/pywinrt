@@ -1213,9 +1213,57 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         }
     }
 
+    PyObject* unpack_HeadsetGeqGains(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle band1Gain{convert(self->obj.band1Gain)};
+        if (!band1Gain)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle band2Gain{convert(self->obj.band2Gain)};
+        if (!band2Gain)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle band3Gain{convert(self->obj.band3Gain)};
+        if (!band3Gain)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle band4Gain{convert(self->obj.band4Gain)};
+        if (!band4Gain)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle band5Gain{convert(self->obj.band5Gain)};
+        if (!band5Gain)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(5)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, band1Gain.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, band2Gain.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, band3Gain.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, band4Gain.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, band5Gain.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_HeadsetGeqGains[] = {
         { "_assign_array_", _assign_array_HeadsetGeqGains, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_HeadsetGeqGains), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_HeadsetGeqGains), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* HeadsetGeqGains_get_band1Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, void* /*unused*/) noexcept

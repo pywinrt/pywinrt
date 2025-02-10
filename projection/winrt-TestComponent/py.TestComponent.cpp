@@ -11797,9 +11797,92 @@ namespace py::cpp::TestComponent
         }
     }
 
+    PyObject* unpack_Blittable(py::wrapper::TestComponent::Blittable* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle A{convert(self->obj.A)};
+        if (!A)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle B{convert(self->obj.B)};
+        if (!B)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle C{convert(self->obj.C)};
+        if (!C)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle D{convert(self->obj.D)};
+        if (!D)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle E{convert(self->obj.E)};
+        if (!E)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle F{convert(self->obj.F)};
+        if (!F)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle G{convert(self->obj.G)};
+        if (!G)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle H{convert(self->obj.H)};
+        if (!H)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle I{convert(self->obj.I)};
+        if (!I)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle J{convert(self->obj.J)};
+        if (!J)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(10)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, A.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, B.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, C.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, D.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, E.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, F.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, G.detach());
+        PyTuple_SET_ITEM(tuple.get(), 7, H.detach());
+        PyTuple_SET_ITEM(tuple.get(), 8, I.detach());
+        PyTuple_SET_ITEM(tuple.get(), 9, J.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Blittable[] = {
         { "_assign_array_", _assign_array_Blittable, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Blittable), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Blittable), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Blittable_get_A(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
@@ -12163,9 +12246,36 @@ namespace py::cpp::TestComponent
         }
     }
 
+    PyObject* unpack_Nested(py::wrapper::TestComponent::Nested* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Blittable{convert(self->obj.Blittable)};
+        if (!Blittable)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle NonBlittable{convert(self->obj.NonBlittable)};
+        if (!NonBlittable)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Blittable.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, NonBlittable.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Nested[] = {
         { "_assign_array_", _assign_array_Nested, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Nested), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Nested), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Nested_get_Blittable(py::wrapper::TestComponent::Nested* self, void* /*unused*/) noexcept
@@ -12379,9 +12489,50 @@ namespace py::cpp::TestComponent
         }
     }
 
+    PyObject* unpack_NonBlittable(py::wrapper::TestComponent::NonBlittable* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle A{convert(self->obj.A)};
+        if (!A)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle B{convert(self->obj.B)};
+        if (!B)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle C{convert(self->obj.C)};
+        if (!C)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle D{convert(self->obj.D)};
+        if (!D)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, A.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, B.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, C.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, D.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_NonBlittable[] = {
         { "_assign_array_", _assign_array_NonBlittable, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_NonBlittable), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_NonBlittable), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* NonBlittable_get_A(py::wrapper::TestComponent::NonBlittable* self, void* /*unused*/) noexcept

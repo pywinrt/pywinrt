@@ -4901,9 +4901,50 @@ namespace py::cpp::Windows::UI
         }
     }
 
+    PyObject* unpack_Color(py::wrapper::Windows::UI::Color* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle A{convert(self->obj.A)};
+        if (!A)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle R{convert(self->obj.R)};
+        if (!R)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle G{convert(self->obj.G)};
+        if (!G)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle B{convert(self->obj.B)};
+        if (!B)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, A.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, R.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, G.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, B.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Color[] = {
         { "_assign_array_", _assign_array_Color, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Color), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Color), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Color_get_A(py::wrapper::Windows::UI::Color* self, void* /*unused*/) noexcept

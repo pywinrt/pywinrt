@@ -13065,9 +13065,57 @@ namespace py::cpp::Windows::Devices::Sms
         }
     }
 
+    PyObject* unpack_SmsEncodedLength(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle SegmentCount{convert(self->obj.SegmentCount)};
+        if (!SegmentCount)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle CharacterCountLastSegment{convert(self->obj.CharacterCountLastSegment)};
+        if (!CharacterCountLastSegment)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle CharactersPerSegment{convert(self->obj.CharactersPerSegment)};
+        if (!CharactersPerSegment)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ByteCountLastSegment{convert(self->obj.ByteCountLastSegment)};
+        if (!ByteCountLastSegment)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesPerSegment{convert(self->obj.BytesPerSegment)};
+        if (!BytesPerSegment)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(5)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, SegmentCount.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, CharacterCountLastSegment.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, CharactersPerSegment.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, ByteCountLastSegment.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, BytesPerSegment.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SmsEncodedLength[] = {
         { "_assign_array_", _assign_array_SmsEncodedLength, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SmsEncodedLength), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SmsEncodedLength), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SmsEncodedLength_get_SegmentCount(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, void* /*unused*/) noexcept

@@ -20789,9 +20789,36 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
+    PyObject* unpack_ESimProfileInstallProgress(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle TotalSizeInBytes{convert(self->obj.TotalSizeInBytes)};
+        if (!TotalSizeInBytes)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle InstalledSizeInBytes{convert(self->obj.InstalledSizeInBytes)};
+        if (!InstalledSizeInBytes)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, TotalSizeInBytes.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, InstalledSizeInBytes.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_ESimProfileInstallProgress[] = {
         { "_assign_array_", _assign_array_ESimProfileInstallProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_ESimProfileInstallProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_ESimProfileInstallProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* ESimProfileInstallProgress_get_TotalSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, void* /*unused*/) noexcept
@@ -20995,9 +21022,36 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
+    PyObject* unpack_ProfileUsage(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle UsageInMegabytes{convert(self->obj.UsageInMegabytes)};
+        if (!UsageInMegabytes)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LastSyncTime{convert(self->obj.LastSyncTime)};
+        if (!LastSyncTime)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, UsageInMegabytes.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, LastSyncTime.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_ProfileUsage[] = {
         { "_assign_array_", _assign_array_ProfileUsage, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_ProfileUsage), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_ProfileUsage), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* ProfileUsage_get_UsageInMegabytes(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, void* /*unused*/) noexcept

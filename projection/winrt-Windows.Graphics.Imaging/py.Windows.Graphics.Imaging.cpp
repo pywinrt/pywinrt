@@ -8759,9 +8759,50 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
+    PyObject* unpack_BitmapBounds(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.X)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.Y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Height.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_BitmapBounds[] = {
         { "_assign_array_", _assign_array_BitmapBounds, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapBounds), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_BitmapBounds), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* BitmapBounds_get_X(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, void* /*unused*/) noexcept
@@ -9015,9 +9056,50 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
+    PyObject* unpack_BitmapPlaneDescription(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle StartIndex{convert(self->obj.StartIndex)};
+        if (!StartIndex)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Stride{convert(self->obj.Stride)};
+        if (!Stride)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, StartIndex.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Height.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Stride.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_BitmapPlaneDescription[] = {
         { "_assign_array_", _assign_array_BitmapPlaneDescription, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapPlaneDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_BitmapPlaneDescription), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* BitmapPlaneDescription_get_StartIndex(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, void* /*unused*/) noexcept
@@ -9261,9 +9343,36 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
     }
 
+    PyObject* unpack_BitmapSize(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Height.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_BitmapSize[] = {
         { "_assign_array_", _assign_array_BitmapSize, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapSize), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_BitmapSize), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* BitmapSize_get_Width(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, void* /*unused*/) noexcept

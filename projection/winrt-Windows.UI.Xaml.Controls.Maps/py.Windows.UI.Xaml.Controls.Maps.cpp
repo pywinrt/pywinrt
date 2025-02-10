@@ -25297,9 +25297,36 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
+    PyObject* unpack_MapZoomLevelRange(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Min{convert(self->obj.Min)};
+        if (!Min)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Max{convert(self->obj.Max)};
+        if (!Max)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Min.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Max.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_MapZoomLevelRange[] = {
         { "_assign_array_", _assign_array_MapZoomLevelRange, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_MapZoomLevelRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_MapZoomLevelRange), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* MapZoomLevelRange_get_Min(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, void* /*unused*/) noexcept

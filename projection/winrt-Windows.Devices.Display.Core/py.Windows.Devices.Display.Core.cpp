@@ -8034,9 +8034,36 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
     }
 
+    PyObject* unpack_DisplayPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle VerticalSyncRate{convert(self->obj.VerticalSyncRate)};
+        if (!VerticalSyncRate)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle VerticalSyncsPerPresentation{convert(self->obj.VerticalSyncsPerPresentation)};
+        if (!VerticalSyncsPerPresentation)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, VerticalSyncRate.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, VerticalSyncsPerPresentation.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_DisplayPresentationRate[] = {
         { "_assign_array_", _assign_array_DisplayPresentationRate, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayPresentationRate), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_DisplayPresentationRate), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* DisplayPresentationRate_get_VerticalSyncRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, void* /*unused*/) noexcept

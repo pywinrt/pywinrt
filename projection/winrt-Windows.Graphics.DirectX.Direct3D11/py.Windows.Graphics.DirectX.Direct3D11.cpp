@@ -651,9 +651,36 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
+    PyObject* unpack_Direct3DMultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Count{convert(self->obj.Count)};
+        if (!Count)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Quality{convert(self->obj.Quality)};
+        if (!Quality)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Count.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Quality.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Direct3DMultisampleDescription[] = {
         { "_assign_array_", _assign_array_Direct3DMultisampleDescription, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Direct3DMultisampleDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Direct3DMultisampleDescription), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Direct3DMultisampleDescription_get_Count(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, void* /*unused*/) noexcept
@@ -867,9 +894,50 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
     }
 
+    PyObject* unpack_Direct3DSurfaceDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Format{convert(self->obj.Format)};
+        if (!Format)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MultisampleDescription{convert(self->obj.MultisampleDescription)};
+        if (!MultisampleDescription)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Height.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Format.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, MultisampleDescription.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Direct3DSurfaceDescription[] = {
         { "_assign_array_", _assign_array_Direct3DSurfaceDescription, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Direct3DSurfaceDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Direct3DSurfaceDescription), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Direct3DSurfaceDescription_get_Width(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, void* /*unused*/) noexcept
