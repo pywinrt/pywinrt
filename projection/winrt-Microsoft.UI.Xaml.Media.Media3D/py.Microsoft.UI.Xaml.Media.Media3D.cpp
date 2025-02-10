@@ -2367,9 +2367,134 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         }
     }
 
+    PyObject* unpack_Matrix3D(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle M11{convert(self->obj.M11)};
+        if (!M11)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M12{convert(self->obj.M12)};
+        if (!M12)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M13{convert(self->obj.M13)};
+        if (!M13)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M14{convert(self->obj.M14)};
+        if (!M14)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M21{convert(self->obj.M21)};
+        if (!M21)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M22{convert(self->obj.M22)};
+        if (!M22)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M23{convert(self->obj.M23)};
+        if (!M23)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M24{convert(self->obj.M24)};
+        if (!M24)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M31{convert(self->obj.M31)};
+        if (!M31)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M32{convert(self->obj.M32)};
+        if (!M32)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M33{convert(self->obj.M33)};
+        if (!M33)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M34{convert(self->obj.M34)};
+        if (!M34)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OffsetX{convert(self->obj.OffsetX)};
+        if (!OffsetX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OffsetY{convert(self->obj.OffsetY)};
+        if (!OffsetY)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OffsetZ{convert(self->obj.OffsetZ)};
+        if (!OffsetZ)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M44{convert(self->obj.M44)};
+        if (!M44)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(16)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, M11.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, M12.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, M13.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, M14.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, M21.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, M22.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, M23.detach());
+        PyTuple_SET_ITEM(tuple.get(), 7, M24.detach());
+        PyTuple_SET_ITEM(tuple.get(), 8, M31.detach());
+        PyTuple_SET_ITEM(tuple.get(), 9, M32.detach());
+        PyTuple_SET_ITEM(tuple.get(), 10, M33.detach());
+        PyTuple_SET_ITEM(tuple.get(), 11, M34.detach());
+        PyTuple_SET_ITEM(tuple.get(), 12, OffsetX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 13, OffsetY.detach());
+        PyTuple_SET_ITEM(tuple.get(), 14, OffsetZ.detach());
+        PyTuple_SET_ITEM(tuple.get(), 15, M44.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Matrix3D[] = {
         { "_assign_array_", _assign_array_Matrix3D, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix3D), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Matrix3D), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Matrix3D_get_M11(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept

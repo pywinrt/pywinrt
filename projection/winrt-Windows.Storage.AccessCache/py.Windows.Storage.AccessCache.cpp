@@ -3776,9 +3776,36 @@ namespace py::cpp::Windows::Storage::AccessCache
         }
     }
 
+    PyObject* unpack_AccessListEntry(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Token{convert(self->obj.Token)};
+        if (!Token)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Metadata{convert(self->obj.Metadata)};
+        if (!Metadata)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Token.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Metadata.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_AccessListEntry[] = {
         { "_assign_array_", _assign_array_AccessListEntry, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_AccessListEntry), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_AccessListEntry), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* AccessListEntry_get_Token(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, void* /*unused*/) noexcept

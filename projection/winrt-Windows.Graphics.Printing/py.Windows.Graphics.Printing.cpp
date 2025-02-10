@@ -6368,9 +6368,50 @@ namespace py::cpp::Windows::Graphics::Printing
         }
     }
 
+    PyObject* unpack_PrintPageDescription(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle PageSize{convert(self->obj.PageSize)};
+        if (!PageSize)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ImageableRect{convert(self->obj.ImageableRect)};
+        if (!ImageableRect)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle DpiX{convert(self->obj.DpiX)};
+        if (!DpiX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle DpiY{convert(self->obj.DpiY)};
+        if (!DpiY)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, PageSize.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, ImageableRect.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, DpiX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, DpiY.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_PrintPageDescription[] = {
         { "_assign_array_", _assign_array_PrintPageDescription, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_PrintPageDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_PrintPageDescription), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* PrintPageDescription_get_PageSize(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, void* /*unused*/) noexcept

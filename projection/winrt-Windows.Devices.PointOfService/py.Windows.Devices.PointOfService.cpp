@@ -37524,9 +37524,36 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
+    PyObject* unpack_SizeUInt32(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Height.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SizeUInt32[] = {
         { "_assign_array_", _assign_array_SizeUInt32, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SizeUInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SizeUInt32), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SizeUInt32_get_Width(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, void* /*unused*/) noexcept

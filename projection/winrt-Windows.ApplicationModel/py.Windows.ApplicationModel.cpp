@@ -10597,9 +10597,50 @@ namespace py::cpp::Windows::ApplicationModel
         }
     }
 
+    PyObject* unpack_PackageVersion(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Major{convert(self->obj.Major)};
+        if (!Major)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Minor{convert(self->obj.Minor)};
+        if (!Minor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Build{convert(self->obj.Build)};
+        if (!Build)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Revision{convert(self->obj.Revision)};
+        if (!Revision)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Major.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Minor.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Build.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Revision.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_PackageVersion[] = {
         { "_assign_array_", _assign_array_PackageVersion, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageVersion), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_PackageVersion), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* PackageVersion_get_Major(py::wrapper::Windows::ApplicationModel::PackageVersion* self, void* /*unused*/) noexcept

@@ -7523,9 +7523,36 @@ namespace py::cpp::Windows::Storage::Search
         }
     }
 
+    PyObject* unpack_SortEntry(py::wrapper::Windows::Storage::Search::SortEntry* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle PropertyName{convert(self->obj.PropertyName)};
+        if (!PropertyName)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle AscendingOrder{convert(self->obj.AscendingOrder)};
+        if (!AscendingOrder)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, PropertyName.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, AscendingOrder.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SortEntry[] = {
         { "_assign_array_", _assign_array_SortEntry, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SortEntry), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SortEntry), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SortEntry_get_PropertyName(py::wrapper::Windows::Storage::Search::SortEntry* self, void* /*unused*/) noexcept

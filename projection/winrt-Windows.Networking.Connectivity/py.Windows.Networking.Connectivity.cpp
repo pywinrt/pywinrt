@@ -6408,9 +6408,36 @@ namespace py::cpp::Windows::Networking::Connectivity
         }
     }
 
+    PyObject* unpack_NetworkUsageStates(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Roaming{convert(self->obj.Roaming)};
+        if (!Roaming)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Shared{convert(self->obj.Shared)};
+        if (!Shared)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Roaming.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Shared.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_NetworkUsageStates[] = {
         { "_assign_array_", _assign_array_NetworkUsageStates, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_NetworkUsageStates), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_NetworkUsageStates), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* NetworkUsageStates_get_Roaming(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, void* /*unused*/) noexcept

@@ -10,7 +10,8 @@
 - Added new `box_...()` and `unbox_...()` functions to `winrt.system`.
 - Added support for `==`, `!=` and `hash()` of `winrt.system.Object`.
 - Added `winrt.system.Object.as_()` method.
-- Implemented `__replace__()` on projected structs for use with `copy.replace()`.
+- Added `__replace__()` on projected structs for use with `copy.replace()`.
+- Added `unpack()` method on projected structs with more than one field.
 
 ### Changed
 - BREAKING: Use `[Windows.Foundation.Metadata.Overload]` attribute for method

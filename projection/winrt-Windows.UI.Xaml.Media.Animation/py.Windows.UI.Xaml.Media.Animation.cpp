@@ -27775,9 +27775,43 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
     }
 
+    PyObject* unpack_RepeatBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Count{convert(self->obj.Count)};
+        if (!Count)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Duration{convert(self->obj.Duration)};
+        if (!Duration)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Type{convert(self->obj.Type)};
+        if (!Type)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Count.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Duration.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Type.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_RepeatBehavior[] = {
         { "_assign_array_", _assign_array_RepeatBehavior, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_RepeatBehavior), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_RepeatBehavior), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* RepeatBehavior_get_Count(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, void* /*unused*/) noexcept

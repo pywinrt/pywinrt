@@ -5016,9 +5016,36 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    PyObject* unpack_SpatialBoundingBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Center{convert(self->obj.Center)};
+        if (!Center)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Extents{convert(self->obj.Extents)};
+        if (!Extents)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Center.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Extents.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SpatialBoundingBox[] = {
         { "_assign_array_", _assign_array_SpatialBoundingBox, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingBox), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialBoundingBox), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SpatialBoundingBox_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, void* /*unused*/) noexcept
@@ -5242,9 +5269,64 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    PyObject* unpack_SpatialBoundingFrustum(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Near{convert(self->obj.Near)};
+        if (!Near)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Far{convert(self->obj.Far)};
+        if (!Far)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Right{convert(self->obj.Right)};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Left{convert(self->obj.Left)};
+        if (!Left)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Top{convert(self->obj.Top)};
+        if (!Top)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Bottom{convert(self->obj.Bottom)};
+        if (!Bottom)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(6)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Near.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Far.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Right.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Left.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, Top.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, Bottom.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SpatialBoundingFrustum[] = {
         { "_assign_array_", _assign_array_SpatialBoundingFrustum, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingFrustum), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialBoundingFrustum), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SpatialBoundingFrustum_get_Near(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, void* /*unused*/) noexcept
@@ -5533,9 +5615,43 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    PyObject* unpack_SpatialBoundingOrientedBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Center{convert(self->obj.Center)};
+        if (!Center)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Extents{convert(self->obj.Extents)};
+        if (!Extents)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Orientation{convert(self->obj.Orientation)};
+        if (!Orientation)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Center.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Extents.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Orientation.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SpatialBoundingOrientedBox[] = {
         { "_assign_array_", _assign_array_SpatialBoundingOrientedBox, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingOrientedBox), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialBoundingOrientedBox), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SpatialBoundingOrientedBox_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, void* /*unused*/) noexcept
@@ -5759,9 +5875,36 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    PyObject* unpack_SpatialBoundingSphere(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Center{convert(self->obj.Center)};
+        if (!Center)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Radius{convert(self->obj.Radius)};
+        if (!Radius)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Center.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Radius.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SpatialBoundingSphere[] = {
         { "_assign_array_", _assign_array_SpatialBoundingSphere, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingSphere), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialBoundingSphere), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SpatialBoundingSphere_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, void* /*unused*/) noexcept
@@ -5965,9 +6108,36 @@ namespace py::cpp::Windows::Perception::Spatial
         }
     }
 
+    PyObject* unpack_SpatialRay(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Origin{convert(self->obj.Origin)};
+        if (!Origin)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Direction{convert(self->obj.Direction)};
+        if (!Direction)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Origin.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Direction.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_SpatialRay[] = {
         { "_assign_array_", _assign_array_SpatialRay, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialRay), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialRay), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* SpatialRay_get_Origin(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, void* /*unused*/) noexcept

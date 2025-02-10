@@ -5903,9 +5903,43 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
+    PyObject* unpack_XamlBinaryWriterErrorInformation(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle InputStreamIndex{convert(self->obj.InputStreamIndex)};
+        if (!InputStreamIndex)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LineNumber{convert(self->obj.LineNumber)};
+        if (!LineNumber)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle LinePosition{convert(self->obj.LinePosition)};
+        if (!LinePosition)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, InputStreamIndex.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, LineNumber.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, LinePosition.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_XamlBinaryWriterErrorInformation[] = {
         { "_assign_array_", _assign_array_XamlBinaryWriterErrorInformation, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_XamlBinaryWriterErrorInformation), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_XamlBinaryWriterErrorInformation), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* XamlBinaryWriterErrorInformation_get_InputStreamIndex(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, void* /*unused*/) noexcept
@@ -6129,9 +6163,36 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
+    PyObject* unpack_XmlnsDefinition(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle XmlNamespace{convert(self->obj.XmlNamespace)};
+        if (!XmlNamespace)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Namespace{convert(self->obj.Namespace)};
+        if (!Namespace)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, XmlNamespace.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Namespace.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_XmlnsDefinition[] = {
         { "_assign_array_", _assign_array_XmlnsDefinition, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_XmlnsDefinition), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_XmlnsDefinition), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* XmlnsDefinition_get_XmlNamespace(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, void* /*unused*/) noexcept

@@ -64,6 +64,11 @@ static class StructWriterExtensions
             w.WriteNumberMethodPyTyping(type);
         }
 
+        if (type.Type.Fields.Count > 1)
+        {
+            w.WriteLine($"def unpack(self) -> {type.Type.ToPyTupleTyping(ns)}: ...");
+        }
+
         w.Indent--;
         w.WriteBlankLine();
     }
@@ -91,6 +96,13 @@ static class StructWriterExtensions
         w.WriteAssignArrayMethod(type);
         w.WriteBlankLine();
         w.WriteStructReplaceMethod(type);
+
+        if (type.Type.Fields.Count > 1)
+        {
+            w.WriteBlankLine();
+            w.WriteStructUnpackMethod(type);
+        }
+
         w.WriteMethodTable(type);
 
         foreach (var field in type.Type.Fields)
@@ -315,6 +327,38 @@ static class StructWriterExtensions
                     w.WriteLine($"return convert(copy);");
                 })
         );
+    }
+
+    private static void WriteStructUnpackMethod(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine(
+            $"PyObject* unpack_{type.Name}({type.CppPyWrapperType}* self, PyObject* /*unused*/) noexcept"
+        );
+        w.WriteBlock(() =>
+        {
+            foreach (var field in type.Type.Fields)
+            {
+                w.WriteLine(
+                    $"py::pyobj_handle {field.Name}{{convert(self->obj.{field.ToWinrtFieldName()})}};"
+                );
+                w.WriteLine($"if (!{field.Name})");
+                w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                w.WriteBlankLine();
+            }
+
+            w.WriteLine($"pyobj_handle tuple{{PyTuple_New({type.Type.Fields.Count})}};");
+            w.WriteLine("if (!tuple)");
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
+            w.WriteBlankLine();
+
+            foreach (var (i, field) in type.Type.Fields.Select((f, i) => (i, f)))
+            {
+                w.WriteLine($"PyTuple_SET_ITEM(tuple.get(), {i}, {field.Name}.detach());");
+            }
+
+            w.WriteBlankLine();
+            w.WriteLine("return tuple.detach();");
+        });
     }
 
     public static void WriteStructBufferFormat(this IndentedTextWriter w, ProjectedType type)

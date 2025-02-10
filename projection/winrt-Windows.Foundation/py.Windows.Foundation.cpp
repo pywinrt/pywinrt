@@ -11328,9 +11328,36 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
+    PyObject* unpack_Point(py::wrapper::Windows::Foundation::Point* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.X)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.Y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Point[] = {
         { "_assign_array_", _assign_array_Point, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Point), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Point), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Point_get_X(py::wrapper::Windows::Foundation::Point* self, void* /*unused*/) noexcept
@@ -11544,9 +11571,50 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
+    PyObject* unpack_Rect(py::wrapper::Windows::Foundation::Rect* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.X)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.Y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Height.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Rect[] = {
         { "_assign_array_", _assign_array_Rect, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Rect), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Rect), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Rect_get_X(py::wrapper::Windows::Foundation::Rect* self, void* /*unused*/) noexcept
@@ -11790,9 +11858,36 @@ namespace py::cpp::Windows::Foundation
         }
     }
 
+    PyObject* unpack_Size(py::wrapper::Windows::Foundation::Size* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Width{convert(self->obj.Width)};
+        if (!Width)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Height{convert(self->obj.Height)};
+        if (!Height)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Width.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Height.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Size[] = {
         { "_assign_array_", _assign_array_Size, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Size), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Size), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Size_get_Width(py::wrapper::Windows::Foundation::Size* self, void* /*unused*/) noexcept

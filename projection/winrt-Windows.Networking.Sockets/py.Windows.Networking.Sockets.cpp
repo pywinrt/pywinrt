@@ -14600,9 +14600,64 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
+    PyObject* unpack_BandwidthStatistics(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle OutboundBitsPerSecond{convert(self->obj.OutboundBitsPerSecond)};
+        if (!OutboundBitsPerSecond)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle InboundBitsPerSecond{convert(self->obj.InboundBitsPerSecond)};
+        if (!InboundBitsPerSecond)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OutboundBitsPerSecondInstability{convert(self->obj.OutboundBitsPerSecondInstability)};
+        if (!OutboundBitsPerSecondInstability)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle InboundBitsPerSecondInstability{convert(self->obj.InboundBitsPerSecondInstability)};
+        if (!InboundBitsPerSecondInstability)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle OutboundBandwidthPeaked{convert(self->obj.OutboundBandwidthPeaked)};
+        if (!OutboundBandwidthPeaked)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle InboundBandwidthPeaked{convert(self->obj.InboundBandwidthPeaked)};
+        if (!InboundBandwidthPeaked)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(6)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, OutboundBitsPerSecond.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, InboundBitsPerSecond.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, OutboundBitsPerSecondInstability.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, InboundBitsPerSecondInstability.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, OutboundBandwidthPeaked.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, InboundBandwidthPeaked.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_BandwidthStatistics[] = {
         { "_assign_array_", _assign_array_BandwidthStatistics, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_BandwidthStatistics), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_BandwidthStatistics), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* BandwidthStatistics_get_OutboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, void* /*unused*/) noexcept
@@ -14896,9 +14951,50 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
+    PyObject* unpack_RoundTripTimeStatistics(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Variance{convert(self->obj.Variance)};
+        if (!Variance)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Max{convert(self->obj.Max)};
+        if (!Max)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Min{convert(self->obj.Min)};
+        if (!Min)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Sum{convert(self->obj.Sum)};
+        if (!Sum)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Variance.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Max.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Min.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Sum.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_RoundTripTimeStatistics[] = {
         { "_assign_array_", _assign_array_RoundTripTimeStatistics, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_RoundTripTimeStatistics), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_RoundTripTimeStatistics), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* RoundTripTimeStatistics_get_Variance(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, void* /*unused*/) noexcept

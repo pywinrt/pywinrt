@@ -5432,9 +5432,57 @@ namespace py::cpp::Windows::Media::Import
         }
     }
 
+    PyObject* unpack_PhotoImportProgress(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle ItemsImported{convert(self->obj.ItemsImported)};
+        if (!ItemsImported)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalItemsToImport{convert(self->obj.TotalItemsToImport)};
+        if (!TotalItemsToImport)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesImported{convert(self->obj.BytesImported)};
+        if (!BytesImported)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToImport{convert(self->obj.TotalBytesToImport)};
+        if (!TotalBytesToImport)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle ImportProgress{convert(self->obj.ImportProgress)};
+        if (!ImportProgress)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(5)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, ItemsImported.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, TotalItemsToImport.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, BytesImported.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, TotalBytesToImport.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, ImportProgress.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_PhotoImportProgress[] = {
         { "_assign_array_", _assign_array_PhotoImportProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_PhotoImportProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_PhotoImportProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* PhotoImportProgress_get_ItemsImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, void* /*unused*/) noexcept

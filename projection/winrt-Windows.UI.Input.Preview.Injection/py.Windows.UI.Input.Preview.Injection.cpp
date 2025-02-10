@@ -3122,9 +3122,36 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
+    PyObject* unpack_InjectedInputPoint(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle PositionX{convert(self->obj.PositionX)};
+        if (!PositionX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PositionY{convert(self->obj.PositionY)};
+        if (!PositionY)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, PositionX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, PositionY.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_InjectedInputPoint[] = {
         { "_assign_array_", _assign_array_InjectedInputPoint, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputPoint), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_InjectedInputPoint), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* InjectedInputPoint_get_PositionX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, void* /*unused*/) noexcept
@@ -3343,9 +3370,57 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
+    PyObject* unpack_InjectedInputPointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle PointerId{convert(self->obj.PointerId)};
+        if (!PointerId)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PointerOptions{convert(self->obj.PointerOptions)};
+        if (!PointerOptions)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PixelLocation{convert(self->obj.PixelLocation)};
+        if (!PixelLocation)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TimeOffsetInMilliseconds{convert(self->obj.TimeOffsetInMilliseconds)};
+        if (!TimeOffsetInMilliseconds)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PerformanceCount{convert(self->obj.PerformanceCount)};
+        if (!PerformanceCount)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(5)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, PointerId.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, PointerOptions.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, PixelLocation.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, TimeOffsetInMilliseconds.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, PerformanceCount.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_InjectedInputPointerInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputPointerInfo, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputPointerInfo), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_InjectedInputPointerInfo), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* InjectedInputPointerInfo_get_PointerId(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, void* /*unused*/) noexcept
@@ -3619,9 +3694,50 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
     }
 
+    PyObject* unpack_InjectedInputRectangle(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Left{convert(self->obj.Left)};
+        if (!Left)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Top{convert(self->obj.Top)};
+        if (!Top)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Bottom{convert(self->obj.Bottom)};
+        if (!Bottom)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Right{convert(self->obj.Right)};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Left.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Top.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Bottom.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Right.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_InjectedInputRectangle[] = {
         { "_assign_array_", _assign_array_InjectedInputRectangle, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputRectangle), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_InjectedInputRectangle), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* InjectedInputRectangle_get_Left(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, void* /*unused*/) noexcept

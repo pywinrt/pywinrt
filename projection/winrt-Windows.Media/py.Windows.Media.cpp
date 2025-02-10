@@ -10424,9 +10424,36 @@ namespace py::cpp::Windows::Media
         }
     }
 
+    PyObject* unpack_MediaTimeRange(py::wrapper::Windows::Media::MediaTimeRange* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Start{convert(self->obj.Start)};
+        if (!Start)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle End{convert(self->obj.End)};
+        if (!End)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Start.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, End.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_MediaTimeRange[] = {
         { "_assign_array_", _assign_array_MediaTimeRange, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_MediaTimeRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_MediaTimeRange), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* MediaTimeRange_get_Start(py::wrapper::Windows::Media::MediaTimeRange* self, void* /*unused*/) noexcept

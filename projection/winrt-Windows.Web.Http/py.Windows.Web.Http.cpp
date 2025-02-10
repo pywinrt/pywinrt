@@ -9957,9 +9957,64 @@ namespace py::cpp::Windows::Web::Http
         }
     }
 
+    PyObject* unpack_HttpProgress(py::wrapper::Windows::Web::Http::HttpProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Stage{convert(self->obj.Stage)};
+        if (!Stage)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesSent{convert(self->obj.BytesSent)};
+        if (!BytesSent)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToSend{convert(self->obj.TotalBytesToSend)};
+        if (!TotalBytesToSend)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesReceived{convert(self->obj.BytesReceived)};
+        if (!BytesReceived)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToReceive{convert(self->obj.TotalBytesToReceive)};
+        if (!TotalBytesToReceive)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Retries{convert(self->obj.Retries)};
+        if (!Retries)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(6)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Stage.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, BytesSent.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, TotalBytesToSend.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, BytesReceived.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, TotalBytesToReceive.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, Retries.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_HttpProgress[] = {
         { "_assign_array_", _assign_array_HttpProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_HttpProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_HttpProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* HttpProgress_get_Stage(py::wrapper::Windows::Web::Http::HttpProgress* self, void* /*unused*/) noexcept

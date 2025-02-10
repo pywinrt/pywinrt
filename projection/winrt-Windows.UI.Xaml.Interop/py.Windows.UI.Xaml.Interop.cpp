@@ -3564,9 +3564,36 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         }
     }
 
+    PyObject* unpack_TypeName(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Name{convert(self->obj.Name)};
+        if (!Name)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Kind{convert(self->obj.Kind)};
+        if (!Kind)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Name.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Kind.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_TypeName[] = {
         { "_assign_array_", _assign_array_TypeName, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_TypeName), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_TypeName), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* TypeName_get_Name(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, void* /*unused*/) noexcept

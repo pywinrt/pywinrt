@@ -245,9 +245,36 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         }
     }
 
+    PyObject* unpack_AppContainerNameAndAccess(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle appContainerName{convert(self->obj.appContainerName)};
+        if (!appContainerName)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle accessMask{convert(self->obj.accessMask)};
+        if (!accessMask)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, appContainerName.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, accessMask.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_AppContainerNameAndAccess[] = {
         { "_assign_array_", _assign_array_AppContainerNameAndAccess, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_AppContainerNameAndAccess), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_AppContainerNameAndAccess), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* AppContainerNameAndAccess_get_appContainerName(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess* self, void* /*unused*/) noexcept

@@ -7840,9 +7840,57 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
+    PyObject* unpack_BackgroundDownloadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle BytesReceived{convert(self->obj.BytesReceived)};
+        if (!BytesReceived)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToReceive{convert(self->obj.TotalBytesToReceive)};
+        if (!TotalBytesToReceive)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Status{convert(self->obj.Status)};
+        if (!Status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HasResponseChanged{convert(self->obj.HasResponseChanged)};
+        if (!HasResponseChanged)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HasRestarted{convert(self->obj.HasRestarted)};
+        if (!HasRestarted)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(5)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, BytesReceived.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, TotalBytesToReceive.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Status.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, HasResponseChanged.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, HasRestarted.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_BackgroundDownloadProgress[] = {
         { "_assign_array_", _assign_array_BackgroundDownloadProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundDownloadProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_BackgroundDownloadProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* BackgroundDownloadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, void* /*unused*/) noexcept
@@ -8106,9 +8154,36 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
+    PyObject* unpack_BackgroundTransferFileRange(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Offset{convert(self->obj.Offset)};
+        if (!Offset)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Length{convert(self->obj.Length)};
+        if (!Length)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Offset.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Length.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_BackgroundTransferFileRange[] = {
         { "_assign_array_", _assign_array_BackgroundTransferFileRange, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundTransferFileRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_BackgroundTransferFileRange), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* BackgroundTransferFileRange_get_Offset(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, void* /*unused*/) noexcept
@@ -8337,9 +8412,71 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
     }
 
+    PyObject* unpack_BackgroundUploadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle BytesReceived{convert(self->obj.BytesReceived)};
+        if (!BytesReceived)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesSent{convert(self->obj.BytesSent)};
+        if (!BytesSent)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToReceive{convert(self->obj.TotalBytesToReceive)};
+        if (!TotalBytesToReceive)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToSend{convert(self->obj.TotalBytesToSend)};
+        if (!TotalBytesToSend)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Status{convert(self->obj.Status)};
+        if (!Status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HasResponseChanged{convert(self->obj.HasResponseChanged)};
+        if (!HasResponseChanged)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle HasRestarted{convert(self->obj.HasRestarted)};
+        if (!HasRestarted)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(7)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, BytesReceived.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, BytesSent.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, TotalBytesToReceive.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, TotalBytesToSend.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, Status.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, HasResponseChanged.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, HasRestarted.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_BackgroundUploadProgress[] = {
         { "_assign_array_", _assign_array_BackgroundUploadProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundUploadProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_BackgroundUploadProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* BackgroundUploadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, void* /*unused*/) noexcept

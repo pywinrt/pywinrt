@@ -1028,9 +1028,43 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         }
     }
 
+    PyObject* unpack_PushNotificationCreateChannelStatus(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle status{convert(self->obj.status)};
+        if (!status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle extendedError{convert(self->obj.extendedError)};
+        if (!extendedError)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle retryCount{convert(self->obj.retryCount)};
+        if (!retryCount)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, status.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, extendedError.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, retryCount.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_PushNotificationCreateChannelStatus[] = {
         { "_assign_array_", _assign_array_PushNotificationCreateChannelStatus, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_PushNotificationCreateChannelStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_PushNotificationCreateChannelStatus), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* PushNotificationCreateChannelStatus_get_status(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, void* /*unused*/) noexcept

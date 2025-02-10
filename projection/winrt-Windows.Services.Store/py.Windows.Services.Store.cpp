@@ -8983,9 +8983,64 @@ namespace py::cpp::Windows::Services::Store
         }
     }
 
+    PyObject* unpack_StorePackageUpdateStatus(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle PackageFamilyName{convert(self->obj.PackageFamilyName)};
+        if (!PackageFamilyName)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PackageDownloadSizeInBytes{convert(self->obj.PackageDownloadSizeInBytes)};
+        if (!PackageDownloadSizeInBytes)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PackageBytesDownloaded{convert(self->obj.PackageBytesDownloaded)};
+        if (!PackageBytesDownloaded)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PackageDownloadProgress{convert(self->obj.PackageDownloadProgress)};
+        if (!PackageDownloadProgress)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalDownloadProgress{convert(self->obj.TotalDownloadProgress)};
+        if (!TotalDownloadProgress)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle PackageUpdateState{convert(self->obj.PackageUpdateState)};
+        if (!PackageUpdateState)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(6)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, PackageFamilyName.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, PackageDownloadSizeInBytes.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, PackageBytesDownloaded.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, PackageDownloadProgress.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, TotalDownloadProgress.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, PackageUpdateState.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_StorePackageUpdateStatus[] = {
         { "_assign_array_", _assign_array_StorePackageUpdateStatus, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_StorePackageUpdateStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_StorePackageUpdateStatus), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* StorePackageUpdateStatus_get_PackageFamilyName(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, void* /*unused*/) noexcept

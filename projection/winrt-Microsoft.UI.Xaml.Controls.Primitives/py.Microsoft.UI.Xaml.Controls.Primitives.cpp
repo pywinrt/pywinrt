@@ -42094,9 +42094,36 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         }
     }
 
+    PyObject* unpack_GeneratorPosition(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Index{convert(self->obj.Index)};
+        if (!Index)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Offset{convert(self->obj.Offset)};
+        if (!Offset)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Index.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Offset.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_GeneratorPosition[] = {
         { "_assign_array_", _assign_array_GeneratorPosition, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_GeneratorPosition), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_GeneratorPosition), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* GeneratorPosition_get_Index(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition* self, void* /*unused*/) noexcept

@@ -485,6 +485,60 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    PyObject* unpack_Matrix3x2(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle M11{convert(self->obj.m11)};
+        if (!M11)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M12{convert(self->obj.m12)};
+        if (!M12)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M21{convert(self->obj.m21)};
+        if (!M21)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M22{convert(self->obj.m22)};
+        if (!M22)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M31{convert(self->obj.m31)};
+        if (!M31)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M32{convert(self->obj.m32)};
+        if (!M32)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(6)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, M11.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, M12.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, M21.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, M22.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, M31.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, M32.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Matrix3x2[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix3x2), METH_NOARGS, nullptr },
         { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix3x2), METH_NOARGS, nullptr },
@@ -493,6 +547,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix3x2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix3x2), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Matrix3x2), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Matrix3x2_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, void* /*unused*/) noexcept
@@ -1890,6 +1945,130 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    PyObject* unpack_Matrix4x4(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle M11{convert(self->obj.m11)};
+        if (!M11)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M12{convert(self->obj.m12)};
+        if (!M12)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M13{convert(self->obj.m13)};
+        if (!M13)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M14{convert(self->obj.m14)};
+        if (!M14)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M21{convert(self->obj.m21)};
+        if (!M21)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M22{convert(self->obj.m22)};
+        if (!M22)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M23{convert(self->obj.m23)};
+        if (!M23)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M24{convert(self->obj.m24)};
+        if (!M24)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M31{convert(self->obj.m31)};
+        if (!M31)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M32{convert(self->obj.m32)};
+        if (!M32)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M33{convert(self->obj.m33)};
+        if (!M33)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M34{convert(self->obj.m34)};
+        if (!M34)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M41{convert(self->obj.m41)};
+        if (!M41)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M42{convert(self->obj.m42)};
+        if (!M42)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M43{convert(self->obj.m43)};
+        if (!M43)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle M44{convert(self->obj.m44)};
+        if (!M44)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(16)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, M11.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, M12.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, M13.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, M14.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, M21.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, M22.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, M23.detach());
+        PyTuple_SET_ITEM(tuple.get(), 7, M24.detach());
+        PyTuple_SET_ITEM(tuple.get(), 8, M31.detach());
+        PyTuple_SET_ITEM(tuple.get(), 9, M32.detach());
+        PyTuple_SET_ITEM(tuple.get(), 10, M33.detach());
+        PyTuple_SET_ITEM(tuple.get(), 11, M34.detach());
+        PyTuple_SET_ITEM(tuple.get(), 12, M41.detach());
+        PyTuple_SET_ITEM(tuple.get(), 13, M42.detach());
+        PyTuple_SET_ITEM(tuple.get(), 14, M43.detach());
+        PyTuple_SET_ITEM(tuple.get(), 15, M44.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Matrix4x4[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix4x4), METH_NOARGS, nullptr },
         { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix4x4), METH_NOARGS, nullptr },
@@ -1901,6 +2080,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix4x4), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Matrix4x4), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Matrix4x4_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
@@ -2687,6 +2867,32 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    PyObject* unpack_Plane(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Normal{convert(self->obj.normal)};
+        if (!Normal)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle D{convert(self->obj.d)};
+        if (!D)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Normal.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, D.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Plane[] = {
         { "normalize", reinterpret_cast<PyCFunction>(normalize_Plane), METH_NOARGS, nullptr },
         { "transform", reinterpret_cast<PyCFunction>(transform_Plane), METH_O, nullptr },
@@ -2695,6 +2901,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "dot_normal", reinterpret_cast<PyCFunction>(dot_normal_Plane), METH_O, nullptr },
         { "_assign_array_", _assign_array_Plane, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Plane), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Plane), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Plane_get_Normal(py::wrapper::Windows::Foundation::Numerics::Plane* self, void* /*unused*/) noexcept
@@ -3153,6 +3360,46 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    PyObject* unpack_Quaternion(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.x)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Z{convert(self->obj.z)};
+        if (!Z)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle W{convert(self->obj.w)};
+        if (!W)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Z.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, W.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Quaternion[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Quaternion), METH_NOARGS, nullptr },
         { "length", reinterpret_cast<PyCFunction>(length_Quaternion), METH_NOARGS, nullptr },
@@ -3166,6 +3413,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "concatenate", reinterpret_cast<PyCFunction>(concatenate_Quaternion), METH_O, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Quaternion), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Quaternion), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Quaternion_get_X(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, void* /*unused*/) noexcept
@@ -3598,9 +3846,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    PyObject* unpack_Rational(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Numerator{convert(self->obj.Numerator)};
+        if (!Numerator)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Denominator{convert(self->obj.Denominator)};
+        if (!Denominator)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Numerator.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Denominator.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Rational[] = {
         { "_assign_array_", _assign_array_Rational, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Rational), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Rational), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Rational_get_Numerator(py::wrapper::Windows::Foundation::Numerics::Rational* self, void* /*unused*/) noexcept
@@ -4101,6 +4376,32 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    PyObject* unpack_Vector2(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.x)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Vector2[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector2), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector2), METH_NOARGS, nullptr },
@@ -4118,6 +4419,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector2), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector2), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Vector2), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Vector2_get_X(py::wrapper::Windows::Foundation::Numerics::Vector2* self, void* /*unused*/) noexcept
@@ -4842,6 +5144,39 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    PyObject* unpack_Vector3(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.x)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Z{convert(self->obj.z)};
+        if (!Z)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Z.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Vector3[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector3), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector3), METH_NOARGS, nullptr },
@@ -4860,6 +5195,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector3), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector3), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Vector3), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Vector3_get_X(py::wrapper::Windows::Foundation::Numerics::Vector3* self, void* /*unused*/) noexcept
@@ -5528,6 +5864,46 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    PyObject* unpack_Vector4(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle X{convert(self->obj.x)};
+        if (!X)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Y{convert(self->obj.y)};
+        if (!Y)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Z{convert(self->obj.z)};
+        if (!Z)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle W{convert(self->obj.w)};
+        if (!W)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, X.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Y.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Z.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, W.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_Vector4[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector4), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector4), METH_NOARGS, nullptr },
@@ -5542,6 +5918,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform", reinterpret_cast<PyCFunction>(transform_Vector4), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector4), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_Vector4), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* Vector4_get_X(py::wrapper::Windows::Foundation::Numerics::Vector4* self, void* /*unused*/) noexcept

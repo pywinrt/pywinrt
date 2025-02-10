@@ -445,10 +445,10 @@ static class TypeExtensions
             }
         );
 
-    private static string ToPyTupleTyping(
+    public static string ToPyTupleTyping(
         this TypeReference type,
         string ns,
-        bool quoteImportedTypes
+        bool quoteImportedTypes = false
     ) =>
         $"typing.Tuple[{string.Join(", ", type.Resolve().Fields.Select(f => f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), default, quoteImportedTypes)))}]";
 

@@ -29366,9 +29366,36 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         }
     }
 
+    PyObject* unpack_RawElementProviderRuntimeId(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Part1{convert(self->obj.Part1)};
+        if (!Part1)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Part2{convert(self->obj.Part2)};
+        if (!Part2)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Part1.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Part2.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_RawElementProviderRuntimeId[] = {
         { "_assign_array_", _assign_array_RawElementProviderRuntimeId, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_RawElementProviderRuntimeId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_RawElementProviderRuntimeId), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* RawElementProviderRuntimeId_get_Part1(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, void* /*unused*/) noexcept

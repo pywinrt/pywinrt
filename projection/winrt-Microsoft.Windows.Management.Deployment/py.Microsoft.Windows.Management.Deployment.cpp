@@ -7970,9 +7970,36 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         }
     }
 
+    PyObject* unpack_PackageDeploymentProgress(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Status{convert(self->obj.Status)};
+        if (!Status)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Progress{convert(self->obj.Progress)};
+        if (!Progress)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Status.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Progress.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_PackageDeploymentProgress[] = {
         { "_assign_array_", _assign_array_PackageDeploymentProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageDeploymentProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_PackageDeploymentProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* PackageDeploymentProgress_get_Status(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress* self, void* /*unused*/) noexcept

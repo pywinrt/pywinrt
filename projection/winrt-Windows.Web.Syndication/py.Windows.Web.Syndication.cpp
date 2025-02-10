@@ -12517,9 +12517,36 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
+    PyObject* unpack_RetrievalProgress(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle BytesRetrieved{convert(self->obj.BytesRetrieved)};
+        if (!BytesRetrieved)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToRetrieve{convert(self->obj.TotalBytesToRetrieve)};
+        if (!TotalBytesToRetrieve)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, BytesRetrieved.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, TotalBytesToRetrieve.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_RetrievalProgress[] = {
         { "_assign_array_", _assign_array_RetrievalProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_RetrievalProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_RetrievalProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* RetrievalProgress_get_BytesRetrieved(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, void* /*unused*/) noexcept
@@ -12733,9 +12760,50 @@ namespace py::cpp::Windows::Web::Syndication
         }
     }
 
+    PyObject* unpack_TransferProgress(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle BytesSent{convert(self->obj.BytesSent)};
+        if (!BytesSent)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToSend{convert(self->obj.TotalBytesToSend)};
+        if (!TotalBytesToSend)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BytesRetrieved{convert(self->obj.BytesRetrieved)};
+        if (!BytesRetrieved)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle TotalBytesToRetrieve{convert(self->obj.TotalBytesToRetrieve)};
+        if (!TotalBytesToRetrieve)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, BytesSent.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, TotalBytesToSend.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, BytesRetrieved.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, TotalBytesToRetrieve.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_TransferProgress[] = {
         { "_assign_array_", _assign_array_TransferProgress, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_TransferProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_TransferProgress), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* TransferProgress_get_BytesSent(py::wrapper::Windows::Web::Syndication::TransferProgress* self, void* /*unused*/) noexcept

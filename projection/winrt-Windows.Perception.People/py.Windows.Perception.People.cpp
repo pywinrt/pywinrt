@@ -1282,9 +1282,36 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
+    PyObject* unpack_HandMeshVertex(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Position{convert(self->obj.Position)};
+        if (!Position)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Normal{convert(self->obj.Normal)};
+        if (!Normal)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(2)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Position.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Normal.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_HandMeshVertex[] = {
         { "_assign_array_", _assign_array_HandMeshVertex, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_HandMeshVertex), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_HandMeshVertex), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* HandMeshVertex_get_Position(py::wrapper::Windows::Perception::People::HandMeshVertex* self, void* /*unused*/) noexcept
@@ -1498,9 +1525,50 @@ namespace py::cpp::Windows::Perception::People
         }
     }
 
+    PyObject* unpack_JointPose(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Orientation{convert(self->obj.Orientation)};
+        if (!Orientation)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Position{convert(self->obj.Position)};
+        if (!Position)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Radius{convert(self->obj.Radius)};
+        if (!Radius)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Accuracy{convert(self->obj.Accuracy)};
+        if (!Accuracy)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(4)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Orientation.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Position.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Radius.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, Accuracy.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_JointPose[] = {
         { "_assign_array_", _assign_array_JointPose, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_JointPose), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_JointPose), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* JointPose_get_Orientation(py::wrapper::Windows::Perception::People::JointPose* self, void* /*unused*/) noexcept

@@ -1050,9 +1050,106 @@ namespace py::cpp::Windows::Graphics::Display::Core
         }
     }
 
+    PyObject* unpack_HdmiDisplayHdr2086Metadata(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle RedPrimaryX{convert(self->obj.RedPrimaryX)};
+        if (!RedPrimaryX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle RedPrimaryY{convert(self->obj.RedPrimaryY)};
+        if (!RedPrimaryY)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle GreenPrimaryX{convert(self->obj.GreenPrimaryX)};
+        if (!GreenPrimaryX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle GreenPrimaryY{convert(self->obj.GreenPrimaryY)};
+        if (!GreenPrimaryY)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BluePrimaryX{convert(self->obj.BluePrimaryX)};
+        if (!BluePrimaryX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle BluePrimaryY{convert(self->obj.BluePrimaryY)};
+        if (!BluePrimaryY)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle WhitePointX{convert(self->obj.WhitePointX)};
+        if (!WhitePointX)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle WhitePointY{convert(self->obj.WhitePointY)};
+        if (!WhitePointY)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxMasteringLuminance{convert(self->obj.MaxMasteringLuminance)};
+        if (!MaxMasteringLuminance)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MinMasteringLuminance{convert(self->obj.MinMasteringLuminance)};
+        if (!MinMasteringLuminance)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxContentLightLevel{convert(self->obj.MaxContentLightLevel)};
+        if (!MaxContentLightLevel)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle MaxFrameAverageLightLevel{convert(self->obj.MaxFrameAverageLightLevel)};
+        if (!MaxFrameAverageLightLevel)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(12)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, RedPrimaryX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, RedPrimaryY.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, GreenPrimaryX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 3, GreenPrimaryY.detach());
+        PyTuple_SET_ITEM(tuple.get(), 4, BluePrimaryX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 5, BluePrimaryY.detach());
+        PyTuple_SET_ITEM(tuple.get(), 6, WhitePointX.detach());
+        PyTuple_SET_ITEM(tuple.get(), 7, WhitePointY.detach());
+        PyTuple_SET_ITEM(tuple.get(), 8, MaxMasteringLuminance.detach());
+        PyTuple_SET_ITEM(tuple.get(), 9, MinMasteringLuminance.detach());
+        PyTuple_SET_ITEM(tuple.get(), 10, MaxContentLightLevel.detach());
+        PyTuple_SET_ITEM(tuple.get(), 11, MaxFrameAverageLightLevel.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_HdmiDisplayHdr2086Metadata[] = {
         { "_assign_array_", _assign_array_HdmiDisplayHdr2086Metadata, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_HdmiDisplayHdr2086Metadata), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_HdmiDisplayHdr2086Metadata), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* HdmiDisplayHdr2086Metadata_get_RedPrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept

@@ -26951,9 +26951,43 @@ namespace py::cpp::Windows::Media::Capture
         }
     }
 
+    PyObject* unpack_WhiteBalanceGain(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle R{convert(self->obj.R)};
+        if (!R)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle G{convert(self->obj.G)};
+        if (!G)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle B{convert(self->obj.B)};
+        if (!B)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, R.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, G.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, B.detach());
+
+        return tuple.detach();
+    }
+
     static PyMethodDef _methods_WhiteBalanceGain[] = {
         { "_assign_array_", _assign_array_WhiteBalanceGain, METH_O | METH_STATIC, nullptr },
         { "__replace__", reinterpret_cast<PyCFunction>(_replace_WhiteBalanceGain), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_WhiteBalanceGain), METH_NOARGS, nullptr },
         { }};
 
     static PyObject* WhiteBalanceGain_get_R(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, void* /*unused*/) noexcept
