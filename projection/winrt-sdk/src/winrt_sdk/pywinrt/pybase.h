@@ -3376,7 +3376,7 @@ namespace py
     template<typename T>
     auto convert_to(PyObject* args, int index)
     {
-        return convert_to<T>(PyTuple_GetItem(args, index));
+        return convert_to<T>(PyTuple_GET_ITEM(args, index));
     }
 
     template<typename Async>

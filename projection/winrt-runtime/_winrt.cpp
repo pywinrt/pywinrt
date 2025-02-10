@@ -298,13 +298,15 @@ namespace py::cpp::_winrt
             return -1;
         }
 
-        // borrowed ref
-        auto base_iter = PyTuple_GetItem(args, 0);
-
-        if (!base_iter)
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count != 1)
         {
+            PyErr_SetString(PyExc_TypeError, "requires a single argument");
             return -1;
         }
+
+        // borrowed ref
+        auto base_iter = PyTuple_GET_ITEM(args, 0);
 
         if (!PyIter_Check(base_iter))
         {
