@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyObject* AdcChannel_Close(py::wrapper::Windows::Devices::Adc::AdcChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyObject* AdcChannel_ReadRatio(py::wrapper::Windows::Devices::Adc::AdcChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyObject* AdcChannel_ReadValue(py::wrapper::Windows::Devices::Adc::AdcChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -266,7 +266,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyObject* AdcController_GetControllersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -308,7 +308,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyObject* AdcController_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -348,7 +348,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyObject* AdcController_IsChannelModeSupported(py::wrapper::Windows::Devices::Adc::AdcController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -390,7 +390,7 @@ namespace py::cpp::Windows::Devices::Adc
 
     static PyObject* AdcController_OpenChannel(py::wrapper::Windows::Devices::Adc::AdcController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

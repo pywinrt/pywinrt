@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeError_GetUnsupportedValues(py::wrapper::Windows::Devices::Printers::IppAttributeError* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateBoolean(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateBooleanArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -273,7 +273,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateCharset(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -315,7 +315,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateCharsetArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -357,7 +357,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateCollection(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateCollectionArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -441,7 +441,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateDateTime(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -483,7 +483,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateDateTimeArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -525,7 +525,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateEnum(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -567,7 +567,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateEnumArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -609,7 +609,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateInteger(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -651,7 +651,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateIntegerArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -693,7 +693,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateKeyword(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -735,7 +735,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateKeywordArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -777,7 +777,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateMimeMedia(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -819,7 +819,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateMimeMediaArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -861,7 +861,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateNameWithLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -903,7 +903,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateNameWithLanguageArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -945,7 +945,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateNameWithoutLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -987,7 +987,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateNameWithoutLanguageArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1029,7 +1029,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateNaturalLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1071,7 +1071,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateNaturalLanguageArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1113,7 +1113,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateNoValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1153,7 +1153,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateOctetString(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1195,7 +1195,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateOctetStringArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1237,7 +1237,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateRangeOfInteger(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1279,7 +1279,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateRangeOfIntegerArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1321,7 +1321,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateResolution(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1363,7 +1363,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateResolutionArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1405,7 +1405,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateTextWithLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1447,7 +1447,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateTextWithLanguageArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1489,7 +1489,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateTextWithoutLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1531,7 +1531,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateTextWithoutLanguageArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1573,7 +1573,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateUnknown(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1613,7 +1613,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateUnsupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1653,7 +1653,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1695,7 +1695,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateUriArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1737,7 +1737,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateUriSchema(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1779,7 +1779,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_CreateUriSchemaArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1821,7 +1821,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetBooleanArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1861,7 +1861,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetCharsetArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1901,7 +1901,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetCollectionArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1941,7 +1941,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetDateTimeArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1981,7 +1981,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetEnumArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2021,7 +2021,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetIntegerArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2061,7 +2061,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetKeywordArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2101,7 +2101,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetMimeMediaTypeArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2141,7 +2141,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetNameWithLanguageArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2181,7 +2181,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetNameWithoutLanguageArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2221,7 +2221,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetNaturalLanguageArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2261,7 +2261,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetOctetStringArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2301,7 +2301,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetRangeOfIntegerArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2341,7 +2341,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetResolutionArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2381,7 +2381,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetTextWithLanguageArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2421,7 +2421,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetTextWithoutLanguageArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2461,7 +2461,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetUriArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2501,7 +2501,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppAttributeValue_GetUriSchemaArray(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2704,7 +2704,7 @@ namespace py::cpp::Windows::Devices::Printers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2863,7 +2863,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2905,7 +2905,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_FromPrinterName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2947,7 +2947,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2987,7 +2987,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_GetMaxSupportedPdfSize(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3027,7 +3027,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_GetMaxSupportedPdfVersion(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3067,7 +3067,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_GetMaxSupportedPdlVersion(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3109,7 +3109,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_GetPdlPassthroughProvider(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3149,7 +3149,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_GetPrinterAttributes(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3191,7 +3191,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_GetPrinterAttributesAsBuffer(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3233,7 +3233,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_IsIppPrinter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3275,7 +3275,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_IsPdlPassthroughSupported(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3317,7 +3317,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_RefreshPrintDeviceCapabilities(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3358,7 +3358,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_SetPrinterAttributes(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3400,7 +3400,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* IppPrintDevice_SetPrinterAttributesFromBuffer(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3756,7 +3756,7 @@ namespace py::cpp::Windows::Devices::Printers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -4063,7 +4063,7 @@ namespace py::cpp::Windows::Devices::Printers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -4213,7 +4213,7 @@ namespace py::cpp::Windows::Devices::Printers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4447,7 +4447,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* PdlPassthroughProvider_StartPrintJobWithPrintTicket(py::wrapper::Windows::Devices::Printers::PdlPassthroughProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4492,7 +4492,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* PdlPassthroughProvider_StartPrintJobWithTaskOptions(py::wrapper::Windows::Devices::Printers::PdlPassthroughProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4633,7 +4633,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* PdlPassthroughTarget_Close(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4674,7 +4674,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* PdlPassthroughTarget_GetOutputStream(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4714,7 +4714,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* PdlPassthroughTarget_Submit(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4877,7 +4877,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* Print3DDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4919,7 +4919,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* Print3DDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5076,7 +5076,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* PrintSchema_GetCapabilitiesAsync(py::wrapper::Windows::Devices::Printers::PrintSchema* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5118,7 +5118,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* PrintSchema_GetDefaultPrintTicketAsync(py::wrapper::Windows::Devices::Printers::PrintSchema* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5158,7 +5158,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     static PyObject* PrintSchema_MergeAndValidateWithDefaultPrintTicketAsync(py::wrapper::Windows::Devices::Printers::PrintSchema* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

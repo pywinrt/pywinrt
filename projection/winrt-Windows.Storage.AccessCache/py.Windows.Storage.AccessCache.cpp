@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* AccessListEntryView_First(py::wrapper::Windows::Storage::AccessCache::AccessListEntryView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* AccessListEntryView_GetAt(py::wrapper::Windows::Storage::AccessCache::AccessListEntryView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* AccessListEntryView_GetMany(py::wrapper::Windows::Storage::AccessCache::AccessListEntryView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -148,7 +148,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* AccessListEntryView_IndexOf(py::wrapper::Windows::Storage::AccessCache::AccessListEntryView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -509,7 +509,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageApplicationPermissions_GetFutureAccessListForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -551,7 +551,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageApplicationPermissions_GetMostRecentlyUsedListForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -714,7 +714,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_Add(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -757,7 +757,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_AddOrReplace(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -802,7 +802,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_AddOrReplaceOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -846,7 +846,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_AddOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -888,7 +888,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_CheckAccess(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -930,7 +930,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_Clear(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -971,7 +971,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_ContainsItem(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1013,7 +1013,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_GetFileAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1055,7 +1055,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_GetFileWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1098,7 +1098,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_GetFolderAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1140,7 +1140,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_GetFolderWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1183,7 +1183,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_GetItemAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1225,7 +1225,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_GetItemWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1268,7 +1268,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemAccessList_Remove(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1450,7 +1450,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_Add(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1493,7 +1493,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_AddOrReplace(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1538,7 +1538,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_AddOrReplaceOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1582,7 +1582,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_AddOrReplaceWithMetadataAndVisibility(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1628,7 +1628,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_AddOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1670,7 +1670,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_AddWithMetadataAndVisibility(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1714,7 +1714,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_CheckAccess(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1756,7 +1756,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_Clear(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1797,7 +1797,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_ContainsItem(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1839,7 +1839,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_GetFileAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1881,7 +1881,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_GetFileWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1924,7 +1924,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_GetFolderAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1966,7 +1966,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_GetFolderWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2009,7 +2009,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_GetItemAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2051,7 +2051,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_GetItemWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2094,7 +2094,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* StorageItemMostRecentlyUsedList_Remove(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2345,7 +2345,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_Add(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2388,7 +2388,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_AddOrReplace(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2433,7 +2433,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_AddOrReplaceOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2477,7 +2477,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_AddOverloadDefaultMetadata(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2519,7 +2519,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_CheckAccess(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2561,7 +2561,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_Clear(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2602,7 +2602,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_ContainsItem(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2644,7 +2644,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_GetFileAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2686,7 +2686,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_GetFileWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2729,7 +2729,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_GetFolderAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2771,7 +2771,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_GetFolderWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2814,7 +2814,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_GetItemAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2856,7 +2856,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_GetItemWithOptionsAsync(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2899,7 +2899,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyObject* IStorageItemAccessList_Remove(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3703,7 +3703,7 @@ namespace py::cpp::Windows::Storage::AccessCache
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Storage::AccessCache::AccessListEntry>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1834,7 +1834,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_DeleteAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1876,7 +1876,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_DeleteAppointmentInstanceAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1919,7 +1919,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_DeleteAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1959,7 +1959,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_FindAllInstancesAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2003,7 +2003,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_FindAllInstancesAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2048,7 +2048,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_FindAppointmentsAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2091,7 +2091,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_FindAppointmentsAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2135,7 +2135,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_FindExceptionsFromMasterAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2177,7 +2177,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_FindUnexpandedAppointmentsAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2217,7 +2217,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_FindUnexpandedAppointmentsAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2259,7 +2259,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_GetAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2301,7 +2301,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_GetAppointmentInstanceAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2344,7 +2344,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_RegisterSyncManagerAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2384,7 +2384,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_SaveAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2426,7 +2426,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_SaveAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2466,7 +2466,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_TryCancelMeetingAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2511,7 +2511,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_TryCreateOrUpdateAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2554,7 +2554,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_TryForwardMeetingAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2600,7 +2600,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_TryProposeNewTimeForMeetingAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2646,7 +2646,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendar_TryUpdateMeetingResponseAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -3879,7 +3879,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentCalendarSyncManager_SyncAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4532,7 +4532,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4898,7 +4898,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4940,7 +4940,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4982,7 +4982,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowAddAppointmentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5025,7 +5025,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowAddAppointmentWithPlacementAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5069,7 +5069,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowAppointmentDetailsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5111,7 +5111,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowAppointmentDetailsWithDateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5154,7 +5154,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowEditNewAppointmentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5196,7 +5196,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowRemoveAppointmentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5239,7 +5239,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowRemoveAppointmentWithPlacementAndDateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5284,7 +5284,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowRemoveAppointmentWithPlacementAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5328,7 +5328,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowReplaceAppointmentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5372,7 +5372,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowReplaceAppointmentWithPlacementAndDateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -5418,7 +5418,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowReplaceAppointmentWithPlacementAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5463,7 +5463,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManager_ShowTimeFrameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5577,7 +5577,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_RequestStoreAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5619,7 +5619,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowAddAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5662,7 +5662,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowAddAppointmentWithPlacementAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5706,7 +5706,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowAppointmentDetailsAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5748,7 +5748,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowAppointmentDetailsWithDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5791,7 +5791,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowEditNewAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5833,7 +5833,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowRemoveAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5876,7 +5876,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowRemoveAppointmentWithPlacementAndDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5921,7 +5921,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowRemoveAppointmentWithPlacementAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5965,7 +5965,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowReplaceAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6009,7 +6009,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowReplaceAppointmentWithPlacementAndDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -6055,7 +6055,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowReplaceAppointmentWithPlacementAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6100,7 +6100,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentManagerForUser_ShowTimeFrameAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6241,7 +6241,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7321,7 +7321,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8107,7 +8107,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_CreateAppointmentCalendarAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8149,7 +8149,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_CreateAppointmentCalendarInAccountAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8192,7 +8192,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_FindAppointmentCalendarsAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8232,7 +8232,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_FindAppointmentCalendarsAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8274,7 +8274,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_FindAppointmentsAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8317,7 +8317,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_FindAppointmentsAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8361,7 +8361,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_FindConflictAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8403,7 +8403,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_FindConflictAsyncWithInstanceStart(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8446,7 +8446,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_FindLocalIdsFromRoamingIdAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8488,7 +8488,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_GetAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8530,7 +8530,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_GetAppointmentCalendarAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8572,7 +8572,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_GetAppointmentInstanceAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8615,7 +8615,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_GetChangeTracker(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8657,7 +8657,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_MoveAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8700,7 +8700,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_ShowAddAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8743,7 +8743,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_ShowAppointmentDetailsAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8785,7 +8785,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_ShowAppointmentDetailsWithDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8828,7 +8828,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_ShowEditNewAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8870,7 +8870,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_ShowRemoveAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8913,7 +8913,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_ShowRemoveAppointmentWithPlacementAndDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -8958,7 +8958,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_ShowReplaceAppointmentAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9002,7 +9002,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStore_ShowReplaceAppointmentWithPlacementAndDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -9387,7 +9387,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStoreChangeReader_AcceptChanges(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9428,7 +9428,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStoreChangeReader_AcceptChangesThrough(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9471,7 +9471,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStoreChangeReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9577,7 +9577,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStoreChangeTracker_Enable(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9618,7 +9618,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStoreChangeTracker_GetChangeReader(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9658,7 +9658,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStoreChangeTracker_Reset(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9796,7 +9796,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStoreChangedDeferral_Complete(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangedDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9901,7 +9901,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyObject* AppointmentStoreChangedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10059,7 +10059,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

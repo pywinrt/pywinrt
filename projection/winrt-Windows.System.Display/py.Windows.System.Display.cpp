@@ -14,7 +14,7 @@ namespace py::cpp::Windows::System::Display
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::System::Display
 
     static PyObject* DisplayRequest_RequestActive(py::wrapper::Windows::System::Display::DisplayRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::System::Display
 
     static PyObject* DisplayRequest_RequestRelease(py::wrapper::Windows::System::Display::DisplayRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -636,7 +636,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -667,7 +667,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_GetDisplayPictureAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -707,7 +707,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_GetPropertiesAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -747,7 +747,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_ParseVcardAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -789,7 +789,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_SetDisplayPictureAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -831,7 +831,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_ToVcardAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -871,7 +871,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactInformation_ToVcardWithOptionsAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1570,7 +1570,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactQueryResult_GetContactCountAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1610,7 +1610,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactQueryResult_GetContactsAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1650,7 +1650,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactQueryResult_GetContactsAsyncInRange(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1693,7 +1693,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactQueryResult_GetCurrentQueryOptions(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1800,7 +1800,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_CreateContactQueryDefault(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1840,7 +1840,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_CreateContactQueryWithOptions(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1882,7 +1882,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_CreateMeContactAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1924,7 +1924,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_CreateOrOpenAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1964,7 +1964,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_CreateOrOpenWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2007,7 +2007,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_DeleteAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2047,7 +2047,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_DeleteContactAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2089,7 +2089,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_FindContactByIdAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2131,7 +2131,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_FindContactByRemoteIdAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2173,7 +2173,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_GetChangesAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2215,7 +2215,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_LoadExtendedPropertiesAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2255,7 +2255,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* ContactStore_SaveExtendedPropertiesAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3549,7 +3549,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3598,7 +3598,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_GetDisplayPictureAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3638,7 +3638,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_GetExtendedPropertiesAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3678,7 +3678,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_GetPropertiesAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3718,7 +3718,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_ReplaceExistingContactAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3760,7 +3760,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_SaveAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3800,7 +3800,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_SetDisplayPictureAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3842,7 +3842,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_ToVcardAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3882,7 +3882,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* StoredContact_ToVcardWithOptionsAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4578,7 +4578,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_GetDisplayPictureAsync(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4618,7 +4618,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_GetPropertiesAsync(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4658,7 +4658,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_SetDisplayPictureAsync(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4700,7 +4700,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_ToVcardAsync(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4740,7 +4740,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyObject* IContactInformation_ToVcardWithOptionsAsync(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

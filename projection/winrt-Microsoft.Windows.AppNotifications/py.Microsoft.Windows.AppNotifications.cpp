@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -818,7 +818,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_GetAllAsync(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -858,7 +858,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -898,7 +898,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_Register(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -972,7 +972,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_RemoveAllAsync(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1012,7 +1012,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_RemoveByGroupAsync(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1054,7 +1054,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_RemoveByIdAsync(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1096,7 +1096,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_RemoveByTagAndGroupAsync(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1139,7 +1139,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_RemoveByTagAsync(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1181,7 +1181,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_Show(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1224,7 +1224,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_Unregister(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1265,7 +1265,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_UnregisterAll(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1306,7 +1306,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_UpdateAsync(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1350,7 +1350,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
 
     static PyObject* AppNotificationManager_UpdateAsync2(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1610,7 +1610,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

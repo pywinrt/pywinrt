@@ -49,7 +49,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>();
         if (!self_type)
@@ -110,7 +110,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* DesktopWindowXamlSource_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -151,7 +151,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* DesktopWindowXamlSource_Initialize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -194,7 +194,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* DesktopWindowXamlSource_NavigateFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -942,7 +942,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* ElementCompositionPreview_GetElementChildVisual(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -984,7 +984,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* ElementCompositionPreview_GetElementVisual(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1026,7 +1026,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* ElementCompositionPreview_GetPointerPositionPropertySet(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1068,7 +1068,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* ElementCompositionPreview_GetScrollViewerManipulationPropertySet(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1110,7 +1110,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* ElementCompositionPreview_SetElementChildVisual(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1154,7 +1154,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* ElementCompositionPreview_SetImplicitHideAnimation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1198,7 +1198,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* ElementCompositionPreview_SetImplicitShowAnimation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1242,7 +1242,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* ElementCompositionPreview_SetIsTranslationEnabled(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1378,7 +1378,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* WindowsXamlManager_Close(py::wrapper::Microsoft::UI::Xaml::Hosting::WindowsXamlManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1419,7 +1419,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* WindowsXamlManager_GetForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1459,7 +1459,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* WindowsXamlManager_InitializeForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1678,7 +1678,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
     static PyObject* XamlShutdownCompletedOnThreadEventArgs_GetDispatcherQueueDeferral(py::wrapper::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1773,7 +1773,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1986,7 +1986,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

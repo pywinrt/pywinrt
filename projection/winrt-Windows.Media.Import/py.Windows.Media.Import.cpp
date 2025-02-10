@@ -489,7 +489,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_AddItemsInDateRangeToSelection(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -533,7 +533,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_ImportItemsAsync(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -573,7 +573,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_SelectAll(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -614,7 +614,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_SelectNewAsync(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -654,7 +654,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_SelectNone(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -695,7 +695,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportFindItemsResult_SetImportMode(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1685,7 +1685,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportImportItemsResult_DeleteImportedItemsFromSourceAsync(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2783,7 +2783,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportManager_FindAllSourcesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2823,7 +2823,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportManager_GetPendingOperations(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2863,7 +2863,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportManager_IsSupportedAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3275,7 +3275,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_Close(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3316,7 +3316,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSession_FindItemsAsync(py::wrapper::Windows::Media::Import::PhotoImportSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4087,7 +4087,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_CreateImportSession(py::wrapper::Windows::Media::Import::PhotoImportSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4127,7 +4127,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_FromFolderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4169,7 +4169,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportSource_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4794,7 +4794,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyObject* PhotoImportStorageMedium_Refresh(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5347,7 +5347,7 @@ namespace py::cpp::Windows::Media::Import
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Import::PhotoImportProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

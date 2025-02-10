@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -99,7 +99,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -341,7 +341,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration>();
         if (!self_type)
@@ -477,7 +477,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -684,7 +684,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -992,7 +992,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1077,7 +1077,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1688,7 +1688,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2246,7 +2246,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2277,7 +2277,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2320,7 +2320,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2361,7 +2361,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2401,7 +2401,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2443,7 +2443,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2486,7 +2486,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2526,7 +2526,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2582,7 +2582,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2626,7 +2626,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2669,7 +2669,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2710,7 +2710,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2753,7 +2753,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3043,7 +3043,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3074,7 +3074,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* CommonNavigationTransitionInfo_GetIsStaggerElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3116,7 +3116,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* CommonNavigationTransitionInfo_SetIsStaggerElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3378,7 +3378,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimation_Cancel(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3419,7 +3419,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimation_SetAnimationComponent(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3463,7 +3463,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimation_TryStart(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3505,7 +3505,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimation_TryStartWithCoordinatedElements(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3906,7 +3906,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimationService_GetAnimation(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3948,7 +3948,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimationService_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3988,7 +3988,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimationService_PrepareToAnimate(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4249,7 +4249,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4557,7 +4557,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4588,7 +4588,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_GetExitElementContainer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4630,7 +4630,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_GetIsEntranceElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4672,7 +4672,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_GetIsExitElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4714,7 +4714,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_SetExitElementContainer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4758,7 +4758,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_SetIsEntranceElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4802,7 +4802,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_SetIsExitElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5121,7 +5121,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5241,7 +5241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration>();
         if (!self_type)
@@ -5377,7 +5377,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5462,7 +5462,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5547,7 +5547,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5632,7 +5632,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5717,7 +5717,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6328,7 +6328,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6886,7 +6886,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6917,7 +6917,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6960,7 +6960,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7001,7 +7001,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7041,7 +7041,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7083,7 +7083,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7126,7 +7126,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7166,7 +7166,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7222,7 +7222,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7266,7 +7266,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7309,7 +7309,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7350,7 +7350,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7393,7 +7393,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7683,7 +7683,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7890,7 +7890,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8299,7 +8299,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8384,7 +8384,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8894,7 +8894,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9404,7 +9404,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9611,7 +9611,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9818,7 +9818,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10034,7 +10034,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* EasingFunctionBase_Ease(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10253,7 +10253,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10460,7 +10460,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10667,7 +10667,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10975,7 +10975,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11006,7 +11006,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* EntranceNavigationTransitionInfo_GetIsTargetElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11048,7 +11048,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* EntranceNavigationTransitionInfo_SetIsTargetElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11200,7 +11200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11609,7 +11609,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11816,7 +11816,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12023,7 +12023,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12265,7 +12265,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>();
         if (!self_type)
@@ -12471,7 +12471,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12705,7 +12705,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* KeyTimeHelper_FromTimeSpan(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12823,7 +12823,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12908,7 +12908,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12993,7 +12993,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13078,7 +13078,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13388,7 +13388,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* NavigationTransitionInfo_GetNavigationStateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13428,7 +13428,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* NavigationTransitionInfo_SetNavigationStateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13548,7 +13548,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14106,7 +14106,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14137,7 +14137,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14180,7 +14180,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14221,7 +14221,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14261,7 +14261,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14303,7 +14303,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14346,7 +14346,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14386,7 +14386,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14442,7 +14442,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14486,7 +14486,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14529,7 +14529,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14570,7 +14570,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14613,7 +14613,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14903,7 +14903,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15110,7 +15110,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15721,7 +15721,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -16279,7 +16279,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -16310,7 +16310,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16353,7 +16353,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16394,7 +16394,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16434,7 +16434,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16476,7 +16476,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16519,7 +16519,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16559,7 +16559,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16615,7 +16615,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16659,7 +16659,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16702,7 +16702,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16743,7 +16743,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16786,7 +16786,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17076,7 +17076,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17283,7 +17283,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17490,7 +17490,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17899,7 +17899,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18106,7 +18106,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18414,7 +18414,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18621,7 +18621,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18706,7 +18706,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18791,7 +18791,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18876,7 +18876,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18970,7 +18970,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* RepeatBehaviorHelper_Equals(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19013,7 +19013,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* RepeatBehaviorHelper_FromCount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19055,7 +19055,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* RepeatBehaviorHelper_FromDuration(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19097,7 +19097,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* RepeatBehaviorHelper_GetHasCount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19139,7 +19139,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* RepeatBehaviorHelper_GetHasDuration(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19292,7 +19292,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -19701,7 +19701,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -19908,7 +19908,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -19993,7 +19993,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -20200,7 +20200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -20407,7 +20407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -20614,7 +20614,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -20821,7 +20821,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -22038,7 +22038,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -23255,7 +23255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -23286,7 +23286,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_Begin(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23327,7 +23327,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_GetCurrentState(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23367,7 +23367,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_GetCurrentTime(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23407,7 +23407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_GetTargetName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23449,7 +23449,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_GetTargetProperty(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23491,7 +23491,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_Pause(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23532,7 +23532,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_Resume(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23573,7 +23573,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_Seek(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23616,7 +23616,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_SeekAlignedToLastTick(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23659,7 +23659,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_SetTarget(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23703,7 +23703,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_SetTargetName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23747,7 +23747,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_SetTargetProperty(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23791,7 +23791,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_SkipToFill(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23832,7 +23832,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_Stop(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Storyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24055,7 +24055,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -24140,7 +24140,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -24549,7 +24549,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -25819,7 +25819,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -25850,7 +25850,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25893,7 +25893,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25934,7 +25934,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25974,7 +25974,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26016,7 +26016,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -26059,7 +26059,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26099,7 +26099,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26155,7 +26155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -26199,7 +26199,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26242,7 +26242,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26283,7 +26283,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26326,7 +26326,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TimelineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -26700,7 +26700,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -26731,7 +26731,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26774,7 +26774,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26815,7 +26815,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26855,7 +26855,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26897,7 +26897,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -26940,7 +26940,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26980,7 +26980,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -27036,7 +27036,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -27080,7 +27080,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -27123,7 +27123,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -27164,7 +27164,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -27207,7 +27207,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::Animation::TransitionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -27515,7 +27515,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTime>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -27698,7 +27698,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Animation::RepeatBehavior>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

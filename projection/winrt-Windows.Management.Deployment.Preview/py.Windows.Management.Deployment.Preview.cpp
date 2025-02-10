@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
     static PyObject* ClassicAppManager_FindInstalledApp(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

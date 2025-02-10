@@ -707,7 +707,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -740,7 +740,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelBindingPreview_Bind(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -784,7 +784,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelBindingPreview_BindWithProperties(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -829,7 +829,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelBindingPreview_Clear(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -870,7 +870,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelBindingPreview_First(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelBindingPreview_HasKey(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -952,7 +952,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelBindingPreview_Lookup(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -994,7 +994,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelBindingPreview_Split(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1685,7 +1685,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelPreview_EvaluateAsync(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1728,7 +1728,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelPreview_EvaluateFeaturesAsync(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1771,7 +1771,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelPreview_LoadModelFromStorageFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1813,7 +1813,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelPreview_LoadModelFromStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

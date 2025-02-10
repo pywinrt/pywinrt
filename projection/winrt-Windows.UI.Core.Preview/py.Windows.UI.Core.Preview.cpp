@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyObject* CoreAppWindowPreview_GetIdFromWindow(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyObject* SystemNavigationCloseRequestedPreviewEventArgs_GetDeferral(py::wrapper::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -324,7 +324,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyObject* SystemNavigationManagerPreview_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

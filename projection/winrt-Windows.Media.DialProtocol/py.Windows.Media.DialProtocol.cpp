@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialApp_GetAppStateAsync(py::wrapper::Windows::Media::DialProtocol::DialApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialApp_RequestLaunchAsync(py::wrapper::Windows::Media::DialProtocol::DialApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialApp_StopAsync(py::wrapper::Windows::Media::DialProtocol::DialApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -367,7 +367,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevice_DeviceInfoSupportsDialAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevice_GetDialApp(py::wrapper::Windows::Media::DialProtocol::DialDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -707,7 +707,7 @@ namespace py::cpp::Windows::Media::DialProtocol
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -738,7 +738,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_Hide(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -779,7 +779,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_PickSingleDialDeviceAsync(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -821,7 +821,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_PickSingleDialDeviceAsyncWithPlacement(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -864,7 +864,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_SetDisplayStatus(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -908,7 +908,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_Show(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -951,7 +951,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_ShowWithPlacement(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1609,7 +1609,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialReceiverApp_GetAdditionalDataAsync(py::wrapper::Windows::Media::DialProtocol::DialReceiverApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1649,7 +1649,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialReceiverApp_GetUniqueDeviceNameAsync(py::wrapper::Windows::Media::DialProtocol::DialReceiverApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1689,7 +1689,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialReceiverApp_SetAdditionalDataAsync(py::wrapper::Windows::Media::DialProtocol::DialReceiverApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -49,7 +49,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>();
         if (!self_type)
@@ -690,7 +690,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1301,7 +1301,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1710,7 +1710,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1882,7 +1882,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* Brush_PopulatePropertyInfo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1926,7 +1926,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* Brush_PopulatePropertyInfoOverride(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2350,7 +2350,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2381,7 +2381,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2424,7 +2424,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2465,7 +2465,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2505,7 +2505,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2547,7 +2547,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2590,7 +2590,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2630,7 +2630,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2686,7 +2686,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2730,7 +2730,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2773,7 +2773,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2814,7 +2814,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2857,7 +2857,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* BrushCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::BrushCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3265,7 +3265,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4289,7 +4289,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* CompositionTarget_GetCompositorForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4641,7 +4641,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdrop>();
         if (!self_type)
@@ -4777,7 +4777,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4808,7 +4808,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4851,7 +4851,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4892,7 +4892,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4932,7 +4932,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4974,7 +4974,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5017,7 +5017,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5057,7 +5057,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5113,7 +5113,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5157,7 +5157,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5200,7 +5200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5241,7 +5241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5284,7 +5284,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* DoubleCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::DoubleCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5574,7 +5574,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6018,7 +6018,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::FontFamily>();
         if (!self_type)
@@ -6331,7 +6331,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeneralTransform_TransformBounds(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6373,7 +6373,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeneralTransform_TransformBoundsCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6415,7 +6415,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeneralTransform_TransformPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6457,7 +6457,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeneralTransform_TryTransform(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6513,7 +6513,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeneralTransform_TryTransformCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6958,7 +6958,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6989,7 +6989,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7032,7 +7032,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7073,7 +7073,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7113,7 +7113,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7155,7 +7155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7198,7 +7198,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7238,7 +7238,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7294,7 +7294,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7338,7 +7338,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7381,7 +7381,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7422,7 +7422,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7465,7 +7465,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GeometryCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::GeometryCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7755,7 +7755,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8585,7 +8585,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8893,7 +8893,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8924,7 +8924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8967,7 +8967,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9008,7 +9008,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9048,7 +9048,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9090,7 +9090,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9133,7 +9133,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9173,7 +9173,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9229,7 +9229,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9273,7 +9273,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9316,7 +9316,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9357,7 +9357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9400,7 +9400,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* GradientStopCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::GradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9690,7 +9690,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10115,7 +10115,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10423,7 +10423,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10630,7 +10630,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -11057,7 +11057,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* LoadedImageSurface_Close(py::wrapper::Microsoft::UI::Xaml::Media::LoadedImageSurface* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11098,7 +11098,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* LoadedImageSurface_StartLoadFromStream(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11140,7 +11140,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* LoadedImageSurface_StartLoadFromStreamWithSize(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11183,7 +11183,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* LoadedImageSurface_StartLoadFromUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11225,7 +11225,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* LoadedImageSurface_StartLoadFromUriWithSize(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11533,7 +11533,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11749,7 +11749,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* MatrixHelper_FromElements(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -11796,7 +11796,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* MatrixHelper_GetIsIdentity(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11838,7 +11838,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* MatrixHelper_Transform(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11990,7 +11990,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12206,7 +12206,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* MediaTransportControlsThumbnailRequestedEventArgs_GetDeferral(py::wrapper::Microsoft::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12246,7 +12246,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* MediaTransportControlsThumbnailRequestedEventArgs_SetThumbnailImage(py::wrapper::Microsoft::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12380,7 +12380,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::MicaBackdrop>();
         if (!self_type)
@@ -12617,7 +12617,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13127,7 +13127,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13158,7 +13158,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13201,7 +13201,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13242,7 +13242,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13282,7 +13282,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13324,7 +13324,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13367,7 +13367,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13407,7 +13407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13463,7 +13463,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13507,7 +13507,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13550,7 +13550,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13591,7 +13591,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13634,7 +13634,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathFigureCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::PathFigureCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13924,7 +13924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14316,7 +14316,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14347,7 +14347,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14390,7 +14390,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14431,7 +14431,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14471,7 +14471,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14513,7 +14513,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14556,7 +14556,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14596,7 +14596,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14652,7 +14652,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14696,7 +14696,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14739,7 +14739,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14780,7 +14780,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14823,7 +14823,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PathSegmentCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::PathSegmentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15113,7 +15113,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -16493,7 +16493,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -16524,7 +16524,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16567,7 +16567,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16608,7 +16608,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16648,7 +16648,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16690,7 +16690,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16733,7 +16733,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16773,7 +16773,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16829,7 +16829,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16873,7 +16873,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16916,7 +16916,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16957,7 +16957,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17000,7 +17000,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* PointCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::PointCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17290,7 +17290,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17497,7 +17497,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17704,7 +17704,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18029,7 +18029,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18372,7 +18372,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>();
         if (!self_type)
@@ -19246,7 +19246,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -19641,7 +19641,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -20050,7 +20050,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -20644,7 +20644,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -21154,7 +21154,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -21539,7 +21539,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* SystemBackdrop_GetDefaultSystemBackdropConfiguration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21582,7 +21582,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* SystemBackdrop_OnDefaultSystemBackdropConfigurationChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21626,7 +21626,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* SystemBackdrop_OnTargetConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21670,7 +21670,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* SystemBackdrop_OnTargetDisconnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21827,7 +21827,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::ThemeShadow>();
         if (!self_type)
@@ -22499,7 +22499,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -22530,7 +22530,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_Append(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22573,7 +22573,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_Clear(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22614,7 +22614,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_First(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22654,7 +22654,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_GetAt(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22696,7 +22696,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_GetMany(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -22739,7 +22739,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_GetView(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22779,7 +22779,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_IndexOf(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22835,7 +22835,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_InsertAt(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -22879,7 +22879,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22922,7 +22922,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22963,7 +22963,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23006,7 +23006,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* TransformCollection_SetAt(py::wrapper::Microsoft::UI::Xaml::Media::TransformCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23296,7 +23296,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -23534,7 +23534,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -23851,7 +23851,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_DisconnectChildrenRecursive(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23894,7 +23894,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_FindAllElementsInHostCoordinatesPoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -23938,7 +23938,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_FindAllElementsInHostCoordinatesRect(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -23982,7 +23982,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_FindElementsInHostCoordinatesPoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24025,7 +24025,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_FindElementsInHostCoordinatesRect(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24068,7 +24068,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_GetChild(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24111,7 +24111,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_GetChildrenCount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24153,7 +24153,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_GetOpenPopups(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24195,7 +24195,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_GetOpenPopupsForXamlRoot(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24237,7 +24237,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* VisualTreeHelper_GetParent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24459,7 +24459,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlCompositionBrushBase_OnConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24500,7 +24500,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlCompositionBrushBase_OnDisconnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24846,7 +24846,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Media::XamlLight>();
         if (!self_type)
@@ -24907,7 +24907,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlLight_AddTargetBrush(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24951,7 +24951,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlLight_AddTargetElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24995,7 +24995,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlLight_GetId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25035,7 +25035,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlLight_OnConnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25078,7 +25078,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlLight_OnDisconnected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25121,7 +25121,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlLight_RemoveTargetBrush(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -25165,7 +25165,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyObject* XamlLight_RemoveTargetElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -25314,7 +25314,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Matrix>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

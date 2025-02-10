@@ -295,7 +295,7 @@ namespace py::cpp::Windows::Data::Text
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -328,7 +328,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* SelectableWordsSegmenter_GetTokenAt(py::wrapper::Windows::Data::Text::SelectableWordsSegmenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -371,7 +371,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* SelectableWordsSegmenter_GetTokens(py::wrapper::Windows::Data::Text::SelectableWordsSegmenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -413,7 +413,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* SelectableWordsSegmenter_Tokenize(py::wrapper::Windows::Data::Text::SelectableWordsSegmenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -546,7 +546,7 @@ namespace py::cpp::Windows::Data::Text
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -595,7 +595,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* SemanticTextQuery_Find(py::wrapper::Windows::Data::Text::SemanticTextQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -637,7 +637,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* SemanticTextQuery_FindInProperty(py::wrapper::Windows::Data::Text::SemanticTextQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -736,7 +736,7 @@ namespace py::cpp::Windows::Data::Text
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -769,7 +769,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextConversionGenerator_GetCandidatesAsync(py::wrapper::Windows::Data::Text::TextConversionGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -811,7 +811,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextConversionGenerator_GetCandidatesWithMaxCountAsync(py::wrapper::Windows::Data::Text::TextConversionGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1097,7 +1097,7 @@ namespace py::cpp::Windows::Data::Text
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1130,7 +1130,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPredictionGenerator_GetCandidatesAsync(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1172,7 +1172,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPredictionGenerator_GetCandidatesWithMaxCountAsync(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1215,7 +1215,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPredictionGenerator_GetCandidatesWithParametersAsync(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1260,7 +1260,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextPredictionGenerator_GetNextWordCandidatesAsync(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1493,7 +1493,7 @@ namespace py::cpp::Windows::Data::Text
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1526,7 +1526,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextReverseConversionGenerator_ConvertBackAsync(py::wrapper::Windows::Data::Text::TextReverseConversionGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1568,7 +1568,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* TextReverseConversionGenerator_GetPhonemesAsync(py::wrapper::Windows::Data::Text::TextReverseConversionGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1729,7 +1729,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_GetCodepointFromSurrogatePair(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1772,7 +1772,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_GetGeneralCategory(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1814,7 +1814,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_GetNumericType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1856,7 +1856,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_GetSurrogatePairFromCodepoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1912,7 +1912,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsAlphabetic(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1954,7 +1954,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsCased(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1996,7 +1996,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsGraphemeBase(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2038,7 +2038,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsGraphemeExtend(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2080,7 +2080,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsHighSurrogate(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2122,7 +2122,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsIdContinue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2164,7 +2164,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsIdStart(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2206,7 +2206,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsLowSurrogate(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2248,7 +2248,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsLowercase(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2290,7 +2290,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsNoncharacter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2332,7 +2332,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsSupplementary(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2374,7 +2374,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsUppercase(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2416,7 +2416,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* UnicodeCharacters_IsWhitespace(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2679,7 +2679,7 @@ namespace py::cpp::Windows::Data::Text
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2712,7 +2712,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* WordsSegmenter_GetTokenAt(py::wrapper::Windows::Data::Text::WordsSegmenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2755,7 +2755,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* WordsSegmenter_GetTokens(py::wrapper::Windows::Data::Text::WordsSegmenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2797,7 +2797,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyObject* WordsSegmenter_Tokenize(py::wrapper::Windows::Data::Text::WordsSegmenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2949,7 +2949,7 @@ namespace py::cpp::Windows::Data::Text
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

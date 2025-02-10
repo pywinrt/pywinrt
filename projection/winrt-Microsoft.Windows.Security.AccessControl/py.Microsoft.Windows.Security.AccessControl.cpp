@@ -15,7 +15,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
     static PyObject* SecurityDescriptorHelpers_GetSddlForAppContainerNames(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -59,7 +59,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
     static PyObject* SecurityDescriptorHelpers_GetSecurityDescriptorBytesFromAppContainerNames(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -172,7 +172,7 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

@@ -14,7 +14,7 @@ namespace py::cpp::TestComponent
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Class_One(py::wrapper::TestComponent::Class* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -163,7 +163,7 @@ namespace py::cpp::TestComponent
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::TestComponent::Composable>();
         if (!self_type)
@@ -262,7 +262,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_ExpectComposable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -291,7 +291,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_ExpectRequiredFour(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -320,7 +320,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_ExpectRequiredOne(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -349,7 +349,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_ExpectRequiredThree(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -378,7 +378,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_ExpectRequiredTwo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -407,7 +407,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_Four(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -434,7 +434,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_One(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -461,7 +461,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_Three(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -488,7 +488,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Composable_Two(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -678,7 +678,7 @@ namespace py::cpp::TestComponent
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::TestComponent::Derived>();
         if (!self_type)
@@ -925,7 +925,7 @@ namespace py::cpp::TestComponent
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::TestComponent::OverloadClass>();
         if (!self_type)
@@ -986,7 +986,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* OverloadClass_Overload(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1014,7 +1014,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* OverloadClass_OverloadWithOne(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1044,7 +1044,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* OverloadClass_OverloadWithThree(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1076,7 +1076,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* OverloadClass_OverloadWithTwo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1247,7 +1247,7 @@ namespace py::cpp::TestComponent
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::TestComponent::Override>();
         if (!self_type)
@@ -1308,7 +1308,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Override_CallOverridable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1336,7 +1336,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Override_CallProtected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1364,7 +1364,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Override_OnOverridable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1392,7 +1392,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* Override_OnProtected(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1582,7 +1582,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_CreateAsyncAction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1611,7 +1611,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_CreateInt32Vector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1638,7 +1638,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_CreateStringVector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1665,7 +1665,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_CreateStringableVector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1692,7 +1692,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_CreateTimeSpan(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1721,7 +1721,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_ExpectObject(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1750,7 +1750,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_MakeTests(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1777,7 +1777,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_TestConsumer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1806,7 +1806,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_TestProducer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1836,7 +1836,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* TestRunner_TestSelf(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1931,7 +1931,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredFour_Four(py::wrapper::TestComponent::IRequiredFour* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1958,7 +1958,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredFour_One(py::wrapper::TestComponent::IRequiredFour* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1985,7 +1985,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredFour_Three(py::wrapper::TestComponent::IRequiredFour* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2012,7 +2012,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredFour_Two(py::wrapper::TestComponent::IRequiredFour* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2270,7 +2270,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredOne_One(py::wrapper::TestComponent::IRequiredOne* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2447,7 +2447,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredThree_One(py::wrapper::TestComponent::IRequiredThree* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2474,7 +2474,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredThree_Three(py::wrapper::TestComponent::IRequiredThree* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2501,7 +2501,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredThree_Two(py::wrapper::TestComponent::IRequiredThree* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2732,7 +2732,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredTwo_One(py::wrapper::TestComponent::IRequiredTwo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2759,7 +2759,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* IRequiredTwo_Two(py::wrapper::TestComponent::IRequiredTwo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2963,7 +2963,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array1(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3007,7 +3007,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array10(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3051,7 +3051,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array10Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3081,7 +3081,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array11(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3125,7 +3125,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array11Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3155,7 +3155,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array12(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3199,7 +3199,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array12Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3229,7 +3229,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array13(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3273,7 +3273,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array13Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3303,7 +3303,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array14(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3347,7 +3347,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array14Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3377,7 +3377,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array15(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3421,7 +3421,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array15Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3451,7 +3451,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array16(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3495,7 +3495,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array16Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3525,7 +3525,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array1Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3555,7 +3555,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array2(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3599,7 +3599,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array2Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3629,7 +3629,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array3(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3673,7 +3673,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array3Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3703,7 +3703,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array4(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3747,7 +3747,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array4Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3777,7 +3777,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array5(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3821,7 +3821,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array5Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3851,7 +3851,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array6(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3895,7 +3895,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array6Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3925,7 +3925,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array7(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3969,7 +3969,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array7Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3999,7 +3999,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array8(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4043,7 +4043,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array8Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4073,7 +4073,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array9(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4117,7 +4117,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Array9Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4147,7 +4147,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Async1(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4177,7 +4177,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Async1Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4207,7 +4207,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Async2(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4238,7 +4238,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Async2Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4268,7 +4268,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Async3(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4299,7 +4299,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Async3Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4329,7 +4329,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Async4(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4361,7 +4361,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Async4Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4391,7 +4391,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box1(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4421,7 +4421,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box10(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4451,7 +4451,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box11(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4481,7 +4481,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box12(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4511,7 +4511,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box13(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4541,7 +4541,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box14(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4571,7 +4571,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box15(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4601,7 +4601,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box16(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4631,7 +4631,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box17(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4661,7 +4661,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box18(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4691,7 +4691,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box19(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4721,7 +4721,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box2(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4751,7 +4751,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box20(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4781,7 +4781,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box21(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4811,7 +4811,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box3(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4841,7 +4841,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box4(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4871,7 +4871,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box5(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4901,7 +4901,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box6(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4931,7 +4931,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box7(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4961,7 +4961,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box8(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4991,7 +4991,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Box9(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5021,7 +5021,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection1(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5064,7 +5064,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection1Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5094,7 +5094,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection2(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5137,7 +5137,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection2Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5167,7 +5167,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection3(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5210,7 +5210,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection3Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5240,7 +5240,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection4(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5283,7 +5283,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection4Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5313,7 +5313,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection5(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5356,7 +5356,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection5Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5386,7 +5386,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection6(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5429,7 +5429,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Collection6Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5459,7 +5459,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Event1Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5489,7 +5489,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Event2Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5519,7 +5519,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_GetBlittableVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5549,7 +5549,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_GetBooleanVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5579,7 +5579,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_GetClassVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5609,7 +5609,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_GetComposableClassVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5639,7 +5639,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_GetInterfaceVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5669,7 +5669,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_GetNonBlittableVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5699,7 +5699,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_GetObjectVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5729,7 +5729,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_GetStringVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5759,7 +5759,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param1(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5802,7 +5802,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param10(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5845,7 +5845,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param10Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5875,7 +5875,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param11(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5918,7 +5918,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param11Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5948,7 +5948,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param12(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5991,7 +5991,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param12Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6021,7 +6021,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param13(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6065,7 +6065,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param13Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6095,7 +6095,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param14(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6139,7 +6139,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param14Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6169,7 +6169,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param15(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6213,7 +6213,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param15Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6243,7 +6243,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param1Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6273,7 +6273,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param2(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6316,7 +6316,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param2Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6346,7 +6346,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param3(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6389,7 +6389,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param3Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6419,7 +6419,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param4(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6462,7 +6462,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param4Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6492,7 +6492,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param5(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6535,7 +6535,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param5Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6565,7 +6565,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param6(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6608,7 +6608,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param6Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6638,7 +6638,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param7(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6681,7 +6681,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param7Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6711,7 +6711,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param8(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6754,7 +6754,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param8Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6784,7 +6784,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param9(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6827,7 +6827,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Param9Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6857,7 +6857,7 @@ namespace py::cpp::TestComponent
 
     static PyObject* ITests_Simple(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11692,7 +11692,7 @@ namespace py::cpp::TestComponent
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::Blittable>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -12173,7 +12173,7 @@ namespace py::cpp::TestComponent
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::Nested>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -12408,7 +12408,7 @@ namespace py::cpp::TestComponent
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::TestComponent::NonBlittable>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

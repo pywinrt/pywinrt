@@ -394,7 +394,7 @@ namespace py::impl::Windows::Foundation::Collections
         IIterable(winrt::Windows::Foundation::Collections::IIterable<T> o) : _obj(o) {}
         PyObject* First(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -457,7 +457,7 @@ namespace py::impl::Windows::Foundation::Collections
         IIterator(winrt::Windows::Foundation::Collections::IIterator<T> o) : _obj(o) {}
         PyObject* GetMany(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -498,7 +498,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* MoveNext(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -686,7 +686,7 @@ namespace py::impl::Windows::Foundation::Collections
         IMapView(winrt::Windows::Foundation::Collections::IMapView<K, V> o) : _obj(o) {}
         PyObject* First(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -725,7 +725,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* HasKey(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -766,7 +766,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Lookup(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -807,7 +807,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Split(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -976,7 +976,7 @@ namespace py::impl::Windows::Foundation::Collections
         IMap(winrt::Windows::Foundation::Collections::IMap<K, V> o) : _obj(o) {}
         PyObject* Clear(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1016,7 +1016,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* First(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1055,7 +1055,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetView(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1094,7 +1094,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* HasKey(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -1135,7 +1135,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Insert(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {
@@ -1177,7 +1177,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Lookup(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -1218,7 +1218,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Remove(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -1411,7 +1411,7 @@ namespace py::impl::Windows::Foundation::Collections
         IObservableMap(winrt::Windows::Foundation::Collections::IObservableMap<K, V> o) : _obj(o) {}
         PyObject* Clear(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1451,7 +1451,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* First(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1490,7 +1490,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetView(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1529,7 +1529,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* HasKey(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -1570,7 +1570,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Insert(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {
@@ -1612,7 +1612,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Lookup(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -1653,7 +1653,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Remove(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -1883,7 +1883,7 @@ namespace py::impl::Windows::Foundation::Collections
         IObservableVector(winrt::Windows::Foundation::Collections::IObservableVector<T> o) : _obj(o) {}
         PyObject* Append(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -1925,7 +1925,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Clear(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1965,7 +1965,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* First(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2004,7 +2004,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -2045,7 +2045,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetMany(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {
@@ -2087,7 +2087,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetView(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2126,7 +2126,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* IndexOf(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -2181,7 +2181,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* InsertAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {
@@ -2224,7 +2224,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* RemoveAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -2266,7 +2266,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* RemoveAtEnd(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2306,7 +2306,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* ReplaceAll(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -2348,7 +2348,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* SetAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {
@@ -2591,7 +2591,7 @@ namespace py::impl::Windows::Foundation::Collections
         IVectorView(winrt::Windows::Foundation::Collections::IVectorView<T> o) : _obj(o) {}
         PyObject* First(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2630,7 +2630,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -2671,7 +2671,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetMany(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {
@@ -2713,7 +2713,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* IndexOf(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -2905,7 +2905,7 @@ namespace py::impl::Windows::Foundation::Collections
         IVector(winrt::Windows::Foundation::Collections::IVector<T> o) : _obj(o) {}
         PyObject* Append(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -2947,7 +2947,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* Clear(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2987,7 +2987,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* First(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3026,7 +3026,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -3067,7 +3067,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetMany(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {
@@ -3109,7 +3109,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* GetView(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3148,7 +3148,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* IndexOf(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -3203,7 +3203,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* InsertAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {
@@ -3246,7 +3246,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* RemoveAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -3288,7 +3288,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* RemoveAtEnd(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3328,7 +3328,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* ReplaceAll(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 1)
             {
@@ -3370,7 +3370,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* SetAt(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 2)
             {

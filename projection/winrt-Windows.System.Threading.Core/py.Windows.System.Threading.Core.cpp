@@ -14,7 +14,7 @@ namespace py::cpp::Windows::System::Threading::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -80,7 +80,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyObject* PreallocatedWorkItem_RunAsync(py::wrapper::Windows::System::Threading::Core::PreallocatedWorkItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -184,7 +184,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyObject* SignalNotifier_AttachToEvent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -227,7 +227,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyObject* SignalNotifier_AttachToEventWithTimeout(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyObject* SignalNotifier_AttachToSemaphore(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -314,7 +314,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyObject* SignalNotifier_AttachToSemaphoreWithTimeout(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyObject* SignalNotifier_Enable(py::wrapper::Windows::System::Threading::Core::SignalNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyObject* SignalNotifier_Terminate(py::wrapper::Windows::System::Threading::Core::SignalNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

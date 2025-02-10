@@ -117,7 +117,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceDetector_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -157,7 +157,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceDetector_DetectFacesAsync(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -199,7 +199,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceDetector_DetectFacesWithSearchAreaAsync(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -242,7 +242,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceDetector_GetSupportedBitmapPixelFormats(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceDetector_IsBitmapPixelFormatSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceTracker_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -624,7 +624,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceTracker_GetSupportedBitmapPixelFormats(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -664,7 +664,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceTracker_IsBitmapPixelFormatSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -706,7 +706,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyObject* FaceTracker_ProcessNextFrameAsync(py::wrapper::Windows::Media::FaceAnalysis::FaceTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

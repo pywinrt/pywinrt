@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_Cancel(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_CancelWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_GetCurrentStatus(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_Pause(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_PauseWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_Restart(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallItem_RestartWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1116,7 +1116,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1147,7 +1147,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_Cancel(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1190,7 +1190,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_CancelWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1234,7 +1234,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetFreeDeviceEntitlementAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1278,7 +1278,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetFreeUserEntitlementAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1322,7 +1322,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetFreeUserEntitlementForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1367,7 +1367,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetIsAppAllowedToInstallAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1409,7 +1409,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetIsAppAllowedToInstallForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -1455,7 +1455,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetIsAppAllowedToInstallWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1500,7 +1500,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetIsApplicableAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1543,7 +1543,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetIsApplicableForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1587,7 +1587,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetIsPackageIdentityAllowedToInstallAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1631,7 +1631,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_GetIsPackageIdentityAllowedToInstallForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1676,7 +1676,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_IsStoreBlockedByPolicyAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1719,7 +1719,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_MoveToFrontOfDownloadQueue(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1763,7 +1763,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_Pause(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1806,7 +1806,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_PauseWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1850,7 +1850,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_Restart(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1893,7 +1893,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_RestartWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1937,7 +1937,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForAllUpdatesAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForAllUpdatesForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2020,7 +2020,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForAllUpdatesWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2062,7 +2062,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForAllUpdatesWithUpdateOptionsAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2106,7 +2106,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForAllUpdatesWithUpdateOptionsForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2151,7 +2151,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForUpdatesAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2194,7 +2194,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForUpdatesForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2240,7 +2240,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForUpdatesWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2285,7 +2285,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForUpdatesWithUpdateOptionsAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2331,7 +2331,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_SearchForUpdatesWithUpdateOptionsForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -2378,7 +2378,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_StartAppInstallAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2423,7 +2423,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_StartAppInstallWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -2471,7 +2471,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_StartProductInstallAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 8)
         {
@@ -2520,7 +2520,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_StartProductInstallForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 9)
         {
@@ -2570,7 +2570,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_StartProductInstallWithOptionsAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2616,7 +2616,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_StartProductInstallWithOptionsForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -2663,7 +2663,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_UpdateAppByPackageFamilyNameAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2705,7 +2705,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_UpdateAppByPackageFamilyNameForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2749,7 +2749,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyObject* AppInstallManager_UpdateAppByPackageFamilyNameWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3344,7 +3344,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4790,7 +4790,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

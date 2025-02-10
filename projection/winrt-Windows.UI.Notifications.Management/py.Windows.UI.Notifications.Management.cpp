@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_ClearNotifications(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_GetAccessStatus(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_GetNotification(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_GetNotificationsAsync(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_RemoveNotification(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::UI::Notifications::Management
 
     static PyObject* UserNotificationListener_RequestAccessAsync(py::wrapper::Windows::UI::Notifications::Management::UserNotificationListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

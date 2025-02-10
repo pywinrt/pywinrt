@@ -211,7 +211,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_Close(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -252,7 +252,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -294,7 +294,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -334,7 +334,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_GetDeviceSelectorFromPortName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -376,7 +376,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyObject* SerialDevice_GetDeviceSelectorFromUsbVidPid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

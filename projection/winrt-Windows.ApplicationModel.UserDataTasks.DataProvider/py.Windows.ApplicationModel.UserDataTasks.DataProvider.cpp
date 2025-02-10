@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskDataProviderConnection_Start(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -557,7 +557,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListCompleteTaskRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListCompleteTaskRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -766,7 +766,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListCompleteTaskRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -901,7 +901,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListCreateOrUpdateTaskRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -943,7 +943,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListCreateOrUpdateTaskRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1110,7 +1110,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListCreateOrUpdateTaskRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1245,7 +1245,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListDeleteTaskRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1285,7 +1285,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListDeleteTaskRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1452,7 +1452,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListDeleteTaskRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1587,7 +1587,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListSkipOccurrenceRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1627,7 +1627,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListSkipOccurrenceRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1794,7 +1794,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListSkipOccurrenceRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListSyncManagerSyncRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1969,7 +1969,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListSyncManagerSyncRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2105,7 +2105,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyObject* UserDataTaskListSyncManagerSyncRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

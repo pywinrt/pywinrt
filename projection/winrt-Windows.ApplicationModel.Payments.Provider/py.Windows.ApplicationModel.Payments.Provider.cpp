@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyObject* PaymentAppCanMakePaymentTriggerDetails_ReportCanMakePaymentResult(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -161,7 +161,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyObject* PaymentAppManager_RegisterAsync(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentAppManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -203,7 +203,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyObject* PaymentAppManager_UnregisterAsync(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentAppManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -360,7 +360,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyObject* PaymentTransaction_AcceptAsync(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -402,7 +402,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyObject* PaymentTransaction_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -444,7 +444,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyObject* PaymentTransaction_Reject(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -485,7 +485,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyObject* PaymentTransaction_UpdateSelectedShippingOptionAsync(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -527,7 +527,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 
     static PyObject* PaymentTransaction_UpdateShippingAddressAsync(py::wrapper::Windows::ApplicationModel::Payments::Provider::PaymentTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

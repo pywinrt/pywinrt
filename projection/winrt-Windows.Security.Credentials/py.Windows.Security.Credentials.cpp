@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredential_GetAttestationAsync(py::wrapper::Windows::Security::Credentials::KeyCredential* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredential_RequestSignAsync(py::wrapper::Windows::Security::Credentials::KeyCredential* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredential_RetrievePublicKeyWithBlobType(py::wrapper::Windows::Security::Credentials::KeyCredential* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredential_RetrievePublicKeyWithDefaultBlobType(py::wrapper::Windows::Security::Credentials::KeyCredential* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -433,7 +433,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredentialManager_DeleteAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -475,7 +475,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredentialManager_IsSupportedAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -515,7 +515,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredentialManager_OpenAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -557,7 +557,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredentialManager_RenewAttestationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -597,7 +597,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* KeyCredentialManager_RequestCreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -943,7 +943,7 @@ namespace py::cpp::Windows::Security::Credentials
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -991,7 +991,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordCredential_RetrievePassword(py::wrapper::Windows::Security::Credentials::PasswordCredential* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1328,7 +1328,7 @@ namespace py::cpp::Windows::Security::Credentials
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1359,7 +1359,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordCredentialPropertyStore_Clear(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1400,7 +1400,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordCredentialPropertyStore_First(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1440,7 +1440,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordCredentialPropertyStore_GetView(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1480,7 +1480,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordCredentialPropertyStore_HasKey(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1522,7 +1522,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordCredentialPropertyStore_Insert(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1565,7 +1565,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordCredentialPropertyStore_Lookup(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1607,7 +1607,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordCredentialPropertyStore_Remove(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1946,7 +1946,7 @@ namespace py::cpp::Windows::Security::Credentials
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordVault_Add(py::wrapper::Windows::Security::Credentials::PasswordVault* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2020,7 +2020,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordVault_FindAllByResource(py::wrapper::Windows::Security::Credentials::PasswordVault* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2062,7 +2062,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordVault_FindAllByUserName(py::wrapper::Windows::Security::Credentials::PasswordVault* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordVault_Remove(py::wrapper::Windows::Security::Credentials::PasswordVault* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2147,7 +2147,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordVault_Retrieve(py::wrapper::Windows::Security::Credentials::PasswordVault* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2190,7 +2190,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* PasswordVault_RetrieveAll(py::wrapper::Windows::Security::Credentials::PasswordVault* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2290,7 +2290,7 @@ namespace py::cpp::Windows::Security::Credentials
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -2325,7 +2325,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* WebAccount_GetPictureAsync(py::wrapper::Windows::Security::Credentials::WebAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2367,7 +2367,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* WebAccount_SignOutAsync(py::wrapper::Windows::Security::Credentials::WebAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2407,7 +2407,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     static PyObject* WebAccount_SignOutWithClientIdAsync(py::wrapper::Windows::Security::Credentials::WebAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2661,7 +2661,7 @@ namespace py::cpp::Windows::Security::Credentials
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try

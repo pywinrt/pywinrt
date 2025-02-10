@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayBitmapRequestedEventArgs_UpdateBitmap(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -618,7 +618,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1336,7 +1336,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1774,7 +1774,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2139,7 +2139,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2170,7 +2170,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_Append(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2213,7 +2213,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_First(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2253,7 +2253,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_GetAt(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2295,7 +2295,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_GetMany(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2338,7 +2338,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_IndexOf(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2394,7 +2394,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_OverrideZIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_Pause(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2478,7 +2478,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_PauseAll(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2521,7 +2521,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_Start(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2562,7 +2562,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_StartAll(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2605,7 +2605,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_Stop(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2646,7 +2646,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayEffectPlaylist_StopAll(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3138,7 +3138,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -3585,7 +3585,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayUpdateRequestedEventArgs_SetColor(py::wrapper::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3628,7 +3628,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayUpdateRequestedEventArgs_SetColorForIndex(py::wrapper::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3672,7 +3672,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayUpdateRequestedEventArgs_SetColorsForIndices(py::wrapper::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3716,7 +3716,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyObject* LampArrayUpdateRequestedEventArgs_SetSingleColorForIndices(py::wrapper::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

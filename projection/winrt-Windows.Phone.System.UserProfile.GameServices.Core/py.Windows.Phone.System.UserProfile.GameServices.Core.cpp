@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_GetAuthenticationStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -55,7 +55,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_GetGamerProfileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -95,7 +95,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_GetInstalledGameItemsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -135,7 +135,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_GetPartnerTokenAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -177,7 +177,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_GetPrivilegesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -217,7 +217,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_GrantAchievement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -260,7 +260,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_GrantAvatarAward(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -303,7 +303,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_NotifyPartnerTokenExpired(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -346,7 +346,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameService_PostResult(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -490,7 +490,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyObject* GameServicePropertyCollection_GetPropertyAsync(py::wrapper::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

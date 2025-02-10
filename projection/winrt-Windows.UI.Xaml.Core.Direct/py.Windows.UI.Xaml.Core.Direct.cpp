@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_AddEventHandler(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -68,7 +68,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_AddEventHandler_HandledEventsToo(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -114,7 +114,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_AddToCollection(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -158,7 +158,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_ClearCollection(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -201,7 +201,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_ClearProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -245,7 +245,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_CreateInstance(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -287,7 +287,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetBooleanProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -330,7 +330,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetCollectionCount(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -372,7 +372,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetColorProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -415,7 +415,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetCornerRadiusProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -458,7 +458,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetDateTimeProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -501,7 +501,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -541,7 +541,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetDoubleProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetDurationProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetEnumProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -670,7 +670,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetGridLengthProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -713,7 +713,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetInt32Property(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -756,7 +756,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetMatrix3DProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -799,7 +799,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetMatrixProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -842,7 +842,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetObject(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -884,7 +884,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetObjectProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -927,7 +927,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetPointProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -970,7 +970,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetRectProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1013,7 +1013,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetSizeProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1056,7 +1056,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetStringProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1099,7 +1099,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetThicknessProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1142,7 +1142,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetTimeSpanProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1185,7 +1185,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetXamlDirectObject(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1227,7 +1227,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetXamlDirectObjectFromCollectionAt(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1270,7 +1270,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_GetXamlDirectObjectProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1313,7 +1313,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_InsertIntoCollectionAt(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1358,7 +1358,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_RemoveEventHandler(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1403,7 +1403,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_RemoveFromCollection(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1446,7 +1446,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_RemoveFromCollectionAt(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1490,7 +1490,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetBooleanProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1535,7 +1535,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetColorProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1580,7 +1580,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetCornerRadiusProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1625,7 +1625,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetDateTimeProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1670,7 +1670,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetDoubleProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1715,7 +1715,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetDurationProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1760,7 +1760,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetEnumProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1805,7 +1805,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetGridLengthProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1850,7 +1850,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetInt32Property(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1895,7 +1895,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetMatrix3DProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1940,7 +1940,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetMatrixProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1985,7 +1985,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetObjectProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2030,7 +2030,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetPointProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2075,7 +2075,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetRectProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2120,7 +2120,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetSizeProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2165,7 +2165,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetStringProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2210,7 +2210,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetThicknessProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2255,7 +2255,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetTimeSpanProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2300,7 +2300,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyObject* XamlDirect_SetXamlDirectObjectProperty(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {

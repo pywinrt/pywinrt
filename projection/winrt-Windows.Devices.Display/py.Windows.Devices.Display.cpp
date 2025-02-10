@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_FromInterfaceIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_GetDescriptor(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

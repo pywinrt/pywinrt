@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Media::MediaProperties
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_Copy(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -85,7 +85,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_CreateAac(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -129,7 +129,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_CreateAacAdts(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -173,7 +173,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_CreateAlac(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -217,7 +217,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_CreateFlac(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -261,7 +261,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_CreateMp3(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -305,7 +305,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_CreatePcm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -349,7 +349,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_CreateWma(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -393,7 +393,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_GetFormatUserData(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -442,7 +442,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_SetFormatUserData(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1434,7 +1434,7 @@ namespace py::cpp::Windows::Media::MediaProperties
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1465,7 +1465,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ContainerEncodingProperties_Copy(py::wrapper::Windows::Media::MediaProperties::ContainerEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2782,7 +2782,7 @@ namespace py::cpp::Windows::Media::MediaProperties
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2813,7 +2813,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_Copy(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2853,7 +2853,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_CreateBmp(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2893,7 +2893,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_CreateHeif(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2933,7 +2933,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_CreateJpeg(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2973,7 +2973,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_CreateJpegXR(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3013,7 +3013,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_CreatePng(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3053,7 +3053,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_CreateUncompressed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3449,7 +3449,7 @@ namespace py::cpp::Windows::Media::MediaProperties
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3480,7 +3480,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateAlac(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3522,7 +3522,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateAv1(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3564,7 +3564,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateAvi(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3606,7 +3606,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateFlac(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3648,7 +3648,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateFromFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3690,7 +3690,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateFromStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3732,7 +3732,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateHevc(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3774,7 +3774,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateM4a(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3816,7 +3816,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateMp3(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3858,7 +3858,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateMp4(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3900,7 +3900,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateVp9(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3942,7 +3942,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateWav(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3984,7 +3984,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateWma(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4026,7 +4026,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_CreateWmv(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4068,7 +4068,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_GetAudioTracks(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4108,7 +4108,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_GetTimedMetadataTracks(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4148,7 +4148,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_GetVideoTracks(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4188,7 +4188,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_SetAudioTracks(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4231,7 +4231,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_SetTimedMetadataTracks(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4274,7 +4274,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_SetVideoTracks(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6314,7 +6314,7 @@ namespace py::cpp::Windows::Media::MediaProperties
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6345,7 +6345,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaPropertySet_Clear(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6386,7 +6386,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaPropertySet_First(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6426,7 +6426,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaPropertySet_GetView(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6466,7 +6466,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaPropertySet_HasKey(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6508,7 +6508,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaPropertySet_Insert(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6551,7 +6551,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaPropertySet_Lookup(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6593,7 +6593,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaPropertySet_Remove(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7272,7 +7272,7 @@ namespace py::cpp::Windows::Media::MediaProperties
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7303,7 +7303,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_Copy(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7343,7 +7343,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_CreatePgs(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7383,7 +7383,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_CreateSrt(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7423,7 +7423,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_CreateSsa(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7465,7 +7465,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_CreateVobSub(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7507,7 +7507,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_GetFormatUserData(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7556,7 +7556,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_SetFormatUserData(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7813,7 +7813,7 @@ namespace py::cpp::Windows::Media::MediaProperties
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7844,7 +7844,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_Copy(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7884,7 +7884,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_CreateAv1(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7924,7 +7924,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_CreateH264(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7964,7 +7964,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_CreateHevc(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8004,7 +8004,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_CreateMpeg2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8044,7 +8044,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_CreateUncompressed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8088,7 +8088,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_CreateVp9(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8128,7 +8128,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_GetFormatUserData(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8177,7 +8177,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_SetFormatUserData(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

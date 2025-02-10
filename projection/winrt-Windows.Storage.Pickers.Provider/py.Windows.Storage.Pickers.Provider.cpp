@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_AddFile(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_CanAddFile(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_ContainsFile(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileOpenPickerUI_RemoveFile(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -651,7 +651,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* FileSavePickerUI_TrySetFileName(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1054,7 +1054,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* PickerClosingDeferral_Complete(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1284,7 +1284,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* PickerClosingOperation_GetDeferral(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1419,7 +1419,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* TargetFileRequest_GetDeferral(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1593,7 +1593,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyObject* TargetFileRequestDeferral_Complete(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

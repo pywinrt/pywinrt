@@ -49,7 +49,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>();
         if (!self_type)
@@ -288,7 +288,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>();
         if (!self_type)
@@ -736,7 +736,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>();
         if (!self_type)
@@ -1047,7 +1047,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1194,7 +1194,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1341,7 +1341,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1853,7 +1853,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2342,7 +2342,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2520,7 +2520,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2551,7 +2551,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_FindMapElementsAtOffset(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2593,7 +2593,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_FindMapElementsAtOffsetWithRadius(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2636,7 +2636,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_GetLocation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2678,7 +2678,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_GetLocationFromOffset(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2728,7 +2728,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_GetLocationFromOffsetWithReferenceSystem(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2779,7 +2779,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_GetNormalizedAnchorPoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2821,7 +2821,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_GetOffsetFromLocation(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2871,7 +2871,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_GetVisibleRegion(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2913,7 +2913,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_IsLocationInView(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2963,7 +2963,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_SetLocation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3007,7 +3007,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_SetNormalizedAnchorPoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3051,7 +3051,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_StartContinuousPan(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3095,7 +3095,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_StartContinuousRotate(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3138,7 +3138,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_StartContinuousTilt(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3181,7 +3181,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_StartContinuousZoom(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3224,7 +3224,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_StopContinuousPan(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3265,7 +3265,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_StopContinuousRotate(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3306,7 +3306,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_StopContinuousTilt(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3347,7 +3347,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_StopContinuousZoom(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3388,7 +3388,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryGetLocationFromOffset(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3444,7 +3444,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryGetLocationFromOffsetWithReferenceSystem(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3501,7 +3501,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryPanAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3544,7 +3544,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryPanToAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3586,7 +3586,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryRotateAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3628,7 +3628,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryRotateToAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3670,7 +3670,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TrySetSceneAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3712,7 +3712,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TrySetSceneWithAnimationAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3755,7 +3755,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TrySetViewBoundsAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3799,7 +3799,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TrySetViewWithCenterAndZoomAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3842,7 +3842,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TrySetViewWithCenterAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3884,7 +3884,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TrySetViewWithCenterZoomHeadingAndPitchAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3929,7 +3929,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TrySetViewWithCenterZoomHeadingPitchAndAnimationAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -3975,7 +3975,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryTiltAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4017,7 +4017,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryTiltToAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4059,7 +4059,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryZoomInAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4099,7 +4099,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryZoomOutAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4139,7 +4139,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControl_TryZoomToAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9125,7 +9125,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9241,7 +9241,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9357,7 +9357,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9473,7 +9473,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9589,7 +9589,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -9622,7 +9622,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapControlDataHelper_CreateMapControl(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10276,7 +10276,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10454,7 +10454,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10632,7 +10632,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10810,7 +10810,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11023,7 +11023,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>();
         if (!self_type)
@@ -11159,7 +11159,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11279,7 +11279,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>();
         if (!self_type)
@@ -12122,7 +12122,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12803,7 +12803,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12981,7 +12981,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13159,7 +13159,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13337,7 +13337,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13812,7 +13812,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13990,7 +13990,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14168,7 +14168,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14346,7 +14346,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14524,7 +14524,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15104,7 +15104,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15251,7 +15251,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15656,7 +15656,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>();
         if (!self_type)
@@ -16130,7 +16130,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>();
         if (!self_type)
@@ -16191,7 +16191,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapModel3D_CreateFrom3MFAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16233,7 +16233,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapModel3D_CreateFrom3MFWithShadingOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16353,7 +16353,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -16933,7 +16933,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17381,7 +17381,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17563,7 +17563,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>();
         if (!self_type)
@@ -17881,7 +17881,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromBoundingBox(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17923,7 +17923,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromBoundingBoxWithHeadingAndPitch(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -17967,7 +17967,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromCamera(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18009,7 +18009,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromLocation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18051,7 +18051,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromLocationAndRadius(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18094,7 +18094,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromLocationAndRadiusWithHeadingAndPitch(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -18139,7 +18139,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromLocationWithHeadingAndPitch(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -18183,7 +18183,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromLocations(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18225,7 +18225,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapScene_CreateFromLocationsWithHeadingAndPitch(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -18460,7 +18460,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_Aerial(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18500,7 +18500,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_AerialWithOverlay(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18540,7 +18540,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_Combine(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18582,7 +18582,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_ParseFromJson(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18624,7 +18624,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_RoadDark(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18664,7 +18664,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_RoadHighContrastDark(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18704,7 +18704,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_RoadHighContrastLight(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18744,7 +18744,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_RoadLight(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18784,7 +18784,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapStyleSheet_TryParseFromJson(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21099,7 +21099,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -21246,7 +21246,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -21277,7 +21277,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapTileBitmapRequest_GetDeferral(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21442,7 +21442,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -21473,7 +21473,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapTileBitmapRequestDeferral_Complete(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21569,7 +21569,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -21844,7 +21844,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>();
         if (!self_type)
@@ -22019,7 +22019,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>();
         if (!self_type)
@@ -22238,7 +22238,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapTileSource_Pause(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22279,7 +22279,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapTileSource_Play(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22320,7 +22320,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapTileSource_Stop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23915,7 +23915,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -23946,7 +23946,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapTileUriRequest_GetDeferral(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24111,7 +24111,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -24142,7 +24142,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* MapTileUriRequestDeferral_Complete(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24238,7 +24238,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -24478,7 +24478,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -25012,7 +25012,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* StreetsidePanorama_FindNearbyWithLocationAndRadiusAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -25055,7 +25055,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyObject* StreetsidePanorama_FindNearbyWithLocationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25224,7 +25224,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

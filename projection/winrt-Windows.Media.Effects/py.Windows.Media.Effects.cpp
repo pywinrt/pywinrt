@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AcousticEchoCancellationConfiguration_SetEchoCancellationRenderEndpoint(py::wrapper::Windows::Media::Effects::AcousticEchoCancellationConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -130,7 +130,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AudioCaptureEffectsManager_GetAudioCaptureEffects(py::wrapper::Windows::Media::Effects::AudioCaptureEffectsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -301,7 +301,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AudioEffect_SetState(py::wrapper::Windows::Media::Effects::AudioEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -523,7 +523,7 @@ namespace py::cpp::Windows::Media::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -689,7 +689,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AudioEffectsManager_CreateAudioCaptureEffectsManager(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -732,7 +732,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AudioEffectsManager_CreateAudioCaptureEffectsManagerWithMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -776,7 +776,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AudioEffectsManager_CreateAudioRenderEffectsManager(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -819,7 +819,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AudioEffectsManager_CreateAudioRenderEffectsManagerWithMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -924,7 +924,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AudioRenderEffectsManager_GetAudioRenderEffects(py::wrapper::Windows::Media::Effects::AudioRenderEffectsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -964,7 +964,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* AudioRenderEffectsManager_ShowSettingsUI(py::wrapper::Windows::Media::Effects::AudioRenderEffectsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1199,7 +1199,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* CompositeVideoFrameContext_GetOverlayForSurface(py::wrapper::Windows::Media::Effects::CompositeVideoFrameContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1639,7 +1639,7 @@ namespace py::cpp::Windows::Media::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1856,7 +1856,7 @@ namespace py::cpp::Windows::Media::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2021,7 +2021,7 @@ namespace py::cpp::Windows::Media::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2186,7 +2186,7 @@ namespace py::cpp::Windows::Media::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3431,7 +3431,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicAudioEffect_Close(py::wrapper::Windows::Media::Effects::IBasicAudioEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3474,7 +3474,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicAudioEffect_DiscardQueuedFrames(py::wrapper::Windows::Media::Effects::IBasicAudioEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3515,7 +3515,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicAudioEffect_ProcessFrame(py::wrapper::Windows::Media::Effects::IBasicAudioEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3558,7 +3558,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicAudioEffect_SetEncodingProperties(py::wrapper::Windows::Media::Effects::IBasicAudioEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3601,7 +3601,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicAudioEffect_SetProperties(py::wrapper::Windows::Media::Effects::IBasicAudioEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4018,7 +4018,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicVideoEffect_Close(py::wrapper::Windows::Media::Effects::IBasicVideoEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4061,7 +4061,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicVideoEffect_DiscardQueuedFrames(py::wrapper::Windows::Media::Effects::IBasicVideoEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4102,7 +4102,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicVideoEffect_ProcessFrame(py::wrapper::Windows::Media::Effects::IBasicVideoEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4145,7 +4145,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicVideoEffect_SetEncodingProperties(py::wrapper::Windows::Media::Effects::IBasicVideoEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4189,7 +4189,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IBasicVideoEffect_SetProperties(py::wrapper::Windows::Media::Effects::IBasicVideoEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4720,7 +4720,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IVideoCompositor_Close(py::wrapper::Windows::Media::Effects::IVideoCompositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4763,7 +4763,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IVideoCompositor_CompositeFrame(py::wrapper::Windows::Media::Effects::IVideoCompositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4806,7 +4806,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IVideoCompositor_DiscardQueuedFrames(py::wrapper::Windows::Media::Effects::IVideoCompositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4847,7 +4847,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IVideoCompositor_SetEncodingProperties(py::wrapper::Windows::Media::Effects::IVideoCompositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4891,7 +4891,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyObject* IVideoCompositor_SetProperties(py::wrapper::Windows::Media::Effects::IVideoCompositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

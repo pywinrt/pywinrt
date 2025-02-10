@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::UI::Composition::Effects
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

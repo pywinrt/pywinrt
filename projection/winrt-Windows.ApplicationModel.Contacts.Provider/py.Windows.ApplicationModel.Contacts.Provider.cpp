@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
     static PyObject* ContactPickerUI_AddContact(py::wrapper::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -97,7 +97,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
     static PyObject* ContactPickerUI_ContainsContact(py::wrapper::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -139,7 +139,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
     static PyObject* ContactPickerUI_RemoveContact(py::wrapper::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

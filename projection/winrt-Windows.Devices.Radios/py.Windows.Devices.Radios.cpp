@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Radios
 
     static PyObject* Radio_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Devices::Radios
 
     static PyObject* Radio_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Devices::Radios
 
     static PyObject* Radio_GetRadiosAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Devices::Radios
 
     static PyObject* Radio_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Devices::Radios
 
     static PyObject* Radio_SetStateAsync(py::wrapper::Windows::Devices::Radios::Radio* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

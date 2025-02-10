@@ -358,7 +358,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1012,7 +1012,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandDefinition_SetPhraseListAsync(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandDefinitionManager_InstallCommandDefinitionsFromStorageFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1398,7 +1398,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_CreateResponse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1440,7 +1440,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_CreateResponseForPrompt(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1483,7 +1483,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_CreateResponseForPromptWithTiles(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1527,7 +1527,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandResponse_CreateResponseWithTiles(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1930,7 +1930,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_FromAppServiceTriggerDetails(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1972,7 +1972,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_GetVoiceCommandAsync(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2012,7 +2012,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_ReportFailureAsync(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2054,7 +2054,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_ReportProgressAsync(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2096,7 +2096,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_ReportSuccessAsync(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2138,7 +2138,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_RequestAppLaunchAsync(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2180,7 +2180,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_RequestConfirmationAsync(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2222,7 +2222,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyObject* VoiceCommandServiceConnection_RequestDisambiguationAsync(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2445,7 +2445,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithPointsAndRoundingMode(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentCoordinateConverter_ConvertLocalToScreenWithRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -192,7 +192,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -234,7 +234,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -276,7 +276,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentCoordinateConverter_ConvertScreenToLocalWithRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -318,7 +318,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentCoordinateConverter_CreateForWindowId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -452,7 +452,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentDeferral_Complete(py::wrapper::Microsoft::UI::Content::ContentDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -776,7 +776,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -817,7 +817,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -859,7 +859,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_FindAllForCompositor(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -901,7 +901,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_FindAllForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -941,7 +941,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_GetAutomationHostProvider(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -981,7 +981,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_GetByVisual(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1023,7 +1023,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_GetFromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1065,7 +1065,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_GetStateChangeDeferral(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1105,7 +1105,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_RequestSize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2957,7 +2957,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2998,7 +2998,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_GetIslandStateChangeDeferral(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4158,7 +4158,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteEnvironment_NotifySettingChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5215,7 +5215,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopChildSiteBridge_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5444,7 +5444,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5485,7 +5485,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_Connect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5528,7 +5528,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_Disable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5569,7 +5569,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_Enable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5610,7 +5610,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_Hide(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5651,7 +5651,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5691,7 +5691,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_MoveAndResize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5734,7 +5734,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_MoveInZOrderAtBottom(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5775,7 +5775,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_MoveInZOrderAtTop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5816,7 +5816,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_MoveInZOrderBelow(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5859,7 +5859,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_Show(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6449,7 +6449,7 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* IContentSiteBridge_Close(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

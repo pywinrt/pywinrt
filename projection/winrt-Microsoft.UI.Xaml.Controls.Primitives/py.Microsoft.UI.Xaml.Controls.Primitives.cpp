@@ -584,7 +584,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* AutoSuggestBoxHelper_GetKeepInteriorCornersSquare(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -626,7 +626,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* AutoSuggestBoxHelper_SetKeepInteriorCornersSquare(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1390,7 +1390,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2038,7 +2038,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::CarouselPanel>();
         if (!self_type)
@@ -2099,7 +2099,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_GetIrregularSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2142,7 +2142,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_GetRegularSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2199,7 +2199,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_LineDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2240,7 +2240,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_LineLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2281,7 +2281,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_LineRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2322,7 +2322,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_LineUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2363,7 +2363,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_MakeVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2406,7 +2406,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_MouseWheelDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2447,7 +2447,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_MouseWheelLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2488,7 +2488,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_MouseWheelRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2529,7 +2529,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_MouseWheelUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2570,7 +2570,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_PageDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2611,7 +2611,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_PageLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2652,7 +2652,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_PageRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2693,7 +2693,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_PageUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2734,7 +2734,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_SetHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2777,7 +2777,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_SetVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3539,7 +3539,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum>();
         if (!self_type)
@@ -4787,7 +4787,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout>();
         if (!self_type)
@@ -5235,7 +5235,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ComboBoxHelper_GetKeepInteriorCornersSquare(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5277,7 +5277,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ComboBoxHelper_SetKeepInteriorCornersSquare(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5682,7 +5682,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>();
         if (!self_type)
@@ -5951,7 +5951,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarAutomationProperties_GetControlType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5993,7 +5993,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarAutomationProperties_SetControlType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7236,7 +7236,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7267,7 +7267,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CornerRadiusFilterConverter_Convert(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7312,7 +7312,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CornerRadiusFilterConverter_ConvertBack(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7636,7 +7636,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7667,7 +7667,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CornerRadiusToThicknessConverter_Convert(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7712,7 +7712,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* CornerRadiusToThicknessConverter_ConvertBack(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -8071,7 +8071,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>();
         if (!self_type)
@@ -8339,7 +8339,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragDeltaEventArgs>();
         if (!self_type)
@@ -8575,7 +8575,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::DragStartedEventArgs>();
         if (!self_type)
@@ -8879,7 +8879,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_CreatePresenter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8919,7 +8919,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_GetAttachedFlyout(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8961,7 +8961,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_Hide(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9002,7 +9002,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_OnProcessKeyboardAccelerators(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9045,7 +9045,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_SetAttachedFlyout(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9089,7 +9089,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_ShowAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9132,7 +9132,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_ShowAtWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9176,7 +9176,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_ShowAttachedFlyout(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9219,7 +9219,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_TryInvokeKeyboardAccelerator(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11110,7 +11110,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::FlyoutShowOptions>();
         if (!self_type)
@@ -11535,7 +11535,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* GeneratorPositionHelper_FromIndexAndOffset(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11689,7 +11689,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter>();
         if (!self_type)
@@ -14176,7 +14176,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel>();
         if (!self_type)
@@ -14237,7 +14237,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* InfoBarPanel_GetHorizontalOrientationMargin(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14279,7 +14279,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* InfoBarPanel_GetVerticalOrientationMargin(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14321,7 +14321,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* InfoBarPanel_SetHorizontalOrientationMargin(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14365,7 +14365,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* InfoBarPanel_SetVerticalOrientationMargin(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14970,7 +14970,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15001,7 +15001,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemBackgroundConverter_Convert(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -15046,7 +15046,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemBackgroundConverter_ConvertBack(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -15370,7 +15370,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15401,7 +15401,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemForegroundConverter_Convert(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -15446,7 +15446,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemForegroundConverter_ConvertBack(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -15779,7 +15779,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* LayoutInformation_GetAvailableSize(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15821,7 +15821,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* LayoutInformation_GetLayoutExceptionElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15863,7 +15863,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* LayoutInformation_GetLayoutSlot(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16018,7 +16018,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ListViewItemPresenter>();
         if (!self_type)
@@ -23137,7 +23137,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelectorPanel_GetIrregularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23180,7 +23180,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelectorPanel_GetRegularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23712,7 +23712,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter>();
         if (!self_type)
@@ -24085,7 +24085,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>();
         if (!self_type)
@@ -24520,7 +24520,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenterTemplateSettings>();
         if (!self_type)
@@ -24789,7 +24789,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_GetInsertionIndexes(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24845,7 +24845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_GetIrregularSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24888,7 +24888,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_GetRegularSnapPoints(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24945,7 +24945,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_LineDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24986,7 +24986,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_LineLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25027,7 +25027,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_LineRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25068,7 +25068,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_LineUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25109,7 +25109,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_MakeVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -25152,7 +25152,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_MouseWheelDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25193,7 +25193,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_MouseWheelLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25234,7 +25234,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_MouseWheelRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25275,7 +25275,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_MouseWheelUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25316,7 +25316,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_PageDown(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25357,7 +25357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_PageLeft(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25398,7 +25398,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_PageRight(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25439,7 +25439,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_PageUp(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25480,7 +25480,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_SetHorizontalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25523,7 +25523,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_SetVerticalOffset(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26348,7 +26348,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* PickerFlyoutBase_GetTitle(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26390,7 +26390,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* PickerFlyoutBase_OnConfirmed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26431,7 +26431,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* PickerFlyoutBase_SetTitle(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -26475,7 +26475,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* PickerFlyoutBase_ShouldShowConfirmationButtons(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26660,7 +26660,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::PivotHeaderItem>();
         if (!self_type)
@@ -26796,7 +26796,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -26881,7 +26881,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -26912,7 +26912,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* PivotPanel_GetIrregularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotPanel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -26955,7 +26955,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* PivotPanel_GetRegularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::PivotPanel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -27264,7 +27264,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -28919,7 +28919,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_OnMaximumChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -28963,7 +28963,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_OnMinimumChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -29007,7 +29007,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_OnValueChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -29826,7 +29826,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -30169,7 +30169,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedScrollSnapPoint>();
         if (!self_type)
@@ -30470,7 +30470,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::RepeatedZoomSnapPoint>();
         if (!self_type)
@@ -30735,7 +30735,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -31211,7 +31211,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -31431,7 +31431,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -31619,7 +31619,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -31839,7 +31839,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -32059,7 +32059,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -32241,7 +32241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter>();
         if (!self_type)
@@ -32302,7 +32302,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_AddScrollVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -32345,7 +32345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_AddZoomVelocity(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -32389,7 +32389,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_RegisterAnchorCandidate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -32432,7 +32432,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_ScrollBy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -32475,7 +32475,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_ScrollByWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -32519,7 +32519,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_ScrollTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -32562,7 +32562,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_ScrollToWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -32606,7 +32606,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_UnregisterAnchorCandidate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -32649,7 +32649,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_ZoomBy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -32692,7 +32692,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_ZoomByWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -32736,7 +32736,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_ZoomTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -32779,7 +32779,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollPresenter_ZoomToWithOptions(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -35893,7 +35893,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollSnapPoint>();
         if (!self_type)
@@ -36187,7 +36187,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_GetIsSelectionActive(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -37429,7 +37429,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -37460,7 +37460,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_CancelDrag(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::Thumb* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -37840,7 +37840,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -38108,7 +38108,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ToggleButton>();
         if (!self_type)
@@ -38169,7 +38169,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_OnToggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -39160,7 +39160,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ZoomSnapPoint>();
         if (!self_type)
@@ -39422,7 +39422,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollController_GetScrollAnimation(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -39467,7 +39467,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollController_NotifyRequestedScrollCompleted(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -39510,7 +39510,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollController_SetIsScrollable(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -39553,7 +39553,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollController_SetValues(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -40694,7 +40694,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollControllerPanningInfo_SetPanningElementExpressionAnimationSources(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -41336,7 +41336,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollSnapPointsInfo_GetIrregularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -41379,7 +41379,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollSnapPointsInfo_GetRegularSnapPoints(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -42021,7 +42021,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

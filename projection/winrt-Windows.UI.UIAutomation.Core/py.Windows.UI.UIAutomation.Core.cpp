@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* AutomationRemoteOperationResult_GetOperand(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* AutomationRemoteOperationResult_HasOperand(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -257,7 +257,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRegistrar_RegisterAnnotationType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -299,7 +299,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRegistrar_UnregisterAnnotationType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -392,7 +392,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -423,7 +423,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperation_AddToResults(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -466,7 +466,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperation_Execute(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -508,7 +508,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperation_ImportConnectionBoundObject(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -552,7 +552,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperation_ImportElement(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -596,7 +596,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperation_ImportTextRange(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -640,7 +640,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperation_IsOpcodeSupported(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -751,7 +751,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperationContext_GetOperand(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -793,7 +793,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperationContext_SetOperand(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -837,7 +837,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* CoreAutomationRemoteOperationContext_SetOperand2(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -939,7 +939,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -988,7 +988,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationClientSession_CreateWindowAsync(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1032,7 +1032,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationClientSession_Start(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1073,7 +1073,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationClientSession_Stop(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1556,7 +1556,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationServer_ReportSession(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1657,7 +1657,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationWindow_UnregisterAsync(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1966,7 +1966,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* ICoreAutomationRemoteOperationExtensionProvider_CallExtension(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2011,7 +2011,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* ICoreAutomationRemoteOperationExtensionProvider_IsExtensionSupported(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2267,7 +2267,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -2448,7 +2448,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

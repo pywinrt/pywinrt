@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_DeleteProfileAsync(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_Discover(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_DiscoverAsync(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_DiscoverWithServerAddressAndMatchingId(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_DiscoverWithServerAddressAndMatchingIdAsync(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_DownloadProfileMetadataAsync(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -273,7 +273,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_GetProfiles(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -313,7 +313,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESim_ResetAsync(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1231,7 +1231,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimManager_TryCreateESimWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1615,7 +1615,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_DisableAsync(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1655,7 +1655,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_EnableAsync(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1695,7 +1695,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfile_SetNicknameAsync(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2051,7 +2051,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_ConfirmInstallAsync(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2091,7 +2091,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_ConfirmInstallWithConfirmationCodeAsync(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2133,7 +2133,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_DenyInstallAsync(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2173,7 +2173,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimProfileMetadata_PostponeInstallAsync(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3033,7 +3033,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_Start(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3074,7 +3074,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ESimWatcher_Stop(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3538,7 +3538,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* FdnAccessManager_RequestUnlockAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3638,7 +3638,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_AbortAuthentication(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3681,7 +3681,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_IssueCredentials(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3727,7 +3727,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_IssueCredentialsAsync(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3772,7 +3772,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_SkipAuthentication(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3813,7 +3813,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_TriggerAttentionRequired(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3857,7 +3857,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* HotspotAuthenticationContext_TryGetAuthenticationContext(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5100,7 +5100,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_CreateFromNetworkAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5142,7 +5142,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccount_GetConnectionProfiles(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5726,7 +5726,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5757,7 +5757,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_Start(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5798,7 +5798,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandAccountWatcher_Stop(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6261,7 +6261,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -9529,7 +9529,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceService_OpenCommandSession(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9569,7 +9569,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceService_OpenDataSession(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10048,7 +10048,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceCommandSession_CloseSession(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10089,7 +10089,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceCommandSession_SendQueryCommandAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10132,7 +10132,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceCommandSession_SendSetCommandAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10402,7 +10402,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceDataSession_CloseSession(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10443,7 +10443,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandDeviceServiceDataSession_WriteDataAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10960,7 +10960,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11002,7 +11002,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_GetCurrentConfigurationAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11042,7 +11042,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11082,7 +11082,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11122,7 +11122,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_GetDeviceService(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11164,7 +11164,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_GetIsPassthroughEnabledAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11204,7 +11204,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_GetIsPassthroughEnabledWithSlotIndex(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11246,7 +11246,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_GetIsPassthroughEnabledWithSlotIndexAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11288,7 +11288,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_ResetAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11328,7 +11328,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_SetIsPassthroughEnabledAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11370,7 +11370,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_SetIsPassthroughEnabledWithSlotIndex(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11413,7 +11413,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_SetIsPassthroughEnabledWithSlotIndexAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11456,7 +11456,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModem_TryGetPcoAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12086,7 +12086,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -12120,7 +12120,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModemIsolation_AddAllowedHost(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12163,7 +12163,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModemIsolation_AddAllowedHostRange(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12207,7 +12207,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModemIsolation_ApplyConfigurationAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12247,7 +12247,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandModemIsolation_ClearConfigurationAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12354,7 +12354,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_GetCellsInfoAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12394,7 +12394,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_GetVoiceCallSupportAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12434,7 +12434,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandNetwork_ShowConnectionUI(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13320,7 +13320,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_ChangeAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13363,7 +13363,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_DisableAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13405,7 +13405,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_EnableAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13447,7 +13447,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_EnterAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13489,7 +13489,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPin_UnblockAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14067,7 +14067,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandPinManager_GetPin(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14548,7 +14548,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_DisableBackoffAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14588,7 +14588,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_EnableBackoffAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14628,7 +14628,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_GetIsTransmittingAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14668,7 +14668,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_RevertSarToHardwareControlAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14708,7 +14708,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_SetConfigurationAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14750,7 +14750,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_SetTransmissionStateChangedHysteresisAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14792,7 +14792,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_StartTransmissionStateMonitoring(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14833,7 +14833,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSarManager_StopTransmissionStateMonitoring(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15417,7 +15417,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotManager_SetCurrentSlot(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15459,7 +15459,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandSlotManager_SetCurrentSlotAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15856,7 +15856,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUicc_GetUiccAppsAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUicc* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15991,7 +15991,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccApp_GetRecordDetailsAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16033,7 +16033,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* MobileBroadbandUiccApp_ReadRecordAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16796,7 +16796,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorNotificationEventDetails_AuthorizeTethering(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17081,7 +17081,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17112,7 +17112,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringAccessPointConfiguration_IsAuthenticationKindSupported(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17154,7 +17154,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringAccessPointConfiguration_IsAuthenticationKindSupportedAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17196,7 +17196,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringAccessPointConfiguration_IsBandSupported(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17238,7 +17238,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringAccessPointConfiguration_IsBandSupportedAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17752,7 +17752,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_ConfigureAccessPointAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17794,7 +17794,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_CreateFromConnectionProfile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17836,7 +17836,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_CreateFromConnectionProfileWithTargetAdapter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17879,7 +17879,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_CreateFromNetworkAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17921,7 +17921,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_DisableNoConnectionsTimeout(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17962,7 +17962,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_DisableNoConnectionsTimeoutAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18002,7 +18002,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_EnableNoConnectionsTimeout(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18043,7 +18043,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_EnableNoConnectionsTimeoutAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18083,7 +18083,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_GetCurrentAccessPointConfiguration(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18123,7 +18123,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_GetTetheringCapability(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18165,7 +18165,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_GetTetheringCapabilityFromConnectionProfile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18207,7 +18207,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_GetTetheringClients(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18247,7 +18247,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_IsNoConnectionsTimeoutEnabled(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18287,7 +18287,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_StartTetheringAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18358,7 +18358,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringManager_StopTetheringAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18706,7 +18706,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18737,7 +18737,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_IsAuthenticationKindSupported(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18779,7 +18779,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_IsAuthenticationKindSupportedAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18821,7 +18821,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_IsBandSupported(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18863,7 +18863,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_IsBandSupportedAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19447,7 +19447,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ProvisionedProfile_UpdateCost(py::wrapper::Windows::Networking::NetworkOperators::ProvisionedProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19490,7 +19490,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ProvisionedProfile_UpdateUsage(py::wrapper::Windows::Networking::NetworkOperators::ProvisionedProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19589,7 +19589,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -19620,7 +19620,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ProvisioningAgent_CreateFromNetworkAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19662,7 +19662,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ProvisioningAgent_GetProvisionedProfile(py::wrapper::Windows::Networking::NetworkOperators::ProvisioningAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19705,7 +19705,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* ProvisioningAgent_ProvisionFromXmlDocumentAsync(py::wrapper::Windows::Networking::NetworkOperators::ProvisioningAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19834,7 +19834,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* TetheringEntitlementCheckTriggerDetails_AllowTethering(py::wrapper::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19875,7 +19875,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* TetheringEntitlementCheckTriggerDetails_DenyTethering(py::wrapper::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20005,7 +20005,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -20038,7 +20038,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdMessage_GetPayload(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20078,7 +20078,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdMessage_SetPayload(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20451,7 +20451,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdSession_Close(py::wrapper::Windows::Networking::NetworkOperators::UssdSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20492,7 +20492,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdSession_CreateFromNetworkAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20534,7 +20534,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdSession_CreateFromNetworkInterfaceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20576,7 +20576,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyObject* UssdSession_SendMessageAndGetReplyAsync(py::wrapper::Windows::Networking::NetworkOperators::UssdSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20716,7 +20716,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -20949,7 +20949,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ProfileUsage>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

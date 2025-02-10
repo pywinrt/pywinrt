@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannel_Close(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -249,7 +249,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -289,7 +289,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsyncWithId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -331,7 +331,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManager_CreatePushNotificationChannelForSecondaryTileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -373,7 +373,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -413,7 +413,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManagerForUser_CreatePushNotificationChannelForApplicationAsync(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -624,7 +624,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManagerForUser_CreatePushNotificationChannelForApplicationAsyncWithId(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -666,7 +666,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManagerForUser_CreatePushNotificationChannelForSecondaryTileAsync(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -708,7 +708,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManagerForUser_CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -751,7 +751,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyObject* PushNotificationChannelManagerForUser_CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {

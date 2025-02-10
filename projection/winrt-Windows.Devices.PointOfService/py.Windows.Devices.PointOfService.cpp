@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_CheckHealthAsync(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_ClaimScannerAsync(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_Close(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -228,7 +228,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -310,7 +310,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_GetSupportedProfiles(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -350,7 +350,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_GetSupportedSymbologiesAsync(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -390,7 +390,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_IsProfileSupported(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -432,7 +432,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_IsSymbologySupportedAsync(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -474,7 +474,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeScanner_RetrieveStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1381,7 +1381,7 @@ namespace py::cpp::Windows::Devices::PointOfService
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -1689,7 +1689,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* BarcodeSymbologies_GetName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5209,7 +5209,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawer_CheckHealthAsync(py::wrapper::Windows::Devices::PointOfService::CashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5251,7 +5251,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawer_ClaimDrawerAsync(py::wrapper::Windows::Devices::PointOfService::CashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5291,7 +5291,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawer_Close(py::wrapper::Windows::Devices::PointOfService::CashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5332,7 +5332,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawer_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5374,7 +5374,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawer_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5414,7 +5414,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawer_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5454,7 +5454,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawer_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5496,7 +5496,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawer_GetStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::CashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6126,7 +6126,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* CashDrawerCloseAlarm_StartAsync(py::wrapper::Windows::Devices::PointOfService::CashDrawerCloseAlarm* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7181,7 +7181,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_Close(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7222,7 +7222,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_DisableAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7262,7 +7262,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_EnableAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7302,7 +7302,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_GetSymbologyAttributesAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7344,7 +7344,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_HideVideoPreview(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7385,7 +7385,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_ResetStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7427,7 +7427,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_RetainDevice(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7468,7 +7468,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_SetActiveProfileAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7510,7 +7510,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_SetActiveSymbologiesAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7552,7 +7552,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_SetSymbologyAttributesAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7595,7 +7595,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_ShowVideoPreviewAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7635,7 +7635,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_StartSoftwareTriggerAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7675,7 +7675,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_StopSoftwareTriggerAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7715,7 +7715,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedBarcodeScanner_UpdateStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8663,7 +8663,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedCashDrawer_Close(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8704,7 +8704,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedCashDrawer_DisableAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8744,7 +8744,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedCashDrawer_EnableAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8784,7 +8784,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedCashDrawer_OpenDrawerAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8824,7 +8824,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedCashDrawer_ResetStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8866,7 +8866,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedCashDrawer_RetainDeviceAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8906,7 +8906,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedCashDrawer_UpdateStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9364,7 +9364,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedJournalPrinter_CreateJob(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9404,7 +9404,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedJournalPrinter_ValidateData(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10109,7 +10109,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_CheckHealthAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10151,7 +10151,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_CheckPowerStatusAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10191,7 +10191,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_Close(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10232,7 +10232,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10274,7 +10274,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_GetAttributes(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10314,7 +10314,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10354,7 +10354,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10396,7 +10396,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_GetStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10438,7 +10438,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_RetainDevice(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10479,7 +10479,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_TryClearDescriptorsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10519,7 +10519,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_TryCreateWindowAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10562,7 +10562,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_TrySetDescriptorAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10605,7 +10605,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_TryStoreStorageFileBitmapAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10647,7 +10647,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_TryStoreStorageFileBitmapWithAlignmentAndWidthAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -10692,7 +10692,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_TryStoreStorageFileBitmapWithAlignmentAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -10736,7 +10736,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedLineDisplay_TryUpdateAttributesAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11539,7 +11539,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_AuthenticateDeviceAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11581,7 +11581,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_Close(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11622,7 +11622,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_DeAuthenticateDeviceAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11664,7 +11664,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_DisableAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11704,7 +11704,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_EnableAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11744,7 +11744,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_ResetStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11786,7 +11786,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_RetainDevice(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11827,7 +11827,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_RetrieveDeviceAuthenticationDataAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11867,7 +11867,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_SetErrorReportingType(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11910,7 +11910,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_UpdateKeyAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11953,7 +11953,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedMagneticStripeReader_UpdateStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13002,7 +13002,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedPosPrinter_Close(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13043,7 +13043,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedPosPrinter_DisableAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13083,7 +13083,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedPosPrinter_EnableAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13123,7 +13123,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedPosPrinter_ResetStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13165,7 +13165,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedPosPrinter_RetainDeviceAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13205,7 +13205,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedPosPrinter_UpdateStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13934,7 +13934,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedReceiptPrinter_CreateJob(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13974,7 +13974,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedReceiptPrinter_ValidateData(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14834,7 +14834,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedSlipPrinter_ChangePrintSide(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14877,7 +14877,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedSlipPrinter_CloseJaws(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14918,7 +14918,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedSlipPrinter_CreateJob(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14958,7 +14958,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedSlipPrinter_InsertSlipAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15000,7 +15000,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedSlipPrinter_OpenJaws(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15041,7 +15041,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedSlipPrinter_RemoveSlipAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15083,7 +15083,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ClaimedSlipPrinter_ValidateData(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16010,7 +16010,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* JournalPrintJob_ExecuteAsync(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16050,7 +16050,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* JournalPrintJob_FeedPaperByLine(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16093,7 +16093,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* JournalPrintJob_FeedPaperByMapModeUnit(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16136,7 +16136,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* JournalPrintJob_Print(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16212,7 +16212,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* JournalPrintJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16255,7 +16255,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* JournalPrintJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17017,7 +17017,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplay_CheckPowerStatusAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17057,7 +17057,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplay_ClaimAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17097,7 +17097,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplay_Close(py::wrapper::Windows::Devices::PointOfService::LineDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17138,7 +17138,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplay_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17180,7 +17180,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplay_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17220,7 +17220,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplay_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17260,7 +17260,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplay_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18840,7 +18840,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayCursor_GetAttributes(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18880,7 +18880,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayCursor_TryUpdateAttributesAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19547,7 +19547,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayCustomGlyphs_TryRedefineAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayCustomGlyphs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19716,7 +19716,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayMarquee_TryStartScrollingAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayMarquee* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19758,7 +19758,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayMarquee_TryStopScrollingAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayMarquee* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20323,7 +20323,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayStoredBitmap_TryDeleteAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayStoredBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20458,7 +20458,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_Close(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20499,7 +20499,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_ReadCharacterAtCursorAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20539,7 +20539,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryClearTextAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20579,7 +20579,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayStorageFileBitmapAtCursorAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20621,7 +20621,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayStorageFileBitmapAtCursorWithAlignmentAndWidthAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -20666,7 +20666,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayStorageFileBitmapAtCursorWithAlignmentAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -20710,7 +20710,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayStorageFileBitmapAtPointAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20753,7 +20753,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayStorageFileBitmapAtPointWithWidthAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -20797,7 +20797,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayStoredBitmapAtCursorAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20839,7 +20839,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayTextAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20882,7 +20882,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayTextAtPositionAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -20926,7 +20926,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryDisplayTextNormalAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20968,7 +20968,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryRefreshAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21008,7 +21008,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* LineDisplayWindow_TryScrollTextAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21316,7 +21316,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_CheckHealthAsync(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21358,7 +21358,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_ClaimReaderAsync(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21398,7 +21398,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_Close(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21439,7 +21439,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21481,7 +21481,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21521,7 +21521,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21561,7 +21561,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21603,7 +21603,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_GetErrorReportingType(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21643,7 +21643,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* MagneticStripeReader_RetrieveStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24673,7 +24673,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_CheckHealthAsync(py::wrapper::Windows::Devices::PointOfService::PosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24715,7 +24715,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_ClaimPrinterAsync(py::wrapper::Windows::Devices::PointOfService::PosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24755,7 +24755,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_Close(py::wrapper::Windows::Devices::PointOfService::PosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24796,7 +24796,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24838,7 +24838,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24878,7 +24878,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24918,7 +24918,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24960,7 +24960,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_GetFontProperty(py::wrapper::Windows::Devices::PointOfService::PosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25002,7 +25002,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* PosPrinter_GetStatisticsAsync(py::wrapper::Windows::Devices::PointOfService::PosPrinter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26077,7 +26077,7 @@ namespace py::cpp::Windows::Devices::PointOfService
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -27363,7 +27363,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_CutPaper(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -27406,7 +27406,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_CutPaperDefault(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -27447,7 +27447,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_DrawRuledLine(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -27494,7 +27494,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_ExecuteAsync(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -27534,7 +27534,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_FeedPaperByLine(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -27577,7 +27577,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_FeedPaperByMapModeUnit(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -27620,7 +27620,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_MarkFeed(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -27663,7 +27663,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_Print(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -27739,7 +27739,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintBarcode(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -27787,7 +27787,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintBarcodeCustomAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -27835,7 +27835,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintBitmap(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -27879,7 +27879,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -27924,7 +27924,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -27969,7 +27969,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintCustomAlignedBitmap(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -28013,7 +28013,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -28056,7 +28056,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -28097,7 +28097,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_PrintSavedBitmap(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -28140,7 +28140,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_SetBarcodeRotation(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -28183,7 +28183,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_SetBitmap(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -28228,7 +28228,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_SetBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -28274,7 +28274,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_SetBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -28320,7 +28320,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_SetCustomAlignedBitmap(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -28365,7 +28365,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_SetPrintArea(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -28408,7 +28408,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_SetPrintRotation(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -28452,7 +28452,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ReceiptPrintJob_StampPaper(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -29605,7 +29605,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_DrawRuledLine(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -29652,7 +29652,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_ExecuteAsync(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -29692,7 +29692,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_FeedPaperByLine(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -29735,7 +29735,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_FeedPaperByMapModeUnit(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -29778,7 +29778,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_Print(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -29854,7 +29854,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintBarcode(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -29902,7 +29902,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintBarcodeCustomAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -29950,7 +29950,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintBitmap(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -29994,7 +29994,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -30039,7 +30039,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -30084,7 +30084,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintCustomAlignedBitmap(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -30128,7 +30128,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -30171,7 +30171,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -30212,7 +30212,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_PrintSavedBitmap(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -30255,7 +30255,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_SetBarcodeRotation(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -30298,7 +30298,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_SetBitmap(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -30343,7 +30343,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_SetBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -30389,7 +30389,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_SetBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -30435,7 +30435,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_SetCustomAlignedBitmap(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -30480,7 +30480,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_SetPrintArea(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -30523,7 +30523,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* SlipPrintJob_SetPrintRotation(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -31635,7 +31635,7 @@ namespace py::cpp::Windows::Devices::PointOfService
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -32032,7 +32032,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* ICommonClaimedPosPrinterStation_ValidateData(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -35234,7 +35234,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IPosPrinterJob_ExecuteAsync(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -35274,7 +35274,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IPosPrinterJob_Print(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -35317,7 +35317,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IPosPrinterJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -35360,7 +35360,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IPosPrinterJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -35638,7 +35638,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_DrawRuledLine(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -35685,7 +35685,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_ExecuteAsync(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -35725,7 +35725,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_Print(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -35768,7 +35768,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintBarcode(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -35816,7 +35816,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintBarcodeCustomAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -35864,7 +35864,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintBitmap(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -35908,7 +35908,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -35953,7 +35953,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -35998,7 +35998,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintCustomAlignedBitmap(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -36042,7 +36042,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -36085,7 +36085,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -36126,7 +36126,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_PrintSavedBitmap(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -36169,7 +36169,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_SetBarcodeRotation(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -36212,7 +36212,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_SetBitmap(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -36257,7 +36257,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_SetBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -36303,7 +36303,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_SetBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -36349,7 +36349,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_SetCustomAlignedBitmap(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -36394,7 +36394,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_SetPrintArea(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -36437,7 +36437,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyObject* IReceiptOrSlipJob_SetPrintRotation(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -37451,7 +37451,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::PointOfService::SizeUInt32>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

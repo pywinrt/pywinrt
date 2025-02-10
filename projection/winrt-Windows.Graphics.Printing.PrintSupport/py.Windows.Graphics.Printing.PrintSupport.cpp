@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportCommunicationErrorDetectedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -220,7 +220,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportExtensionSession_Start(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1731,7 +1731,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_GetCurrentPrintDeviceCapabilities(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1771,7 +1771,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_GetCurrentPrintDeviceResources(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1811,7 +1811,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1851,7 +1851,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_SetPrintDeviceCapabilitiesUpdatePolicy(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1894,7 +1894,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_SetSupportedPdlPassthroughContentTypes(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1937,7 +1937,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_UpdatePrintDeviceCapabilities(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1980,7 +1980,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_UpdatePrintDeviceResources(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2186,7 +2186,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesUpdatePolicy_CreatePeriodicRefresh(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2228,7 +2228,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintDeviceCapabilitiesUpdatePolicy_CreatePrintJobRefresh(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2347,7 +2347,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2581,7 +2581,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintTicketValidationRequestedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2621,7 +2621,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrintTicketValidationRequestedEventArgs_SetPrintTicketValidationStatus(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2760,7 +2760,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrinterSelectedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2800,7 +2800,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrinterSelectedEventArgs_SetAdaptiveCard(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2843,7 +2843,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrinterSelectedEventArgs_SetAdditionalFeatures(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2886,7 +2886,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportPrinterSelectedEventArgs_SetAdditionalParameters(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3253,7 +3253,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsActivatedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3543,7 +3543,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyObject* PrintSupportSettingsUISession_UpdatePrintTicket(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

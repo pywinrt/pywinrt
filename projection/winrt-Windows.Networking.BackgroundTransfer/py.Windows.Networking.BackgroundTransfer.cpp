@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -60,7 +60,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_CreateDownload(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_CreateDownloadAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_CreateDownloadFromFile(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_GetCurrentDownloadsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_GetCurrentDownloadsForGroupAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -273,7 +273,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_GetCurrentDownloadsForTransferGroupAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -315,7 +315,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_RequestUnconstrainedDownloadsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -357,7 +357,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_SetRequestHeader(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1215,7 +1215,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1246,7 +1246,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferCompletionGroup_Enable(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1529,7 +1529,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1591,7 +1591,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferContentPart_SetFile(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1634,7 +1634,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferContentPart_SetHeader(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1678,7 +1678,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferContentPart_SetText(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1779,7 +1779,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferError_GetStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1879,7 +1879,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferGroup_CreateGroup(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2107,7 +2107,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferRangesDownloadedEventArgs_GetDeferral(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2264,7 +2264,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2310,7 +2310,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_CreateUpload(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2353,7 +2353,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_CreateUploadFromStreamAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2396,7 +2396,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_CreateUploadWithFormDataAndAutoBoundaryAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2439,7 +2439,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_CreateUploadWithSubTypeAndBoundaryAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2484,7 +2484,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_CreateUploadWithSubTypeAsync(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2528,7 +2528,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_GetCurrentUploadsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2568,7 +2568,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_GetCurrentUploadsForGroupAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2610,7 +2610,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_GetCurrentUploadsForTransferGroupAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2652,7 +2652,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_RequestUnconstrainedUploadsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2694,7 +2694,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_SetRequestHeader(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3744,7 +3744,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_AttachAsync(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3784,7 +3784,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_GetDownloadedRanges(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3824,7 +3824,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_GetResponseInformation(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3864,7 +3864,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_GetResultRandomAccessStreamReference(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3904,7 +3904,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_GetResultStreamAt(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3946,7 +3946,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_MakeCurrentInTransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3987,7 +3987,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_Pause(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4028,7 +4028,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_RemoveRequestHeader(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4071,7 +4071,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_Resume(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4112,7 +4112,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_SetRequestHeader(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4156,7 +4156,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_StartAsync(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5146,7 +5146,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_AttachAsync(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5186,7 +5186,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_GetResponseInformation(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5226,7 +5226,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_GetResultStreamAt(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5268,7 +5268,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_MakeCurrentInTransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5309,7 +5309,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_RemoveRequestHeader(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5352,7 +5352,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_SetRequestHeader(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5396,7 +5396,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_StartAsync(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5863,7 +5863,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferBase_SetRequestHeader(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6638,7 +6638,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferContentPartFactory_CreateWithName(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6680,7 +6680,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferContentPartFactory_CreateWithNameAndFileName(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6924,7 +6924,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferOperation_GetResponseInformation(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6964,7 +6964,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferOperation_GetResultStreamAt(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7755,7 +7755,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -8081,7 +8081,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -8319,7 +8319,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

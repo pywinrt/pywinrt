@@ -646,7 +646,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_Append(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -689,7 +689,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_Clear(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -730,7 +730,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_First(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -770,7 +770,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_GetAt(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -812,7 +812,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_GetMany(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -855,7 +855,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_GetView(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -895,7 +895,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_IndexOf(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -951,7 +951,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_InsertAt(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -995,7 +995,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_RemoveAt(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1038,7 +1038,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_RemoveAtEnd(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1079,7 +1079,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_ReplaceAll(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1122,7 +1122,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* BlockCollection_SetAt(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1412,7 +1412,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1497,7 +1497,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1582,7 +1582,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1613,7 +1613,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLink_Focus(py::wrapper::Windows::UI::Xaml::Documents::ContentLink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3659,7 +3659,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3690,7 +3690,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_Append(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3733,7 +3733,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_Clear(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3774,7 +3774,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_First(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3814,7 +3814,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_GetAt(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3856,7 +3856,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_GetMany(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3899,7 +3899,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_GetView(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3939,7 +3939,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_IndexOf(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3995,7 +3995,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_InsertAt(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4039,7 +4039,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_RemoveAt(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4082,7 +4082,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_RemoveAtEnd(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4123,7 +4123,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_ReplaceAll(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4166,7 +4166,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* ContentLinkProviderCollection_SetAt(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4456,7 +4456,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5572,7 +5572,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5603,7 +5603,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Hyperlink_Focus(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7487,7 +7487,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_Append(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7530,7 +7530,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_Clear(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7571,7 +7571,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_First(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7611,7 +7611,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_GetAt(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7653,7 +7653,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_GetMany(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7696,7 +7696,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_GetView(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7736,7 +7736,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_IndexOf(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7792,7 +7792,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_InsertAt(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7836,7 +7836,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_RemoveAt(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7879,7 +7879,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_RemoveAtEnd(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7920,7 +7920,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_ReplaceAll(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7963,7 +7963,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* InlineCollection_SetAt(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8253,7 +8253,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8408,7 +8408,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8493,7 +8493,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8578,7 +8578,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8816,7 +8816,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8901,7 +8901,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9213,7 +9213,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Documents::Span>();
         if (!self_type)
@@ -9428,7 +9428,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* TextElement_FindName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9470,7 +9470,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* TextElement_OnDisconnectVisualChildren(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11867,7 +11867,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Documents::TextHighlighter>();
         if (!self_type)
@@ -12329,7 +12329,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* TextPointer_GetCharacterRect(py::wrapper::Windows::UI::Xaml::Documents::TextPointer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12371,7 +12371,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* TextPointer_GetPositionAtOffset(py::wrapper::Windows::UI::Xaml::Documents::TextPointer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12603,7 +12603,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetAnnotationAlternates(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12645,7 +12645,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetCapitalSpacing(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12687,7 +12687,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetCapitals(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12729,7 +12729,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetCaseSensitiveForms(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12771,7 +12771,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetContextualAlternates(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12813,7 +12813,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetContextualLigatures(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12855,7 +12855,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetContextualSwashes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12897,7 +12897,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetDiscretionaryLigatures(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12939,7 +12939,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetEastAsianExpertForms(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12981,7 +12981,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetEastAsianLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13023,7 +13023,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetEastAsianWidths(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13065,7 +13065,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetFraction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13107,7 +13107,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetHistoricalForms(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13149,7 +13149,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetHistoricalLigatures(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13191,7 +13191,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetKerning(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13233,7 +13233,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetMathematicalGreek(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13275,7 +13275,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetNumeralAlignment(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13317,7 +13317,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetNumeralStyle(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13359,7 +13359,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetSlashedZero(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13401,7 +13401,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStandardLigatures(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13443,7 +13443,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStandardSwashes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13485,7 +13485,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticAlternates(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13527,7 +13527,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet1(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13569,7 +13569,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet10(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13611,7 +13611,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet11(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13653,7 +13653,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet12(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13695,7 +13695,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet13(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13737,7 +13737,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet14(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13779,7 +13779,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet15(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13821,7 +13821,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet16(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13863,7 +13863,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet17(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13905,7 +13905,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet18(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13947,7 +13947,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet19(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13989,7 +13989,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14031,7 +14031,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet20(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14073,7 +14073,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet3(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14115,7 +14115,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet4(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14157,7 +14157,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet5(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14199,7 +14199,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet6(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14241,7 +14241,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet7(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14283,7 +14283,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet8(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14325,7 +14325,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetStylisticSet9(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14367,7 +14367,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_GetVariants(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14409,7 +14409,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetAnnotationAlternates(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14453,7 +14453,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetCapitalSpacing(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14497,7 +14497,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetCapitals(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14541,7 +14541,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetCaseSensitiveForms(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14585,7 +14585,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetContextualAlternates(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14629,7 +14629,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetContextualLigatures(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14673,7 +14673,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetContextualSwashes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14717,7 +14717,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetDiscretionaryLigatures(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14761,7 +14761,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetEastAsianExpertForms(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14805,7 +14805,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetEastAsianLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14849,7 +14849,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetEastAsianWidths(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14893,7 +14893,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetFraction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14937,7 +14937,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetHistoricalForms(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14981,7 +14981,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetHistoricalLigatures(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15025,7 +15025,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetKerning(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15069,7 +15069,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetMathematicalGreek(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15113,7 +15113,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetNumeralAlignment(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15157,7 +15157,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetNumeralStyle(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15201,7 +15201,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetSlashedZero(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15245,7 +15245,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStandardLigatures(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15289,7 +15289,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStandardSwashes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15333,7 +15333,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticAlternates(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15377,7 +15377,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet1(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15421,7 +15421,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet10(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15465,7 +15465,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet11(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15509,7 +15509,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet12(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15553,7 +15553,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet13(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15597,7 +15597,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet14(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15641,7 +15641,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet15(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15685,7 +15685,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet16(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15729,7 +15729,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet17(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15773,7 +15773,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet18(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15817,7 +15817,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet19(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15861,7 +15861,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15905,7 +15905,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet20(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15949,7 +15949,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet3(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15993,7 +15993,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet4(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16037,7 +16037,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet5(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16081,7 +16081,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet6(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16125,7 +16125,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet7(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16169,7 +16169,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet8(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16213,7 +16213,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetStylisticSet9(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16257,7 +16257,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyObject* Typography_SetVariants(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17795,7 +17795,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17899,7 +17899,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Documents::TextRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

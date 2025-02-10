@@ -49,7 +49,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer>();
         if (!self_type)
@@ -222,7 +222,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer>();
         if (!self_type)
@@ -285,7 +285,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AppBarAutomationPeer_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -326,7 +326,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AppBarAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -367,7 +367,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AppBarAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -408,7 +408,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AppBarAutomationPeer_SetVisualState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -451,7 +451,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AppBarAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -492,7 +492,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AppBarAutomationPeer_WaitForInputIdle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -898,7 +898,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>();
         if (!self_type)
@@ -961,7 +961,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AppBarButtonAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1002,7 +1002,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AppBarButtonAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1186,7 +1186,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer>();
         if (!self_type)
@@ -1324,7 +1324,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1357,7 +1357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutoSuggestBoxAutomationPeer_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2832,7 +2832,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GenerateRawElementProviderRuntimeId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2872,7 +2872,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAcceleratorKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2912,7 +2912,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAcceleratorKeyCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2952,7 +2952,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAccessKey(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2992,7 +2992,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAccessKeyCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3032,7 +3032,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAnnotations(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3072,7 +3072,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAnnotationsCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3112,7 +3112,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAutomationControlType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3152,7 +3152,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAutomationControlTypeCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3192,7 +3192,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAutomationId(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3232,7 +3232,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetAutomationIdCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3272,7 +3272,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetBoundingRectangle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3312,7 +3312,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetBoundingRectangleCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3352,7 +3352,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetChildren(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3392,7 +3392,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetChildrenCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3432,7 +3432,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetClassName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3472,7 +3472,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetClassNameCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3512,7 +3512,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetClickablePoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3552,7 +3552,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetClickablePointCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3592,7 +3592,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetControlledPeers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3632,7 +3632,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetControlledPeersCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3672,7 +3672,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetCulture(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3712,7 +3712,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetCultureCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3752,7 +3752,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetDescribedByCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3792,7 +3792,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetElementFromPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3834,7 +3834,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetElementFromPointCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3876,7 +3876,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetFlowsFromCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3916,7 +3916,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetFlowsToCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3956,7 +3956,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetFocusedElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3996,7 +3996,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetFocusedElementCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4036,7 +4036,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetFullDescription(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4076,7 +4076,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetFullDescriptionCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4116,7 +4116,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetHeadingLevel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4156,7 +4156,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetHeadingLevelCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4196,7 +4196,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetHelpText(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4236,7 +4236,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetHelpTextCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4276,7 +4276,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetItemStatus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4316,7 +4316,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetItemStatusCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4356,7 +4356,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetItemType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4396,7 +4396,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetItemTypeCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4436,7 +4436,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLabeledBy(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4476,7 +4476,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLabeledByCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4516,7 +4516,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLandmarkType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4556,7 +4556,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLandmarkTypeCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4596,7 +4596,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLevel(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4636,7 +4636,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLevelCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4676,7 +4676,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLiveSetting(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4716,7 +4716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLiveSettingCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4756,7 +4756,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLocalizedControlType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4796,7 +4796,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLocalizedControlTypeCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4836,7 +4836,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLocalizedLandmarkType(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4876,7 +4876,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetLocalizedLandmarkTypeCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4916,7 +4916,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetName(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4956,7 +4956,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetNameCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4996,7 +4996,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetOrientation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5036,7 +5036,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetOrientationCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5076,7 +5076,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetParent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5116,7 +5116,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetPattern(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5158,7 +5158,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetPatternCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5200,7 +5200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetPeerFromPoint(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5242,7 +5242,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetPeerFromPointCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5284,7 +5284,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetPositionInSet(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5324,7 +5324,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetPositionInSetCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5364,7 +5364,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetSizeOfSet(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5404,7 +5404,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_GetSizeOfSetCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5444,7 +5444,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_HasKeyboardFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5484,7 +5484,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_HasKeyboardFocusCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5524,7 +5524,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_InvalidatePeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5565,7 +5565,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsContentElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5605,7 +5605,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsContentElementCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5645,7 +5645,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsControlElement(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5685,7 +5685,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsControlElementCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5725,7 +5725,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsDataValidForForm(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5765,7 +5765,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsDataValidForFormCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5805,7 +5805,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsDialog(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5845,7 +5845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsDialogCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5885,7 +5885,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsEnabled(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5925,7 +5925,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsEnabledCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5965,7 +5965,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsKeyboardFocusable(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6005,7 +6005,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsKeyboardFocusableCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6045,7 +6045,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsOffscreen(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6085,7 +6085,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsOffscreenCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6125,7 +6125,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsPassword(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6165,7 +6165,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsPasswordCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6205,7 +6205,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsPeripheral(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6245,7 +6245,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsPeripheralCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6285,7 +6285,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsRequiredForForm(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6325,7 +6325,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_IsRequiredForFormCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6365,7 +6365,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_ListenerExists(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6407,7 +6407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_Navigate(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6449,7 +6449,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_NavigateCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6491,7 +6491,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_PeerFromProvider(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6533,7 +6533,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_ProviderFromPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6575,7 +6575,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_RaiseAutomationEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6618,7 +6618,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_RaiseNotificationEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6664,7 +6664,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_RaisePropertyChangedEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6709,7 +6709,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_RaiseStructureChangedEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6753,7 +6753,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_RaiseTextEditTextChangedEvent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6797,7 +6797,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_SetFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6838,7 +6838,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_SetFocusCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6879,7 +6879,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_SetParent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6922,7 +6922,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_ShowContextMenu(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6963,7 +6963,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* AutomationPeer_ShowContextMenuCore(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7252,7 +7252,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7626,7 +7626,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer>();
         if (!self_type)
@@ -7689,7 +7689,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* BreadcrumbBarItemAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7841,7 +7841,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer>();
         if (!self_type)
@@ -7904,7 +7904,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ButtonAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8174,7 +8174,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>();
         if (!self_type)
@@ -8237,7 +8237,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* CalendarDatePickerAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8278,7 +8278,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* CalendarDatePickerAutomationPeer_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8495,7 +8495,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer>();
         if (!self_type)
@@ -8668,7 +8668,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer>();
         if (!self_type)
@@ -8841,7 +8841,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer>();
         if (!self_type)
@@ -9014,7 +9014,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>();
         if (!self_type)
@@ -9077,7 +9077,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ComboBoxAutomationPeer_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9118,7 +9118,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ComboBoxAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9159,7 +9159,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ComboBoxAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9200,7 +9200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ComboBoxAutomationPeer_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9243,7 +9243,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ComboBoxAutomationPeer_SetVisualState(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9286,7 +9286,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ComboBoxAutomationPeer_WaitForInputIdle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9723,7 +9723,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer>();
         if (!self_type)
@@ -9896,7 +9896,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>();
         if (!self_type)
@@ -9960,7 +9960,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ComboBoxItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10112,7 +10112,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer>();
         if (!self_type)
@@ -10348,7 +10348,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer>();
         if (!self_type)
@@ -10411,7 +10411,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* DropDownButtonAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10452,7 +10452,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* DropDownButtonAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10636,7 +10636,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer>();
         if (!self_type)
@@ -10699,7 +10699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ExpanderAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10740,7 +10740,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ExpanderAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10924,7 +10924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>();
         if (!self_type)
@@ -11097,7 +11097,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer>();
         if (!self_type)
@@ -11270,7 +11270,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>();
         if (!self_type)
@@ -11334,7 +11334,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* FlipViewItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11486,7 +11486,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer>();
         if (!self_type)
@@ -11659,7 +11659,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>();
         if (!self_type)
@@ -11722,7 +11722,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* FrameworkElementAutomationPeer_CreatePeerForElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11764,7 +11764,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* FrameworkElementAutomationPeer_FromElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11949,7 +11949,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer>();
         if (!self_type)
@@ -12122,7 +12122,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer>();
         if (!self_type)
@@ -12295,7 +12295,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer>();
         if (!self_type)
@@ -12468,7 +12468,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>();
         if (!self_type)
@@ -12532,7 +12532,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* GridViewItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12684,7 +12684,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer>();
         if (!self_type)
@@ -12857,7 +12857,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer>();
         if (!self_type)
@@ -13030,7 +13030,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>();
         if (!self_type)
@@ -13093,7 +13093,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* HubSectionAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13245,7 +13245,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>();
         if (!self_type)
@@ -13308,7 +13308,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* HyperlinkButtonAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13460,7 +13460,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer>();
         if (!self_type)
@@ -13633,7 +13633,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer>();
         if (!self_type)
@@ -13806,7 +13806,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer>();
         if (!self_type)
@@ -13870,7 +13870,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemAutomationPeer_Realize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14084,7 +14084,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer>();
         if (!self_type)
@@ -14147,7 +14147,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemContainerAutomationPeer_AddToSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14188,7 +14188,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemContainerAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14229,7 +14229,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemContainerAutomationPeer_RemoveFromSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14270,7 +14270,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemContainerAutomationPeer_Select(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14521,7 +14521,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>();
         if (!self_type)
@@ -14584,7 +14584,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemsControlAutomationPeer_CreateItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14626,7 +14626,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemsControlAutomationPeer_FindItemByProperty(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -14670,7 +14670,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemsControlAutomationPeer_OnCreateItemAutomationPeer(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14825,7 +14825,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer>();
         if (!self_type)
@@ -14888,7 +14888,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ItemsViewAutomationPeer_GetSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15101,7 +15101,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>();
         if (!self_type)
@@ -15274,7 +15274,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer>();
         if (!self_type)
@@ -15447,7 +15447,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>();
         if (!self_type)
@@ -15511,7 +15511,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ListBoxItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15726,7 +15726,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer>();
         if (!self_type)
@@ -15899,7 +15899,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>();
         if (!self_type)
@@ -16252,7 +16252,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer>();
         if (!self_type)
@@ -16425,7 +16425,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer>();
         if (!self_type)
@@ -16598,7 +16598,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>();
         if (!self_type)
@@ -16662,7 +16662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ListViewItemDataAutomationPeer_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16788,7 +16788,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorAutomationPeer_FindItemByProperty(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -16832,7 +16832,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorAutomationPeer_GetSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16872,7 +16872,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorAutomationPeer_Scroll(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16916,7 +16916,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorAutomationPeer_SetScrollPercent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17275,7 +17275,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorItemAutomationPeer_AddToSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17316,7 +17316,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorItemAutomationPeer_RemoveFromSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17357,7 +17357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorItemAutomationPeer_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17398,7 +17398,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorItemAutomationPeer_Select(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17568,7 +17568,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* LoopingSelectorItemDataAutomationPeer_Realize(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17699,7 +17699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer>();
         if (!self_type)
@@ -17872,7 +17872,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer>();
         if (!self_type)
@@ -18045,7 +18045,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer>();
         if (!self_type)
@@ -18218,7 +18218,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>();
         if (!self_type)
@@ -18281,7 +18281,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* MenuBarItemAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18322,7 +18322,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* MenuBarItemAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18363,7 +18363,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* MenuBarItemAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18548,7 +18548,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>();
         if (!self_type)
@@ -18611,7 +18611,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* MenuFlyoutItemAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18763,7 +18763,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer>();
         if (!self_type)
@@ -18936,7 +18936,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer>();
         if (!self_type)
@@ -19109,7 +19109,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>();
         if (!self_type)
@@ -19172,7 +19172,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* NavigationViewItemAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19213,7 +19213,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* NavigationViewItemAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19397,7 +19397,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer>();
         if (!self_type)
@@ -19570,7 +19570,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>();
         if (!self_type)
@@ -19743,7 +19743,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>();
         if (!self_type)
@@ -19979,7 +19979,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer>();
         if (!self_type)
@@ -20117,7 +20117,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -20150,7 +20150,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* PivotAutomationPeer_GetSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PivotAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20190,7 +20190,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* PivotAutomationPeer_Scroll(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PivotAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20234,7 +20234,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* PivotAutomationPeer_SetScrollPercent(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PivotAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20583,7 +20583,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -20670,7 +20670,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -20704,7 +20704,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* PivotItemDataAutomationPeer_AddToSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20745,7 +20745,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* PivotItemDataAutomationPeer_Realize(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20786,7 +20786,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* PivotItemDataAutomationPeer_RemoveFromSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20827,7 +20827,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* PivotItemDataAutomationPeer_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20868,7 +20868,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* PivotItemDataAutomationPeer_Select(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21065,7 +21065,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer>();
         if (!self_type)
@@ -21238,7 +21238,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer>();
         if (!self_type)
@@ -21301,7 +21301,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ProgressRingAutomationPeer_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21641,7 +21641,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>();
         if (!self_type)
@@ -21704,7 +21704,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* RadioButtonAutomationPeer_AddToSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21745,7 +21745,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* RadioButtonAutomationPeer_RemoveFromSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21786,7 +21786,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* RadioButtonAutomationPeer_Select(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22002,7 +22002,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer>();
         if (!self_type)
@@ -22175,7 +22175,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>();
         if (!self_type)
@@ -22238,7 +22238,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* RangeBaseAutomationPeer_SetValue(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22578,7 +22578,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer>();
         if (!self_type)
@@ -22751,7 +22751,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>();
         if (!self_type)
@@ -22814,7 +22814,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* RepeatButtonAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22966,7 +22966,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer>();
         if (!self_type)
@@ -23139,7 +23139,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer>();
         if (!self_type)
@@ -23312,7 +23312,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>();
         if (!self_type)
@@ -23485,7 +23485,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>();
         if (!self_type)
@@ -23658,7 +23658,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>();
         if (!self_type)
@@ -23831,7 +23831,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer>();
         if (!self_type)
@@ -24004,7 +24004,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>();
         if (!self_type)
@@ -24067,7 +24067,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ScrollViewerAutomationPeer_Scroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24111,7 +24111,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ScrollViewerAutomationPeer_SetScrollPercent(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24453,7 +24453,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer>();
         if (!self_type)
@@ -24516,7 +24516,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* SelectorAutomationPeer_GetSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24729,7 +24729,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>();
         if (!self_type)
@@ -24902,7 +24902,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>();
         if (!self_type)
@@ -24966,7 +24966,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* SelectorItemAutomationPeer_AddToSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25007,7 +25007,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* SelectorItemAutomationPeer_RemoveFromSelection(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25048,7 +25048,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* SelectorItemAutomationPeer_Select(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25264,7 +25264,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>();
         if (!self_type)
@@ -25327,7 +25327,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* SemanticZoomAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25510,7 +25510,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer>();
         if (!self_type)
@@ -25683,7 +25683,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer>();
         if (!self_type)
@@ -25746,7 +25746,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* SplitButtonAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25787,7 +25787,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* SplitButtonAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25828,7 +25828,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* SplitButtonAutomationPeer_Invoke(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26013,7 +26013,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer>();
         if (!self_type)
@@ -26186,7 +26186,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer>();
         if (!self_type)
@@ -26359,7 +26359,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer>();
         if (!self_type)
@@ -26532,7 +26532,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer>();
         if (!self_type)
@@ -26705,7 +26705,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer>();
         if (!self_type)
@@ -26878,7 +26878,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer>();
         if (!self_type)
@@ -27051,7 +27051,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer>();
         if (!self_type)
@@ -27287,7 +27287,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>();
         if (!self_type)
@@ -27350,7 +27350,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ToggleButtonAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -27533,7 +27533,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>();
         if (!self_type)
@@ -27596,7 +27596,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ToggleMenuFlyoutItemAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -27779,7 +27779,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer>();
         if (!self_type)
@@ -27842,7 +27842,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ToggleSplitButtonAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -27883,7 +27883,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ToggleSplitButtonAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -27924,7 +27924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ToggleSplitButtonAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -28140,7 +28140,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>();
         if (!self_type)
@@ -28203,7 +28203,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* ToggleSwitchAutomationPeer_Toggle(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -28386,7 +28386,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>();
         if (!self_type)
@@ -28449,7 +28449,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* TreeViewItemAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -28490,7 +28490,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* TreeViewItemAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -28674,7 +28674,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer>();
         if (!self_type)
@@ -28738,7 +28738,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* TreeViewItemDataAutomationPeer_Collapse(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -28779,7 +28779,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
 
     static PyObject* TreeViewItemDataAutomationPeer_Expand(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -28963,7 +28963,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>();
         if (!self_type)
@@ -29136,7 +29136,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer>();
         if (!self_type)
@@ -29293,7 +29293,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

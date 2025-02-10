@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
 
     static PyObject* HolographicKeyboard_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
 
     static PyObject* HolographicKeyboard_ResetPlacementOverride(py::wrapper::Windows::ApplicationModel::Holographic::HolographicKeyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
 
     static PyObject* HolographicKeyboard_SetPlacementOverride(py::wrapper::Windows::ApplicationModel::Holographic::HolographicKeyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
 
     static PyObject* HolographicKeyboard_SetPlacementOverrideWithMaxSize(py::wrapper::Windows::ApplicationModel::Holographic::HolographicKeyboard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {

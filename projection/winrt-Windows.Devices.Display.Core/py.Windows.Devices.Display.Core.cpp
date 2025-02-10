@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -460,7 +460,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayDevice_CreatePeriodicFence(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -503,7 +503,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayDevice_CreatePrimary(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -546,7 +546,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayDevice_CreateScanoutSource(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -588,7 +588,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayDevice_CreateSimpleScanout(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -633,7 +633,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayDevice_CreateSimpleScanoutWithDirtyRectsAndOptions(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -680,7 +680,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayDevice_CreateTaskPool(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -720,7 +720,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayDevice_IsCapabilitySupported(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -762,7 +762,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayDevice_WaitForVBlank(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -970,7 +970,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_Close(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1011,7 +1011,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1053,7 +1053,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_CreateDisplayDevice(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1095,7 +1095,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_CreateDisplayDeviceForIndirectAdapter(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1138,7 +1138,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_GetCurrentAdapters(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1178,7 +1178,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_GetCurrentTargets(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1218,7 +1218,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_ReleaseTarget(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1261,7 +1261,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_Start(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1302,7 +1302,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_Stop(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1343,7 +1343,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_TryAcquireTarget(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1385,7 +1385,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_TryAcquireTargetsAndCreateEmptyState(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1427,7 +1427,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_TryAcquireTargetsAndCreateSubstate(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1470,7 +1470,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_TryAcquireTargetsAndReadCurrentState(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1512,7 +1512,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_TryReadCurrentStateForAllTargets(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1552,7 +1552,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_TryReadCurrentStateForModeQuery(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1984,7 +1984,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerChangedEventArgs_GetDeferral(py::wrapper::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2158,7 +2158,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerDisabledEventArgs_GetDeferral(py::wrapper::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2332,7 +2332,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerEnabledEventArgs_GetDeferral(py::wrapper::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2506,7 +2506,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerPathsFailedOrInvalidatedEventArgs_GetDeferral(py::wrapper::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2836,7 +2836,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_GetWireFormatSupportedBitsPerChannel(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2878,7 +2878,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_IsWireFormatSupported(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3233,7 +3233,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayMuxDevice_Close(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3274,7 +3274,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayMuxDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3316,7 +3316,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayMuxDevice_GetAvailableMuxTargets(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3356,7 +3356,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayMuxDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3396,7 +3396,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayMuxDevice_SetAutomaticTargetSwitching(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3436,7 +3436,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayMuxDevice_SetPreferredTarget(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3815,7 +3815,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_ApplyPropertiesFromMode(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3858,7 +3858,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_FindModes(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4780,7 +4780,7 @@ namespace py::cpp::Windows::Devices::Display::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 6)
         {
             try
@@ -4818,7 +4818,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPrimaryDescription_CreateWithProperties(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -5231,7 +5231,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplaySource_GetMetadata(py::wrapper::Windows::Devices::Display::Core::DisplaySource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5497,7 +5497,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_CanConnectTargetToView(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5540,7 +5540,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_Clone(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5580,7 +5580,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_ConnectTarget(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5622,7 +5622,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_ConnectTargetToView(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5665,7 +5665,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_DisconnectTarget(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5708,7 +5708,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_GetPathForTarget(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5750,7 +5750,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_GetViewForTarget(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5792,7 +5792,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_TryApply(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5834,7 +5834,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_TryFunctionalize(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6291,7 +6291,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_IsEqual(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6333,7 +6333,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_IsSame(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6375,7 +6375,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_TryGetMonitor(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6822,7 +6822,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTask_SetScanout(py::wrapper::Windows::Devices::Display::Core::DisplayTask* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6865,7 +6865,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTask_SetSignal(py::wrapper::Windows::Devices::Display::Core::DisplayTask* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6909,7 +6909,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTask_SetWait(py::wrapper::Windows::Devices::Display::Core::DisplayTask* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7019,7 +7019,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTaskPool_CreateTask(py::wrapper::Windows::Devices::Display::Core::DisplayTaskPool* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7059,7 +7059,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTaskPool_ExecuteTask(py::wrapper::Windows::Devices::Display::Core::DisplayTaskPool* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7102,7 +7102,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTaskPool_TryExecuteTask(py::wrapper::Windows::Devices::Display::Core::DisplayTaskPool* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7366,7 +7366,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayView_SetPrimaryPath(py::wrapper::Windows::Devices::Display::Core::DisplayView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7596,7 +7596,7 @@ namespace py::cpp::Windows::Devices::Display::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 5)
         {
             try
@@ -7633,7 +7633,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayWireFormat_CreateWithProperties(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -7961,7 +7961,7 @@ namespace py::cpp::Windows::Devices::Display::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

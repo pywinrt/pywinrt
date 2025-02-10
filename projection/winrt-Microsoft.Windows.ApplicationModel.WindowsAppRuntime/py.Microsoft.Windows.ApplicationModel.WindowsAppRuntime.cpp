@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -240,7 +240,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static PyObject* DeploymentManager_GetStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -280,7 +280,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static PyObject* DeploymentManager_Initialize(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -401,7 +401,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try

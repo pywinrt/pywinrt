@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_AddHostObjectToScript(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -54,7 +54,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_AddScriptToExecuteOnDocumentCreatedAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -83,7 +83,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_AddWebResourceRequestedFilter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -135,7 +135,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_CallDevToolsProtocolMethodAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -165,7 +165,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_CallDevToolsProtocolMethodForSessionAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -196,7 +196,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_CapturePreviewAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -226,7 +226,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_ClearServerCertificateErrorActionsAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -253,7 +253,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_ClearVirtualHostNameToFolderMapping(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -283,7 +283,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_CloseDefaultDownloadDialog(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -311,7 +311,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_ExecuteScriptAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -340,7 +340,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_ExecuteScriptWithResultAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -369,7 +369,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_GetDevToolsProtocolEventReceiver(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -398,7 +398,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_GetFaviconAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -427,7 +427,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_GoBack(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -455,7 +455,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_GoForward(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -483,7 +483,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_Navigate(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -513,7 +513,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_NavigateToString(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -543,7 +543,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_NavigateWithWebResourceRequest(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -573,7 +573,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_OpenDefaultDownloadDialog(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -601,7 +601,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_OpenDevToolsWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -629,7 +629,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_OpenTaskManagerWindow(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -657,7 +657,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_PostSharedBufferToScript(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -689,7 +689,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_PostWebMessageAsJson(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -739,7 +739,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_PostWebMessageAsString(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -769,7 +769,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_PrintAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -798,7 +798,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_PrintToPdfAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -828,7 +828,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_PrintToPdfStreamAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -857,7 +857,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_Reload(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -885,7 +885,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_RemoveHostObjectFromScript(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -915,7 +915,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_RemoveScriptToExecuteOnDocumentCreated(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -945,7 +945,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_RemoveWebResourceRequestedFilter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -997,7 +997,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_Resume(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1025,7 +1025,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_SetVirtualHostNameToFolderMapping(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1057,7 +1057,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_ShowPrintUI(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1087,7 +1087,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_ShowSaveAsUIAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1114,7 +1114,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_Stop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1142,7 +1142,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2_TrySuspendAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3268,7 +3268,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BasicAuthenticationRequestedEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3608,7 +3608,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BrowserExtension_EnableAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3637,7 +3637,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2BrowserExtension_RemoveAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3882,7 +3882,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_ToCertificate(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3909,7 +3909,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Certificate_ToPemEncoding(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Certificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4127,7 +4127,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_ToCertificate(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4154,7 +4154,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificate_ToPemEncoding(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4390,7 +4390,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ClientCertificateRequestedEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificateRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4703,7 +4703,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_DragEnter(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4733,7 +4733,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_DragLeave(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4761,7 +4761,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_DragOver(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4791,7 +4791,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_Drop(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4820,7 +4820,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_GetNonClientRegionAtPoint(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4849,7 +4849,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_QueryNonClientRegion(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4878,7 +4878,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_SendMouseInput(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4911,7 +4911,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CompositionController_SendPointerInput(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5574,7 +5574,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ContextMenuRequestedEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6104,7 +6104,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6132,7 +6132,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_MoveFocus(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6162,7 +6162,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_NotifyParentWindowPositionChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6190,7 +6190,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Controller_SetBoundsAndZoomFactor(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7182,7 +7182,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ControllerWindowReference_CreateFromCoreWindow(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7211,7 +7211,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ControllerWindowReference_CreateFromWindowHandle(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7717,7 +7717,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CookieManager_AddOrUpdateCookie(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7747,7 +7747,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CookieManager_CopyCookie(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7776,7 +7776,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CookieManager_CreateCookie(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7808,7 +7808,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CookieManager_DeleteAllCookies(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7836,7 +7836,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CookieManager_DeleteCookie(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7866,7 +7866,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CookieManager_DeleteCookies(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7897,7 +7897,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CookieManager_DeleteCookiesWithDomainAndPath(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7929,7 +7929,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2CookieManager_GetCookiesAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2CookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8020,7 +8020,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8524,7 +8524,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_Cancel(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8552,7 +8552,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_Pause(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8580,7 +8580,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadOperation_Resume(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8977,7 +8977,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2DownloadStartingEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9218,7 +9218,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CompareBrowserVersionString(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9248,7 +9248,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9275,7 +9275,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateContextMenuItem(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9306,7 +9306,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateCoreWebView2CompositionControllerAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9354,7 +9354,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateCoreWebView2ControllerAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9402,7 +9402,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateCoreWebView2ControllerOptions(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9429,7 +9429,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateCoreWebView2PointerInfo(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9456,7 +9456,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreatePrintSettings(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9483,7 +9483,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateSharedBuffer(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9512,7 +9512,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateWebFileSystemDirectoryHandle(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9542,7 +9542,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateWebFileSystemFileHandle(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9572,7 +9572,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateWebResourceRequest(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -9604,7 +9604,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateWebResourceResponse(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -9636,7 +9636,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_CreateWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9667,7 +9667,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_GetAvailableBrowserVersionString(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9694,7 +9694,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_GetAvailableBrowserVersionString2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9723,7 +9723,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_GetAvailableBrowserVersionStringWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9753,7 +9753,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_GetProcessExtendedInfosAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9780,7 +9780,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Environment_GetProcessInfos(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Environment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10078,7 +10078,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10700,7 +10700,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ExecuteScriptResult_TryGetResultAsString(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ExecuteScriptResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11058,7 +11058,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_ExecuteScriptAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11087,7 +11087,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_IsDestroyed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11114,7 +11114,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_PostSharedBufferToScript(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11146,7 +11146,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_PostWebMessageAsJson(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11176,7 +11176,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_PostWebMessageAsString(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11206,7 +11206,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Frame_RemoveHostObjectFromScript(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Frame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11903,7 +11903,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpHeadersCollectionIterator_GetMany(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11932,7 +11932,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpHeadersCollectionIterator_MoveNext(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12093,7 +12093,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpRequestHeaders_Contains(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12122,7 +12122,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpRequestHeaders_First(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12149,7 +12149,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpRequestHeaders_GetHeader(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12178,7 +12178,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpRequestHeaders_GetHeaders(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12207,7 +12207,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpRequestHeaders_RemoveHeader(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12237,7 +12237,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpRequestHeaders_SetHeader(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpRequestHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12355,7 +12355,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpResponseHeaders_AppendHeader(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpResponseHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12386,7 +12386,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpResponseHeaders_Contains(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpResponseHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12415,7 +12415,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpResponseHeaders_First(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpResponseHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12442,7 +12442,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpResponseHeaders_GetHeader(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpResponseHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12471,7 +12471,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2HttpResponseHeaders_GetHeaders(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpResponseHeaders* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12586,7 +12586,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2LaunchingExternalUriSchemeEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2LaunchingExternalUriSchemeEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13294,7 +13294,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NewWindowRequestedEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13644,7 +13644,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Notification_ReportClicked(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Notification* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13672,7 +13672,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Notification_ReportClosed(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Notification* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13700,7 +13700,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Notification_ReportShown(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Notification* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14069,7 +14069,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2NotificationReceivedEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14240,7 +14240,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2PermissionRequestedEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17285,7 +17285,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_AddBrowserExtensionAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17314,7 +17314,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_ClearBrowsingDataAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17363,7 +17363,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_ClearBrowsingDataAsync2(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17390,7 +17390,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_Delete(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17418,7 +17418,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_GetBrowserExtensionsAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17445,7 +17445,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_GetNonDefaultPermissionSettingsAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17472,7 +17472,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2Profile_SetPermissionStateAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Profile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -17906,7 +17906,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2SaveAsUIShowingEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18235,7 +18235,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ScriptDialogOpeningEventArgs_Accept(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18263,7 +18263,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ScriptDialogOpeningEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18624,7 +18624,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2ServerCertificateErrorDetectedEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19712,7 +19712,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2SharedBuffer_Close(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19740,7 +19740,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2SharedBuffer_OpenStream(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19974,7 +19974,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebMessageReceivedEventArgs_TryGetWebMessageAsString(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebMessageReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20332,7 +20332,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceRequestedEventArgs_GetDeferral(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20833,7 +20833,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* CoreWebView2WebResourceResponseView_GetContentAsync(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceResponseView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21221,7 +21221,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* ICoreWebView2DispatchAdapter_Clean(py::wrapper::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21249,7 +21249,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* ICoreWebView2DispatchAdapter_UnwrapObject(py::wrapper::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21278,7 +21278,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* ICoreWebView2DispatchAdapter_WrapNamedObject(py::wrapper::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21308,7 +21308,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* ICoreWebView2DispatchAdapter_WrapObject(py::wrapper::Microsoft::Web::WebView2::Core::ICoreWebView2DispatchAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21623,7 +21623,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

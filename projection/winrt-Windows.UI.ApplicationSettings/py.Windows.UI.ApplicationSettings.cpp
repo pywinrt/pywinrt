@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPane_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPane_Show(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPane_ShowAddAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPane_ShowAddAccountForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -186,7 +186,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPane_ShowManageAccountsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -226,7 +226,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPane_ShowManageAccountsForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -425,7 +425,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPaneCommandsRequestedEventArgs_GetDeferral(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -754,7 +754,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPaneEventDeferral_Complete(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -850,7 +850,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1015,7 +1015,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsPane_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1415,7 +1415,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsPane_Show(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1819,7 +1819,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -2095,7 +2095,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* Deferral_Close(py::wrapper::Windows::Foundation::Deferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -88,7 +88,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* Deferral_Complete(py::wrapper::Windows::Foundation::Deferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -211,7 +211,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* GuidHelper_CreateNewGuid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -251,7 +251,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* GuidHelper_Equals(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -375,7 +375,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -408,7 +408,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* MemoryBuffer_Close(py::wrapper::Windows::Foundation::MemoryBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -449,7 +449,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* MemoryBuffer_CreateReference(py::wrapper::Windows::Foundation::MemoryBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -571,7 +571,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateBoolean(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -613,7 +613,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateBooleanArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -655,7 +655,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateChar16(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -697,7 +697,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateChar16Array(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -739,7 +739,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateDateTime(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -781,7 +781,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateDateTimeArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -823,7 +823,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateDouble(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -865,7 +865,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateDoubleArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -907,7 +907,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateEmpty(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -947,7 +947,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateGuid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -989,7 +989,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateGuidArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1031,7 +1031,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateInspectable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1073,7 +1073,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateInspectableArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1115,7 +1115,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateInt16(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1157,7 +1157,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateInt16Array(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1199,7 +1199,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateInt32(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1241,7 +1241,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateInt32Array(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1283,7 +1283,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateInt64(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1325,7 +1325,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateInt64Array(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1367,7 +1367,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreatePoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1409,7 +1409,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreatePointArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1451,7 +1451,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateRect(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1493,7 +1493,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateRectArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1535,7 +1535,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateSingle(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1577,7 +1577,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateSingleArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1619,7 +1619,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateSize(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1661,7 +1661,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateSizeArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1703,7 +1703,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateString(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1745,7 +1745,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateStringArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1787,7 +1787,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateTimeSpan(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1829,7 +1829,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateTimeSpanArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1871,7 +1871,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateUInt16(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1913,7 +1913,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateUInt16Array(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1955,7 +1955,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateUInt32(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1997,7 +1997,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateUInt32Array(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2039,7 +2039,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateUInt64(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2081,7 +2081,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateUInt64Array(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2123,7 +2123,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateUInt8(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2165,7 +2165,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* PropertyValue_CreateUInt8Array(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2294,7 +2294,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2343,7 +2343,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* Uri_CombineUri(py::wrapper::Windows::Foundation::Uri* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2385,7 +2385,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* Uri_Equals(py::wrapper::Windows::Foundation::Uri* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2427,7 +2427,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* Uri_EscapeComponent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2469,7 +2469,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* Uri_ToString(py::wrapper::Windows::Foundation::Uri* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2509,7 +2509,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* Uri_UnescapeComponent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3176,7 +3176,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3209,7 +3209,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* WwwFormUrlDecoder_First(py::wrapper::Windows::Foundation::WwwFormUrlDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3249,7 +3249,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* WwwFormUrlDecoder_GetAt(py::wrapper::Windows::Foundation::WwwFormUrlDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3291,7 +3291,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* WwwFormUrlDecoder_GetFirstValueByName(py::wrapper::Windows::Foundation::WwwFormUrlDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3333,7 +3333,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* WwwFormUrlDecoder_GetMany(py::wrapper::Windows::Foundation::WwwFormUrlDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3376,7 +3376,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* WwwFormUrlDecoder_IndexOf(py::wrapper::Windows::Foundation::WwwFormUrlDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3777,7 +3777,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IAsyncAction_Cancel(py::wrapper::Windows::Foundation::IAsyncAction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3818,7 +3818,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IAsyncAction_Close(py::wrapper::Windows::Foundation::IAsyncAction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3859,7 +3859,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IAsyncAction_GetResults(py::wrapper::Windows::Foundation::IAsyncAction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4685,7 +4685,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IAsyncInfo_Cancel(py::wrapper::Windows::Foundation::IAsyncInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4726,7 +4726,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IAsyncInfo_Close(py::wrapper::Windows::Foundation::IAsyncInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5664,7 +5664,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IClosable_Close(py::wrapper::Windows::Foundation::IClosable* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5878,7 +5878,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IGetActivationFactory_GetActivationFactory(py::wrapper::Windows::Foundation::IGetActivationFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6076,7 +6076,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IMemoryBuffer_Close(py::wrapper::Windows::Foundation::IMemoryBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6117,7 +6117,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IMemoryBuffer_CreateReference(py::wrapper::Windows::Foundation::IMemoryBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6357,7 +6357,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IMemoryBufferReference_Close(py::wrapper::Windows::Foundation::IMemoryBufferReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6766,7 +6766,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetBoolean(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6806,7 +6806,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetBooleanArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6855,7 +6855,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetChar16(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6895,7 +6895,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetChar16Array(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6944,7 +6944,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetDateTime(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6984,7 +6984,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetDateTimeArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7033,7 +7033,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetDouble(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7073,7 +7073,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetDoubleArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7122,7 +7122,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetGuid(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7162,7 +7162,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetGuidArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7211,7 +7211,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetInspectableArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7260,7 +7260,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetInt16(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7300,7 +7300,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetInt16Array(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7349,7 +7349,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetInt32(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7389,7 +7389,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetInt32Array(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7438,7 +7438,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetInt64(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7478,7 +7478,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetInt64Array(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7527,7 +7527,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetPoint(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7567,7 +7567,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetPointArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7616,7 +7616,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetRect(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7656,7 +7656,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetRectArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7705,7 +7705,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetSingle(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7745,7 +7745,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetSingleArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7794,7 +7794,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetSize(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7834,7 +7834,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetSizeArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7883,7 +7883,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetString(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7923,7 +7923,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetStringArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7972,7 +7972,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetTimeSpan(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8012,7 +8012,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetTimeSpanArray(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8061,7 +8061,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetUInt16(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8101,7 +8101,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetUInt16Array(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8150,7 +8150,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetUInt32(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8190,7 +8190,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetUInt32Array(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8239,7 +8239,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetUInt64(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8279,7 +8279,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetUInt64Array(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8328,7 +8328,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetUInt8(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8368,7 +8368,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IPropertyValue_GetUInt8Array(py::wrapper::Windows::Foundation::IPropertyValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10450,7 +10450,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyObject* IStringable_ToString(py::wrapper::Windows::Foundation::IStringable* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10892,7 +10892,7 @@ namespace py::cpp::Windows::Foundation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::event_token>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -11073,7 +11073,7 @@ namespace py::cpp::Windows::Foundation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::hresult>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -11255,7 +11255,7 @@ namespace py::cpp::Windows::Foundation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Point>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -11490,7 +11490,7 @@ namespace py::cpp::Windows::Foundation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Rect>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -11785,7 +11785,7 @@ namespace py::cpp::Windows::Foundation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Size>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

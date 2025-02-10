@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_DeleteAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_FindAppointmentCalendarsAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_FindContactAnnotationListsAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_FindContactGroupsAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -183,7 +183,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_FindContactListsAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -223,7 +223,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_FindEmailMailboxesAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -263,7 +263,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_FindUserDataTaskListsAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -303,7 +303,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_SaveAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -343,7 +343,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_TryShowCreateContactGroupAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1053,7 +1053,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1095,7 +1095,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1137,7 +1137,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountManager_ShowAccountErrorResolverAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1179,7 +1179,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountManager_ShowAccountSettingsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1221,7 +1221,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountManager_ShowAddAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1325,7 +1325,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountManagerForUser_RequestStoreAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1462,7 +1462,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountStore_CreateAccountAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1504,7 +1504,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountStore_CreateAccountWithPackageRelativeAppIdAndEnterpriseIdAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1548,7 +1548,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountStore_CreateAccountWithPackageRelativeAppIdAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1591,7 +1591,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountStore_FindAccountsAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1631,7 +1631,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountStore_GetAccountAsync(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1808,7 +1808,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountStoreChangedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtension_GetExtensionProperties(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtension_GetExtensionPropertiesAsync(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtension_GetPublicFolder(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtension_GetPublicFolderAsync(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -183,7 +183,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtension_GetPublicPath(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -477,7 +477,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtensionCatalog_FindAll(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -517,7 +517,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtensionCatalog_FindAllAsync(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -557,7 +557,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtensionCatalog_Open(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyObject* AppExtensionCatalog_RequestRemovePackageAsync(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

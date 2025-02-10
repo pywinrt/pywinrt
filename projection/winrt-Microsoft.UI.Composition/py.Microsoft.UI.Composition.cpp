@@ -226,7 +226,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationController_Pause(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -267,7 +267,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationController_Resume(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -666,7 +666,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationPropertyInfo_GetResolvedCompositionObject(py::wrapper::Microsoft::UI::Composition::AnimationPropertyInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -706,7 +706,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationPropertyInfo_GetResolvedCompositionObjectProperty(py::wrapper::Microsoft::UI::Composition::AnimationPropertyInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1006,7 +1006,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BooleanKeyFrameAnimation_InsertKeyFrame(py::wrapper::Microsoft::UI::Composition::BooleanKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1973,7 +1973,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ColorKeyFrameAnimation_InsertKeyFrame(py::wrapper::Microsoft::UI::Composition::ColorKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2017,7 +2017,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ColorKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::ColorKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2197,7 +2197,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_ClearAllParameters(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2238,7 +2238,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_ClearParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2281,7 +2281,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetBooleanParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2325,7 +2325,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetColorParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2369,7 +2369,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetExpressionReferenceParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2413,7 +2413,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetMatrix3x2Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2457,7 +2457,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetMatrix4x4Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2501,7 +2501,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetQuaternionParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2545,7 +2545,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetReferenceParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2589,7 +2589,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetScalarParameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2633,7 +2633,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetVector2Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2677,7 +2677,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetVector3Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2721,7 +2721,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_SetVector4Parameter(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2963,7 +2963,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimationGroup_Add(py::wrapper::Microsoft::UI::Composition::CompositionAnimationGroup* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3006,7 +3006,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimationGroup_First(py::wrapper::Microsoft::UI::Composition::CompositionAnimationGroup* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3046,7 +3046,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimationGroup_Remove(py::wrapper::Microsoft::UI::Composition::CompositionAnimationGroup* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3089,7 +3089,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimationGroup_RemoveAll(py::wrapper::Microsoft::UI::Composition::CompositionAnimationGroup* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3527,7 +3527,7 @@ namespace py::cpp::Microsoft::UI::Composition
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3558,7 +3558,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionCapabilities_AreEffectsFast(py::wrapper::Microsoft::UI::Composition::CompositionCapabilities* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3598,7 +3598,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionCapabilities_AreEffectsSupported(py::wrapper::Microsoft::UI::Composition::CompositionCapabilities* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4680,7 +4680,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_Append(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4723,7 +4723,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_Clear(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4764,7 +4764,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_First(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4804,7 +4804,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_GetAt(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4846,7 +4846,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_GetMany(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4889,7 +4889,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_GetView(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4929,7 +4929,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_IndexOf(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4985,7 +4985,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_InsertAt(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5029,7 +5029,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_RemoveAt(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5072,7 +5072,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5113,7 +5113,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_ReplaceAll(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5156,7 +5156,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_SetAt(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5741,7 +5741,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_Resize(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5784,7 +5784,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_Scroll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5827,7 +5827,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_ScrollRect(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5871,7 +5871,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_ScrollRectWithClip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5916,7 +5916,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_ScrollWithClip(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6173,7 +6173,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateBackEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6217,7 +6217,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateBounceEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6262,7 +6262,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateCircleEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6305,7 +6305,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateCubicBezierEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6349,7 +6349,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateElasticEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6394,7 +6394,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateExponentialEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6438,7 +6438,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateLinearEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6480,7 +6480,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreatePowerEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6524,7 +6524,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateSineEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6567,7 +6567,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateStepEasingFunction(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6609,7 +6609,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEasingFunction_CreateStepEasingFunctionWithStepCount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6747,7 +6747,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEffectBrush_GetSourceParameter(py::wrapper::Microsoft::UI::Composition::CompositionEffectBrush* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6789,7 +6789,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEffectBrush_SetSourceParameter(py::wrapper::Microsoft::UI::Composition::CompositionEffectBrush* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6898,7 +6898,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEffectFactory_CreateBrush(py::wrapper::Microsoft::UI::Composition::CompositionEffectFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7055,7 +7055,7 @@ namespace py::cpp::Microsoft::UI::Composition
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8697,7 +8697,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGraphicsDevice_CaptureAsync(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -8743,7 +8743,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGraphicsDevice_CreateDrawingSurface(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8787,7 +8787,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGraphicsDevice_CreateDrawingSurface2(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8831,7 +8831,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGraphicsDevice_CreateMipmapSurface(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8875,7 +8875,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGraphicsDevice_CreateVirtualDrawingSurface(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8919,7 +8919,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGraphicsDevice_Trim(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9921,7 +9921,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionMipmapSurface_GetDrawingSurfaceForLevel(py::wrapper::Microsoft::UI::Composition::CompositionMipmapSurface* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10151,7 +10151,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_SetInsetScales(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10194,7 +10194,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_SetInsetScalesWithValues(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -10240,7 +10240,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_SetInsets(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10283,7 +10283,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_SetInsetsWithValues(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -11096,7 +11096,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11137,7 +11137,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_PopulatePropertyInfo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11181,7 +11181,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_StartAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11225,7 +11225,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_StartAnimationGroup(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11268,7 +11268,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_StartAnimationGroupWithIAnimationObject(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11312,7 +11312,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_StartAnimationWithController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11357,7 +11357,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_StartAnimationWithIAnimationObject(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11402,7 +11402,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_StopAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11445,7 +11445,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_StopAnimationGroup(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11488,7 +11488,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_TryGetAnimationController(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11873,7 +11873,7 @@ namespace py::cpp::Microsoft::UI::Composition
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -12710,7 +12710,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_First(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12750,7 +12750,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_InsertAbove(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12794,7 +12794,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_InsertAtBottom(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12837,7 +12837,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_InsertAtTop(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12880,7 +12880,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_InsertBelow(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12924,7 +12924,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_Remove(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12967,7 +12967,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_RemoveAll(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13312,7 +13312,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowReceiverUnorderedCollection_Add(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13355,7 +13355,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowReceiverUnorderedCollection_First(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13395,7 +13395,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowReceiverUnorderedCollection_Remove(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13438,7 +13438,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowReceiverUnorderedCollection_RemoveAll(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13595,7 +13595,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertBoolean(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13639,7 +13639,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertColor(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13683,7 +13683,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertMatrix3x2(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13727,7 +13727,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertMatrix4x4(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13771,7 +13771,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertQuaternion(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13815,7 +13815,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertScalar(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13859,7 +13859,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertVector2(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13903,7 +13903,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertVector3(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13947,7 +13947,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_InsertVector4(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13991,7 +13991,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetBoolean(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14047,7 +14047,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetColor(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14103,7 +14103,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetMatrix3x2(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14159,7 +14159,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetMatrix4x4(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14215,7 +14215,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetQuaternion(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14271,7 +14271,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetScalar(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14327,7 +14327,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetVector2(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14383,7 +14383,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetVector3(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14439,7 +14439,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPropertySet_TryGetVector4(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15325,7 +15325,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionScopedBatch_End(py::wrapper::Microsoft::UI::Composition::CompositionScopedBatch* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15366,7 +15366,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionScopedBatch_Resume(py::wrapper::Microsoft::UI::Composition::CompositionScopedBatch* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15407,7 +15407,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionScopedBatch_Suspend(py::wrapper::Microsoft::UI::Composition::CompositionScopedBatch* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16231,7 +16231,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_Append(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16274,7 +16274,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_Clear(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16315,7 +16315,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_First(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16355,7 +16355,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_GetAt(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16397,7 +16397,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_GetMany(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16440,7 +16440,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_GetView(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16480,7 +16480,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_IndexOf(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16536,7 +16536,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_InsertAt(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16580,7 +16580,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_RemoveAt(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16623,7 +16623,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16664,7 +16664,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_ReplaceAll(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16707,7 +16707,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_SetAt(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17870,7 +17870,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_Append(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17913,7 +17913,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_Clear(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17954,7 +17954,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_First(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17994,7 +17994,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_GetAt(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18036,7 +18036,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_GetMany(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18079,7 +18079,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_GetView(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18119,7 +18119,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_IndexOf(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18175,7 +18175,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_InsertAt(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18219,7 +18219,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_RemoveAt(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18262,7 +18262,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_RemoveAtEnd(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18303,7 +18303,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_ReplaceAll(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18346,7 +18346,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_SetAt(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20115,7 +20115,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionVirtualDrawingSurface_Trim(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20507,7 +20507,7 @@ namespace py::cpp::Microsoft::UI::Composition
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -20538,7 +20538,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_Close(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20579,7 +20579,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateAmbientLight(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20619,7 +20619,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateAnimationController(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20659,7 +20659,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateAnimationGroup(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20699,7 +20699,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateAnimationPropertyInfo(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20739,7 +20739,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateBackdropBrush(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20779,7 +20779,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateBooleanKeyFrameAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20819,7 +20819,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateBounceScalarAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20859,7 +20859,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateBounceVector2Animation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20899,7 +20899,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateBounceVector3Animation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20939,7 +20939,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateColorBrush(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20979,7 +20979,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateColorBrushWithColor(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21021,7 +21021,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateColorGradientStop(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21061,7 +21061,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateColorGradientStopWithOffsetAndColor(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21104,7 +21104,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateColorKeyFrameAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21144,7 +21144,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateContainerShape(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21184,7 +21184,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateContainerVisual(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21224,7 +21224,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateCubicBezierEasingFunction(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21267,7 +21267,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateDistantLight(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21307,7 +21307,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateDropShadow(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21347,7 +21347,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateEffectFactory(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21389,7 +21389,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateEffectFactoryWithProperties(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21432,7 +21432,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateEllipseGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21472,7 +21472,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateExpressionAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21512,7 +21512,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateExpressionAnimationWithExpression(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21554,7 +21554,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateGeometricClip(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21594,7 +21594,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateGeometricClipWithGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21636,7 +21636,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateImplicitAnimationCollection(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21676,7 +21676,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateInsetClip(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21716,7 +21716,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateInsetClipWithInsets(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -21761,7 +21761,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateLayerVisual(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21801,7 +21801,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateLineGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21841,7 +21841,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateLinearEasingFunction(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21881,7 +21881,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateLinearGradientBrush(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21921,7 +21921,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateMaskBrush(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21961,7 +21961,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateNineGridBrush(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22001,7 +22001,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreatePathGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22041,7 +22041,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreatePathGeometryWithPath(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22083,7 +22083,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreatePathKeyFrameAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22123,7 +22123,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreatePointLight(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22163,7 +22163,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateProjectedShadow(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22203,7 +22203,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateProjectedShadowCaster(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22243,7 +22243,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateProjectedShadowReceiver(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22283,7 +22283,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreatePropertySet(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22323,7 +22323,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateQuaternionKeyFrameAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22363,7 +22363,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateRadialGradientBrush(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22403,7 +22403,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateRectangleClip(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22443,7 +22443,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateRectangleClipWithSides(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -22488,7 +22488,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateRectangleClipWithSidesAndRadius(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 8)
         {
@@ -22537,7 +22537,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateRectangleGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22577,7 +22577,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateRedirectVisual(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22617,7 +22617,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateRedirectVisualWithSourceVisual(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22659,7 +22659,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateRoundedRectangleGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22699,7 +22699,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateScalarKeyFrameAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22739,7 +22739,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateScopedBatch(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22781,7 +22781,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateShapeVisual(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22821,7 +22821,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSpotLight(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22861,7 +22861,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSpringScalarAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22901,7 +22901,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSpringVector2Animation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22941,7 +22941,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSpringVector3Animation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22981,7 +22981,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSpriteShape(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23021,7 +23021,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSpriteShapeWithGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23063,7 +23063,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSpriteVisual(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23103,7 +23103,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateStepEasingFunction(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23143,7 +23143,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateStepEasingFunctionWithStepCount(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23185,7 +23185,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSurfaceBrush(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23225,7 +23225,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateSurfaceBrushWithSurface(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23267,7 +23267,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateVector2KeyFrameAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23307,7 +23307,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateVector3KeyFrameAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23347,7 +23347,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateVector4KeyFrameAnimation(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23387,7 +23387,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateViewBox(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23427,7 +23427,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_CreateVisualSurface(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23467,7 +23467,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_GetCommitBatch(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23509,7 +23509,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_RequestCommitAsync(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25445,7 +25445,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ImplicitAnimationCollection_Clear(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25486,7 +25486,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ImplicitAnimationCollection_First(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25526,7 +25526,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ImplicitAnimationCollection_GetView(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25566,7 +25566,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ImplicitAnimationCollection_HasKey(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25608,7 +25608,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ImplicitAnimationCollection_Insert(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -25651,7 +25651,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ImplicitAnimationCollection_Lookup(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25693,7 +25693,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ImplicitAnimationCollection_Remove(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -25974,7 +25974,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InitialValueExpressionCollection_Clear(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26015,7 +26015,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InitialValueExpressionCollection_First(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26055,7 +26055,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InitialValueExpressionCollection_GetView(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26095,7 +26095,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InitialValueExpressionCollection_HasKey(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26137,7 +26137,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InitialValueExpressionCollection_Insert(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -26180,7 +26180,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InitialValueExpressionCollection_Lookup(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26222,7 +26222,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InitialValueExpressionCollection_Remove(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -26846,7 +26846,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_InsertExpressionKeyFrame(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -26890,7 +26890,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -28102,7 +28102,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PathKeyFrameAnimation_InsertKeyFrame(py::wrapper::Microsoft::UI::Composition::PathKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -28146,7 +28146,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PathKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::PathKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -29074,7 +29074,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* QuaternionKeyFrameAnimation_InsertKeyFrame(py::wrapper::Microsoft::UI::Composition::QuaternionKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -29118,7 +29118,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* QuaternionKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::QuaternionKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -30078,7 +30078,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ScalarKeyFrameAnimation_InsertKeyFrame(py::wrapper::Microsoft::UI::Composition::ScalarKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -30122,7 +30122,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ScalarKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::ScalarKeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -33192,7 +33192,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector2KeyFrameAnimation_InsertKeyFrame(py::wrapper::Microsoft::UI::Composition::Vector2KeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -33236,7 +33236,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector2KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector2KeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -33640,7 +33640,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector3KeyFrameAnimation_InsertKeyFrame(py::wrapper::Microsoft::UI::Composition::Vector3KeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -33684,7 +33684,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector3KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector3KeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -34088,7 +34088,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector4KeyFrameAnimation_InsertKeyFrame(py::wrapper::Microsoft::UI::Composition::Vector4KeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -34132,7 +34132,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector4KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector4KeyFrameAnimation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -35827,7 +35827,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualCollection_First(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -35867,7 +35867,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualCollection_InsertAbove(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -35911,7 +35911,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualCollection_InsertAtBottom(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -35954,7 +35954,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualCollection_InsertAtTop(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -35997,7 +35997,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualCollection_InsertBelow(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -36041,7 +36041,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualCollection_Remove(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -36084,7 +36084,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualCollection_RemoveAll(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -36244,7 +36244,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualUnorderedCollection_Add(py::wrapper::Microsoft::UI::Composition::VisualUnorderedCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -36287,7 +36287,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualUnorderedCollection_First(py::wrapper::Microsoft::UI::Composition::VisualUnorderedCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -36327,7 +36327,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualUnorderedCollection_Remove(py::wrapper::Microsoft::UI::Composition::VisualUnorderedCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -36370,7 +36370,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualUnorderedCollection_RemoveAll(py::wrapper::Microsoft::UI::Composition::VisualUnorderedCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -36527,7 +36527,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* IAnimationObject_PopulatePropertyInfo(py::wrapper::Microsoft::UI::Composition::IAnimationObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -37219,7 +37219,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ICompositionSurfaceFacade_GetRealSurface(py::wrapper::Microsoft::UI::Composition::ICompositionSurfaceFacade* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -37532,7 +37532,7 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* IVisualElement2_GetVisualInternal(py::wrapper::Microsoft::UI::Composition::IVisualElement2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

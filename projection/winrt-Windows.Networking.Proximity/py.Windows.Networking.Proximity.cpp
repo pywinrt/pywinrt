@@ -109,7 +109,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* PeerFinder_ConnectAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -151,7 +151,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* PeerFinder_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* PeerFinder_FindAllPeersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* PeerFinder_Start(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* PeerFinder_StartWithMessage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -315,7 +315,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* PeerFinder_Stop(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1253,7 +1253,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* PeerWatcher_Start(py::wrapper::Windows::Networking::Proximity::PeerWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1294,7 +1294,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* PeerWatcher_Stop(py::wrapper::Windows::Networking::Proximity::PeerWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1766,7 +1766,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1808,7 +1808,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1848,7 +1848,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1888,7 +1888,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_PublishBinaryMessage(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1931,7 +1931,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_PublishBinaryMessageWithCallback(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1975,7 +1975,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_PublishMessage(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2018,7 +2018,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_PublishMessageWithCallback(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2062,7 +2062,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_PublishUriMessage(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_PublishUriMessageWithCallback(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2147,7 +2147,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_StopPublishingMessage(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2190,7 +2190,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_StopSubscribingForMessage(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2233,7 +2233,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyObject* ProximityDevice_SubscribeForMessage(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

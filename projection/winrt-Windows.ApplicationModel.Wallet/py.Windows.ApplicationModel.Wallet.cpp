@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletBarcode_GetImageAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletBarcode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -220,7 +220,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2551,7 +2551,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_AddAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2594,7 +2594,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_ClearAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2634,7 +2634,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_DeleteAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2676,7 +2676,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_GetItemsAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2716,7 +2716,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_GetItemsWithKindAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2758,7 +2758,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_GetWalletItemAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2800,7 +2800,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_ImportItemAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2842,7 +2842,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_ShowAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2882,7 +2882,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_ShowItemAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2924,7 +2924,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletItemStore_UpdateAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3031,7 +3031,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
 
     static PyObject* WalletManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3120,7 +3120,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3345,7 +3345,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3850,7 +3850,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

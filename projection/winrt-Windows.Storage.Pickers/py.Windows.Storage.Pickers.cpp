@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_Append(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_Clear(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_First(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_GetAt(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_GetMany(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_GetView(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_IndexOf(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -328,7 +328,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_InsertAt(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -372,7 +372,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_RemoveAt(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -415,7 +415,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_RemoveAtEnd(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -456,7 +456,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_ReplaceAll(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -499,7 +499,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileExtensionVector_SetAt(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -789,7 +789,7 @@ namespace py::cpp::Windows::Storage::Pickers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -820,7 +820,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileOpenPicker_CreateForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -862,7 +862,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileOpenPicker_PickMultipleFilesAndContinue(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -903,7 +903,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileOpenPicker_PickMultipleFilesAsync(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -943,7 +943,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileOpenPicker_PickSingleFileAndContinue(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -984,7 +984,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileOpenPicker_PickSingleFileAsync(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1055,7 +1055,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileOpenPicker_ResumePickSingleFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1558,7 +1558,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerFileTypesOrderedMap_Clear(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1599,7 +1599,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerFileTypesOrderedMap_First(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1639,7 +1639,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerFileTypesOrderedMap_GetView(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1679,7 +1679,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerFileTypesOrderedMap_HasKey(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1721,7 +1721,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerFileTypesOrderedMap_Insert(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1764,7 +1764,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerFileTypesOrderedMap_Lookup(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1806,7 +1806,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerFileTypesOrderedMap_Remove(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2087,7 +2087,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerSelectedFilesArray_First(py::wrapper::Windows::Storage::Pickers::FilePickerSelectedFilesArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2127,7 +2127,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerSelectedFilesArray_GetAt(py::wrapper::Windows::Storage::Pickers::FilePickerSelectedFilesArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2169,7 +2169,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerSelectedFilesArray_GetMany(py::wrapper::Windows::Storage::Pickers::FilePickerSelectedFilesArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2212,7 +2212,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FilePickerSelectedFilesArray_IndexOf(py::wrapper::Windows::Storage::Pickers::FilePickerSelectedFilesArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2478,7 +2478,7 @@ namespace py::cpp::Windows::Storage::Pickers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2509,7 +2509,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileSavePicker_CreateForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2551,7 +2551,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileSavePicker_PickSaveFileAndContinue(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2592,7 +2592,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FileSavePicker_PickSaveFileAsync(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3293,7 +3293,7 @@ namespace py::cpp::Windows::Storage::Pickers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3324,7 +3324,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FolderPicker_CreateForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3366,7 +3366,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FolderPicker_PickFolderAndContinue(py::wrapper::Windows::Storage::Pickers::FolderPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3407,7 +3407,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     static PyObject* FolderPicker_PickSingleFolderAsync(py::wrapper::Windows::Storage::Pickers::FolderPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

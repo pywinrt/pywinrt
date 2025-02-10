@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -226,7 +226,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* AlarmApplicationManager_GetAccessStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -266,7 +266,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* AlarmApplicationManager_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -356,7 +356,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -996,7 +996,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1027,7 +1027,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* ApplicationTrigger_RequestAsync(py::wrapper::Windows::ApplicationModel::Background::ApplicationTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1067,7 +1067,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* ApplicationTrigger_RequestAsyncWithArguments(py::wrapper::Windows::ApplicationModel::Background::ApplicationTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1259,7 +1259,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1345,7 +1345,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_GetAccessStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1385,7 +1385,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_GetAccessStatusForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1427,7 +1427,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_GetAccessStatusForModernStandby(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1467,7 +1467,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_GetAccessStatusForModernStandbyForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1509,7 +1509,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_RemoveAccess(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1550,7 +1550,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_RemoveAccessForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1593,7 +1593,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1633,7 +1633,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_RequestAccessForApplicationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1675,7 +1675,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_RequestAccessKindAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1718,7 +1718,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundExecutionManager_RequestAccessKindForModernStandbyAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1819,7 +1819,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1850,7 +1850,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskBuilder_AddCondition(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1893,7 +1893,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskBuilder_Register(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1964,7 +1964,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskBuilder_SetTaskEntryPointClsid(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2007,7 +2007,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskBuilder_SetTrigger(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2050,7 +2050,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskBuilder_Validate(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2630,7 +2630,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskCompletedEventArgs_CheckResult(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2766,7 +2766,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskDeferral_Complete(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2996,7 +2996,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskRegistration_GetTaskGroup(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3038,7 +3038,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* BackgroundTaskRegistration_Unregister(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3540,7 +3540,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3976,7 +3976,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4372,7 +4372,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4791,7 +4791,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5032,7 +5032,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5117,7 +5117,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5202,7 +5202,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5287,7 +5287,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5372,7 +5372,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -5503,7 +5503,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5588,7 +5588,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -5747,7 +5747,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* DeviceConnectionChangeTrigger_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5997,7 +5997,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -6147,7 +6147,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6178,7 +6178,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* DeviceServicingTrigger_RequestAsyncSimple(py::wrapper::Windows::ApplicationModel::Background::DeviceServicingTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6221,7 +6221,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* DeviceServicingTrigger_RequestAsyncWithArguments(py::wrapper::Windows::ApplicationModel::Background::DeviceServicingTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6321,7 +6321,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6352,7 +6352,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* DeviceUseTrigger_RequestAsyncSimple(py::wrapper::Windows::ApplicationModel::Background::DeviceUseTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6394,7 +6394,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* DeviceUseTrigger_RequestAsyncWithArguments(py::wrapper::Windows::ApplicationModel::Background::DeviceUseTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6556,7 +6556,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6641,7 +6641,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -6815,7 +6815,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* GattServiceProviderTrigger_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7191,7 +7191,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7346,7 +7346,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7464,7 +7464,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -7614,7 +7614,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7645,7 +7645,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* MediaProcessingTrigger_RequestAsync(py::wrapper::Windows::ApplicationModel::Background::MediaProcessingTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7685,7 +7685,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* MediaProcessingTrigger_RequestAsyncWithArguments(py::wrapper::Windows::ApplicationModel::Background::MediaProcessingTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7783,7 +7783,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7868,7 +7868,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7953,7 +7953,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8038,7 +8038,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8123,7 +8123,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8208,7 +8208,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8293,7 +8293,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8378,7 +8378,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8496,7 +8496,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8581,7 +8581,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -8731,7 +8731,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8831,7 +8831,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8916,7 +8916,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9273,7 +9273,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9358,7 +9358,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -9445,7 +9445,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -9563,7 +9563,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -9650,7 +9650,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9766,7 +9766,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -9862,7 +9862,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* StorageLibraryContentChangedTrigger_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9904,7 +9904,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* StorageLibraryContentChangedTrigger_CreateFromLibraries(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10023,7 +10023,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10141,7 +10141,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -10291,7 +10291,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10376,7 +10376,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -10526,7 +10526,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10626,7 +10626,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10726,7 +10726,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10813,7 +10813,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10898,7 +10898,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11115,7 +11115,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* IBackgroundTask_Run(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTask* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11312,7 +11312,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* IBackgroundTaskInstance_GetDeferral(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11948,7 +11948,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* IBackgroundTaskInstance2_GetDeferral(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11988,7 +11988,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* IBackgroundTaskInstance2_GetThrottleCount(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12659,7 +12659,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* IBackgroundTaskInstance4_GetDeferral(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance4* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13346,7 +13346,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* IBackgroundTaskRegistration_Unregister(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13903,7 +13903,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* IBackgroundTaskRegistration2_Unregister(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14511,7 +14511,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyObject* IBackgroundTaskRegistration3_Unregister(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

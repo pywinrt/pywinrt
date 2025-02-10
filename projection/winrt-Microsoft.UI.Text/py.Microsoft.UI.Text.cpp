@@ -448,7 +448,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_ApplyDisplayUpdates(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -488,7 +488,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_BatchDisplayUpdates(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -528,7 +528,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_BeginUndoGroup(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -569,7 +569,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_CanCopy(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -609,7 +609,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_CanPaste(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -649,7 +649,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_CanRedo(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -689,7 +689,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_CanUndo(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -729,7 +729,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_ClearUndoRedoHistory(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -770,7 +770,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_EndUndoGroup(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -811,7 +811,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_GetDefaultCharacterFormat(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -851,7 +851,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_GetDefaultParagraphFormat(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -891,7 +891,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_GetRange(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -934,7 +934,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_GetRangeFromPoint(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -977,7 +977,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_GetText(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1027,7 +1027,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_LoadFromStream(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1071,7 +1071,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_Redo(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1112,7 +1112,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_SaveToStream(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1156,7 +1156,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_SetDefaultCharacterFormat(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1199,7 +1199,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_SetDefaultParagraphFormat(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1242,7 +1242,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_SetText(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1286,7 +1286,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextDocument_Undo(py::wrapper::Microsoft::UI::Text::RichEditTextDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1792,7 +1792,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_CanPaste(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1834,7 +1834,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_ChangeCase(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1877,7 +1877,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_Collapse(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1920,7 +1920,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_Copy(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1961,7 +1961,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_Cut(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2002,7 +2002,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_Delete(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2045,7 +2045,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_EndOf(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2088,7 +2088,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_Expand(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2130,7 +2130,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_FindText(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2174,7 +2174,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_GetCharacterUtf32(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2224,7 +2224,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_GetClone(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2264,7 +2264,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_GetIndex(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2306,7 +2306,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_GetPoint(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2358,7 +2358,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_GetRect(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2414,7 +2414,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_GetText(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2464,7 +2464,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_GetTextViaStream(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2508,7 +2508,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_InRange(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2550,7 +2550,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_InStory(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2592,7 +2592,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_InsertImage(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -2640,7 +2640,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_IsEqual(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2682,7 +2682,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_MatchSelection(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2723,7 +2723,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_Move(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2766,7 +2766,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_MoveEnd(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2809,7 +2809,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_MoveStart(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2852,7 +2852,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_Paste(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2895,7 +2895,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_ScrollIntoView(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2938,7 +2938,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_SetIndex(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2983,7 +2983,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_SetPoint(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3028,7 +3028,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_SetRange(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3072,7 +3072,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_SetText(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3116,7 +3116,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_SetTextViaStream(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3160,7 +3160,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* RichEditTextRange_StartOf(py::wrapper::Microsoft::UI::Text::RichEditTextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4287,7 +4287,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextCharacterFormat_GetClone(py::wrapper::Microsoft::UI::Text::ITextCharacterFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4327,7 +4327,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextCharacterFormat_IsEqual(py::wrapper::Microsoft::UI::Text::ITextCharacterFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4369,7 +4369,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextCharacterFormat_SetClone(py::wrapper::Microsoft::UI::Text::ITextCharacterFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7276,7 +7276,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_AddTab(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7321,7 +7321,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_ClearAllTabs(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7362,7 +7362,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_DeleteTab(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7405,7 +7405,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_GetClone(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7445,7 +7445,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_GetTab(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7507,7 +7507,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_IsEqual(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7549,7 +7549,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_SetClone(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7592,7 +7592,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_SetIndents(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7637,7 +7637,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextParagraphFormat_SetLineSpacing(py::wrapper::Microsoft::UI::Text::ITextParagraphFormat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10305,7 +10305,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_CanPaste(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10347,7 +10347,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_ChangeCase(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10390,7 +10390,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_Collapse(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10433,7 +10433,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_Copy(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10474,7 +10474,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_Cut(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10515,7 +10515,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_Delete(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10558,7 +10558,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_EndOf(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10601,7 +10601,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_Expand(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10643,7 +10643,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_FindText(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -10687,7 +10687,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_GetCharacterUtf32(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10737,7 +10737,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_GetClone(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10777,7 +10777,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_GetIndex(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10819,7 +10819,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_GetPoint(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -10871,7 +10871,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_GetRect(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10927,7 +10927,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_GetText(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10977,7 +10977,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_GetTextViaStream(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11021,7 +11021,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_InRange(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11063,7 +11063,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_InStory(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11105,7 +11105,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_InsertImage(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -11153,7 +11153,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_IsEqual(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11195,7 +11195,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_MatchSelection(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11236,7 +11236,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_Move(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11279,7 +11279,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_MoveEnd(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11322,7 +11322,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_MoveStart(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11365,7 +11365,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_Paste(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11408,7 +11408,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_ScrollIntoView(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11451,7 +11451,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_SetIndex(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11496,7 +11496,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_SetPoint(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11541,7 +11541,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_SetRange(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11585,7 +11585,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_SetText(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11629,7 +11629,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_SetTextViaStream(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11673,7 +11673,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextRange_StartOf(py::wrapper::Microsoft::UI::Text::ITextRange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14192,7 +14192,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_CanPaste(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14234,7 +14234,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_ChangeCase(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14277,7 +14277,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_Collapse(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14320,7 +14320,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_Copy(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14361,7 +14361,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_Cut(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14402,7 +14402,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_Delete(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14445,7 +14445,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_EndKey(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14488,7 +14488,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_EndOf(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14531,7 +14531,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_Expand(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14573,7 +14573,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_FindText(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -14617,7 +14617,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_GetCharacterUtf32(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14667,7 +14667,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_GetClone(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14707,7 +14707,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_GetIndex(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14749,7 +14749,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_GetPoint(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -14801,7 +14801,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_GetRect(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14857,7 +14857,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_GetText(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14907,7 +14907,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_GetTextViaStream(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14951,7 +14951,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_HomeKey(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14994,7 +14994,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_InRange(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15036,7 +15036,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_InStory(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15078,7 +15078,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_InsertImage(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -15126,7 +15126,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_IsEqual(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15168,7 +15168,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_MatchSelection(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15209,7 +15209,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_Move(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15252,7 +15252,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_MoveDown(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15296,7 +15296,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_MoveEnd(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15339,7 +15339,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_MoveLeft(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15383,7 +15383,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_MoveRight(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15427,7 +15427,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_MoveStart(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15470,7 +15470,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_MoveUp(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15514,7 +15514,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_Paste(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15557,7 +15557,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_ScrollIntoView(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15600,7 +15600,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_SetIndex(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15645,7 +15645,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_SetPoint(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15690,7 +15690,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_SetRange(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15734,7 +15734,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_SetText(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15778,7 +15778,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_SetTextViaStream(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15822,7 +15822,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_StartOf(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15865,7 +15865,7 @@ namespace py::cpp::Microsoft::UI::Text
 
     static PyObject* ITextSelection_TypeText(py::wrapper::Microsoft::UI::Text::ITextSelection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* BackgroundMediaPlayer_IsMediaPlaying(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -55,7 +55,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* BackgroundMediaPlayer_SendMessageToBackground(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -98,7 +98,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* BackgroundMediaPlayer_SendMessageToForeground(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -141,7 +141,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* BackgroundMediaPlayer_Shutdown(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -555,7 +555,7 @@ namespace py::cpp::Windows::Media::Playback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -955,7 +955,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaBreakManager_PlayBreak(py::wrapper::Windows::Media::Playback::MediaBreakManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -998,7 +998,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaBreakManager_SkipCurrentBreak(py::wrapper::Windows::Media::Playback::MediaBreakManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1434,7 +1434,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaBreakSchedule_InsertMidrollBreak(py::wrapper::Windows::Media::Playback::MediaBreakSchedule* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1477,7 +1477,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaBreakSchedule_RemoveMidrollBreak(py::wrapper::Windows::Media::Playback::MediaBreakSchedule* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2198,7 +2198,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaItemDisplayProperties_ClearAll(py::wrapper::Windows::Media::Playback::MediaItemDisplayProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2505,7 +2505,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackAudioTrackList_First(py::wrapper::Windows::Media::Playback::MediaPlaybackAudioTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2545,7 +2545,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackAudioTrackList_GetAt(py::wrapper::Windows::Media::Playback::MediaPlaybackAudioTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2587,7 +2587,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackAudioTrackList_GetMany(py::wrapper::Windows::Media::Playback::MediaPlaybackAudioTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2630,7 +2630,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackAudioTrackList_IndexOf(py::wrapper::Windows::Media::Playback::MediaPlaybackAudioTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4186,7 +4186,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4653,7 +4653,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerFastForwardReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4827,7 +4827,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerNextReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5001,7 +5001,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerPauseReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5175,7 +5175,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerPlayReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5349,7 +5349,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerPositionReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5554,7 +5554,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerPreviousReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5728,7 +5728,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerRateReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5933,7 +5933,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerRewindReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6107,7 +6107,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackCommandManagerShuffleReceivedEventArgs_GetDeferral(py::wrapper::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6303,7 +6303,7 @@ namespace py::cpp::Windows::Media::Playback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -6369,7 +6369,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackItem_ApplyDisplayProperties(py::wrapper::Windows::Media::Playback::MediaPlaybackItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6412,7 +6412,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackItem_FindFromMediaSource(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6454,7 +6454,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackItem_GetDisplayProperties(py::wrapper::Windows::Media::Playback::MediaPlaybackItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7575,7 +7575,7 @@ namespace py::cpp::Windows::Media::Playback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7606,7 +7606,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackList_MoveNext(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7646,7 +7646,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackList_MovePrevious(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7686,7 +7686,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackList_MoveTo(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7728,7 +7728,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackList_SetShuffledItems(py::wrapper::Windows::Media::Playback::MediaPlaybackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8513,7 +8513,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackSession_GetBufferedRanges(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8553,7 +8553,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackSession_GetOutputDegradationPolicyState(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8593,7 +8593,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackSession_GetPlayedRanges(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8633,7 +8633,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackSession_GetSeekableRanges(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8673,7 +8673,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackSession_IsSupportedPlaybackRateRange(py::wrapper::Windows::Media::Playback::MediaPlaybackSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11084,7 +11084,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackTimedMetadataTrackList_First(py::wrapper::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11124,7 +11124,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackTimedMetadataTrackList_GetAt(py::wrapper::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11166,7 +11166,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackTimedMetadataTrackList_GetMany(py::wrapper::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11209,7 +11209,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackTimedMetadataTrackList_GetPresentationMode(py::wrapper::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11251,7 +11251,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackTimedMetadataTrackList_IndexOf(py::wrapper::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11307,7 +11307,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackTimedMetadataTrackList_SetPresentationMode(py::wrapper::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11639,7 +11639,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackVideoTrackList_First(py::wrapper::Windows::Media::Playback::MediaPlaybackVideoTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11679,7 +11679,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackVideoTrackList_GetAt(py::wrapper::Windows::Media::Playback::MediaPlaybackVideoTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11721,7 +11721,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackVideoTrackList_GetMany(py::wrapper::Windows::Media::Playback::MediaPlaybackVideoTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11764,7 +11764,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlaybackVideoTrackList_IndexOf(py::wrapper::Windows::Media::Playback::MediaPlaybackVideoTrackList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12167,7 +12167,7 @@ namespace py::cpp::Windows::Media::Playback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12198,7 +12198,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_AddAudioEffect(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -12243,7 +12243,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_AddVideoEffect(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -12288,7 +12288,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_Close(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12329,7 +12329,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_CopyFrameToStereoscopicVideoSurfaces(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12373,7 +12373,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_CopyFrameToVideoSurface(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12416,7 +12416,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_CopyFrameToVideoSurfaceWithTargetRectangle(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12460,7 +12460,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_GetAsCastingSource(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12500,7 +12500,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_GetSurface(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12542,7 +12542,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_Pause(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12583,7 +12583,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_Play(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12624,7 +12624,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_RemoveAllEffects(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12665,7 +12665,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_RenderSubtitlesToSurface(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12707,7 +12707,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_RenderSubtitlesToSurfaceWithTargetRectangle(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12750,7 +12750,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_SetFileSource(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12793,7 +12793,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_SetMediaSource(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12836,7 +12836,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_SetStreamSource(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12879,7 +12879,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_SetSurfaceSize(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12922,7 +12922,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_SetUriSource(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12965,7 +12965,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_StepBackwardOneFrame(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13006,7 +13006,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayer_StepForwardOneFrame(py::wrapper::Windows::Media::Playback::MediaPlayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15999,7 +15999,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* MediaPlayerSurface_Close(py::wrapper::Windows::Media::Playback::MediaPlayerSurface* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16213,7 +16213,7 @@ namespace py::cpp::Windows::Media::Playback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -16513,7 +16513,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* PlaybackMediaMarkerSequence_Clear(py::wrapper::Windows::Media::Playback::PlaybackMediaMarkerSequence* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16554,7 +16554,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* PlaybackMediaMarkerSequence_First(py::wrapper::Windows::Media::Playback::PlaybackMediaMarkerSequence* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16594,7 +16594,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* PlaybackMediaMarkerSequence_Insert(py::wrapper::Windows::Media::Playback::PlaybackMediaMarkerSequence* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16908,7 +16908,7 @@ namespace py::cpp::Windows::Media::Playback
 
     static PyObject* IMediaEnginePlaybackSource_SetPlaybackSource(py::wrapper::Windows::Media::Playback::IMediaEnginePlaybackSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

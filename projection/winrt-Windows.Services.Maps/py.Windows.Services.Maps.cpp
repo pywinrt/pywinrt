@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Services::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1036,7 +1036,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocationFinder_FindLocationsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1079,7 +1079,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocationFinder_FindLocationsAtAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1121,7 +1121,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocationFinder_FindLocationsAtWithAccuracyAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1164,7 +1164,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapLocationFinder_FindLocationsWithMaxCountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1386,7 +1386,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapManager_ShowDownloadedMapsUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1427,7 +1427,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapManager_ShowMapsUpdateUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1922,7 +1922,7 @@ namespace py::cpp::Windows::Services::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2358,7 +2358,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2401,7 +2401,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteFromEnhancedWaypointsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2443,7 +2443,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteFromEnhancedWaypointsWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2486,7 +2486,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteFromWaypointsAndOptimizationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2529,7 +2529,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteFromWaypointsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2571,7 +2571,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteFromWaypointsOptimizationAndRestrictionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2615,7 +2615,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteFromWaypointsOptimizationRestrictionsAndHeadingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2660,7 +2660,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteWithOptimizationAndRestrictionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2705,7 +2705,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteWithOptimizationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2749,7 +2749,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteWithOptimizationRestrictionsAndHeadingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2795,7 +2795,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetDrivingRouteWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2839,7 +2839,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetWalkingRouteAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2882,7 +2882,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* MapRouteFinder_GetWalkingRouteFromWaypointsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4054,7 +4054,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4096,7 +4096,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_CreateFromAddress(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4138,7 +4138,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_CreateFromAddressWithName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4181,7 +4181,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_CreateFromIdentifier(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4223,7 +4223,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_CreateFromIdentifierWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4267,7 +4267,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_CreateFromMapLocation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4309,7 +4309,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_CreateWithGeopointAndOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4352,7 +4352,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_Show(py::wrapper::Windows::Services::Maps::PlaceInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4395,7 +4395,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyObject* PlaceInfo_ShowWithPreferredPlacement(py::wrapper::Windows::Services::Maps::PlaceInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4678,7 +4678,7 @@ namespace py::cpp::Windows::Services::Maps
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

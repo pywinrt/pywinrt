@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
 
     static PyObject* WindowManagementPreview_SetPreferredMinSize(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

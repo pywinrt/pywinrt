@@ -678,7 +678,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneLineChangedTriggerDetails_HasLinePropertyChanged(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

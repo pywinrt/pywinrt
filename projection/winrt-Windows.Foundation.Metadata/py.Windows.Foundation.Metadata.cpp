@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsApiContractPresentByMajor(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -58,7 +58,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsApiContractPresentByMajorAndMinor(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -102,7 +102,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsEnumNamedValuePresent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsEventPresent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsMethodPresent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsMethodPresentWithArity(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -275,7 +275,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsPropertyPresent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -318,7 +318,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsReadOnlyPropertyPresent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -361,7 +361,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsTypePresent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -403,7 +403,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyObject* ApiInformation_IsWriteablePropertyPresent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyObject* DevicePortalConnection_GetForAppServiceConnection(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyObject* DevicePortalConnection_GetServerMessageWebSocketForRequest(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyObject* DevicePortalConnection_GetServerMessageWebSocketForRequest2(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -151,7 +151,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyObject* DevicePortalConnection_GetServerMessageWebSocketForRequest3(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyObject* DevicePortalConnection_GetServerStreamWebSocketForRequest(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -240,7 +240,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyObject* DevicePortalConnection_GetServerStreamWebSocketForRequest2(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -603,7 +603,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyObject* DevicePortalConnectionRequestReceivedEventArgs_GetDeferral(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

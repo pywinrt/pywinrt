@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Web::Http::Filters
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* HttpBaseProtocolFilter_ClearAuthenticationCache(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* HttpBaseProtocolFilter_Close(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -127,7 +127,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* HttpBaseProtocolFilter_CreateForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -169,7 +169,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* HttpBaseProtocolFilter_SendRequestAsync(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1418,7 +1418,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* HttpServerCustomValidationRequestedEventArgs_GetDeferral(py::wrapper::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1458,7 +1458,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* HttpServerCustomValidationRequestedEventArgs_Reject(py::wrapper::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1719,7 +1719,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* IHttpFilter_Close(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1760,7 +1760,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyObject* IHttpFilter_SendRequestAsync(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

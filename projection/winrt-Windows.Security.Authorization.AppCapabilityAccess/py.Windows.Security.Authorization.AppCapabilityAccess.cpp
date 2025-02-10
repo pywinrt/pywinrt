@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_CheckAccess(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_CreateWithProcessIdForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_RequestAccessAsync(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_RequestAccessForCapabilitiesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyObject* AppCapability_RequestAccessForCapabilitiesForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

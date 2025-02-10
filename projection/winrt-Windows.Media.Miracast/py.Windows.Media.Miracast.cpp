@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Media::Miracast
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_ClearKnownTransmitters(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_CreateSession(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -128,7 +128,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_CreateSessionAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -170,7 +170,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_DisconnectAllAndApplySettings(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -212,7 +212,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_DisconnectAllAndApplySettingsAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -254,7 +254,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_GetCurrentSettings(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -294,7 +294,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_GetCurrentSettingsAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -334,7 +334,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_GetDefaultSettings(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -374,7 +374,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_GetStatus(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -414,7 +414,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_GetStatusAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -454,7 +454,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_RemoveKnownTransmitter(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -763,7 +763,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_Close(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -804,7 +804,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_Disconnect(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -847,7 +847,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_DisconnectWithMessage(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -891,7 +891,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_Pause(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -932,7 +932,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_PauseAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -972,7 +972,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_Resume(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1013,7 +1013,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_ResumeAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1272,7 +1272,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnectionCreatedEventArgs_GetDeferral(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2775,7 +2775,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverMediaSourceCreatedEventArgs_GetDeferral(py::wrapper::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2972,7 +2972,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_Close(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3013,7 +3013,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_Start(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3053,7 +3053,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_StartAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4281,7 +4281,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStreamControl_GetVideoStreamSettings(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4321,7 +4321,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStreamControl_GetVideoStreamSettingsAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4361,7 +4361,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStreamControl_SuggestVideoStreamSettings(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4404,7 +4404,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStreamControl_SuggestVideoStreamSettingsAsync(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4786,7 +4786,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastTransmitter_GetConnections(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

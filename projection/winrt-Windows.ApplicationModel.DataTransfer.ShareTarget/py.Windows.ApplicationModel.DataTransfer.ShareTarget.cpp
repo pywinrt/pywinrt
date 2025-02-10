@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -380,7 +380,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_DismissUI(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -421,7 +421,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_RemoveThisQuickLink(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -462,7 +462,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_ReportCompleted(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -503,7 +503,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_ReportCompletedWithQuickLink(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -546,7 +546,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_ReportDataRetrieved(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -587,7 +587,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_ReportError(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -630,7 +630,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_ReportStarted(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -671,7 +671,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_ReportSubmittedBackgroundTask(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

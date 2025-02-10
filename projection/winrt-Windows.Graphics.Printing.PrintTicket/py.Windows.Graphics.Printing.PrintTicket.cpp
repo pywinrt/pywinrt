@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_GetFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_GetParameterDefinition(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -732,7 +732,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_GetOption(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -775,7 +775,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_GetSelectedOption(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -815,7 +815,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_SetSelectedOption(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1110,7 +1110,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketOption_GetPropertyNode(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1153,7 +1153,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketOption_GetPropertyValue(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1196,7 +1196,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketOption_GetScoredPropertyNode(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1239,7 +1239,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketOption_GetScoredPropertyValue(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1979,7 +1979,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketValue_GetValueAsInteger(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2019,7 +2019,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketValue_GetValueAsString(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2155,7 +2155,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_GetCapabilities(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2195,7 +2195,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_GetFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2238,7 +2238,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_GetParameterInitializer(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2281,7 +2281,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_MergeAndValidateTicket(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2323,7 +2323,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_NotifyXmlChangedAsync(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2363,7 +2363,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_SetParameterInitializerAsInteger(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2407,7 +2407,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_SetParameterInitializerAsString(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2451,7 +2451,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_ValidateAsync(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

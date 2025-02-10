@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -60,7 +60,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_Play(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -101,7 +101,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapImage_Stop(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1193,7 +1193,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapSource_SetSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* BitmapSource_SetSourceAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1612,7 +1612,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1643,7 +1643,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* RenderTargetBitmap_GetPixelsAsync(py::wrapper::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1683,7 +1683,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* RenderTargetBitmap_RenderAsync(py::wrapper::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1725,7 +1725,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* RenderTargetBitmap_RenderToSizeAsync(py::wrapper::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1971,7 +1971,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2002,7 +2002,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SoftwareBitmapSource_Close(py::wrapper::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2043,7 +2043,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SoftwareBitmapSource_SetBitmapAsync(py::wrapper::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2202,7 +2202,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource>();
         if (!self_type)
@@ -2417,7 +2417,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>();
         if (!self_type)
@@ -2516,7 +2516,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* SvgImageSource_SetSourceAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3228,7 +3228,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -3333,7 +3333,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -3367,7 +3367,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* WriteableBitmap_Invalidate(py::wrapper::Windows::UI::Xaml::Media::Imaging::WriteableBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3569,7 +3569,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     static PyObject* XamlRenderingBackgroundTask_OnRun(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

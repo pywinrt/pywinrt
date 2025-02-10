@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_Clone(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_CreateFromEmbeddedAudioTrack(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_CreateFromFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* BackgroundAudioTrack_GetAudioEncodingProperties(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -679,7 +679,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* EmbeddedAudioTrack_GetAudioEncodingProperties(py::wrapper::Windows::Media::Editing::EmbeddedAudioTrack* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -783,7 +783,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_Clone(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -823,7 +823,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_CreateFromColor(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -866,7 +866,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_CreateFromFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -908,7 +908,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_CreateFromImageFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -951,7 +951,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_CreateFromSurface(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -994,7 +994,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaClip_GetVideoEncodingProperties(py::wrapper::Windows::Media::Editing::MediaClip* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1643,7 +1643,7 @@ namespace py::cpp::Windows::Media::Editing
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1674,7 +1674,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_Clone(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1714,7 +1714,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_CreateDefaultEncodingProfile(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1754,7 +1754,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_GenerateMediaStreamSource(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1794,7 +1794,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_GenerateMediaStreamSourceWithProfile(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1836,7 +1836,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_GeneratePreviewMediaStreamSource(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1879,7 +1879,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_GetThumbnailAsync(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1924,7 +1924,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_GetThumbnailsAsync(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1969,7 +1969,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_LoadAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2011,7 +2011,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_RenderToFileAsync(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2053,7 +2053,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_RenderToFileWithProfileAsync(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2097,7 +2097,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_RenderToFileWithTrimmingPreferenceAsync(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2140,7 +2140,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaComposition_SaveAsync(py::wrapper::Windows::Media::Editing::MediaComposition* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2424,7 +2424,7 @@ namespace py::cpp::Windows::Media::Editing
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2474,7 +2474,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlay_Clone(py::wrapper::Windows::Media::Editing::MediaOverlay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2880,7 +2880,7 @@ namespace py::cpp::Windows::Media::Editing
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2926,7 +2926,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyObject* MediaOverlayLayer_Clone(py::wrapper::Windows::Media::Editing::MediaOverlayLayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

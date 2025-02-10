@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_ApplyRoundingForCurrency(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_FormatUInt(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -233,7 +233,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_ParseDouble(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -275,7 +275,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_ParseInt(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -317,7 +317,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_ParseUInt(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1244,7 +1244,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1291,7 +1291,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1333,7 +1333,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_FormatUInt(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1417,7 +1417,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_ParseDouble(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1459,7 +1459,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_ParseInt(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1501,7 +1501,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_ParseUInt(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2287,7 +2287,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2318,7 +2318,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* IncrementNumberRounder_RoundDouble(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2360,7 +2360,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* IncrementNumberRounder_RoundInt32(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2402,7 +2402,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* IncrementNumberRounder_RoundInt64(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2444,7 +2444,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* IncrementNumberRounder_RoundSingle(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2486,7 +2486,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* IncrementNumberRounder_RoundUInt32(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2528,7 +2528,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* IncrementNumberRounder_RoundUInt64(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2770,7 +2770,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2816,7 +2816,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* NumeralSystemTranslator_TranslateNumerals(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3045,7 +3045,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -3092,7 +3092,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3134,7 +3134,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3176,7 +3176,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_FormatUInt(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3218,7 +3218,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_ParseDouble(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3260,7 +3260,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_ParseInt(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3302,7 +3302,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_ParseUInt(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4088,7 +4088,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -4135,7 +4135,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4177,7 +4177,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4219,7 +4219,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_FormatUInt(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4261,7 +4261,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_ParseDouble(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4303,7 +4303,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_ParseInt(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4345,7 +4345,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_ParseUInt(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5131,7 +5131,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5162,7 +5162,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* SignificantDigitsNumberRounder_RoundDouble(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5204,7 +5204,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* SignificantDigitsNumberRounder_RoundInt32(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5246,7 +5246,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* SignificantDigitsNumberRounder_RoundInt64(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5288,7 +5288,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* SignificantDigitsNumberRounder_RoundSingle(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5330,7 +5330,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* SignificantDigitsNumberRounder_RoundUInt32(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5372,7 +5372,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* SignificantDigitsNumberRounder_RoundUInt64(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5623,7 +5623,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5665,7 +5665,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5707,7 +5707,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatter_FormatUInt(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5971,7 +5971,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatter2_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6013,7 +6013,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatter2_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6055,7 +6055,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatter2_FormatUInt(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7211,7 +7211,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberParser_ParseDouble(py::wrapper::Windows::Globalization::NumberFormatting::INumberParser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7253,7 +7253,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberParser_ParseInt(py::wrapper::Windows::Globalization::NumberFormatting::INumberParser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7295,7 +7295,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberParser_ParseUInt(py::wrapper::Windows::Globalization::NumberFormatting::INumberParser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7559,7 +7559,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberRounder_RoundDouble(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7601,7 +7601,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberRounder_RoundInt32(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7643,7 +7643,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberRounder_RoundInt64(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7685,7 +7685,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberRounder_RoundSingle(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7727,7 +7727,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberRounder_RoundUInt32(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7769,7 +7769,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberRounder_RoundUInt64(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

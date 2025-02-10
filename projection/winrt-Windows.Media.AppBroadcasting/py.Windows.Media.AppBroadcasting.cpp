@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -642,7 +642,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingUI_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -682,7 +682,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingUI_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -724,7 +724,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingUI_GetStatus(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -764,7 +764,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingUI_ShowBroadcastUI(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* AggregateContactManager_FindRawContactsAsync(py::wrapper::Windows::ApplicationModel::Contacts::AggregateContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* AggregateContactManager_SetRemoteIdentificationInformationAsync(py::wrapper::Windows::ApplicationModel::Contacts::AggregateContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -109,7 +109,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* AggregateContactManager_TryLinkContactsAsync(py::wrapper::Windows::ApplicationModel::Contacts::AggregateContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -152,7 +152,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* AggregateContactManager_TrySetPreferredSourceForPictureAsync(py::wrapper::Windows::ApplicationModel::Contacts::AggregateContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -195,7 +195,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* AggregateContactManager_UnlinkRawContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::AggregateContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -296,7 +296,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2323,7 +2323,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2898,7 +2898,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3396,7 +3396,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationList_DeleteAnnotationAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3438,7 +3438,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationList_DeleteAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3478,7 +3478,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationList_FindAnnotationsAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3518,7 +3518,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationList_FindAnnotationsByRemoteIdAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3560,7 +3560,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationList_GetAnnotationAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3602,7 +3602,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationList_TrySaveAnnotationAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3806,7 +3806,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_CreateAnnotationListAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3846,7 +3846,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_CreateAnnotationListInAccountAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3888,7 +3888,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_DisableAnnotationAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3930,7 +3930,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_FindAnnotationListsAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3970,7 +3970,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_FindAnnotationsForContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4012,7 +4012,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_FindAnnotationsForContactListAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4054,7 +4054,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_FindContactIdsByEmailAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4096,7 +4096,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_FindContactIdsByPhoneNumberAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4138,7 +4138,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactAnnotationStore_GetAnnotationListAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4377,7 +4377,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactCardDelayedDataLoader_Close(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4418,7 +4418,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactCardDelayedDataLoader_SetData(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4542,7 +4542,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4932,7 +4932,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactChangeReader_AcceptChanges(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4973,7 +4973,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactChangeReader_AcceptChangesThrough(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5016,7 +5016,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactChangeReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5122,7 +5122,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactChangeTracker_Enable(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5163,7 +5163,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactChangeTracker_GetChangeReader(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5203,7 +5203,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactChangeTracker_Reset(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5341,7 +5341,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactChangedDeferral_Complete(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangedDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5446,7 +5446,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactChangedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5541,7 +5541,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5766,7 +5766,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6201,7 +6201,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6496,7 +6496,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -6743,7 +6743,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6774,7 +6774,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateField_Category(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6818,7 +6818,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateField_Custom(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6863,7 +6863,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateField_Default(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6906,7 +6906,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateInstantMessage_All(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -6952,7 +6952,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateInstantMessage_Category(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6995,7 +6995,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateInstantMessage_Default(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7037,7 +7037,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateLocation_All(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -7085,7 +7085,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateLocation_Category(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7128,7 +7128,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactFieldFactory_CreateLocation_Default(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7305,7 +7305,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactInformation_GetThumbnailAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7345,7 +7345,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactInformation_QueryCustomFields(py::wrapper::Windows::ApplicationModel::Contacts::ContactInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7629,7 +7629,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7999,7 +7999,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8857,7 +8857,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_DeleteAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8897,7 +8897,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_DeleteContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8939,7 +8939,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_GetChangeTracker(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8981,7 +8981,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_GetContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9023,7 +9023,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_GetContactFromRemoteIdAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9065,7 +9065,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_GetContactReader(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9105,7 +9105,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_GetContactReaderWithOptions(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9147,7 +9147,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_GetMeContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9187,7 +9187,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_RegisterSyncManagerAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9227,7 +9227,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_SaveAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9267,7 +9267,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactList_SaveContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10017,7 +10017,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactListLimitedWriteOperations_TryCreateOrUpdateContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10059,7 +10059,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactListLimitedWriteOperations_TryDeleteContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12189,7 +12189,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactListSyncManager_SyncAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12561,7 +12561,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -12996,7 +12996,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ConvertContactToVCardAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13038,7 +13038,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ConvertContactToVCardAsyncWithMaxBytes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13081,7 +13081,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ConvertVCardToContactAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13123,7 +13123,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13165,7 +13165,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_IsShowContactCardSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13205,7 +13205,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_IsShowDelayLoadedContactCardSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13245,7 +13245,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_IsShowFullContactCardSupportedAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13285,7 +13285,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_RequestAnnotationStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13327,7 +13327,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13367,7 +13367,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_RequestStoreAsyncWithAccessType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13409,7 +13409,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ShowContactCard(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13453,7 +13453,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ShowContactCardWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -13499,7 +13499,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ShowContactCardWithPlacement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -13544,7 +13544,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ShowDelayLoadedContactCard(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -13588,7 +13588,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ShowDelayLoadedContactCardWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -13633,7 +13633,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManager_ShowFullContactCard(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13960,7 +13960,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManagerForUser_ConvertContactToVCardAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14002,7 +14002,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManagerForUser_ConvertContactToVCardAsyncWithMaxBytes(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14045,7 +14045,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManagerForUser_ConvertVCardToContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14087,7 +14087,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManagerForUser_RequestAnnotationStoreAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14129,7 +14129,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManagerForUser_RequestStoreAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14171,7 +14171,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactManagerForUser_ShowFullContactCard(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14611,7 +14611,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactPanel_ClosePanel(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14920,7 +14920,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactPanelClosingEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15148,7 +15148,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15443,7 +15443,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15474,7 +15474,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactPicker_CreateForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15516,7 +15516,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactPicker_IsSupportedAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15556,7 +15556,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactPicker_PickContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15596,7 +15596,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactPicker_PickContactsAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15636,7 +15636,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactPicker_PickMultipleContactsAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15676,7 +15676,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactPicker_PickSingleContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16030,7 +16030,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -16731,7 +16731,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactReader_GetMatchingPropertiesWithMatchReason(py::wrapper::Windows::ApplicationModel::Contacts::ContactReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16773,7 +16773,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16869,7 +16869,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17173,7 +17173,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_CreateContactListAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17215,7 +17215,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_CreateContactListInAccountAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17258,7 +17258,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_FindContactListsAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17298,7 +17298,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_FindContactsAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17338,7 +17338,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_FindContactsWithSearchTextAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17380,7 +17380,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_GetChangeTracker(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17422,7 +17422,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_GetContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17464,7 +17464,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_GetContactListAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17506,7 +17506,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_GetContactReader(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17546,7 +17546,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_GetContactReaderWithOptions(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17588,7 +17588,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* ContactStore_GetMeContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17885,7 +17885,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18180,7 +18180,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18336,7 +18336,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* KnownContactField_ConvertNameToType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18378,7 +18378,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* KnownContactField_ConvertTypeToName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18697,7 +18697,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18737,7 +18737,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18779,7 +18779,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_GetPinnedContactIdsAsync(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18819,7 +18819,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_IsContactPinned(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18862,7 +18862,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_IsPinSurfaceSupported(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18904,7 +18904,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18944,7 +18944,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_RequestPinContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18987,7 +18987,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_RequestPinContactsAsync(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19030,7 +19030,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_RequestUnpinContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19073,7 +19073,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* PinnedContactManager_SignalContactActivity(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19568,7 +19568,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactFieldFactory_CreateField_Category(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -19612,7 +19612,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactFieldFactory_CreateField_Custom(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -19657,7 +19657,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactFieldFactory_CreateField_Default(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19976,7 +19976,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactInstantMessageFieldFactory_CreateInstantMessage_All(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -20022,7 +20022,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactInstantMessageFieldFactory_CreateInstantMessage_Category(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20065,7 +20065,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactInstantMessageFieldFactory_CreateInstantMessage_Default(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20371,7 +20371,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactLocationFieldFactory_CreateLocation_All(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -20419,7 +20419,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactLocationFieldFactory_CreateLocation_Category(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20462,7 +20462,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyObject* IContactLocationFieldFactory_CreateLocation_Default(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

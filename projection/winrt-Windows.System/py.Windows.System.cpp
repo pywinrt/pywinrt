@@ -148,7 +148,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_CreateResourceGroupWatcher(py::wrapper::Windows::System::AppDiagnosticInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -228,7 +228,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_GetResourceGroups(py::wrapper::Windows::System::AppDiagnosticInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_LaunchAsync(py::wrapper::Windows::System::AppDiagnosticInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -308,7 +308,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -348,7 +348,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_RequestInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -388,7 +388,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_RequestInfoForAppAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -428,7 +428,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_RequestInfoForAppUserModelId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -470,7 +470,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfo_RequestInfoForPackageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -636,7 +636,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfoWatcher_Start(py::wrapper::Windows::System::AppDiagnosticInfoWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppDiagnosticInfoWatcher_Stop(py::wrapper::Windows::System::AppDiagnosticInfoWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1800,7 +1800,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfo_GetBackgroundTaskReports(py::wrapper::Windows::System::AppResourceGroupInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1840,7 +1840,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfo_GetMemoryReport(py::wrapper::Windows::System::AppResourceGroupInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1880,7 +1880,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfo_GetProcessDiagnosticInfos(py::wrapper::Windows::System::AppResourceGroupInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1920,7 +1920,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfo_GetStateReport(py::wrapper::Windows::System::AppResourceGroupInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1960,7 +1960,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfo_StartResumeAsync(py::wrapper::Windows::System::AppResourceGroupInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2000,7 +2000,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfo_StartSuspendAsync(py::wrapper::Windows::System::AppResourceGroupInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2040,7 +2040,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfo_StartTerminateAsync(py::wrapper::Windows::System::AppResourceGroupInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2212,7 +2212,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfoWatcher_Start(py::wrapper::Windows::System::AppResourceGroupInfoWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2253,7 +2253,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppResourceGroupInfoWatcher_Stop(py::wrapper::Windows::System::AppResourceGroupInfoWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3278,7 +3278,7 @@ namespace py::cpp::Windows::System
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3527,7 +3527,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistration_GetAllHosts(py::wrapper::Windows::System::AppUriHandlerRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3567,7 +3567,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistration_GetAppAddedHostsAsync(py::wrapper::Windows::System::AppUriHandlerRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3607,7 +3607,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistration_SetAppAddedHostsAsync(py::wrapper::Windows::System::AppUriHandlerRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3649,7 +3649,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistration_UpdateHosts(py::wrapper::Windows::System::AppUriHandlerRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3852,7 +3852,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistrationManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3892,7 +3892,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistrationManager_GetForPackage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3934,7 +3934,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistrationManager_GetForPackageForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3977,7 +3977,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistrationManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4019,7 +4019,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* AppUriHandlerRegistrationManager_TryGetRegistration(py::wrapper::Windows::System::AppUriHandlerRegistrationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4204,7 +4204,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DateTimeSettings_SetSystemDateTime(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4305,7 +4305,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueue_CreateTimer(py::wrapper::Windows::System::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4345,7 +4345,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueue_GetForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4385,7 +4385,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueue_TryEnqueue(py::wrapper::Windows::System::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4427,7 +4427,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueue_TryEnqueueWithPriority(py::wrapper::Windows::System::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4723,7 +4723,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueueController_CreateOnDedicatedThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4763,7 +4763,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueueController_ShutdownQueueAsync(py::wrapper::Windows::System::DispatcherQueueController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4920,7 +4920,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueueShutdownStartingEventArgs_GetDeferral(py::wrapper::Windows::System::DispatcherQueueShutdownStartingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5024,7 +5024,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueueTimer_Start(py::wrapper::Windows::System::DispatcherQueueTimer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5065,7 +5065,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* DispatcherQueueTimer_Stop(py::wrapper::Windows::System::DispatcherQueueTimer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5400,7 +5400,7 @@ namespace py::cpp::Windows::System
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6071,7 +6071,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_FindAppUriHandlersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6113,7 +6113,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_FindFileHandlersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6155,7 +6155,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_FindUriSchemeHandlersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6197,7 +6197,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_FindUriSchemeHandlersWithLaunchUriTypeAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6240,7 +6240,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6282,7 +6282,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchFileWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6325,7 +6325,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchFolderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6367,7 +6367,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchFolderPathAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6409,7 +6409,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchFolderPathForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6452,7 +6452,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchFolderPathWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6495,7 +6495,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchFolderPathWithOptionsForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6539,7 +6539,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchFolderWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6582,7 +6582,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6624,7 +6624,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriForResultsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6667,7 +6667,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriForResultsForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6711,7 +6711,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriForResultsWithDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6755,7 +6755,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriForResultsWithDataForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6800,7 +6800,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6843,7 +6843,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriWithDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6887,7 +6887,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriWithDataForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6932,7 +6932,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6975,7 +6975,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_LaunchUriWithOptionsForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7019,7 +7019,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_QueryAppUriSupportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7061,7 +7061,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_QueryAppUriSupportWithPackageFamilyNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7104,7 +7104,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_QueryFileSupportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7146,7 +7146,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_QueryFileSupportWithPackageFamilyNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7189,7 +7189,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_QueryUriSupportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7232,7 +7232,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* Launcher_QueryUriSupportWithPackageFamilyNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7352,7 +7352,7 @@ namespace py::cpp::Windows::System
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8512,7 +8512,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* MemoryManager_GetAppMemoryReport(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8552,7 +8552,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* MemoryManager_GetProcessMemoryReport(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8592,7 +8592,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* MemoryManager_TrySetAppMemoryUsageLimit(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9011,7 +9011,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* ProcessLauncher_RunToCompletionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9054,7 +9054,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* ProcessLauncher_RunToCompletionAsyncWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9148,7 +9148,7 @@ namespace py::cpp::Windows::System
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9741,7 +9741,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* ProtocolForResultsOperation_ReportCompleted(py::wrapper::Windows::System::ProtocolForResultsOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9840,7 +9840,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* RemoteLauncher_LaunchUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9883,7 +9883,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* RemoteLauncher_LaunchUriWithDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -9928,7 +9928,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* RemoteLauncher_LaunchUriWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -10023,7 +10023,7 @@ namespace py::cpp::Windows::System
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10210,7 +10210,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* ShutdownManager_BeginShutdown(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10254,7 +10254,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* ShutdownManager_CancelShutdown(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10295,7 +10295,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* ShutdownManager_EnterPowerState(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10338,7 +10338,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* ShutdownManager_EnterPowerStateWithTimeSpan(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10382,7 +10382,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* ShutdownManager_IsPowerStateSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10478,7 +10478,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* TimeZoneSettings_AutoUpdateTimeZoneAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10520,7 +10520,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* TimeZoneSettings_ChangeTimeZoneByDisplayName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10715,7 +10715,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_CheckUserAgeConsentGroupAsync(py::wrapper::Windows::System::User* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10757,7 +10757,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10797,7 +10797,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10837,7 +10837,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_FindAllAsyncByType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10879,7 +10879,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_FindAllAsyncByTypeAndStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10922,7 +10922,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10962,7 +10962,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_GetFromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11004,7 +11004,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_GetPictureAsync(py::wrapper::Windows::System::User* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11046,7 +11046,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_GetPropertiesAsync(py::wrapper::Windows::System::User* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11088,7 +11088,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* User_GetPropertyAsync(py::wrapper::Windows::System::User* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11317,7 +11317,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* UserAuthenticationStatusChangeDeferral_Complete(py::wrapper::Windows::System::UserAuthenticationStatusChangeDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11422,7 +11422,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* UserAuthenticationStatusChangingEventArgs_GetDeferral(py::wrapper::Windows::System::UserAuthenticationStatusChangingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11736,7 +11736,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* UserDeviceAssociation_FindUserFromDeviceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12050,7 +12050,7 @@ namespace py::cpp::Windows::System
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12081,7 +12081,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* UserPicker_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12121,7 +12121,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* UserPicker_PickSingleUserAsync(py::wrapper::Windows::System::UserPicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12387,7 +12387,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* UserWatcher_Start(py::wrapper::Windows::System::UserWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12428,7 +12428,7 @@ namespace py::cpp::Windows::System
 
     static PyObject* UserWatcher_Stop(py::wrapper::Windows::System::UserWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
     static PyObject* GeolocationProvider_ClearOverridePosition(py::wrapper::Windows::Devices::Geolocation::Provider::GeolocationProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
     static PyObject* GeolocationProvider_SetOverridePosition(py::wrapper::Windows::Devices::Geolocation::Provider::GeolocationProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {

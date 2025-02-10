@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DManager_ShowPrintUIAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -676,7 +676,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTaskRequest_CreateTask(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -972,7 +972,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Print3DTaskSourceRequestedArgs_SetSource(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1101,7 +1101,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_LoadAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1143,7 +1143,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_LoadModelFromPackageAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1185,7 +1185,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_SaveAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1225,7 +1225,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3D3MFPackage_SaveModelToPackageAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1657,7 +1657,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1965,7 +1965,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2114,7 +2114,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2339,7 +2339,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2488,7 +2488,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2954,7 +2954,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3179,7 +3179,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3295,7 +3295,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3545,7 +3545,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3840,7 +3840,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4080,7 +4080,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4111,7 +4111,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_CreateTriangleIndices(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4154,7 +4154,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_CreateTriangleMaterialIndices(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4197,7 +4197,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_CreateVertexNormals(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4240,7 +4240,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_CreateVertexPositions(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4283,7 +4283,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_GetTriangleIndices(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4323,7 +4323,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_GetTriangleMaterialIndices(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4363,7 +4363,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_GetVertexNormals(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4403,7 +4403,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_GetVertexPositions(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4443,7 +4443,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DMesh_VerifyAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5186,7 +5186,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5217,7 +5217,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_Clone(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5257,7 +5257,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_RepairAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5297,7 +5297,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_RepairWithProgressAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5337,7 +5337,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_TryPartialRepairAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5377,7 +5377,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_TryPartialRepairWithTimeAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5419,7 +5419,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_TryReduceFacesAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5459,7 +5459,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_TryReduceFacesWithOptionsAndTimeAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5502,7 +5502,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyObject* Printing3DModel_TryReduceFacesWithOptionsAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6041,7 +6041,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6336,7 +6336,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6452,7 +6452,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6632,7 +6632,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6927,7 +6927,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7146,7 +7146,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7390,7 +7390,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

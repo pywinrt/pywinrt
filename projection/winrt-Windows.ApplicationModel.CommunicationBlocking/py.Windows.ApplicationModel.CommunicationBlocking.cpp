@@ -15,7 +15,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAccessManager_IsBlockedNumberAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -57,7 +57,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAccessManager_ShowBlockNumbersUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -99,7 +99,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAccessManager_ShowBlockedCallsUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -140,7 +140,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAccessManager_ShowBlockedMessagesUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -181,7 +181,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAccessManager_ShowUnblockNumbersUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -308,7 +308,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAppManager_RequestSetAsActiveBlockingAppAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -348,7 +348,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyObject* CommunicationBlockingAppManager_ShowCommunicationBlockingSettingsUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

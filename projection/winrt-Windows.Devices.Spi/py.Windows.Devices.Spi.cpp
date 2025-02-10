@@ -201,7 +201,7 @@ namespace py::cpp::Windows::Devices::Spi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -647,7 +647,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiController_GetControllersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -689,7 +689,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiController_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -729,7 +729,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiController_GetDevice(py::wrapper::Windows::Devices::Spi::SpiController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -858,7 +858,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_Close(py::wrapper::Windows::Devices::Spi::SpiDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -899,7 +899,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -942,7 +942,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_GetBusInfo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -984,7 +984,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1024,7 +1024,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_GetDeviceSelectorFromFriendlyName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1066,7 +1066,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_Read(py::wrapper::Windows::Devices::Spi::SpiDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1109,7 +1109,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_TransferFullDuplex(py::wrapper::Windows::Devices::Spi::SpiDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1153,7 +1153,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_TransferSequential(py::wrapper::Windows::Devices::Spi::SpiDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1197,7 +1197,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* SpiDevice_Write(py::wrapper::Windows::Devices::Spi::SpiDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1420,7 +1420,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* ISpiDeviceStatics_FromIdAsync(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1463,7 +1463,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* ISpiDeviceStatics_GetBusInfo(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1505,7 +1505,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* ISpiDeviceStatics_GetDeviceSelector(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1545,7 +1545,7 @@ namespace py::cpp::Windows::Devices::Spi
 
     static PyObject* ISpiDeviceStatics_GetDeviceSelectorFromFriendlyName(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

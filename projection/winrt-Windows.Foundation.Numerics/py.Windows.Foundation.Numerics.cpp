@@ -37,7 +37,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -129,7 +129,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 2)
             {
@@ -174,7 +174,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -217,7 +217,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -260,7 +260,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 2)
             {
@@ -305,7 +305,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -916,7 +916,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -985,7 +985,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 4)
             {
@@ -1017,7 +1017,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 5)
             {
@@ -1050,7 +1050,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -1088,7 +1088,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 3)
             {
@@ -1135,7 +1135,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -1178,7 +1178,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -1221,7 +1221,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -1264,7 +1264,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -1307,7 +1307,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -1350,7 +1350,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 2)
             {
@@ -1380,7 +1380,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 4)
             {
@@ -1412,7 +1412,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 4)
             {
@@ -1444,7 +1444,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 6)
             {
@@ -1478,7 +1478,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 4)
             {
@@ -1510,7 +1510,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 6)
             {
@@ -1544,7 +1544,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 3)
             {
@@ -1575,7 +1575,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 3)
             {
@@ -1606,7 +1606,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -1629,7 +1629,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 3)
             {
@@ -1660,7 +1660,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 2)
             {
@@ -1690,7 +1690,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -2650,7 +2650,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -2691,7 +2691,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 3)
             {
@@ -3056,7 +3056,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -3101,7 +3101,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 2)
             {
@@ -3125,7 +3125,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 3)
             {
@@ -3150,7 +3150,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            auto n_args = PyTuple_Size(args);
+            auto n_args = PyTuple_GET_SIZE(args);
 
             if (n_args == 1)
             {
@@ -3773,7 +3773,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::Rational>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -4006,7 +4006,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -4773,7 +4773,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -5571,7 +5571,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

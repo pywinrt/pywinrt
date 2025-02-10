@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -326,7 +326,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -389,7 +389,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationCategory_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1108,7 +1108,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1154,7 +1154,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationClient_RetrieveFeedAsync(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1196,7 +1196,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationClient_SetRequestHeader(py::wrapper::Windows::Web::Syndication::SyndicationClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1646,7 +1646,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1708,7 +1708,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationContent_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2498,7 +2498,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationError_GetStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2589,7 +2589,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -2637,7 +2637,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2679,7 +2679,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_Load(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2722,7 +2722,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationFeed_LoadFromXml(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4104,7 +4104,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -4150,7 +4150,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationGenerator_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4869,7 +4869,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -4917,7 +4917,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4959,7 +4959,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_Load(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5002,7 +5002,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationItem_LoadFromXml(py::wrapper::Windows::Web::Syndication::SyndicationItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6392,7 +6392,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6457,7 +6457,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationLink_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationLink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7386,7 +7386,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -7434,7 +7434,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationNode_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7943,7 +7943,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8006,7 +8006,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationPerson_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8725,7 +8725,7 @@ namespace py::cpp::Windows::Web::Syndication
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8787,7 +8787,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* SyndicationText_GetXmlDocument(py::wrapper::Windows::Web::Syndication::SyndicationText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9515,7 +9515,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationClient_RetrieveFeedAsync(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9557,7 +9557,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationClient_SetRequestHeader(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10365,7 +10365,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationNode_GetXmlDocument(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11230,7 +11230,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyObject* ISyndicationText_GetXmlDocument(py::wrapper::Windows::Web::Syndication::ISyndicationText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12444,7 +12444,7 @@ namespace py::cpp::Windows::Web::Syndication
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Web::Syndication::RetrievalProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -12679,7 +12679,7 @@ namespace py::cpp::Windows::Web::Syndication
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Web::Syndication::TransferProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

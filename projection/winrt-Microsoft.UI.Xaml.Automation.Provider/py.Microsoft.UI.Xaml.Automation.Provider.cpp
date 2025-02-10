@@ -464,7 +464,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ICustomNavigationProvider_NavigateCustom(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ICustomNavigationProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -662,7 +662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IDockProvider_SetDockPosition(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IDockProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -910,7 +910,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IDragProvider_GetGrabbedItems(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IDragProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1481,7 +1481,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IExpandCollapseProvider_Collapse(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IExpandCollapseProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1522,7 +1522,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IExpandCollapseProvider_Expand(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IExpandCollapseProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2165,7 +2165,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IGridProvider_GetItem(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IGridProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2478,7 +2478,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IInvokeProvider_Invoke(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IInvokeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2667,7 +2667,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IItemContainerProvider_FindItemByProperty(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IItemContainerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2885,7 +2885,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IMultipleViewProvider_GetSupportedViews(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IMultipleViewProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2925,7 +2925,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IMultipleViewProvider_GetViewName(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IMultipleViewProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2967,7 +2967,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IMultipleViewProvider_SetCurrentView(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IMultipleViewProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3276,7 +3276,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IObjectModelProvider_GetUnderlyingObjectModel(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IObjectModelProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3466,7 +3466,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IRangeValueProvider_SetValue(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IRangeValueProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3969,7 +3969,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IScrollItemProvider_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IScrollItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4158,7 +4158,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IScrollProvider_Scroll(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IScrollProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4202,7 +4202,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IScrollProvider_SetScrollPercent(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IScrollProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4761,7 +4761,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISelectionItemProvider_AddToSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISelectionItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4802,7 +4802,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISelectionItemProvider_RemoveFromSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISelectionItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4843,7 +4843,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISelectionItemProvider_Select(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISelectionItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5184,7 +5184,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISelectionProvider_GetSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISelectionProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5477,7 +5477,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISpreadsheetItemProvider_GetAnnotationObjects(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5517,7 +5517,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISpreadsheetItemProvider_GetAnnotationTypes(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5787,7 +5787,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISpreadsheetProvider_GetItemByName(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISpreadsheetProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6465,7 +6465,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISynchronizedInputProvider_Cancel(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISynchronizedInputProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6506,7 +6506,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ISynchronizedInputProvider_StartListening(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ISynchronizedInputProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6728,7 +6728,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITableItemProvider_GetColumnHeaderItems(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITableItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6768,7 +6768,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITableItemProvider_GetRowHeaderItems(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITableItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6987,7 +6987,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITableProvider_GetColumnHeaders(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITableProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7027,7 +7027,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITableProvider_GetRowHeaders(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITableProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7522,7 +7522,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextEditProvider_GetActiveComposition(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextEditProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7562,7 +7562,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextEditProvider_GetConversionTarget(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextEditProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7602,7 +7602,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextEditProvider_GetSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextEditProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7642,7 +7642,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextEditProvider_GetVisibleRanges(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextEditProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7682,7 +7682,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextEditProvider_RangeFromChild(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextEditProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7724,7 +7724,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextEditProvider_RangeFromPoint(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextEditProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8167,7 +8167,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider_GetSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8207,7 +8207,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider_GetVisibleRanges(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8247,7 +8247,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider_RangeFromChild(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8289,7 +8289,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider_RangeFromPoint(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8678,7 +8678,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider2_GetCaretRange(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8733,7 +8733,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider2_GetSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8773,7 +8773,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider2_GetVisibleRanges(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8813,7 +8813,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider2_RangeFromAnnotation(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8855,7 +8855,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider2_RangeFromChild(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8897,7 +8897,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextProvider2_RangeFromPoint(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9348,7 +9348,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_AddToSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9389,7 +9389,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_Clone(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9429,7 +9429,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_Compare(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9471,7 +9471,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_CompareEndpoints(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9515,7 +9515,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_ExpandToEnclosingUnit(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9558,7 +9558,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_FindAttribute(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9602,7 +9602,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_FindText(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9646,7 +9646,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_GetAttributeValue(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9688,7 +9688,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_GetBoundingRectangles(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9737,7 +9737,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_GetChildren(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9777,7 +9777,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_GetEnclosingElement(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9817,7 +9817,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_GetText(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9859,7 +9859,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_Move(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9902,7 +9902,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_MoveEndpointByRange(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9947,7 +9947,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_MoveEndpointByUnit(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9991,7 +9991,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_RemoveFromSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10032,7 +10032,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10075,7 +10075,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider_Select(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10883,7 +10883,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_AddToSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10924,7 +10924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_Clone(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10964,7 +10964,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_Compare(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11006,7 +11006,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_CompareEndpoints(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11050,7 +11050,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_ExpandToEnclosingUnit(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11093,7 +11093,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_FindAttribute(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11137,7 +11137,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_FindText(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11181,7 +11181,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_GetAttributeValue(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11223,7 +11223,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_GetBoundingRectangles(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11272,7 +11272,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_GetChildren(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11312,7 +11312,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_GetEnclosingElement(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11352,7 +11352,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_GetText(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11394,7 +11394,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_Move(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11437,7 +11437,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_MoveEndpointByRange(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11482,7 +11482,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_MoveEndpointByUnit(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11526,7 +11526,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_RemoveFromSelection(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11567,7 +11567,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_ScrollIntoView(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11610,7 +11610,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_Select(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11651,7 +11651,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITextRangeProvider2_ShowContextMenu(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITextRangeProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12484,7 +12484,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IToggleProvider_Toggle(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IToggleProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12724,7 +12724,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITransformProvider_Move(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12768,7 +12768,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITransformProvider_Resize(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12812,7 +12812,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITransformProvider_Rotate(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13248,7 +13248,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITransformProvider2_Move(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13292,7 +13292,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITransformProvider2_Resize(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13336,7 +13336,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITransformProvider2_Rotate(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13379,7 +13379,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITransformProvider2_Zoom(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13422,7 +13422,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* ITransformProvider2_ZoomByUnit(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::ITransformProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14124,7 +14124,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IValueProvider_SetValue(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IValueProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14423,7 +14423,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IVirtualizedItemProvider_Realize(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IVirtualizedItemProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14612,7 +14612,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IWindowProvider_Close(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IWindowProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14653,7 +14653,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IWindowProvider_SetVisualState(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IWindowProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14696,7 +14696,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Provider
 
     static PyObject* IWindowProvider_WaitForInputIdle(py::wrapper::Microsoft::UI::Xaml::Automation::Provider::IWindowProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

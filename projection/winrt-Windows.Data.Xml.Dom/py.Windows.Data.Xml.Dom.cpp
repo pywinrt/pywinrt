@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_AppendChild(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_CloneNode(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_GetXml(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -230,7 +230,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_Normalize(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -313,7 +313,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -356,7 +356,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -398,7 +398,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -441,7 +441,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -483,7 +483,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdEntity_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1276,7 +1276,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_AppendChild(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1318,7 +1318,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_CloneNode(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1360,7 +1360,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_GetXml(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1400,7 +1400,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1440,7 +1440,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1483,7 +1483,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_Normalize(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1524,7 +1524,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1566,7 +1566,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1609,7 +1609,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1651,7 +1651,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1694,7 +1694,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1736,7 +1736,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* DtdNotation_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2498,7 +2498,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2540,7 +2540,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2582,7 +2582,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2622,7 +2622,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2662,7 +2662,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2705,7 +2705,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2746,7 +2746,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2788,7 +2788,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2831,7 +2831,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2873,7 +2873,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2916,7 +2916,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2958,7 +2958,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlAttribute_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3790,7 +3790,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3832,7 +3832,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_AppendData(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3875,7 +3875,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3917,7 +3917,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_DeleteData(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3961,7 +3961,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4001,7 +4001,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4041,7 +4041,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4084,7 +4084,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_InsertData(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4128,7 +4128,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4169,7 +4169,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4211,7 +4211,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4254,7 +4254,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_ReplaceData(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4299,7 +4299,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4341,7 +4341,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4384,7 +4384,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4426,7 +4426,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4469,7 +4469,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_SplitText(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4511,7 +4511,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlCDataSection_SubstringData(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5318,7 +5318,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5360,7 +5360,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_AppendData(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5403,7 +5403,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5445,7 +5445,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_DeleteData(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5489,7 +5489,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5529,7 +5529,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5569,7 +5569,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5612,7 +5612,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_InsertData(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5656,7 +5656,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5697,7 +5697,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5739,7 +5739,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5782,7 +5782,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_ReplaceData(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5827,7 +5827,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5869,7 +5869,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5912,7 +5912,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5954,7 +5954,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5997,7 +5997,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlComment_SubstringData(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6794,7 +6794,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6825,7 +6825,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6867,7 +6867,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6909,7 +6909,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateAttribute(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6951,7 +6951,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateAttributeNS(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6994,7 +6994,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateCDataSection(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7036,7 +7036,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateComment(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7078,7 +7078,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateDocumentFragment(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7118,7 +7118,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateElement(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7160,7 +7160,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateElementNS(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7203,7 +7203,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateEntityReference(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7245,7 +7245,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateProcessingInstruction(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7288,7 +7288,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_CreateTextNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7330,7 +7330,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_GetElementById(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7372,7 +7372,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_GetElementsByTagName(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7414,7 +7414,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7454,7 +7454,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7494,7 +7494,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_ImportNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7537,7 +7537,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7580,7 +7580,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_LoadFromFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7622,7 +7622,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_LoadFromFileWithSettingsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7665,7 +7665,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_LoadFromUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7707,7 +7707,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_LoadFromUriWithSettingsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7750,7 +7750,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_LoadXml(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7793,7 +7793,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_LoadXmlFromBuffer(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7836,7 +7836,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_LoadXmlFromBufferWithSettings(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7880,7 +7880,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_LoadXmlWithSettings(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7924,7 +7924,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7965,7 +7965,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8007,7 +8007,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8050,7 +8050,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_SaveToFileAsync(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8092,7 +8092,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8134,7 +8134,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8177,7 +8177,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8219,7 +8219,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocument_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9086,7 +9086,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9128,7 +9128,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9170,7 +9170,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9210,7 +9210,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9250,7 +9250,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9293,7 +9293,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9334,7 +9334,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9376,7 +9376,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9419,7 +9419,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9461,7 +9461,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9504,7 +9504,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9546,7 +9546,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentFragment_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10246,7 +10246,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10288,7 +10288,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10330,7 +10330,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10370,7 +10370,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10410,7 +10410,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10453,7 +10453,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10494,7 +10494,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10536,7 +10536,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10579,7 +10579,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10621,7 +10621,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10664,7 +10664,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10706,7 +10706,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDocumentType_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11499,7 +11499,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlDomImplementation_HasFeature(py::wrapper::Windows::Data::Xml::Dom::XmlDomImplementation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11606,7 +11606,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11648,7 +11648,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11690,7 +11690,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_GetAttribute(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11732,7 +11732,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_GetAttributeNS(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11775,7 +11775,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_GetAttributeNode(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11817,7 +11817,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_GetAttributeNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11860,7 +11860,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_GetElementsByTagName(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11902,7 +11902,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11942,7 +11942,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11982,7 +11982,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12025,7 +12025,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12066,7 +12066,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_RemoveAttribute(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12109,7 +12109,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_RemoveAttributeNS(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12153,7 +12153,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_RemoveAttributeNode(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12195,7 +12195,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12237,7 +12237,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12280,7 +12280,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12322,7 +12322,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12365,7 +12365,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12407,7 +12407,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12450,7 +12450,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_SetAttribute(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12494,7 +12494,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_SetAttributeNS(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -12539,7 +12539,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_SetAttributeNode(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12581,7 +12581,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlElement_SetAttributeNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13323,7 +13323,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13365,7 +13365,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13407,7 +13407,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13447,7 +13447,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13487,7 +13487,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13530,7 +13530,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13571,7 +13571,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13613,7 +13613,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13656,7 +13656,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13698,7 +13698,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13741,7 +13741,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13783,7 +13783,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlEntityReference_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14474,7 +14474,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14918,7 +14918,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_First(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14958,7 +14958,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_GetAt(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15000,7 +15000,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_GetMany(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15043,7 +15043,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_GetNamedItem(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15085,7 +15085,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_GetNamedItemNS(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15128,7 +15128,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_IndexOf(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15184,7 +15184,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_Item(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15226,7 +15226,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_RemoveNamedItem(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15268,7 +15268,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_RemoveNamedItemNS(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15311,7 +15311,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_SetNamedItem(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15353,7 +15353,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNamedNodeMap_SetNamedItemNS(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15652,7 +15652,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNodeList_First(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15692,7 +15692,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNodeList_GetAt(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15734,7 +15734,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNodeList_GetMany(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15777,7 +15777,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNodeList_IndexOf(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15833,7 +15833,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlNodeList_Item(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16126,7 +16126,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16168,7 +16168,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16210,7 +16210,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16250,7 +16250,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16290,7 +16290,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16333,7 +16333,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16374,7 +16374,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16416,7 +16416,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16459,7 +16459,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16501,7 +16501,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16544,7 +16544,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16586,7 +16586,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlProcessingInstruction_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17387,7 +17387,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_AppendChild(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17429,7 +17429,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_AppendData(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17472,7 +17472,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_CloneNode(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17514,7 +17514,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_DeleteData(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17558,7 +17558,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_GetXml(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17598,7 +17598,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17638,7 +17638,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17681,7 +17681,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_InsertData(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17725,7 +17725,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_Normalize(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17766,7 +17766,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17808,7 +17808,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17851,7 +17851,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_ReplaceData(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -17896,7 +17896,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17938,7 +17938,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17981,7 +17981,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18023,7 +18023,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18066,7 +18066,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_SplitText(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18108,7 +18108,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* XmlText_SubstringData(py::wrapper::Windows::Data::Xml::Dom::XmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18915,7 +18915,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_AppendChild(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18957,7 +18957,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_AppendData(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19000,7 +19000,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_CloneNode(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19042,7 +19042,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_DeleteData(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19086,7 +19086,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_GetXml(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19126,7 +19126,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19166,7 +19166,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19209,7 +19209,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_InsertData(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19253,7 +19253,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_Normalize(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19294,7 +19294,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19336,7 +19336,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19379,7 +19379,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_ReplaceData(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -19424,7 +19424,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19466,7 +19466,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19509,7 +19509,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19551,7 +19551,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19594,7 +19594,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlCharacterData_SubstringData(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21510,7 +21510,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_AppendChild(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21552,7 +21552,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_CloneNode(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21594,7 +21594,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_GetXml(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21634,7 +21634,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21674,7 +21674,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21717,7 +21717,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_Normalize(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21758,7 +21758,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21800,7 +21800,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21843,7 +21843,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21885,7 +21885,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21928,7 +21928,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21970,7 +21970,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNode_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23511,7 +23511,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNodeSelector_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23553,7 +23553,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNodeSelector_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23596,7 +23596,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNodeSelector_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -23638,7 +23638,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNodeSelector_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -23960,7 +23960,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlNodeSerializer_GetXml(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24263,7 +24263,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_AppendChild(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24305,7 +24305,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_AppendData(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24348,7 +24348,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_CloneNode(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24390,7 +24390,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_DeleteData(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24434,7 +24434,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_GetXml(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24474,7 +24474,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_HasChildNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24514,7 +24514,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_InsertBefore(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24557,7 +24557,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_InsertData(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24601,7 +24601,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_Normalize(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24642,7 +24642,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_RemoveChild(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24684,7 +24684,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_ReplaceChild(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24727,7 +24727,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_ReplaceData(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -24772,7 +24772,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_SelectNodes(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24814,7 +24814,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_SelectNodesNS(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24857,7 +24857,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_SelectSingleNode(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24899,7 +24899,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_SelectSingleNodeNS(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -24942,7 +24942,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_SplitText(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -24984,7 +24984,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyObject* IXmlText_SubstringData(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

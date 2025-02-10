@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Composition::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::UI::Composition::Core
 
     static PyObject* CompositorController_Close(py::wrapper::Windows::UI::Composition::Core::CompositorController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::UI::Composition::Core
 
     static PyObject* CompositorController_Commit(py::wrapper::Windows::UI::Composition::Core::CompositorController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -127,7 +127,7 @@ namespace py::cpp::Windows::UI::Composition::Core
 
     static PyObject* CompositorController_EnsurePreviousCommitCompletedAsync(py::wrapper::Windows::UI::Composition::Core::CompositorController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

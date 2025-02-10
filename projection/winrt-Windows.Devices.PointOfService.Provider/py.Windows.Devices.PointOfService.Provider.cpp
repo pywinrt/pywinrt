@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerDisableScannerRequest_ReportCompletedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerDisableScannerRequest_ReportFailedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerDisableScannerRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerDisableScannerRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerDisableScannerRequestEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -390,7 +390,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerEnableScannerRequest_ReportCompletedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -430,7 +430,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerEnableScannerRequest_ReportFailedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -470,7 +470,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerEnableScannerRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -513,7 +513,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerEnableScannerRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -622,7 +622,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerEnableScannerRequestEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -757,7 +757,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerFrameReader_Close(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -798,7 +798,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerFrameReader_StartAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -838,7 +838,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerFrameReader_StopAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -878,7 +878,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerFrameReader_TryAcquireLatestFrameAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1108,7 +1108,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerFrameReaderFrameArrivedEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1212,7 +1212,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerGetSymbologyAttributesRequest_ReportCompletedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1254,7 +1254,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerGetSymbologyAttributesRequest_ReportFailedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1294,7 +1294,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerGetSymbologyAttributesRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1337,7 +1337,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerGetSymbologyAttributesRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1477,7 +1477,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerGetSymbologyAttributesRequestEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1612,7 +1612,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerHideVideoPreviewRequest_ReportCompletedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1652,7 +1652,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerHideVideoPreviewRequest_ReportFailedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1692,7 +1692,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerHideVideoPreviewRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1735,7 +1735,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerHideVideoPreviewRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1844,7 +1844,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerHideVideoPreviewRequestEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1979,7 +1979,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_Close(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2020,7 +2020,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_CreateFrameReaderAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2060,7 +2060,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_CreateFrameReaderWithFormatAndSizeAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2103,7 +2103,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_CreateFrameReaderWithFormatAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2145,7 +2145,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_ReportErrorAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2187,7 +2187,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_ReportErrorAsyncWithScanReport(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2231,7 +2231,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_ReportScannedDataAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2273,7 +2273,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_ReportTriggerStateAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2315,7 +2315,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerProviderConnection_Start(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3386,7 +3386,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetActiveSymbologiesRequest_ReportCompletedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3426,7 +3426,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetActiveSymbologiesRequest_ReportFailedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3466,7 +3466,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetActiveSymbologiesRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3509,7 +3509,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetActiveSymbologiesRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3649,7 +3649,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetActiveSymbologiesRequestEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3784,7 +3784,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetSymbologyAttributesRequest_ReportCompletedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3824,7 +3824,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetSymbologyAttributesRequest_ReportFailedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3864,7 +3864,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetSymbologyAttributesRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3907,7 +3907,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetSymbologyAttributesRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4078,7 +4078,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerSetSymbologyAttributesRequestEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4213,7 +4213,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStartSoftwareTriggerRequest_ReportCompletedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4253,7 +4253,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStartSoftwareTriggerRequest_ReportFailedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4293,7 +4293,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStartSoftwareTriggerRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4336,7 +4336,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStartSoftwareTriggerRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4445,7 +4445,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStartSoftwareTriggerRequestEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4580,7 +4580,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStopSoftwareTriggerRequest_ReportCompletedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4620,7 +4620,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStopSoftwareTriggerRequest_ReportFailedAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4660,7 +4660,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStopSoftwareTriggerRequest_ReportFailedWithFailedReasonAndDescriptionAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4703,7 +4703,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStopSoftwareTriggerRequest_ReportFailedWithFailedReasonAsync(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4812,7 +4812,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerStopSoftwareTriggerRequestEventArgs_GetDeferral(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4947,7 +4947,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeScannerVideoFrame_Close(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5192,7 +5192,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5223,7 +5223,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     static PyObject* BarcodeSymbologyAttributesBuilder_CreateAttributes(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

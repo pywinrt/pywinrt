@@ -521,7 +521,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAvailability_RequestPurchaseAsync(py::wrapper::Windows::Services::Store::StoreAvailability* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -561,7 +561,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreAvailability_RequestPurchaseWithPurchasePropertiesAsync(py::wrapper::Windows::Services::Store::StoreAvailability* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1446,7 +1446,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_AcquireStoreLicenseForOptionalPackageAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1488,7 +1488,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_CanAcquireStoreLicenseAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1530,7 +1530,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_CanAcquireStoreLicenseForOptionalPackageAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1572,7 +1572,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_DownloadAndInstallStorePackagesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1614,7 +1614,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_FindStoreProductForPackageAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1657,7 +1657,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetAppAndOptionalStorePackageUpdatesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1697,7 +1697,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetAppLicenseAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1737,7 +1737,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetAssociatedStoreProductsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1779,7 +1779,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetAssociatedStoreProductsByInAppOfferTokenAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1821,7 +1821,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetAssociatedStoreProductsWithPagingAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1864,7 +1864,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetAssociatedStoreQueueItemsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1904,7 +1904,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetConsumableBalanceRemainingAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1946,7 +1946,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetCustomerCollectionsIdAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1989,7 +1989,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetCustomerPurchaseIdAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2032,7 +2032,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2072,7 +2072,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2114,7 +2114,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetStoreProductForCurrentAppAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2154,7 +2154,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetStoreProductsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2197,7 +2197,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetStoreProductsWithOptionsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2241,7 +2241,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetStoreQueueItemsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2283,7 +2283,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetUserCollectionAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2325,7 +2325,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetUserCollectionWithPagingAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2368,7 +2368,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_GetUserPurchaseHistoryAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2410,7 +2410,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_ReportConsumableFulfillmentAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2454,7 +2454,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestDownloadAndInstallStorePackageUpdatesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2496,7 +2496,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestDownloadAndInstallStorePackagesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2538,7 +2538,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestDownloadAndInstallStorePackagesWithInstallOptionsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2581,7 +2581,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestDownloadStorePackageUpdatesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2623,7 +2623,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestPurchaseAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2665,7 +2665,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestPurchaseByInAppOfferTokenAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2707,7 +2707,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestPurchaseWithPurchasePropertiesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2750,7 +2750,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestRateAndReviewAppAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2790,7 +2790,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestUninstallStorePackageAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2832,7 +2832,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_RequestUninstallStorePackageByStoreIdAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2874,7 +2874,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_SetInstallOrderForAssociatedStoreQueueItemsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2916,7 +2916,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_TrySilentDownloadAndInstallStorePackageUpdatesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2958,7 +2958,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_TrySilentDownloadStorePackageUpdatesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3000,7 +3000,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_UninstallStorePackageAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3042,7 +3042,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreContext_UninstallStorePackageByStoreIdAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3763,7 +3763,7 @@ namespace py::cpp::Windows::Services::Store
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3927,7 +3927,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageLicense_Close(py::wrapper::Windows::Services::Store::StorePackageLicense* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3968,7 +3968,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StorePackageLicense_ReleaseLicense(py::wrapper::Windows::Services::Store::StorePackageLicense* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4851,7 +4851,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_GetIsAnySkuInstalledAsync(py::wrapper::Windows::Services::Store::StoreProduct* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4891,7 +4891,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_RequestPurchaseAsync(py::wrapper::Windows::Services::Store::StoreProduct* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4931,7 +4931,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProduct_RequestPurchaseWithPurchasePropertiesAsync(py::wrapper::Windows::Services::Store::StoreProduct* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5495,7 +5495,7 @@ namespace py::cpp::Windows::Services::Store
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5620,7 +5620,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreProductPagedQueryResult_GetNextAsync(py::wrapper::Windows::Services::Store::StoreProductPagedQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6058,7 +6058,7 @@ namespace py::cpp::Windows::Services::Store
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6432,7 +6432,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_CancelInstallAsync(py::wrapper::Windows::Services::Store::StoreQueueItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6472,7 +6472,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_GetCurrentStatus(py::wrapper::Windows::Services::Store::StoreQueueItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6512,7 +6512,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_PauseInstallAsync(py::wrapper::Windows::Services::Store::StoreQueueItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6552,7 +6552,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreQueueItem_ResumeInstallAsync(py::wrapper::Windows::Services::Store::StoreQueueItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7346,7 +7346,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreRequestHelper_SendRequestAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7604,7 +7604,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_GetIsInstalledAsync(py::wrapper::Windows::Services::Store::StoreSku* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7644,7 +7644,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_RequestPurchaseAsync(py::wrapper::Windows::Services::Store::StoreSku* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7684,7 +7684,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyObject* StoreSku_RequestPurchaseWithPurchasePropertiesAsync(py::wrapper::Windows::Services::Store::StoreSku* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8894,7 +8894,7 @@ namespace py::cpp::Windows::Services::Store
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Services::Store::StorePackageUpdateStatus>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

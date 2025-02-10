@@ -23,7 +23,7 @@ namespace py::cpp::Windows::System::Inventory
 
     static PyObject* InstalledDesktopApp_GetInventoryAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::System::Inventory
 
     static PyObject* InstalledDesktopApp_ToString(py::wrapper::Windows::System::Inventory::InstalledDesktopApp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

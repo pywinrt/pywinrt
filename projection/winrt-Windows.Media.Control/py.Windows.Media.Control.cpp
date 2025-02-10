@@ -86,7 +86,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_GetPlaybackInfo(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -126,7 +126,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_GetTimelineProperties(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -166,7 +166,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryChangeAutoRepeatModeAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -208,7 +208,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryChangeChannelDownAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -248,7 +248,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryChangeChannelUpAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -288,7 +288,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryChangePlaybackPositionAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -330,7 +330,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryChangePlaybackRateAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -372,7 +372,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryChangeShuffleActiveAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -414,7 +414,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryFastForwardAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -454,7 +454,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryGetMediaPropertiesAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -494,7 +494,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryPauseAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -534,7 +534,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryPlayAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -574,7 +574,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryRecordAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -614,7 +614,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryRewindAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -654,7 +654,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TrySkipNextAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -694,7 +694,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TrySkipPreviousAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -734,7 +734,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryStopAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -774,7 +774,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSession_TryTogglePlayPauseAsync(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1127,7 +1127,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionManager_GetCurrentSession(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1167,7 +1167,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionManager_GetSessions(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1207,7 +1207,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyObject* GlobalSystemMediaTransportControlsSessionManager_RequestAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

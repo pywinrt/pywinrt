@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextCompositionCompletedEventArgs_GetDeferral(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -314,7 +314,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextCompositionStartedEventArgs_GetDeferral(py::wrapper::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -449,7 +449,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_NotifyFocusEnter(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -490,7 +490,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_NotifyFocusLeave(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -531,7 +531,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_NotifyLayoutChanged(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -572,7 +572,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_NotifySelectionChanged(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -615,7 +615,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextEditContext_NotifyTextChanged(py::wrapper::Windows::UI::Text::Core::CoreTextEditContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1678,7 +1678,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextFormatUpdatingEventArgs_GetDeferral(py::wrapper::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2272,7 +2272,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextLayoutRequest_GetDeferral(py::wrapper::Windows::UI::Text::Core::CoreTextLayoutRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2594,7 +2594,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextSelectionRequest_GetDeferral(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2893,7 +2893,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextSelectionUpdatingEventArgs_GetDeferral(py::wrapper::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3209,7 +3209,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextServicesManager_CreateEditContext(py::wrapper::Windows::UI::Text::Core::CoreTextServicesManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3249,7 +3249,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextServicesManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3473,7 +3473,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextRequest_GetDeferral(py::wrapper::Windows::UI::Text::Core::CoreTextTextRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3803,7 +3803,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyObject* CoreTextTextUpdatingEventArgs_GetDeferral(py::wrapper::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4142,7 +4142,7 @@ namespace py::cpp::Windows::UI::Text::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Text::Core::CoreTextRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Management
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -559,7 +559,7 @@ namespace py::cpp::Windows::Management
 
     static PyObject* MdmSession_AttachAsync(py::wrapper::Windows::Management::MdmSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::Management
 
     static PyObject* MdmSession_Delete(py::wrapper::Windows::Management::MdmSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -640,7 +640,7 @@ namespace py::cpp::Windows::Management
 
     static PyObject* MdmSession_StartAsync(py::wrapper::Windows::Management::MdmSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -680,7 +680,7 @@ namespace py::cpp::Windows::Management
 
     static PyObject* MdmSession_StartWithAlertsAsync(py::wrapper::Windows::Management::MdmSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -905,7 +905,7 @@ namespace py::cpp::Windows::Management
 
     static PyObject* MdmSessionManager_DeleteSessionById(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -948,7 +948,7 @@ namespace py::cpp::Windows::Management
 
     static PyObject* MdmSessionManager_GetSessionById(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -990,7 +990,7 @@ namespace py::cpp::Windows::Management
 
     static PyObject* MdmSessionManager_TryCreateSession(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

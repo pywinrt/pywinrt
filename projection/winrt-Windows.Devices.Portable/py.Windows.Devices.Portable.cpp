@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyObject* ServiceDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -57,7 +57,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyObject* ServiceDevice_GetDeviceSelectorFromServiceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyObject* StorageDevice_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -192,7 +192,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyObject* StorageDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

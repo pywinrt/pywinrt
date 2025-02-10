@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Data::Xml::Xsl
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::Data::Xml::Xsl
 
     static PyObject* XsltProcessor_TransformToDocument(py::wrapper::Windows::Data::Xml::Xsl::XsltProcessor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -89,7 +89,7 @@ namespace py::cpp::Windows::Data::Xml::Xsl
 
     static PyObject* XsltProcessor_TransformToString(py::wrapper::Windows::Data::Xml::Xsl::XsltProcessor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

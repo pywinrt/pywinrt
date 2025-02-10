@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1341,7 +1341,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyObject* Matrix3DHelper_FromElements(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 16)
         {
@@ -1398,7 +1398,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyObject* Matrix3DHelper_GetHasInverse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1440,7 +1440,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyObject* Matrix3DHelper_GetIsIdentity(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1482,7 +1482,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyObject* Matrix3DHelper_Invert(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1524,7 +1524,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     static PyObject* Matrix3DHelper_Multiply(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1678,7 +1678,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2238,7 +2238,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

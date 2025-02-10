@@ -265,7 +265,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* DataProtectionManager_GetProtectionInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -307,7 +307,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* DataProtectionManager_GetStreamProtectionInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -349,7 +349,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* DataProtectionManager_ProtectAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -392,7 +392,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* DataProtectionManager_ProtectStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -436,7 +436,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* DataProtectionManager_UnprotectAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -478,7 +478,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* DataProtectionManager_UnprotectStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -763,7 +763,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_CopyProtectionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -806,7 +806,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_CreateProtectedAndOpenAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -851,7 +851,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_GetProtectionInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -893,7 +893,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_IsContainerAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -935,7 +935,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_LoadFileFromContainerAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -977,7 +977,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_LoadFileFromContainerWithTargetAndNameCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_LoadFileFromContainerWithTargetAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1064,7 +1064,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_ProtectAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1107,7 +1107,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_SaveFileAsContainerAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1149,7 +1149,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_SaveFileAsContainerWithSharingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1192,7 +1192,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_UnprotectAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1234,7 +1234,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionManager_UnprotectWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1338,7 +1338,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileRevocationManager_CopyProtectionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1381,7 +1381,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileRevocationManager_GetStatusAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1423,7 +1423,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileRevocationManager_ProtectAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1466,7 +1466,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileRevocationManager_Revoke(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1561,7 +1561,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1821,7 +1821,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedAccessSuspendingEventArgs_GetDeferral(py::wrapper::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2478,7 +2478,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -2873,7 +2873,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_CheckAccess(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2916,7 +2916,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_CheckAccessForApp(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2959,7 +2959,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_ClearProcessUIPolicy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3000,7 +3000,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_CreateCurrentThreadNetworkContext(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3042,7 +3042,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_GetEnforcementLevel(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3084,7 +3084,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3124,7 +3124,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_GetPrimaryManagedIdentityForIdentity(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3166,7 +3166,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_GetPrimaryManagedIdentityForNetworkEndpointAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3208,7 +3208,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_HasContentBeenRevokedSince(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3251,7 +3251,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_IsFileProtectionRequiredAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3294,7 +3294,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_IsFileProtectionRequiredForNewFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3338,7 +3338,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_IsIdentityManaged(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3380,7 +3380,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_IsProtectionUnderLockRequired(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3422,7 +3422,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_IsRoamableProtectionEnabled(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3464,7 +3464,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_IsUserDecryptionAllowed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3506,7 +3506,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_LogAuditEvent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3551,7 +3551,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3594,7 +3594,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessForAppAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3637,7 +3637,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessForAppWithAuditingInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3681,7 +3681,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessForAppWithBehaviorAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -3727,7 +3727,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessForAppWithMessageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3772,7 +3772,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessToFilesForAppAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3816,7 +3816,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessToFilesForAppWithMessageAndBehaviorAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -3862,7 +3862,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessToFilesForProcessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3906,7 +3906,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessToFilesForProcessWithMessageAndBehaviorAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -3952,7 +3952,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessWithAuditingInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3996,7 +3996,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessWithBehaviorAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -4042,7 +4042,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RequestAccessWithMessageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4087,7 +4087,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_RevokeContent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4130,7 +4130,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_TryApplyProcessUIPolicy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4756,7 +4756,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ThreadNetworkContext_Close(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -2327,7 +2327,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivationOperation_GetDeferral(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivationOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

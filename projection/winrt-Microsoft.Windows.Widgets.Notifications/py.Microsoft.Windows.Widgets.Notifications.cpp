@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 5)
         {
             try

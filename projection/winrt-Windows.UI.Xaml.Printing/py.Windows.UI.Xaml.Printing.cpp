@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -130,7 +130,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -246,7 +246,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -428,7 +428,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Printing::PrintDocument>();
         if (!self_type)
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_AddPage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_AddPagesComplete(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -573,7 +573,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_InvalidatePreview(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -614,7 +614,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_SetPreviewPage(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyObject* PrintDocument_SetPreviewPageCount(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

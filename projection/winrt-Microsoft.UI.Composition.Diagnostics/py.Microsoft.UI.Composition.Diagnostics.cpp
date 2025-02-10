@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
     static PyObject* CompositionDebugHeatMaps_Hide(py::wrapper::Microsoft::UI::Composition::Diagnostics::CompositionDebugHeatMaps* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
     static PyObject* CompositionDebugHeatMaps_ShowMemoryUsage(py::wrapper::Microsoft::UI::Composition::Diagnostics::CompositionDebugHeatMaps* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -109,7 +109,7 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
     static PyObject* CompositionDebugHeatMaps_ShowOverdraw(py::wrapper::Microsoft::UI::Composition::Diagnostics::CompositionDebugHeatMaps* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -153,7 +153,7 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
     static PyObject* CompositionDebugHeatMaps_ShowRedraw(py::wrapper::Microsoft::UI::Composition::Diagnostics::CompositionDebugHeatMaps* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -263,7 +263,7 @@ namespace py::cpp::Microsoft::UI::Composition::Diagnostics
 
     static PyObject* CompositionDebugSettings_TryGetSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_AcquireChannel(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_IsChannelModeSupported(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_ReadValue(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_ReleaseChannel(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -761,7 +761,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcProvider_GetControllers(py::wrapper::Windows::Devices::Adc::Provider::IAdcProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

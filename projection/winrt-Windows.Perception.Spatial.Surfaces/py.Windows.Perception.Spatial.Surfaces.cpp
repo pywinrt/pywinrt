@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceInfo_TryComputeLatestMeshAsync(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceInfo_TryComputeLatestMeshWithOptionsAsync(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceInfo_TryGetBounds(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -705,7 +705,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1184,7 +1184,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1215,7 +1215,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceObserver_GetObservedSurfaces(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1255,7 +1255,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceObserver_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1295,7 +1295,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceObserver_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1335,7 +1335,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceObserver_SetBoundingVolume(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1378,7 +1378,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyObject* SpatialSurfaceObserver_SetBoundingVolumes(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

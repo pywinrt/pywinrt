@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Phone::Devices::Notification
 
     static PyObject* VibrationDevice_Cancel(py::wrapper::Windows::Phone::Devices::Notification::VibrationDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Phone::Devices::Notification
 
     static PyObject* VibrationDevice_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Phone::Devices::Notification
 
     static PyObject* VibrationDevice_Vibrate(py::wrapper::Windows::Phone::Devices::Notification::VibrationDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

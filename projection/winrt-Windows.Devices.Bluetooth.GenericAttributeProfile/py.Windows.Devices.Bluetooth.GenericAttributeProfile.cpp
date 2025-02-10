@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_ConvertShortIdToUuid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_GetAllDescriptors(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_GetDescriptors(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_GetDescriptorsAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_GetDescriptorsForUuidAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_GetDescriptorsForUuidWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_GetDescriptorsWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -314,7 +314,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_ReadClientCharacteristicConfigurationDescriptorAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_ReadValueAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -394,7 +394,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_ReadValueWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -436,7 +436,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_WriteClientCharacteristicConfigurationDescriptorAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -478,7 +478,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_WriteClientCharacteristicConfigurationDescriptorWithResultAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -520,7 +520,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_WriteValueAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -562,7 +562,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_WriteValueWithOptionAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -605,7 +605,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_WriteValueWithResultAndOptionAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -648,7 +648,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattCharacteristic_WriteValueWithResultAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4016,7 +4016,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDescriptor_ConvertShortIdToUuid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4058,7 +4058,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDescriptor_ReadValueAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4098,7 +4098,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDescriptor_ReadValueWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4140,7 +4140,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDescriptor_WriteValueAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4182,7 +4182,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDescriptor_WriteValueWithResultAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4836,7 +4836,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_Close(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4877,7 +4877,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_ConvertShortIdToUuid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4919,7 +4919,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4961,7 +4961,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_FromIdWithSharingModeAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5004,7 +5004,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetAllCharacteristics(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5044,7 +5044,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetAllIncludedServices(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5084,7 +5084,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetCharacteristics(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5126,7 +5126,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetCharacteristicsAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5166,7 +5166,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetCharacteristicsForUuidAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5208,7 +5208,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetCharacteristicsForUuidWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5251,7 +5251,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetCharacteristicsWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5293,7 +5293,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetDeviceSelectorForBluetoothDeviceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5335,7 +5335,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdAndUuid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5378,7 +5378,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdAndUuidWithCacheMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5422,7 +5422,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdWithCacheMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5465,7 +5465,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetDeviceSelectorFromShortId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5507,7 +5507,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetDeviceSelectorFromUuid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5549,7 +5549,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetIncludedServices(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5591,7 +5591,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetIncludedServicesAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5631,7 +5631,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetIncludedServicesForUuidAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5673,7 +5673,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetIncludedServicesForUuidWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5716,7 +5716,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_GetIncludedServicesWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5758,7 +5758,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_OpenAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5800,7 +5800,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattDeviceService_RequestAccessAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6377,7 +6377,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattLocalCharacteristic_CreateDescriptorAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6420,7 +6420,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattLocalCharacteristic_NotifyValueAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6462,7 +6462,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattLocalCharacteristic_NotifyValueForSubscribedClientAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7042,7 +7042,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7954,7 +7954,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8383,7 +8383,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattLocalService_CreateCharacteristicAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8552,7 +8552,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattPresentationFormat_FromParts(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -10487,7 +10487,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattReadRequest_RespondWithProtocolError(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10530,7 +10530,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattReadRequest_RespondWithValue(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10798,7 +10798,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattReadRequestedEventArgs_GetDeferral(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10838,7 +10838,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattReadRequestedEventArgs_GetRequestAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11121,7 +11121,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11152,7 +11152,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattReliableWriteTransaction_CommitAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11192,7 +11192,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattReliableWriteTransaction_CommitWithResultAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11232,7 +11232,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattReliableWriteTransaction_WriteValue(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11467,7 +11467,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattServiceProvider_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11509,7 +11509,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattServiceProvider_StartAdvertising(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11550,7 +11550,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattServiceProvider_StartAdvertisingWithParameters(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11593,7 +11593,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattServiceProvider_StopAdvertising(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11967,7 +11967,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13127,7 +13127,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattSession_Close(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13168,7 +13168,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattSession_FromDeviceIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14091,7 +14091,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattWriteRequest_Respond(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14132,7 +14132,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattWriteRequest_RespondWithProtocolError(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14431,7 +14431,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattWriteRequestedEventArgs_GetDeferral(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14471,7 +14471,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyObject* GattWriteRequestedEventArgs_GetRequestAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

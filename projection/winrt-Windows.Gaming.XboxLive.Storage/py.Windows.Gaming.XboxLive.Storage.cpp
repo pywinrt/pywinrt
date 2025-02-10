@@ -398,7 +398,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobInfoQuery_GetBlobInfoAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -438,7 +438,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobInfoQuery_GetBlobInfoWithIndexAndMaxAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -481,7 +481,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobInfoQuery_GetItemCountAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -587,7 +587,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainer_CreateBlobInfoQuery(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -629,7 +629,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainer_GetAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -671,7 +671,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainer_ReadAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -713,7 +713,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainer_SubmitPropertySetUpdatesAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -757,7 +757,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainer_SubmitUpdatesAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1274,7 +1274,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfoQuery_GetContainerInfoAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1314,7 +1314,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfoQuery_GetContainerInfoWithIndexAndMaxAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1357,7 +1357,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfoQuery_GetItemCountAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1557,7 +1557,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_CreateContainer(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1599,7 +1599,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_CreateContainerInfoQuery(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1639,7 +1639,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_CreateContainerInfoQueryWithName(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1681,7 +1681,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_DeleteContainerAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1723,7 +1723,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_GetForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1766,7 +1766,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_GetRemainingBytesInQuotaAsync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1806,7 +1806,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_GetSyncOnDemandForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

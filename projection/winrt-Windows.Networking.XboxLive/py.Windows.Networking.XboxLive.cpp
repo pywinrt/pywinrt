@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_Compare(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_CreateFromSnapshotBase64(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_CreateFromSnapshotBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_CreateFromSnapshotBytes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_GetLocal(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_GetSnapshotAsBase64(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_GetSnapshotAsBuffer(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -311,7 +311,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_GetSnapshotAsBytes(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_DeleteAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -684,7 +684,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_FindEndpointPairByHostNamesAndPorts(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -729,7 +729,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_FindEndpointPairBySocketAddressBytes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_GetLocalSocketAddressBytes(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -815,7 +815,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_GetRemoteSocketAddressBytes(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1543,7 +1543,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairDefaultAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1585,7 +1585,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsDefaultAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1629,7 +1629,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsWithBehaviorsAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1674,7 +1674,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairWithBehaviorsAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1717,7 +1717,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_GetTemplateByName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2248,7 +2248,7 @@ namespace py::cpp::Windows::Networking::XboxLive
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2279,7 +2279,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_ClearPrivatePayload(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2320,7 +2320,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_GetMetricResult(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2363,7 +2363,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_GetMetricResultsForDevice(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2405,7 +2405,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_GetMetricResultsForMetric(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2447,7 +2447,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_GetPrivatePayloadResult(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2489,7 +2489,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_MeasureAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2529,7 +2529,7 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_PublishPrivatePayloadBytes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

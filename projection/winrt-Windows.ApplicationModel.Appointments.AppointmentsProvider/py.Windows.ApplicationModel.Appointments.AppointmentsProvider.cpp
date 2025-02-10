@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AddAppointmentOperation_DismissUI(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AddAppointmentOperation_ReportCanceled(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AddAppointmentOperation_ReportCompleted(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -148,7 +148,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* AddAppointmentOperation_ReportError(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -524,7 +524,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* RemoveAppointmentOperation_DismissUI(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -565,7 +565,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* RemoveAppointmentOperation_ReportCanceled(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -606,7 +606,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* RemoveAppointmentOperation_ReportCompleted(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -647,7 +647,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* RemoveAppointmentOperation_ReportError(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -850,7 +850,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* ReplaceAppointmentOperation_DismissUI(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -891,7 +891,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* ReplaceAppointmentOperation_ReportCanceled(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -932,7 +932,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* ReplaceAppointmentOperation_ReportCompleted(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -975,7 +975,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyObject* ReplaceAppointmentOperation_ReportError(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_Close(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -106,7 +106,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -148,7 +148,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_GetDeviceSelectorForBluetoothDevice(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -190,7 +190,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_GetDeviceSelectorForBluetoothDeviceAndServiceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -233,7 +233,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_GetDeviceSelectorForBluetoothDeviceAndServiceIdWithCacheMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -277,7 +277,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_GetDeviceSelectorForBluetoothDeviceWithCacheMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -320,7 +320,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_GetSdpRawAttributesAsync(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -360,7 +360,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_GetSdpRawAttributesWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -402,7 +402,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_RequestAccessAsync(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -903,7 +903,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_AsShortId(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -943,7 +943,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_AsString(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -983,7 +983,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_FromShortId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1025,7 +1025,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_FromUuid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1372,7 +1372,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceProvider_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1414,7 +1414,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceProvider_StartAdvertising(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1457,7 +1457,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceProvider_StartAdvertisingWithRadioDiscoverability(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1501,7 +1501,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceProvider_StopAdvertising(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

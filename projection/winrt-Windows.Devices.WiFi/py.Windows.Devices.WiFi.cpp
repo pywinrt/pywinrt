@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_ConnectAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -112,7 +112,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_ConnectWithPasswordCredentialAndSsidAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -157,7 +157,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_ConnectWithPasswordCredentialAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -201,7 +201,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_Disconnect(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -242,7 +242,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_FindAllAdaptersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -324,7 +324,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_GetWpsConfigurationAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -406,7 +406,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -446,7 +446,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_ScanAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1333,7 +1333,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotConnectTriggerDetails_Connect(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1373,7 +1373,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotConnectTriggerDetails_ConnectAsync(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1413,7 +1413,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotConnectTriggerDetails_ReportError(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1647,7 +1647,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetwork_GetOrCreateById(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1689,7 +1689,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetwork_GetProperties(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1729,7 +1729,7 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetwork_UpdateProperties(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

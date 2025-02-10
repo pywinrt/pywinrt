@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpBufferContent_BufferAllAsync(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpBufferContent_Close(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpBufferContent_ReadAsBufferAsync(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpBufferContent_ReadAsInputStreamAsync(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -225,7 +225,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpBufferContent_ReadAsStringAsync(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -265,7 +265,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpBufferContent_ToString(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -305,7 +305,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpBufferContent_TryComputeLength(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -360,7 +360,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpBufferContent_WriteToStreamAsync(py::wrapper::Windows::Web::Http::HttpBufferContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -538,7 +538,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_Close(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -625,7 +625,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_DeleteAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -667,7 +667,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_GetAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -709,7 +709,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_GetBufferAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -751,7 +751,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_GetInputStreamAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -793,7 +793,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_GetStringAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -835,7 +835,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_GetWithOptionAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -878,7 +878,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_PostAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -921,7 +921,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_PutAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -964,7 +964,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_SendRequestAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1006,7 +1006,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_SendRequestWithOptionAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1049,7 +1049,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_ToString(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1089,7 +1089,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TryDeleteAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1131,7 +1131,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TryGetAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TryGetAsync2(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1216,7 +1216,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TryGetBufferAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1258,7 +1258,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TryGetInputStreamAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1300,7 +1300,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TryGetStringAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1342,7 +1342,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TryPostAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1385,7 +1385,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TryPutAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1428,7 +1428,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TrySendRequestAsync(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1470,7 +1470,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpClient_TrySendRequestAsync2(py::wrapper::Windows::Web::Http::HttpClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1733,7 +1733,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -1768,7 +1768,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookie_ToString(py::wrapper::Windows::Web::Http::HttpCookie* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2263,7 +2263,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookieCollection_First(py::wrapper::Windows::Web::Http::HttpCookieCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2303,7 +2303,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookieCollection_GetAt(py::wrapper::Windows::Web::Http::HttpCookieCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2345,7 +2345,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookieCollection_GetMany(py::wrapper::Windows::Web::Http::HttpCookieCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2388,7 +2388,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookieCollection_IndexOf(py::wrapper::Windows::Web::Http::HttpCookieCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2663,7 +2663,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookieManager_DeleteCookie(py::wrapper::Windows::Web::Http::HttpCookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2706,7 +2706,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookieManager_GetCookies(py::wrapper::Windows::Web::Http::HttpCookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2748,7 +2748,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookieManager_SetCookie(py::wrapper::Windows::Web::Http::HttpCookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2790,7 +2790,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpCookieManager_SetCookieWithThirdParty(py::wrapper::Windows::Web::Http::HttpCookieManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2891,7 +2891,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2924,7 +2924,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpFormUrlEncodedContent_BufferAllAsync(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2964,7 +2964,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpFormUrlEncodedContent_Close(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3005,7 +3005,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpFormUrlEncodedContent_ReadAsBufferAsync(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3045,7 +3045,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpFormUrlEncodedContent_ReadAsInputStreamAsync(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3085,7 +3085,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpFormUrlEncodedContent_ReadAsStringAsync(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3125,7 +3125,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpFormUrlEncodedContent_ToString(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3165,7 +3165,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpFormUrlEncodedContent_TryComputeLength(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3220,7 +3220,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpFormUrlEncodedContent_WriteToStreamAsync(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3407,7 +3407,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpGetBufferResult_Close(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3448,7 +3448,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpGetBufferResult_ToString(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3751,7 +3751,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpGetInputStreamResult_Close(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3792,7 +3792,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpGetInputStreamResult_ToString(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4095,7 +4095,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpGetStringResult_Close(py::wrapper::Windows::Web::Http::HttpGetStringResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4136,7 +4136,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpGetStringResult_ToString(py::wrapper::Windows::Web::Http::HttpGetStringResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4430,7 +4430,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -4463,7 +4463,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMethod_ToString(py::wrapper::Windows::Web::Http::HttpMethod* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4845,7 +4845,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -4907,7 +4907,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_Add(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4950,7 +4950,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_BufferAllAsync(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4990,7 +4990,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_Close(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5031,7 +5031,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_First(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5071,7 +5071,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_ReadAsBufferAsync(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5111,7 +5111,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_ReadAsInputStreamAsync(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5151,7 +5151,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_ReadAsStringAsync(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5191,7 +5191,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_ToString(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5231,7 +5231,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_TryComputeLength(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5286,7 +5286,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartContent_WriteToStreamAsync(py::wrapper::Windows::Web::Http::HttpMultipartContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5484,7 +5484,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -5530,7 +5530,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_Add(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5573,7 +5573,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_AddWithName(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5617,7 +5617,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_AddWithNameAndFileName(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5662,7 +5662,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_BufferAllAsync(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5702,7 +5702,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_Close(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5743,7 +5743,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_First(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5783,7 +5783,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_ReadAsBufferAsync(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5823,7 +5823,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_ReadAsInputStreamAsync(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5863,7 +5863,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_ReadAsStringAsync(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5903,7 +5903,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_ToString(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5943,7 +5943,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_TryComputeLength(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5998,7 +5998,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpMultipartFormDataContent_WriteToStreamAsync(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6198,7 +6198,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -6245,7 +6245,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpRequestMessage_Close(py::wrapper::Windows::Web::Http::HttpRequestMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6286,7 +6286,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpRequestMessage_ToString(py::wrapper::Windows::Web::Http::HttpRequestMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6807,7 +6807,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpRequestResult_Close(py::wrapper::Windows::Web::Http::HttpRequestResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6848,7 +6848,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpRequestResult_ToString(py::wrapper::Windows::Web::Http::HttpRequestResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7111,7 +7111,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7157,7 +7157,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpResponseMessage_Close(py::wrapper::Windows::Web::Http::HttpResponseMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7198,7 +7198,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpResponseMessage_EnsureSuccessStatusCode(py::wrapper::Windows::Web::Http::HttpResponseMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7238,7 +7238,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpResponseMessage_ToString(py::wrapper::Windows::Web::Http::HttpResponseMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7860,7 +7860,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7893,7 +7893,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStreamContent_BufferAllAsync(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7933,7 +7933,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStreamContent_Close(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7974,7 +7974,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStreamContent_ReadAsBufferAsync(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8014,7 +8014,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStreamContent_ReadAsInputStreamAsync(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8054,7 +8054,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStreamContent_ReadAsStringAsync(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8094,7 +8094,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStreamContent_ToString(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8134,7 +8134,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStreamContent_TryComputeLength(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8189,7 +8189,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStreamContent_WriteToStreamAsync(py::wrapper::Windows::Web::Http::HttpStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8367,7 +8367,7 @@ namespace py::cpp::Windows::Web::Http
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8433,7 +8433,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStringContent_BufferAllAsync(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8473,7 +8473,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStringContent_Close(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8514,7 +8514,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStringContent_ReadAsBufferAsync(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8554,7 +8554,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStringContent_ReadAsInputStreamAsync(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8594,7 +8594,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStringContent_ReadAsStringAsync(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8634,7 +8634,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStringContent_ToString(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8674,7 +8674,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStringContent_TryComputeLength(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8729,7 +8729,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpStringContent_WriteToStreamAsync(py::wrapper::Windows::Web::Http::HttpStringContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8916,7 +8916,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* HttpTransportInformation_ToString(py::wrapper::Windows::Web::Http::HttpTransportInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9162,7 +9162,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* IHttpContent_BufferAllAsync(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9202,7 +9202,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* IHttpContent_Close(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9243,7 +9243,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* IHttpContent_ReadAsBufferAsync(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9283,7 +9283,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* IHttpContent_ReadAsInputStreamAsync(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9323,7 +9323,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* IHttpContent_ReadAsStringAsync(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9363,7 +9363,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* IHttpContent_TryComputeLength(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9418,7 +9418,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyObject* IHttpContent_WriteToStreamAsync(py::wrapper::Windows::Web::Http::IHttpContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9868,7 +9868,7 @@ namespace py::cpp::Windows::Web::Http
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Web::Http::HttpProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

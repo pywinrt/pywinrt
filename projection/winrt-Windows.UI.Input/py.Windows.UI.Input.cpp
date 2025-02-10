@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* AttachableInputObject_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -548,7 +548,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* EdgeGesture_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -959,7 +959,7 @@ namespace py::cpp::Windows::UI::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -990,7 +990,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_CanBeDoubleTap(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1032,7 +1032,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_CompleteGesture(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1073,7 +1073,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_ProcessDownEvent(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1116,7 +1116,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_ProcessInertia(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1157,7 +1157,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_ProcessMouseWheelEvent(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1202,7 +1202,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_ProcessMoveEvents(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1245,7 +1245,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* GestureRecognizer_ProcessUpEvent(py::wrapper::Windows::UI::Input::GestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4137,7 +4137,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* KeyboardDeliveryInterceptor_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5765,7 +5765,7 @@ namespace py::cpp::Windows::UI::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5796,7 +5796,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PhysicalGestureRecognizer_CompleteGesture(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5837,7 +5837,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PhysicalGestureRecognizer_ProcessDownEvent(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5880,7 +5880,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PhysicalGestureRecognizer_ProcessMoveEvents(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5923,7 +5923,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PhysicalGestureRecognizer_ProcessUpEvent(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6998,7 +6998,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_GetCurrentPoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7040,7 +7040,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_GetCurrentPointTransformed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7083,7 +7083,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_GetIntermediatePoints(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7125,7 +7125,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPoint_GetIntermediatePointsTransformed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7566,7 +7566,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_GetUsageValue(py::wrapper::Windows::UI::Input::PointerPointProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7609,7 +7609,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerPointProperties_HasUsage(py::wrapper::Windows::UI::Input::PointerPointProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8430,7 +8430,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* PointerVisualizationSettings_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8695,7 +8695,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_CreateForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8735,7 +8735,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialController_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10202,7 +10202,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerConfiguration_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10242,7 +10242,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerConfiguration_ResetToDefaultMenuItems(py::wrapper::Windows::UI::Input::RadialControllerConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10283,7 +10283,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerConfiguration_SetDefaultMenuItems(py::wrapper::Windows::UI::Input::RadialControllerConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10326,7 +10326,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerConfiguration_TrySelectDefaultMenuItem(py::wrapper::Windows::UI::Input::RadialControllerConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10892,7 +10892,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenu_GetSelectedMenuItem(py::wrapper::Windows::UI::Input::RadialControllerMenu* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10932,7 +10932,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenu_SelectMenuItem(py::wrapper::Windows::UI::Input::RadialControllerMenu* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10975,7 +10975,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenu_TrySelectPreviouslySelectedMenuItem(py::wrapper::Windows::UI::Input::RadialControllerMenu* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11182,7 +11182,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenuItem_CreateFromFontGlyph(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11226,7 +11226,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenuItem_CreateFromFontGlyphWithUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -11271,7 +11271,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenuItem_CreateFromIcon(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11314,7 +11314,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* RadialControllerMenuItem_CreateFromKnownIcon(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12518,7 +12518,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* SystemButtonEventController_CreateForDispatcherQueue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13654,7 +13654,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* TouchpadGesturesController_CreateForProcess(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13694,7 +13694,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* TouchpadGesturesController_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14322,7 +14322,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* IPointerPointTransform_TransformBounds(py::wrapper::Windows::UI::Input::IPointerPointTransform* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14364,7 +14364,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyObject* IPointerPointTransform_TryTransform(py::wrapper::Windows::UI::Input::IPointerPointTransform* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14674,7 +14674,7 @@ namespace py::cpp::Windows::UI::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -14971,7 +14971,7 @@ namespace py::cpp::Windows::UI::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationDelta>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -15267,7 +15267,7 @@ namespace py::cpp::Windows::UI::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationVelocities>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

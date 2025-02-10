@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedAcceptVisualSource_SetColorProperty(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedAcceptVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -89,7 +89,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedAcceptVisualSource_TryCreateAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedAcceptVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -232,7 +232,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -263,7 +263,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedBackVisualSource_SetColorProperty(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedBackVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -307,7 +307,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedBackVisualSource_TryCreateAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedBackVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -450,7 +450,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -481,7 +481,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedChevronDownSmallVisualSource_SetColorProperty(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronDownSmallVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -525,7 +525,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedChevronDownSmallVisualSource_TryCreateAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronDownSmallVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -668,7 +668,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -699,7 +699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedChevronRightDownSmallVisualSource_SetColorProperty(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronRightDownSmallVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -743,7 +743,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedChevronRightDownSmallVisualSource_TryCreateAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronRightDownSmallVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -886,7 +886,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -917,7 +917,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedChevronUpDownSmallVisualSource_SetColorProperty(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronUpDownSmallVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -961,7 +961,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedChevronUpDownSmallVisualSource_TryCreateAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronUpDownSmallVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1104,7 +1104,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1135,7 +1135,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedFindVisualSource_SetColorProperty(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedFindVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1179,7 +1179,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedFindVisualSource_TryCreateAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedFindVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1322,7 +1322,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1353,7 +1353,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedGlobalNavigationButtonVisualSource_SetColorProperty(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedGlobalNavigationButtonVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1397,7 +1397,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedGlobalNavigationButtonVisualSource_TryCreateAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedGlobalNavigationButtonVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1540,7 +1540,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1571,7 +1571,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedSettingsVisualSource_SetColorProperty(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedSettingsVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1615,7 +1615,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::AnimatedVisuals
 
     static PyObject* AnimatedSettingsVisualSource_TryCreateAnimatedVisual(py::wrapper::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedSettingsVisualSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

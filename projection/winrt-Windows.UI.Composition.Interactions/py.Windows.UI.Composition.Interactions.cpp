@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* CompositionConditionalValue_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -290,7 +290,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* CompositionInteractionSourceCollection_Add(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -333,7 +333,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* CompositionInteractionSourceCollection_First(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -373,7 +373,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* CompositionInteractionSourceCollection_Remove(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -416,7 +416,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* CompositionInteractionSourceCollection_RemoveAll(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -846,7 +846,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_AdjustPositionXIfGreaterThanThreshold(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -890,7 +890,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_AdjustPositionYIfGreaterThanThreshold(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -934,7 +934,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_ConfigureCenterPointXInertiaModifiers(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -977,7 +977,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_ConfigureCenterPointYInertiaModifiers(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1020,7 +1020,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_ConfigurePositionXInertiaModifiers(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1063,7 +1063,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_ConfigurePositionYInertiaModifiers(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1106,7 +1106,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_ConfigureScaleInertiaModifiers(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1149,7 +1149,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_ConfigureVector2PositionInertiaModifiers(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1192,7 +1192,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1234,7 +1234,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_CreateWithOwner(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1277,7 +1277,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_GetBindingMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1320,7 +1320,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_SetBindingMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1365,7 +1365,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdatePosition(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1407,7 +1407,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdatePositionBy(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1449,7 +1449,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdatePositionByWithOption(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1492,7 +1492,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdatePositionWithAdditionalVelocity(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1534,7 +1534,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdatePositionWithAnimation(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1576,7 +1576,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdatePositionWithOption(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1652,7 +1652,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdateScale(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1695,7 +1695,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdateScaleWithAdditionalVelocity(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1738,7 +1738,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTracker_TryUpdateScaleWithAnimation(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2950,7 +2950,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTrackerInertiaMotion_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3217,7 +3217,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTrackerInertiaNaturalMotion_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3484,7 +3484,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTrackerInertiaRestingValue_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4552,7 +4552,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* InteractionTrackerVector2InertiaNaturalMotion_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4819,7 +4819,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* VisualInteractionSource_ConfigureCenterPointXModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4862,7 +4862,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* VisualInteractionSource_ConfigureCenterPointYModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4905,7 +4905,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* VisualInteractionSource_ConfigureDeltaPositionXModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4948,7 +4948,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* VisualInteractionSource_ConfigureDeltaPositionYModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4991,7 +4991,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* VisualInteractionSource_ConfigureDeltaScaleModifiers(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5034,7 +5034,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* VisualInteractionSource_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5076,7 +5076,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* VisualInteractionSource_CreateFromIVisualElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5118,7 +5118,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* VisualInteractionSource_TryRedirectForManipulation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6254,7 +6254,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* IInteractionTrackerOwner_CustomAnimationStateEntered(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6298,7 +6298,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* IInteractionTrackerOwner_IdleStateEntered(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6342,7 +6342,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* IInteractionTrackerOwner_InertiaStateEntered(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6386,7 +6386,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* IInteractionTrackerOwner_InteractingStateEntered(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6430,7 +6430,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* IInteractionTrackerOwner_RequestIgnored(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6474,7 +6474,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     static PyObject* IInteractionTrackerOwner_ValuesChanged(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

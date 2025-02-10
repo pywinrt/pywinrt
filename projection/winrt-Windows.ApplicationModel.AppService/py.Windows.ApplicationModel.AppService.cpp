@@ -15,7 +15,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceCatalog_FindAppServiceProvidersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -200,7 +200,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceConnection_Close(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceConnection_OpenAsync(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -312,7 +312,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceConnection_OpenRemoteAsync(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceConnection_SendMessageAsync(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -396,7 +396,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceConnection_SendStatelessMessageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -898,7 +898,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceDeferral_Complete(py::wrapper::Windows::ApplicationModel::AppService::AppServiceDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceRequest_SendResponseAsync(py::wrapper::Windows::ApplicationModel::AppService::AppServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1140,7 +1140,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceRequestReceivedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1400,7 +1400,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyObject* AppServiceTriggerDetails_CheckCallerForCapabilityAsync(py::wrapper::Windows::ApplicationModel::AppService::AppServiceTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

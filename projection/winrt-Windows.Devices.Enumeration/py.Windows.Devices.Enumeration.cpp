@@ -179,7 +179,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceAccessInformation_CreateFromDeviceClass(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -221,7 +221,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceAccessInformation_CreateFromDeviceClassId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -263,7 +263,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceAccessInformation_CreateFromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -709,7 +709,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateFromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -751,7 +751,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateFromIdAsyncAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -794,7 +794,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateFromIdAsyncWithAdditionalPropertiesKindAndSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -839,7 +839,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateFromIdAsyncWithKindAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -883,7 +883,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -923,7 +923,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateWatcherAqsFilter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -965,7 +965,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateWatcherAqsFilterAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1008,7 +1008,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateWatcherDeviceClass(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1050,7 +1050,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateWatcherWithAqsFilterAdditionalPropertiesKindAndSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1095,7 +1095,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_CreateWatcherWithKindAqsFilterAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1139,7 +1139,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1179,7 +1179,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_FindAllAsyncAqsFilter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1221,7 +1221,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_FindAllAsyncAqsFilterAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1264,7 +1264,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_FindAllAsyncDeviceClass(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1306,7 +1306,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_FindAllAsyncWithAqsFilterAdditionalPropertiesKindAndSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1351,7 +1351,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_FindAllAsyncWithKindAqsFilterAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1395,7 +1395,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_GetAqsFilterFromDeviceClass(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1437,7 +1437,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_GetGlyphThumbnailAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1477,7 +1477,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_GetThumbnailAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1517,7 +1517,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformation_Update(py::wrapper::Windows::Devices::Enumeration::DeviceInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1912,7 +1912,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationCollection_First(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1952,7 +1952,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationCollection_GetAt(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1994,7 +1994,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationCollection_GetMany(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2037,7 +2037,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationCollection_IndexOf(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2312,7 +2312,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationCustomPairing_AddPairingSetMember(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2355,7 +2355,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationCustomPairing_PairAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2397,7 +2397,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationCustomPairing_PairWithProtectionLevelAndSettingsAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2441,7 +2441,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationCustomPairing_PairWithProtectionLevelAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2685,7 +2685,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationPairing_PairAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2725,7 +2725,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationPairing_PairWithProtectionLevelAndSettingsAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2768,7 +2768,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationPairing_PairWithProtectionLevelAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2810,7 +2810,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationPairing_TryRegisterForAllInboundPairingRequests(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2852,7 +2852,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationPairing_TryRegisterForAllInboundPairingRequestsWithProtectionLevel(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2895,7 +2895,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceInformationPairing_UnpairAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3305,7 +3305,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePairingRequestedEventArgs_Accept(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3346,7 +3346,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePairingRequestedEventArgs_AcceptWithAddress(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3389,7 +3389,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePairingRequestedEventArgs_AcceptWithPasswordCredential(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3432,7 +3432,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePairingRequestedEventArgs_AcceptWithPin(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3475,7 +3475,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePairingRequestedEventArgs_GetDeferral(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3948,7 +3948,7 @@ namespace py::cpp::Windows::Devices::Enumeration
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3979,7 +3979,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePicker_Hide(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4020,7 +4020,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePicker_PickSingleDeviceAsync(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4062,7 +4062,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePicker_PickSingleDeviceAsyncWithPlacement(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4105,7 +4105,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePicker_SetDisplayStatus(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4150,7 +4150,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePicker_Show(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4193,7 +4193,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DevicePicker_ShowWithPlacement(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5372,7 +5372,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceThumbnail_CloneStream(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5412,7 +5412,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceThumbnail_Close(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5453,7 +5453,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceThumbnail_FlushAsync(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5493,7 +5493,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceThumbnail_GetInputStreamAt(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5535,7 +5535,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceThumbnail_GetOutputStreamAt(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5577,7 +5577,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceThumbnail_ReadAsync(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5621,7 +5621,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceThumbnail_Seek(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5664,7 +5664,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceThumbnail_WriteAsync(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6090,7 +6090,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceWatcher_GetBackgroundTrigger(py::wrapper::Windows::Devices::Enumeration::DeviceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6132,7 +6132,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceWatcher_Start(py::wrapper::Windows::Devices::Enumeration::DeviceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6173,7 +6173,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyObject* DeviceWatcher_Stop(py::wrapper::Windows::Devices::Enumeration::DeviceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

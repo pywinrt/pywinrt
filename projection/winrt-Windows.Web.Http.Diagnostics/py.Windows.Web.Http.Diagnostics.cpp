@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_CreateFromProcessDiagnosticInfo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_Start(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -106,7 +106,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_Stop(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

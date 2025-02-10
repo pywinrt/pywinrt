@@ -723,7 +723,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_CreateKeyPair(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_CreateKeyPairWithCurveName(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -807,7 +807,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_CreateKeyPairWithCurveParameters(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -849,7 +849,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_ImportDefaultPrivateKeyBlob(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -891,7 +891,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_ImportDefaultPublicKeyBlob(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -933,7 +933,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_ImportKeyPairWithBlobType(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -976,7 +976,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_ImportPublicKeyWithBlobType(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1019,7 +1019,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_OpenAlgorithm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1176,7 +1176,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_Decrypt(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1220,7 +1220,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_DecryptAndAuthenticate(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -1266,7 +1266,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_DecryptAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1310,7 +1310,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_DeriveKeyMaterial(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1354,7 +1354,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_Encrypt(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1398,7 +1398,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_EncryptAndAuthenticate(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1443,7 +1443,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_Sign(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1486,7 +1486,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_SignAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1529,7 +1529,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_SignHashedData(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1572,7 +1572,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_SignHashedDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1615,7 +1615,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_VerifySignature(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1659,7 +1659,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicEngine_VerifySignatureWithHashInput(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1772,7 +1772,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicHash_Append(py::wrapper::Windows::Security::Cryptography::Core::CryptographicHash* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1815,7 +1815,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicHash_GetValueAndReset(py::wrapper::Windows::Security::Cryptography::Core::CryptographicHash* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1920,7 +1920,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicKey_ExportDefaultPrivateKeyBlobType(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1960,7 +1960,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicKey_ExportDefaultPublicKeyBlobType(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2000,7 +2000,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicKey_ExportPrivateKeyWithBlobType(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2042,7 +2042,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicKey_ExportPublicKeyWithBlobType(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3986,7 +3986,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmProvider_CreateHash(py::wrapper::Windows::Security::Cryptography::Core::HashAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4026,7 +4026,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmProvider_HashData(py::wrapper::Windows::Security::Cryptography::Core::HashAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4068,7 +4068,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmProvider_OpenAlgorithm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4928,7 +4928,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmProvider_CreateKey(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4970,7 +4970,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmProvider_OpenAlgorithm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5129,7 +5129,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationParameters_BuildForCapi1Kdf(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5171,7 +5171,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationParameters_BuildForPbkdf2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5214,7 +5214,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationParameters_BuildForSP800108(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5257,7 +5257,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationParameters_BuildForSP80056a(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -5797,7 +5797,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmProvider_CreateHash(py::wrapper::Windows::Security::Cryptography::Core::MacAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5839,7 +5839,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmProvider_CreateKey(py::wrapper::Windows::Security::Cryptography::Core::MacAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5881,7 +5881,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmProvider_OpenAlgorithm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6064,7 +6064,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* PersistedKeyProvider_OpenKeyPairFromCertificateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6108,7 +6108,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* PersistedKeyProvider_OpenPublicKeyFromCertificate(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6849,7 +6849,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricKeyAlgorithmProvider_CreateSymmetricKey(py::wrapper::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6891,7 +6891,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricKeyAlgorithmProvider_OpenAlgorithm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -1358,7 +1358,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrame_Close(py::wrapper::Windows::Devices::Perception::PerceptionColorFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1519,7 +1519,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameArrivedEventArgs_TryOpenFrame(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1654,7 +1654,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameReader_Close(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1695,7 +1695,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameReader_TryReadLatestFrame(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1993,7 +1993,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_AcquireControlSession(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2033,7 +2033,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_CanControlIndependentlyFrom(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2075,7 +2075,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2115,7 +2115,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2155,7 +2155,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2197,7 +2197,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_IsCorrelatedWith(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2239,7 +2239,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_OpenReader(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2279,7 +2279,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2319,7 +2319,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_TryGetDepthCorrelatedCameraIntrinsicsAsync(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2361,7 +2361,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_TryGetDepthCorrelatedCoordinateMapperAsync(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2404,7 +2404,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_TryGetTransformTo(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2460,7 +2460,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_TrySetVideoProfileAsync(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3494,7 +3494,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_Start(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3535,7 +3535,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_Stop(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3940,7 +3940,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionControlSession_Close(py::wrapper::Windows::Devices::Perception::PerceptionControlSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3981,7 +3981,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionControlSession_TrySetPropertyAsync(py::wrapper::Windows::Devices::Perception::PerceptionControlSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4181,7 +4181,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthCorrelatedCameraIntrinsics_UnprojectAllPixelsAtCorrelatedDepthAsync(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4224,7 +4224,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthCorrelatedCameraIntrinsics_UnprojectPixelAtCorrelatedDepth(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4267,7 +4267,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthCorrelatedCameraIntrinsics_UnprojectPixelsAtCorrelatedDepth(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4312,7 +4312,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthCorrelatedCameraIntrinsics_UnprojectRegionPixelsAtCorrelatedDepthAsync(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4423,7 +4423,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthCorrelatedCoordinateMapper_MapAllPixelsToTargetAsync(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4466,7 +4466,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthCorrelatedCoordinateMapper_MapPixelToTarget(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4509,7 +4509,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthCorrelatedCoordinateMapper_MapPixelsToTarget(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4554,7 +4554,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthCorrelatedCoordinateMapper_MapRegionOfPixelsToTargetAsync(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4665,7 +4665,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrame_Close(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4826,7 +4826,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameArrivedEventArgs_TryOpenFrame(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4961,7 +4961,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameReader_Close(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5002,7 +5002,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameReader_TryReadLatestFrame(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5300,7 +5300,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_AcquireControlSession(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5340,7 +5340,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_CanControlIndependentlyFrom(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5382,7 +5382,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5422,7 +5422,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5462,7 +5462,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5504,7 +5504,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_IsCorrelatedWith(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5546,7 +5546,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_OpenReader(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5586,7 +5586,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5626,7 +5626,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_TryGetDepthCorrelatedCameraIntrinsicsAsync(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5668,7 +5668,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_TryGetDepthCorrelatedCoordinateMapperAsync(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5711,7 +5711,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_TryGetTransformTo(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5767,7 +5767,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_TrySetVideoProfileAsync(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6801,7 +6801,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_Start(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6842,7 +6842,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_Stop(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7497,7 +7497,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrame_Close(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7658,7 +7658,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameArrivedEventArgs_TryOpenFrame(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7793,7 +7793,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameReader_Close(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7834,7 +7834,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameReader_TryReadLatestFrame(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8132,7 +8132,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_AcquireControlSession(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8172,7 +8172,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_CanControlIndependentlyFrom(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8214,7 +8214,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8254,7 +8254,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8294,7 +8294,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8336,7 +8336,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_IsCorrelatedWith(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8378,7 +8378,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_OpenReader(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8418,7 +8418,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8458,7 +8458,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_TryGetDepthCorrelatedCameraIntrinsicsAsync(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8500,7 +8500,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_TryGetDepthCorrelatedCoordinateMapperAsync(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8543,7 +8543,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_TryGetTransformTo(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8599,7 +8599,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_TrySetVideoProfileAsync(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9633,7 +9633,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_Start(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9674,7 +9674,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_Stop(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10079,7 +10079,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionVideoProfile_IsEqual(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

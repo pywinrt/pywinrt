@@ -553,7 +553,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyObject* GattServiceProviderConnection_Start(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

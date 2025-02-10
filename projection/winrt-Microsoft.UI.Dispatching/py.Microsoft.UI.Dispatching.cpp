@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherExitDeferral_Complete(py::wrapper::Microsoft::UI::Dispatching::DispatcherExitDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_CreateTimer(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -190,7 +190,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_EnqueueEventLoopExit(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_EnsureSystemDispatcherQueue(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_GetForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -312,7 +312,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_RunEventLoop(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -353,7 +353,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_RunEventLoopWithOptions(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -397,7 +397,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_TryEnqueue(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -439,7 +439,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueue_TryEnqueueWithPriority(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -873,7 +873,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueController_CreateOnCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -913,7 +913,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueController_CreateOnDedicatedThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -953,7 +953,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueController_ShutdownQueue(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -994,7 +994,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueController_ShutdownQueueAsync(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1153,7 +1153,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueShutdownStartingEventArgs_GetDeferral(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1257,7 +1257,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueTimer_Start(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1298,7 +1298,7 @@ namespace py::cpp::Microsoft::UI::Dispatching
 
     static PyObject* DispatcherQueueTimer_Stop(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueueTimer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

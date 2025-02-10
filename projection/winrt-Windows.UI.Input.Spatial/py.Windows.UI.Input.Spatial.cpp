@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_CancelPendingGestures(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -88,7 +88,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_CaptureInteraction(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -131,7 +131,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialGestureRecognizer_TrySetGestureSettings(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1396,7 +1396,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialHoldStartedEventArgs_TryGetPointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1627,7 +1627,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionController_TryGetBatteryReport(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1667,7 +1667,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionController_TryGetRenderableModelAsync(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2238,7 +2238,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionDetectedEventArgs_TryGetPointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_GetDetectedSourcesAtTimestamp(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2479,7 +2479,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2519,7 +2519,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionManager_IsSourceKindSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3050,7 +3050,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_TryCreateHandMeshObserver(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3090,7 +3090,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_TryCreateHandMeshObserverAsync(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3130,7 +3130,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSource_TryGetStateAtTimestamp(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3829,7 +3829,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceProperties_TryGetLocation(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3871,7 +3871,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceProperties_TryGetSourceLossMitigationDirection(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4009,7 +4009,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_TryGetHandPose(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4049,7 +4049,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialInteractionSourceState_TryGetPointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4529,7 +4529,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialManipulationCompletedEventArgs_TryGetCumulativeDelta(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4760,7 +4760,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialManipulationStartedEventArgs_TryGetPointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4897,7 +4897,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialManipulationUpdatedEventArgs_TryGetCumulativeDelta(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5253,7 +5253,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialNavigationStartedEventArgs_TryGetPointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5826,7 +5826,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerPose_TryGetAtTimestamp(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5869,7 +5869,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialPointerPose_TryGetInteractionSourcePose(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6215,7 +6215,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialRecognitionStartedEventArgs_IsGesturePossible(py::wrapper::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6257,7 +6257,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialRecognitionStartedEventArgs_TryGetPointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6395,7 +6395,7 @@ namespace py::cpp::Windows::UI::Input::Spatial
 
     static PyObject* SpatialTappedEventArgs_TryGetPointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialTappedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

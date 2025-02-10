@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_CreateForPencil(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1423,7 +1423,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1454,7 +1454,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_AddStroke(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1497,7 +1497,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_CanPasteFromClipboard(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1537,7 +1537,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_CopySelectedToClipboard(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1578,7 +1578,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_DeleteSelected(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1618,7 +1618,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_GetRecognitionResults(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1658,7 +1658,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_GetRecognizers(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1698,7 +1698,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_GetStrokes(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1738,7 +1738,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_LoadAsync(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1780,7 +1780,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_MoveSelected(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1822,7 +1822,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_PasteFromClipboard(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1864,7 +1864,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_ProcessPointerDown(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1907,7 +1907,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_ProcessPointerUp(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1949,7 +1949,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_ProcessPointerUpdate(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1991,7 +1991,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_RecognizeAsync(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2034,7 +2034,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_RecognizeAsync2(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2076,7 +2076,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_SaveAsync(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2118,7 +2118,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_SelectWithLine(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2161,7 +2161,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_SelectWithPolyLine(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2203,7 +2203,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_SetDefaultDrawingAttributes(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2246,7 +2246,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_SetDefaultRecognizer(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2289,7 +2289,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_UpdateRecognitionResults(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2781,7 +2781,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 5)
         {
             try
@@ -3052,7 +3052,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_ActivateCustomDrying(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3092,7 +3092,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_CopyDefaultDrawingAttributes(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3132,7 +3132,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_SetPredefinedConfiguration(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3175,7 +3175,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_UpdateDefaultDrawingAttributes(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3814,7 +3814,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -4702,7 +4702,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -5389,7 +5389,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkRecognitionResult_GetStrokes(py::wrapper::Windows::UI::Input::Inking::InkRecognitionResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5429,7 +5429,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkRecognitionResult_GetTextCandidates(py::wrapper::Windows::UI::Input::Inking::InkRecognitionResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5650,7 +5650,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5681,7 +5681,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkRecognizerContainer_GetRecognizers(py::wrapper::Windows::UI::Input::Inking::InkRecognizerContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5721,7 +5721,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkRecognizerContainer_RecognizeAsync(py::wrapper::Windows::UI::Input::Inking::InkRecognizerContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5764,7 +5764,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkRecognizerContainer_SetDefaultRecognizer(py::wrapper::Windows::UI::Input::Inking::InkRecognizerContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5873,7 +5873,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_Clone(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5913,7 +5913,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_GetInkPoints(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5953,7 +5953,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_GetRenderingSegments(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6524,7 +6524,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6555,7 +6555,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeBuilder_AppendToStroke(py::wrapper::Windows::UI::Input::Inking::InkStrokeBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6597,7 +6597,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeBuilder_BeginStroke(py::wrapper::Windows::UI::Input::Inking::InkStrokeBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6640,7 +6640,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeBuilder_CreateStroke(py::wrapper::Windows::UI::Input::Inking::InkStrokeBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6682,7 +6682,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeBuilder_CreateStrokeFromInkPoints(py::wrapper::Windows::UI::Input::Inking::InkStrokeBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6759,7 +6759,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeBuilder_EndStroke(py::wrapper::Windows::UI::Input::Inking::InkStrokeBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6801,7 +6801,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeBuilder_SetDefaultDrawingAttributes(py::wrapper::Windows::UI::Input::Inking::InkStrokeBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6904,7 +6904,7 @@ namespace py::cpp::Windows::UI::Input::Inking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6935,7 +6935,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_AddStroke(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6978,7 +6978,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_AddStrokes(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7021,7 +7021,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_CanPasteFromClipboard(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7061,7 +7061,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_Clear(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7102,7 +7102,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_CopySelectedToClipboard(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7143,7 +7143,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_DeleteSelected(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7183,7 +7183,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_GetRecognitionResults(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7223,7 +7223,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_GetStrokeById(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7265,7 +7265,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_GetStrokes(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7305,7 +7305,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_LoadAsync(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7347,7 +7347,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_MoveSelected(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7389,7 +7389,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_PasteFromClipboard(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7431,7 +7431,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_SaveAsync(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7473,7 +7473,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_SaveWithFormatAsync(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7516,7 +7516,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_SelectWithLine(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7559,7 +7559,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_SelectWithPolyLine(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7601,7 +7601,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_UpdateRecognitionResults(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8585,7 +8585,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkSynchronizer_BeginDry(py::wrapper::Windows::UI::Input::Inking::InkSynchronizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8625,7 +8625,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkSynchronizer_EndDry(py::wrapper::Windows::UI::Input::Inking::InkSynchronizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9294,7 +9294,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* PenAndInkSettings_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9334,7 +9334,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* PenAndInkSettings_SetPenHandedness(py::wrapper::Windows::UI::Input::Inking::PenAndInkSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9649,7 +9649,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkPointFactory_CreateInkPoint(py::wrapper::Windows::UI::Input::Inking::IInkPointFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9860,7 +9860,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkPresenterRulerFactory_Create(py::wrapper::Windows::UI::Input::Inking::IInkPresenterRulerFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10684,7 +10684,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkRecognizerContainer_GetRecognizers(py::wrapper::Windows::UI::Input::Inking::IInkRecognizerContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10724,7 +10724,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkRecognizerContainer_RecognizeAsync(py::wrapper::Windows::UI::Input::Inking::IInkRecognizerContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10767,7 +10767,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkRecognizerContainer_SetDefaultRecognizer(py::wrapper::Windows::UI::Input::Inking::IInkRecognizerContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11036,7 +11036,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_AddStroke(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11079,7 +11079,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_CanPasteFromClipboard(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11119,7 +11119,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_CopySelectedToClipboard(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11160,7 +11160,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_DeleteSelected(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11200,7 +11200,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_GetRecognitionResults(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11240,7 +11240,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_GetStrokes(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11280,7 +11280,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_LoadAsync(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11322,7 +11322,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_MoveSelected(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11364,7 +11364,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_PasteFromClipboard(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11406,7 +11406,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_SaveAsync(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11448,7 +11448,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_SelectWithLine(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11491,7 +11491,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_SelectWithPolyLine(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11533,7 +11533,7 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_UpdateRecognitionResults(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

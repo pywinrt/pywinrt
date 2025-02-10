@@ -264,7 +264,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* EnterpriseEnrollmentManager_RequestEnrollmentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -306,7 +306,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* EnterpriseEnrollmentManager_RequestUnenrollmentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -348,7 +348,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* EnterpriseEnrollmentManager_ValidateEnterprisesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* InstallationManager_AddPackageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -670,7 +670,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* InstallationManager_AddPackagePreloadedAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -716,7 +716,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* InstallationManager_FindPackages(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -756,7 +756,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* InstallationManager_FindPackagesByNamePublisher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -799,7 +799,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* InstallationManager_FindPackagesForCurrentPublisher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -839,7 +839,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* InstallationManager_GetPendingPackageInstalls(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -879,7 +879,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* InstallationManager_RegisterPackageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -923,7 +923,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyObject* InstallationManager_RemovePackageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

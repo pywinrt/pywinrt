@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* ApplicationLanguages_GetLanguagesForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -238,7 +238,7 @@ namespace py::cpp::Windows::Globalization
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -319,7 +319,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddDays(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddEras(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -405,7 +405,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddHours(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -448,7 +448,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddMinutes(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -491,7 +491,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddMonths(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -534,7 +534,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddNanoseconds(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -577,7 +577,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddPeriods(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -620,7 +620,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddSeconds(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -663,7 +663,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddWeeks(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -706,7 +706,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_AddYears(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -749,7 +749,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_ChangeCalendarSystem(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -792,7 +792,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_ChangeClock(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -835,7 +835,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_ChangeTimeZone(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -878,7 +878,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_Clone(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -918,7 +918,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_Compare(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -960,7 +960,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_CompareDateTime(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1002,7 +1002,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_CopyTo(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1045,7 +1045,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_DayAsPaddedString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1087,7 +1087,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_DayAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1127,7 +1127,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_DayOfWeekAsFullSoloString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1167,7 +1167,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_DayOfWeekAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1207,7 +1207,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_DayOfWeekAsSoloString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1249,7 +1249,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_DayOfWeekAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1291,7 +1291,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_EraAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1331,7 +1331,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_EraAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1373,7 +1373,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_GetCalendarSystem(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1413,7 +1413,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_GetClock(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1453,7 +1453,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_GetDateTime(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1493,7 +1493,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_GetTimeZone(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1533,7 +1533,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_HourAsPaddedString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1575,7 +1575,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_HourAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1615,7 +1615,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_MinuteAsPaddedString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1657,7 +1657,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_MinuteAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1697,7 +1697,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_MonthAsFullSoloString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1737,7 +1737,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_MonthAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1777,7 +1777,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_MonthAsNumericString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1817,7 +1817,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_MonthAsPaddedNumericString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1859,7 +1859,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_MonthAsSoloString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1901,7 +1901,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_MonthAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1943,7 +1943,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_NanosecondAsPaddedString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1985,7 +1985,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_NanosecondAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2025,7 +2025,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_PeriodAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2065,7 +2065,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_PeriodAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2107,7 +2107,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_SecondAsPaddedString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2149,7 +2149,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_SecondAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2189,7 +2189,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_SetDateTime(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2232,7 +2232,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_SetToMax(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2273,7 +2273,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_SetToMin(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2314,7 +2314,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_SetToNow(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2355,7 +2355,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_TimeZoneAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2395,7 +2395,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_TimeZoneAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_YearAsPaddedString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2479,7 +2479,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_YearAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2519,7 +2519,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Calendar_YearAsTruncatedString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4862,7 +4862,7 @@ namespace py::cpp::Windows::Globalization
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -10083,7 +10083,7 @@ namespace py::cpp::Windows::Globalization
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10129,7 +10129,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* GeographicRegion_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10621,7 +10621,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* JapanesePhoneticAnalyzer_GetWords(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10663,7 +10663,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* JapanesePhoneticAnalyzer_GetWordsWithMonoRubyOption(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10756,7 +10756,7 @@ namespace py::cpp::Windows::Globalization
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10789,7 +10789,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_GetExtensionSubtags(py::wrapper::Windows::Globalization::Language* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10831,7 +10831,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_GetMuiCompatibleLanguageListFromLanguageTags(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10873,7 +10873,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_IsWellFormed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10915,7 +10915,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyObject* Language_TrySetInputMethodLanguageTag(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

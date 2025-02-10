@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_FindPackagesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_FindPackagesInBoundingBoxAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_FindPackagesInGeocircleAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_RequestStartDownloadAsync(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

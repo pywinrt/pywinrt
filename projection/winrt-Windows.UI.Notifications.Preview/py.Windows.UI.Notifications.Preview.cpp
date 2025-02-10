@@ -15,7 +15,7 @@ namespace py::cpp::Windows::UI::Notifications::Preview
 
     static PyObject* ToastOcclusionManagerPreview_SetToastWindowMargin(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

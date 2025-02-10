@@ -170,7 +170,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -609,7 +609,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -655,7 +655,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentRestrictions_GetBrowsePolicyAsync(py::wrapper::Windows::Media::ContentRestrictions::RatedContentRestrictions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -695,7 +695,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentRestrictions_GetRestrictionLevelAsync(py::wrapper::Windows::Media::ContentRestrictions::RatedContentRestrictions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -737,7 +737,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyObject* RatedContentRestrictions_RequestContentAccessAsync(py::wrapper::Windows::Media::ContentRestrictions::RatedContentRestrictions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

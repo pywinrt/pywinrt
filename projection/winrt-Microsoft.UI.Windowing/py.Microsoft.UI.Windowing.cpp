@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_AssociateWithDispatcherQueue(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -106,7 +106,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_CreateWithDispatcherQueue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_CreateWithPresenter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -192,7 +192,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_CreateWithPresenterAndOwner(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -235,7 +235,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_Destroy(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -276,7 +276,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_GetFromWindowId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -318,7 +318,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_Hide(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -359,7 +359,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_Move(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -402,7 +402,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_MoveAndResize(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -445,7 +445,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_MoveAndResizeRelativeToDisplayArea(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -489,7 +489,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_MoveInZOrderAtBottom(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -530,7 +530,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_MoveInZOrderAtTop(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -571,7 +571,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_MoveInZOrderBelow(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -614,7 +614,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_Resize(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -657,7 +657,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_ResizeClient(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -700,7 +700,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_SetIcon(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -743,7 +743,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_SetIconWithIconId(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -786,7 +786,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_SetPresenter(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -829,7 +829,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_SetPresenterByKind(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -872,7 +872,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_Show(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -913,7 +913,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_ShowOnceWithRequestedStartupState(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -954,7 +954,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindow_ShowWithActivation(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2283,7 +2283,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindowTitleBar_IsCustomizationSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2323,7 +2323,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindowTitleBar_ResetToDefault(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2364,7 +2364,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* AppWindowTitleBar_SetDragRectangles(py::wrapper::Microsoft::UI::Windowing::AppWindowTitleBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3637,7 +3637,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* CompactOverlayPresenter_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3832,7 +3832,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* DisplayArea_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3872,7 +3872,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* DisplayArea_FindAll(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3912,7 +3912,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* DisplayArea_GetFromDisplayId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3954,7 +3954,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* DisplayArea_GetFromPoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3997,7 +3997,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* DisplayArea_GetFromRect(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4040,7 +4040,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* DisplayArea_GetFromWindowId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4328,7 +4328,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* DisplayAreaWatcher_Start(py::wrapper::Microsoft::UI::Windowing::DisplayAreaWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4369,7 +4369,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* DisplayAreaWatcher_Stop(py::wrapper::Microsoft::UI::Windowing::DisplayAreaWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4841,7 +4841,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* FullScreenPresenter_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4966,7 +4966,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5006,7 +5006,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_CreateForContextMenu(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5046,7 +5046,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_CreateForDialog(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5086,7 +5086,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_CreateForToolWindow(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5126,7 +5126,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_Maximize(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5167,7 +5167,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_Minimize(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5208,7 +5208,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_MinimizeWithActivation(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5251,7 +5251,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_Restore(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5292,7 +5292,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_RestoreWithActivation(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5335,7 +5335,7 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyObject* OverlappedPresenter_SetBorderAndTitleBar(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

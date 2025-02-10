@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -60,7 +60,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetDefaultPriPath(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -102,7 +102,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -142,7 +142,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetForCurrentViewWithName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -184,7 +184,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetForUIContext(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -226,7 +226,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetForViewIndependentUse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -266,7 +266,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetForViewIndependentUseWithName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -308,7 +308,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetString(py::wrapper::Windows::ApplicationModel::Resources::ResourceLoader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -350,7 +350,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetStringForReference(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -392,7 +392,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetStringForUri(py::wrapper::Windows::ApplicationModel::Resources::ResourceLoader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

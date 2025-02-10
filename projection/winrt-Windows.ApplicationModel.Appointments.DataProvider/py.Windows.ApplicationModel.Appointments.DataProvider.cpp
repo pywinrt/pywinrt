@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarCancelMeetingRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarCancelMeetingRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarCancelMeetingRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarCreateOrUpdateAppointmentRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -531,7 +531,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarCreateOrUpdateAppointmentRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -760,7 +760,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -895,7 +895,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarForwardMeetingRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -935,7 +935,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarForwardMeetingRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1257,7 +1257,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarForwardMeetingRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1392,7 +1392,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarProposeNewTimeForMeetingRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1432,7 +1432,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarProposeNewTimeForMeetingRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1754,7 +1754,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1889,7 +1889,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarSyncManagerSyncRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarSyncManagerSyncRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2065,7 +2065,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarSyncManagerSyncRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2200,7 +2200,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarUpdateMeetingResponseRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2240,7 +2240,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarUpdateMeetingResponseRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2562,7 +2562,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentCalendarUpdateMeetingResponseRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2697,7 +2697,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 
     static PyObject* AppointmentDataProviderConnection_Start(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

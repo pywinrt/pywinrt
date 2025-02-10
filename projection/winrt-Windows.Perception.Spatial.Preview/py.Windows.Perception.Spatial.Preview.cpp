@@ -171,7 +171,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyObject* SpatialGraphInteropPreview_CreateCoordinateSystemForNode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyObject* SpatialGraphInteropPreview_CreateCoordinateSystemForNodeWithPosition(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -256,7 +256,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyObject* SpatialGraphInteropPreview_CreateCoordinateSystemForNodeWithPositionAndOrientation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -300,7 +300,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyObject* SpatialGraphInteropPreview_CreateLocatorForNode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -342,7 +342,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyObject* SpatialGraphInteropPreview_TryCreateFrameOfReference(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -384,7 +384,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyObject* SpatialGraphInteropPreview_TryCreateFrameOfReferenceWithPosition(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -427,7 +427,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyObject* SpatialGraphInteropPreview_TryCreateFrameOfReferenceWithPositionAndOrientation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {

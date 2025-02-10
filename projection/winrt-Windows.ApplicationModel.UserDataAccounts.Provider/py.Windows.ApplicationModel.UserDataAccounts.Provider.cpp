@@ -179,7 +179,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderAddAccountOperation_ReportCompleted(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderResolveErrorsOperation_ReportCompleted(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -546,7 +546,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     static PyObject* UserDataAccountProviderSettingsOperation_ReportCompleted(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

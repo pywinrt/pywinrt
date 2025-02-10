@@ -211,7 +211,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechContinuousRecognitionSession_CancelAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -251,7 +251,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechContinuousRecognitionSession_PauseAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -291,7 +291,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechContinuousRecognitionSession_Resume(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -332,7 +332,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechContinuousRecognitionSession_StartAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -372,7 +372,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechContinuousRecognitionSession_StartWithModeAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -414,7 +414,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechContinuousRecognitionSession_StopAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -812,7 +812,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1853,7 +1853,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechRecognitionResult_GetAlternates(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2323,7 +2323,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -3035,7 +3035,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3081,7 +3081,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechRecognizer_Close(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3122,7 +3122,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechRecognizer_CompileConstraintsAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3162,7 +3162,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechRecognizer_RecognizeAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3202,7 +3202,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechRecognizer_RecognizeWithUIAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3242,7 +3242,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechRecognizer_StopRecognitionAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3282,7 +3282,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* SpeechRecognizer_TrySetSystemSpeechLanguageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4621,7 +4621,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* VoiceCommandManager_InstallCommandSetsFromStorageFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4752,7 +4752,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     static PyObject* VoiceCommandSet_SetPhraseListAsync(py::wrapper::Windows::Media::SpeechRecognition::VoiceCommandSet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

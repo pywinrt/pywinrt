@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::ViewManagement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ActivationViewSwitcher_IsViewPresentedOnActivationVirtualDesktop(py::wrapper::Windows::UI::ViewManagement::ActivationViewSwitcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -279,7 +279,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ActivationViewSwitcher_ShowAsStandaloneAsync(py::wrapper::Windows::UI::ViewManagement::ActivationViewSwitcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -321,7 +321,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ActivationViewSwitcher_ShowAsStandaloneWithSizePreferenceAsync(py::wrapper::Windows::UI::ViewManagement::ActivationViewSwitcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -430,7 +430,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_ClearAllPersistedState(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -471,7 +471,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_ClearPersistedState(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -514,7 +514,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_ExitFullScreenMode(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -555,7 +555,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_GetApplicationViewIdForWindow(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -597,7 +597,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_GetDisplayRegions(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -637,7 +637,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_IsViewModeSupported(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -719,7 +719,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_SetDesiredBoundsMode(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -761,7 +761,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_SetPreferredMinSize(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -804,7 +804,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_ShowStandardSystemOverlays(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -845,7 +845,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_TryConsolidateAsync(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -885,7 +885,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_TryEnterFullScreenMode(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -925,7 +925,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_TryEnterViewModeAsync(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -967,7 +967,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_TryEnterViewModeWithPreferencesAsync(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1010,7 +1010,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_TryResizeView(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1052,7 +1052,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_TryUnsnap(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1092,7 +1092,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationView_TryUnsnapToFullscreen(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2486,7 +2486,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewScaling_TrySetDisableLayoutScaling(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2636,7 +2636,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_DisableShowingMainViewOnActivation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2677,7 +2677,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_DisableSystemViewActivationPolicy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2718,7 +2718,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_PrepareForCustomAnimatedSwitchAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2762,7 +2762,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_SwitchAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2804,7 +2804,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_SwitchFromViewAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2847,7 +2847,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_SwitchFromViewWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2891,7 +2891,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_TryShowAsStandaloneAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2933,7 +2933,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_TryShowAsStandaloneWithAnchorViewAndSizePreferenceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2978,7 +2978,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_TryShowAsStandaloneWithSizePreferenceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3021,7 +3021,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_TryShowAsViewModeAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3064,7 +3064,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ApplicationViewSwitcher_TryShowAsViewModeWithPreferencesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4070,7 +4070,7 @@ namespace py::cpp::Windows::UI::ViewManagement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4286,7 +4286,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* InputPane_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4326,7 +4326,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* InputPane_GetForUIContext(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4368,7 +4368,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* InputPane_TryHide(py::wrapper::Windows::UI::ViewManagement::InputPane* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4408,7 +4408,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* InputPane_TryShow(py::wrapper::Windows::UI::ViewManagement::InputPane* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4927,7 +4927,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ProjectionManager_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4967,7 +4967,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ProjectionManager_RequestStartProjectingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5011,7 +5011,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ProjectionManager_RequestStartProjectingWithPlacementAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5056,7 +5056,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ProjectionManager_StartProjectingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5099,7 +5099,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ProjectionManager_StartProjectingWithDeviceInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5143,7 +5143,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ProjectionManager_StopProjectingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5186,7 +5186,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ProjectionManager_SwapDisplaysForViewsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5391,7 +5391,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* StatusBar_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5431,7 +5431,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* StatusBar_HideAsync(py::wrapper::Windows::UI::ViewManagement::StatusBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5471,7 +5471,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* StatusBar_ShowAsync(py::wrapper::Windows::UI::ViewManagement::StatusBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6004,7 +6004,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* StatusBarProgressIndicator_HideAsync(py::wrapper::Windows::UI::ViewManagement::StatusBarProgressIndicator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6044,7 +6044,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* StatusBarProgressIndicator_ShowAsync(py::wrapper::Windows::UI::ViewManagement::StatusBarProgressIndicator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6280,7 +6280,7 @@ namespace py::cpp::Windows::UI::ViewManagement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6311,7 +6311,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* UISettings_GetColorValue(py::wrapper::Windows::UI::ViewManagement::UISettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6353,7 +6353,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* UISettings_UIElementColor(py::wrapper::Windows::UI::ViewManagement::UISettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7516,7 +7516,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* UIViewSettings_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7672,7 +7672,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyObject* ViewModePreferences_CreateDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

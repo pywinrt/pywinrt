@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessageOperation_Cancel(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessageOperation_Close(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessageOperation_GetResults(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -381,7 +381,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessagesOperation_Cancel(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -422,7 +422,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessagesOperation_Close(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* DeleteSmsMessagesOperation_GetResults(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -739,7 +739,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsDeviceOperation_Cancel(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -780,7 +780,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsDeviceOperation_Close(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -821,7 +821,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsDeviceOperation_GetResults(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1096,7 +1096,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessageOperation_Cancel(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1137,7 +1137,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessageOperation_Close(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1178,7 +1178,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessageOperation_GetResults(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1453,7 +1453,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessagesOperation_Cancel(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1494,7 +1494,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessagesOperation_Close(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1535,7 +1535,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* GetSmsMessagesOperation_GetResults(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1880,7 +1880,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SendSmsMessageOperation_Cancel(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1921,7 +1921,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SendSmsMessageOperation_Close(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1962,7 +1962,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SendSmsMessageOperation_GetResults(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2229,7 +2229,7 @@ namespace py::cpp::Windows::Devices::Sms
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3231,7 +3231,7 @@ namespace py::cpp::Windows::Devices::Sms
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3262,7 +3262,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBinaryMessage_GetData(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3302,7 +3302,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsBinaryMessage_SetData(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4070,7 +4070,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_CalculateLength(py::wrapper::Windows::Devices::Sms::SmsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4112,7 +4112,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4154,7 +4154,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_FromNetworkAccountIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4196,7 +4196,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4236,7 +4236,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4276,7 +4276,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice_SendMessageAsync(py::wrapper::Windows::Devices::Sms::SmsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4666,7 +4666,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_CalculateLength(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4708,7 +4708,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4750,7 +4750,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_FromParentId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4792,7 +4792,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4832,7 +4832,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4872,7 +4872,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDevice2_SendMessageAndGetResultAsync(py::wrapper::Windows::Devices::Sms::SmsDevice2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5296,7 +5296,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDeviceMessageStore_DeleteMessageAsync(py::wrapper::Windows::Devices::Sms::SmsDeviceMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5338,7 +5338,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDeviceMessageStore_DeleteMessagesAsync(py::wrapper::Windows::Devices::Sms::SmsDeviceMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5380,7 +5380,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDeviceMessageStore_GetMessageAsync(py::wrapper::Windows::Devices::Sms::SmsDeviceMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5422,7 +5422,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsDeviceMessageStore_GetMessagesAsync(py::wrapper::Windows::Devices::Sms::SmsDeviceMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5553,7 +5553,7 @@ namespace py::cpp::Windows::Devices::Sms
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6082,7 +6082,7 @@ namespace py::cpp::Windows::Devices::Sms
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6365,7 +6365,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_Accept(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6406,7 +6406,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageReceivedTriggerDetails_Drop(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6729,7 +6729,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageRegistration_Register(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6772,7 +6772,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsMessageRegistration_Unregister(py::wrapper::Windows::Devices::Sms::SmsMessageRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7921,7 +7921,7 @@ namespace py::cpp::Windows::Devices::Sms
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7952,7 +7952,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_FromBinaryData(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7995,7 +7995,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_FromBinaryMessage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8037,7 +8037,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* SmsTextMessage_ToBinaryMessages(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8623,7 +8623,7 @@ namespace py::cpp::Windows::Devices::Sms
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10193,7 +10193,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsBinaryMessage_GetData(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10233,7 +10233,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsBinaryMessage_SetData(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10673,7 +10673,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_CalculateLength(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10715,7 +10715,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsDevice_SendMessageAsync(py::wrapper::Windows::Devices::Sms::ISmsDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12011,7 +12011,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyObject* ISmsTextMessage_ToBinaryMessages(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12980,7 +12980,7 @@ namespace py::cpp::Windows::Devices::Sms
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Sms::SmsEncodedLength>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

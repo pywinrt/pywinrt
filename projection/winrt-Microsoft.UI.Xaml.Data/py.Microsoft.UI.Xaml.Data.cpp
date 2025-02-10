@@ -49,7 +49,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::Binding>();
         if (!self_type)
@@ -990,7 +990,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::BindingBase>();
         if (!self_type)
@@ -1135,7 +1135,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* BindingExpression_UpdateSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1407,7 +1407,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* BindingOperations_SetBinding(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1528,7 +1528,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2035,7 +2035,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs>();
         if (!self_type)
@@ -2310,7 +2310,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2502,7 +2502,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::ItemIndexRange>();
         if (!self_type)
@@ -2769,7 +2769,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventArgs>();
         if (!self_type)
@@ -2973,7 +2973,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Data::RelativeSource>();
         if (!self_type)
@@ -3188,7 +3188,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_Append(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3231,7 +3231,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_Clear(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3272,7 +3272,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_First(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3312,7 +3312,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_GetAt(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3354,7 +3354,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_GetMany(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3397,7 +3397,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_GetView(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3437,7 +3437,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_IndexOf(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3493,7 +3493,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_InsertAt(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3537,7 +3537,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_LoadMoreItemsAsync(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3579,7 +3579,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_MoveCurrentTo(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3621,7 +3621,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_MoveCurrentToFirst(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3661,7 +3661,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_MoveCurrentToLast(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3701,7 +3701,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_MoveCurrentToNext(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3741,7 +3741,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_MoveCurrentToPosition(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3783,7 +3783,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_MoveCurrentToPrevious(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3823,7 +3823,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_RemoveAt(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3866,7 +3866,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_RemoveAtEnd(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3907,7 +3907,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_ReplaceAll(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3950,7 +3950,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionView_SetAt(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5613,7 +5613,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICollectionViewFactory_CreateView(py::wrapper::Microsoft::UI::Xaml::Data::ICollectionViewFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6028,7 +6028,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICustomProperty_GetIndexedValue(py::wrapper::Microsoft::UI::Xaml::Data::ICustomProperty* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6071,7 +6071,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICustomProperty_GetValue(py::wrapper::Microsoft::UI::Xaml::Data::ICustomProperty* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6113,7 +6113,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICustomProperty_SetIndexedValue(py::wrapper::Microsoft::UI::Xaml::Data::ICustomProperty* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6158,7 +6158,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICustomProperty_SetValue(py::wrapper::Microsoft::UI::Xaml::Data::ICustomProperty* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6699,7 +6699,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICustomPropertyProvider_GetCustomProperty(py::wrapper::Microsoft::UI::Xaml::Data::ICustomPropertyProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6741,7 +6741,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICustomPropertyProvider_GetIndexedProperty(py::wrapper::Microsoft::UI::Xaml::Data::ICustomPropertyProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6784,7 +6784,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ICustomPropertyProvider_GetStringRepresentation(py::wrapper::Microsoft::UI::Xaml::Data::ICustomPropertyProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7103,7 +7103,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* IItemsRangeInfo_Close(py::wrapper::Microsoft::UI::Xaml::Data::IItemsRangeInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7144,7 +7144,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* IItemsRangeInfo_RangesChanged(py::wrapper::Microsoft::UI::Xaml::Data::IItemsRangeInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7404,7 +7404,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* INotifyDataErrorInfo_GetErrors(py::wrapper::Microsoft::UI::Xaml::Data::INotifyDataErrorInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8034,7 +8034,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ISelectionInfo_DeselectRange(py::wrapper::Microsoft::UI::Xaml::Data::ISelectionInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8077,7 +8077,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ISelectionInfo_GetSelectedRanges(py::wrapper::Microsoft::UI::Xaml::Data::ISelectionInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8117,7 +8117,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ISelectionInfo_IsSelected(py::wrapper::Microsoft::UI::Xaml::Data::ISelectionInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8159,7 +8159,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ISelectionInfo_SelectRange(py::wrapper::Microsoft::UI::Xaml::Data::ISelectionInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8447,7 +8447,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* ISupportIncrementalLoading_LoadMoreItemsAsync(py::wrapper::Microsoft::UI::Xaml::Data::ISupportIncrementalLoading* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8696,7 +8696,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* IValueConverter_Convert(py::wrapper::Microsoft::UI::Xaml::Data::IValueConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -8741,7 +8741,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     static PyObject* IValueConverter_ConvertBack(py::wrapper::Microsoft::UI::Xaml::Data::IValueConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -9032,7 +9032,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Data::LoadMoreItemsResult>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

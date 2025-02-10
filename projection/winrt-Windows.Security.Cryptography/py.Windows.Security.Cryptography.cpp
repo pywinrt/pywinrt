@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_Compare(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -58,7 +58,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_ConvertBinaryToString(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -101,7 +101,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_ConvertStringToBinary(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_CopyToByteArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -194,7 +194,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_CreateFromByteArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -236,7 +236,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_DecodeFromBase64String(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -278,7 +278,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_DecodeFromHexString(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -320,7 +320,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_EncodeToBase64String(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_EncodeToHexString(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -404,7 +404,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_GenerateRandom(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -446,7 +446,7 @@ namespace py::cpp::Windows::Security::Cryptography
 
     static PyObject* CryptographicBuffer_GenerateRandomNumber(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

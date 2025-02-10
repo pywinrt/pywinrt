@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_CloneStream(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_Close(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_FlushAsync(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_GetInputStreamAt(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -186,7 +186,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_GetOutputStreamAt(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -228,7 +228,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_ReadAsync(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_Seek(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -315,7 +315,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_WriteAsync(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -700,7 +700,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -731,7 +731,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizer_Close(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizer_SynthesizeSsmlToStreamAsync(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -814,7 +814,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizer_SynthesizeTextToStreamAsync(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -856,7 +856,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizer_TrySetDefaultVoiceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

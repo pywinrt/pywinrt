@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::UI::System
 
     static PyObject* ThemeSettings_CreateForWindowId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

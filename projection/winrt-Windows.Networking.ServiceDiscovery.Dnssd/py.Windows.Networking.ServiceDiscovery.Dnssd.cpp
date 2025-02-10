@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdRegistrationResult_ToString(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -251,7 +251,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -286,7 +286,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_RegisterDatagramSocketAsync1(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -328,7 +328,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_RegisterDatagramSocketAsync2(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -371,7 +371,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_RegisterStreamSocketListenerAsync1(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -413,7 +413,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_RegisterStreamSocketListenerAsync2(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -456,7 +456,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_ToString(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -963,7 +963,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstanceCollection_First(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstanceCollection_GetAt(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1045,7 +1045,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstanceCollection_GetMany(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1088,7 +1088,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstanceCollection_IndexOf(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1363,7 +1363,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_Start(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1404,7 +1404,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_Stop(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

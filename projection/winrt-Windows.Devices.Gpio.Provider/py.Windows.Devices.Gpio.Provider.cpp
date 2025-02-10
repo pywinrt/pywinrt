@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -141,7 +141,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioControllerProvider_OpenPinProvider(py::wrapper::Windows::Devices::Gpio::Provider::IGpioControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -403,7 +403,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_GetDriveMode(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -443,7 +443,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_IsDriveModeSupported(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -485,7 +485,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_Read(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -525,7 +525,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_SetDriveMode(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -568,7 +568,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioPinProvider_Write(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1227,7 +1227,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyObject* IGpioProvider_GetControllers(py::wrapper::Windows::Devices::Gpio::Provider::IGpioProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

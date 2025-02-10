@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -164,7 +164,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_Format(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -206,7 +206,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyObject* DateTimeFormatter_FormatUsingTimeZone(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

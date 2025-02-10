@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -99,7 +99,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -215,7 +215,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* AccessKeyManager_ExitDisplayMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1023,7 +1023,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1054,7 +1054,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* ContextRequestedEventArgs_TryGetPosition(py::wrapper::Windows::UI::Xaml::Input::ContextRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1235,7 +1235,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1266,7 +1266,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* DoubleTappedRoutedEventArgs_GetPosition(py::wrapper::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1558,7 +1558,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1932,7 +1932,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_FindFirstFocusableElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1974,7 +1974,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_FindLastFocusableElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2016,7 +2016,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_FindNextElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2058,7 +2058,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_FindNextElementWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2101,7 +2101,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_FindNextFocusableElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2143,7 +2143,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_FindNextFocusableElementWithHint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2186,7 +2186,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_GetFocusedElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2257,7 +2257,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_TryFocusAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2300,7 +2300,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_TryMoveFocus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2342,7 +2342,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_TryMoveFocusAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2384,7 +2384,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_TryMoveFocusWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2427,7 +2427,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* FocusManager_TryMoveFocusWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3178,7 +3178,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* GettingFocusEventArgs_TryCancel(py::wrapper::Windows::UI::Xaml::Input::GettingFocusEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3218,7 +3218,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* GettingFocusEventArgs_TrySetNewFocusedElement(py::wrapper::Windows::UI::Xaml::Input::GettingFocusEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3681,7 +3681,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3712,7 +3712,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* HoldingRoutedEventArgs_GetPosition(py::wrapper::Windows::UI::Xaml::Input::HoldingRoutedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4550,7 +4550,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4666,7 +4666,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -5128,7 +5128,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>();
         if (!self_type)
@@ -5939,7 +5939,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* LosingFocusEventArgs_TryCancel(py::wrapper::Windows::UI::Xaml::Input::LosingFocusEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5979,7 +5979,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* LosingFocusEventArgs_TrySetNewFocusedElement(py::wrapper::Windows::UI::Xaml::Input::LosingFocusEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6442,7 +6442,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6783,7 +6783,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6814,7 +6814,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* ManipulationDeltaRoutedEventArgs_Complete(py::wrapper::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7197,7 +7197,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7717,7 +7717,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -7993,7 +7993,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>();
         if (!self_type)
@@ -8054,7 +8054,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* ManipulationStartedRoutedEventArgs_Complete(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8365,7 +8365,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9121,7 +9121,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* PointerRoutedEventArgs_GetCurrentPoint(py::wrapper::Windows::UI::Xaml::Input::PointerRoutedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9163,7 +9163,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* PointerRoutedEventArgs_GetIntermediatePoints(py::wrapper::Windows::UI::Xaml::Input::PointerRoutedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9619,7 +9619,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9650,7 +9650,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* RightTappedRoutedEventArgs_GetPosition(py::wrapper::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9884,7 +9884,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Input::StandardUICommand>();
         if (!self_type)
@@ -10159,7 +10159,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10190,7 +10190,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* TappedRoutedEventArgs_GetPosition(py::wrapper::Windows::UI::Xaml::Input::TappedRoutedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10423,7 +10423,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Input::XamlUICommand>();
         if (!self_type)
@@ -10484,7 +10484,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* XamlUICommand_CanExecute(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10526,7 +10526,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* XamlUICommand_Execute(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10569,7 +10569,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* XamlUICommand_NotifyCanExecuteChanged(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11465,7 +11465,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* ICommand_CanExecute(py::wrapper::Windows::UI::Xaml::Input::ICommand* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11507,7 +11507,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     static PyObject* ICommand_Execute(py::wrapper::Windows::UI::Xaml::Input::ICommand* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

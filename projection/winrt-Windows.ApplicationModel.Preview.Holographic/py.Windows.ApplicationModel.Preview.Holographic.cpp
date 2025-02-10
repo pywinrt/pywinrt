@@ -15,7 +15,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyObject* HolographicApplicationPreview_IsCurrentViewPresentedOnHolographicDisplay(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -55,7 +55,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyObject* HolographicApplicationPreview_IsHolographicActivation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -156,7 +156,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyObject* HolographicKeyboardPlacementOverridePreview_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -196,7 +196,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyObject* HolographicKeyboardPlacementOverridePreview_ResetPlacementOverride(py::wrapper::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyObject* HolographicKeyboardPlacementOverridePreview_SetPlacementOverride(py::wrapper::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyObject* HolographicKeyboardPlacementOverridePreview_SetPlacementOverrideWithMaxSize(py::wrapper::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {

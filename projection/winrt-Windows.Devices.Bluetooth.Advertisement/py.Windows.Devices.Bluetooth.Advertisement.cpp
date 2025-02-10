@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* BluetoothLEAdvertisement_GetManufacturerDataByCompanyId(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -87,7 +87,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* BluetoothLEAdvertisement_GetSectionsByType(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -418,7 +418,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -730,7 +730,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1702,7 +1702,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1888,7 +1888,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1934,7 +1934,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* BluetoothLEAdvertisementPublisher_Start(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1975,7 +1975,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* BluetoothLEAdvertisementPublisher_Stop(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3072,7 +3072,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3118,7 +3118,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* BluetoothLEAdvertisementWatcher_Start(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3159,7 +3159,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     static PyObject* BluetoothLEAdvertisementWatcher_Stop(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3919,7 +3919,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

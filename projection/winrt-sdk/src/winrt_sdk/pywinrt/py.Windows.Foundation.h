@@ -816,7 +816,7 @@ namespace py::impl::Windows::Foundation
         IAsyncActionWithProgress(winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress> o) : _obj(o) {}
         PyObject* Cancel(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -856,7 +856,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* Close(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -896,7 +896,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetResults(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1075,7 +1075,7 @@ namespace py::impl::Windows::Foundation
         IAsyncOperationWithProgress(winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress> o) : _obj(o) {}
         PyObject* Cancel(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1115,7 +1115,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* Close(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1155,7 +1155,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetResults(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1333,7 +1333,7 @@ namespace py::impl::Windows::Foundation
         IAsyncOperation(winrt::Windows::Foundation::IAsyncOperation<TResult> o) : _obj(o) {}
         PyObject* Cancel(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1373,7 +1373,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* Close(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1413,7 +1413,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetResults(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1550,7 +1550,7 @@ namespace py::impl::Windows::Foundation
         IReferenceArray(winrt::Windows::Foundation::IReferenceArray<T> o) : _obj(o) {}
         PyObject* GetBoolean(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1589,7 +1589,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetBooleanArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1637,7 +1637,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetChar16(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1676,7 +1676,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetChar16Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1724,7 +1724,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetDateTime(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1763,7 +1763,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetDateTimeArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1811,7 +1811,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetDouble(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1850,7 +1850,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetDoubleArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1898,7 +1898,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetGuid(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1937,7 +1937,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetGuidArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -1985,7 +1985,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInspectableArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2033,7 +2033,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt16(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2072,7 +2072,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt16Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2120,7 +2120,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt32(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2159,7 +2159,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt32Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2207,7 +2207,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt64(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2246,7 +2246,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt64Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2294,7 +2294,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetPoint(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2333,7 +2333,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetPointArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2381,7 +2381,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetRect(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2420,7 +2420,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetRectArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2468,7 +2468,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetSingle(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2507,7 +2507,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetSingleArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2555,7 +2555,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetSize(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2594,7 +2594,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetSizeArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2642,7 +2642,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetString(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2681,7 +2681,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetStringArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2729,7 +2729,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetTimeSpan(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2768,7 +2768,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetTimeSpanArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2816,7 +2816,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt16(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2855,7 +2855,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt16Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2903,7 +2903,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt32(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2942,7 +2942,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt32Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -2990,7 +2990,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt64(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3029,7 +3029,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt64Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3077,7 +3077,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt8(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3116,7 +3116,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt8Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3220,7 +3220,7 @@ namespace py::impl::Windows::Foundation
         IReference(winrt::Windows::Foundation::IReference<T> o) : _obj(o) {}
         PyObject* GetBoolean(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3259,7 +3259,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetBooleanArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3307,7 +3307,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetChar16(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3346,7 +3346,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetChar16Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3394,7 +3394,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetDateTime(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3433,7 +3433,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetDateTimeArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3481,7 +3481,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetDouble(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3520,7 +3520,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetDoubleArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3568,7 +3568,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetGuid(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3607,7 +3607,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetGuidArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3655,7 +3655,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInspectableArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3703,7 +3703,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt16(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3742,7 +3742,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt16Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3790,7 +3790,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt32(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3829,7 +3829,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt32Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3877,7 +3877,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt64(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3916,7 +3916,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetInt64Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -3964,7 +3964,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetPoint(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4003,7 +4003,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetPointArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4051,7 +4051,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetRect(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4090,7 +4090,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetRectArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4138,7 +4138,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetSingle(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4177,7 +4177,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetSingleArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4225,7 +4225,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetSize(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4264,7 +4264,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetSizeArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4312,7 +4312,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetString(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4351,7 +4351,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetStringArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4399,7 +4399,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetTimeSpan(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4438,7 +4438,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetTimeSpanArray(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4486,7 +4486,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt16(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4525,7 +4525,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt16Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4573,7 +4573,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt32(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4612,7 +4612,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt32Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4660,7 +4660,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt64(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4699,7 +4699,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt64Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4747,7 +4747,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt8(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {
@@ -4786,7 +4786,7 @@ namespace py::impl::Windows::Foundation
         }
         PyObject* GetUInt8Array(PyObject* args) noexcept override
         {
-            auto arg_count = PyTuple_Size(args);
+            auto arg_count = PyTuple_GET_SIZE(args);
 
             if (arg_count == 0)
             {

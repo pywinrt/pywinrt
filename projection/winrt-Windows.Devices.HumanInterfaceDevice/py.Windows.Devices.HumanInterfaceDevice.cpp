@@ -747,7 +747,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_Close(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -788,7 +788,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_CreateFeatureReport(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -828,7 +828,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_CreateFeatureReportById(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -870,7 +870,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_CreateOutputReport(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_CreateOutputReportById(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -952,7 +952,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -995,7 +995,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_GetBooleanControlDescriptions(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1039,7 +1039,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1082,7 +1082,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_GetDeviceSelectorVidPid(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1127,7 +1127,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_GetFeatureReportAsync(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1167,7 +1167,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_GetFeatureReportByIdAsync(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1209,7 +1209,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_GetInputReportAsync(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1249,7 +1249,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_GetInputReportByIdAsync(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1291,7 +1291,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_GetNumericControlDescriptions(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1335,7 +1335,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_SendFeatureReportAsync(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1377,7 +1377,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidDevice_SendOutputReportAsync(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1766,7 +1766,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidFeatureReport_GetBooleanControl(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1809,7 +1809,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidFeatureReport_GetBooleanControlByDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1851,7 +1851,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidFeatureReport_GetNumericControl(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1894,7 +1894,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidFeatureReport_GetNumericControlByDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReport_GetBooleanControl(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2147,7 +2147,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReport_GetBooleanControlByDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2189,7 +2189,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReport_GetNumericControl(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2232,7 +2232,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidInputReport_GetNumericControlByDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3476,7 +3476,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidOutputReport_GetBooleanControl(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3519,7 +3519,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidOutputReport_GetBooleanControlByDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3561,7 +3561,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidOutputReport_GetNumericControl(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3604,7 +3604,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     static PyObject* HidOutputReport_GetNumericControlByDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

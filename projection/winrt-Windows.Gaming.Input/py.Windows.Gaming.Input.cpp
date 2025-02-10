@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* ArcadeStick_FromGameController(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* ArcadeStick_GetButtonLabel(py::wrapper::Windows::Gaming::Input::ArcadeStick* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* ArcadeStick_GetCurrentReading(py::wrapper::Windows::Gaming::Input::ArcadeStick* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* ArcadeStick_TryGetBatteryReport(py::wrapper::Windows::Gaming::Input::ArcadeStick* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -734,7 +734,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* FlightStick_FromGameController(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -776,7 +776,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* FlightStick_GetButtonLabel(py::wrapper::Windows::Gaming::Input::FlightStick* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -818,7 +818,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* FlightStick_GetCurrentReading(py::wrapper::Windows::Gaming::Input::FlightStick* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -858,7 +858,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* FlightStick_TryGetBatteryReport(py::wrapper::Windows::Gaming::Input::FlightStick* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1476,7 +1476,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* Gamepad_FromGameController(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1518,7 +1518,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* Gamepad_GetButtonLabel(py::wrapper::Windows::Gaming::Input::Gamepad* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1560,7 +1560,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* Gamepad_GetCurrentReading(py::wrapper::Windows::Gaming::Input::Gamepad* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1600,7 +1600,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* Gamepad_TryGetBatteryReport(py::wrapper::Windows::Gaming::Input::Gamepad* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2257,7 +2257,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* Headset_TryGetBatteryReport(py::wrapper::Windows::Gaming::Input::Headset* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2423,7 +2423,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RacingWheel_FromGameController(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2465,7 +2465,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RacingWheel_GetButtonLabel(py::wrapper::Windows::Gaming::Input::RacingWheel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2507,7 +2507,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RacingWheel_GetCurrentReading(py::wrapper::Windows::Gaming::Input::RacingWheel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2547,7 +2547,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RacingWheel_TryGetBatteryReport(py::wrapper::Windows::Gaming::Input::RacingWheel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3320,7 +3320,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RawGameController_FromGameController(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3362,7 +3362,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RawGameController_GetButtonLabel(py::wrapper::Windows::Gaming::Input::RawGameController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3404,7 +3404,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RawGameController_GetCurrentReading(py::wrapper::Windows::Gaming::Input::RawGameController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3448,7 +3448,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RawGameController_GetSwitchKind(py::wrapper::Windows::Gaming::Input::RawGameController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3490,7 +3490,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* RawGameController_TryGetBatteryReport(py::wrapper::Windows::Gaming::Input::RawGameController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4357,7 +4357,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* UINavigationController_FromGameController(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4399,7 +4399,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* UINavigationController_GetCurrentReading(py::wrapper::Windows::Gaming::Input::UINavigationController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4439,7 +4439,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* UINavigationController_GetOptionalButtonLabel(py::wrapper::Windows::Gaming::Input::UINavigationController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4481,7 +4481,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* UINavigationController_GetRequiredButtonLabel(py::wrapper::Windows::Gaming::Input::UINavigationController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4523,7 +4523,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* UINavigationController_TryGetBatteryReport(py::wrapper::Windows::Gaming::Input::UINavigationController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5774,7 +5774,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyObject* IGameControllerBatteryInfo_TryGetBatteryReport(py::wrapper::Windows::Gaming::Input::IGameControllerBatteryInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5974,7 +5974,7 @@ namespace py::cpp::Windows::Gaming::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::ArcadeStickReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -6212,7 +6212,7 @@ namespace py::cpp::Windows::Gaming::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::FlightStickReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -6606,7 +6606,7 @@ namespace py::cpp::Windows::Gaming::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -7027,7 +7027,7 @@ namespace py::cpp::Windows::Gaming::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::GamepadVibration>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -7328,7 +7328,7 @@ namespace py::cpp::Windows::Gaming::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::RacingWheelReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -7748,7 +7748,7 @@ namespace py::cpp::Windows::Gaming::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::UINavigationReading>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

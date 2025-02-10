@@ -14,7 +14,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyObject* RemoteTextConnection_Close(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -106,7 +106,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyObject* RemoteTextConnection_RegisterThread(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyObject* RemoteTextConnection_ReportDataReceived(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -192,7 +192,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyObject* RemoteTextConnection_ReportPredictedKeyEvent(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -236,7 +236,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyObject* RemoteTextConnection_UnregisterThread(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

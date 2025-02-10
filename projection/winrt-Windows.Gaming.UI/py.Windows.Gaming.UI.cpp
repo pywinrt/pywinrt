@@ -486,7 +486,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatOverlay_AddMessage(py::wrapper::Windows::Gaming::UI::GameChatOverlay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -531,7 +531,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatOverlay_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -718,7 +718,7 @@ namespace py::cpp::Windows::Gaming::UI
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -749,7 +749,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameChatOverlayMessageSource_SetDelayBeforeClosingAfterMessageReceived(py::wrapper::Windows::Gaming::UI::GameChatOverlayMessageSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -923,7 +923,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyObject* GameUIProviderActivatedEventArgs_ReportCompleted(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

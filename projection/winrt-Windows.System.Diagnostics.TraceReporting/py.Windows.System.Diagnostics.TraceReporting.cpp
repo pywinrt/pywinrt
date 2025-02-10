@@ -15,7 +15,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyObject* PlatformDiagnosticActions_DownloadLatestSettingsForNamespace(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -61,7 +61,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyObject* PlatformDiagnosticActions_ForceUpload(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyObject* PlatformDiagnosticActions_GetActiveScenarioList(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyObject* PlatformDiagnosticActions_GetActiveTraceRuntime(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyObject* PlatformDiagnosticActions_GetKnownTraceList(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyObject* PlatformDiagnosticActions_IsScenarioEnabled(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyObject* PlatformDiagnosticActions_IsTraceRunning(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -315,7 +315,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyObject* PlatformDiagnosticActions_TryEscalateScenario(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {

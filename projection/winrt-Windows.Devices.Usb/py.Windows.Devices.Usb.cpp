@@ -179,7 +179,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInPipe_ClearStallAsync(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -219,7 +219,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkInPipe_FlushBuffer(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbBulkOutPipe_ClearStallAsync(py::wrapper::Windows::Devices::Usb::UsbBulkOutPipe* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1036,7 +1036,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfigurationDescriptor_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1078,7 +1078,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbConfigurationDescriptor_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1335,7 +1335,7 @@ namespace py::cpp::Windows::Devices::Usb
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1709,7 +1709,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDescriptor_ReadDescriptorBuffer(py::wrapper::Windows::Devices::Usb::UsbDescriptor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1878,7 +1878,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_Close(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1919,7 +1919,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1961,7 +1961,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_GetDeviceClassSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2003,7 +2003,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2047,7 +2047,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_GetDeviceSelectorGuidOnly(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2089,7 +2089,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_GetDeviceSelectorVidPidOnly(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2132,7 +2132,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_SendControlInTransferAsync(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2175,7 +2175,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_SendControlInTransferAsyncNoBuffer(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2217,7 +2217,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_SendControlOutTransferAsync(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2260,7 +2260,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbDevice_SendControlOutTransferAsyncNoBuffer(py::wrapper::Windows::Devices::Usb::UsbDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2505,7 +2505,7 @@ namespace py::cpp::Windows::Devices::Usb
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3421,7 +3421,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3463,7 +3463,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbEndpointDescriptor_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4102,7 +4102,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceDescriptor_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4144,7 +4144,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceDescriptor_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4441,7 +4441,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterfaceSetting_SelectSettingAsync(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5043,7 +5043,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptInPipe_ClearStallAsync(py::wrapper::Windows::Devices::Usb::UsbInterruptInPipe* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5432,7 +5432,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyObject* UsbInterruptOutPipe_ClearStallAsync(py::wrapper::Windows::Devices::Usb::UsbInterruptOutPipe* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5659,7 +5659,7 @@ namespace py::cpp::Windows::Devices::Usb
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

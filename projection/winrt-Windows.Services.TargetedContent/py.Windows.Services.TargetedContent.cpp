@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentAction_InvokeAsync(py::wrapper::Windows::Services::TargetedContent::TargetedContentAction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -127,7 +127,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentAvailabilityChangedEventArgs_GetDeferral(py::wrapper::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentChangedEventArgs_GetDeferral(py::wrapper::Windows::Services::TargetedContent::TargetedContentChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentCollection_ReportCustomInteraction(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentCollection_ReportInteraction(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -672,7 +672,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentContainer_GetAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -714,7 +714,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentContainer_SelectSingleObject(py::wrapper::Windows::Services::TargetedContent::TargetedContentContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -966,7 +966,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentFile_OpenReadAsync(py::wrapper::Windows::Services::TargetedContent::TargetedContentFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentImage_OpenReadAsync(py::wrapper::Windows::Services::TargetedContent::TargetedContentImage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentItem_ReportCustomInteraction(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1279,7 +1279,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentItem_ReportInteraction(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1823,7 +1823,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentStateChangedEventArgs_GetDeferral(py::wrapper::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1927,7 +1927,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_GetAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1969,7 +1969,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_GetContentContainerAsync(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2009,7 +2009,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscription_GetOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2370,7 +2370,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyObject* TargetedContentSubscriptionOptions_Update(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Globalization::Fonts
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

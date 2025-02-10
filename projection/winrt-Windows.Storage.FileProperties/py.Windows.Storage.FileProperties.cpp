@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* BasicProperties_RetrievePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::BasicProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* BasicProperties_SavePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::BasicProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* BasicProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::BasicProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -306,7 +306,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* DocumentProperties_RetrievePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -348,7 +348,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* DocumentProperties_SavePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -390,7 +390,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* DocumentProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -690,7 +690,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* GeotagHelper_GetGeotagAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -732,7 +732,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* GeotagHelper_SetGeotagAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -775,7 +775,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* GeotagHelper_SetGeotagFromGeolocatorAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -878,7 +878,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_RetrievePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -920,7 +920,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_SavePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -962,7 +962,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* ImageProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1635,7 +1635,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_RetrievePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1677,7 +1677,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_SavePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1719,7 +1719,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* MusicProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2672,7 +2672,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemContentProperties_GetDocumentPropertiesAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2712,7 +2712,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemContentProperties_GetImagePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2752,7 +2752,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemContentProperties_GetMusicPropertiesAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2792,7 +2792,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemContentProperties_GetVideoPropertiesAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2832,7 +2832,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemContentProperties_RetrievePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2874,7 +2874,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemContentProperties_SavePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2916,7 +2916,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemContentProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3026,7 +3026,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_CloneStream(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3066,7 +3066,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_Close(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3107,7 +3107,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_FlushAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3147,7 +3147,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_GetInputStreamAt(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3189,7 +3189,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_GetOutputStreamAt(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3231,7 +3231,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_ReadAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3275,7 +3275,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_Seek(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3318,7 +3318,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* StorageItemThumbnail_WriteAsync(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3774,7 +3774,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_RetrievePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3816,7 +3816,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_SavePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3858,7 +3858,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* VideoProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4655,7 +4655,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* IStorageItemExtraProperties_RetrievePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::IStorageItemExtraProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4697,7 +4697,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* IStorageItemExtraProperties_SavePropertiesAsync(py::wrapper::Windows::Storage::FileProperties::IStorageItemExtraProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4739,7 +4739,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyObject* IStorageItemExtraProperties_SavePropertiesAsyncOverloadDefault(py::wrapper::Windows::Storage::FileProperties::IStorageItemExtraProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCamera_SetFarPlaneDistance(py::wrapper::Windows::Graphics::Holographic::HolographicCamera* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCamera_SetNearPlaneDistance(py::wrapper::Windows::Graphics::Holographic::HolographicCamera* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -725,7 +725,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraPose_OverrideProjectionTransform(py::wrapper::Windows::Graphics::Holographic::HolographicCameraPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -768,7 +768,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraPose_OverrideViewTransform(py::wrapper::Windows::Graphics::Holographic::HolographicCameraPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -812,7 +812,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraPose_OverrideViewport(py::wrapper::Windows::Graphics::Holographic::HolographicCameraPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -856,7 +856,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraPose_TryGetCullingFrustum(py::wrapper::Windows::Graphics::Holographic::HolographicCameraPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -898,7 +898,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraPose_TryGetViewTransform(py::wrapper::Windows::Graphics::Holographic::HolographicCameraPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -940,7 +940,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraPose_TryGetVisibleFrustum(py::wrapper::Windows::Graphics::Holographic::HolographicCameraPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1206,7 +1206,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1249,7 +1249,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraRenderingParameters_SetFocusPoint(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1293,7 +1293,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraRenderingParameters_SetFocusPointWithNormal(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1338,7 +1338,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicCameraRenderingParameters_SetFocusPointWithNormalLinearVelocity(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1848,7 +1848,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicDisplay_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1888,7 +1888,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicDisplay_TryGetViewConfiguration(py::wrapper::Windows::Graphics::Holographic::HolographicDisplay* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2233,7 +2233,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFrame_GetQuadLayerUpdateParameters(py::wrapper::Windows::Graphics::Holographic::HolographicFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2275,7 +2275,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFrame_GetRenderingParameters(py::wrapper::Windows::Graphics::Holographic::HolographicFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2317,7 +2317,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFrame_PresentUsingCurrentPrediction(py::wrapper::Windows::Graphics::Holographic::HolographicFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2357,7 +2357,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFrame_PresentUsingCurrentPredictionWithBehavior(py::wrapper::Windows::Graphics::Holographic::HolographicFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2399,7 +2399,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFrame_UpdateCurrentPrediction(py::wrapper::Windows::Graphics::Holographic::HolographicFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2440,7 +2440,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFrame_WaitForFrameToFinish(py::wrapper::Windows::Graphics::Holographic::HolographicFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2830,7 +2830,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFramePresentationMonitor_Close(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2871,7 +2871,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFramePresentationMonitor_ReadReports(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3437,7 +3437,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFrameScanoutMonitor_Close(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3478,7 +3478,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicFrameScanoutMonitor_ReadReports(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3817,7 +3817,7 @@ namespace py::cpp::Windows::Graphics::Holographic
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3866,7 +3866,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicQuadLayer_Close(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4058,7 +4058,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicQuadLayerUpdateParameters_AcquireBufferToUpdateContent(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4098,7 +4098,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicQuadLayerUpdateParameters_AcquireBufferToUpdateContentWithHardwareProtection(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4138,7 +4138,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicQuadLayerUpdateParameters_UpdateContentProtectionEnabled(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4181,7 +4181,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicQuadLayerUpdateParameters_UpdateExtents(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4224,7 +4224,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicQuadLayerUpdateParameters_UpdateLocationWithDisplayRelativeMode(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4268,7 +4268,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicQuadLayerUpdateParameters_UpdateLocationWithStationaryMode(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4313,7 +4313,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicQuadLayerUpdateParameters_UpdateViewport(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4457,7 +4457,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicSpace_CreateForCoreWindow(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4499,7 +4499,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicSpace_CreateFramePresentationMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicSpace* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4541,7 +4541,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicSpace_CreateFrameScanoutMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicSpace* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4583,7 +4583,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicSpace_CreateNextFrame(py::wrapper::Windows::Graphics::Holographic::HolographicSpace* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4623,7 +4623,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicSpace_SetDirect3D11Device(py::wrapper::Windows::Graphics::Holographic::HolographicSpace* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4666,7 +4666,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicSpace_WaitForNextFrameReady(py::wrapper::Windows::Graphics::Holographic::HolographicSpace* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4707,7 +4707,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicSpace_WaitForNextFrameReadyWithHeadStart(py::wrapper::Windows::Graphics::Holographic::HolographicSpace* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5264,7 +5264,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicSpaceCameraAddedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5493,7 +5493,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyObject* HolographicViewConfiguration_RequestRenderTargetSize(py::wrapper::Windows::Graphics::Holographic::HolographicViewConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5997,7 +5997,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicAdapterId>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -6229,7 +6229,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameId>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -6411,7 +6411,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

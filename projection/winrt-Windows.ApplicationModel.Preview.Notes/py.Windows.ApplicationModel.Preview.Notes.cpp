@@ -242,7 +242,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_GetForCurrentApp(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_GetNotePlacement(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -324,7 +324,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_HideNote(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -367,7 +367,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_SetFocusToNextView(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -408,7 +408,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_SetFocusToPreviousView(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -449,7 +449,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_SetNotesThumbnailAsync(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -491,7 +491,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_SetThumbnailImageForTaskSwitcherAsync(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -533,7 +533,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_ShowNote(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -576,7 +576,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_ShowNoteRelativeTo(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -620,7 +620,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_ShowNoteRelativeToWithOptions(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_ShowNoteWithPlacement(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -709,7 +709,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_ShowNoteWithPlacementWithOptions(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -754,7 +754,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     static PyObject* NotesWindowManagerPreview_TrySetNoteSize(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1117,7 +1117,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
