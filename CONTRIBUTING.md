@@ -104,7 +104,7 @@ To only build for a specific Python and target architecture:
 ## Profiling
 
 To measure performance, create a `RelWithDebInfo` build of the projection and
-and install it, e.g. in `_install_/perf`.
+and install it, e.g. in `_install/perf`.
 
 Download the `PerfView.exe` tool from <https://github.com/microsoft/perfview>
 then start it.
@@ -117,7 +117,7 @@ You may need the POSIX `env.exe` command, e.g. from MSYS2, to set the `PYTHONPAT
 environment variable. You may also need to give the full path to the Python
 executable and/or set the working directory.
 
-    C:\msys64\usr\bin\env.exe PYTHONPATH=_install_\perf python3.exe perf\string_iter.py
+    C:\msys64\usr\bin\env.exe PYTHONPATH=_install\perf python3.exe perf\string_iter.py
 
 Once the session is complete (either by ending the process or stopping the
 collection), expand the `.etl.zip` file in the PerfView UI and double-click on
