@@ -26136,8 +26136,43 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Matrix(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _M11{self->obj.M11};
+            double _M12{self->obj.M12};
+            double _M21{self->obj.M21};
+            double _M22{self->obj.M22};
+            double _OffsetX{self->obj.OffsetX};
+            double _OffsetY{self->obj.OffsetY};
+
+            static const char* kwlist[] = {"m11", "m12", "m21", "m22", "offset_x", "offset_y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dddddd", const_cast<char**>(kwlist), &_M11, &_M12, &_M21, &_M22, &_OffsetX, &_OffsetY))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.M11 = _M11;
+            copy.M12 = _M12;
+            copy.M21 = _M21;
+            copy.M22 = _M22;
+            copy.OffsetX = _OffsetX;
+            copy.OffsetY = _OffsetY;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Matrix[] = {
         { "_assign_array_", _assign_array_Matrix, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Matrix_get_M11(py::wrapper::Windows::UI::Xaml::Media::Matrix* self, void* /*unused*/) noexcept

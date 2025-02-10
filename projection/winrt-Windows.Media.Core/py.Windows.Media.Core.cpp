@@ -26739,8 +26739,35 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_MseTimeRange(py::wrapper::Windows::Media::Core::MseTimeRange* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Start{};
+            PyObject* _End{};
+
+            static const char* kwlist[] = {"start", "end", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_Start, &_End))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Start = _Start ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start) : self->obj.Start;
+            copy.End = _End ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End) : self->obj.End;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_MseTimeRange[] = {
         { "_assign_array_", _assign_array_MseTimeRange, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_MseTimeRange), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* MseTimeRange_get_Start(py::wrapper::Windows::Media::Core::MseTimeRange* self, void* /*unused*/) noexcept
@@ -26918,8 +26945,35 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_TimedTextDouble(py::wrapper::Windows::Media::Core::TimedTextDouble* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _Value{self->obj.Value};
+            int32_t _Unit{static_cast<int32_t>(self->obj.Unit)};
+
+            static const char* kwlist[] = {"value", "unit", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$di", const_cast<char**>(kwlist), &_Value, &_Unit))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Value = _Value;
+            copy.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_TimedTextDouble[] = {
         { "_assign_array_", _assign_array_TimedTextDouble, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextDouble), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* TimedTextDouble_get_Value(py::wrapper::Windows::Media::Core::TimedTextDouble* self, void* /*unused*/) noexcept
@@ -27106,8 +27160,41 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_TimedTextPadding(py::wrapper::Windows::Media::Core::TimedTextPadding* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _Before{self->obj.Before};
+            double _After{self->obj.After};
+            double _Start{self->obj.Start};
+            double _End{self->obj.End};
+            int32_t _Unit{static_cast<int32_t>(self->obj.Unit)};
+
+            static const char* kwlist[] = {"before", "after", "start", "end", "unit", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ddddi", const_cast<char**>(kwlist), &_Before, &_After, &_Start, &_End, &_Unit))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Before = _Before;
+            copy.After = _After;
+            copy.Start = _Start;
+            copy.End = _End;
+            copy.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_TimedTextPadding[] = {
         { "_assign_array_", _assign_array_TimedTextPadding, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextPadding), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* TimedTextPadding_get_Before(py::wrapper::Windows::Media::Core::TimedTextPadding* self, void* /*unused*/) noexcept
@@ -27348,8 +27435,37 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_TimedTextPoint(py::wrapper::Windows::Media::Core::TimedTextPoint* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _X{self->obj.X};
+            double _Y{self->obj.Y};
+            int32_t _Unit{static_cast<int32_t>(self->obj.Unit)};
+
+            static const char* kwlist[] = {"x", "y", "unit", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ddi", const_cast<char**>(kwlist), &_X, &_Y, &_Unit))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.X = _X;
+            copy.Y = _Y;
+            copy.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_TimedTextPoint[] = {
         { "_assign_array_", _assign_array_TimedTextPoint, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextPoint), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* TimedTextPoint_get_X(py::wrapper::Windows::Media::Core::TimedTextPoint* self, void* /*unused*/) noexcept
@@ -27550,8 +27666,37 @@ namespace py::cpp::Windows::Media::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_TimedTextSize(py::wrapper::Windows::Media::Core::TimedTextSize* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _Height{self->obj.Height};
+            double _Width{self->obj.Width};
+            int32_t _Unit{static_cast<int32_t>(self->obj.Unit)};
+
+            static const char* kwlist[] = {"height", "width", "unit", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ddi", const_cast<char**>(kwlist), &_Height, &_Width, &_Unit))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Height = _Height;
+            copy.Width = _Width;
+            copy.Unit = static_cast<winrt::Windows::Media::Core::TimedTextUnit>(_Unit);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_TimedTextSize[] = {
         { "_assign_array_", _assign_array_TimedTextSize, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextSize), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* TimedTextSize_get_Height(py::wrapper::Windows::Media::Core::TimedTextSize* self, void* /*unused*/) noexcept

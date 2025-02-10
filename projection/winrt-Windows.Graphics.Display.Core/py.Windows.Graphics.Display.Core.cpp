@@ -1004,8 +1004,55 @@ namespace py::cpp::Windows::Graphics::Display::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_HdmiDisplayHdr2086Metadata(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint16_t _RedPrimaryX{self->obj.RedPrimaryX};
+            uint16_t _RedPrimaryY{self->obj.RedPrimaryY};
+            uint16_t _GreenPrimaryX{self->obj.GreenPrimaryX};
+            uint16_t _GreenPrimaryY{self->obj.GreenPrimaryY};
+            uint16_t _BluePrimaryX{self->obj.BluePrimaryX};
+            uint16_t _BluePrimaryY{self->obj.BluePrimaryY};
+            uint16_t _WhitePointX{self->obj.WhitePointX};
+            uint16_t _WhitePointY{self->obj.WhitePointY};
+            uint16_t _MaxMasteringLuminance{self->obj.MaxMasteringLuminance};
+            uint16_t _MinMasteringLuminance{self->obj.MinMasteringLuminance};
+            uint16_t _MaxContentLightLevel{self->obj.MaxContentLightLevel};
+            uint16_t _MaxFrameAverageLightLevel{self->obj.MaxFrameAverageLightLevel};
+
+            static const char* kwlist[] = {"red_primary_x", "red_primary_y", "green_primary_x", "green_primary_y", "blue_primary_x", "blue_primary_y", "white_point_x", "white_point_y", "max_mastering_luminance", "min_mastering_luminance", "max_content_light_level", "max_frame_average_light_level", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$HHHHHHHHHHHH", const_cast<char**>(kwlist), &_RedPrimaryX, &_RedPrimaryY, &_GreenPrimaryX, &_GreenPrimaryY, &_BluePrimaryX, &_BluePrimaryY, &_WhitePointX, &_WhitePointY, &_MaxMasteringLuminance, &_MinMasteringLuminance, &_MaxContentLightLevel, &_MaxFrameAverageLightLevel))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.RedPrimaryX = _RedPrimaryX;
+            copy.RedPrimaryY = _RedPrimaryY;
+            copy.GreenPrimaryX = _GreenPrimaryX;
+            copy.GreenPrimaryY = _GreenPrimaryY;
+            copy.BluePrimaryX = _BluePrimaryX;
+            copy.BluePrimaryY = _BluePrimaryY;
+            copy.WhitePointX = _WhitePointX;
+            copy.WhitePointY = _WhitePointY;
+            copy.MaxMasteringLuminance = _MaxMasteringLuminance;
+            copy.MinMasteringLuminance = _MinMasteringLuminance;
+            copy.MaxContentLightLevel = _MaxContentLightLevel;
+            copy.MaxFrameAverageLightLevel = _MaxFrameAverageLightLevel;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_HdmiDisplayHdr2086Metadata[] = {
         { "_assign_array_", _assign_array_HdmiDisplayHdr2086Metadata, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HdmiDisplayHdr2086Metadata), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HdmiDisplayHdr2086Metadata_get_RedPrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept

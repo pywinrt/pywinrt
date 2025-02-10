@@ -4871,8 +4871,39 @@ namespace py::cpp::Windows::UI
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Color(py::wrapper::Windows::UI::Color* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint8_t _A{self->obj.A};
+            uint8_t _R{self->obj.R};
+            uint8_t _G{self->obj.G};
+            uint8_t _B{self->obj.B};
+
+            static const char* kwlist[] = {"a", "r", "g", "b", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$BBBB", const_cast<char**>(kwlist), &_A, &_R, &_G, &_B))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.A = _A;
+            copy.R = _R;
+            copy.G = _G;
+            copy.B = _B;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Color[] = {
         { "_assign_array_", _assign_array_Color, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Color), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Color_get_A(py::wrapper::Windows::UI::Color* self, void* /*unused*/) noexcept
@@ -5087,8 +5118,33 @@ namespace py::cpp::Windows::UI
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_WindowId(py::wrapper::Windows::UI::WindowId* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Value{self->obj.Value};
+
+            static const char* kwlist[] = {"value", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$K", const_cast<char**>(kwlist), &_Value))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Value = _Value;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_WindowId[] = {
         { "_assign_array_", _assign_array_WindowId, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_WindowId), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* WindowId_get_Value(py::wrapper::Windows::UI::WindowId* self, void* /*unused*/) noexcept

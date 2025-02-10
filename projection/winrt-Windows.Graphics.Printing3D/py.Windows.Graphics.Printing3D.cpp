@@ -7437,8 +7437,35 @@ namespace py::cpp::Windows::Graphics::Printing3D
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Printing3DBufferDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Format{static_cast<int32_t>(self->obj.Format)};
+            uint32_t _Stride{self->obj.Stride};
+
+            static const char* kwlist[] = {"format", "stride", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iI", const_cast<char**>(kwlist), &_Format, &_Stride))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Format = static_cast<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>(_Format);
+            copy.Stride = _Stride;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Printing3DBufferDescription[] = {
         { "_assign_array_", _assign_array_Printing3DBufferDescription, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Printing3DBufferDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Printing3DBufferDescription_get_Format(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, void* /*unused*/) noexcept

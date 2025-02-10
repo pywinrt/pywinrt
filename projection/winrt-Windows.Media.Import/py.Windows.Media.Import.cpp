@@ -5400,8 +5400,41 @@ namespace py::cpp::Windows::Media::Import
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PhotoImportProgress(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _ItemsImported{self->obj.ItemsImported};
+            uint32_t _TotalItemsToImport{self->obj.TotalItemsToImport};
+            uint64_t _BytesImported{self->obj.BytesImported};
+            uint64_t _TotalBytesToImport{self->obj.TotalBytesToImport};
+            double _ImportProgress{self->obj.ImportProgress};
+
+            static const char* kwlist[] = {"items_imported", "total_items_to_import", "bytes_imported", "total_bytes_to_import", "import_progress", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIKKd", const_cast<char**>(kwlist), &_ItemsImported, &_TotalItemsToImport, &_BytesImported, &_TotalBytesToImport, &_ImportProgress))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.ItemsImported = _ItemsImported;
+            copy.TotalItemsToImport = _TotalItemsToImport;
+            copy.BytesImported = _BytesImported;
+            copy.TotalBytesToImport = _TotalBytesToImport;
+            copy.ImportProgress = _ImportProgress;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PhotoImportProgress[] = {
         { "_assign_array_", _assign_array_PhotoImportProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PhotoImportProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PhotoImportProgress_get_ItemsImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, void* /*unused*/) noexcept

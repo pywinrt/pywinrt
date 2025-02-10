@@ -37498,8 +37498,35 @@ namespace py::cpp::Windows::Devices::PointOfService
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SizeUInt32(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _Width{self->obj.Width};
+            uint32_t _Height{self->obj.Height};
+
+            static const char* kwlist[] = {"width", "height", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$II", const_cast<char**>(kwlist), &_Width, &_Height))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Width = _Width;
+            copy.Height = _Height;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SizeUInt32[] = {
         { "_assign_array_", _assign_array_SizeUInt32, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SizeUInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SizeUInt32_get_Width(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, void* /*unused*/) noexcept

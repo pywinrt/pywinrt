@@ -625,8 +625,35 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Direct3DMultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Count{self->obj.Count};
+            int32_t _Quality{self->obj.Quality};
+
+            static const char* kwlist[] = {"count", "quality", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_Count, &_Quality))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Count = _Count;
+            copy.Quality = _Quality;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Direct3DMultisampleDescription[] = {
         { "_assign_array_", _assign_array_Direct3DMultisampleDescription, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Direct3DMultisampleDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Direct3DMultisampleDescription_get_Count(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, void* /*unused*/) noexcept
@@ -810,8 +837,39 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Direct3DSurfaceDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Width{self->obj.Width};
+            int32_t _Height{self->obj.Height};
+            int32_t _Format{static_cast<int32_t>(self->obj.Format)};
+            PyObject* _MultisampleDescription{};
+
+            static const char* kwlist[] = {"width", "height", "format", "multisample_description", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iiiO", const_cast<char**>(kwlist), &_Width, &_Height, &_Format, &_MultisampleDescription))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Width = _Width;
+            copy.Height = _Height;
+            copy.Format = static_cast<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(_Format);
+            copy.MultisampleDescription = _MultisampleDescription ? py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(_MultisampleDescription) : self->obj.MultisampleDescription;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Direct3DSurfaceDescription[] = {
         { "_assign_array_", _assign_array_Direct3DSurfaceDescription, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Direct3DSurfaceDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Direct3DSurfaceDescription_get_Width(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, void* /*unused*/) noexcept

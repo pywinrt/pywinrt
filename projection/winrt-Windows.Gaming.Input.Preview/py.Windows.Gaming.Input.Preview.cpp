@@ -1181,8 +1181,41 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_HeadsetGeqGains(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _band1Gain{self->obj.band1Gain};
+            int32_t _band2Gain{self->obj.band2Gain};
+            int32_t _band3Gain{self->obj.band3Gain};
+            int32_t _band4Gain{self->obj.band4Gain};
+            int32_t _band5Gain{self->obj.band5Gain};
+
+            static const char* kwlist[] = {"band1_gain", "band2_gain", "band3_gain", "band4_gain", "band5_gain", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iiiii", const_cast<char**>(kwlist), &_band1Gain, &_band2Gain, &_band3Gain, &_band4Gain, &_band5Gain))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.band1Gain = _band1Gain;
+            copy.band2Gain = _band2Gain;
+            copy.band3Gain = _band3Gain;
+            copy.band4Gain = _band4Gain;
+            copy.band5Gain = _band5Gain;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_HeadsetGeqGains[] = {
         { "_assign_array_", _assign_array_HeadsetGeqGains, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HeadsetGeqGains), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HeadsetGeqGains_get_band1Gain(py::wrapper::Windows::Gaming::Input::Preview::HeadsetGeqGains* self, void* /*unused*/) noexcept

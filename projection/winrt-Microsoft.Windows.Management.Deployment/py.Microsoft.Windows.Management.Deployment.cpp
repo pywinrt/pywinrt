@@ -7944,8 +7944,35 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PackageDeploymentProgress(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Status{static_cast<int32_t>(self->obj.Status)};
+            double _Progress{self->obj.Progress};
+
+            static const char* kwlist[] = {"status", "progress", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$id", const_cast<char**>(kwlist), &_Status, &_Progress))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Status = static_cast<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>(_Status);
+            copy.Progress = _Progress;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PackageDeploymentProgress[] = {
         { "_assign_array_", _assign_array_PackageDeploymentProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageDeploymentProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PackageDeploymentProgress_get_Status(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress* self, void* /*unused*/) noexcept

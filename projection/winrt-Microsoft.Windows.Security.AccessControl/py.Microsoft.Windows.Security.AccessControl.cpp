@@ -219,8 +219,35 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_AppContainerNameAndAccess(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _appContainerName{};
+            uint32_t _accessMask{self->obj.accessMask};
+
+            static const char* kwlist[] = {"app_container_name", "access_mask", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OI", const_cast<char**>(kwlist), &_appContainerName, &_accessMask))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.appContainerName = _appContainerName ? py::convert_to<winrt::hstring>(_appContainerName) : self->obj.appContainerName;
+            copy.accessMask = _accessMask;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_AppContainerNameAndAccess[] = {
         { "_assign_array_", _assign_array_AppContainerNameAndAccess, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_AppContainerNameAndAccess), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* AppContainerNameAndAccess_get_appContainerName(py::wrapper::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess* self, void* /*unused*/) noexcept

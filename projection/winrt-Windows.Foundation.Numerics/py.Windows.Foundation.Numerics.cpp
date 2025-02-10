@@ -451,6 +451,40 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Matrix3x2(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _M11{self->obj.m11};
+            float _M12{self->obj.m12};
+            float _M21{self->obj.m21};
+            float _M22{self->obj.m22};
+            float _M31{self->obj.m31};
+            float _M32{self->obj.m32};
+
+            static const char* kwlist[] = {"m11", "m12", "m21", "m22", "m31", "m32", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ffffff", const_cast<char**>(kwlist), &_M11, &_M12, &_M21, &_M22, &_M31, &_M32))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.m11 = _M11;
+            copy.m12 = _M12;
+            copy.m21 = _M21;
+            copy.m22 = _M22;
+            copy.m31 = _M31;
+            copy.m32 = _M32;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Matrix3x2[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix3x2), METH_NOARGS, nullptr },
         { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix3x2), METH_NOARGS, nullptr },
@@ -458,6 +492,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "invert", reinterpret_cast<PyCFunction>(invert_Matrix3x2), METH_NOARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix3x2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix3x2), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Matrix3x2_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, void* /*unused*/) noexcept
@@ -1801,6 +1836,60 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Matrix4x4(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _M11{self->obj.m11};
+            float _M12{self->obj.m12};
+            float _M13{self->obj.m13};
+            float _M14{self->obj.m14};
+            float _M21{self->obj.m21};
+            float _M22{self->obj.m22};
+            float _M23{self->obj.m23};
+            float _M24{self->obj.m24};
+            float _M31{self->obj.m31};
+            float _M32{self->obj.m32};
+            float _M33{self->obj.m33};
+            float _M34{self->obj.m34};
+            float _M41{self->obj.m41};
+            float _M42{self->obj.m42};
+            float _M43{self->obj.m43};
+            float _M44{self->obj.m44};
+
+            static const char* kwlist[] = {"m11", "m12", "m13", "m14", "m21", "m22", "m23", "m24", "m31", "m32", "m33", "m34", "m41", "m42", "m43", "m44", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ffffffffffffffff", const_cast<char**>(kwlist), &_M11, &_M12, &_M13, &_M14, &_M21, &_M22, &_M23, &_M24, &_M31, &_M32, &_M33, &_M34, &_M41, &_M42, &_M43, &_M44))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.m11 = _M11;
+            copy.m12 = _M12;
+            copy.m13 = _M13;
+            copy.m14 = _M14;
+            copy.m21 = _M21;
+            copy.m22 = _M22;
+            copy.m23 = _M23;
+            copy.m24 = _M24;
+            copy.m31 = _M31;
+            copy.m32 = _M32;
+            copy.m33 = _M33;
+            copy.m34 = _M34;
+            copy.m41 = _M41;
+            copy.m42 = _M42;
+            copy.m43 = _M43;
+            copy.m44 = _M44;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Matrix4x4[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix4x4), METH_NOARGS, nullptr },
         { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix4x4), METH_NOARGS, nullptr },
@@ -1811,6 +1900,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transpose", reinterpret_cast<PyCFunction>(transpose_Matrix4x4), METH_NOARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix4x4), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Matrix4x4_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
@@ -2571,6 +2661,32 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Plane(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Normal{};
+            float _D{self->obj.d};
+
+            static const char* kwlist[] = {"normal", "d", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Of", const_cast<char**>(kwlist), &_Normal, &_D))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.normal = _Normal ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal) : self->obj.normal;
+            copy.d = _D;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Plane[] = {
         { "normalize", reinterpret_cast<PyCFunction>(normalize_Plane), METH_NOARGS, nullptr },
         { "transform", reinterpret_cast<PyCFunction>(transform_Plane), METH_O, nullptr },
@@ -2578,6 +2694,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "dot_coordinate", reinterpret_cast<PyCFunction>(dot_coordinate_Plane), METH_O, nullptr },
         { "dot_normal", reinterpret_cast<PyCFunction>(dot_normal_Plane), METH_O, nullptr },
         { "_assign_array_", _assign_array_Plane, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Plane), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Plane_get_Normal(py::wrapper::Windows::Foundation::Numerics::Plane* self, void* /*unused*/) noexcept
@@ -3006,6 +3123,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Quaternion(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _X{self->obj.x};
+            float _Y{self->obj.y};
+            float _Z{self->obj.z};
+            float _W{self->obj.w};
+
+            static const char* kwlist[] = {"x", "y", "z", "w", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Z, &_W))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.x = _X;
+            copy.y = _Y;
+            copy.z = _Z;
+            copy.w = _W;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Quaternion[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Quaternion), METH_NOARGS, nullptr },
         { "length", reinterpret_cast<PyCFunction>(length_Quaternion), METH_NOARGS, nullptr },
@@ -3018,6 +3165,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Quaternion), METH_VARARGS, nullptr },
         { "concatenate", reinterpret_cast<PyCFunction>(concatenate_Quaternion), METH_O, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Quaternion), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Quaternion_get_X(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, void* /*unused*/) noexcept
@@ -3424,8 +3572,35 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Rational(py::wrapper::Windows::Foundation::Numerics::Rational* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _Numerator{self->obj.Numerator};
+            uint32_t _Denominator{self->obj.Denominator};
+
+            static const char* kwlist[] = {"numerator", "denominator", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$II", const_cast<char**>(kwlist), &_Numerator, &_Denominator))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Numerator = _Numerator;
+            copy.Denominator = _Denominator;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Rational[] = {
         { "_assign_array_", _assign_array_Rational, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Rational), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Rational_get_Numerator(py::wrapper::Windows::Foundation::Numerics::Rational* self, void* /*unused*/) noexcept
@@ -3900,6 +4075,32 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Vector2(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _X{self->obj.x};
+            float _Y{self->obj.y};
+
+            static const char* kwlist[] = {"x", "y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ff", const_cast<char**>(kwlist), &_X, &_Y))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.x = _X;
+            copy.y = _Y;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Vector2[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector2), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector2), METH_NOARGS, nullptr },
@@ -3916,6 +4117,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector2), METH_O, nullptr },
         { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector2), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector2), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Vector2_get_X(py::wrapper::Windows::Foundation::Numerics::Vector2* self, void* /*unused*/) noexcept
@@ -4612,6 +4814,34 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Vector3(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _X{self->obj.x};
+            float _Y{self->obj.y};
+            float _Z{self->obj.z};
+
+            static const char* kwlist[] = {"x", "y", "z", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$fff", const_cast<char**>(kwlist), &_X, &_Y, &_Z))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.x = _X;
+            copy.y = _Y;
+            copy.z = _Z;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Vector3[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector3), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector3), METH_NOARGS, nullptr },
@@ -4629,6 +4859,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector3), METH_O, nullptr },
         { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector3), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector3), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Vector3_get_X(py::wrapper::Windows::Foundation::Numerics::Vector3* self, void* /*unused*/) noexcept
@@ -5267,6 +5498,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Vector4(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _X{self->obj.x};
+            float _Y{self->obj.y};
+            float _Z{self->obj.z};
+            float _W{self->obj.w};
+
+            static const char* kwlist[] = {"x", "y", "z", "w", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Z, &_W))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.x = _X;
+            copy.y = _Y;
+            copy.z = _Z;
+            copy.w = _W;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Vector4[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector4), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector4), METH_NOARGS, nullptr },
@@ -5280,6 +5541,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector4), METH_VARARGS, nullptr },
         { "transform", reinterpret_cast<PyCFunction>(transform_Vector4), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector4), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Vector4_get_X(py::wrapper::Windows::Foundation::Numerics::Vector4* self, void* /*unused*/) noexcept

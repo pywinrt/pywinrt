@@ -6264,8 +6264,35 @@ namespace py::cpp::Windows::Devices::Scanners
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_ImageScannerResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _DpiX{self->obj.DpiX};
+            float _DpiY{self->obj.DpiY};
+
+            static const char* kwlist[] = {"dpi_x", "dpi_y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ff", const_cast<char**>(kwlist), &_DpiX, &_DpiY))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.DpiX = _DpiX;
+            copy.DpiY = _DpiY;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_ImageScannerResolution[] = {
         { "_assign_array_", _assign_array_ImageScannerResolution, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ImageScannerResolution), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* ImageScannerResolution_get_DpiX(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, void* /*unused*/) noexcept

@@ -4990,8 +4990,35 @@ namespace py::cpp::Windows::Perception::Spatial
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SpatialBoundingBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Center{};
+            PyObject* _Extents{};
+
+            static const char* kwlist[] = {"center", "extents", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_Center, &_Extents))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Center = _Center ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center) : self->obj.Center;
+            copy.Extents = _Extents ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Extents) : self->obj.Extents;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SpatialBoundingBox[] = {
         { "_assign_array_", _assign_array_SpatialBoundingBox, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingBox), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SpatialBoundingBox_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, void* /*unused*/) noexcept
@@ -5181,8 +5208,43 @@ namespace py::cpp::Windows::Perception::Spatial
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SpatialBoundingFrustum(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Near{};
+            PyObject* _Far{};
+            PyObject* _Right{};
+            PyObject* _Left{};
+            PyObject* _Top{};
+            PyObject* _Bottom{};
+
+            static const char* kwlist[] = {"near", "far", "right", "left", "top", "bottom", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OOOOOO", const_cast<char**>(kwlist), &_Near, &_Far, &_Right, &_Left, &_Top, &_Bottom))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Near = _Near ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Near) : self->obj.Near;
+            copy.Far = _Far ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Far) : self->obj.Far;
+            copy.Right = _Right ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Right) : self->obj.Right;
+            copy.Left = _Left ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Left) : self->obj.Left;
+            copy.Top = _Top ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Top) : self->obj.Top;
+            copy.Bottom = _Bottom ? py::convert_to<winrt::Windows::Foundation::Numerics::plane>(_Bottom) : self->obj.Bottom;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SpatialBoundingFrustum[] = {
         { "_assign_array_", _assign_array_SpatialBoundingFrustum, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingFrustum), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SpatialBoundingFrustum_get_Near(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, void* /*unused*/) noexcept
@@ -5443,8 +5505,37 @@ namespace py::cpp::Windows::Perception::Spatial
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SpatialBoundingOrientedBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Center{};
+            PyObject* _Extents{};
+            PyObject* _Orientation{};
+
+            static const char* kwlist[] = {"center", "extents", "orientation", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OOO", const_cast<char**>(kwlist), &_Center, &_Extents, &_Orientation))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Center = _Center ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center) : self->obj.Center;
+            copy.Extents = _Extents ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Extents) : self->obj.Extents;
+            copy.Orientation = _Orientation ? py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(_Orientation) : self->obj.Orientation;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SpatialBoundingOrientedBox[] = {
         { "_assign_array_", _assign_array_SpatialBoundingOrientedBox, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingOrientedBox), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SpatialBoundingOrientedBox_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, void* /*unused*/) noexcept
@@ -5642,8 +5733,35 @@ namespace py::cpp::Windows::Perception::Spatial
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SpatialBoundingSphere(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Center{};
+            float _Radius{self->obj.Radius};
+
+            static const char* kwlist[] = {"center", "radius", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Of", const_cast<char**>(kwlist), &_Center, &_Radius))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Center = _Center ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Center) : self->obj.Center;
+            copy.Radius = _Radius;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SpatialBoundingSphere[] = {
         { "_assign_array_", _assign_array_SpatialBoundingSphere, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingSphere), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SpatialBoundingSphere_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, void* /*unused*/) noexcept
@@ -5821,8 +5939,35 @@ namespace py::cpp::Windows::Perception::Spatial
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SpatialRay(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Origin{};
+            PyObject* _Direction{};
+
+            static const char* kwlist[] = {"origin", "direction", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_Origin, &_Direction))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Origin = _Origin ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Origin) : self->obj.Origin;
+            copy.Direction = _Direction ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Direction) : self->obj.Direction;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SpatialRay[] = {
         { "_assign_array_", _assign_array_SpatialRay, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialRay), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SpatialRay_get_Origin(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, void* /*unused*/) noexcept

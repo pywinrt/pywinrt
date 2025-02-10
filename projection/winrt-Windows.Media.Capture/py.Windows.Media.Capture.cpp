@@ -26923,8 +26923,37 @@ namespace py::cpp::Windows::Media::Capture
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_WhiteBalanceGain(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _R{self->obj.R};
+            double _G{self->obj.G};
+            double _B{self->obj.B};
+
+            static const char* kwlist[] = {"r", "g", "b", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ddd", const_cast<char**>(kwlist), &_R, &_G, &_B))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.R = _R;
+            copy.G = _G;
+            copy.B = _B;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_WhiteBalanceGain[] = {
         { "_assign_array_", _assign_array_WhiteBalanceGain, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_WhiteBalanceGain), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* WhiteBalanceGain_get_R(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, void* /*unused*/) noexcept

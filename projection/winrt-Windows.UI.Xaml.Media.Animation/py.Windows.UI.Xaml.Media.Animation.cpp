@@ -27560,8 +27560,33 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _TimeSpan{};
+
+            static const char* kwlist[] = {"time_span", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$O", const_cast<char**>(kwlist), &_TimeSpan))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.TimeSpan = _TimeSpan ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan) : self->obj.TimeSpan;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_KeyTime[] = {
         { "_assign_array_", _assign_array_KeyTime, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_KeyTime), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* KeyTime_get_TimeSpan(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime* self, void* /*unused*/) noexcept
@@ -27722,8 +27747,37 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_RepeatBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _Count{self->obj.Count};
+            PyObject* _Duration{};
+            int32_t _Type{static_cast<int32_t>(self->obj.Type)};
+
+            static const char* kwlist[] = {"count", "duration", "type", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dOi", const_cast<char**>(kwlist), &_Count, &_Duration, &_Type))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Count = _Count;
+            copy.Duration = _Duration ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Duration) : self->obj.Duration;
+            copy.Type = static_cast<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>(_Type);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_RepeatBehavior[] = {
         { "_assign_array_", _assign_array_RepeatBehavior, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RepeatBehavior), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* RepeatBehavior_get_Count(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, void* /*unused*/) noexcept

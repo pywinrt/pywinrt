@@ -3096,8 +3096,35 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_InjectedInputPoint(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _PositionX{self->obj.PositionX};
+            int32_t _PositionY{self->obj.PositionY};
+
+            static const char* kwlist[] = {"position_x", "position_y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_PositionX, &_PositionY))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.PositionX = _PositionX;
+            copy.PositionY = _PositionY;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_InjectedInputPoint[] = {
         { "_assign_array_", _assign_array_InjectedInputPoint, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputPoint), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* InjectedInputPoint_get_PositionX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, void* /*unused*/) noexcept
@@ -3284,8 +3311,41 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_InjectedInputPointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _PointerId{self->obj.PointerId};
+            uint32_t _PointerOptions{static_cast<uint32_t>(self->obj.PointerOptions)};
+            PyObject* _PixelLocation{};
+            uint32_t _TimeOffsetInMilliseconds{self->obj.TimeOffsetInMilliseconds};
+            uint64_t _PerformanceCount{self->obj.PerformanceCount};
+
+            static const char* kwlist[] = {"pointer_id", "pointer_options", "pixel_location", "time_offset_in_milliseconds", "performance_count", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIOIK", const_cast<char**>(kwlist), &_PointerId, &_PointerOptions, &_PixelLocation, &_TimeOffsetInMilliseconds, &_PerformanceCount))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.PointerId = _PointerId;
+            copy.PointerOptions = static_cast<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>(_PointerOptions);
+            copy.PixelLocation = _PixelLocation ? py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>(_PixelLocation) : self->obj.PixelLocation;
+            copy.TimeOffsetInMilliseconds = _TimeOffsetInMilliseconds;
+            copy.PerformanceCount = _PerformanceCount;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_InjectedInputPointerInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputPointerInfo, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputPointerInfo), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* InjectedInputPointerInfo_get_PointerId(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, void* /*unused*/) noexcept
@@ -3529,8 +3589,39 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_InjectedInputRectangle(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Left{self->obj.Left};
+            int32_t _Top{self->obj.Top};
+            int32_t _Bottom{self->obj.Bottom};
+            int32_t _Right{self->obj.Right};
+
+            static const char* kwlist[] = {"left", "top", "bottom", "right", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iiii", const_cast<char**>(kwlist), &_Left, &_Top, &_Bottom, &_Right))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Left = _Left;
+            copy.Top = _Top;
+            copy.Bottom = _Bottom;
+            copy.Right = _Right;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_InjectedInputRectangle[] = {
         { "_assign_array_", _assign_array_InjectedInputRectangle, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputRectangle), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* InjectedInputRectangle_get_Left(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, void* /*unused*/) noexcept

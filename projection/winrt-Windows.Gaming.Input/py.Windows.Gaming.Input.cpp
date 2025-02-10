@@ -6021,8 +6021,35 @@ namespace py::cpp::Windows::Gaming::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_ArcadeStickReading(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Timestamp{self->obj.Timestamp};
+            uint32_t _Buttons{static_cast<uint32_t>(self->obj.Buttons)};
+
+            static const char* kwlist[] = {"timestamp", "buttons", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KI", const_cast<char**>(kwlist), &_Timestamp, &_Buttons))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Timestamp = _Timestamp;
+            copy.Buttons = static_cast<winrt::Windows::Gaming::Input::ArcadeStickButtons>(_Buttons);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_ArcadeStickReading[] = {
         { "_assign_array_", _assign_array_ArcadeStickReading, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ArcadeStickReading), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* ArcadeStickReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self, void* /*unused*/) noexcept
@@ -6215,8 +6242,45 @@ namespace py::cpp::Windows::Gaming::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_FlightStickReading(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Timestamp{self->obj.Timestamp};
+            uint32_t _Buttons{static_cast<uint32_t>(self->obj.Buttons)};
+            int32_t _HatSwitch{static_cast<int32_t>(self->obj.HatSwitch)};
+            double _Roll{self->obj.Roll};
+            double _Pitch{self->obj.Pitch};
+            double _Yaw{self->obj.Yaw};
+            double _Throttle{self->obj.Throttle};
+
+            static const char* kwlist[] = {"timestamp", "buttons", "hat_switch", "roll", "pitch", "yaw", "throttle", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KIidddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_HatSwitch, &_Roll, &_Pitch, &_Yaw, &_Throttle))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Timestamp = _Timestamp;
+            copy.Buttons = static_cast<winrt::Windows::Gaming::Input::FlightStickButtons>(_Buttons);
+            copy.HatSwitch = static_cast<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>(_HatSwitch);
+            copy.Roll = _Roll;
+            copy.Pitch = _Pitch;
+            copy.Yaw = _Yaw;
+            copy.Throttle = _Throttle;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_FlightStickReading[] = {
         { "_assign_array_", _assign_array_FlightStickReading, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_FlightStickReading), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* FlightStickReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::FlightStickReading* self, void* /*unused*/) noexcept
@@ -6512,8 +6576,47 @@ namespace py::cpp::Windows::Gaming::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_GamepadReading(py::wrapper::Windows::Gaming::Input::GamepadReading* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Timestamp{self->obj.Timestamp};
+            uint32_t _Buttons{static_cast<uint32_t>(self->obj.Buttons)};
+            double _LeftTrigger{self->obj.LeftTrigger};
+            double _RightTrigger{self->obj.RightTrigger};
+            double _LeftThumbstickX{self->obj.LeftThumbstickX};
+            double _LeftThumbstickY{self->obj.LeftThumbstickY};
+            double _RightThumbstickX{self->obj.RightThumbstickX};
+            double _RightThumbstickY{self->obj.RightThumbstickY};
+
+            static const char* kwlist[] = {"timestamp", "buttons", "left_trigger", "right_trigger", "left_thumbstick_x", "left_thumbstick_y", "right_thumbstick_x", "right_thumbstick_y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KIdddddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_LeftTrigger, &_RightTrigger, &_LeftThumbstickX, &_LeftThumbstickY, &_RightThumbstickX, &_RightThumbstickY))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Timestamp = _Timestamp;
+            copy.Buttons = static_cast<winrt::Windows::Gaming::Input::GamepadButtons>(_Buttons);
+            copy.LeftTrigger = _LeftTrigger;
+            copy.RightTrigger = _RightTrigger;
+            copy.LeftThumbstickX = _LeftThumbstickX;
+            copy.LeftThumbstickY = _LeftThumbstickY;
+            copy.RightThumbstickX = _RightThumbstickX;
+            copy.RightThumbstickY = _RightThumbstickY;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GamepadReading[] = {
         { "_assign_array_", _assign_array_GamepadReading, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GamepadReading), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* GamepadReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::GamepadReading* self, void* /*unused*/) noexcept
@@ -6817,8 +6920,39 @@ namespace py::cpp::Windows::Gaming::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_GamepadVibration(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _LeftMotor{self->obj.LeftMotor};
+            double _RightMotor{self->obj.RightMotor};
+            double _LeftTrigger{self->obj.LeftTrigger};
+            double _RightTrigger{self->obj.RightTrigger};
+
+            static const char* kwlist[] = {"left_motor", "right_motor", "left_trigger", "right_trigger", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dddd", const_cast<char**>(kwlist), &_LeftMotor, &_RightMotor, &_LeftTrigger, &_RightTrigger))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.LeftMotor = _LeftMotor;
+            copy.RightMotor = _RightMotor;
+            copy.LeftTrigger = _LeftTrigger;
+            copy.RightTrigger = _RightTrigger;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GamepadVibration[] = {
         { "_assign_array_", _assign_array_GamepadVibration, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GamepadVibration), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* GamepadVibration_get_LeftMotor(py::wrapper::Windows::Gaming::Input::GamepadVibration* self, void* /*unused*/) noexcept
@@ -7054,8 +7188,47 @@ namespace py::cpp::Windows::Gaming::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_RacingWheelReading(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Timestamp{self->obj.Timestamp};
+            uint32_t _Buttons{static_cast<uint32_t>(self->obj.Buttons)};
+            int32_t _PatternShifterGear{self->obj.PatternShifterGear};
+            double _Wheel{self->obj.Wheel};
+            double _Throttle{self->obj.Throttle};
+            double _Brake{self->obj.Brake};
+            double _Clutch{self->obj.Clutch};
+            double _Handbrake{self->obj.Handbrake};
+
+            static const char* kwlist[] = {"timestamp", "buttons", "pattern_shifter_gear", "wheel", "throttle", "brake", "clutch", "handbrake", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KIiddddd", const_cast<char**>(kwlist), &_Timestamp, &_Buttons, &_PatternShifterGear, &_Wheel, &_Throttle, &_Brake, &_Clutch, &_Handbrake))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Timestamp = _Timestamp;
+            copy.Buttons = static_cast<winrt::Windows::Gaming::Input::RacingWheelButtons>(_Buttons);
+            copy.PatternShifterGear = _PatternShifterGear;
+            copy.Wheel = _Wheel;
+            copy.Throttle = _Throttle;
+            copy.Brake = _Brake;
+            copy.Clutch = _Clutch;
+            copy.Handbrake = _Handbrake;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_RacingWheelReading[] = {
         { "_assign_array_", _assign_array_RacingWheelReading, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RacingWheelReading), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* RacingWheelReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self, void* /*unused*/) noexcept
@@ -7356,8 +7529,37 @@ namespace py::cpp::Windows::Gaming::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_UINavigationReading(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Timestamp{self->obj.Timestamp};
+            uint32_t _RequiredButtons{static_cast<uint32_t>(self->obj.RequiredButtons)};
+            uint32_t _OptionalButtons{static_cast<uint32_t>(self->obj.OptionalButtons)};
+
+            static const char* kwlist[] = {"timestamp", "required_buttons", "optional_buttons", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KII", const_cast<char**>(kwlist), &_Timestamp, &_RequiredButtons, &_OptionalButtons))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Timestamp = _Timestamp;
+            copy.RequiredButtons = static_cast<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(_RequiredButtons);
+            copy.OptionalButtons = static_cast<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(_OptionalButtons);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_UINavigationReading[] = {
         { "_assign_array_", _assign_array_UINavigationReading, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_UINavigationReading), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* UINavigationReading_get_Timestamp(py::wrapper::Windows::Gaming::Input::UINavigationReading* self, void* /*unused*/) noexcept

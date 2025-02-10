@@ -52,6 +52,8 @@ static class StructWriterExtensions
             $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType))} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> {type.Name}: ..."
         );
 
+        w.WriteLine($"def __replace__(self, /, **changes: typing.Any) -> {type.Name}: ...");
+
         if (type.Type.IsCustomNumeric())
         {
             if (type.Name != "Plane")
@@ -87,6 +89,8 @@ static class StructWriterExtensions
 
         w.WriteBlankLine();
         w.WriteAssignArrayMethod(type);
+        w.WriteBlankLine();
+        w.WriteStructReplaceMethod(type);
         w.WriteMethodTable(type);
 
         foreach (var field in type.Type.Fields)
@@ -178,7 +182,7 @@ static class StructWriterExtensions
                 $"static const char* kwlist[] = {{{type.Type.ToStructFieldKeywordList()}nullptr}};"
             );
             w.WriteLine(
-                $"if (!PyArg_ParseTupleAndKeywords(args, kwds, \"{type.Type.ToStructFieldFormat()}\", const_cast<char**>(kwlist){type.Type.ToStructFieldParseParameterList()}))"
+                $"if (!PyArg_ParseTupleAndKeywords(args, kwds, \"|{type.Type.ToStructFieldFormat()}\", const_cast<char**>(kwlist){type.Type.ToStructFieldParseParameterList()}))"
             );
             w.WriteBlock(() => w.WriteLine("return nullptr;"));
             w.WriteBlankLine();
@@ -271,6 +275,46 @@ static class StructWriterExtensions
                 $"return PyUnicode_FromFormat(\"{type.Name}({string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}=%R"))})\"{string.Join("", type.Type.Fields.Select(f => $", {f.Name}.get()"))});"
             );
         });
+    }
+
+    private static void WriteStructReplaceMethod(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine(
+            $"PyObject* _replace_{type.Name}({type.CppPyWrapperType}* self, PyObject* args, PyObject* kwds) noexcept"
+        );
+        w.WriteBlock(
+            () =>
+                w.WriteTryCatch(() =>
+                {
+                    foreach (var field in type.Type.Fields)
+                    {
+                        w.WriteLine(
+                            $"{field.FieldType.ToStructFieldType()} _{field.Name}{{{field.ToStructFieldPreInitializer()}}};"
+                        );
+                    }
+
+                    w.WriteBlankLine();
+                    w.WriteLine(
+                        $"static const char* kwlist[] = {{{type.Type.ToStructFieldKeywordList()}nullptr}};"
+                    );
+                    w.WriteLine(
+                        $"if (!PyArg_ParseTupleAndKeywords(args, kwds, \"|${type.Type.ToStructFieldFormat()}\", const_cast<char**>(kwlist){type.Type.ToStructFieldParseParameterList()}))"
+                    );
+                    w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                    w.WriteBlankLine();
+
+                    w.WriteLine($"auto copy = self->obj;");
+
+                    foreach (var field in type.Type.Fields)
+                    {
+                        w.WriteLine(
+                            $"copy.{field.ToWinrtFieldName()} = {field.ToStructFieldInitializer(replace: true)};"
+                        );
+                    }
+                    w.WriteBlankLine();
+                    w.WriteLine($"return convert(copy);");
+                })
+        );
     }
 
     public static void WriteStructBufferFormat(this IndentedTextWriter w, ProjectedType type)

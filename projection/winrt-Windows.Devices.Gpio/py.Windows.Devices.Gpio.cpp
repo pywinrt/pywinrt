@@ -2215,8 +2215,35 @@ namespace py::cpp::Windows::Devices::Gpio
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_GpioChangeCount(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Count{self->obj.Count};
+            PyObject* _RelativeTime{};
+
+            static const char* kwlist[] = {"count", "relative_time", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KO", const_cast<char**>(kwlist), &_Count, &_RelativeTime))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Count = _Count;
+            copy.RelativeTime = _RelativeTime ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime) : self->obj.RelativeTime;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GpioChangeCount[] = {
         { "_assign_array_", _assign_array_GpioChangeCount, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GpioChangeCount), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* GpioChangeCount_get_Count(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, void* /*unused*/) noexcept
@@ -2394,8 +2421,35 @@ namespace py::cpp::Windows::Devices::Gpio
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_GpioChangeRecord(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _RelativeTime{};
+            int32_t _Edge{static_cast<int32_t>(self->obj.Edge)};
+
+            static const char* kwlist[] = {"relative_time", "edge", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Oi", const_cast<char**>(kwlist), &_RelativeTime, &_Edge))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.RelativeTime = _RelativeTime ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_RelativeTime) : self->obj.RelativeTime;
+            copy.Edge = static_cast<winrt::Windows::Devices::Gpio::GpioPinEdge>(_Edge);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GpioChangeRecord[] = {
         { "_assign_array_", _assign_array_GpioChangeRecord, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GpioChangeRecord), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* GpioChangeRecord_get_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, void* /*unused*/) noexcept

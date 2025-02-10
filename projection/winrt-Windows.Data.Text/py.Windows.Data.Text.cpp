@@ -2996,8 +2996,35 @@ namespace py::cpp::Windows::Data::Text
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_TextSegment(py::wrapper::Windows::Data::Text::TextSegment* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _StartPosition{self->obj.StartPosition};
+            uint32_t _Length{self->obj.Length};
+
+            static const char* kwlist[] = {"start_position", "length", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$II", const_cast<char**>(kwlist), &_StartPosition, &_Length))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.StartPosition = _StartPosition;
+            copy.Length = _Length;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_TextSegment[] = {
         { "_assign_array_", _assign_array_TextSegment, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TextSegment), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* TextSegment_get_StartPosition(py::wrapper::Windows::Data::Text::TextSegment* self, void* /*unused*/) noexcept

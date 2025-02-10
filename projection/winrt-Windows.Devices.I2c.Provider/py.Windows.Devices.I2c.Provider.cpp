@@ -1479,8 +1479,35 @@ namespace py::cpp::Windows::Devices::I2c::Provider
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_ProviderI2cTransferResult(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Status{static_cast<int32_t>(self->obj.Status)};
+            uint32_t _BytesTransferred{self->obj.BytesTransferred};
+
+            static const char* kwlist[] = {"status", "bytes_transferred", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iI", const_cast<char**>(kwlist), &_Status, &_BytesTransferred))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Status = static_cast<winrt::Windows::Devices::I2c::Provider::ProviderI2cTransferStatus>(_Status);
+            copy.BytesTransferred = _BytesTransferred;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_ProviderI2cTransferResult[] = {
         { "_assign_array_", _assign_array_ProviderI2cTransferResult, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ProviderI2cTransferResult), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* ProviderI2cTransferResult_get_Status(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self, void* /*unused*/) noexcept

@@ -3750,8 +3750,35 @@ namespace py::cpp::Windows::Storage::AccessCache
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_AccessListEntry(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Token{};
+            PyObject* _Metadata{};
+
+            static const char* kwlist[] = {"token", "metadata", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_Token, &_Metadata))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Token = _Token ? py::convert_to<winrt::hstring>(_Token) : self->obj.Token;
+            copy.Metadata = _Metadata ? py::convert_to<winrt::hstring>(_Metadata) : self->obj.Metadata;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_AccessListEntry[] = {
         { "_assign_array_", _assign_array_AccessListEntry, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_AccessListEntry), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* AccessListEntry_get_Token(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, void* /*unused*/) noexcept

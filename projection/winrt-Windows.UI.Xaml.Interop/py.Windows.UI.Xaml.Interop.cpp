@@ -3538,8 +3538,35 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_TypeName(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Name{};
+            int32_t _Kind{static_cast<int32_t>(self->obj.Kind)};
+
+            static const char* kwlist[] = {"name", "kind", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Oi", const_cast<char**>(kwlist), &_Name, &_Kind))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Name = _Name ? py::convert_to<winrt::hstring>(_Name) : self->obj.Name;
+            copy.Kind = static_cast<winrt::Windows::UI::Xaml::Interop::TypeKind>(_Kind);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_TypeName[] = {
         { "_assign_array_", _assign_array_TypeName, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TypeName), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* TypeName_get_Name(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, void* /*unused*/) noexcept

@@ -11436,8 +11436,35 @@ namespace py::cpp::Windows::Management::Deployment
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_DeploymentProgress(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _state{static_cast<int32_t>(self->obj.state)};
+            uint32_t _percentage{self->obj.percentage};
+
+            static const char* kwlist[] = {"state", "percentage", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iI", const_cast<char**>(kwlist), &_state, &_percentage))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.state = static_cast<winrt::Windows::Management::Deployment::DeploymentProgressState>(_state);
+            copy.percentage = _percentage;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DeploymentProgress[] = {
         { "_assign_array_", _assign_array_DeploymentProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DeploymentProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* DeploymentProgress_get_state(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, void* /*unused*/) noexcept

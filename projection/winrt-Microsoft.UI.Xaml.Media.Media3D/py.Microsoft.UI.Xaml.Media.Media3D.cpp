@@ -2313,8 +2313,63 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Matrix3D(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Matrix3D* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _M11{self->obj.M11};
+            double _M12{self->obj.M12};
+            double _M13{self->obj.M13};
+            double _M14{self->obj.M14};
+            double _M21{self->obj.M21};
+            double _M22{self->obj.M22};
+            double _M23{self->obj.M23};
+            double _M24{self->obj.M24};
+            double _M31{self->obj.M31};
+            double _M32{self->obj.M32};
+            double _M33{self->obj.M33};
+            double _M34{self->obj.M34};
+            double _OffsetX{self->obj.OffsetX};
+            double _OffsetY{self->obj.OffsetY};
+            double _OffsetZ{self->obj.OffsetZ};
+            double _M44{self->obj.M44};
+
+            static const char* kwlist[] = {"m11", "m12", "m13", "m14", "m21", "m22", "m23", "m24", "m31", "m32", "m33", "m34", "offset_x", "offset_y", "offset_z", "m44", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dddddddddddddddd", const_cast<char**>(kwlist), &_M11, &_M12, &_M13, &_M14, &_M21, &_M22, &_M23, &_M24, &_M31, &_M32, &_M33, &_M34, &_OffsetX, &_OffsetY, &_OffsetZ, &_M44))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.M11 = _M11;
+            copy.M12 = _M12;
+            copy.M13 = _M13;
+            copy.M14 = _M14;
+            copy.M21 = _M21;
+            copy.M22 = _M22;
+            copy.M23 = _M23;
+            copy.M24 = _M24;
+            copy.M31 = _M31;
+            copy.M32 = _M32;
+            copy.M33 = _M33;
+            copy.M34 = _M34;
+            copy.OffsetX = _OffsetX;
+            copy.OffsetY = _OffsetY;
+            copy.OffsetZ = _OffsetZ;
+            copy.M44 = _M44;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Matrix3D[] = {
         { "_assign_array_", _assign_array_Matrix3D, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix3D), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Matrix3D_get_M11(py::wrapper::Microsoft::UI::Xaml::Media::Media3D::Matrix3D* self, void* /*unused*/) noexcept

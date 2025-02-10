@@ -147,7 +147,7 @@ static class TypeExtensions
 
     public static string ToStructFieldFormat(this TypeDefinition type)
     {
-        var sb = new StringBuilder("|");
+        var sb = new StringBuilder();
 
         foreach (var field in type.Fields)
         {
@@ -205,7 +205,44 @@ static class TypeExtensions
         return sb.ToString();
     }
 
-    public static string ToStructFieldInitializer(this FieldDefinition field)
+    public static string ToStructFieldPreInitializer(this FieldDefinition field)
+    {
+        return field.FieldType switch
+        {
+            GenericInstanceType gen
+                => gen.ElementType.FullName switch
+                {
+                    "Windows.Foundation.IReference`1" => "",
+                    _ => throw new NotImplementedException(),
+                },
+            { FullName: "System.Boolean" }
+            or { FullName: "System.SByte" }
+            or { FullName: "System.Byte" }
+            or { FullName: "System.Int16" }
+            or { FullName: "System.UInt16" }
+            or { FullName: "System.Int32" }
+            or { FullName: "System.UInt32" }
+            or { FullName: "System.Int64" }
+            or { FullName: "System.UInt64" }
+            or { FullName: "System.Single" }
+            or { FullName: "System.Double" }
+                => $"self->obj.{field.ToWinrtFieldName()}",
+            { FullName: "System.Char" }
+            or { FullName: "System.String" }
+            or { FullName: "System.Guid" }
+                => "",
+            { IsValueType: true }
+                => field.FieldType.Resolve() switch
+                {
+                    { IsEnum: true }
+                        => $"static_cast<{field.FieldType.ToStructFieldType()}>(self->obj.{field.ToWinrtFieldName()})",
+                    _ => "",
+                },
+            _ => throw new NotImplementedException(),
+        };
+    }
+
+    public static string ToStructFieldInitializer(this FieldDefinition field, bool replace = false)
     {
         return field.FieldType switch
         {
@@ -213,7 +250,7 @@ static class TypeExtensions
                 => gen.ElementType.FullName switch
                 {
                     "Windows.Foundation.IReference`1"
-                        => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {field.FieldType.ToCppTypeName()}{{}}",
+                        => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}",
                     _ => throw new NotImplementedException(),
                 },
             { FullName: "System.Boolean" }
@@ -231,14 +268,14 @@ static class TypeExtensions
             { FullName: "System.Char" }
             or { FullName: "System.String" }
             or { FullName: "System.Guid" }
-                => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {field.FieldType.ToCppTypeName()}{{}}",
+                => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}",
             { IsValueType: true }
                 => field.FieldType.Resolve() switch
                 {
                     { IsEnum: true }
                         => $"static_cast<{field.FieldType.ToCppTypeName()}>(_{field.Name})",
                     _
-                        => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {field.FieldType.ToCppTypeName()}{{}}"
+                        => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}"
                 },
             _ => throw new NotImplementedException(),
         };

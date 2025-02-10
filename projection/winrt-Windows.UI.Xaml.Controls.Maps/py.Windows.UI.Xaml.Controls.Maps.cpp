@@ -25271,8 +25271,35 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_MapZoomLevelRange(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _Min{self->obj.Min};
+            double _Max{self->obj.Max};
+
+            static const char* kwlist[] = {"min", "max", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dd", const_cast<char**>(kwlist), &_Min, &_Max))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Min = _Min;
+            copy.Max = _Max;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_MapZoomLevelRange[] = {
         { "_assign_array_", _assign_array_MapZoomLevelRange, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_MapZoomLevelRange), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* MapZoomLevelRange_get_Min(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self, void* /*unused*/) noexcept

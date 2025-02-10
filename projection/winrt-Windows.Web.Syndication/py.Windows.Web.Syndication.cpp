@@ -12491,8 +12491,35 @@ namespace py::cpp::Windows::Web::Syndication
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_RetrievalProgress(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _BytesRetrieved{self->obj.BytesRetrieved};
+            uint32_t _TotalBytesToRetrieve{self->obj.TotalBytesToRetrieve};
+
+            static const char* kwlist[] = {"bytes_retrieved", "total_bytes_to_retrieve", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$II", const_cast<char**>(kwlist), &_BytesRetrieved, &_TotalBytesToRetrieve))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.BytesRetrieved = _BytesRetrieved;
+            copy.TotalBytesToRetrieve = _TotalBytesToRetrieve;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_RetrievalProgress[] = {
         { "_assign_array_", _assign_array_RetrievalProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RetrievalProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* RetrievalProgress_get_BytesRetrieved(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, void* /*unused*/) noexcept
@@ -12676,8 +12703,39 @@ namespace py::cpp::Windows::Web::Syndication
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_TransferProgress(py::wrapper::Windows::Web::Syndication::TransferProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _BytesSent{self->obj.BytesSent};
+            uint32_t _TotalBytesToSend{self->obj.TotalBytesToSend};
+            uint32_t _BytesRetrieved{self->obj.BytesRetrieved};
+            uint32_t _TotalBytesToRetrieve{self->obj.TotalBytesToRetrieve};
+
+            static const char* kwlist[] = {"bytes_sent", "total_bytes_to_send", "bytes_retrieved", "total_bytes_to_retrieve", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIII", const_cast<char**>(kwlist), &_BytesSent, &_TotalBytesToSend, &_BytesRetrieved, &_TotalBytesToRetrieve))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.BytesSent = _BytesSent;
+            copy.TotalBytesToSend = _TotalBytesToSend;
+            copy.BytesRetrieved = _BytesRetrieved;
+            copy.TotalBytesToRetrieve = _TotalBytesToRetrieve;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_TransferProgress[] = {
         { "_assign_array_", _assign_array_TransferProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TransferProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* TransferProgress_get_BytesSent(py::wrapper::Windows::Web::Syndication::TransferProgress* self, void* /*unused*/) noexcept

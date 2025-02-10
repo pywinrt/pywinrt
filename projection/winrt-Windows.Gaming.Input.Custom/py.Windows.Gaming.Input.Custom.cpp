@@ -3702,8 +3702,39 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_GameControllerVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint16_t _Major{self->obj.Major};
+            uint16_t _Minor{self->obj.Minor};
+            uint16_t _Build{self->obj.Build};
+            uint16_t _Revision{self->obj.Revision};
+
+            static const char* kwlist[] = {"major", "minor", "build", "revision", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$HHHH", const_cast<char**>(kwlist), &_Major, &_Minor, &_Build, &_Revision))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Major = _Major;
+            copy.Minor = _Minor;
+            copy.Build = _Build;
+            copy.Revision = _Revision;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GameControllerVersionInfo[] = {
         { "_assign_array_", _assign_array_GameControllerVersionInfo, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GameControllerVersionInfo), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* GameControllerVersionInfo_get_Major(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, void* /*unused*/) noexcept
@@ -3921,8 +3952,35 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_GipFirmwareUpdateProgress(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _PercentCompleted{self->obj.PercentCompleted};
+            uint32_t _CurrentComponentId{self->obj.CurrentComponentId};
+
+            static const char* kwlist[] = {"percent_completed", "current_component_id", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dI", const_cast<char**>(kwlist), &_PercentCompleted, &_CurrentComponentId))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.PercentCompleted = _PercentCompleted;
+            copy.CurrentComponentId = _CurrentComponentId;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GipFirmwareUpdateProgress[] = {
         { "_assign_array_", _assign_array_GipFirmwareUpdateProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GipFirmwareUpdateProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* GipFirmwareUpdateProgress_get_PercentCompleted(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, void* /*unused*/) noexcept

@@ -10937,8 +10937,33 @@ namespace py::cpp::Windows::Foundation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_EventRegistrationToken(py::wrapper::Windows::Foundation::EventRegistrationToken* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int64_t _Value{self->obj.value};
+
+            static const char* kwlist[] = {"value", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$L", const_cast<char**>(kwlist), &_Value))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.value = _Value;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_EventRegistrationToken[] = {
         { "_assign_array_", _assign_array_EventRegistrationToken, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_EventRegistrationToken), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* EventRegistrationToken_get_Value(py::wrapper::Windows::Foundation::EventRegistrationToken* self, void* /*unused*/) noexcept
@@ -11093,8 +11118,33 @@ namespace py::cpp::Windows::Foundation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_HResult(py::wrapper::Windows::Foundation::HResult* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Value{self->obj.value};
+
+            static const char* kwlist[] = {"value", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$i", const_cast<char**>(kwlist), &_Value))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.value = _Value;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_HResult[] = {
         { "_assign_array_", _assign_array_HResult, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HResult), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HResult_get_Value(py::wrapper::Windows::Foundation::HResult* self, void* /*unused*/) noexcept
@@ -11252,8 +11302,35 @@ namespace py::cpp::Windows::Foundation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Point(py::wrapper::Windows::Foundation::Point* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _X{self->obj.X};
+            float _Y{self->obj.Y};
+
+            static const char* kwlist[] = {"x", "y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ff", const_cast<char**>(kwlist), &_X, &_Y))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.X = _X;
+            copy.Y = _Y;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Point[] = {
         { "_assign_array_", _assign_array_Point, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Point), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Point_get_X(py::wrapper::Windows::Foundation::Point* self, void* /*unused*/) noexcept
@@ -11437,8 +11514,39 @@ namespace py::cpp::Windows::Foundation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Rect(py::wrapper::Windows::Foundation::Rect* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _X{self->obj.X};
+            float _Y{self->obj.Y};
+            float _Width{self->obj.Width};
+            float _Height{self->obj.Height};
+
+            static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.X = _X;
+            copy.Y = _Y;
+            copy.Width = _Width;
+            copy.Height = _Height;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Rect[] = {
         { "_assign_array_", _assign_array_Rect, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Rect), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Rect_get_X(py::wrapper::Windows::Foundation::Rect* self, void* /*unused*/) noexcept
@@ -11656,8 +11764,35 @@ namespace py::cpp::Windows::Foundation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Size(py::wrapper::Windows::Foundation::Size* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _Width{self->obj.Width};
+            float _Height{self->obj.Height};
+
+            static const char* kwlist[] = {"width", "height", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ff", const_cast<char**>(kwlist), &_Width, &_Height))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Width = _Width;
+            copy.Height = _Height;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Size[] = {
         { "_assign_array_", _assign_array_Size, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Size), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Size_get_Width(py::wrapper::Windows::Foundation::Size* self, void* /*unused*/) noexcept

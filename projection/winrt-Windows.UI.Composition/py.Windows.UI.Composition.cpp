@@ -38687,8 +38687,35 @@ namespace py::cpp::Windows::UI::Composition
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_InkTrailPoint(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Point{};
+            float _Radius{self->obj.Radius};
+
+            static const char* kwlist[] = {"point", "radius", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Of", const_cast<char**>(kwlist), &_Point, &_Radius))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Point = _Point ? py::convert_to<winrt::Windows::Foundation::Point>(_Point) : self->obj.Point;
+            copy.Radius = _Radius;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_InkTrailPoint[] = {
         { "_assign_array_", _assign_array_InkTrailPoint, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_InkTrailPoint), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* InkTrailPoint_get_Point(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, void* /*unused*/) noexcept

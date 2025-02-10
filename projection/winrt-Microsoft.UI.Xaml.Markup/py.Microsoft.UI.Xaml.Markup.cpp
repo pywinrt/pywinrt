@@ -5875,8 +5875,37 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_XamlBinaryWriterErrorInformation(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _InputStreamIndex{self->obj.InputStreamIndex};
+            uint32_t _LineNumber{self->obj.LineNumber};
+            uint32_t _LinePosition{self->obj.LinePosition};
+
+            static const char* kwlist[] = {"input_stream_index", "line_number", "line_position", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$III", const_cast<char**>(kwlist), &_InputStreamIndex, &_LineNumber, &_LinePosition))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.InputStreamIndex = _InputStreamIndex;
+            copy.LineNumber = _LineNumber;
+            copy.LinePosition = _LinePosition;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_XamlBinaryWriterErrorInformation[] = {
         { "_assign_array_", _assign_array_XamlBinaryWriterErrorInformation, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_XamlBinaryWriterErrorInformation), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* XamlBinaryWriterErrorInformation_get_InputStreamIndex(py::wrapper::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, void* /*unused*/) noexcept
@@ -6074,8 +6103,35 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_XmlnsDefinition(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _XmlNamespace{};
+            PyObject* _Namespace{};
+
+            static const char* kwlist[] = {"xml_namespace", "namespace", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_XmlNamespace, &_Namespace))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.XmlNamespace = _XmlNamespace ? py::convert_to<winrt::hstring>(_XmlNamespace) : self->obj.XmlNamespace;
+            copy.Namespace = _Namespace ? py::convert_to<winrt::hstring>(_Namespace) : self->obj.Namespace;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_XmlnsDefinition[] = {
         { "_assign_array_", _assign_array_XmlnsDefinition, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_XmlnsDefinition), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* XmlnsDefinition_get_XmlNamespace(py::wrapper::Microsoft::UI::Xaml::Markup::XmlnsDefinition* self, void* /*unused*/) noexcept

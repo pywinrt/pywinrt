@@ -1492,8 +1492,33 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PackageDependencyContextId(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Id{self->obj.Id};
+
+            static const char* kwlist[] = {"id", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$K", const_cast<char**>(kwlist), &_Id))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Id = _Id;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PackageDependencyContextId[] = {
         { "_assign_array_", _assign_array_PackageDependencyContextId, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageDependencyContextId), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PackageDependencyContextId_get_Id(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId* self, void* /*unused*/) noexcept
