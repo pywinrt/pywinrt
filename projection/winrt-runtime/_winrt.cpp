@@ -563,11 +563,6 @@ namespace py::cpp::_winrt
             Py_VISIT(value);
         }
 
-        for (const auto& [key, value] : state->struct_from_tuple_cache)
-        {
-            Py_VISIT(value);
-        }
-
         return 0;
     }
 
@@ -584,13 +579,6 @@ namespace py::cpp::_winrt
         auto type_cache = std::move(state->type_cache);
 
         for (auto& [key, value] : type_cache)
-        {
-            Py_XDECREF(value);
-        }
-
-        auto struct_from_tuple_cache = std::move(state->struct_from_tuple_cache);
-
-        for (auto& [key, value] : struct_from_tuple_cache)
         {
             Py_XDECREF(value);
         }
@@ -614,11 +602,6 @@ namespace py::cpp::_winrt
         }
 
         std::destroy_at(&state->type_cache);
-
-        for (auto& [key, value] : state->struct_from_tuple_cache)
-        {
-            Py_XDECREF(value);
-        }
 
         std::destroy_at(&state->struct_from_tuple_cache);
     }
