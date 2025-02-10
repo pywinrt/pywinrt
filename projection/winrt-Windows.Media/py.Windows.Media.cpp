@@ -10452,7 +10452,7 @@ namespace py::cpp::Windows::Media
 
     static PyMethodDef _methods_MediaTimeRange[] = {
         { "_assign_array_", _assign_array_MediaTimeRange, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_MediaTimeRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_MediaTimeRange)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_MediaTimeRange), METH_NOARGS, nullptr },
         { }};
 

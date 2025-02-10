@@ -21577,7 +21577,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyMethodDef _methods_FontWeight[] = {
         { "_assign_array_", _assign_array_FontWeight, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_FontWeight), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_FontWeight)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* FontWeight_get_Weight(py::wrapper::Windows::UI::Text::FontWeight* self, void* /*unused*/) noexcept

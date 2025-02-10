@@ -1310,7 +1310,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyMethodDef _methods_HandMeshVertex[] = {
         { "_assign_array_", _assign_array_HandMeshVertex, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HandMeshVertex), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_HandMeshVertex)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_HandMeshVertex), METH_NOARGS, nullptr },
         { }};
 
@@ -1567,7 +1567,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyMethodDef _methods_JointPose[] = {
         { "_assign_array_", _assign_array_JointPose, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_JointPose), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_JointPose)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_JointPose), METH_NOARGS, nullptr },
         { }};
 

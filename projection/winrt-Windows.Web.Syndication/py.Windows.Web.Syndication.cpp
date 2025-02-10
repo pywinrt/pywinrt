@@ -12545,7 +12545,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyMethodDef _methods_RetrievalProgress[] = {
         { "_assign_array_", _assign_array_RetrievalProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RetrievalProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_RetrievalProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_RetrievalProgress), METH_NOARGS, nullptr },
         { }};
 
@@ -12802,7 +12802,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyMethodDef _methods_TransferProgress[] = {
         { "_assign_array_", _assign_array_TransferProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TransferProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_TransferProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_TransferProgress), METH_NOARGS, nullptr },
         { }};
 

@@ -1063,7 +1063,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyMethodDef _methods_PushNotificationCreateChannelStatus[] = {
         { "_assign_array_", _assign_array_PushNotificationCreateChannelStatus, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PushNotificationCreateChannelStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_PushNotificationCreateChannelStatus)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_PushNotificationCreateChannelStatus), METH_NOARGS, nullptr },
         { }};
 

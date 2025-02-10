@@ -1518,7 +1518,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyMethodDef _methods_PackageDependencyContextId[] = {
         { "_assign_array_", _assign_array_PackageDependencyContextId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageDependencyContextId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_PackageDependencyContextId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PackageDependencyContextId_get_Id(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId* self, void* /*unused*/) noexcept

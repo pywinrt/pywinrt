@@ -8568,7 +8568,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
     static PyMethodDef _methods_LoadMoreItemsResult[] = {
         { "_assign_array_", _assign_array_LoadMoreItemsResult, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_LoadMoreItemsResult), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_LoadMoreItemsResult)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* LoadMoreItemsResult_get_Count(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self, void* /*unused*/) noexcept

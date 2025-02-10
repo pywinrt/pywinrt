@@ -257,7 +257,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_DisplayAdapterId[] = {
         { "_assign_array_", _assign_array_DisplayAdapterId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayAdapterId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_DisplayAdapterId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_DisplayAdapterId), METH_NOARGS, nullptr },
         { }};
 
@@ -459,7 +459,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_DisplayId[] = {
         { "_assign_array_", _assign_array_DisplayId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_DisplayId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* DisplayId_get_Value(py::wrapper::Windows::Graphics::DisplayId* self, void* /*unused*/) noexcept
@@ -671,7 +671,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_PointInt32[] = {
         { "_assign_array_", _assign_array_PointInt32, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PointInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_PointInt32)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_PointInt32), METH_NOARGS, nullptr },
         { }};
 
@@ -928,7 +928,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_RectInt32[] = {
         { "_assign_array_", _assign_array_RectInt32, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RectInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_RectInt32)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_RectInt32), METH_NOARGS, nullptr },
         { }};
 
@@ -1201,7 +1201,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyMethodDef _methods_SizeInt32[] = {
         { "_assign_array_", _assign_array_SizeInt32, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SizeInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_SizeInt32)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_SizeInt32), METH_NOARGS, nullptr },
         { }};
 

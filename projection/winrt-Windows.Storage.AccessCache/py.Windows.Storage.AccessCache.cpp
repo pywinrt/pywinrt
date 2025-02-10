@@ -3804,7 +3804,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static PyMethodDef _methods_AccessListEntry[] = {
         { "_assign_array_", _assign_array_AccessListEntry, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_AccessListEntry), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_AccessListEntry)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_AccessListEntry), METH_NOARGS, nullptr },
         { }};
 

@@ -5044,7 +5044,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef _methods_SpatialBoundingBox[] = {
         { "_assign_array_", _assign_array_SpatialBoundingBox, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingBox), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_SpatialBoundingBox)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialBoundingBox), METH_NOARGS, nullptr },
         { }};
 
@@ -5325,7 +5325,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef _methods_SpatialBoundingFrustum[] = {
         { "_assign_array_", _assign_array_SpatialBoundingFrustum, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingFrustum), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_SpatialBoundingFrustum)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialBoundingFrustum), METH_NOARGS, nullptr },
         { }};
 
@@ -5650,7 +5650,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef _methods_SpatialBoundingOrientedBox[] = {
         { "_assign_array_", _assign_array_SpatialBoundingOrientedBox, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingOrientedBox), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_SpatialBoundingOrientedBox)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialBoundingOrientedBox), METH_NOARGS, nullptr },
         { }};
 
@@ -5903,7 +5903,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef _methods_SpatialBoundingSphere[] = {
         { "_assign_array_", _assign_array_SpatialBoundingSphere, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialBoundingSphere), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_SpatialBoundingSphere)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialBoundingSphere), METH_NOARGS, nullptr },
         { }};
 
@@ -6136,7 +6136,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyMethodDef _methods_SpatialRay[] = {
         { "_assign_array_", _assign_array_SpatialRay, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SpatialRay), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_SpatialRay)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_SpatialRay), METH_NOARGS, nullptr },
         { }};
 

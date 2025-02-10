@@ -2613,7 +2613,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyMethodDef _methods_MouseDelta[] = {
         { "_assign_array_", _assign_array_MouseDelta, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_MouseDelta), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_MouseDelta)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_MouseDelta), METH_NOARGS, nullptr },
         { }};
 
@@ -2918,7 +2918,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyMethodDef _methods_PointerDeviceUsage[] = {
         { "_assign_array_", _assign_array_PointerDeviceUsage, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PointerDeviceUsage), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_PointerDeviceUsage)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_PointerDeviceUsage), METH_NOARGS, nullptr },
         { }};
 

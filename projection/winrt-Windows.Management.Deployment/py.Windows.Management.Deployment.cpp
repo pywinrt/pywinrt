@@ -11490,7 +11490,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyMethodDef _methods_DeploymentProgress[] = {
         { "_assign_array_", _assign_array_DeploymentProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DeploymentProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_DeploymentProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_DeploymentProgress), METH_NOARGS, nullptr },
         { }};
 

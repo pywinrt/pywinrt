@@ -6075,7 +6075,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef _methods_ArcadeStickReading[] = {
         { "_assign_array_", _assign_array_ArcadeStickReading, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ArcadeStickReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_ArcadeStickReading)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_ArcadeStickReading), METH_NOARGS, nullptr },
         { }};
 
@@ -6368,7 +6368,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef _methods_FlightStickReading[] = {
         { "_assign_array_", _assign_array_FlightStickReading, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_FlightStickReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_FlightStickReading)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_FlightStickReading), METH_NOARGS, nullptr },
         { }};
 
@@ -6773,7 +6773,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef _methods_GamepadReading[] = {
         { "_assign_array_", _assign_array_GamepadReading, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GamepadReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_GamepadReading)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_GamepadReading), METH_NOARGS, nullptr },
         { }};
 
@@ -7150,7 +7150,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef _methods_GamepadVibration[] = {
         { "_assign_array_", _assign_array_GamepadVibration, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GamepadVibration), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_GamepadVibration)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_GamepadVibration), METH_NOARGS, nullptr },
         { }};
 
@@ -7495,7 +7495,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef _methods_RacingWheelReading[] = {
         { "_assign_array_", _assign_array_RacingWheelReading, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RacingWheelReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_RacingWheelReading)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_RacingWheelReading), METH_NOARGS, nullptr },
         { }};
 
@@ -7860,7 +7860,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyMethodDef _methods_UINavigationReading[] = {
         { "_assign_array_", _assign_array_UINavigationReading, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_UINavigationReading), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_UINavigationReading)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_UINavigationReading), METH_NOARGS, nullptr },
         { }};
 

@@ -1262,7 +1262,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyMethodDef _methods_HeadsetGeqGains[] = {
         { "_assign_array_", _assign_array_HeadsetGeqGains, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HeadsetGeqGains), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_HeadsetGeqGains)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_HeadsetGeqGains), METH_NOARGS, nullptr },
         { }};
 

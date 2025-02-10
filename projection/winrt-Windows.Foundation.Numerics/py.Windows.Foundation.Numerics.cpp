@@ -546,7 +546,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "invert", reinterpret_cast<PyCFunction>(invert_Matrix3x2), METH_NOARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix3x2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix3x2), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Matrix3x2)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Matrix3x2), METH_NOARGS, nullptr },
         { }};
 
@@ -2079,7 +2079,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transpose", reinterpret_cast<PyCFunction>(transpose_Matrix4x4), METH_NOARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix4x4), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Matrix4x4)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Matrix4x4), METH_NOARGS, nullptr },
         { }};
 
@@ -2900,7 +2900,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "dot_coordinate", reinterpret_cast<PyCFunction>(dot_coordinate_Plane), METH_O, nullptr },
         { "dot_normal", reinterpret_cast<PyCFunction>(dot_normal_Plane), METH_O, nullptr },
         { "_assign_array_", _assign_array_Plane, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Plane), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Plane)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Plane), METH_NOARGS, nullptr },
         { }};
 
@@ -3412,7 +3412,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Quaternion), METH_VARARGS, nullptr },
         { "concatenate", reinterpret_cast<PyCFunction>(concatenate_Quaternion), METH_O, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Quaternion), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Quaternion)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Quaternion), METH_NOARGS, nullptr },
         { }};
 
@@ -3874,7 +3874,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyMethodDef _methods_Rational[] = {
         { "_assign_array_", _assign_array_Rational, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Rational), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Rational)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Rational), METH_NOARGS, nullptr },
         { }};
 
@@ -4418,7 +4418,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector2), METH_O, nullptr },
         { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector2), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector2), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Vector2)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Vector2), METH_NOARGS, nullptr },
         { }};
 
@@ -5194,7 +5194,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector3), METH_O, nullptr },
         { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector3), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector3), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Vector3)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Vector3), METH_NOARGS, nullptr },
         { }};
 
@@ -5917,7 +5917,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector4), METH_VARARGS, nullptr },
         { "transform", reinterpret_cast<PyCFunction>(transform_Vector4), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Vector4), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Vector4)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Vector4), METH_NOARGS, nullptr },
         { }};
 

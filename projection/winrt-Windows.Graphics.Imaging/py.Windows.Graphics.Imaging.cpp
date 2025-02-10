@@ -8801,7 +8801,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_BitmapBounds[] = {
         { "_assign_array_", _assign_array_BitmapBounds, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapBounds), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_BitmapBounds)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_BitmapBounds), METH_NOARGS, nullptr },
         { }};
 
@@ -9098,7 +9098,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_BitmapPlaneDescription[] = {
         { "_assign_array_", _assign_array_BitmapPlaneDescription, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapPlaneDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_BitmapPlaneDescription)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_BitmapPlaneDescription), METH_NOARGS, nullptr },
         { }};
 
@@ -9371,7 +9371,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyMethodDef _methods_BitmapSize[] = {
         { "_assign_array_", _assign_array_BitmapSize, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapSize), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_BitmapSize)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_BitmapSize), METH_NOARGS, nullptr },
         { }};
 

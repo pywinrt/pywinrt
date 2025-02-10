@@ -19006,7 +19006,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyMethodDef _methods_CorePhysicalKeyStatus[] = {
         { "_assign_array_", _assign_array_CorePhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CorePhysicalKeyStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_CorePhysicalKeyStatus)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_CorePhysicalKeyStatus), METH_NOARGS, nullptr },
         { }};
 
@@ -19319,7 +19319,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyMethodDef _methods_CoreProximityEvaluation[] = {
         { "_assign_array_", _assign_array_CoreProximityEvaluation, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CoreProximityEvaluation), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_CoreProximityEvaluation)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_CoreProximityEvaluation), METH_NOARGS, nullptr },
         { }};
 

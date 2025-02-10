@@ -679,7 +679,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static PyMethodDef _methods_Direct3DMultisampleDescription[] = {
         { "_assign_array_", _assign_array_Direct3DMultisampleDescription, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Direct3DMultisampleDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Direct3DMultisampleDescription)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Direct3DMultisampleDescription), METH_NOARGS, nullptr },
         { }};
 
@@ -936,7 +936,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static PyMethodDef _methods_Direct3DSurfaceDescription[] = {
         { "_assign_array_", _assign_array_Direct3DSurfaceDescription, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Direct3DSurfaceDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Direct3DSurfaceDescription)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Direct3DSurfaceDescription), METH_NOARGS, nullptr },
         { }};
 

@@ -5481,7 +5481,7 @@ namespace py::cpp::Windows::Media::Import
 
     static PyMethodDef _methods_PhotoImportProgress[] = {
         { "_assign_array_", _assign_array_PhotoImportProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PhotoImportProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_PhotoImportProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_PhotoImportProgress), METH_NOARGS, nullptr },
         { }};
 

@@ -6234,7 +6234,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
     static PyMethodDef _methods_XamlBinaryWriterErrorInformation[] = {
         { "_assign_array_", _assign_array_XamlBinaryWriterErrorInformation, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_XamlBinaryWriterErrorInformation), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_XamlBinaryWriterErrorInformation)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_XamlBinaryWriterErrorInformation), METH_NOARGS, nullptr },
         { }};
 
@@ -6487,7 +6487,7 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
     static PyMethodDef _methods_XmlnsDefinition[] = {
         { "_assign_array_", _assign_array_XmlnsDefinition, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_XmlnsDefinition), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_XmlnsDefinition)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_XmlnsDefinition), METH_NOARGS, nullptr },
         { }};
 

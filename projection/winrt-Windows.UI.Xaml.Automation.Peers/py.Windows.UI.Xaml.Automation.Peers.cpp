@@ -25998,7 +25998,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     static PyMethodDef _methods_RawElementProviderRuntimeId[] = {
         { "_assign_array_", _assign_array_RawElementProviderRuntimeId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RawElementProviderRuntimeId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_RawElementProviderRuntimeId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_RawElementProviderRuntimeId), METH_NOARGS, nullptr },
         { }};
 

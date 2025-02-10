@@ -14797,7 +14797,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyMethodDef _methods_CrossSlideThresholds[] = {
         { "_assign_array_", _assign_array_CrossSlideThresholds, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CrossSlideThresholds), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_CrossSlideThresholds)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_CrossSlideThresholds), METH_NOARGS, nullptr },
         { }};
 
@@ -15094,7 +15094,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyMethodDef _methods_ManipulationDelta[] = {
         { "_assign_array_", _assign_array_ManipulationDelta, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ManipulationDelta), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_ManipulationDelta)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_ManipulationDelta), METH_NOARGS, nullptr },
         { }};
 
@@ -15379,7 +15379,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyMethodDef _methods_ManipulationVelocities[] = {
         { "_assign_array_", _assign_array_ManipulationVelocities, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ManipulationVelocities), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_ManipulationVelocities)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_ManipulationVelocities), METH_NOARGS, nullptr },
         { }};
 

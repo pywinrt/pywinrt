@@ -7889,7 +7889,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef _methods_BackgroundDownloadProgress[] = {
         { "_assign_array_", _assign_array_BackgroundDownloadProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundDownloadProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_BackgroundDownloadProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_BackgroundDownloadProgress), METH_NOARGS, nullptr },
         { }};
 
@@ -8182,7 +8182,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef _methods_BackgroundTransferFileRange[] = {
         { "_assign_array_", _assign_array_BackgroundTransferFileRange, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundTransferFileRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_BackgroundTransferFileRange)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_BackgroundTransferFileRange), METH_NOARGS, nullptr },
         { }};
 
@@ -8475,7 +8475,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyMethodDef _methods_BackgroundUploadProgress[] = {
         { "_assign_array_", _assign_array_BackgroundUploadProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundUploadProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_BackgroundUploadProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_BackgroundUploadProgress), METH_NOARGS, nullptr },
         { }};
 
