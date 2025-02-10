@@ -25197,6 +25197,22 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapZoomLevelRange struct --------------------
 
+    winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange MapZoomLevelRange_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange result{};
+
+        result.Min = py::convert_to<double>(tuple, 0);
+        result.Max = py::convert_to<double>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_MapZoomLevelRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -26201,6 +26217,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle MapZoomLevelRange_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(MapZoomLevelRange_from_tuple),"winrt._winrt_windows_ui_xaml_controls_maps.MapZoomLevelRange_from_tuple", nullptr)};
+    if (!MapZoomLevelRange_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "MapZoomLevelRange_from_tuple", MapZoomLevelRange_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

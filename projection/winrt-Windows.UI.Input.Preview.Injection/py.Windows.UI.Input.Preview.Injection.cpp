@@ -3022,6 +3022,22 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     // ----- InjectedInputPoint struct --------------------
 
+    winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint InjectedInputPoint_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint result{};
+
+        result.PositionX = py::convert_to<int32_t>(tuple, 0);
+        result.PositionY = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_InjectedInputPoint(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -3184,6 +3200,25 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         _type_slots_InjectedInputPoint};
 
     // ----- InjectedInputPointerInfo struct --------------------
+
+    winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo InjectedInputPointerInfo_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 5)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo result{};
+
+        result.PointerId = py::convert_to<uint32_t>(tuple, 0);
+        result.PointerOptions = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>(tuple, 1);
+        result.PixelLocation = py::convert_to<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>(tuple, 2);
+        result.TimeOffsetInMilliseconds = py::convert_to<uint32_t>(tuple, 3);
+        result.PerformanceCount = py::convert_to<uint64_t>(tuple, 4);
+
+        return result;
+    }
 
     PyObject* _new_InjectedInputPointerInfo(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3413,6 +3448,24 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         _type_slots_InjectedInputPointerInfo};
 
     // ----- InjectedInputRectangle struct --------------------
+
+    winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle InjectedInputRectangle_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle result{};
+
+        result.Left = py::convert_to<int32_t>(tuple, 0);
+        result.Top = py::convert_to<int32_t>(tuple, 1);
+        result.Bottom = py::convert_to<int32_t>(tuple, 2);
+        result.Right = py::convert_to<int32_t>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_InjectedInputRectangle(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3724,18 +3777,48 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview_injection(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle InjectedInputPoint_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(InjectedInputPoint_from_tuple),"winrt._winrt_windows_ui_input_preview_injection.InjectedInputPoint_from_tuple", nullptr)};
+    if (!InjectedInputPoint_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "InjectedInputPoint_from_tuple", InjectedInputPoint_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle InjectedInputPointerInfo_type{py::register_python_type(module.get(), &type_spec_InjectedInputPointerInfo, nullptr, nullptr)};
     if (!InjectedInputPointerInfo_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle InjectedInputPointerInfo_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(InjectedInputPointerInfo_from_tuple),"winrt._winrt_windows_ui_input_preview_injection.InjectedInputPointerInfo_from_tuple", nullptr)};
+    if (!InjectedInputPointerInfo_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "InjectedInputPointerInfo_from_tuple", InjectedInputPointerInfo_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle InjectedInputRectangle_type{py::register_python_type(module.get(), &type_spec_InjectedInputRectangle, nullptr, nullptr)};
     if (!InjectedInputRectangle_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle InjectedInputRectangle_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(InjectedInputRectangle_from_tuple),"winrt._winrt_windows_ui_input_preview_injection.InjectedInputRectangle_from_tuple", nullptr)};
+    if (!InjectedInputRectangle_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "InjectedInputRectangle_from_tuple", InjectedInputRectangle_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

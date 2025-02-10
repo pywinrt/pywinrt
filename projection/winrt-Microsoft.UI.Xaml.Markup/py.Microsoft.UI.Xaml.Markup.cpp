@@ -5798,6 +5798,23 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     // ----- XamlBinaryWriterErrorInformation struct --------------------
 
+    winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation XamlBinaryWriterErrorInformation_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation result{};
+
+        result.InputStreamIndex = py::convert_to<uint32_t>(tuple, 0);
+        result.LineNumber = py::convert_to<uint32_t>(tuple, 1);
+        result.LinePosition = py::convert_to<uint32_t>(tuple, 2);
+
+        return result;
+    }
+
     PyObject* _new_XamlBinaryWriterErrorInformation(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5982,6 +5999,22 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         _type_slots_XamlBinaryWriterErrorInformation};
 
     // ----- XmlnsDefinition struct --------------------
+
+    winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition XmlnsDefinition_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition result{};
+
+        result.XmlNamespace = py::convert_to<winrt::hstring>(tuple, 0);
+        result.Namespace = py::convert_to<winrt::hstring>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_XmlnsDefinition(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6467,12 +6500,32 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_markup(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle XamlBinaryWriterErrorInformation_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(XamlBinaryWriterErrorInformation_from_tuple),"winrt._winrt_microsoft_ui_xaml_markup.XamlBinaryWriterErrorInformation_from_tuple", nullptr)};
+    if (!XamlBinaryWriterErrorInformation_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "XamlBinaryWriterErrorInformation_from_tuple", XamlBinaryWriterErrorInformation_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle XmlnsDefinition_type{py::register_python_type(module.get(), &type_spec_XmlnsDefinition, nullptr, nullptr)};
     if (!XmlnsDefinition_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle XmlnsDefinition_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(XmlnsDefinition_from_tuple),"winrt._winrt_microsoft_ui_xaml_markup.XmlnsDefinition_from_tuple", nullptr)};
+    if (!XmlnsDefinition_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "XmlnsDefinition_from_tuple", XmlnsDefinition_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

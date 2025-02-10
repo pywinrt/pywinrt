@@ -257,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::TextRange>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml_documents.TextRange_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.TextRange";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "TextRange";

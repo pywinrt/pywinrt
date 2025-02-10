@@ -13,6 +13,7 @@ namespace py::cpp::_winrt
         PyTypeObject* array_type;
         PyTypeObject* mapping_iter_type;
         std::unordered_map<std::string_view, PyTypeObject*> type_cache;
+        std::unordered_map<std::string_view, void*> struct_from_tuple_cache;
         PyObject* to_uuid_func;
     };
 

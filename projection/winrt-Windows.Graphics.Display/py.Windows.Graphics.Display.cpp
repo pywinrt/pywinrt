@@ -4295,6 +4295,23 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- NitRange struct --------------------
 
+    winrt::Windows::Graphics::Display::NitRange NitRange_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Display::NitRange result{};
+
+        result.MinNits = py::convert_to<float>(tuple, 0);
+        result.MaxNits = py::convert_to<float>(tuple, 1);
+        result.StepSizeNits = py::convert_to<float>(tuple, 2);
+
+        return result;
+    }
+
     PyObject* _new_NitRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -4679,6 +4696,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle NitRange_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(NitRange_from_tuple),"winrt._winrt_windows_graphics_display.NitRange_from_tuple", nullptr)};
+    if (!NitRange_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "NitRange_from_tuple", NitRange_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

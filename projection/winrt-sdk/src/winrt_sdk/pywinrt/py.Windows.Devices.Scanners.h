@@ -133,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerResolution>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_scanners.ImageScannerResolution_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerResolution";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerResolution";

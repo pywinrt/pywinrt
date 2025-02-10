@@ -258,6 +258,61 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
     return reinterpret_cast<PyTypeObject*>(type.get());
 }
 
+void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
+{
+    auto state = py::cpp::_winrt::get_module_state();
+    if (!state)
+    {
+        return nullptr;
+    }
+
+    auto it = state->struct_from_tuple_cache.find(capsule_name);
+    if (it != state->struct_from_tuple_cache.end())
+    {
+        return it->second;
+    }
+
+    // PyCapsule_Import() doesn't work if the module hasn't been imported yet,
+    // so we need to do it this way instead.
+
+    auto last_dot = capsule_name.find_last_of('.');
+    std::string module_name{capsule_name.substr(0, last_dot)};
+    std::string attr_name{capsule_name.substr(last_dot + 1)};
+
+    pyobj_handle module{PyImport_ImportModule(module_name.c_str())};
+    if (!module)
+    {
+        return nullptr;
+    }
+
+    pyobj_handle capsule{PyObject_GetAttrString(module.get(), attr_name.c_str())};
+    if (!capsule)
+    {
+        return nullptr;
+    }
+
+    auto func = PyCapsule_GetPointer(capsule.get(), capsule_name.data());
+    if (!func)
+    {
+        return nullptr;
+    }
+
+    // REVISIT: might want to validate that the returned pointer is actually
+    // comapible with the current runtime
+
+    try
+    {
+        state->struct_from_tuple_cache[capsule_name] = func;
+    }
+    catch (...)
+    {
+        py::to_PyErr();
+        return nullptr;
+    }
+
+    return func;
+}
+
 /**
  * Wraps a WinRT KeyValuePair iterator in a Python type that iterates the
  * keys only to be consistent with the Python mapping protocol.

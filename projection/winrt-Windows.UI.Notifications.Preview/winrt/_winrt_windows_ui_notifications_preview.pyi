@@ -16,7 +16,7 @@ Self = typing.TypeVar('Self')
 @typing.final
 class ToastOcclusionManagerPreview_Static(winrt._winrt.IInspectable_Static):
     # System.Void Windows.UI.Notifications.Preview.ToastOcclusionManagerPreview::SetToastWindowMargin(Windows.UI.WindowId,System.Double)
-    def set_toast_window_margin(cls, app_window_id: windows_ui.WindowId, margin: winrt.system.Double, /) -> None: ...
+    def set_toast_window_margin(cls, app_window_id: typing.Union[windows_ui.WindowId, typing.Tuple[winrt.system.UInt64]], margin: winrt.system.Double, /) -> None: ...
 
 @typing.final
 class ToastOcclusionManagerPreview(winrt.system.Object, metaclass=ToastOcclusionManagerPreview_Static):

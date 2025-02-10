@@ -350,6 +350,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreateProgress";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentCreateProgress";

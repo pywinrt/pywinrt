@@ -260,6 +260,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Import::PhotoImportProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media_import_.PhotoImportProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.media.import_.PhotoImportProgress";
         static constexpr const char* module_name = "winrt.windows.media.import_";
         static constexpr const char* type_name = "PhotoImportProgress";

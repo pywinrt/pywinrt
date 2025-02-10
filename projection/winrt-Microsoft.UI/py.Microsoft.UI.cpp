@@ -5066,6 +5066,21 @@ namespace py::cpp::Microsoft::UI
 
     // ----- DisplayId struct --------------------
 
+    winrt::Microsoft::UI::DisplayId DisplayId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::DisplayId result{};
+
+        result.Value = py::convert_to<uint64_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_DisplayId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5207,6 +5222,21 @@ namespace py::cpp::Microsoft::UI
 
     // ----- IconId struct --------------------
 
+    winrt::Microsoft::UI::IconId IconId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::IconId result{};
+
+        result.Value = py::convert_to<uint64_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_IconId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5347,6 +5377,21 @@ namespace py::cpp::Microsoft::UI
         _type_slots_IconId};
 
     // ----- WindowId struct --------------------
+
+    winrt::Microsoft::UI::WindowId WindowId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::WindowId result{};
+
+        result.Value = py::convert_to<uint64_t>(tuple, 0);
+
+        return result;
+    }
 
     PyObject* _new_WindowId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5597,18 +5642,48 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle DisplayId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(DisplayId_from_tuple),"winrt._winrt_microsoft_ui.DisplayId_from_tuple", nullptr)};
+    if (!DisplayId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "DisplayId_from_tuple", DisplayId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle IconId_type{py::register_python_type(module.get(), &type_spec_IconId, nullptr, nullptr)};
     if (!IconId_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle IconId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(IconId_from_tuple),"winrt._winrt_microsoft_ui.IconId_from_tuple", nullptr)};
+    if (!IconId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "IconId_from_tuple", IconId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle WindowId_type{py::register_python_type(module.get(), &type_spec_WindowId, nullptr, nullptr)};
     if (!WindowId_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle WindowId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(WindowId_from_tuple),"winrt._winrt_microsoft_ui.WindowId_from_tuple", nullptr)};
+    if (!WindowId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "WindowId_from_tuple", WindowId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

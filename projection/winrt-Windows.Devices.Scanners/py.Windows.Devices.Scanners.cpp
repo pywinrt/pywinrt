@@ -6190,6 +6190,22 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- ImageScannerResolution struct --------------------
 
+    winrt::Windows::Devices::Scanners::ImageScannerResolution ImageScannerResolution_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Scanners::ImageScannerResolution result{};
+
+        result.DpiX = py::convert_to<float>(tuple, 0);
+        result.DpiY = py::convert_to<float>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_ImageScannerResolution(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -6490,6 +6506,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle ImageScannerResolution_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(ImageScannerResolution_from_tuple),"winrt._winrt_windows_devices_scanners.ImageScannerResolution_from_tuple", nullptr)};
+    if (!ImageScannerResolution_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "ImageScannerResolution_from_tuple", ImageScannerResolution_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

@@ -335,6 +335,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaTimeRange>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media.MediaTimeRange_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.media.MediaTimeRange";
         static constexpr const char* module_name = "winrt.windows.media";
         static constexpr const char* type_name = "MediaTimeRange";

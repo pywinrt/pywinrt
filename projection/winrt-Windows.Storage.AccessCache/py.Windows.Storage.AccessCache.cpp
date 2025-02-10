@@ -3676,6 +3676,22 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- AccessListEntry struct --------------------
 
+    winrt::Windows::Storage::AccessCache::AccessListEntry AccessListEntry_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Storage::AccessCache::AccessListEntry result{};
+
+        result.Token = py::convert_to<winrt::hstring>(tuple, 0);
+        result.Metadata = py::convert_to<winrt::hstring>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_AccessListEntry(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -3953,6 +3969,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_accesscache(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle AccessListEntry_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(AccessListEntry_from_tuple),"winrt._winrt_windows_storage_accesscache.AccessListEntry_from_tuple", nullptr)};
+    if (!AccessListEntry_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "AccessListEntry_from_tuple", AccessListEntry_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

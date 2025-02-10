@@ -999,6 +999,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_automation_peers.RawElementProviderRuntimeId_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RawElementProviderRuntimeId";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RawElementProviderRuntimeId";

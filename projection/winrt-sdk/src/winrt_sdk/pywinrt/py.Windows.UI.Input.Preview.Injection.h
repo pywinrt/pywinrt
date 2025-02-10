@@ -175,6 +175,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_input_preview_injection.InjectedInputPoint_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputPoint";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputPoint";
@@ -183,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_input_preview_injection.InjectedInputPointerInfo_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputPointerInfo";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputPointerInfo";
@@ -191,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_input_preview_injection.InjectedInputRectangle_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputRectangle";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputRectangle";

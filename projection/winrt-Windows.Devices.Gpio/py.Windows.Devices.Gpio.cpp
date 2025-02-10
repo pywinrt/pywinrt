@@ -2141,6 +2141,22 @@ namespace py::cpp::Windows::Devices::Gpio
 
     // ----- GpioChangeCount struct --------------------
 
+    winrt::Windows::Devices::Gpio::GpioChangeCount GpioChangeCount_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Gpio::GpioChangeCount result{};
+
+        result.Count = py::convert_to<uint64_t>(tuple, 0);
+        result.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_GpioChangeCount(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -2303,6 +2319,22 @@ namespace py::cpp::Windows::Devices::Gpio
         _type_slots_GpioChangeCount};
 
     // ----- GpioChangeRecord struct --------------------
+
+    winrt::Windows::Devices::Gpio::GpioChangeRecord GpioChangeRecord_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Gpio::GpioChangeRecord result{};
+
+        result.RelativeTime = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 0);
+        result.Edge = py::convert_to<winrt::Windows::Devices::Gpio::GpioPinEdge>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_GpioChangeRecord(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2564,12 +2596,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle GpioChangeCount_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(GpioChangeCount_from_tuple),"winrt._winrt_windows_devices_gpio.GpioChangeCount_from_tuple", nullptr)};
+    if (!GpioChangeCount_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "GpioChangeCount_from_tuple", GpioChangeCount_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle GpioChangeRecord_type{py::register_python_type(module.get(), &type_spec_GpioChangeRecord, nullptr, nullptr)};
     if (!GpioChangeRecord_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle GpioChangeRecord_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(GpioChangeRecord_from_tuple),"winrt._winrt_windows_devices_gpio.GpioChangeRecord_from_tuple", nullptr)};
+    if (!GpioChangeRecord_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "GpioChangeRecord_from_tuple", GpioChangeRecord_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

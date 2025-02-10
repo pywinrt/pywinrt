@@ -2922,6 +2922,22 @@ namespace py::cpp::Windows::Data::Text
 
     // ----- TextSegment struct --------------------
 
+    winrt::Windows::Data::Text::TextSegment TextSegment_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Data::Text::TextSegment result{};
+
+        result.StartPosition = py::convert_to<uint32_t>(tuple, 0);
+        result.Length = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_TextSegment(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -3218,6 +3234,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_text(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle TextSegment_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(TextSegment_from_tuple),"winrt._winrt_windows_data_text.TextSegment_from_tuple", nullptr)};
+    if (!TextSegment_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "TextSegment_from_tuple", TextSegment_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

@@ -411,6 +411,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::FontWeight>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_text.FontWeight_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.text.FontWeight";
         static constexpr const char* module_name = "winrt.windows.ui.text";
         static constexpr const char* type_name = "FontWeight";

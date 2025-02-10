@@ -900,6 +900,32 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     // ----- HdmiDisplayHdr2086Metadata struct --------------------
 
+    winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata HdmiDisplayHdr2086Metadata_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 12)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata result{};
+
+        result.RedPrimaryX = py::convert_to<uint16_t>(tuple, 0);
+        result.RedPrimaryY = py::convert_to<uint16_t>(tuple, 1);
+        result.GreenPrimaryX = py::convert_to<uint16_t>(tuple, 2);
+        result.GreenPrimaryY = py::convert_to<uint16_t>(tuple, 3);
+        result.BluePrimaryX = py::convert_to<uint16_t>(tuple, 4);
+        result.BluePrimaryY = py::convert_to<uint16_t>(tuple, 5);
+        result.WhitePointX = py::convert_to<uint16_t>(tuple, 6);
+        result.WhitePointY = py::convert_to<uint16_t>(tuple, 7);
+        result.MaxMasteringLuminance = py::convert_to<uint16_t>(tuple, 8);
+        result.MinMasteringLuminance = py::convert_to<uint16_t>(tuple, 9);
+        result.MaxContentLightLevel = py::convert_to<uint16_t>(tuple, 10);
+        result.MaxFrameAverageLightLevel = py::convert_to<uint16_t>(tuple, 11);
+
+        return result;
+    }
+
     PyObject* _new_HdmiDisplayHdr2086Metadata(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -1362,6 +1388,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_display_core(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle HdmiDisplayHdr2086Metadata_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(HdmiDisplayHdr2086Metadata_from_tuple),"winrt._winrt_windows_graphics_display_core.HdmiDisplayHdr2086Metadata_from_tuple", nullptr)};
+    if (!HdmiDisplayHdr2086Metadata_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "HdmiDisplayHdr2086Metadata_from_tuple", HdmiDisplayHdr2086Metadata_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

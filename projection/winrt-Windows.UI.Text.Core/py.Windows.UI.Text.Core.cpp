@@ -4115,6 +4115,22 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextRange struct --------------------
 
+    winrt::Windows::UI::Text::Core::CoreTextRange CoreTextRange_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Text::Core::CoreTextRange result{};
+
+        result.StartCaretPosition = py::convert_to<int32_t>(tuple, 0);
+        result.EndCaretPosition = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_CoreTextRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -4453,6 +4469,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text_core(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle CoreTextRange_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(CoreTextRange_from_tuple),"winrt._winrt_windows_ui_text_core.CoreTextRange_from_tuple", nullptr)};
+    if (!CoreTextRange_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "CoreTextRange_from_tuple", CoreTextRange_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

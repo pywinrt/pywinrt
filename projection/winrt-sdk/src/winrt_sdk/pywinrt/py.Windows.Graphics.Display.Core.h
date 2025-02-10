@@ -71,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_display_core.HdmiDisplayHdr2086Metadata_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayHdr2086Metadata";
         static constexpr const char* module_name = "winrt.windows.graphics.display.core";
         static constexpr const char* type_name = "HdmiDisplayHdr2086Metadata";

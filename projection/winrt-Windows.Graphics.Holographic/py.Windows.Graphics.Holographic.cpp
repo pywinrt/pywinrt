@@ -5970,6 +5970,22 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicAdapterId struct --------------------
 
+    winrt::Windows::Graphics::Holographic::HolographicAdapterId HolographicAdapterId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Holographic::HolographicAdapterId result{};
+
+        result.LowPart = py::convert_to<uint32_t>(tuple, 0);
+        result.HighPart = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_HolographicAdapterId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -6133,6 +6149,21 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFrameId struct --------------------
 
+    winrt::Windows::Graphics::Holographic::HolographicFrameId HolographicFrameId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Holographic::HolographicFrameId result{};
+
+        result.Value = py::convert_to<uint64_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_HolographicFrameId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -6273,6 +6304,22 @@ namespace py::cpp::Windows::Graphics::Holographic
         _type_slots_HolographicFrameId};
 
     // ----- HolographicStereoTransform struct --------------------
+
+    winrt::Windows::Graphics::Holographic::HolographicStereoTransform HolographicStereoTransform_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Holographic::HolographicStereoTransform result{};
+
+        result.Left = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(tuple, 0);
+        result.Right = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_HolographicStereoTransform(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6624,18 +6671,48 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle HolographicAdapterId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(HolographicAdapterId_from_tuple),"winrt._winrt_windows_graphics_holographic.HolographicAdapterId_from_tuple", nullptr)};
+    if (!HolographicAdapterId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "HolographicAdapterId_from_tuple", HolographicAdapterId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle HolographicFrameId_type{py::register_python_type(module.get(), &type_spec_HolographicFrameId, nullptr, nullptr)};
     if (!HolographicFrameId_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle HolographicFrameId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(HolographicFrameId_from_tuple),"winrt._winrt_windows_graphics_holographic.HolographicFrameId_from_tuple", nullptr)};
+    if (!HolographicFrameId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "HolographicFrameId_from_tuple", HolographicFrameId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle HolographicStereoTransform_type{py::register_python_type(module.get(), &type_spec_HolographicStereoTransform, nullptr, nullptr)};
     if (!HolographicStereoTransform_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle HolographicStereoTransform_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(HolographicStereoTransform_from_tuple),"winrt._winrt_windows_graphics_holographic.HolographicStereoTransform_from_tuple", nullptr)};
+    if (!HolographicStereoTransform_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "HolographicStereoTransform_from_tuple", HolographicStereoTransform_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

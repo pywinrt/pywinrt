@@ -37424,6 +37424,22 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- SizeUInt32 struct --------------------
 
+    winrt::Windows::Devices::PointOfService::SizeUInt32 SizeUInt32_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::PointOfService::SizeUInt32 result{};
+
+        result.Width = py::convert_to<uint32_t>(tuple, 0);
+        result.Height = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_SizeUInt32(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -38266,6 +38282,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle SizeUInt32_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(SizeUInt32_from_tuple),"winrt._winrt_windows_devices_pointofservice.SizeUInt32_from_tuple", nullptr)};
+    if (!SizeUInt32_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "SizeUInt32_from_tuple", SizeUInt32_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

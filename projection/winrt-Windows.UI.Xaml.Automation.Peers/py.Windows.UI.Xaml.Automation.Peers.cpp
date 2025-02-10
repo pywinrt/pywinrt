@@ -25870,6 +25870,22 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RawElementProviderRuntimeId struct --------------------
 
+    winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId RawElementProviderRuntimeId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId result{};
+
+        result.Part1 = py::convert_to<uint32_t>(tuple, 0);
+        result.Part2 = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_RawElementProviderRuntimeId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -28104,6 +28120,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle RawElementProviderRuntimeId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(RawElementProviderRuntimeId_from_tuple),"winrt._winrt_windows_ui_xaml_automation_peers.RawElementProviderRuntimeId_from_tuple", nullptr)};
+    if (!RawElementProviderRuntimeId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "RawElementProviderRuntimeId_from_tuple", RawElementProviderRuntimeId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

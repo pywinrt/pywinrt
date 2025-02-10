@@ -7934,6 +7934,22 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     // ----- DisplayPresentationRate struct --------------------
 
+    winrt::Windows::Devices::Display::Core::DisplayPresentationRate DisplayPresentationRate_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Display::Core::DisplayPresentationRate result{};
+
+        result.VerticalSyncRate = py::convert_to<winrt::Windows::Foundation::Numerics::Rational>(tuple, 0);
+        result.VerticalSyncsPerPresentation = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_DisplayPresentationRate(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -8356,6 +8372,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle DisplayPresentationRate_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(DisplayPresentationRate_from_tuple),"winrt._winrt_windows_devices_display_core.DisplayPresentationRate_from_tuple", nullptr)};
+    if (!DisplayPresentationRate_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "DisplayPresentationRate_from_tuple", DisplayPresentationRate_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

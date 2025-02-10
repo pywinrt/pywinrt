@@ -28,6 +28,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_windows_security_accesscontrol.AppContainerNameAndAccess_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.windows.security.accesscontrol.AppContainerNameAndAccess";
         static constexpr const char* module_name = "winrt.microsoft.windows.security.accesscontrol";
         static constexpr const char* type_name = "AppContainerNameAndAccess";

@@ -31367,6 +31367,22 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- GeneratorPosition struct --------------------
 
+    winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition GeneratorPosition_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition result{};
+
+        result.Index = py::convert_to<int32_t>(tuple, 0);
+        result.Offset = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_GeneratorPosition(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -32658,6 +32674,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle GeneratorPosition_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(GeneratorPosition_from_tuple),"winrt._winrt_windows_ui_xaml_controls_primitives.GeneratorPosition_from_tuple", nullptr)};
+    if (!GeneratorPosition_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "GeneratorPosition_from_tuple", GeneratorPosition_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

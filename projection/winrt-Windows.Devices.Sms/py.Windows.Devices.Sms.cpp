@@ -12950,6 +12950,25 @@ namespace py::cpp::Windows::Devices::Sms
 
     // ----- SmsEncodedLength struct --------------------
 
+    winrt::Windows::Devices::Sms::SmsEncodedLength SmsEncodedLength_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 5)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Sms::SmsEncodedLength result{};
+
+        result.SegmentCount = py::convert_to<uint32_t>(tuple, 0);
+        result.CharacterCountLastSegment = py::convert_to<uint32_t>(tuple, 1);
+        result.CharactersPerSegment = py::convert_to<uint32_t>(tuple, 2);
+        result.ByteCountLastSegment = py::convert_to<uint32_t>(tuple, 3);
+        result.BytesPerSegment = py::convert_to<uint32_t>(tuple, 4);
+
+        return result;
+    }
+
     PyObject* _new_SmsEncodedLength(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -13511,6 +13530,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sms(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle SmsEncodedLength_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(SmsEncodedLength_from_tuple),"winrt._winrt_windows_devices_sms.SmsEncodedLength_from_tuple", nullptr)};
+    if (!SmsEncodedLength_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "SmsEncodedLength_from_tuple", SmsEncodedLength_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

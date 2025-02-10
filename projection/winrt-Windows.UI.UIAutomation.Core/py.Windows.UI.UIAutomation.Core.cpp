@@ -2241,6 +2241,21 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- AutomationAnnotationTypeRegistration struct --------------------
 
+    winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration AutomationAnnotationTypeRegistration_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration result{};
+
+        result.LocalId = py::convert_to<int32_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_AutomationAnnotationTypeRegistration(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -2381,6 +2396,21 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         _type_slots_AutomationAnnotationTypeRegistration};
 
     // ----- AutomationRemoteOperationOperandId struct --------------------
+
+    winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId AutomationRemoteOperationOperandId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId result{};
+
+        result.Value = py::convert_to<int32_t>(tuple, 0);
+
+        return result;
+    }
 
     PyObject* _new_AutomationRemoteOperationOperandId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2690,12 +2720,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation_core(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle AutomationAnnotationTypeRegistration_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(AutomationAnnotationTypeRegistration_from_tuple),"winrt._winrt_windows_ui_uiautomation_core.AutomationAnnotationTypeRegistration_from_tuple", nullptr)};
+    if (!AutomationAnnotationTypeRegistration_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "AutomationAnnotationTypeRegistration_from_tuple", AutomationAnnotationTypeRegistration_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle AutomationRemoteOperationOperandId_type{py::register_python_type(module.get(), &type_spec_AutomationRemoteOperationOperandId, nullptr, nullptr)};
     if (!AutomationRemoteOperationOperandId_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle AutomationRemoteOperationOperandId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(AutomationRemoteOperationOperandId_from_tuple),"winrt._winrt_windows_ui_uiautomation_core.AutomationRemoteOperationOperandId_from_tuple", nullptr)};
+    if (!AutomationRemoteOperationOperandId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "AutomationRemoteOperationOperandId_from_tuple", AutomationRemoteOperationOperandId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

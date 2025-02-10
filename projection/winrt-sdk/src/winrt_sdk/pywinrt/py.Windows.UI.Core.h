@@ -434,6 +434,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CorePhysicalKeyStatus>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_core.CorePhysicalKeyStatus_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CorePhysicalKeyStatus";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CorePhysicalKeyStatus";
@@ -442,6 +443,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreProximityEvaluation>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_core.CoreProximityEvaluation_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreProximityEvaluation";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreProximityEvaluation";

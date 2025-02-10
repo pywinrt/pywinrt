@@ -217,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Data::LoadMoreItemsResult>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml_data.LoadMoreItemsResult_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.data.LoadMoreItemsResult";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.data";
         static constexpr const char* type_name = "LoadMoreItemsResult";

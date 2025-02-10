@@ -2485,6 +2485,22 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- MouseDelta struct --------------------
 
+    winrt::Windows::Devices::Input::MouseDelta MouseDelta_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Input::MouseDelta result{};
+
+        result.X = py::convert_to<int32_t>(tuple, 0);
+        result.Y = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_MouseDelta(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -2647,6 +2663,28 @@ namespace py::cpp::Windows::Devices::Input
         _type_slots_MouseDelta};
 
     // ----- PointerDeviceUsage struct --------------------
+
+    winrt::Windows::Devices::Input::PointerDeviceUsage PointerDeviceUsage_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 8)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Input::PointerDeviceUsage result{};
+
+        result.UsagePage = py::convert_to<uint32_t>(tuple, 0);
+        result.Usage = py::convert_to<uint32_t>(tuple, 1);
+        result.MinLogical = py::convert_to<int32_t>(tuple, 2);
+        result.MaxLogical = py::convert_to<int32_t>(tuple, 3);
+        result.MinPhysical = py::convert_to<int32_t>(tuple, 4);
+        result.MaxPhysical = py::convert_to<int32_t>(tuple, 5);
+        result.Unit = py::convert_to<uint32_t>(tuple, 6);
+        result.PhysicalMultiplier = py::convert_to<float>(tuple, 7);
+
+        return result;
+    }
 
     PyObject* _new_PointerDeviceUsage(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3142,12 +3180,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle MouseDelta_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(MouseDelta_from_tuple),"winrt._winrt_windows_devices_input.MouseDelta_from_tuple", nullptr)};
+    if (!MouseDelta_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "MouseDelta_from_tuple", MouseDelta_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle PointerDeviceUsage_type{py::register_python_type(module.get(), &type_spec_PointerDeviceUsage, nullptr, nullptr)};
     if (!PointerDeviceUsage_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle PointerDeviceUsage_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(PointerDeviceUsage_from_tuple),"winrt._winrt_windows_devices_input.PointerDeviceUsage_from_tuple", nullptr)};
+    if (!PointerDeviceUsage_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "PointerDeviceUsage_from_tuple", PointerDeviceUsage_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

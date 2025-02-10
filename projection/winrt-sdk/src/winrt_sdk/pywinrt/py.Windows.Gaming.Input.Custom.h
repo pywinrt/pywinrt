@@ -158,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input_custom.GameControllerVersionInfo_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GameControllerVersionInfo";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GameControllerVersionInfo";
@@ -166,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input_custom.GipFirmwareUpdateProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GipFirmwareUpdateProgress";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GipFirmwareUpdateProgress";

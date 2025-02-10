@@ -10306,6 +10306,21 @@ namespace py::cpp::Windows::ApplicationModel
 
     // ----- PackageInstallProgress struct --------------------
 
+    winrt::Windows::ApplicationModel::PackageInstallProgress PackageInstallProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::ApplicationModel::PackageInstallProgress result{};
+
+        result.PercentComplete = py::convert_to<uint32_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_PackageInstallProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -10446,6 +10461,24 @@ namespace py::cpp::Windows::ApplicationModel
         _type_slots_PackageInstallProgress};
 
     // ----- PackageVersion struct --------------------
+
+    winrt::Windows::ApplicationModel::PackageVersion PackageVersion_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::ApplicationModel::PackageVersion result{};
+
+        result.Major = py::convert_to<uint16_t>(tuple, 0);
+        result.Minor = py::convert_to<uint16_t>(tuple, 1);
+        result.Build = py::convert_to<uint16_t>(tuple, 2);
+        result.Revision = py::convert_to<uint16_t>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_PackageVersion(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11129,12 +11162,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle PackageInstallProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(PackageInstallProgress_from_tuple),"winrt._winrt_windows_applicationmodel.PackageInstallProgress_from_tuple", nullptr)};
+    if (!PackageInstallProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "PackageInstallProgress_from_tuple", PackageInstallProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle PackageVersion_type{py::register_python_type(module.get(), &type_spec_PackageVersion, nullptr, nullptr)};
     if (!PackageVersion_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle PackageVersion_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(PackageVersion_from_tuple),"winrt._winrt_windows_applicationmodel.PackageVersion_from_tuple", nullptr)};
+    if (!PackageVersion_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "PackageVersion_from_tuple", PackageVersion_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

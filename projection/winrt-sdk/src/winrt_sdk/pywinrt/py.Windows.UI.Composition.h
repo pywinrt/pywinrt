@@ -1156,6 +1156,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::InkTrailPoint>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_composition.InkTrailPoint_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.InkTrailPoint";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "InkTrailPoint";

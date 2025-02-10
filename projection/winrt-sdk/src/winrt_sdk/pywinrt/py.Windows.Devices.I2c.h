@@ -88,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::I2cTransferResult>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_i2c.I2cTransferResult_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cTransferResult";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "I2cTransferResult";

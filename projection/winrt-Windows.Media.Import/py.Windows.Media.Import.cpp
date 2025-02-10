@@ -5317,6 +5317,25 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportProgress struct --------------------
 
+    winrt::Windows::Media::Import::PhotoImportProgress PhotoImportProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 5)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Media::Import::PhotoImportProgress result{};
+
+        result.ItemsImported = py::convert_to<uint32_t>(tuple, 0);
+        result.TotalItemsToImport = py::convert_to<uint32_t>(tuple, 1);
+        result.BytesImported = py::convert_to<uint64_t>(tuple, 2);
+        result.TotalBytesToImport = py::convert_to<uint64_t>(tuple, 3);
+        result.ImportProgress = py::convert_to<double>(tuple, 4);
+
+        return result;
+    }
+
     PyObject* _new_PhotoImportProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5703,6 +5722,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_import_(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle PhotoImportProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(PhotoImportProgress_from_tuple),"winrt._winrt_windows_media_import_.PhotoImportProgress_from_tuple", nullptr)};
+    if (!PhotoImportProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "PhotoImportProgress_from_tuple", PhotoImportProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

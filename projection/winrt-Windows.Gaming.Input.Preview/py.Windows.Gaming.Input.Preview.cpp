@@ -1098,6 +1098,25 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     // ----- HeadsetGeqGains struct --------------------
 
+    winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains HeadsetGeqGains_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 5)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains result{};
+
+        result.band1Gain = py::convert_to<int32_t>(tuple, 0);
+        result.band2Gain = py::convert_to<int32_t>(tuple, 1);
+        result.band3Gain = py::convert_to<int32_t>(tuple, 2);
+        result.band4Gain = py::convert_to<int32_t>(tuple, 3);
+        result.band5Gain = py::convert_to<int32_t>(tuple, 4);
+
+        return result;
+    }
+
     PyObject* _new_HeadsetGeqGains(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -1418,6 +1437,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_preview(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle HeadsetGeqGains_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(HeadsetGeqGains_from_tuple),"winrt._winrt_windows_gaming_input_preview.HeadsetGeqGains_from_tuple", nullptr)};
+    if (!HeadsetGeqGains_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "HeadsetGeqGains_from_tuple", HeadsetGeqGains_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

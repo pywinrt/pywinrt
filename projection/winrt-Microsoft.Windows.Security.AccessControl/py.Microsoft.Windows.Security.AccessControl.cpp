@@ -145,6 +145,22 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
     // ----- AppContainerNameAndAccess struct --------------------
 
+    winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess AppContainerNameAndAccess_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess result{};
+
+        result.appContainerName = py::convert_to<winrt::hstring>(tuple, 0);
+        result.accessMask = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_AppContainerNameAndAccess(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -381,6 +397,16 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_security_accesscontrol(void) noex
         return nullptr;
     }
 
+    py::pyobj_handle AppContainerNameAndAccess_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(AppContainerNameAndAccess_from_tuple),"winrt._winrt_microsoft_windows_security_accesscontrol.AppContainerNameAndAccess_from_tuple", nullptr)};
+    if (!AppContainerNameAndAccess_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "AppContainerNameAndAccess_from_tuple", AppContainerNameAndAccess_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

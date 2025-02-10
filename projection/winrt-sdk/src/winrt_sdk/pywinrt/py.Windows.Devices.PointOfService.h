@@ -1016,6 +1016,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::PointOfService::SizeUInt32>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_pointofservice.SizeUInt32_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.pointofservice.SizeUInt32";
         static constexpr const char* module_name = "winrt.windows.devices.pointofservice";
         static constexpr const char* type_name = "SizeUInt32";

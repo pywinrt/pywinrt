@@ -358,6 +358,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::DateTime>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation.DateTime_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.DateTime";
         static constexpr const char* module_name = "winrt.windows.foundation";
         static constexpr const char* type_name = "DateTime";
@@ -366,6 +367,7 @@ namespace py
     template<>
     struct py_type<winrt::event_token>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation.EventRegistrationToken_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.EventRegistrationToken";
         static constexpr const char* module_name = "winrt.windows.foundation";
         static constexpr const char* type_name = "EventRegistrationToken";
@@ -374,6 +376,7 @@ namespace py
     template<>
     struct py_type<winrt::hresult>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation.HResult_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.HResult";
         static constexpr const char* module_name = "winrt.windows.foundation";
         static constexpr const char* type_name = "HResult";
@@ -382,6 +385,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Point>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation.Point_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.Point";
         static constexpr const char* module_name = "winrt.windows.foundation";
         static constexpr const char* type_name = "Point";
@@ -390,6 +394,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Rect>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation.Rect_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.Rect";
         static constexpr const char* module_name = "winrt.windows.foundation";
         static constexpr const char* type_name = "Rect";
@@ -398,6 +403,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Size>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation.Size_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.Size";
         static constexpr const char* module_name = "winrt.windows.foundation";
         static constexpr const char* type_name = "Size";
@@ -406,6 +412,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::TimeSpan>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation.TimeSpan_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.TimeSpan";
         static constexpr const char* module_name = "winrt.windows.foundation";
         static constexpr const char* type_name = "TimeSpan";

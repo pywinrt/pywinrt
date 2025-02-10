@@ -452,6 +452,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageInstallProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_applicationmodel.PackageInstallProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageInstallProgress";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageInstallProgress";
@@ -460,6 +461,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageVersion>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_applicationmodel.PackageVersion_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageVersion";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageVersion";

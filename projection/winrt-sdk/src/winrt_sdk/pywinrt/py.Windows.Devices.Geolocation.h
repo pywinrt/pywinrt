@@ -246,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::BasicGeoposition>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_geolocation.BasicGeoposition_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.BasicGeoposition";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "BasicGeoposition";

@@ -38613,6 +38613,22 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- InkTrailPoint struct --------------------
 
+    winrt::Windows::UI::Composition::InkTrailPoint InkTrailPoint_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Composition::InkTrailPoint result{};
+
+        result.Point = py::convert_to<winrt::Windows::Foundation::Point>(tuple, 0);
+        result.Radius = py::convert_to<float>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_InkTrailPoint(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -40498,6 +40514,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle InkTrailPoint_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(InkTrailPoint_from_tuple),"winrt._winrt_windows_ui_composition.InkTrailPoint_from_tuple", nullptr)};
+    if (!InkTrailPoint_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "InkTrailPoint_from_tuple", InkTrailPoint_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

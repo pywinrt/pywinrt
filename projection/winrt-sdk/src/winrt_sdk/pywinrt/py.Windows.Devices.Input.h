@@ -149,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::MouseDelta>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_input.MouseDelta_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.input.MouseDelta";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "MouseDelta";
@@ -157,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PointerDeviceUsage>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_input.PointerDeviceUsage_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PointerDeviceUsage";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PointerDeviceUsage";

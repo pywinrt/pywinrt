@@ -244,6 +244,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicAdapterId>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_holographic.HolographicAdapterId_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicAdapterId";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicAdapterId";
@@ -252,6 +253,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameId>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_holographic.HolographicFrameId_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFrameId";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFrameId";
@@ -260,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_holographic.HolographicStereoTransform_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicStereoTransform";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicStereoTransform";

@@ -5610,6 +5610,25 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceLayoutInfo struct --------------------
 
+    winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo ResourceLayoutInfo_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 5)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo result{};
+
+        result.MajorVersion = py::convert_to<uint32_t>(tuple, 0);
+        result.MinorVersion = py::convert_to<uint32_t>(tuple, 1);
+        result.ResourceSubtreeCount = py::convert_to<uint32_t>(tuple, 2);
+        result.NamedResourceCount = py::convert_to<uint32_t>(tuple, 3);
+        result.Checksum = py::convert_to<int32_t>(tuple, 4);
+
+        return result;
+    }
+
     PyObject* _new_ResourceLayoutInfo(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -6002,6 +6021,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_core(void) noexc
         return nullptr;
     }
 
+    py::pyobj_handle ResourceLayoutInfo_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(ResourceLayoutInfo_from_tuple),"winrt._winrt_windows_applicationmodel_resources_core.ResourceLayoutInfo_from_tuple", nullptr)};
+    if (!ResourceLayoutInfo_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "ResourceLayoutInfo_from_tuple", ResourceLayoutInfo_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

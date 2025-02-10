@@ -590,7 +590,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that breaks
      * binary compatibility.
      */
-    const uint16_t runtime_abi_version_major = 3;
+    const uint16_t runtime_abi_version_major = 4;
 
     /**
      * ABI version for runtime verification.
@@ -606,6 +606,7 @@ namespace py
         PyObject* base_type,
         PyTypeObject* metaclass) noexcept;
     PyTypeObject* get_python_type(std::string_view qualified_name) noexcept;
+    void* get_struct_from_tuple_func(std::string_view capsule_name) noexcept;
     PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
     bool is_buffer_compatible(
         Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept;
@@ -623,6 +624,7 @@ namespace py
         uint16_t abi_version_minor;
         decltype(register_python_type)* register_python_type;
         decltype(get_python_type)* get_python_type;
+        decltype(get_struct_from_tuple_func)* get_struct_from_tuple_func;
         decltype(wrap_mapping_iter)* wrap_mapping_iter;
         decltype(is_buffer_compatible)* is_buffer_compatible;
         decltype(convert_datetime)* convert_datetime;
@@ -699,6 +701,13 @@ namespace py
     {
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_python_type);
         return (*PyWinRT_API->get_python_type)(qualified_name);
+    }
+
+    inline void* get_struct_from_tuple_func(
+        const std::string_view capsule_name) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_struct_from_tuple_func);
+        return (*PyWinRT_API->get_struct_from_tuple_func)(capsule_name);
     }
 
     inline PyObject* wrap_mapping_iter(PyObject* iter) noexcept
@@ -875,6 +884,23 @@ namespace py
         static_assert(!std::empty(py_type<winrt_type>::qualified_name));
 
         return get_python_type(py_type<winrt_type>::qualified_name);
+    }
+
+    /**
+     * Gets the Python wrapper type object for @p T.
+     *
+     * @tparam T The winrt type to get the wrapper type for.
+     * @returns A borrowed reference to the type or nullptr if the type was not
+     * registered.
+     */
+    template<typename T>
+    auto get_struct_from_tuple_func_for() noexcept
+    {
+        using func_t = T (*)(PyObject*);
+        static_assert(!std::empty(py_type<T>::from_tuple));
+
+        return reinterpret_cast<func_t>(
+            get_struct_from_tuple_func(py_type<T>::from_tuple));
     }
 
     /**
@@ -1707,6 +1733,17 @@ namespace py
         static auto convert_to(PyObject* obj)
         {
             throw_if_pyobj_null(obj);
+
+            if (PyTuple_Check(obj))
+            {
+                auto func = get_struct_from_tuple_func_for<T>();
+                if (!func)
+                {
+                    throw python_exception();
+                }
+
+                return func(obj);
+            }
 
             auto type = get_python_type_for<T>();
             if (!type)

@@ -1,3 +1,5 @@
+from typing import Tuple, Union
+
 from typing_extensions import override
 
 from winrt.microsoft.ui.xaml import (
@@ -20,7 +22,7 @@ from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import
     initialize,
 )
 from winrt.system import Array
-from winrt.windows.ui.xaml.interop import TypeName
+from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 
 # XAML can be inline like this or saved in a separate file. Or you can do
 # everything programmatically if you rather.
@@ -63,7 +65,7 @@ class App(Application, IXamlMetadataProvider):
         window.activate()
 
     @override
-    def get_xaml_type(self, type: TypeName) -> IXamlType:
+    def get_xaml_type(self, type: Union[TypeName, Tuple[str, TypeKind]]) -> IXamlType:
         return self._provider.get_xaml_type(type)
 
     @override

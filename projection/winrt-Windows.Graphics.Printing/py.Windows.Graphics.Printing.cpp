@@ -6258,6 +6258,24 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintPageDescription struct --------------------
 
+    winrt::Windows::Graphics::Printing::PrintPageDescription PrintPageDescription_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Printing::PrintPageDescription result{};
+
+        result.PageSize = py::convert_to<winrt::Windows::Foundation::Size>(tuple, 0);
+        result.ImageableRect = py::convert_to<winrt::Windows::Foundation::Rect>(tuple, 1);
+        result.DpiX = py::convert_to<uint32_t>(tuple, 2);
+        result.DpiY = py::convert_to<uint32_t>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_PrintPageDescription(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -6696,6 +6714,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle PrintPageDescription_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(PrintPageDescription_from_tuple),"winrt._winrt_windows_graphics_printing.PrintPageDescription_from_tuple", nullptr)};
+    if (!PrintPageDescription_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "PrintPageDescription_from_tuple", PrintPageDescription_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

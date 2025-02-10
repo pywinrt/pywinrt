@@ -55,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Color>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui.Color_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.Color";
         static constexpr const char* module_name = "winrt.windows.ui";
         static constexpr const char* type_name = "Color";
@@ -63,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowId>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui.WindowId_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.WindowId";
         static constexpr const char* module_name = "winrt.windows.ui";
         static constexpr const char* type_name = "WindowId";

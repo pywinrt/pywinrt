@@ -300,6 +300,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintPageDescription>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_printing.PrintPageDescription_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintPageDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintPageDescription";

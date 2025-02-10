@@ -4842,6 +4842,22 @@ namespace py::cpp::Windows::Security::Isolation
 
     // ----- IsolatedWindowsEnvironmentCreateProgress struct --------------------
 
+    winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress IsolatedWindowsEnvironmentCreateProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress result{};
+
+        result.State = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>(tuple, 0);
+        result.PercentComplete = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_IsolatedWindowsEnvironmentCreateProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5222,6 +5238,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle IsolatedWindowsEnvironmentCreateProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(IsolatedWindowsEnvironmentCreateProgress_from_tuple),"winrt._winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateProgress_from_tuple", nullptr)};
+    if (!IsolatedWindowsEnvironmentCreateProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "IsolatedWindowsEnvironmentCreateProgress_from_tuple", IsolatedWindowsEnvironmentCreateProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

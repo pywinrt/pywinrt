@@ -7363,6 +7363,22 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Printing3DBufferDescription struct --------------------
 
+    winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription Printing3DBufferDescription_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription result{};
+
+        result.Format = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>(tuple, 0);
+        result.Stride = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_Printing3DBufferDescription(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -7779,6 +7795,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Printing3DBufferDescription_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Printing3DBufferDescription_from_tuple),"winrt._winrt_windows_graphics_printing3d.Printing3DBufferDescription_from_tuple", nullptr)};
+    if (!Printing3DBufferDescription_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Printing3DBufferDescription_from_tuple", Printing3DBufferDescription_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

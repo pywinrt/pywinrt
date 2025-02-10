@@ -42160,6 +42160,24 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     // ----- CornerRadius struct --------------------
 
+    winrt::Microsoft::UI::Xaml::CornerRadius CornerRadius_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::CornerRadius result{};
+
+        result.TopLeft = py::convert_to<double>(tuple, 0);
+        result.TopRight = py::convert_to<double>(tuple, 1);
+        result.BottomRight = py::convert_to<double>(tuple, 2);
+        result.BottomLeft = py::convert_to<double>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_CornerRadius(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -42367,6 +42385,22 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     // ----- Duration struct --------------------
 
+    winrt::Microsoft::UI::Xaml::Duration Duration_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::Duration result{};
+
+        result.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 0);
+        result.Type = py::convert_to<winrt::Microsoft::UI::Xaml::DurationType>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_Duration(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -42530,6 +42564,22 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     // ----- GridLength struct --------------------
 
+    winrt::Microsoft::UI::Xaml::GridLength GridLength_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::GridLength result{};
+
+        result.Value = py::convert_to<double>(tuple, 0);
+        result.GridUnitType = py::convert_to<winrt::Microsoft::UI::Xaml::GridUnitType>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_GridLength(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -42692,6 +42742,24 @@ namespace py::cpp::Microsoft::UI::Xaml
         _type_slots_GridLength};
 
     // ----- Thickness struct --------------------
+
+    winrt::Microsoft::UI::Xaml::Thickness Thickness_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::Thickness result{};
+
+        result.Left = py::convert_to<double>(tuple, 0);
+        result.Top = py::convert_to<double>(tuple, 1);
+        result.Right = py::convert_to<double>(tuple, 2);
+        result.Bottom = py::convert_to<double>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_Thickness(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -44098,24 +44166,64 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle CornerRadius_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(CornerRadius_from_tuple),"winrt._winrt_microsoft_ui_xaml.CornerRadius_from_tuple", nullptr)};
+    if (!CornerRadius_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "CornerRadius_from_tuple", CornerRadius_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle Duration_type{py::register_python_type(module.get(), &type_spec_Duration, nullptr, nullptr)};
     if (!Duration_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle Duration_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Duration_from_tuple),"winrt._winrt_microsoft_ui_xaml.Duration_from_tuple", nullptr)};
+    if (!Duration_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Duration_from_tuple", Duration_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle GridLength_type{py::register_python_type(module.get(), &type_spec_GridLength, nullptr, nullptr)};
     if (!GridLength_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle GridLength_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(GridLength_from_tuple),"winrt._winrt_microsoft_ui_xaml.GridLength_from_tuple", nullptr)};
+    if (!GridLength_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "GridLength_from_tuple", GridLength_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle Thickness_type{py::register_python_type(module.get(), &type_spec_Thickness, nullptr, nullptr)};
     if (!Thickness_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle Thickness_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Thickness_from_tuple),"winrt._winrt_microsoft_ui_xaml.Thickness_from_tuple", nullptr)};
+    if (!Thickness_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Thickness_from_tuple", Thickness_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

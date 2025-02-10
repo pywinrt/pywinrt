@@ -132,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioChangeCount>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_gpio.GpioChangeCount_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioChangeCount";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioChangeCount";
@@ -140,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioChangeRecord>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_gpio.GpioChangeRecord_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioChangeRecord";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioChangeRecord";

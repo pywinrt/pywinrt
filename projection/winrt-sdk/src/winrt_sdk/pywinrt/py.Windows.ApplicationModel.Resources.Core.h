@@ -159,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_applicationmodel_resources_core.ResourceLayoutInfo_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceLayoutInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceLayoutInfo";

@@ -1421,6 +1421,21 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     // ----- PackageDependencyContextId struct --------------------
 
+    winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId PackageDependencyContextId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId result{};
+
+        result.Id = py::convert_to<uint64_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_PackageDependencyContextId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -1671,6 +1686,16 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependenc
         return nullptr;
     }
 
+    py::pyobj_handle PackageDependencyContextId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(PackageDependencyContextId_from_tuple),"winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContextId_from_tuple", nullptr)};
+    if (!PackageDependencyContextId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "PackageDependencyContextId_from_tuple", PackageDependencyContextId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

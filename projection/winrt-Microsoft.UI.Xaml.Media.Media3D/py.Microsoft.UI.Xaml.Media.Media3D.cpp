@@ -2197,6 +2197,36 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
 
     // ----- Matrix3D struct --------------------
 
+    winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D Matrix3D_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 16)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D result{};
+
+        result.M11 = py::convert_to<double>(tuple, 0);
+        result.M12 = py::convert_to<double>(tuple, 1);
+        result.M13 = py::convert_to<double>(tuple, 2);
+        result.M14 = py::convert_to<double>(tuple, 3);
+        result.M21 = py::convert_to<double>(tuple, 4);
+        result.M22 = py::convert_to<double>(tuple, 5);
+        result.M23 = py::convert_to<double>(tuple, 6);
+        result.M24 = py::convert_to<double>(tuple, 7);
+        result.M31 = py::convert_to<double>(tuple, 8);
+        result.M32 = py::convert_to<double>(tuple, 9);
+        result.M33 = py::convert_to<double>(tuple, 10);
+        result.M34 = py::convert_to<double>(tuple, 11);
+        result.OffsetX = py::convert_to<double>(tuple, 12);
+        result.OffsetY = py::convert_to<double>(tuple, 13);
+        result.OffsetZ = py::convert_to<double>(tuple, 14);
+        result.M44 = py::convert_to<double>(tuple, 15);
+
+        return result;
+    }
+
     PyObject* _new_Matrix3D(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -2825,6 +2855,16 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Matrix3D_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Matrix3D_from_tuple),"winrt._winrt_microsoft_ui_xaml_media_media3d.Matrix3D_from_tuple", nullptr)};
+    if (!Matrix3D_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Matrix3D_from_tuple", Matrix3D_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

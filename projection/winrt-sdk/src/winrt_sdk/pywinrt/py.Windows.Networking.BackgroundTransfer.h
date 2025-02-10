@@ -214,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_networking_backgroundtransfer.BackgroundDownloadProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer.BackgroundDownloadProgress";
         static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
         static constexpr const char* type_name = "BackgroundDownloadProgress";
@@ -222,6 +223,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferFileRange_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer.BackgroundTransferFileRange";
         static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
         static constexpr const char* type_name = "BackgroundTransferFileRange";
@@ -230,6 +232,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_networking_backgroundtransfer.BackgroundUploadProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.networking.backgroundtransfer.BackgroundUploadProgress";
         static constexpr const char* module_name = "winrt.windows.networking.backgroundtransfer";
         static constexpr const char* type_name = "BackgroundUploadProgress";

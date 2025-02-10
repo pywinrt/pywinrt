@@ -551,6 +551,22 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     // ----- Direct3DMultisampleDescription struct --------------------
 
+    winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription Direct3DMultisampleDescription_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription result{};
+
+        result.Count = py::convert_to<int32_t>(tuple, 0);
+        result.Quality = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_Direct3DMultisampleDescription(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -713,6 +729,24 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         _type_slots_Direct3DMultisampleDescription};
 
     // ----- Direct3DSurfaceDescription struct --------------------
+
+    winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription Direct3DSurfaceDescription_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription result{};
+
+        result.Width = py::convert_to<int32_t>(tuple, 0);
+        result.Height = py::convert_to<int32_t>(tuple, 1);
+        result.Format = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(tuple, 2);
+        result.MultisampleDescription = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_Direct3DSurfaceDescription(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1010,12 +1044,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx_direct3d11(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Direct3DMultisampleDescription_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Direct3DMultisampleDescription_from_tuple),"winrt._winrt_windows_graphics_directx_direct3d11.Direct3DMultisampleDescription_from_tuple", nullptr)};
+    if (!Direct3DMultisampleDescription_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Direct3DMultisampleDescription_from_tuple", Direct3DMultisampleDescription_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle Direct3DSurfaceDescription_type{py::register_python_type(module.get(), &type_spec_Direct3DSurfaceDescription, nullptr, nullptr)};
     if (!Direct3DSurfaceDescription_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle Direct3DSurfaceDescription_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Direct3DSurfaceDescription_from_tuple),"winrt._winrt_windows_graphics_directx_direct3d11.Direct3DSurfaceDescription_from_tuple", nullptr)};
+    if (!Direct3DSurfaceDescription_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Direct3DSurfaceDescription_from_tuple", Direct3DSurfaceDescription_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

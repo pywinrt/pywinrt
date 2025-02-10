@@ -156,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_markup.XamlBinaryWriterErrorInformation_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.XamlBinaryWriterErrorInformation";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "XamlBinaryWriterErrorInformation";
@@ -164,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_markup.XmlnsDefinition_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.XmlnsDefinition";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "XmlnsDefinition";

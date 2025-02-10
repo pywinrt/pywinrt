@@ -11362,6 +11362,22 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- DeploymentProgress struct --------------------
 
+    winrt::Windows::Management::Deployment::DeploymentProgress DeploymentProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Management::Deployment::DeploymentProgress result{};
+
+        result.state = py::convert_to<winrt::Windows::Management::Deployment::DeploymentProgressState>(tuple, 0);
+        result.percentage = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_DeploymentProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -11748,6 +11764,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle DeploymentProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(DeploymentProgress_from_tuple),"winrt._winrt_windows_management_deployment.DeploymentProgress_from_tuple", nullptr)};
+    if (!DeploymentProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "DeploymentProgress_from_tuple", DeploymentProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

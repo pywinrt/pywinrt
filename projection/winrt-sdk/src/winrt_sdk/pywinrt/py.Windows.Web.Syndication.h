@@ -180,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::RetrievalProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_web_syndication.RetrievalProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.RetrievalProgress";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "RetrievalProgress";
@@ -188,6 +189,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::TransferProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_web_syndication.TransferProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.TransferProgress";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "TransferProgress";

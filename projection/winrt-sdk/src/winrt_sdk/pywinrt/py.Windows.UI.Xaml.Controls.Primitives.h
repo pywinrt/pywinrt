@@ -662,6 +662,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml_controls_primitives.GeneratorPosition_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.GeneratorPosition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "GeneratorPosition";

@@ -8863,6 +8863,26 @@ namespace py::cpp::Windows::Services::Store
 
     // ----- StorePackageUpdateStatus struct --------------------
 
+    winrt::Windows::Services::Store::StorePackageUpdateStatus StorePackageUpdateStatus_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 6)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Services::Store::StorePackageUpdateStatus result{};
+
+        result.PackageFamilyName = py::convert_to<winrt::hstring>(tuple, 0);
+        result.PackageDownloadSizeInBytes = py::convert_to<uint64_t>(tuple, 1);
+        result.PackageBytesDownloaded = py::convert_to<uint64_t>(tuple, 2);
+        result.PackageDownloadProgress = py::convert_to<double>(tuple, 3);
+        result.TotalDownloadProgress = py::convert_to<double>(tuple, 4);
+        result.PackageUpdateState = py::convert_to<winrt::Windows::Services::Store::StorePackageUpdateState>(tuple, 5);
+
+        return result;
+    }
+
     PyObject* _new_StorePackageUpdateStatus(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -9379,6 +9399,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_store(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle StorePackageUpdateStatus_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(StorePackageUpdateStatus_from_tuple),"winrt._winrt_windows_services_store.StorePackageUpdateStatus_from_tuple", nullptr)};
+    if (!StorePackageUpdateStatus_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "StorePackageUpdateStatus_from_tuple", StorePackageUpdateStatus_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }
