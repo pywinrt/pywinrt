@@ -11881,7 +11881,7 @@ namespace py::cpp::TestComponent
 
     static PyMethodDef _methods_Blittable[] = {
         { "_assign_array_", _assign_array_Blittable, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Blittable), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Blittable)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Blittable), METH_NOARGS, nullptr },
         { }};
 
@@ -12274,7 +12274,7 @@ namespace py::cpp::TestComponent
 
     static PyMethodDef _methods_Nested[] = {
         { "_assign_array_", _assign_array_Nested, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Nested), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Nested)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Nested), METH_NOARGS, nullptr },
         { }};
 
@@ -12531,7 +12531,7 @@ namespace py::cpp::TestComponent
 
     static PyMethodDef _methods_NonBlittable[] = {
         { "_assign_array_", _assign_array_NonBlittable, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_NonBlittable), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_NonBlittable)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_NonBlittable), METH_NOARGS, nullptr },
         { }};
 

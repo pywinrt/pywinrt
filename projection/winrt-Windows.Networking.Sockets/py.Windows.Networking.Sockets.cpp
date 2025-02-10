@@ -14656,7 +14656,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef _methods_BandwidthStatistics[] = {
         { "_assign_array_", _assign_array_BandwidthStatistics, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BandwidthStatistics), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_BandwidthStatistics)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_BandwidthStatistics), METH_NOARGS, nullptr },
         { }};
 
@@ -14993,7 +14993,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef _methods_RoundTripTimeStatistics[] = {
         { "_assign_array_", _assign_array_RoundTripTimeStatistics, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RoundTripTimeStatistics), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_RoundTripTimeStatistics)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_RoundTripTimeStatistics), METH_NOARGS, nullptr },
         { }};
 

@@ -4943,7 +4943,7 @@ namespace py::cpp::Windows::UI
 
     static PyMethodDef _methods_Color[] = {
         { "_assign_array_", _assign_array_Color, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Color), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Color)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Color), METH_NOARGS, nullptr },
         { }};
 
@@ -5185,7 +5185,7 @@ namespace py::cpp::Windows::UI
 
     static PyMethodDef _methods_WindowId[] = {
         { "_assign_array_", _assign_array_WindowId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_WindowId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_WindowId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* WindowId_get_Value(py::wrapper::Windows::UI::WindowId* self, void* /*unused*/) noexcept

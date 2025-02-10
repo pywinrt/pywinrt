@@ -10403,7 +10403,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyMethodDef _methods_PackageInstallProgress[] = {
         { "_assign_array_", _assign_array_PackageInstallProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageInstallProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_PackageInstallProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PackageInstallProgress_get_PercentComplete(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, void* /*unused*/) noexcept
@@ -10639,7 +10639,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyMethodDef _methods_PackageVersion[] = {
         { "_assign_array_", _assign_array_PackageVersion, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageVersion), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_PackageVersion)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_PackageVersion), METH_NOARGS, nullptr },
         { }};
 

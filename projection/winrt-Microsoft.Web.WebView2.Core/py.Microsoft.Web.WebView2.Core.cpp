@@ -21768,7 +21768,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyMethodDef _methods_CoreWebView2PhysicalKeyStatus[] = {
         { "_assign_array_", _assign_array_CoreWebView2PhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CoreWebView2PhysicalKeyStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_CoreWebView2PhysicalKeyStatus)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_CoreWebView2PhysicalKeyStatus), METH_NOARGS, nullptr },
         { }};
 

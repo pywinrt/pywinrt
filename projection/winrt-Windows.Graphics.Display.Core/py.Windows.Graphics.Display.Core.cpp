@@ -1148,7 +1148,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyMethodDef _methods_HdmiDisplayHdr2086Metadata[] = {
         { "_assign_array_", _assign_array_HdmiDisplayHdr2086Metadata, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HdmiDisplayHdr2086Metadata), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_HdmiDisplayHdr2086Metadata)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_HdmiDisplayHdr2086Metadata), METH_NOARGS, nullptr },
         { }};
 

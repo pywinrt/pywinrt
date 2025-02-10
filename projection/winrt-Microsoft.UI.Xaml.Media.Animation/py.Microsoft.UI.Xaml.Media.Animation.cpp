@@ -27586,7 +27586,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyMethodDef _methods_KeyTime[] = {
         { "_assign_array_", _assign_array_KeyTime, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_KeyTime), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_KeyTime)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* KeyTime_get_TimeSpan(py::wrapper::Microsoft::UI::Xaml::Media::Animation::KeyTime* self, void* /*unused*/) noexcept
@@ -27810,7 +27810,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
     static PyMethodDef _methods_RepeatBehavior[] = {
         { "_assign_array_", _assign_array_RepeatBehavior, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RepeatBehavior), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_RepeatBehavior)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_RepeatBehavior), METH_NOARGS, nullptr },
         { }};
 

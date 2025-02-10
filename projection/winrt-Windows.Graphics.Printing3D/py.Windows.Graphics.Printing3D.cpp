@@ -7491,7 +7491,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyMethodDef _methods_Printing3DBufferDescription[] = {
         { "_assign_array_", _assign_array_Printing3DBufferDescription, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Printing3DBufferDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Printing3DBufferDescription)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Printing3DBufferDescription), METH_NOARGS, nullptr },
         { }};
 

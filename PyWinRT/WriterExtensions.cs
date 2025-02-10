@@ -369,7 +369,7 @@ static class WriterExtensions
         if (type.Category == Category.Struct)
         {
             w.WriteLine(
-                $"{{ \"__replace__\", reinterpret_cast<PyCFunction>(_replace_{type.Name}), METH_VARARGS | METH_KEYWORDS, nullptr }},"
+                $"{{ \"__replace__\", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_{type.Name})), METH_VARARGS | METH_KEYWORDS, nullptr }},"
             );
 
             if (type.Type.Fields.Count > 1)

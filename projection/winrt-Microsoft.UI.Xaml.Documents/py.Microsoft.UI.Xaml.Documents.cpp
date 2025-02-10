@@ -14956,7 +14956,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
 
     static PyMethodDef _methods_TextRange[] = {
         { "_assign_array_", _assign_array_TextRange, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TextRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_TextRange)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_TextRange), METH_NOARGS, nullptr },
         { }};
 

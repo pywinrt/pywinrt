@@ -3150,7 +3150,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyMethodDef _methods_InjectedInputPoint[] = {
         { "_assign_array_", _assign_array_InjectedInputPoint, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputPoint), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_InjectedInputPoint)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_InjectedInputPoint), METH_NOARGS, nullptr },
         { }};
 
@@ -3419,7 +3419,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyMethodDef _methods_InjectedInputPointerInfo[] = {
         { "_assign_array_", _assign_array_InjectedInputPointerInfo, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputPointerInfo), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_InjectedInputPointerInfo)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_InjectedInputPointerInfo), METH_NOARGS, nullptr },
         { }};
 
@@ -3736,7 +3736,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyMethodDef _methods_InjectedInputRectangle[] = {
         { "_assign_array_", _assign_array_InjectedInputRectangle, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_InjectedInputRectangle), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_InjectedInputRectangle)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_InjectedInputRectangle), METH_NOARGS, nullptr },
         { }};
 

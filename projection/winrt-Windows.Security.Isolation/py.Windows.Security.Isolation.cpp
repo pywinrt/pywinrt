@@ -4970,7 +4970,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyMethodDef _methods_IsolatedWindowsEnvironmentCreateProgress[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentCreateProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_IsolatedWindowsEnvironmentCreateProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_IsolatedWindowsEnvironmentCreateProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_IsolatedWindowsEnvironmentCreateProgress), METH_NOARGS, nullptr },
         { }};
 

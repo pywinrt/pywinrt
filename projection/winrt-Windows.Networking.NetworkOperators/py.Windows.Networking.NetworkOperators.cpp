@@ -20817,7 +20817,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef _methods_ESimProfileInstallProgress[] = {
         { "_assign_array_", _assign_array_ESimProfileInstallProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ESimProfileInstallProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_ESimProfileInstallProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_ESimProfileInstallProgress), METH_NOARGS, nullptr },
         { }};
 
@@ -21050,7 +21050,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef _methods_ProfileUsage[] = {
         { "_assign_array_", _assign_array_ProfileUsage, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ProfileUsage), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_ProfileUsage)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_ProfileUsage), METH_NOARGS, nullptr },
         { }};
 

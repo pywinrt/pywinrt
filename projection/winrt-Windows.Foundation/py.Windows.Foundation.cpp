@@ -10963,7 +10963,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_EventRegistrationToken[] = {
         { "_assign_array_", _assign_array_EventRegistrationToken, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_EventRegistrationToken), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_EventRegistrationToken)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* EventRegistrationToken_get_Value(py::wrapper::Windows::Foundation::EventRegistrationToken* self, void* /*unused*/) noexcept
@@ -11144,7 +11144,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_HResult[] = {
         { "_assign_array_", _assign_array_HResult, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HResult), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_HResult)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HResult_get_Value(py::wrapper::Windows::Foundation::HResult* self, void* /*unused*/) noexcept
@@ -11356,7 +11356,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_Point[] = {
         { "_assign_array_", _assign_array_Point, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Point), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Point)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Point), METH_NOARGS, nullptr },
         { }};
 
@@ -11613,7 +11613,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_Rect[] = {
         { "_assign_array_", _assign_array_Rect, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Rect), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Rect)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Rect), METH_NOARGS, nullptr },
         { }};
 
@@ -11886,7 +11886,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyMethodDef _methods_Size[] = {
         { "_assign_array_", _assign_array_Size, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Size), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Size)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Size), METH_NOARGS, nullptr },
         { }};
 

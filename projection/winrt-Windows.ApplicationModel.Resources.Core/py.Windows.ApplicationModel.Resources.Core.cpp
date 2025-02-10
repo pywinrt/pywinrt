@@ -5774,7 +5774,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyMethodDef _methods_ResourceLayoutInfo[] = {
         { "_assign_array_", _assign_array_ResourceLayoutInfo, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ResourceLayoutInfo), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_ResourceLayoutInfo)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_ResourceLayoutInfo), METH_NOARGS, nullptr },
         { }};
 

@@ -26793,7 +26793,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_MseTimeRange[] = {
         { "_assign_array_", _assign_array_MseTimeRange, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_MseTimeRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_MseTimeRange)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_MseTimeRange), METH_NOARGS, nullptr },
         { }};
 
@@ -27026,7 +27026,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_TimedTextDouble[] = {
         { "_assign_array_", _assign_array_TimedTextDouble, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextDouble), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_TimedTextDouble)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_TimedTextDouble), METH_NOARGS, nullptr },
         { }};
 
@@ -27295,7 +27295,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_TimedTextPadding[] = {
         { "_assign_array_", _assign_array_TimedTextPadding, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextPadding), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_TimedTextPadding)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_TimedTextPadding), METH_NOARGS, nullptr },
         { }};
 
@@ -27600,7 +27600,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_TimedTextPoint[] = {
         { "_assign_array_", _assign_array_TimedTextPoint, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextPoint), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_TimedTextPoint)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_TimedTextPoint), METH_NOARGS, nullptr },
         { }};
 
@@ -27865,7 +27865,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef _methods_TimedTextSize[] = {
         { "_assign_array_", _assign_array_TimedTextSize, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TimedTextSize), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_TimedTextSize)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_TimedTextSize), METH_NOARGS, nullptr },
         { }};
 

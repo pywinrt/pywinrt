@@ -13114,7 +13114,7 @@ namespace py::cpp::Windows::Devices::Sms
 
     static PyMethodDef _methods_SmsEncodedLength[] = {
         { "_assign_array_", _assign_array_SmsEncodedLength, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SmsEncodedLength), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_SmsEncodedLength)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_SmsEncodedLength), METH_NOARGS, nullptr },
         { }};
 

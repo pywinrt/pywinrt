@@ -8062,7 +8062,7 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyMethodDef _methods_DisplayPresentationRate[] = {
         { "_assign_array_", _assign_array_DisplayPresentationRate, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayPresentationRate), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_DisplayPresentationRate)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_DisplayPresentationRate), METH_NOARGS, nullptr },
         { }};
 

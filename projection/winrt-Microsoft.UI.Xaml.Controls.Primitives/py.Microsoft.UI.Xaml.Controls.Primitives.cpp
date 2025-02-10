@@ -42122,7 +42122,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     static PyMethodDef _methods_GeneratorPosition[] = {
         { "_assign_array_", _assign_array_GeneratorPosition, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GeneratorPosition), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_GeneratorPosition)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_GeneratorPosition), METH_NOARGS, nullptr },
         { }};
 

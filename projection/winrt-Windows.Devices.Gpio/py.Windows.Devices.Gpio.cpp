@@ -2269,7 +2269,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyMethodDef _methods_GpioChangeCount[] = {
         { "_assign_array_", _assign_array_GpioChangeCount, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GpioChangeCount), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_GpioChangeCount)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_GpioChangeCount), METH_NOARGS, nullptr },
         { }};
 
@@ -2502,7 +2502,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyMethodDef _methods_GpioChangeRecord[] = {
         { "_assign_array_", _assign_array_GpioChangeRecord, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GpioChangeRecord), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_GpioChangeRecord)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_GpioChangeRecord), METH_NOARGS, nullptr },
         { }};
 

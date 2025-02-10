@@ -6436,7 +6436,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyMethodDef _methods_NetworkUsageStates[] = {
         { "_assign_array_", _assign_array_NetworkUsageStates, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_NetworkUsageStates), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_NetworkUsageStates)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_NetworkUsageStates), METH_NOARGS, nullptr },
         { }};
 

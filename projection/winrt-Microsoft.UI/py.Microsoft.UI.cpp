@@ -5163,7 +5163,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyMethodDef _methods_DisplayId[] = {
         { "_assign_array_", _assign_array_DisplayId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_DisplayId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* DisplayId_get_Value(py::wrapper::Microsoft::UI::DisplayId* self, void* /*unused*/) noexcept
@@ -5344,7 +5344,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyMethodDef _methods_IconId[] = {
         { "_assign_array_", _assign_array_IconId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_IconId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_IconId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* IconId_get_Value(py::wrapper::Microsoft::UI::IconId* self, void* /*unused*/) noexcept
@@ -5525,7 +5525,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyMethodDef _methods_WindowId[] = {
         { "_assign_array_", _assign_array_WindowId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_WindowId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_WindowId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* WindowId_get_Value(py::wrapper::Microsoft::UI::WindowId* self, void* /*unused*/) noexcept

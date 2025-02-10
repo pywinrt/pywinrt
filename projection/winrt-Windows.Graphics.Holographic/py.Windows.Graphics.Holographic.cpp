@@ -6098,7 +6098,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyMethodDef _methods_HolographicAdapterId[] = {
         { "_assign_array_", _assign_array_HolographicAdapterId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HolographicAdapterId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_HolographicAdapterId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_HolographicAdapterId), METH_NOARGS, nullptr },
         { }};
 
@@ -6300,7 +6300,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyMethodDef _methods_HolographicFrameId[] = {
         { "_assign_array_", _assign_array_HolographicFrameId, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HolographicFrameId), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_HolographicFrameId)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HolographicFrameId_get_Value(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, void* /*unused*/) noexcept
@@ -6512,7 +6512,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static PyMethodDef _methods_HolographicStereoTransform[] = {
         { "_assign_array_", _assign_array_HolographicStereoTransform, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HolographicStereoTransform), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_HolographicStereoTransform)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_HolographicStereoTransform), METH_NOARGS, nullptr },
         { }};
 

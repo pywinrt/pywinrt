@@ -4243,7 +4243,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     static PyMethodDef _methods_CoreTextRange[] = {
         { "_assign_array_", _assign_array_CoreTextRange, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CoreTextRange), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_CoreTextRange)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_CoreTextRange), METH_NOARGS, nullptr },
         { }};
 

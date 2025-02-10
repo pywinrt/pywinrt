@@ -25459,7 +25459,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyMethodDef _methods_Matrix[] = {
         { "_assign_array_", _assign_array_Matrix, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Matrix), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Matrix)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Matrix), METH_NOARGS, nullptr },
         { }};
 

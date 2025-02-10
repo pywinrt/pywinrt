@@ -3774,7 +3774,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyMethodDef _methods_GameControllerVersionInfo[] = {
         { "_assign_array_", _assign_array_GameControllerVersionInfo, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GameControllerVersionInfo), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_GameControllerVersionInfo)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_GameControllerVersionInfo), METH_NOARGS, nullptr },
         { }};
 
@@ -4047,7 +4047,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyMethodDef _methods_GipFirmwareUpdateProgress[] = {
         { "_assign_array_", _assign_array_GipFirmwareUpdateProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GipFirmwareUpdateProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_GipFirmwareUpdateProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_GipFirmwareUpdateProgress), METH_NOARGS, nullptr },
         { }};
 

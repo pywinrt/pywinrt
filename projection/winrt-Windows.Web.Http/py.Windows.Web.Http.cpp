@@ -10013,7 +10013,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyMethodDef _methods_HttpProgress[] = {
         { "_assign_array_", _assign_array_HttpProgress, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HttpProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_HttpProgress)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_HttpProgress), METH_NOARGS, nullptr },
         { }};
 

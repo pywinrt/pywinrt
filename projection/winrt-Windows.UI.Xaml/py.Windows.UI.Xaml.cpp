@@ -40697,7 +40697,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyMethodDef _methods_CornerRadius[] = {
         { "_assign_array_", _assign_array_CornerRadius, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CornerRadius), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_CornerRadius)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_CornerRadius), METH_NOARGS, nullptr },
         { }};
 
@@ -40970,7 +40970,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyMethodDef _methods_Duration[] = {
         { "_assign_array_", _assign_array_Duration, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Duration), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Duration)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Duration), METH_NOARGS, nullptr },
         { }};
 
@@ -41203,7 +41203,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyMethodDef _methods_GridLength[] = {
         { "_assign_array_", _assign_array_GridLength, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GridLength), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_GridLength)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_GridLength), METH_NOARGS, nullptr },
         { }};
 
@@ -41460,7 +41460,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     static PyMethodDef _methods_Thickness[] = {
         { "_assign_array_", _assign_array_Thickness, METH_O | METH_STATIC, nullptr },
-        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Thickness), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_Thickness)), METH_VARARGS | METH_KEYWORDS, nullptr },
         { "unpack", reinterpret_cast<PyCFunction>(unpack_Thickness), METH_NOARGS, nullptr },
         { }};
 
