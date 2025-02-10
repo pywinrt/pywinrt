@@ -14,7 +14,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -393,7 +393,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyObject* ISysStorageProviderHandlerFactory_GetEventSource(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -436,7 +436,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyObject* ISysStorageProviderHandlerFactory_GetHttpRequestProvider(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -679,7 +679,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyObject* ISysStorageProviderHttpRequestProvider_SendRequestAsync(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

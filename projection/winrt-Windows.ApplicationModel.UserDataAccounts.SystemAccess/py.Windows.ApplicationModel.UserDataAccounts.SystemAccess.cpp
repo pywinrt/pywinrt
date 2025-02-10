@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3172,7 +3172,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyObject* UserDataAccountSystemAccessManager_AddAndShowDeviceAccountsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3214,7 +3214,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyObject* UserDataAccountSystemAccessManager_CreateDeviceAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3256,7 +3256,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyObject* UserDataAccountSystemAccessManager_DeleteDeviceAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3298,7 +3298,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyObject* UserDataAccountSystemAccessManager_GetDeviceAccountConfigurationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3340,7 +3340,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyObject* UserDataAccountSystemAccessManager_SuppressLocalAccountWithAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

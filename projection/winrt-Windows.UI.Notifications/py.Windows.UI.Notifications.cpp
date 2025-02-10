@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -301,7 +301,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -490,7 +490,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdateManager_CreateBadgeUpdaterForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -530,7 +530,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdateManager_CreateBadgeUpdaterForApplicationWithId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -572,7 +572,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdateManager_CreateBadgeUpdaterForSecondaryTile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -614,7 +614,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdateManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -656,7 +656,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdateManager_GetTemplateContent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -760,7 +760,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdateManagerForUser_CreateBadgeUpdaterForApplication(py::wrapper::Windows::UI::Notifications::BadgeUpdateManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -800,7 +800,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdateManagerForUser_CreateBadgeUpdaterForApplicationWithId(py::wrapper::Windows::UI::Notifications::BadgeUpdateManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -842,7 +842,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdateManagerForUser_CreateBadgeUpdaterForSecondaryTile(py::wrapper::Windows::UI::Notifications::BadgeUpdateManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -981,7 +981,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdater_Clear(py::wrapper::Windows::UI::Notifications::BadgeUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1022,7 +1022,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdater_StartPeriodicUpdate(py::wrapper::Windows::UI::Notifications::BadgeUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1066,7 +1066,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdater_StartPeriodicUpdateAtTime(py::wrapper::Windows::UI::Notifications::BadgeUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1111,7 +1111,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdater_StopPeriodicUpdate(py::wrapper::Windows::UI::Notifications::BadgeUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1152,7 +1152,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* BadgeUpdater_Update(py::wrapper::Windows::UI::Notifications::BadgeUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2207,7 +2207,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2441,7 +2441,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* NotificationBinding_GetTextElements(py::wrapper::Windows::UI::Notifications::NotificationBinding* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2707,7 +2707,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2933,7 +2933,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* NotificationVisual_GetBinding(py::wrapper::Windows::UI::Notifications::NotificationVisual* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3131,7 +3131,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -3491,7 +3491,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -4220,7 +4220,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ScheduledToastNotificationShowingEventArgs_GetDeferral(py::wrapper::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4510,7 +4510,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -4699,7 +4699,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4739,7 +4739,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForApplicationWithId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4781,7 +4781,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForSecondaryTile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4823,7 +4823,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdateManager_GetTemplateContent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4926,7 +4926,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdater_Clear(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4967,7 +4967,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdater_StartPeriodicUpdate(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5011,7 +5011,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdater_StartPeriodicUpdateAtTime(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5056,7 +5056,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdater_StopPeriodicUpdate(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5097,7 +5097,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileFlyoutUpdater_Update(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5230,7 +5230,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -5489,7 +5489,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdateManager_CreateTileUpdaterForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5529,7 +5529,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdateManager_CreateTileUpdaterForApplicationWithId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5571,7 +5571,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdateManager_CreateTileUpdaterForSecondaryTile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5613,7 +5613,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdateManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5655,7 +5655,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdateManager_GetTemplateContent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5759,7 +5759,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdateManagerForUser_CreateTileUpdaterForApplication(py::wrapper::Windows::UI::Notifications::TileUpdateManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5799,7 +5799,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdateManagerForUser_CreateTileUpdaterForApplicationWithId(py::wrapper::Windows::UI::Notifications::TileUpdateManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5841,7 +5841,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdateManagerForUser_CreateTileUpdaterForSecondaryTile(py::wrapper::Windows::UI::Notifications::TileUpdateManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5980,7 +5980,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_AddToSchedule(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6023,7 +6023,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_Clear(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6064,7 +6064,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_EnableNotificationQueue(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6107,7 +6107,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_EnableNotificationQueueForSquare150x150(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6150,7 +6150,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_EnableNotificationQueueForSquare310x310(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6193,7 +6193,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_EnableNotificationQueueForWide310x150(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6236,7 +6236,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_GetScheduledTileNotifications(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6276,7 +6276,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_RemoveFromSchedule(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6319,7 +6319,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_StartPeriodicUpdate(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6363,7 +6363,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_StartPeriodicUpdateAtTime(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6408,7 +6408,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_StartPeriodicUpdateBatch(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6452,7 +6452,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_StartPeriodicUpdateBatchAtTime(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6497,7 +6497,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_StopPeriodicUpdate(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6538,7 +6538,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* TileUpdater_Update(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6805,7 +6805,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -7145,7 +7145,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastCollectionManager_FindAllToastCollectionsAsync(py::wrapper::Windows::UI::Notifications::ToastCollectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7185,7 +7185,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastCollectionManager_GetToastCollectionAsync(py::wrapper::Windows::UI::Notifications::ToastCollectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7227,7 +7227,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastCollectionManager_RemoveAllToastCollectionsAsync(py::wrapper::Windows::UI::Notifications::ToastCollectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7267,7 +7267,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastCollectionManager_RemoveToastCollectionAsync(py::wrapper::Windows::UI::Notifications::ToastCollectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7309,7 +7309,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastCollectionManager_SaveToastCollectionAsync(py::wrapper::Windows::UI::Notifications::ToastCollectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7660,7 +7660,7 @@ namespace py::cpp::Windows::UI::Notifications
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8743,7 +8743,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_Clear(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8784,7 +8784,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_ClearWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8827,7 +8827,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_GetHistory(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8867,7 +8867,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_GetHistoryWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8909,7 +8909,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_Remove(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8952,7 +8952,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_RemoveGroup(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8995,7 +8995,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_RemoveGroupWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9039,7 +9039,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_RemoveGroupedTag(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9083,7 +9083,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationHistory_RemoveGroupedTagWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9317,7 +9317,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManager_ConfigureNotificationMirroring(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9360,7 +9360,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManager_CreateToastNotifier(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9400,7 +9400,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManager_CreateToastNotifierWithId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9442,7 +9442,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9482,7 +9482,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9524,7 +9524,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManager_GetTemplateContent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9660,7 +9660,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManagerForUser_CreateToastNotifier(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9700,7 +9700,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManagerForUser_CreateToastNotifierWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9742,7 +9742,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManagerForUser_GetHistoryForToastCollectionIdAsync(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9784,7 +9784,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManagerForUser_GetToastCollectionManager(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9824,7 +9824,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManagerForUser_GetToastCollectionManagerWithAppId(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9866,7 +9866,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotificationManagerForUser_GetToastNotifierForToastCollectionIdAsync(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10137,7 +10137,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotifier_AddToSchedule(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10180,7 +10180,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotifier_GetScheduledToastNotifications(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10220,7 +10220,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotifier_Hide(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10263,7 +10263,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotifier_RemoveFromSchedule(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10306,7 +10306,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotifier_Show(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10349,7 +10349,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotifier_UpdateWithTag(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10392,7 +10392,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyObject* ToastNotifier_UpdateWithTagAndGroup(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {

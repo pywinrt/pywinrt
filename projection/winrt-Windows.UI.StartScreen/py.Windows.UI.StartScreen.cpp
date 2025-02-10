@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpList_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpList_LoadCurrentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpList_SaveAsync(py::wrapper::Windows::UI::StartScreen::JumpList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -331,7 +331,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_CreateSeparator(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -371,7 +371,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_CreateWithArguments(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -864,7 +864,7 @@ namespace py::cpp::Windows::UI::StartScreen
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 5)
         {
             try
@@ -970,7 +970,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_Exists(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1012,7 +1012,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1052,7 +1052,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_FindAllForApplicationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1094,7 +1094,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_FindAllForPackageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1134,7 +1134,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_RequestCreateAsync(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1174,7 +1174,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_RequestCreateAsyncWithPoint(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1216,7 +1216,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_RequestCreateAsyncWithRect(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1258,7 +1258,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_RequestCreateAsyncWithRectAndPlacement(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1301,7 +1301,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_RequestDeleteAsync(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1341,7 +1341,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_RequestDeleteAsyncWithPoint(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1383,7 +1383,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_RequestDeleteAsyncWithRect(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1425,7 +1425,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_RequestDeleteAsyncWithRectAndPlacement(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1468,7 +1468,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_UpdateAsync(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3617,7 +3617,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* StartScreenManager_ContainsAppListEntryAsync(py::wrapper::Windows::UI::StartScreen::StartScreenManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3659,7 +3659,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* StartScreenManager_ContainsSecondaryTileAsync(py::wrapper::Windows::UI::StartScreen::StartScreenManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3701,7 +3701,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* StartScreenManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3741,7 +3741,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* StartScreenManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3783,7 +3783,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* StartScreenManager_RequestAddAppListEntryAsync(py::wrapper::Windows::UI::StartScreen::StartScreenManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3825,7 +3825,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* StartScreenManager_SupportsAppListEntry(py::wrapper::Windows::UI::StartScreen::StartScreenManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3867,7 +3867,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* StartScreenManager_TryRemoveSecondaryTileAsync(py::wrapper::Windows::UI::StartScreen::StartScreenManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4304,7 +4304,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* VisualElementsRequest_GetDeferral(py::wrapper::Windows::UI::StartScreen::VisualElementsRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4501,7 +4501,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* VisualElementsRequestDeferral_Complete(py::wrapper::Windows::UI::StartScreen::VisualElementsRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

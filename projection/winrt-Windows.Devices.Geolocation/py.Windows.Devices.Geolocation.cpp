@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Devices::Geolocation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -301,7 +301,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_TryCompute(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -343,7 +343,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_TryComputeWithAltitudeReference(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -386,7 +386,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeoboundingBox_TryComputeWithAltitudeReferenceAndSpatialReference(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -756,7 +756,7 @@ namespace py::cpp::Windows::Devices::Geolocation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1718,7 +1718,7 @@ namespace py::cpp::Windows::Devices::Geolocation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1749,7 +1749,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_AllowFallbackToConsentlessPositions(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1790,7 +1790,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_GetGeopositionAsync(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1830,7 +1830,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_GetGeopositionAsyncWithAgeAndTimeout(py::wrapper::Windows::Devices::Geolocation::Geolocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1873,7 +1873,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_GetGeopositionHistoryAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1915,7 +1915,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_GetGeopositionHistoryWithDurationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1958,7 +1958,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* Geolocator_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2625,7 +2625,7 @@ namespace py::cpp::Windows::Devices::Geolocation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2869,7 +2869,7 @@ namespace py::cpp::Windows::Devices::Geolocation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3425,7 +3425,7 @@ namespace py::cpp::Windows::Devices::Geolocation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3456,7 +3456,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeovisitMonitor_GetLastReportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3496,7 +3496,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeovisitMonitor_Start(py::wrapper::Windows::Devices::Geolocation::GeovisitMonitor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3539,7 +3539,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeovisitMonitor_Stop(py::wrapper::Windows::Devices::Geolocation::GeovisitMonitor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3859,7 +3859,7 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static PyObject* GeovisitTriggerDetails_ReadReports(py::wrapper::Windows::Devices::Geolocation::GeovisitTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4563,7 +4563,7 @@ namespace py::cpp::Windows::Devices::Geolocation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Geolocation::BasicGeoposition>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

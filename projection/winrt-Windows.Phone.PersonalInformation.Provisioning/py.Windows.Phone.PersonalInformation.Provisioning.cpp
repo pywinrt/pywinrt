@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyObject* ContactPartnerProvisioningManager_AssociateNetworkAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -59,7 +59,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyObject* ContactPartnerProvisioningManager_AssociateSocialNetworkAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyObject* ContactPartnerProvisioningManager_ImportVcardToSystemAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -197,7 +197,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyObject* MessagePartnerProvisioningManager_ImportMmsToSystemAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -245,7 +245,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyObject* MessagePartnerProvisioningManager_ImportSmsToSystemAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {

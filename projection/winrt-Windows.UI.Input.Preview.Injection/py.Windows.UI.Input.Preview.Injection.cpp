@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -604,7 +604,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -899,7 +899,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1334,7 +1334,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1909,7 +1909,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2353,7 +2353,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InitializeGamepadInjection(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2394,7 +2394,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InitializePenInjection(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InitializeTouchInjection(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2480,7 +2480,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InjectGamepadInput(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2523,7 +2523,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InjectKeyboardInput(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2566,7 +2566,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InjectMouseInput(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2609,7 +2609,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InjectPenInput(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2652,7 +2652,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InjectShortcut(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2695,7 +2695,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_InjectTouchInput(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2738,7 +2738,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_TryCreate(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2778,7 +2778,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_TryCreateForAppBroadcastOnly(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2818,7 +2818,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_UninitializeGamepadInjection(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2859,7 +2859,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_UninitializePenInjection(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2900,7 +2900,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static PyObject* InputInjector_UninitializeTouchInjection(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3049,7 +3049,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -3285,7 +3285,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -3613,7 +3613,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

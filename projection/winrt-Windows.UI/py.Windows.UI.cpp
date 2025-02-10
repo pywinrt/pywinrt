@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI
 
     static PyObject* ColorHelper_FromArgb(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -68,7 +68,7 @@ namespace py::cpp::Windows::UI
 
     static PyObject* ColorHelper_ToDisplayName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4820,7 +4820,7 @@ namespace py::cpp::Windows::UI
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Color>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -5114,7 +5114,7 @@ namespace py::cpp::Windows::UI
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::WindowId>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

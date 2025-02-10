@@ -482,7 +482,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_BlockAutomaticRebootAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -524,7 +524,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_GetAutomaticRebootBlockIds(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -564,7 +564,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_GetFlightRing(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -604,7 +604,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_GetUpdateItems(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -684,7 +684,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_RebootToCompleteInstall(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -725,7 +725,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_SetFlightRing(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -767,7 +767,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_StartCancelUpdates(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -808,7 +808,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_StartInstall(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -851,7 +851,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_TrySetUserActiveHours(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -894,7 +894,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyObject* SystemUpdateManager_UnblockAutomaticRebootAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

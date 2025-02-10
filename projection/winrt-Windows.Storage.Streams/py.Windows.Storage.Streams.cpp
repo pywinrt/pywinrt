@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Storage::Streams
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* Buffer_CreateCopyFromMemoryBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -89,7 +89,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* Buffer_CreateMemoryBufferOverIBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -324,7 +324,7 @@ namespace py::cpp::Windows::Storage::Streams
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -357,7 +357,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_Close(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -398,7 +398,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_DetachBuffer(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -438,7 +438,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_DetachStream(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -478,7 +478,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_FromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -520,7 +520,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_LoadAsync(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -562,7 +562,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadBoolean(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -602,7 +602,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadBuffer(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadByte(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -684,7 +684,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadBytes(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -727,7 +727,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadDateTime(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -767,7 +767,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadDouble(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -807,7 +807,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadGuid(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -847,7 +847,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadInt16(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -887,7 +887,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadInt32(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -927,7 +927,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadInt64(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -967,7 +967,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadSingle(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1007,7 +1007,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadString(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1049,7 +1049,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadTimeSpan(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1089,7 +1089,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadUInt16(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1129,7 +1129,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadUInt32(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1169,7 +1169,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReader_ReadUInt64(py::wrapper::Windows::Storage::Streams::DataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1580,7 +1580,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReaderLoadOperation_Cancel(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1621,7 +1621,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReaderLoadOperation_Close(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1662,7 +1662,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataReaderLoadOperation_GetResults(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1928,7 +1928,7 @@ namespace py::cpp::Windows::Storage::Streams
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1974,7 +1974,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_Close(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2015,7 +2015,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_DetachBuffer(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2055,7 +2055,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_DetachStream(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2095,7 +2095,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_FlushAsync(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2135,7 +2135,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_MeasureString(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2177,7 +2177,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_StoreAsync(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2217,7 +2217,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteBoolean(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2260,7 +2260,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteBuffer(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2303,7 +2303,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteBufferRange(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2348,7 +2348,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteByte(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2391,7 +2391,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteBytes(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2434,7 +2434,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteDateTime(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2477,7 +2477,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteDouble(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2520,7 +2520,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteGuid(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2563,7 +2563,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteInt16(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2606,7 +2606,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteInt32(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2649,7 +2649,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteInt64(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2692,7 +2692,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteSingle(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2735,7 +2735,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteString(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2777,7 +2777,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteTimeSpan(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2820,7 +2820,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteUInt16(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2863,7 +2863,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteUInt32(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2906,7 +2906,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriter_WriteUInt64(py::wrapper::Windows::Storage::Streams::DataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3231,7 +3231,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriterStoreOperation_Cancel(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3272,7 +3272,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriterStoreOperation_Close(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3313,7 +3313,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* DataWriterStoreOperation_GetResults(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3588,7 +3588,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileInputStream_Close(py::wrapper::Windows::Storage::Streams::FileInputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3629,7 +3629,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileInputStream_ReadAsync(py::wrapper::Windows::Storage::Streams::FileInputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3763,7 +3763,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileOutputStream_Close(py::wrapper::Windows::Storage::Streams::FileOutputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3804,7 +3804,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileOutputStream_FlushAsync(py::wrapper::Windows::Storage::Streams::FileOutputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3844,7 +3844,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileOutputStream_WriteAsync(py::wrapper::Windows::Storage::Streams::FileOutputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3977,7 +3977,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_CloneStream(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4017,7 +4017,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_Close(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4058,7 +4058,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_FlushAsync(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4098,7 +4098,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_GetInputStreamAt(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4140,7 +4140,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_GetOutputStreamAt(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4182,7 +4182,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_OpenAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4225,7 +4225,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_OpenForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4269,7 +4269,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_OpenForUserWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -4315,7 +4315,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_OpenTransactedWriteAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4357,7 +4357,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_OpenTransactedWriteForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4400,7 +4400,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_OpenTransactedWriteForUserWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4445,7 +4445,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_OpenTransactedWriteWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4489,7 +4489,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_OpenWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4534,7 +4534,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_ReadAsync(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4578,7 +4578,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_Seek(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4621,7 +4621,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* FileRandomAccessStream_WriteAsync(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4942,7 +4942,7 @@ namespace py::cpp::Windows::Storage::Streams
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4973,7 +4973,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InMemoryRandomAccessStream_CloneStream(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5013,7 +5013,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InMemoryRandomAccessStream_Close(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5054,7 +5054,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InMemoryRandomAccessStream_FlushAsync(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5094,7 +5094,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InMemoryRandomAccessStream_GetInputStreamAt(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5136,7 +5136,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InMemoryRandomAccessStream_GetOutputStreamAt(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5178,7 +5178,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InMemoryRandomAccessStream_ReadAsync(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5222,7 +5222,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InMemoryRandomAccessStream_Seek(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5265,7 +5265,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InMemoryRandomAccessStream_WriteAsync(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5566,7 +5566,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InputStreamOverStream_Close(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5607,7 +5607,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* InputStreamOverStream_ReadAsync(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5741,7 +5741,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* OutputStreamOverStream_Close(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5782,7 +5782,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* OutputStreamOverStream_FlushAsync(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5822,7 +5822,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* OutputStreamOverStream_WriteAsync(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5947,7 +5947,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStream_CopyAndCloseAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5990,7 +5990,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStream_CopyAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6033,7 +6033,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStream_CopySizeAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6137,7 +6137,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamOverStream_CloneStream(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6177,7 +6177,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamOverStream_Close(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6218,7 +6218,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamOverStream_FlushAsync(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6258,7 +6258,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamOverStream_GetInputStreamAt(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6300,7 +6300,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamOverStream_GetOutputStreamAt(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6342,7 +6342,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamOverStream_ReadAsync(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6386,7 +6386,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamOverStream_Seek(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6429,7 +6429,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamOverStream_WriteAsync(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6730,7 +6730,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamReference_CreateFromFile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6772,7 +6772,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamReference_CreateFromStream(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6814,7 +6814,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamReference_CreateFromUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6856,7 +6856,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* RandomAccessStreamReference_OpenReadAsync(py::wrapper::Windows::Storage::Streams::RandomAccessStreamReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7460,7 +7460,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_DetachBuffer(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7500,7 +7500,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_DetachStream(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7540,7 +7540,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_LoadAsync(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7582,7 +7582,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadBoolean(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7622,7 +7622,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadBuffer(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7664,7 +7664,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadByte(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7704,7 +7704,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadBytes(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7747,7 +7747,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadDateTime(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7787,7 +7787,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadDouble(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7827,7 +7827,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadGuid(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7867,7 +7867,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadInt16(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7907,7 +7907,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadInt32(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7947,7 +7947,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadInt64(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7987,7 +7987,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadSingle(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8027,7 +8027,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadString(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8069,7 +8069,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadTimeSpan(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8109,7 +8109,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadUInt16(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8149,7 +8149,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadUInt32(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8189,7 +8189,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataReader_ReadUInt64(py::wrapper::Windows::Storage::Streams::IDataReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9277,7 +9277,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_DetachBuffer(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9317,7 +9317,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_DetachStream(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9357,7 +9357,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_FlushAsync(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9397,7 +9397,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_MeasureString(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9439,7 +9439,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_StoreAsync(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9479,7 +9479,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteBoolean(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9522,7 +9522,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteBuffer(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9565,7 +9565,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteBufferRange(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9610,7 +9610,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteByte(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9653,7 +9653,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteBytes(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9696,7 +9696,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteDateTime(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9739,7 +9739,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteDouble(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9782,7 +9782,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteGuid(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9825,7 +9825,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteInt16(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9868,7 +9868,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteInt32(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9911,7 +9911,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteInt64(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9954,7 +9954,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteSingle(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9997,7 +9997,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteString(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10039,7 +10039,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteTimeSpan(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10082,7 +10082,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteUInt16(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10125,7 +10125,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteUInt32(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10168,7 +10168,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IDataWriter_WriteUInt64(py::wrapper::Windows::Storage::Streams::IDataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11299,7 +11299,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IInputStream_Close(py::wrapper::Windows::Storage::Streams::IInputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11340,7 +11340,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IInputStream_ReadAsync(py::wrapper::Windows::Storage::Streams::IInputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11608,7 +11608,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IInputStreamReference_OpenSequentialReadAsync(py::wrapper::Windows::Storage::Streams::IInputStreamReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11798,7 +11798,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IOutputStream_Close(py::wrapper::Windows::Storage::Streams::IOutputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11839,7 +11839,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IOutputStream_FlushAsync(py::wrapper::Windows::Storage::Streams::IOutputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11879,7 +11879,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IOutputStream_WriteAsync(py::wrapper::Windows::Storage::Streams::IOutputStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12154,7 +12154,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IPropertySetSerializer_Deserialize(py::wrapper::Windows::Storage::Streams::IPropertySetSerializer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12198,7 +12198,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IPropertySetSerializer_Serialize(py::wrapper::Windows::Storage::Streams::IPropertySetSerializer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12439,7 +12439,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStream_CloneStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12479,7 +12479,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStream_Close(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12520,7 +12520,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStream_FlushAsync(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12560,7 +12560,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStream_GetInputStreamAt(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12602,7 +12602,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStream_GetOutputStreamAt(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12644,7 +12644,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStream_ReadAsync(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -12688,7 +12688,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStream_Seek(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12731,7 +12731,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStream_WriteAsync(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13447,7 +13447,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamReference_OpenReadAsync(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13637,7 +13637,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamWithContentType_CloneStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13677,7 +13677,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamWithContentType_Close(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13718,7 +13718,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamWithContentType_FlushAsync(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13758,7 +13758,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamWithContentType_GetInputStreamAt(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13800,7 +13800,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamWithContentType_GetOutputStreamAt(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13842,7 +13842,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamWithContentType_ReadAsync(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -13886,7 +13886,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamWithContentType_Seek(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13929,7 +13929,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyObject* IRandomAccessStreamWithContentType_WriteAsync(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyObject* NamedPolicy_GetPolicyFromPath(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -58,7 +58,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyObject* NamedPolicy_GetPolicyFromPathForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -161,7 +161,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyObject* NamedPolicyData_GetBinary(py::wrapper::Windows::Management::Policies::NamedPolicyData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -201,7 +201,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyObject* NamedPolicyData_GetBoolean(py::wrapper::Windows::Management::Policies::NamedPolicyData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -241,7 +241,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyObject* NamedPolicyData_GetInt32(py::wrapper::Windows::Management::Policies::NamedPolicyData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -281,7 +281,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyObject* NamedPolicyData_GetInt64(py::wrapper::Windows::Management::Policies::NamedPolicyData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -321,7 +321,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyObject* NamedPolicyData_GetString(py::wrapper::Windows::Management::Policies::NamedPolicyData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

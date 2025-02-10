@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* NamedResource_Resolve(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* NamedResource_ResolveAll(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* NamedResource_ResolveAllForContext(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* NamedResource_ResolveForContext(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -316,7 +316,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceCandidate_GetQualifierValue(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceCandidate_GetValueAsFileAsync(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -398,7 +398,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceCandidate_GetValueAsStreamAsync(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -690,7 +690,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceCandidateVectorView_First(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -730,7 +730,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceCandidateVectorView_GetAt(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceCandidateVectorView_GetMany(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -815,7 +815,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceCandidateVectorView_IndexOf(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1081,7 +1081,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1112,7 +1112,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_Clone(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1152,7 +1152,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_CreateMatchingContext(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1194,7 +1194,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1234,7 +1234,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_GetForUIContext(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1276,7 +1276,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_GetForViewIndependentUse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1316,7 +1316,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_OverrideToMatch(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1359,7 +1359,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_Reset(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1400,7 +1400,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_ResetGlobalQualifierValues(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1441,7 +1441,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_ResetGlobalQualifierValuesForSpecifiedQualifiers(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1484,7 +1484,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_ResetQualifierValues(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1527,7 +1527,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_SetGlobalQualifierValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1571,7 +1571,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContext_SetGlobalQualifierValueWithPersistence(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1813,7 +1813,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContextLanguagesVectorView_First(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1853,7 +1853,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContextLanguagesVectorView_GetAt(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1895,7 +1895,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContextLanguagesVectorView_GetMany(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1938,7 +1938,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceContextLanguagesVectorView_IndexOf(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2213,7 +2213,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceManager_GetAllNamedResourcesForPackage(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2256,7 +2256,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceManager_GetAllSubtreesForPackage(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2299,7 +2299,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceManager_IsResourceReference(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2341,7 +2341,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceManager_LoadPriFiles(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2384,7 +2384,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceManager_UnloadPriFiles(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2640,7 +2640,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMap_First(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2680,7 +2680,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMap_GetSubtree(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2722,7 +2722,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMap_GetValue(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2764,7 +2764,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMap_GetValueForContext(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2807,7 +2807,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMap_HasKey(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2849,7 +2849,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMap_Lookup(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2891,7 +2891,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMap_Split(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3177,7 +3177,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMapIterator_GetMany(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3219,7 +3219,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMapIterator_MoveNext(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3419,7 +3419,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMapMapView_First(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3459,7 +3459,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMapMapView_HasKey(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3501,7 +3501,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMapMapView_Lookup(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3543,7 +3543,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMapMapView_Split(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3795,7 +3795,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMapMapViewIterator_GetMany(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3837,7 +3837,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceMapMapViewIterator_MoveNext(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4255,7 +4255,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierMapView_First(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4295,7 +4295,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierMapView_HasKey(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4337,7 +4337,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierMapView_Lookup(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4379,7 +4379,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierMapView_Split(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4631,7 +4631,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierObservableMap_Clear(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4672,7 +4672,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierObservableMap_First(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4712,7 +4712,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierObservableMap_GetView(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4752,7 +4752,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierObservableMap_HasKey(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4794,7 +4794,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierObservableMap_Insert(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4837,7 +4837,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierObservableMap_Lookup(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4879,7 +4879,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierObservableMap_Remove(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5227,7 +5227,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierVectorView_First(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5267,7 +5267,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierVectorView_GetAt(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5309,7 +5309,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierVectorView_GetMany(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5352,7 +5352,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* ResourceQualifierVectorView_IndexOf(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5640,7 +5640,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

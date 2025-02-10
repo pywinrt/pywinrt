@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragDropManager_Close(py::wrapper::Microsoft::UI::Input::DragDrop::DragDropManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragDropManager_GetForIsland(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -532,7 +532,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -563,7 +563,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragOperation_Close(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -604,7 +604,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragOperation_SetDragUIContentFromSoftwareBitmap(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -647,7 +647,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragOperation_SetDragUIContentFromSoftwareBitmap2(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -691,7 +691,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragOperation_StartAsync(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -997,7 +997,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragUIOverride_Clear(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1038,7 +1038,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragUIOverride_SetContentFromSoftwareBitmap(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1081,7 +1081,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragUIOverride_SetContentFromSoftwareBitmap2(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1471,7 +1471,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DropOperationTargetRequestedEventArgs_SetTarget(py::wrapper::Microsoft::UI::Input::DragDrop::DropOperationTargetRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1578,7 +1578,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* IDropOperationTarget_DropAsync(py::wrapper::Microsoft::UI::Input::DragDrop::IDropOperationTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1620,7 +1620,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* IDropOperationTarget_EnterAsync(py::wrapper::Microsoft::UI::Input::DragDrop::IDropOperationTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1663,7 +1663,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* IDropOperationTarget_LeaveAsync(py::wrapper::Microsoft::UI::Input::DragDrop::IDropOperationTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1705,7 +1705,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* IDropOperationTarget_OverAsync(py::wrapper::Microsoft::UI::Input::DragDrop::IDropOperationTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

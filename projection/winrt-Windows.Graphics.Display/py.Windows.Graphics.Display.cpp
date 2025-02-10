@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_IsAdvancedColorKindAvailable(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_IsHdrMetadataFormatCurrentlySupported(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_GetDefaultForSystem(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -491,7 +491,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -531,7 +531,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_GetLevelForScenario(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -573,7 +573,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_SaveForSystemAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -615,7 +615,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_SetBrightnessLevel(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -659,7 +659,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_SetBrightnessScenario(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -703,7 +703,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_StartOverride(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -744,7 +744,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_StopOverride(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1171,7 +1171,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverrideSettings_CreateFromDisplayBrightnessOverrideScenario(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1213,7 +1213,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverrideSettings_CreateFromLevel(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1255,7 +1255,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverrideSettings_CreateFromNits(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1446,7 +1446,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* ColorOverrideSettings_CreateFromDisplayColorOverrideScenario(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1604,7 +1604,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_GetCurrentDisplayEnhancementOverrideCapabilities(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1644,7 +1644,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1684,7 +1684,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_RequestOverride(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1725,7 +1725,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_StopOverride(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2257,7 +2257,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverrideCapabilities_GetSupportedNitRanges(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2517,7 +2517,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_GetAdvancedColorInfo(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2557,7 +2557,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_GetColorProfileAsync(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2597,7 +2597,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3529,7 +3529,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_GetColorProfileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4187,7 +4187,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayServices_FindAll(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4323,7 +4323,7 @@ namespace py::cpp::Windows::Graphics::Display
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Display::NitRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

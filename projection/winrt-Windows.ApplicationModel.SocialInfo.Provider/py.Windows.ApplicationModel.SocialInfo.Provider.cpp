@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialDashboardItemUpdater_CommitAsync(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialFeedUpdater_CommitAsync(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -588,7 +588,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialInfoProviderManager_CreateDashboardItemUpdaterAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -630,7 +630,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialInfoProviderManager_CreateSocialFeedUpdaterAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -674,7 +674,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialInfoProviderManager_DeprovisionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -714,7 +714,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialInfoProviderManager_ProvisionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -754,7 +754,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialInfoProviderManager_ReportNewContentAvailable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -798,7 +798,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyObject* SocialInfoProviderManager_UpdateBadgeCountValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_GetCurrentDisplayMode(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_GetSupportedDisplayModes(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_RequestSetCurrentDisplayModeAsync(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_RequestSetCurrentDisplayModeWithHdrAndMetadataAsync(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_RequestSetCurrentDisplayModeWithHdrAsync(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayInformation_SetDefaultDisplayModeAsync(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -470,7 +470,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyObject* HdmiDisplayMode_IsEqual(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -937,7 +937,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

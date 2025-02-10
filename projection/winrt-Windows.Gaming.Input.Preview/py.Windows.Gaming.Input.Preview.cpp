@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* GameControllerProviderInfo_GetParentProviderId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -57,7 +57,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* GameControllerProviderInfo_GetProviderId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -158,7 +158,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_ClearPairing(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -202,7 +202,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_ExecuteCommand(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -245,7 +245,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_FromGameController(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -287,7 +287,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_FromGameControllerProvider(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -329,7 +329,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_GetDeviceFirmwareCorruptionState(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -369,7 +369,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_GetExtendedDeviceInfo(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_GetHeadsetOperation(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_GetStandardControllerButtonRemapping(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -494,7 +494,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_IsCopilot(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -537,7 +537,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_IsInterfaceSupported(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -579,7 +579,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_IsPilot(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -622,7 +622,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_PairPilotToCopilot(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -667,7 +667,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_SetHeadsetOperation(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -711,7 +711,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_SetHomeLedIntensity(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -754,7 +754,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_SetStandardControllerButtonRemapping(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1128,7 +1128,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

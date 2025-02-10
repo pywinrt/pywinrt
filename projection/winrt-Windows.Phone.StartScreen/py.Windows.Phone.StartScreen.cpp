@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Phone::StartScreen
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_CreateAsync(py::wrapper::Windows::Phone::StartScreen::DualSimTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -85,7 +85,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_CreateBadgeUpdaterForSim1(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -125,7 +125,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_CreateBadgeUpdaterForSim2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -165,7 +165,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_CreateTileUpdaterForSim1(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -205,7 +205,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_CreateTileUpdaterForSim2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -245,7 +245,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_CreateToastNotifierForSim1(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -285,7 +285,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_CreateToastNotifierForSim2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -325,7 +325,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_DeleteAsync(py::wrapper::Windows::Phone::StartScreen::DualSimTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -365,7 +365,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_GetTileForSim2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -405,7 +405,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_UpdateAsync(py::wrapper::Windows::Phone::StartScreen::DualSimTile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -445,7 +445,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_UpdateDisplayNameForSim1Async(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -683,7 +683,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* IToastNotificationManagerStatics3_CreateToastNotifierForSecondaryTile(py::wrapper::Windows::Phone::StartScreen::IToastNotificationManagerStatics3* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_Start(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -490,7 +490,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListCreateOrUpdateContactRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListCreateOrUpdateContactRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -699,7 +699,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListCreateOrUpdateContactRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -834,7 +834,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListDeleteContactRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -874,7 +874,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListDeleteContactRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1041,7 +1041,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListDeleteContactRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1176,7 +1176,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1216,7 +1216,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1258,7 +1258,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequest_SaveContactAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1490,7 +1490,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1625,7 +1625,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListSyncManagerSyncRequest_ReportCompletedAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1665,7 +1665,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListSyncManagerSyncRequest_ReportFailedAsync(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1801,7 +1801,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListSyncManagerSyncRequestEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

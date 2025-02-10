@@ -15,7 +15,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyObject* BackgroundEnergyDiagnostics_ComputeTotalEnergyUsage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -55,7 +55,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyObject* BackgroundEnergyDiagnostics_ResetTotalEnergyUsage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -178,7 +178,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyObject* ForegroundEnergyDiagnostics_ComputeTotalEnergyUsage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -218,7 +218,7 @@ namespace py::cpp::Windows::System::Power::Diagnostics
 
     static PyObject* ForegroundEnergyDiagnostics_ResetTotalEnergyUsage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

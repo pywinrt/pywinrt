@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1243,7 +1243,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* AppInstallerManager_ClearAutoUpdateSettings(py::wrapper::Windows::Management::Deployment::AppInstallerManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1286,7 +1286,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* AppInstallerManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1326,7 +1326,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* AppInstallerManager_GetForSystem(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1366,7 +1366,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* AppInstallerManager_PauseAutoUpdatesUntil(py::wrapper::Windows::Management::Deployment::AppInstallerManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1410,7 +1410,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* AppInstallerManager_SetAutoUpdateSettings(py::wrapper::Windows::Management::Deployment::AppInstallerManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1534,7 +1534,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1565,7 +1565,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* AutoUpdateSettingsOptions_CreateFromAppInstallerInfo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2849,7 +2849,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3386,7 +3386,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3611,7 +3611,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3828,7 +3828,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3859,7 +3859,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_AddPackageAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3903,7 +3903,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_AddPackageByAppInstallerFileAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3947,7 +3947,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_AddPackageByUriAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3990,7 +3990,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_AddPackageToVolumeAndOptionalPackagesAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -4037,7 +4037,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_AddPackageToVolumeAndRelatedSetAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -4085,7 +4085,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_AddPackageToVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4130,7 +4130,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_AddPackageVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4172,7 +4172,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_CleanupPackageForUserAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4215,7 +4215,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_ClearPackageStatus(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4259,7 +4259,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_DeprovisionPackageForAllUsersAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4301,7 +4301,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackageByPackageFullName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4343,7 +4343,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackageByUserSecurityIdPackageFullName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4386,7 +4386,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackageVolumeByName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4428,7 +4428,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackageVolumes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4468,7 +4468,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackages(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4508,7 +4508,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByNamePublisher(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4551,7 +4551,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByNamePublisherWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4595,7 +4595,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByPackageFamilyName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4637,7 +4637,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByPackageFamilyNameWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4680,7 +4680,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByUserSecurityId(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4722,7 +4722,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByUserSecurityIdNamePublisher(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4766,7 +4766,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByUserSecurityIdNamePublisherWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4811,7 +4811,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByUserSecurityIdPackageFamilyName(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4854,7 +4854,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByUserSecurityIdPackageFamilyNameWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4898,7 +4898,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesByUserSecurityIdWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4941,7 +4941,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindPackagesWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4983,7 +4983,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindProvisionedPackages(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5023,7 +5023,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_FindUsers(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5065,7 +5065,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_GetDefaultPackageVolume(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5105,7 +5105,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_GetPackageStubPreference(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5147,7 +5147,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_GetPackageVolumesAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5187,7 +5187,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_IsPackageRemovalPending(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5229,7 +5229,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_IsPackageRemovalPendingByUri(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5271,7 +5271,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_IsPackageRemovalPendingByUriForUser(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5314,7 +5314,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_IsPackageRemovalPendingForUser(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5357,7 +5357,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_MovePackageToVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5401,7 +5401,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_ProvisionPackageForAllUsersAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5443,7 +5443,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_ProvisionPackageForAllUsersWithOptionsAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5486,7 +5486,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RegisterPackageAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5530,7 +5530,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RegisterPackageByFamilyNameAndOptionalPackagesAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -5576,7 +5576,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RegisterPackageByFullNameAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5620,7 +5620,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RegisterPackageByUriAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5663,7 +5663,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RegisterPackageWithAppDataVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5708,7 +5708,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RegisterPackagesByFullNameAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5751,7 +5751,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RemovePackageAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5793,7 +5793,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RemovePackageByUriAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5836,7 +5836,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RemovePackageVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5878,7 +5878,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RemovePackageWithOptionsAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5921,7 +5921,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RequestAddPackageAndRelatedSetAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -5969,7 +5969,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RequestAddPackageAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -6016,7 +6016,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_RequestAddPackageByAppInstallerFileAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6060,7 +6060,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_SetDefaultPackageVolume(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6103,7 +6103,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_SetPackageState(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6147,7 +6147,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_SetPackageStatus(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6191,7 +6191,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_SetPackageStubPreference(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6235,7 +6235,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_SetPackageVolumeOfflineAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6277,7 +6277,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_SetPackageVolumeOnlineAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6319,7 +6319,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_StagePackageAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6362,7 +6362,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_StagePackageByUriAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6405,7 +6405,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_StagePackageToVolumeAndOptionalPackagesAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -6452,7 +6452,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_StagePackageToVolumeAndRelatedSetAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -6500,7 +6500,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_StagePackageToVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6545,7 +6545,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_StagePackageWithOptionsAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6589,7 +6589,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_StageUserDataAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6631,7 +6631,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_StageUserDataWithOptionsAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6674,7 +6674,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManager_UpdatePackageAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6878,7 +6878,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManagerDebugSettings_SetContentGroupStateAsync(py::wrapper::Windows::Management::Deployment::PackageManagerDebugSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6922,7 +6922,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageManagerDebugSettings_SetContentGroupStateWithPercentageAsync(py::wrapper::Windows::Management::Deployment::PackageManagerDebugSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7157,7 +7157,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackageByPackageFullName(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7199,7 +7199,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackageByUserSecurityIdPackageFullName(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7242,7 +7242,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackages(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7282,7 +7282,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByNamePublisher(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7325,7 +7325,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByNamePublisherWithPackagesTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7369,7 +7369,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByPackageFamilyName(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7411,7 +7411,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByPackageFamilyNameWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7454,7 +7454,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByUserSecurityId(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7496,7 +7496,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByUserSecurityIdNamePublisher(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7540,7 +7540,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByUserSecurityIdNamePublisherWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7585,7 +7585,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByUserSecurityIdPackageFamilyName(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7628,7 +7628,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByUserSecurityIdPackageFamilyNameWithPackagesTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7672,7 +7672,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesByUserSecurityIdWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7715,7 +7715,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_FindPackagesWithPackageTypes(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7757,7 +7757,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* PackageVolume_GetAvailableSpaceAsync(py::wrapper::Windows::Management::Deployment::PackageVolume* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8114,7 +8114,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8992,7 +8992,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9366,7 +9366,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainer_GetMembers(py::wrapper::Windows::Management::Deployment::SharedPackageContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9406,7 +9406,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainer_RemovePackageFamily(py::wrapper::Windows::Management::Deployment::SharedPackageContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9449,7 +9449,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainer_ResetData(py::wrapper::Windows::Management::Deployment::SharedPackageContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9617,7 +9617,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainerManager_CreateContainer(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9660,7 +9660,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainerManager_DeleteContainer(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9703,7 +9703,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainerManager_FindContainers(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9743,7 +9743,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainerManager_FindContainersWithOptions(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9785,7 +9785,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainerManager_GetContainer(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9827,7 +9827,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainerManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9867,7 +9867,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainerManager_GetForProvisioning(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9907,7 +9907,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     static PyObject* SharedPackageContainerManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10032,7 +10032,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10150,7 +10150,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11020,7 +11020,7 @@ namespace py::cpp::Windows::Management::Deployment
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11389,7 +11389,7 @@ namespace py::cpp::Windows::Management::Deployment
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Management::Deployment::DeploymentProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

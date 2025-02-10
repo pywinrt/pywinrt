@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* Direct3D11CaptureFrame_Close(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -308,7 +308,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* Direct3D11CaptureFramePool_Close(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -349,7 +349,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* Direct3D11CaptureFramePool_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -394,7 +394,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* Direct3D11CaptureFramePool_CreateCaptureSession(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -436,7 +436,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* Direct3D11CaptureFramePool_CreateFreeThreaded(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -481,7 +481,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* Direct3D11CaptureFramePool_Recreate(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -527,7 +527,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* Direct3D11CaptureFramePool_TryGetNextFrame(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* GraphicsCaptureAccess_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -872,7 +872,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* GraphicsCaptureItem_CreateFromVisual(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -914,7 +914,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* GraphicsCaptureItem_TryCreateFromDisplayId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -956,7 +956,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* GraphicsCaptureItem_TryCreateFromWindowId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1205,7 +1205,7 @@ namespace py::cpp::Windows::Graphics::Capture
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* GraphicsCapturePicker_PickSingleItemAsync(py::wrapper::Windows::Graphics::Capture::GraphicsCapturePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1340,7 +1340,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* GraphicsCaptureSession_Close(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1381,7 +1381,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* GraphicsCaptureSession_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1421,7 +1421,7 @@ namespace py::cpp::Windows::Graphics::Capture
 
     static PyObject* GraphicsCaptureSession_StartCapture(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -900,7 +900,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1333,7 +1333,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1729,7 +1729,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1976,7 +1976,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2274,7 +2274,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2305,7 +2305,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentMediator_CanMakePaymentAsync(py::wrapper::Windows::ApplicationModel::Payments::PaymentMediator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2347,7 +2347,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentMediator_GetSupportedMethodIdsAsync(py::wrapper::Windows::ApplicationModel::Payments::PaymentMediator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2387,7 +2387,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentMediator_SubmitPaymentRequestAsync(py::wrapper::Windows::ApplicationModel::Payments::PaymentMediator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2429,7 +2429,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentMediator_SubmitPaymentRequestWithChangeHandlerAsync(py::wrapper::Windows::ApplicationModel::Payments::PaymentMediator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2530,7 +2530,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2692,7 +2692,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2857,7 +2857,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3292,7 +3292,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 5)
         {
             try
@@ -3598,7 +3598,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentRequestChangedArgs_Acknowledge(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3789,7 +3789,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -4236,7 +4236,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyObject* PaymentResponse_CompleteAsync(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4519,7 +4519,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -4922,7 +4922,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

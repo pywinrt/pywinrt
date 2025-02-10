@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -763,7 +763,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailConversation_FindMessagesAsync(py::wrapper::Windows::ApplicationModel::Email::EmailConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -803,7 +803,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailConversation_FindMessagesWithCountAsync(py::wrapper::Windows::ApplicationModel::Email::EmailConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1438,7 +1438,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailConversationReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Email::EmailConversationReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1542,7 +1542,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_CreateFolderAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1584,7 +1584,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_DeleteAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1624,7 +1624,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_FindChildFoldersAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1664,7 +1664,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_GetConversationReader(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1704,7 +1704,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_GetConversationReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1746,7 +1746,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_GetMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1788,7 +1788,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_GetMessageCountsAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1828,7 +1828,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_GetMessageReader(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1868,7 +1868,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_GetMessageReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1910,7 +1910,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_SaveMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1952,7 +1952,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_TryMoveAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1994,7 +1994,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_TryMoveWithNewNameAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2037,7 +2037,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailFolder_TrySaveAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2548,7 +2548,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -3489,7 +3489,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -3997,7 +3997,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_ChangeMessageFlagStateAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4040,7 +4040,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_CreateResponseMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -4086,7 +4086,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_DeleteAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4126,7 +4126,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_DeleteMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4168,7 +4168,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_DownloadAttachmentAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4210,7 +4210,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_DownloadMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4252,7 +4252,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetChangeTracker(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4294,7 +4294,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetConversationAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4336,7 +4336,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetConversationReader(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4376,7 +4376,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetConversationReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4418,7 +4418,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetFolderAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4460,7 +4460,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4502,7 +4502,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetMessageReader(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4542,7 +4542,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetMessageReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4584,7 +4584,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_GetSpecialFolderAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4626,7 +4626,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_MarkFolderAsSeenAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4668,7 +4668,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_MarkFolderSyncEnabledAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4711,7 +4711,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_MarkMessageAsSeenAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4753,7 +4753,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_MarkMessageReadAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4796,7 +4796,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_RegisterSyncManagerAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4836,7 +4836,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_ResolveRecipientsAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4878,7 +4878,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_SaveAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4918,7 +4918,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_SaveDraftAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4960,7 +4960,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_SendMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5002,7 +5002,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_SmartSendMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5045,7 +5045,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryCreateFolderAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5088,7 +5088,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryDeleteFolderAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5130,7 +5130,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryEmptyFolderAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5172,7 +5172,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryForwardMeetingAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -5219,7 +5219,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryGetAutoReplySettingsAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5261,7 +5261,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryMoveFolderAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5304,7 +5304,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryMoveFolderWithNewNameAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5348,7 +5348,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryMoveMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5391,7 +5391,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryProposeNewTimeForMeetingAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -5437,7 +5437,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TrySetAutoReplySettingsAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5479,7 +5479,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_TryUpdateMeetingResponseAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -5525,7 +5525,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailbox_ValidateCertificatesAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6736,7 +6736,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8433,7 +8433,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxChangeReader_AcceptChanges(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8474,7 +8474,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxChangeReader_AcceptChangesThrough(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8517,7 +8517,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxChangeReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8623,7 +8623,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxChangeTracker_Enable(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8664,7 +8664,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxChangeTracker_GetChangeReader(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8704,7 +8704,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxChangeTracker_Reset(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8842,7 +8842,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxChangedDeferral_Complete(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8947,7 +8947,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxChangedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9659,7 +9659,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMailboxSyncManager_SyncAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10032,7 +10032,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10074,7 +10074,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10116,7 +10116,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailManager_ShowComposeNewEmailAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10218,7 +10218,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailManagerForUser_RequestStoreAsync(py::wrapper::Windows::ApplicationModel::Email::EmailManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10260,7 +10260,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailManagerForUser_ShowComposeNewEmailAsync(py::wrapper::Windows::ApplicationModel::Email::EmailManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10389,7 +10389,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11415,7 +11415,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11446,7 +11446,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMessage_GetBodyStream(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11488,7 +11488,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMessage_SetBodyStream(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13688,7 +13688,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailMessageReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMessageReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13783,7 +13783,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -14444,7 +14444,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -14700,7 +14700,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14731,7 +14731,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailRecipientResolutionResult_SetPublicKeys(py::wrapper::Windows::ApplicationModel::Email::EmailRecipientResolutionResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14939,7 +14939,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_CreateMailboxAsync(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14982,7 +14982,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_CreateMailboxInAccountAsync(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15026,7 +15026,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_FindMailboxesAsync(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15066,7 +15066,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_GetConversationAsync(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15108,7 +15108,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_GetConversationReader(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15148,7 +15148,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_GetConversationReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15190,7 +15190,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_GetFolderAsync(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15232,7 +15232,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_GetMailboxAsync(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15274,7 +15274,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_GetMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15316,7 +15316,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_GetMessageReader(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15356,7 +15356,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyObject* EmailStore_GetMessageReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDevicePreview_GetBooleanControlDescriptions(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDevicePreview_GetNumericControlDescriptions(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -109,7 +109,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDevicePreview_RequestCalibrationAsync(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -433,7 +433,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_Start(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -474,7 +474,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_Stop(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1364,7 +1364,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeInputSourcePreview_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1404,7 +1404,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeInputSourcePreview_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1731,7 +1731,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeMovedPreviewEventArgs_GetIntermediatePoints(py::wrapper::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

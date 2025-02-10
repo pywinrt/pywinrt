@@ -537,7 +537,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_SendHapticFeedback(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -580,7 +580,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_SendHapticFeedbackForDuration(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -625,7 +625,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_SendHapticFeedbackForPlayCount(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -671,7 +671,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_SendHapticFeedbackWithIntensity(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -715,7 +715,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* SimpleHapticsController_StopFeedback(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1135,7 +1135,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* VibrationDevice_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1175,7 +1175,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* VibrationDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1217,7 +1217,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* VibrationDevice_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1257,7 +1257,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* VibrationDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1297,7 +1297,7 @@ namespace py::cpp::Windows::Devices::Haptics
 
     static PyObject* VibrationDevice_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

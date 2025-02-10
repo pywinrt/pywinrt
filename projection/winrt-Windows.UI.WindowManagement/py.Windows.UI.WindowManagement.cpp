@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_ClearAllPersistedState(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_ClearPersistedState(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_CloseAsync(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_GetDisplayRegions(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_GetPlacement(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -227,7 +227,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_RequestMoveAdjacentToCurrentView(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_RequestMoveAdjacentToWindow(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -311,7 +311,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_RequestMoveRelativeToCurrentViewContent(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_RequestMoveRelativeToDisplayRegion(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -398,7 +398,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_RequestMoveRelativeToWindowContent(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -442,7 +442,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_RequestMoveToDisplayRegion(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -485,7 +485,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_RequestSize(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -528,7 +528,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_TryCreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -568,7 +568,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindow_TryShowAsync(py::wrapper::Windows::UI::WindowManagement::AppWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1606,7 +1606,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowCloseRequestedEventArgs_GetDeferral(py::wrapper::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1874,7 +1874,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowFrame_GetFrameStyle(py::wrapper::Windows::UI::WindowManagement::AppWindowFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1914,7 +1914,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowFrame_SetFrameStyle(py::wrapper::Windows::UI::WindowManagement::AppWindowFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2324,7 +2324,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowPresenter_GetConfiguration(py::wrapper::Windows::UI::WindowManagement::AppWindowPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2364,7 +2364,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowPresenter_IsPresentationSupported(py::wrapper::Windows::UI::WindowManagement::AppWindowPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2406,7 +2406,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowPresenter_RequestPresentation(py::wrapper::Windows::UI::WindowManagement::AppWindowPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2448,7 +2448,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowPresenter_RequestPresentationByKind(py::wrapper::Windows::UI::WindowManagement::AppWindowPresenter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2557,7 +2557,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowTitleBar_GetPreferredVisibility(py::wrapper::Windows::UI::WindowManagement::AppWindowTitleBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2597,7 +2597,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowTitleBar_GetTitleBarOcclusions(py::wrapper::Windows::UI::WindowManagement::AppWindowTitleBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2637,7 +2637,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* AppWindowTitleBar_SetPreferredVisibility(py::wrapper::Windows::UI::WindowManagement::AppWindowTitleBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3772,7 +3772,7 @@ namespace py::cpp::Windows::UI::WindowManagement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3857,7 +3857,7 @@ namespace py::cpp::Windows::UI::WindowManagement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4227,7 +4227,7 @@ namespace py::cpp::Windows::UI::WindowManagement
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4383,7 +4383,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* WindowServices_FindAllTopLevelWindowIds(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4481,7 +4481,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* WindowingEnvironment_FindAll(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4521,7 +4521,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* WindowingEnvironment_FindAllWithKind(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4563,7 +4563,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyObject* WindowingEnvironment_GetDisplayRegions(py::wrapper::Windows::UI::WindowManagement::WindowingEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

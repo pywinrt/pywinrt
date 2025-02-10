@@ -253,7 +253,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1894,7 +1894,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetAcceleratorKey(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1936,7 +1936,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetAccessKey(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1978,7 +1978,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetAccessibilityView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2020,7 +2020,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetAnnotations(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2062,7 +2062,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetAutomationControlType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2104,7 +2104,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetAutomationId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2146,7 +2146,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetControlledPeers(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2188,7 +2188,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetCulture(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2230,7 +2230,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetDescribedBy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2272,7 +2272,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetFlowsFrom(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2314,7 +2314,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetFlowsTo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2356,7 +2356,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetFullDescription(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2398,7 +2398,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetHeadingLevel(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2440,7 +2440,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetHelpText(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2482,7 +2482,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetIsDataValidForForm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2524,7 +2524,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetIsDialog(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2566,7 +2566,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetIsPeripheral(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2608,7 +2608,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetIsRequiredForForm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2650,7 +2650,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetItemStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2692,7 +2692,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetItemType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2734,7 +2734,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetLabeledBy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2776,7 +2776,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetLandmarkType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2818,7 +2818,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetLevel(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2860,7 +2860,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetLiveSetting(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2902,7 +2902,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetLocalizedControlType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2944,7 +2944,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetLocalizedLandmarkType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2986,7 +2986,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3028,7 +3028,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetPositionInSet(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3070,7 +3070,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_GetSizeOfSet(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3112,7 +3112,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetAcceleratorKey(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3156,7 +3156,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetAccessKey(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3200,7 +3200,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetAccessibilityView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3244,7 +3244,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetAutomationControlType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3288,7 +3288,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetAutomationId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3332,7 +3332,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetCulture(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3376,7 +3376,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetFullDescription(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3420,7 +3420,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetHeadingLevel(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3464,7 +3464,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetHelpText(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3508,7 +3508,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetIsDataValidForForm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3552,7 +3552,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetIsDialog(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3596,7 +3596,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetIsPeripheral(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3640,7 +3640,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetIsRequiredForForm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3684,7 +3684,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetItemStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3728,7 +3728,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetItemType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3772,7 +3772,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetLabeledBy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3816,7 +3816,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetLandmarkType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3860,7 +3860,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetLevel(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3904,7 +3904,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetLiveSetting(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3948,7 +3948,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetLocalizedControlType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3992,7 +3992,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetLocalizedLandmarkType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4036,7 +4036,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4080,7 +4080,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetPositionInSet(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4124,7 +4124,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation
 
     static PyObject* AutomationProperties_SetSizeOfSet(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

@@ -15,7 +15,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyObject* ThreadPool_RunAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -57,7 +57,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyObject* ThreadPool_RunWithPriorityAndOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -101,7 +101,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyObject* ThreadPool_RunWithPriorityAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -204,7 +204,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyObject* ThreadPoolTimer_Cancel(py::wrapper::Windows::System::Threading::ThreadPoolTimer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -245,7 +245,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyObject* ThreadPoolTimer_CreatePeriodicTimer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -288,7 +288,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyObject* ThreadPoolTimer_CreatePeriodicTimerWithCompletion(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -332,7 +332,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyObject* ThreadPoolTimer_CreateTimer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -375,7 +375,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyObject* ThreadPoolTimer_CreateTimerWithCompletion(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {

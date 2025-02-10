@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorAuthentication_AbortAuthenticationAsync(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorAuthentication_FinishAuthenticationAsync(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorAuthentication_GetAuthenticationStageInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -148,7 +148,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorAuthentication_ShowNotificationMessageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorAuthentication_StartAuthenticationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -889,7 +889,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorInfo_UpdateDevicePresenceAsync(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1181,7 +1181,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_AbortRegisteringDeviceAsync(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1223,7 +1223,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_FindAllRegisteredDeviceInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1265,7 +1265,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_FinishRegisteringDeviceAsync(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1307,7 +1307,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_IsDevicePresenceMonitoringSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1347,7 +1347,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_RegisterDevicePresenceMonitoringAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1391,7 +1391,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_RegisterDevicePresenceMonitoringWithNewDeviceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -1438,7 +1438,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_RequestStartRegisteringDeviceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -1485,7 +1485,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_UnregisterDeviceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1527,7 +1527,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_UnregisterDevicePresenceMonitoringAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1569,7 +1569,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 
     static PyObject* SecondaryAuthenticationFactorRegistration_UpdateDeviceConfigurationDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
 
     static PyObject* InkWorkspaceHostedAppManager_GetForCurrentApp(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
 
     static PyObject* InkWorkspaceHostedAppManager_SetThumbnailAsync(py::wrapper::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

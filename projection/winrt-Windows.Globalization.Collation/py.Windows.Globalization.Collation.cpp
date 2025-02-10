@@ -139,7 +139,7 @@ namespace py::cpp::Windows::Globalization::Collation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyObject* CharacterGroupings_First(py::wrapper::Windows::Globalization::Collation::CharacterGroupings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -225,7 +225,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyObject* CharacterGroupings_GetAt(py::wrapper::Windows::Globalization::Collation::CharacterGroupings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -267,7 +267,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyObject* CharacterGroupings_GetMany(py::wrapper::Windows::Globalization::Collation::CharacterGroupings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -310,7 +310,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyObject* CharacterGroupings_IndexOf(py::wrapper::Windows::Globalization::Collation::CharacterGroupings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyObject* CharacterGroupings_Lookup(py::wrapper::Windows::Globalization::Collation::CharacterGroupings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

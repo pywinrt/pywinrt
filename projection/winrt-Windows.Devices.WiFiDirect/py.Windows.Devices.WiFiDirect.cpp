@@ -349,7 +349,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -380,7 +380,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisementPublisher_Start(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -421,7 +421,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisementPublisher_Stop(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -924,7 +924,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -955,7 +955,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionParameters_GetDevicePairingKinds(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1253,7 +1253,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionRequest_Close(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1414,7 +1414,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionRequestedEventArgs_GetConnectionRequest(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1518,7 +1518,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectDevice_Close(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1559,7 +1559,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1633,7 +1633,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectDevice_GetConnectionEndpointPairs(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1673,7 +1673,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2008,7 +2008,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectInformationElement_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2050,7 +2050,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectInformationElement_CreateFromDeviceInformation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

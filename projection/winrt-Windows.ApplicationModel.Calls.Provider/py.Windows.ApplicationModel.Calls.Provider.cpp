@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -450,7 +450,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOriginManager_RequestSetAsActiveCallOriginAppAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -490,7 +490,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOriginManager_SetCallOrigin(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -534,7 +534,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyObject* PhoneCallOriginManager_ShowPhoneCallOriginSettingsUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

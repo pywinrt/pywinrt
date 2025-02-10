@@ -15,7 +15,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* AnalyticsInfo_GetSystemPropertiesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -325,7 +325,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* AppApplicability_GetUnsupportedAppRequirements(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -497,7 +497,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* HardwareIdentification_GetPackageSpecificToken(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1556,7 +1556,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* PlatformDiagnosticsAndUsageDataSettings_CanCollectDiagnostics(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2115,7 +2115,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SystemIdentification_GetSystemIdForPublisher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2155,7 +2155,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyObject* SystemIdentification_GetSystemIdForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

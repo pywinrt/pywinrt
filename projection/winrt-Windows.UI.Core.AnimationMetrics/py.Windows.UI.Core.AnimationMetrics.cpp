@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try

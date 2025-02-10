@@ -15,7 +15,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_GetAppPurchaseCampaignIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -55,7 +55,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_GetAppReceiptAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -95,7 +95,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_GetCustomerCollectionsIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -138,7 +138,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_GetCustomerPurchaseIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -181,7 +181,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_GetProductReceiptAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -223,7 +223,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_GetUnfulfilledConsumablesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -263,7 +263,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_LoadListingInformationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -303,7 +303,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_LoadListingInformationByKeywordsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -345,7 +345,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_LoadListingInformationByProductIdsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -387,7 +387,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_ReportConsumableFulfillmentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -430,7 +430,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_ReportProductFulfillment(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -473,7 +473,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_RequestAppPurchaseAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -515,7 +515,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_RequestProductPurchaseAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -558,7 +558,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_RequestProductPurchaseWithDisplayPropertiesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -602,7 +602,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentApp_RequestProductPurchaseWithResultsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -801,7 +801,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_GetAppPurchaseCampaignIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -841,7 +841,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_GetAppReceiptAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -881,7 +881,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_GetProductReceiptAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -923,7 +923,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_GetUnfulfilledConsumablesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -963,7 +963,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_LoadListingInformationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_LoadListingInformationByKeywordsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1045,7 +1045,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_LoadListingInformationByProductIdsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1087,7 +1087,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_ReloadSimulatorAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1129,7 +1129,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_ReportConsumableFulfillmentAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1172,7 +1172,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_RequestAppPurchaseAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1214,7 +1214,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_RequestProductPurchaseAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1257,7 +1257,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_RequestProductPurchaseWithDisplayPropertiesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1301,7 +1301,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyObject* CurrentAppSimulator_RequestProductPurchaseWithResultsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2746,7 +2746,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

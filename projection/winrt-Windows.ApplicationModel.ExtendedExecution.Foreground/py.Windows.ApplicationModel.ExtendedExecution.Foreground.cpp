@@ -108,7 +108,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -139,7 +139,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
     static PyObject* ExtendedExecutionForegroundSession_Close(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -180,7 +180,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
     static PyObject* ExtendedExecutionForegroundSession_RequestExtensionAsync(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

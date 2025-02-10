@@ -15,7 +15,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AdvertisingManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AssignedAccessSettings_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -311,7 +311,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* AssignedAccessSettings_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* DiagnosticsSettings_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -572,7 +572,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* DiagnosticsSettings_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -762,7 +762,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* FirstSignInSettings_First(py::wrapper::Windows::System::UserProfile::FirstSignInSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -802,7 +802,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* FirstSignInSettings_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -842,7 +842,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* FirstSignInSettings_HasKey(py::wrapper::Windows::System::UserProfile::FirstSignInSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -884,7 +884,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* FirstSignInSettings_Lookup(py::wrapper::Windows::System::UserProfile::FirstSignInSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -926,7 +926,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* FirstSignInSettings_Split(py::wrapper::Windows::System::UserProfile::FirstSignInSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1192,7 +1192,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1234,7 +1234,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_TrySetHomeGeographicRegion(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1276,7 +1276,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* GlobalizationPreferences_TrySetLanguages(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1836,7 +1836,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* LockScreen_GetImageStream(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1876,7 +1876,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* LockScreen_RequestSetImageFeedAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1918,7 +1918,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* LockScreen_SetImageFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1960,7 +1960,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* LockScreen_SetImageStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2002,7 +2002,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* LockScreen_TryRemoveImageFeed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2127,7 +2127,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_GetAccountPicture(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2169,7 +2169,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_GetDisplayNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2209,7 +2209,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_GetDomainNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2249,7 +2249,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_GetFirstNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2289,7 +2289,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_GetLastNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2329,7 +2329,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_GetPrincipalNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2369,7 +2369,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_GetSessionInitiationProtocolUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2409,7 +2409,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_SetAccountPictureAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2451,7 +2451,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_SetAccountPictureFromStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2493,7 +2493,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_SetAccountPicturesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2537,7 +2537,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserInformation_SetAccountPicturesFromStreamsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2778,7 +2778,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserProfilePersonalizationSettings_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2818,7 +2818,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserProfilePersonalizationSettings_TrySetLockScreenImageAsync(py::wrapper::Windows::System::UserProfile::UserProfilePersonalizationSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2860,7 +2860,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyObject* UserProfilePersonalizationSettings_TrySetWallpaperImageAsync(py::wrapper::Windows::System::UserProfile::UserProfilePersonalizationSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

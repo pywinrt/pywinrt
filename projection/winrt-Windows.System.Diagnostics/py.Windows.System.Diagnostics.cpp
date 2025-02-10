@@ -148,7 +148,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* DiagnosticInvoker_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* DiagnosticInvoker_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -230,7 +230,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* DiagnosticInvoker_RunDiagnosticActionAsync(py::wrapper::Windows::System::Diagnostics::DiagnosticInvoker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* DiagnosticInvoker_RunDiagnosticActionFromStringAsync(py::wrapper::Windows::System::Diagnostics::DiagnosticInvoker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -433,7 +433,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessCpuUsage_GetReport(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -662,7 +662,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_GetAppDiagnosticInfos(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -702,7 +702,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_GetForCurrentProcess(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -742,7 +742,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_GetForProcesses(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -782,7 +782,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_TryGetForProcessId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1160,7 +1160,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiskUsage_GetReport(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1513,7 +1513,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsage_GetReport(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2052,7 +2052,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemCpuUsage_GetReport(py::wrapper::Windows::System::Diagnostics::SystemCpuUsage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2312,7 +2312,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemDiagnosticInfo_GetForCurrentSystem(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2352,7 +2352,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemDiagnosticInfo_IsArchitectureSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2573,7 +2573,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemMemoryUsage_GetReport(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationChannel_Close(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -346,7 +346,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationManager_CreateChannelAsync(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -388,7 +388,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationManager_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -428,7 +428,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationManager_Register(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -469,7 +469,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationManager_Unregister(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -510,7 +510,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationManager_UnregisterAll(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -738,7 +738,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationReceivedEventArgs_GetDeferral(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -951,7 +951,7 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

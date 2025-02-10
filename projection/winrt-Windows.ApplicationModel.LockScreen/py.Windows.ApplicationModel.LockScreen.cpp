@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockApplicationHost_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockApplicationHost_RequestUnlock(py::wrapper::Windows::ApplicationModel::LockScreen::LockApplicationHost* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -257,7 +257,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenBadge_LaunchApp(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -941,7 +941,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenUnlockingDeferral_Complete(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1046,7 +1046,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenUnlockingEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

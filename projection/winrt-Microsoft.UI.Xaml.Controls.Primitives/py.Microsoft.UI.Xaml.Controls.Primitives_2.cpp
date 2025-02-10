@@ -49,7 +49,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider>();
         if (!self_type)
@@ -321,7 +321,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView>();
         if (!self_type)

@@ -140,7 +140,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* ComponentRenewal_RenewSystemComponentsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Media::Protection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -262,7 +262,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* HdcpSession_Close(py::wrapper::Windows::Media::Protection::HdcpSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -303,7 +303,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* HdcpSession_GetEffectiveProtection(py::wrapper::Windows::Media::Protection::HdcpSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -343,7 +343,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* HdcpSession_IsEffectiveProtectionAtLeast(py::wrapper::Windows::Media::Protection::HdcpSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -385,7 +385,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* HdcpSession_SetDesiredMinProtectionAsync(py::wrapper::Windows::Media::Protection::HdcpSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -577,7 +577,7 @@ namespace py::cpp::Windows::Media::Protection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -894,7 +894,7 @@ namespace py::cpp::Windows::Media::Protection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionServiceCompletion_Complete(py::wrapper::Windows::Media::Protection::MediaProtectionServiceCompletion* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1119,7 +1119,7 @@ namespace py::cpp::Windows::Media::Protection
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1150,7 +1150,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* ProtectionCapabilities_IsTypeSupported(py::wrapper::Windows::Media::Protection::ProtectionCapabilities* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* AppDataPaths_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* AppDataPaths_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -470,7 +470,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationData_ClearAllAsync(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -510,7 +510,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationData_ClearAsync(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -552,7 +552,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationData_ClearPublisherCacheFolderAsync(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -594,7 +594,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationData_Close(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -635,7 +635,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationData_GetForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationData_GetPublisherCacheFolder(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -719,7 +719,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationData_SetVersionAsync(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -762,7 +762,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationData_SignalDataChanged(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1288,7 +1288,7 @@ namespace py::cpp::Windows::Storage
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1319,7 +1319,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataCompositeValue_Clear(py::wrapper::Windows::Storage::ApplicationDataCompositeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1360,7 +1360,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataCompositeValue_First(py::wrapper::Windows::Storage::ApplicationDataCompositeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1400,7 +1400,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataCompositeValue_GetView(py::wrapper::Windows::Storage::ApplicationDataCompositeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1440,7 +1440,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataCompositeValue_HasKey(py::wrapper::Windows::Storage::ApplicationDataCompositeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1482,7 +1482,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataCompositeValue_Insert(py::wrapper::Windows::Storage::ApplicationDataCompositeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1525,7 +1525,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataCompositeValue_Lookup(py::wrapper::Windows::Storage::ApplicationDataCompositeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1567,7 +1567,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataCompositeValue_Remove(py::wrapper::Windows::Storage::ApplicationDataCompositeValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1915,7 +1915,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainer_Close(py::wrapper::Windows::Storage::ApplicationDataContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1956,7 +1956,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainer_CreateContainer(py::wrapper::Windows::Storage::ApplicationDataContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1999,7 +1999,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainer_DeleteContainer(py::wrapper::Windows::Storage::ApplicationDataContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2257,7 +2257,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainerSettings_Clear(py::wrapper::Windows::Storage::ApplicationDataContainerSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2298,7 +2298,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainerSettings_First(py::wrapper::Windows::Storage::ApplicationDataContainerSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2338,7 +2338,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainerSettings_GetView(py::wrapper::Windows::Storage::ApplicationDataContainerSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2378,7 +2378,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainerSettings_HasKey(py::wrapper::Windows::Storage::ApplicationDataContainerSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2420,7 +2420,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainerSettings_Insert(py::wrapper::Windows::Storage::ApplicationDataContainerSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2463,7 +2463,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainerSettings_Lookup(py::wrapper::Windows::Storage::ApplicationDataContainerSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2505,7 +2505,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* ApplicationDataContainerSettings_Remove(py::wrapper::Windows::Storage::ApplicationDataContainerSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2845,7 +2845,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* CachedFileManager_CompleteUpdatesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2887,7 +2887,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* CachedFileManager_DeferUpdates(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2981,7 +2981,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* DownloadsFolder_CreateFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3023,7 +3023,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* DownloadsFolder_CreateFileForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3066,7 +3066,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* DownloadsFolder_CreateFileForUserWithCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3110,7 +3110,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* DownloadsFolder_CreateFileWithCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3153,7 +3153,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* DownloadsFolder_CreateFolderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3195,7 +3195,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* DownloadsFolder_CreateFolderForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3238,7 +3238,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* DownloadsFolder_CreateFolderForUserWithCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3282,7 +3282,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* DownloadsFolder_CreateFolderWithCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3382,7 +3382,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_AppendLinesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3425,7 +3425,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_AppendLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3469,7 +3469,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_AppendTextAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3512,7 +3512,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_AppendTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3556,7 +3556,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_ReadBufferAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3598,7 +3598,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_ReadLinesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3640,7 +3640,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_ReadLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3683,7 +3683,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_ReadTextAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3725,7 +3725,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_ReadTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3768,7 +3768,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_WriteBufferAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3811,7 +3811,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_WriteBytesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3854,7 +3854,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_WriteLinesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3897,7 +3897,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_WriteLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3941,7 +3941,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_WriteTextAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3984,7 +3984,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* FileIO_WriteTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4092,7 +4092,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* KnownFolders_GetFolderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4134,7 +4134,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* KnownFolders_GetFolderForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4177,7 +4177,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* KnownFolders_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4219,7 +4219,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* KnownFolders_RequestAccessForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4718,7 +4718,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_AppendLinesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4761,7 +4761,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_AppendLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4805,7 +4805,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_AppendTextAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4848,7 +4848,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_AppendTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4892,7 +4892,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_ReadBufferAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4934,7 +4934,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_ReadLinesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4976,7 +4976,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_ReadLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5019,7 +5019,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_ReadTextAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5061,7 +5061,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_ReadTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5104,7 +5104,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_WriteBufferAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5147,7 +5147,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_WriteBytesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5190,7 +5190,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_WriteLinesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5233,7 +5233,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_WriteLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5277,7 +5277,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_WriteTextAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5320,7 +5320,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* PathIO_WriteTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5436,7 +5436,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* SetVersionDeferral_Complete(py::wrapper::Windows::Storage::SetVersionDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5541,7 +5541,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* SetVersionRequest_GetDeferral(py::wrapper::Windows::Storage::SetVersionRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5707,7 +5707,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_CopyAndReplaceAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5749,7 +5749,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_CopyOverload(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5793,7 +5793,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_CopyOverloadDefaultNameAndOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5835,7 +5835,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_CopyOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5878,7 +5878,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_CreateStreamedFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5922,7 +5922,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_CreateStreamedFileFromUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5966,7 +5966,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_DeleteAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6008,7 +6008,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6048,7 +6048,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetBasicPropertiesAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6088,7 +6088,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetFileFromApplicationUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6130,7 +6130,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetFileFromPathAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6172,7 +6172,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetFileFromPathForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6215,7 +6215,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetParentAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6255,7 +6255,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetScaledImageAsThumbnailAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6299,7 +6299,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6342,7 +6342,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6384,7 +6384,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetThumbnailAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6428,7 +6428,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6471,7 +6471,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6513,7 +6513,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_IsEqual(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6555,7 +6555,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_IsOfType(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6597,7 +6597,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_MoveAndReplaceAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6639,7 +6639,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_MoveOverload(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6683,7 +6683,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_MoveOverloadDefaultNameAndOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6725,7 +6725,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_MoveOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6768,7 +6768,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_OpenAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6810,7 +6810,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_OpenReadAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6850,7 +6850,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_OpenSequentialReadAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6890,7 +6890,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_OpenTransactedWriteAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6930,7 +6930,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_OpenTransactedWriteWithOptionsAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6972,7 +6972,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_OpenWithOptionsAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7015,7 +7015,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_RenameAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7058,7 +7058,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7100,7 +7100,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_ReplaceWithStreamedFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7144,7 +7144,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFile_ReplaceWithStreamedFileFromUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7679,7 +7679,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_AreQueryOptionsSupported(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7721,7 +7721,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFileAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7764,7 +7764,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFileAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7806,7 +7806,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFileQuery(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7848,7 +7848,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFileQueryOverloadDefault(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7888,7 +7888,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFileQueryWithOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7930,7 +7930,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFolderAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7973,7 +7973,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFolderAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8015,7 +8015,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFolderQuery(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8057,7 +8057,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFolderQueryOverloadDefault(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8097,7 +8097,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateFolderQueryWithOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8139,7 +8139,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateItemQuery(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8179,7 +8179,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_CreateItemQueryWithOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8221,7 +8221,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_DeleteAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8263,7 +8263,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8303,7 +8303,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetBasicPropertiesAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8343,7 +8343,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFileAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8385,7 +8385,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFilesAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8429,7 +8429,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFilesAsyncOverloadDefaultOptionsStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8469,7 +8469,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFilesAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8511,7 +8511,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFolderAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8553,7 +8553,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFolderFromPathAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8595,7 +8595,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFolderFromPathForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8638,7 +8638,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFoldersAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8682,7 +8682,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFoldersAsyncOverloadDefaultOptionsStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8722,7 +8722,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetFoldersAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8764,7 +8764,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetIndexedStateAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8804,7 +8804,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetItemAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8846,7 +8846,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetItemsAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8889,7 +8889,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetItemsAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8929,7 +8929,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetParentAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8969,7 +8969,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetScaledImageAsThumbnailAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9013,7 +9013,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9056,7 +9056,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9098,7 +9098,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetThumbnailAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9142,7 +9142,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9185,7 +9185,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9227,7 +9227,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_IsCommonFileQuerySupported(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9269,7 +9269,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_IsCommonFolderQuerySupported(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9311,7 +9311,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_IsEqual(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9353,7 +9353,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_IsOfType(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9395,7 +9395,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_RenameAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9438,7 +9438,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9480,7 +9480,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_TryGetChangeTracker(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9520,7 +9520,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageFolder_TryGetItemAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9970,7 +9970,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibrary_AreFolderSuggestionsAvailableAsync(py::wrapper::Windows::Storage::StorageLibrary* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10010,7 +10010,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibrary_GetLibraryAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10052,7 +10052,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibrary_GetLibraryForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10095,7 +10095,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibrary_RequestAddFolderAsync(py::wrapper::Windows::Storage::StorageLibrary* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10135,7 +10135,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibrary_RequestRemoveFolderAsync(py::wrapper::Windows::Storage::StorageLibrary* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10426,7 +10426,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChange_GetStorageItemAsync(py::wrapper::Windows::Storage::StorageLibraryChange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10466,7 +10466,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChange_IsOfType(py::wrapper::Windows::Storage::StorageLibraryChange* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10666,7 +10666,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChangeReader_AcceptChangesAsync(py::wrapper::Windows::Storage::StorageLibraryChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10706,7 +10706,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChangeReader_GetLastChangeId(py::wrapper::Windows::Storage::StorageLibraryChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10746,7 +10746,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChangeReader_ReadBatchAsync(py::wrapper::Windows::Storage::StorageLibraryChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10852,7 +10852,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChangeTracker_Disable(py::wrapper::Windows::Storage::StorageLibraryChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10893,7 +10893,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChangeTracker_Enable(py::wrapper::Windows::Storage::StorageLibraryChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10934,7 +10934,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChangeTracker_EnableWithOptions(py::wrapper::Windows::Storage::StorageLibraryChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10977,7 +10977,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChangeTracker_GetChangeReader(py::wrapper::Windows::Storage::StorageLibraryChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11017,7 +11017,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageLibraryChangeTracker_Reset(py::wrapper::Windows::Storage::StorageLibraryChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11117,7 +11117,7 @@ namespace py::cpp::Windows::Storage
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11396,7 +11396,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageProvider_IsPropertySupportedForPartialFileAsync(py::wrapper::Windows::Storage::StorageProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11564,7 +11564,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageStreamTransaction_Close(py::wrapper::Windows::Storage::StorageStreamTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11605,7 +11605,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StorageStreamTransaction_CommitAsync(py::wrapper::Windows::Storage::StorageStreamTransaction* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11766,7 +11766,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StreamedFileDataRequest_Close(py::wrapper::Windows::Storage::StreamedFileDataRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11807,7 +11807,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StreamedFileDataRequest_FailAndClose(py::wrapper::Windows::Storage::StreamedFileDataRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11850,7 +11850,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StreamedFileDataRequest_FlushAsync(py::wrapper::Windows::Storage::StreamedFileDataRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11890,7 +11890,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* StreamedFileDataRequest_WriteAsync(py::wrapper::Windows::Storage::StreamedFileDataRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12118,7 +12118,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* SystemDataPaths_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14437,7 +14437,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* UserDataPaths_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14477,7 +14477,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* UserDataPaths_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15194,7 +15194,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_CopyAndReplaceAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15236,7 +15236,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_CopyOverload(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15280,7 +15280,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_CopyOverloadDefaultNameAndOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15322,7 +15322,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_CopyOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15365,7 +15365,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_DeleteAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15407,7 +15407,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15447,7 +15447,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_GetBasicPropertiesAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15487,7 +15487,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_IsOfType(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15529,7 +15529,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_MoveAndReplaceAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15571,7 +15571,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_MoveOverload(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -15615,7 +15615,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_MoveOverloadDefaultNameAndOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15657,7 +15657,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_MoveOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15700,7 +15700,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_OpenAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15742,7 +15742,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_OpenReadAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15782,7 +15782,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_OpenSequentialReadAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15822,7 +15822,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_OpenTransactedWriteAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15862,7 +15862,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_RenameAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15905,7 +15905,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17012,7 +17012,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile2_OpenTransactedWriteWithOptionsAsync(py::wrapper::Windows::Storage::IStorageFile2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17054,7 +17054,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFile2_OpenWithOptionsAsync(py::wrapper::Windows::Storage::IStorageFile2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17472,7 +17472,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_CreateFileAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17515,7 +17515,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_CreateFileAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17557,7 +17557,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_CreateFolderAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17600,7 +17600,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_CreateFolderAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17642,7 +17642,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_DeleteAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17684,7 +17684,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17724,7 +17724,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_GetBasicPropertiesAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17764,7 +17764,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_GetFileAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17806,7 +17806,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_GetFilesAsyncOverloadDefaultOptionsStartAndCount(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17846,7 +17846,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_GetFolderAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17888,7 +17888,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_GetFoldersAsyncOverloadDefaultOptionsStartAndCount(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17928,7 +17928,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_GetItemAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17970,7 +17970,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_GetItemsAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18010,7 +18010,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_IsOfType(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18052,7 +18052,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_RenameAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18095,7 +18095,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18998,7 +18998,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageFolder2_TryGetItemAsync(py::wrapper::Windows::Storage::IStorageFolder2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19196,7 +19196,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem_DeleteAsync(py::wrapper::Windows::Storage::IStorageItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19238,7 +19238,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19278,7 +19278,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem_GetBasicPropertiesAsync(py::wrapper::Windows::Storage::IStorageItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19318,7 +19318,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem_IsOfType(py::wrapper::Windows::Storage::IStorageItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19360,7 +19360,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem_RenameAsync(py::wrapper::Windows::Storage::IStorageItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19403,7 +19403,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19970,7 +19970,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem2_DeleteAsync(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20012,7 +20012,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem2_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20052,7 +20052,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem2_GetBasicPropertiesAsync(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20092,7 +20092,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem2_GetParentAsync(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20132,7 +20132,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem2_IsEqual(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20174,7 +20174,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem2_IsOfType(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20216,7 +20216,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem2_RenameAsync(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20259,7 +20259,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItem2_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20886,7 +20886,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties_GetThumbnailAsync(py::wrapper::Windows::Storage::IStorageItemProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -20930,7 +20930,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20973,7 +20973,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21471,7 +21471,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties2_GetScaledImageAsThumbnailAsync(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -21515,7 +21515,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties2_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21558,7 +21558,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties2_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21600,7 +21600,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties2_GetThumbnailAsync(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -21644,7 +21644,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties2_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21687,7 +21687,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemProperties2_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22314,7 +22314,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemPropertiesWithProvider_GetThumbnailAsync(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -22358,7 +22358,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemPropertiesWithProvider_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -22401,7 +22401,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStorageItemPropertiesWithProvider_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22950,7 +22950,7 @@ namespace py::cpp::Windows::Storage
 
     static PyObject* IStreamedFileDataRequest_FailAndClose(py::wrapper::Windows::Storage::IStreamedFileDataRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

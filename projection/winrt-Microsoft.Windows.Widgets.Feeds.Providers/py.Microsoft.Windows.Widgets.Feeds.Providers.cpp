@@ -108,7 +108,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -829,7 +829,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* FeedManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -869,7 +869,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* FeedManager_GetEnabledFeedProviders(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -909,7 +909,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* FeedManager_SendMessageToContent(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -954,7 +954,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* FeedManager_SetCustomQueryParameters(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -997,7 +997,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* FeedManager_TryShowAnnouncement(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1904,7 +1904,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* FeedResourceRequestedArgs_GetDeferral(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2162,7 +2162,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -2423,7 +2423,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedAnnouncementInvokedTarget_OnAnnouncementInvoked(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2620,7 +2620,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedManager_GetEnabledFeedProviders(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2660,7 +2660,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedManager_SetCustomQueryParameters(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2885,7 +2885,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedManager2_SendMessageToContent(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2930,7 +2930,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedManager2_TryShowAnnouncement(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3196,7 +3196,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedProvider_OnCustomQueryParametersRequested(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3239,7 +3239,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedProvider_OnFeedDisabled(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3282,7 +3282,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedProvider_OnFeedEnabled(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3325,7 +3325,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedProvider_OnFeedProviderDisabled(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3368,7 +3368,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedProvider_OnFeedProviderEnabled(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3689,7 +3689,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedProviderAnalytics_OnAnalyticsInfoReported(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3886,7 +3886,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedProviderErrors_OnErrorInfoReported(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4083,7 +4083,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedProviderMessage_OnMessageReceived(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4280,7 +4280,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyObject* IFeedResourceProvider_OnResourceRequested(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

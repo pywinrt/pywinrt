@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_Close(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_DisconnectAsync(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_RequestStartCastingAsync(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -628,7 +628,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_CreateCastingConnection(py::wrapper::Windows::Media::Casting::CastingDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -668,7 +668,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_DeviceInfoSupportsCastingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -710,7 +710,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -752,7 +752,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -794,7 +794,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_GetDeviceSelectorFromCastingSourceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -836,7 +836,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_GetSupportedCastingPlaybackTypesAsync(py::wrapper::Windows::Media::Casting::CastingDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1050,7 +1050,7 @@ namespace py::cpp::Windows::Media::Casting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1081,7 +1081,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_Hide(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1122,7 +1122,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_Show(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1165,7 +1165,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_ShowWithPlacement(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

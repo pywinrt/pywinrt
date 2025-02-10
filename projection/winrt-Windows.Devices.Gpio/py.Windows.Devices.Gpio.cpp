@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Devices::Gpio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeCounter_Close(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -88,7 +88,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeCounter_Read(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -128,7 +128,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeCounter_Reset(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -168,7 +168,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeCounter_Start(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -209,7 +209,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeCounter_Stop(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -435,7 +435,7 @@ namespace py::cpp::Windows::Devices::Gpio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -484,7 +484,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeReader_Clear(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -525,7 +525,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeReader_Close(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -566,7 +566,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeReader_GetAllItems(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -606,7 +606,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeReader_GetNextItem(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -646,7 +646,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeReader_PeekNextItem(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -686,7 +686,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeReader_Start(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -727,7 +727,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeReader_Stop(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -768,7 +768,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioChangeReader_WaitForItemsAsync(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1131,7 +1131,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioController_GetControllersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioController_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1213,7 +1213,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioController_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1253,7 +1253,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioController_OpenPin(py::wrapper::Windows::Devices::Gpio::GpioController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1295,7 +1295,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioController_OpenPinWithSharingMode(py::wrapper::Windows::Devices::Gpio::GpioController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1338,7 +1338,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioController_TryOpenPin(py::wrapper::Windows::Devices::Gpio::GpioController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1522,7 +1522,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioPin_Close(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1563,7 +1563,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioPin_GetDriveMode(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1603,7 +1603,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioPin_IsDriveModeSupported(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1645,7 +1645,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioPin_Read(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1685,7 +1685,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioPin_SetDriveMode(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1728,7 +1728,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static PyObject* GpioPin_Write(py::wrapper::Windows::Devices::Gpio::GpioPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2168,7 +2168,7 @@ namespace py::cpp::Windows::Devices::Gpio
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeCount>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -2401,7 +2401,7 @@ namespace py::cpp::Windows::Devices::Gpio
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Gpio::GpioChangeRecord>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

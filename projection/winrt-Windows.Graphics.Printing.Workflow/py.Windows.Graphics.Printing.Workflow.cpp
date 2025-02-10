@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSession_Start(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -293,7 +293,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSetupRequestedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -333,7 +333,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSetupRequestedEventArgs_GetUserPrintTicketAsync(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -373,7 +373,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowBackgroundSetupRequestedEventArgs_SetRequiresUI(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -511,7 +511,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowConfiguration_AbortPrintFlow(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -711,7 +711,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSession_Start(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -981,7 +981,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSetupRequestedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowForegroundSetupRequestedEventArgs_GetUserPrintTicketAsync(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobBackgroundSession_Start(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1712,7 +1712,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobIssueDetectedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2041,7 +2041,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobNotificationEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2207,7 +2207,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobStartingEventArgs_DisableIppCompressionForJob(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2248,7 +2248,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobStartingEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2288,7 +2288,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobStartingEventArgs_SetSkipSystemRendering(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2652,7 +2652,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowJobUISession_Start(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2980,7 +2980,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3139,7 +3139,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlConverter_ConvertPdlAsync(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3281,7 +3281,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlDataAvailableEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3478,7 +3478,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_CreateJobOnPrinter(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3520,7 +3520,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_CreateJobOnPrinterWithAttributes(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3598,7 +3598,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_CreateJobOnPrinterWithAttributesBuffer(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3676,7 +3676,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3716,7 +3716,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlModificationRequestedEventArgs_GetPdlConverter(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3950,7 +3950,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlSourceContent_GetContentFileAsync(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3990,7 +3990,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlSourceContent_GetInputStream(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4126,7 +4126,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlTargetStream_CompleteStreamSubmission(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4169,7 +4169,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPdlTargetStream_GetOutputStream(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4274,7 +4274,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_ConvertPrintTicketToJobAttributes(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4317,7 +4317,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_GetJobAttributes(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4359,7 +4359,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_GetJobAttributesAsBuffer(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4401,7 +4401,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_GetJobPrintTicket(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4441,7 +4441,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_GetJobStatus(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4481,7 +4481,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_SetJobAttributes(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4523,7 +4523,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowPrinterJob_SetJobAttributesFromBuffer(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4697,7 +4697,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSourceContent_GetJobPrintTicketAsync(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4737,7 +4737,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSourceContent_GetSourceSpoolDataAsStreamContent(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4777,7 +4777,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSourceContent_GetSourceSpoolDataAsXpsObjectModel(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4883,7 +4883,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSpoolStreamContent_GetInputStream(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4987,7 +4987,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowStreamTarget_GetOutputStream(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5091,7 +5091,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSubmittedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5131,7 +5131,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSubmittedEventArgs_GetTarget(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5269,7 +5269,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowSubmittedOperation_Complete(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5875,7 +5875,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowUILauncher_IsUILaunchEnabled(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5915,7 +5915,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowUILauncher_LaunchAndCompleteUIAsync(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6020,7 +6020,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowVirtualPrinterDataAvailableEventArgs_CompleteJob(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterDataAvailableEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6063,7 +6063,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowVirtualPrinterDataAvailableEventArgs_GetJobPrintTicket(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterDataAvailableEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6103,7 +6103,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowVirtualPrinterDataAvailableEventArgs_GetPdlConverter(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterDataAvailableEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6145,7 +6145,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowVirtualPrinterDataAvailableEventArgs_GetTargetFileAsync(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterDataAvailableEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6345,7 +6345,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowVirtualPrinterSession_Start(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6673,7 +6673,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowVirtualPrinterUIEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterUIEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6713,7 +6713,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowVirtualPrinterUIEventArgs_GetJobPrintTicket(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowVirtualPrinterUIEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6911,7 +6911,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     static PyObject* PrintWorkflowXpsDataAvailableEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

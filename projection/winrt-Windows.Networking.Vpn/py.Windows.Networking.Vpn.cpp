@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -251,7 +251,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_ActivateForeground(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -294,7 +294,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_AddAndAssociateTransport(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -338,7 +338,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_AppendVpnReceivePacketBuffer(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -381,7 +381,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_AppendVpnSendPacketBuffer(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -424,7 +424,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_AssociateTransport(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -468,7 +468,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_FlushVpnReceivePacketBuffers(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -509,7 +509,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_FlushVpnSendPacketBuffers(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -550,7 +550,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_GetSlotTypeForTransportContext(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -592,7 +592,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_GetVpnReceivePacketBuffer(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -632,7 +632,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_GetVpnSendPacketBuffer(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -672,7 +672,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_LogDiagnosticMessage(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -715,7 +715,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_ProcessEventAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -759,7 +759,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_ReplaceAndAssociateTransport(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -803,7 +803,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_RequestCredentials(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -848,7 +848,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_RequestCredentialsSimpleAsync(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -890,7 +890,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_RequestCredentialsWithCertificateAsync(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -934,7 +934,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_RequestCredentialsWithOptionsAsync(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -977,7 +977,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_RequestCustomPrompt(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1020,7 +1020,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_RequestCustomPromptAsync(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1062,7 +1062,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_RequestVpnPacketBuffer(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1112,7 +1112,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_SetAllowedSslTlsVersions(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1156,7 +1156,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_SetErrorMessage(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1199,7 +1199,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_Start(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 10)
         {
@@ -1251,7 +1251,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_StartExistingTransports(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 8)
         {
@@ -1301,7 +1301,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_StartReconnectingTransport(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1345,7 +1345,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_StartWithMainTransport(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 9)
         {
@@ -1396,7 +1396,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_StartWithMultipleTransports(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 10)
         {
@@ -1448,7 +1448,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_StartWithTrafficFilter(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 11)
         {
@@ -1501,7 +1501,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_Stop(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1542,7 +1542,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_TerminateConnection(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2580,7 +2580,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2976,7 +2976,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3372,7 +3372,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3838,7 +3838,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4133,7 +4133,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4529,7 +4529,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4886,7 +4886,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5251,7 +5251,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5717,7 +5717,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6082,7 +6082,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6268,7 +6268,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -6880,7 +6880,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnForegroundActivationOperation_Complete(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivationOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6978,7 +6978,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7011,7 +7011,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnInterfaceId_GetAddressInfo(py::wrapper::Windows::Networking::Vpn::VpnInterfaceId* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7115,7 +7115,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7146,7 +7146,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_AddProfileFromObjectAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7188,7 +7188,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_AddProfileFromXmlAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7230,7 +7230,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_ConnectProfileAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7272,7 +7272,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_ConnectProfileWithPasswordCredentialAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7315,7 +7315,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_DeleteProfileAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7357,7 +7357,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_DisconnectProfileAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7399,7 +7399,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_GetProfilesAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7439,7 +7439,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_UpdateProfileFromObjectAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7481,7 +7481,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnManagementAgent_UpdateProfileFromXmlAsync(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7586,7 +7586,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7811,7 +7811,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -8110,7 +8110,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9011,7 +9011,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -9381,7 +9381,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBufferList_AddAtBegin(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9424,7 +9424,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBufferList_Append(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9467,7 +9467,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBufferList_Clear(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9508,7 +9508,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBufferList_First(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9548,7 +9548,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBufferList_RemoveAtBegin(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9588,7 +9588,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBufferList_RemoveAtEnd(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9963,7 +9963,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -10654,7 +10654,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -10882,7 +10882,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11411,7 +11411,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -11863,7 +11863,7 @@ namespace py::cpp::Windows::Networking::Vpn
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -12128,7 +12128,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnChannelStatics_ProcessEventAsync(py::wrapper::Windows::Networking::Vpn::IVpnChannelStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13589,7 +13589,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnDomainNameInfoFactory_CreateVpnDomainNameInfo(py::wrapper::Windows::Networking::Vpn::IVpnDomainNameInfoFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -13814,7 +13814,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnInterfaceIdFactory_CreateVpnInterfaceId(py::wrapper::Windows::Networking::Vpn::IVpnInterfaceIdFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14012,7 +14012,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnNamespaceInfoFactory_CreateVpnNamespaceInfo(py::wrapper::Windows::Networking::Vpn::IVpnNamespaceInfoFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -14230,7 +14230,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnPacketBufferFactory_CreateVpnPacketBuffer(py::wrapper::Windows::Networking::Vpn::IVpnPacketBufferFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -14448,7 +14448,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnPlugIn_Connect(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14491,7 +14491,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnPlugIn_Decapsulate(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -14537,7 +14537,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnPlugIn_Disconnect(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14580,7 +14580,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnPlugIn_Encapsulate(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -14625,7 +14625,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnPlugIn_GetKeepAlivePayload(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14997,7 +14997,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnPlugInReconnectTransport_ReconnectTransport(py::wrapper::Windows::Networking::Vpn::IVpnPlugInReconnectTransport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15873,7 +15873,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnRouteFactory_CreateVpnRoute(py::wrapper::Windows::Networking::Vpn::IVpnRouteFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

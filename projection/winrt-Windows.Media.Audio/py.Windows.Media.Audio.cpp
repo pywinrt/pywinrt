@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_AddOutgoingConnection(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -110,7 +110,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_Close(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -151,7 +151,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -194,7 +194,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_RemoveOutgoingConnection(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -280,7 +280,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_Reset(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -321,7 +321,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_Start(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_Stop(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -795,7 +795,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_Close(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -836,7 +836,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -879,7 +879,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -922,7 +922,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_Reset(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -963,7 +963,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_Start(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1004,7 +1004,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_Stop(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1442,7 +1442,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioEffectsPackConfiguration_GetForDeviceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1485,7 +1485,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioEffectsPackConfiguration_IsDeviceIdSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1774,7 +1774,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_AddOutgoingConnection(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1817,7 +1817,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1861,7 +1861,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_Close(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1902,7 +1902,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1945,7 +1945,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1988,7 +1988,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_RemoveOutgoingConnection(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2031,7 +2031,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_Reset(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2072,7 +2072,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_Seek(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2115,7 +2115,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_Start(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2156,7 +2156,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_Stop(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2999,7 +2999,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_Close(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3040,7 +3040,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3083,7 +3083,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3126,7 +3126,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_FinalizeAsync(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3166,7 +3166,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_Reset(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3207,7 +3207,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_Start(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3248,7 +3248,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_Stop(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3742,7 +3742,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_AddFrame(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3785,7 +3785,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_AddOutgoingConnection(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3828,7 +3828,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3872,7 +3872,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_Close(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3913,7 +3913,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3956,7 +3956,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_DiscardQueuedFrames(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3997,7 +3997,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4040,7 +4040,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_RemoveOutgoingConnection(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4083,7 +4083,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_Reset(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4124,7 +4124,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_Start(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4165,7 +4165,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_Stop(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4804,7 +4804,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_Close(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4845,7 +4845,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4888,7 +4888,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4931,7 +4931,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_GetFrame(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4971,7 +4971,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_Reset(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5012,7 +5012,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_Start(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5053,7 +5053,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_Stop(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5391,7 +5391,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_Close(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5432,7 +5432,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5474,7 +5474,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateBatchUpdater(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5514,7 +5514,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateDeviceInputNodeAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5556,7 +5556,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateDeviceInputNodeWithFormatAndEmitterOnDeviceAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5601,7 +5601,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateDeviceInputNodeWithFormatAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5644,7 +5644,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateDeviceInputNodeWithFormatOnDeviceAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5688,7 +5688,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateDeviceOutputNodeAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5728,7 +5728,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFileInputNodeAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5770,7 +5770,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFileInputNodeWithEmitterAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5813,7 +5813,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFileOutputNodeAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5855,7 +5855,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFileOutputNodeWithFileProfileAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5898,7 +5898,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFrameInputNode(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5938,7 +5938,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFrameInputNodeWithFormat(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5980,7 +5980,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFrameInputNodeWithFormatAndEmitter(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6023,7 +6023,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFrameOutputNode(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6063,7 +6063,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateFrameOutputNodeWithFormat(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6105,7 +6105,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateMediaSourceAudioInputNodeAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6147,7 +6147,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateMediaSourceAudioInputNodeWithEmitterAsync(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6190,7 +6190,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateSubmixNode(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6230,7 +6230,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateSubmixNodeWithFormat(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6272,7 +6272,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_CreateSubmixNodeWithFormatAndEmitter(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6315,7 +6315,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_ResetAllNodes(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6356,7 +6356,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_Start(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6397,7 +6397,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_Stop(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6959,7 +6959,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphBatchUpdater_Close(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7244,7 +7244,7 @@ namespace py::cpp::Windows::Media::Audio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7915,7 +7915,7 @@ namespace py::cpp::Windows::Media::Audio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -8765,7 +8765,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterDecayModel_CreateCustom(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8808,7 +8808,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterDecayModel_CreateNatural(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -9188,7 +9188,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterShape_CreateCone(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9232,7 +9232,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterShape_CreateOmnidirectional(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9411,7 +9411,7 @@ namespace py::cpp::Windows::Media::Audio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9785,7 +9785,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_Close(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9826,7 +9826,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9866,7 +9866,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_Open(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9906,7 +9906,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_OpenAsync(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9946,7 +9946,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_Start(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9987,7 +9987,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_StartAsync(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10027,7 +10027,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_TryCreateFromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10439,7 +10439,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_CreateForCaptureMonitoring(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10479,7 +10479,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_CreateForCaptureMonitoringWithCategory(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10521,7 +10521,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_CreateForCaptureMonitoringWithCategoryAndDeviceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10564,7 +10564,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_CreateForCaptureMonitoringWithCategoryAndDeviceRole(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10607,7 +10607,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_CreateForRenderMonitoring(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10647,7 +10647,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_CreateForRenderMonitoringWithCategory(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10689,7 +10689,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_CreateForRenderMonitoringWithCategoryAndDeviceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10732,7 +10732,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_CreateForRenderMonitoringWithCategoryAndDeviceRole(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10965,7 +10965,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_AddOutgoingConnection(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11008,7 +11008,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11052,7 +11052,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_Close(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11093,7 +11093,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11136,7 +11136,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11179,7 +11179,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_RemoveOutgoingConnection(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11222,7 +11222,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_Reset(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11263,7 +11263,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_Start(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11304,7 +11304,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_Stop(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12633,7 +12633,7 @@ namespace py::cpp::Windows::Media::Audio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -13265,7 +13265,7 @@ namespace py::cpp::Windows::Media::Audio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -13539,7 +13539,7 @@ namespace py::cpp::Windows::Media::Audio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -13837,7 +13837,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_AddOutgoingConnection(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13880,7 +13880,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13924,7 +13924,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_Close(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13965,7 +13965,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14008,7 +14008,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14051,7 +14051,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_RemoveOutgoingConnection(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14094,7 +14094,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_Reset(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14135,7 +14135,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_Seek(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14178,7 +14178,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_Start(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14219,7 +14219,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_Stop(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15053,7 +15053,7 @@ namespace py::cpp::Windows::Media::Audio
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -16915,7 +16915,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_GetForDeviceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16957,7 +16957,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_IsSpatialAudioFormatSupported(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16999,7 +16999,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_SetDefaultSpatialAudioFormatAsync(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17319,7 +17319,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatConfiguration_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17359,7 +17359,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatConfiguration_ReportConfigurationChangedAsync(py::wrapper::Windows::Media::Audio::SpatialAudioFormatConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17401,7 +17401,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatConfiguration_ReportLicenseChangedAsync(py::wrapper::Windows::Media::Audio::SpatialAudioFormatConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17866,7 +17866,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_AddOutgoingConnection(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17909,7 +17909,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17953,7 +17953,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_Close(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17994,7 +17994,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18037,7 +18037,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18080,7 +18080,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_RemoveOutgoingConnection(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18123,7 +18123,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_Reset(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18164,7 +18164,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_Start(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18205,7 +18205,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_Stop(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19040,7 +19040,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_AddOutgoingConnection(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19083,7 +19083,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_AddOutgoingConnectionWithGain(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19127,7 +19127,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_Close(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19168,7 +19168,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19211,7 +19211,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19254,7 +19254,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_RemoveOutgoingConnection(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19297,7 +19297,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_Reset(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19338,7 +19338,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_Start(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19379,7 +19379,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_Stop(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20265,7 +20265,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_Close(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20306,7 +20306,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20349,7 +20349,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20392,7 +20392,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_Reset(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20433,7 +20433,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_Start(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20474,7 +20474,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_Stop(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21153,7 +21153,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_Close(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21194,7 +21194,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_DisableEffectsByDefinition(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21237,7 +21237,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_EnableEffectsByDefinition(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21280,7 +21280,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_Reset(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21321,7 +21321,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_Start(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21362,7 +21362,7 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_Stop(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

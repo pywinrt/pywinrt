@@ -23,7 +23,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreview_GetCurrentPostureAsync(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreview_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

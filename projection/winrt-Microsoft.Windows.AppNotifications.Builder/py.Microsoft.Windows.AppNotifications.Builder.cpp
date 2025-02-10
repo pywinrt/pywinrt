@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_AddArgument(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -88,7 +88,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_AddButton(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -130,7 +130,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_AddComboBox(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -172,7 +172,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_AddProgressBar(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -214,7 +214,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_AddText(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -256,7 +256,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_AddText2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -299,7 +299,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_AddTextBox(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -341,7 +341,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_AddTextBox2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -385,7 +385,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_BuildNotification(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -425,7 +425,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_IsUrgentScenarioSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -465,7 +465,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_MuteAudio(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -505,7 +505,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAppLogoOverride(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -547,7 +547,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAppLogoOverride2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -590,7 +590,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAppLogoOverride3(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -634,7 +634,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAttributionText(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -676,7 +676,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAttributionText2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -719,7 +719,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAudioEvent(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -761,7 +761,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAudioEvent2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -804,7 +804,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAudioUri(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -846,7 +846,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetAudioUri2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -889,7 +889,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetDuration(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -931,7 +931,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetGroup(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -973,7 +973,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetHeroImage(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1015,7 +1015,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetHeroImage2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1058,7 +1058,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetInlineImage(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1100,7 +1100,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetInlineImage2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1143,7 +1143,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetInlineImage3(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1187,7 +1187,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetScenario(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1229,7 +1229,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetTag(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1271,7 +1271,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationBuilder_SetTimeStamp(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1418,7 +1418,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1464,7 +1464,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_AddArgument(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1507,7 +1507,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_IsButtonStyleSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1547,7 +1547,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_IsToolTipSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1587,7 +1587,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_SetButtonStyle(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1629,7 +1629,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_SetContextMenuPlacement(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1669,7 +1669,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_SetIcon(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1711,7 +1711,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_SetInputId(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1753,7 +1753,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_SetInvokeUri(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1795,7 +1795,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_SetInvokeUri2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1838,7 +1838,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationButton_SetToolTip(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2595,7 +2595,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2628,7 +2628,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationComboBox_AddItem(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2671,7 +2671,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationComboBox_SetSelectedItem(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2713,7 +2713,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationComboBox_SetTitle(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3022,7 +3022,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3053,7 +3053,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_BindStatus(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3093,7 +3093,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_BindTitle(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3133,7 +3133,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_BindValue(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3173,7 +3173,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_BindValueStringOverride(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3213,7 +3213,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_SetStatus(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3255,7 +3255,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_SetTitle(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3297,7 +3297,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_SetValue(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3339,7 +3339,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationProgressBar_SetValueStringOverride(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3723,7 +3723,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3754,7 +3754,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationTextProperties_SetIncomingCallAlignment(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3794,7 +3794,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationTextProperties_SetLanguage(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3836,7 +3836,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
 
     static PyObject* AppNotificationTextProperties_SetMaxLines(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

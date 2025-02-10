@@ -595,7 +595,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -901,7 +901,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_AddAccountWithTransferTokenAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -943,7 +943,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_CreateWebAccountMonitor(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -985,7 +985,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1028,7 +1028,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindAccountProviderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindAccountProviderWithAuthorityAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1113,7 +1113,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindAccountProviderWithAuthorityForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1157,7 +1157,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindAllAccountsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1199,7 +1199,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindAllAccountsWithClientIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1242,7 +1242,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindSystemAccountProviderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1284,7 +1284,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindSystemAccountProviderWithAuthorityAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1327,7 +1327,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_FindSystemAccountProviderWithAuthorityForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1371,7 +1371,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_GetTokenSilentlyAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1413,7 +1413,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_GetTokenSilentlyWithWebAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1456,7 +1456,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_RequestTokenAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1498,7 +1498,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebAuthenticationCoreManager_RequestTokenWithWebAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1604,7 +1604,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1911,7 +1911,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2092,7 +2092,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -2495,7 +2495,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyObject* WebTokenRequestResult_InvalidateCacheAsync(py::wrapper::Windows::Security::Authentication::Web::Core::WebTokenRequestResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2683,7 +2683,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

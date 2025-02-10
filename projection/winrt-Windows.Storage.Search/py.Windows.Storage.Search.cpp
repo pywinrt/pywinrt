@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_AddAsync(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_CreateQuery(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_CreateQueryWithSortOrder(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -152,7 +152,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_CreateQueryWithSortOrderAndLanguage(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -197,7 +197,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_DeleteAllAsync(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_DeleteAsync(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -279,7 +279,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_DeleteMultipleAsync(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -321,7 +321,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_GetIndexer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -361,7 +361,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_GetIndexerWithName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -403,7 +403,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_RetrievePropertiesAsync(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -446,7 +446,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexer_UpdateAsync(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -614,7 +614,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexerQuery_GetAsync(py::wrapper::Windows::Storage::Search::ContentIndexerQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -654,7 +654,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexerQuery_GetCountAsync(py::wrapper::Windows::Storage::Search::ContentIndexerQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -694,7 +694,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexerQuery_GetPropertiesAsync(py::wrapper::Windows::Storage::Search::ContentIndexerQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -734,7 +734,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexerQuery_GetPropertiesRangeAsync(py::wrapper::Windows::Storage::Search::ContentIndexerQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -777,7 +777,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* ContentIndexerQuery_GetRangeAsync(py::wrapper::Windows::Storage::Search::ContentIndexerQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::Storage::Search
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::Storage::Search
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1298,7 +1298,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* QueryOptions_LoadFromString(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1341,7 +1341,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* QueryOptions_SaveToString(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1381,7 +1381,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* QueryOptions_SetPropertyPrefetch(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1425,7 +1425,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* QueryOptions_SetThumbnailPrefetch(py::wrapper::Windows::Storage::Search::QueryOptions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2042,7 +2042,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_Append(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2085,7 +2085,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_Clear(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2126,7 +2126,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_First(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2166,7 +2166,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_GetAt(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2208,7 +2208,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_GetMany(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2251,7 +2251,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_GetView(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2291,7 +2291,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_IndexOf(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2347,7 +2347,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_InsertAt(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2391,7 +2391,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_RemoveAt(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2434,7 +2434,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_RemoveAtEnd(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2475,7 +2475,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_ReplaceAll(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2518,7 +2518,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* SortEntryVector_SetAt(py::wrapper::Windows::Storage::Search::SortEntryVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2817,7 +2817,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFileQueryResult_ApplyNewQueryOptions(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2860,7 +2860,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFileQueryResult_FindStartIndexAsync(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2902,7 +2902,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFileQueryResult_GetCurrentQueryOptions(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2942,7 +2942,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFileQueryResult_GetFilesAsync(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2985,7 +2985,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFileQueryResult_GetFilesAsyncDefaultStartAndCount(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3025,7 +3025,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFileQueryResult_GetItemCountAsync(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3065,7 +3065,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFileQueryResult_GetMatchingPropertiesWithRanges(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3342,7 +3342,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFolderQueryResult_ApplyNewQueryOptions(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3385,7 +3385,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFolderQueryResult_FindStartIndexAsync(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3427,7 +3427,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFolderQueryResult_GetCurrentQueryOptions(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3467,7 +3467,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFolderQueryResult_GetFoldersAsync(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3510,7 +3510,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFolderQueryResult_GetFoldersAsyncDefaultStartAndCount(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3550,7 +3550,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageFolderQueryResult_GetItemCountAsync(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3824,7 +3824,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageItemQueryResult_ApplyNewQueryOptions(py::wrapper::Windows::Storage::Search::StorageItemQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3867,7 +3867,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageItemQueryResult_FindStartIndexAsync(py::wrapper::Windows::Storage::Search::StorageItemQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3909,7 +3909,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageItemQueryResult_GetCurrentQueryOptions(py::wrapper::Windows::Storage::Search::StorageItemQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3949,7 +3949,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageItemQueryResult_GetItemCountAsync(py::wrapper::Windows::Storage::Search::StorageItemQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3989,7 +3989,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageItemQueryResult_GetItemsAsync(py::wrapper::Windows::Storage::Search::StorageItemQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4032,7 +4032,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageItemQueryResult_GetItemsAsyncDefaultStartAndCount(py::wrapper::Windows::Storage::Search::StorageItemQueryResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4431,7 +4431,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* StorageLibraryContentChangedTriggerDetails_CreateModifiedSinceQuery(py::wrapper::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4559,7 +4559,7 @@ namespace py::cpp::Windows::Storage::Search
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5306,7 +5306,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_AreQueryOptionsSupported(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5348,7 +5348,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_CreateFileQuery(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5390,7 +5390,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_CreateFileQueryOverloadDefault(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5430,7 +5430,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_CreateFileQueryWithOptions(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5472,7 +5472,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_CreateFolderQuery(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5514,7 +5514,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_CreateFolderQueryOverloadDefault(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5554,7 +5554,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_CreateFolderQueryWithOptions(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5596,7 +5596,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_CreateItemQuery(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5636,7 +5636,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_CreateItemQueryWithOptions(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5678,7 +5678,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_GetFilesAsync(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5722,7 +5722,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_GetFilesAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5764,7 +5764,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_GetFoldersAsync(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5808,7 +5808,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_GetFoldersAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5850,7 +5850,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_GetIndexedStateAsync(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5890,7 +5890,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_GetItemsAsync(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5933,7 +5933,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_IsCommonFileQuerySupported(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5975,7 +5975,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageFolderQueryOperations_IsCommonFolderQuerySupported(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6725,7 +6725,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageQueryResultBase_ApplyNewQueryOptions(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6768,7 +6768,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageQueryResultBase_FindStartIndexAsync(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6810,7 +6810,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageQueryResultBase_GetCurrentQueryOptions(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6850,7 +6850,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyObject* IStorageQueryResultBase_GetItemCountAsync(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7450,7 +7450,7 @@ namespace py::cpp::Windows::Storage::Search
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Storage::Search::SortEntry>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

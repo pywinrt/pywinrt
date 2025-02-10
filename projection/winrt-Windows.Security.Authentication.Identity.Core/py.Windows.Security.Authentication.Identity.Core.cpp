@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_AddDeviceAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -67,7 +67,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -112,7 +112,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionUsingAuthSessionInfoAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -155,7 +155,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_DenySessionAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -199,7 +199,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_DenySessionUsingAuthSessionInfoAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -241,7 +241,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_GetOneTimePassCodeAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -284,7 +284,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_GetSessionsAndUnregisteredAccountsAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -326,7 +326,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_GetSessionsAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -368,7 +368,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_RemoveDeviceAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -410,7 +410,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_UpdateWnsChannelAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

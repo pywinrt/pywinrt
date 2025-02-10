@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_Close(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_CreateFromStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_CreateFromStreamWithDownloaderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -153,7 +153,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_CreateFromUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -195,7 +195,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_CreateFromUriWithDownloaderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -238,7 +238,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_GetCorrelatedTimes(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -278,7 +278,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_IsContentTypeSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3615,7 +3615,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedDeferral_Complete(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3720,7 +3720,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_GetDeferral(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

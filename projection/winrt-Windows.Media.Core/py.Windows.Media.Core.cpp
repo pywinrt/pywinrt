@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* AudioStreamDescriptor_Copy(py::wrapper::Windows::Media::Core::AudioStreamDescriptor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -563,7 +563,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* AudioTrack_GetEncodingProperties(py::wrapper::Windows::Media::Core::AudioTrack* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1262,7 +1262,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1845,7 +1845,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1876,7 +1876,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* CodecQuery_FindAllAsync(py::wrapper::Windows::Media::Core::CodecQuery* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3605,7 +3605,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4104,7 +4104,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* FaceDetectionEffect_SetProperties(py::wrapper::Windows::Media::Core::FaceDetectionEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4409,7 +4409,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4705,7 +4705,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* FaceDetectionEffectFrame_Close(py::wrapper::Windows::Media::Core::FaceDetectionEffectFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5488,7 +5488,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6002,7 +6002,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* InitializeMediaStreamSourceRequestedEventArgs_GetDeferral(py::wrapper::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6160,7 +6160,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* LowLightFusion_FuseAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6322,7 +6322,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* LowLightFusionResult_Close(py::wrapper::Windows::Media::Core::LowLightFusionResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6474,7 +6474,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6736,7 +6736,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaBindingEventArgs_GetDeferral(py::wrapper::Windows::Media::Core::MediaBindingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6776,7 +6776,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaBindingEventArgs_SetAdaptiveMediaSource(py::wrapper::Windows::Media::Core::MediaBindingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6819,7 +6819,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaBindingEventArgs_SetDownloadOperation(py::wrapper::Windows::Media::Core::MediaBindingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6862,7 +6862,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaBindingEventArgs_SetStorageFile(py::wrapper::Windows::Media::Core::MediaBindingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6905,7 +6905,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaBindingEventArgs_SetStream(py::wrapper::Windows::Media::Core::MediaBindingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6949,7 +6949,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaBindingEventArgs_SetStreamReference(py::wrapper::Windows::Media::Core::MediaBindingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6993,7 +6993,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaBindingEventArgs_SetUri(py::wrapper::Windows::Media::Core::MediaBindingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7298,7 +7298,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_Close(py::wrapper::Windows::Media::Core::MediaSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7339,7 +7339,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromAdaptiveMediaSource(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7381,7 +7381,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromDownloadOperation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7423,7 +7423,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromIMediaSource(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7465,7 +7465,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromMediaBinder(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7507,7 +7507,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromMediaFrameSource(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7549,7 +7549,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromMediaStreamSource(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7591,7 +7591,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromMseStreamSource(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7633,7 +7633,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromStorageFile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7675,7 +7675,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromStream(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7718,7 +7718,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromStreamReference(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7761,7 +7761,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_CreateFromUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7803,7 +7803,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_OpenAsync(py::wrapper::Windows::Media::Core::MediaSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7843,7 +7843,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSource_Reset(py::wrapper::Windows::Media::Core::MediaSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8473,7 +8473,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8506,7 +8506,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaSourceAppServiceConnection_Start(py::wrapper::Windows::Media::Core::MediaSourceAppServiceConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8991,7 +8991,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSample_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9034,7 +9034,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSample_CreateFromDirect3D11Surface(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9077,7 +9077,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSample_CreateFromStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9710,7 +9710,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSamplePropertySet_Clear(py::wrapper::Windows::Media::Core::MediaStreamSamplePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9751,7 +9751,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSamplePropertySet_First(py::wrapper::Windows::Media::Core::MediaStreamSamplePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9791,7 +9791,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSamplePropertySet_GetView(py::wrapper::Windows::Media::Core::MediaStreamSamplePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9831,7 +9831,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSamplePropertySet_HasKey(py::wrapper::Windows::Media::Core::MediaStreamSamplePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9873,7 +9873,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSamplePropertySet_Insert(py::wrapper::Windows::Media::Core::MediaStreamSamplePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9916,7 +9916,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSamplePropertySet_Lookup(py::wrapper::Windows::Media::Core::MediaStreamSamplePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9958,7 +9958,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSamplePropertySet_Remove(py::wrapper::Windows::Media::Core::MediaStreamSamplePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10239,7 +10239,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSampleProtectionProperties_GetInitializationVector(py::wrapper::Windows::Media::Core::MediaStreamSampleProtectionProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10288,7 +10288,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSampleProtectionProperties_GetKeyIdentifier(py::wrapper::Windows::Media::Core::MediaStreamSampleProtectionProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10337,7 +10337,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSampleProtectionProperties_GetSubSampleMapping(py::wrapper::Windows::Media::Core::MediaStreamSampleProtectionProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10386,7 +10386,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSampleProtectionProperties_SetInitializationVector(py::wrapper::Windows::Media::Core::MediaStreamSampleProtectionProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10429,7 +10429,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSampleProtectionProperties_SetKeyIdentifier(py::wrapper::Windows::Media::Core::MediaStreamSampleProtectionProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10472,7 +10472,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSampleProtectionProperties_SetSubSampleMapping(py::wrapper::Windows::Media::Core::MediaStreamSampleProtectionProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10575,7 +10575,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10624,7 +10624,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSource_AddProtectionKey(py::wrapper::Windows::Media::Core::MediaStreamSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -10669,7 +10669,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSource_AddStreamDescriptor(py::wrapper::Windows::Media::Core::MediaStreamSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10712,7 +10712,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSource_NotifyError(py::wrapper::Windows::Media::Core::MediaStreamSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10755,7 +10755,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSource_SetBufferedRange(py::wrapper::Windows::Media::Core::MediaStreamSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12102,7 +12102,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSourceSampleRequest_GetDeferral(py::wrapper::Windows::Media::Core::MediaStreamSourceSampleRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12142,7 +12142,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSourceSampleRequest_ReportSampleProgress(py::wrapper::Windows::Media::Core::MediaStreamSourceSampleRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12351,7 +12351,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSourceSampleRequestDeferral_Complete(py::wrapper::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12644,7 +12644,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSourceStartingRequest_GetDeferral(py::wrapper::Windows::Media::Core::MediaStreamSourceStartingRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12684,7 +12684,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSourceStartingRequest_SetActualStartPosition(py::wrapper::Windows::Media::Core::MediaStreamSourceStartingRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12823,7 +12823,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSourceStartingRequestDeferral_Complete(py::wrapper::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12928,7 +12928,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSourceSwitchStreamsRequest_GetDeferral(py::wrapper::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13094,7 +13094,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MediaStreamSourceSwitchStreamsRequestDeferral_Complete(py::wrapper::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13293,7 +13293,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseSourceBuffer_Abort(py::wrapper::Windows::Media::Core::MseSourceBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13334,7 +13334,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseSourceBuffer_AppendBuffer(py::wrapper::Windows::Media::Core::MseSourceBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13377,7 +13377,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseSourceBuffer_AppendStream(py::wrapper::Windows::Media::Core::MseSourceBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13420,7 +13420,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseSourceBuffer_AppendStreamMaxSize(py::wrapper::Windows::Media::Core::MseSourceBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13464,7 +13464,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseSourceBuffer_Remove(py::wrapper::Windows::Media::Core::MseSourceBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14472,7 +14472,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -14503,7 +14503,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseStreamSource_AddSourceBuffer(py::wrapper::Windows::Media::Core::MseStreamSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14545,7 +14545,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseStreamSource_EndOfStream(py::wrapper::Windows::Media::Core::MseStreamSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14588,7 +14588,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseStreamSource_IsContentTypeSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14630,7 +14630,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* MseStreamSource_RemoveSourceBuffer(py::wrapper::Windows::Media::Core::MseStreamSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15195,7 +15195,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* SceneAnalysisEffect_SetProperties(py::wrapper::Windows::Media::Core::SceneAnalysisEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15461,7 +15461,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15617,7 +15617,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* SceneAnalysisEffectFrame_Close(py::wrapper::Windows::Media::Core::SceneAnalysisEffectFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16298,7 +16298,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -16803,7 +16803,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -16836,7 +16836,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedMetadataStreamDescriptor_Copy(py::wrapper::Windows::Media::Core::TimedMetadataStreamDescriptor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17203,7 +17203,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -17238,7 +17238,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedMetadataTrack_AddCue(py::wrapper::Windows::Media::Core::TimedMetadataTrack* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17281,7 +17281,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedMetadataTrack_RemoveCue(py::wrapper::Windows::Media::Core::TimedMetadataTrack* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18422,7 +18422,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18888,7 +18888,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -19074,7 +19074,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -20351,7 +20351,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedTextSource_CreateFromStream(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20393,7 +20393,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedTextSource_CreateFromStreamWithIndex(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20436,7 +20436,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedTextSource_CreateFromStreamWithIndexAndLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -20480,7 +20480,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedTextSource_CreateFromStreamWithLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20523,7 +20523,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedTextSource_CreateFromUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20565,7 +20565,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedTextSource_CreateFromUriWithIndex(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20608,7 +20608,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedTextSource_CreateFromUriWithIndexAndLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -20652,7 +20652,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* TimedTextSource_CreateFromUriWithLanguage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20970,7 +20970,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -22377,7 +22377,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -22681,7 +22681,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* VideoStabilizationEffect_GetRecommendedStreamConfiguration(py::wrapper::Windows::Media::Core::VideoStabilizationEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -22724,7 +22724,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* VideoStabilizationEffect_SetProperties(py::wrapper::Windows::Media::Core::VideoStabilizationEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22960,7 +22960,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -23201,7 +23201,7 @@ namespace py::cpp::Windows::Media::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -23234,7 +23234,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* VideoStreamDescriptor_Copy(py::wrapper::Windows::Media::Core::VideoStreamDescriptor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -23610,7 +23610,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyObject* VideoTrack_GetEncodingProperties(py::wrapper::Windows::Media::Core::VideoTrack* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26692,7 +26692,7 @@ namespace py::cpp::Windows::Media::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::MseTimeRange>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -26925,7 +26925,7 @@ namespace py::cpp::Windows::Media::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextDouble>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -27161,7 +27161,7 @@ namespace py::cpp::Windows::Media::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPadding>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -27488,7 +27488,7 @@ namespace py::cpp::Windows::Media::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextPoint>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -27753,7 +27753,7 @@ namespace py::cpp::Windows::Media::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Core::TimedTextSize>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

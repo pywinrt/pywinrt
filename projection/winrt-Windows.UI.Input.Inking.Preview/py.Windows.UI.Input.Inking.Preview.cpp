@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyObject* PalmRejectionDelayZonePreview_Close(py::wrapper::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyObject* PalmRejectionDelayZonePreview_CreateForVisual(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyObject* PalmRejectionDelayZonePreview_CreateForVisualWithViewportClip(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {

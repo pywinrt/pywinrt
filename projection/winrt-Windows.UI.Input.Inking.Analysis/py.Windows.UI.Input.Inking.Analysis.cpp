@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkBullet_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -344,7 +344,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkDrawing_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -727,7 +727,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisInkWord_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1079,7 +1079,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisLine_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1431,7 +1431,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisListItem_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1752,7 +1752,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisNode_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2042,7 +2042,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisParagraph_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2457,7 +2457,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_FindNodes(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2499,7 +2499,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisRoot_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2821,7 +2821,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalysisWritingRegion_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3133,7 +3133,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3164,7 +3164,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_AddDataForStroke(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3207,7 +3207,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_AddDataForStrokes(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3250,7 +3250,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_AnalyzeAsync(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3290,7 +3290,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_ClearDataForAllStrokes(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3331,7 +3331,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_RemoveDataForStroke(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3374,7 +3374,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_RemoveDataForStrokes(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3417,7 +3417,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_ReplaceDataForStroke(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3460,7 +3460,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* InkAnalyzer_SetStrokeDataKind(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3637,7 +3637,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* IInkAnalysisNode_GetStrokeIds(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4133,7 +4133,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
 
     static PyObject* IInkAnalyzerFactory_CreateAnalyzer(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

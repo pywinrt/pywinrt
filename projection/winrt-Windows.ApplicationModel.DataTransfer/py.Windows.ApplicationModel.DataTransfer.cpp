@@ -15,7 +15,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_Clear(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -56,7 +56,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_ClearHistory(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -96,7 +96,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_DeleteItemFromHistory(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -138,7 +138,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_Flush(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -179,7 +179,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_GetContent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -219,7 +219,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_GetHistoryItemsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -259,7 +259,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_IsHistoryEnabled(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -299,7 +299,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_IsRoamingEnabled(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -339,7 +339,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_SetContent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -382,7 +382,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_SetContentWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -425,7 +425,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* Clipboard_SetHistoryItemAsContent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -794,7 +794,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1425,7 +1425,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1456,7 +1456,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_GetView(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1496,7 +1496,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetApplicationLink(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1539,7 +1539,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetBitmap(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1582,7 +1582,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetData(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1626,7 +1626,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetDataProvider(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1670,7 +1670,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetHtmlFormat(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1713,7 +1713,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetRtf(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1756,7 +1756,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetStorageItems(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1800,7 +1800,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetStorageItemsReadOnly(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1843,7 +1843,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetText(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1886,7 +1886,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetUri(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackage_SetWebLink(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2447,7 +2447,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySet_Clear(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2488,7 +2488,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySet_First(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2528,7 +2528,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySet_GetView(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2568,7 +2568,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySet_HasKey(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2610,7 +2610,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySet_Insert(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2653,7 +2653,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySet_Lookup(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2695,7 +2695,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySet_Remove(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3847,7 +3847,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySetView_First(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3887,7 +3887,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySetView_HasKey(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3929,7 +3929,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySetView_Lookup(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3971,7 +3971,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackagePropertySetView_Split(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4657,7 +4657,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_Contains(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4699,7 +4699,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetApplicationLinkAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4739,7 +4739,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetBitmapAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4779,7 +4779,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetCustomTextAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4821,7 +4821,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetDataAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4863,7 +4863,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetHtmlFormatAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4903,7 +4903,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetResourceMapAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4943,7 +4943,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetRtfAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4983,7 +4983,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetStorageItemsAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5023,7 +5023,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetTextAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5063,7 +5063,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetUriAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5103,7 +5103,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_GetWebLinkAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5143,7 +5143,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_ReportOperationCompleted(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5186,7 +5186,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_RequestAccessAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5226,7 +5226,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_RequestAccessWithEnterpriseIdAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5268,7 +5268,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_SetAcceptedFormatId(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5311,7 +5311,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataPackageView_UnlockAndAssumeEnterpriseIdentity(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5524,7 +5524,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataProviderDeferral_Complete(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5629,7 +5629,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataProviderRequest_GetDeferral(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5669,7 +5669,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataProviderRequest_SetData(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5839,7 +5839,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataRequest_FailWithDisplayText(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5882,7 +5882,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataRequest_GetDeferral(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6088,7 +6088,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataRequestDeferral_Complete(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6287,7 +6287,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataTransferManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6327,7 +6327,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataTransferManager_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6367,7 +6367,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataTransferManager_ShowShareUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6408,7 +6408,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* DataTransferManager_ShowShareUIWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6732,7 +6732,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* HtmlFormatHelper_CreateHtmlFormat(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6774,7 +6774,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* HtmlFormatHelper_GetStaticFragment(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7085,7 +7085,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -7347,7 +7347,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* ShareProviderOperation_ReportCompleted(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProviderOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7514,7 +7514,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* ShareProvidersRequestedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7796,7 +7796,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8022,7 +8022,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* SharedStorageAccessManager_AddFile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8064,7 +8064,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* SharedStorageAccessManager_RedeemTokenForFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8106,7 +8106,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyObject* SharedStorageAccessManager_RemoveFile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

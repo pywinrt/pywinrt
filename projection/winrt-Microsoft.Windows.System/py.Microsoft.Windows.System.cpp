@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_AddExecutableFileExtension(py::wrapper::Microsoft::Windows::System::EnvironmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_AppendToPath(py::wrapper::Microsoft::Windows::System::EnvironmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -109,7 +109,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_GetEnvironmentVariable(py::wrapper::Microsoft::Windows::System::EnvironmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -151,7 +151,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_GetEnvironmentVariables(py::wrapper::Microsoft::Windows::System::EnvironmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -191,7 +191,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_GetForMachine(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_GetForProcess(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -271,7 +271,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -311,7 +311,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_RemoveExecutableFileExtension(py::wrapper::Microsoft::Windows::System::EnvironmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -354,7 +354,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_RemoveFromPath(py::wrapper::Microsoft::Windows::System::EnvironmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -397,7 +397,7 @@ namespace py::cpp::Microsoft::Windows::System
 
     static PyObject* EnvironmentManager_SetEnvironmentVariable(py::wrapper::Microsoft::Windows::System::EnvironmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

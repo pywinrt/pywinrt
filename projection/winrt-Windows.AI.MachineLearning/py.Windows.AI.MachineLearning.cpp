@@ -365,7 +365,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* ImageFeatureValue_CreateFromVideoFrame(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -554,7 +554,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_Close(py::wrapper::Windows::AI::MachineLearning::LearningModel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -595,7 +595,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_LoadFromFilePath(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -637,7 +637,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_LoadFromFilePathWithOperatorProvider(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -680,7 +680,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_LoadFromStorageFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -722,7 +722,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_LoadFromStorageFileWithOperatorProviderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_LoadFromStream(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -807,7 +807,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_LoadFromStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -849,7 +849,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_LoadFromStreamWithOperatorProvider(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -892,7 +892,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModel_LoadFromStreamWithOperatorProviderAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1292,7 +1292,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1325,7 +1325,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelBinding_Bind(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1369,7 +1369,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelBinding_BindWithProperties(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1414,7 +1414,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelBinding_Clear(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1455,7 +1455,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelBinding_First(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1495,7 +1495,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelBinding_HasKey(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1537,7 +1537,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelBinding_Lookup(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1579,7 +1579,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelBinding_Split(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1825,7 +1825,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1858,7 +1858,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelDevice_CreateFromDirect3D11Device(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2225,7 +2225,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -2291,7 +2291,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSession_Close(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2332,7 +2332,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSession_Evaluate(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2375,7 +2375,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSession_EvaluateAsync(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2418,7 +2418,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSession_EvaluateFeatures(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2461,7 +2461,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSession_EvaluateFeaturesAsync(py::wrapper::Windows::AI::MachineLearning::LearningModelSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2681,7 +2681,7 @@ namespace py::cpp::Windows::AI::MachineLearning
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2712,7 +2712,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* LearningModelSessionOptions_OverrideNamedDimension(py::wrapper::Windows::AI::MachineLearning::LearningModelSessionOptions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3427,7 +3427,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_Close(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3468,7 +3468,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3508,7 +3508,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3550,7 +3550,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3593,7 +3593,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3636,7 +3636,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3679,7 +3679,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3722,7 +3722,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3762,7 +3762,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorBoolean_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorBoolean* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4013,7 +4013,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_Close(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4054,7 +4054,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4094,7 +4094,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4136,7 +4136,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4179,7 +4179,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4222,7 +4222,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4265,7 +4265,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4308,7 +4308,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4348,7 +4348,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorDouble_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorDouble* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4848,7 +4848,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_Close(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4889,7 +4889,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4929,7 +4929,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4971,7 +4971,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5014,7 +5014,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5057,7 +5057,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5100,7 +5100,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5143,7 +5143,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5183,7 +5183,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorFloat* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5434,7 +5434,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5475,7 +5475,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5515,7 +5515,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5557,7 +5557,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5600,7 +5600,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5643,7 +5643,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5686,7 +5686,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5729,7 +5729,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5769,7 +5769,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorFloat16Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6020,7 +6020,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6061,7 +6061,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6101,7 +6101,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6143,7 +6143,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6186,7 +6186,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6229,7 +6229,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6272,7 +6272,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6315,7 +6315,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6355,7 +6355,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt16Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6606,7 +6606,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6647,7 +6647,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6687,7 +6687,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6729,7 +6729,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6772,7 +6772,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6815,7 +6815,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6858,7 +6858,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6901,7 +6901,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6941,7 +6941,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt32Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7192,7 +7192,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7233,7 +7233,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7273,7 +7273,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7315,7 +7315,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7358,7 +7358,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7401,7 +7401,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7444,7 +7444,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7487,7 +7487,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7527,7 +7527,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt64Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7778,7 +7778,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7819,7 +7819,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7859,7 +7859,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7901,7 +7901,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7944,7 +7944,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7987,7 +7987,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8030,7 +8030,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8073,7 +8073,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8113,7 +8113,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorInt8Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8364,7 +8364,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_Close(py::wrapper::Windows::AI::MachineLearning::TensorString* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8405,7 +8405,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8445,7 +8445,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8487,7 +8487,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8530,7 +8530,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8573,7 +8573,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8616,7 +8616,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorString* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8656,7 +8656,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorString_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorString* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8906,7 +8906,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8947,7 +8947,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8987,7 +8987,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9029,7 +9029,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9072,7 +9072,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9115,7 +9115,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9158,7 +9158,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9201,7 +9201,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9241,7 +9241,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt16Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9492,7 +9492,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9533,7 +9533,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9573,7 +9573,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9615,7 +9615,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9658,7 +9658,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9701,7 +9701,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9744,7 +9744,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9787,7 +9787,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9827,7 +9827,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt32Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10078,7 +10078,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10119,7 +10119,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10159,7 +10159,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10201,7 +10201,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10244,7 +10244,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10287,7 +10287,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10330,7 +10330,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10373,7 +10373,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10413,7 +10413,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt64Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10664,7 +10664,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_Close(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10705,7 +10705,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10745,7 +10745,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10787,7 +10787,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_CreateFromArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10830,7 +10830,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_CreateFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10873,7 +10873,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_CreateFromIterable(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10916,7 +10916,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_CreateFromShapeArrayAndDataArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10959,7 +10959,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_CreateReference(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10999,7 +10999,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyObject* TensorUInt8Bit_GetAsVectorView(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

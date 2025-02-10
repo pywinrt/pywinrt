@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -55,7 +55,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_FindAllAsyncPackageFamilyName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_MergeEntriesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -140,7 +140,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameList_UnmergeEntryAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -444,7 +444,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_LaunchAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -484,7 +484,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_SetCategoryAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -526,7 +526,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_SetLauncherExecutableFileAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -568,7 +568,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_SetLauncherExecutableFileWithParamsAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -611,7 +611,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameListEntry_SetTitleIdAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -969,7 +969,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeConfiguration_SaveAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1664,7 +1664,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeUserConfiguration_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1704,7 +1704,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* GameModeUserConfiguration_SaveAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1861,7 +1861,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* IGameListEntry_LaunchAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1901,7 +1901,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyObject* IGameListEntry_SetCategoryAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

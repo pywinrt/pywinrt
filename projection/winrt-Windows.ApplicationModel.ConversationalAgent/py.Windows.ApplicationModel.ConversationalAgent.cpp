@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_ApplyTrainingData(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_ApplyTrainingDataAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -109,7 +109,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_ClearModelData(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_ClearModelDataAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -190,7 +190,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_ClearTrainingData(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_ClearTrainingDataAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_Close(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -312,7 +312,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_GetModelData(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -352,7 +352,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_GetModelDataAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -392,7 +392,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_GetModelDataType(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -432,7 +432,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_GetModelDataTypeAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -472,7 +472,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_SetEnabled(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -515,7 +515,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_SetEnabledAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -557,7 +557,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_SetEnabledWithResult(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_SetEnabledWithResultAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -641,7 +641,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_SetModelData(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -685,7 +685,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_SetModelDataAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -728,7 +728,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_SetModelDataWithResult(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -771,7 +771,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetectionConfiguration_SetModelDataWithResultAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1392,7 +1392,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_CreateConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1437,7 +1437,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_CreateConfigurationAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1481,7 +1481,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_CreateConfigurationWithResult(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1525,7 +1525,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_CreateConfigurationWithResultAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1569,7 +1569,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_GetAvailableModelIdsForSignalId(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1611,7 +1611,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_GetAvailableModelIdsForSignalIdAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1653,7 +1653,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_GetConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1696,7 +1696,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_GetConfigurationAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1739,7 +1739,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_GetConfigurations(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1779,7 +1779,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_GetConfigurationsAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1819,7 +1819,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_GetSupportedModelIdsForSignalId(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1861,7 +1861,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_GetSupportedModelIdsForSignalIdAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1903,7 +1903,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_RemoveConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1947,7 +1947,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_RemoveConfigurationAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1990,7 +1990,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_RemoveConfigurationWithResult(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2033,7 +2033,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ActivationSignalDetector_RemoveConfigurationWithResultAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2372,7 +2372,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentDetectorManager_GetActivationSignalDetectorFromId(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2414,7 +2414,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentDetectorManager_GetActivationSignalDetectorFromIdAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2456,7 +2456,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentDetectorManager_GetActivationSignalDetectors(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2498,7 +2498,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentDetectorManager_GetActivationSignalDetectorsAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2540,7 +2540,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentDetectorManager_GetAllActivationSignalDetectors(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2580,7 +2580,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentDetectorManager_GetAllActivationSignalDetectorsAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2741,7 +2741,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_Close(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2782,7 +2782,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_CreateAudioDeviceInputNode(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2824,7 +2824,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_CreateAudioDeviceInputNodeAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2866,7 +2866,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetAudioCaptureDeviceId(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2906,7 +2906,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetAudioCaptureDeviceIdAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2946,7 +2946,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetAudioClient(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2986,7 +2986,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetAudioClientAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3026,7 +3026,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetAudioRenderDeviceId(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3066,7 +3066,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetAudioRenderDeviceIdAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3106,7 +3106,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetCurrentSessionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3146,7 +3146,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetCurrentSessionSync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3186,7 +3186,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetMissingPrerequisites(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3226,7 +3226,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetMissingPrerequisitesAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3266,7 +3266,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetSignalModelId(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3306,7 +3306,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetSignalModelIdAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3346,7 +3346,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetSupportedSignalModelIds(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3386,7 +3386,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_GetSupportedSignalModelIdsAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3426,7 +3426,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_RequestActivation(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3468,7 +3468,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_RequestActivationAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3510,7 +3510,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_RequestAgentStateChange(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3552,7 +3552,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_RequestAgentStateChangeAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3594,7 +3594,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_RequestForegroundActivation(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3634,7 +3634,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_RequestForegroundActivationAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3674,7 +3674,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_RequestInterruptible(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3716,7 +3716,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_RequestInterruptibleAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3758,7 +3758,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_SetSignalModelId(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3800,7 +3800,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_SetSignalModelIdAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3842,7 +3842,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_SetSupportLockScreenActivation(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3885,7 +3885,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     static PyObject* ConversationalAgentSession_SetSupportLockScreenActivationAsync(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -49,7 +49,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::AppBarButton>();
         if (!self_type)
@@ -919,7 +919,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::AppBarToggleButton>();
         if (!self_type)
@@ -1789,7 +1789,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Button>();
         if (!self_type)
@@ -2061,7 +2061,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::CheckBox>();
         if (!self_type)
@@ -2296,7 +2296,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::ComboBox>();
         if (!self_type)
@@ -2357,7 +2357,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ComboBox_OnDropDownClosed(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2400,7 +2400,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ComboBox_OnDropDownOpened(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4193,7 +4193,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::ComboBoxItem>();
         if (!self_type)
@@ -4364,7 +4364,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout>();
         if (!self_type)
@@ -4632,7 +4632,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4663,7 +4663,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* DatePickerFlyout_ShowAtAsync(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5893,7 +5893,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::DropDownButton>();
         if (!self_type)
@@ -6064,7 +6064,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::FlipView>();
         if (!self_type)
@@ -6336,7 +6336,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::FlipViewItem>();
         if (!self_type)
@@ -6507,7 +6507,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Flyout>();
         if (!self_type)
@@ -6880,7 +6880,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::GridView>();
         if (!self_type)
@@ -7051,7 +7051,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::GridViewItem>();
         if (!self_type)
@@ -7253,7 +7253,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::HyperlinkButton>();
         if (!self_type)
@@ -7525,7 +7525,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::ListBox>();
         if (!self_type)
@@ -7586,7 +7586,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListBox_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7629,7 +7629,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListBox_SelectAll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8015,7 +8015,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::ListBoxItem>();
         if (!self_type)
@@ -8151,7 +8151,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8182,7 +8182,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListPickerFlyout_ShowAtAsync(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9241,7 +9241,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::ListView>();
         if (!self_type)
@@ -9420,7 +9420,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_CompleteViewChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9461,7 +9461,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_CompleteViewChangeFrom(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9505,7 +9505,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_CompleteViewChangeTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9549,7 +9549,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_DeselectRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9592,7 +9592,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_InitializeViewChange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9633,7 +9633,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_IsDragSource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9673,7 +9673,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_LoadMoreItemsAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9713,7 +9713,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_MakeVisible(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9756,7 +9756,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_PrepareConnectedAnimation(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -9800,7 +9800,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_ScrollIntoView(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9843,7 +9843,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_ScrollIntoViewWithAlignment(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9887,7 +9887,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_SelectAll(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9928,7 +9928,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_SelectRange(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9971,7 +9971,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_SetDesiredContainerUpdateDuration(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10014,7 +10014,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_StartViewChangeFrom(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10058,7 +10058,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_StartViewChangeTo(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10102,7 +10102,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* ListViewBase_TryStartConnectedAnimationAsync(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -12858,7 +12858,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::ListViewItem>();
         if (!self_type)
@@ -13060,7 +13060,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout>();
         if (!self_type)
@@ -13231,7 +13231,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::MenuFlyout>();
         if (!self_type)
@@ -13292,7 +13292,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* MenuFlyout_ShowAt(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13544,7 +13544,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -13575,7 +13575,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* PickerFlyout_ShowAtAsync(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13997,7 +13997,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::ProgressBar>();
         if (!self_type)
@@ -14502,7 +14502,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::RadioButton>();
         if (!self_type)
@@ -14774,7 +14774,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::RevealListViewItemPresenter>();
         if (!self_type)
@@ -14945,7 +14945,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::Slider>();
         if (!self_type)
@@ -16227,7 +16227,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::TabViewItem>();
         if (!self_type)
@@ -16931,7 +16931,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::TextCommandBarFlyout>();
         if (!self_type)
@@ -17067,7 +17067,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -17098,7 +17098,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* TimePickerFlyout_ShowAtAsync(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17621,7 +17621,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::TreeViewItem>();
         if (!self_type)
@@ -18662,7 +18662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Controls::TreeViewList>();
         if (!self_type)
@@ -18798,7 +18798,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -18829,7 +18829,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* VirtualizingStackPanel_GetIsVirtualizing(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18871,7 +18871,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* VirtualizingStackPanel_GetVirtualizationMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18913,7 +18913,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* VirtualizingStackPanel_OnCleanUpVirtualizedItem(py::wrapper::Microsoft::UI::Xaml::Controls::VirtualizingStackPanel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18956,7 +18956,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
 
     static PyObject* VirtualizingStackPanel_SetVirtualizationMode(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19410,7 +19410,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

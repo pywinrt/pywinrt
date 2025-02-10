@@ -49,7 +49,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions>();
         if (!self_type)
@@ -1065,7 +1065,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try

@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* Lamp_Close(py::wrapper::Windows::Devices::Lights::Lamp* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* Lamp_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -106,7 +106,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* Lamp_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* Lamp_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -638,7 +638,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -680,7 +680,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -720,7 +720,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_GetIndicesForKey(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -762,7 +762,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_GetIndicesForPurposes(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -804,7 +804,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_GetLampInfo(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -846,7 +846,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_RequestMessageAsync(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -888,7 +888,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_SendMessageAsync(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -931,7 +931,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_SetColor(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -974,7 +974,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_SetColorForIndex(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_SetColorsForIndices(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1062,7 +1062,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_SetColorsForKey(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1106,7 +1106,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_SetColorsForKeys(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1150,7 +1150,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_SetColorsForPurposes(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1194,7 +1194,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampArray_SetSingleColorForIndices(py::wrapper::Windows::Devices::Lights::LampArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1978,7 +1978,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     static PyObject* LampInfo_GetNearestSupportedColor(py::wrapper::Windows::Devices::Lights::LampInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

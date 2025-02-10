@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::Graphics::Display
 
     static PyObject* DisplayAdvancedColorInfo_IsAdvancedColorKindAvailable(py::wrapper::Microsoft::Graphics::Display::DisplayAdvancedColorInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Microsoft::Graphics::Display
 
     static PyObject* DisplayAdvancedColorInfo_IsHdrMetadataFormatCurrentlySupported(py::wrapper::Microsoft::Graphics::Display::DisplayAdvancedColorInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -451,7 +451,7 @@ namespace py::cpp::Microsoft::Graphics::Display
 
     static PyObject* DisplayInformation_Close(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -492,7 +492,7 @@ namespace py::cpp::Microsoft::Graphics::Display
 
     static PyObject* DisplayInformation_CreateForDisplayId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -534,7 +534,7 @@ namespace py::cpp::Microsoft::Graphics::Display
 
     static PyObject* DisplayInformation_CreateForWindowId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -576,7 +576,7 @@ namespace py::cpp::Microsoft::Graphics::Display
 
     static PyObject* DisplayInformation_GetAdvancedColorInfo(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -616,7 +616,7 @@ namespace py::cpp::Microsoft::Graphics::Display
 
     static PyObject* DisplayInformation_GetColorProfile(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -656,7 +656,7 @@ namespace py::cpp::Microsoft::Graphics::Display
 
     static PyObject* DisplayInformation_GetColorProfileAsync(py::wrapper::Microsoft::Graphics::Display::DisplayInformation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

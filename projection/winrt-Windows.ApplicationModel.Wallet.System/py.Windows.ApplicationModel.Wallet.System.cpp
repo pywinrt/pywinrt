@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyObject* WalletItemSystemStore_DeleteAsync(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyObject* WalletItemSystemStore_GetAppStatusForItem(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyObject* WalletItemSystemStore_GetItemsAsync(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyObject* WalletItemSystemStore_ImportItemAsync(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyObject* WalletItemSystemStore_LaunchAppForItemAsync(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyObject* WalletManagerSystem_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

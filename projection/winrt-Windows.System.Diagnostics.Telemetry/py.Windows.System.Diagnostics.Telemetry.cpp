@@ -15,7 +15,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyObject* PlatformTelemetryClient_Register(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -57,7 +57,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyObject* PlatformTelemetryClient_RegisterWithSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -244,7 +244,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

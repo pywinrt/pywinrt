@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfDocument_GetPage(py::wrapper::Windows::Data::Pdf::PdfDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfDocument_LoadFromFileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfDocument_LoadFromFileWithPasswordAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -150,7 +150,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfDocument_LoadFromStreamAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -192,7 +192,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfDocument_LoadFromStreamWithPasswordAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -386,7 +386,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_Close(py::wrapper::Windows::Data::Pdf::PdfPage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -427,7 +427,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_PreparePageAsync(py::wrapper::Windows::Data::Pdf::PdfPage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -467,7 +467,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_RenderToStreamAsync(py::wrapper::Windows::Data::Pdf::PdfPage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -509,7 +509,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_RenderWithOptionsToStreamAsync(py::wrapper::Windows::Data::Pdf::PdfPage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1008,7 +1008,7 @@ namespace py::cpp::Windows::Data::Pdf
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

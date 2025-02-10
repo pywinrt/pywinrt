@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataAvailabilityStateChangedEventArgs_GetDeferral(py::wrapper::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -252,7 +252,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_GetStorageItemProtectionInfoAsync(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -294,7 +294,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_IsContinuedDataAvailabilityExpected(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -336,7 +336,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_ProtectBufferAsync(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_ProtectStorageItemAsync(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -422,7 +422,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_TryGetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -462,7 +462,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_TryGetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -504,7 +504,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_UnprotectBufferAsync(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

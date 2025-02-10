@@ -49,7 +49,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>();
         if (!self_type)
@@ -355,7 +355,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableIterable_First(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterable* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -545,7 +545,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableIterator_MoveNext(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -837,7 +837,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_Append(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -880,7 +880,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_Clear(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -921,7 +921,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_First(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -961,7 +961,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_GetAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_GetView(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1043,7 +1043,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_IndexOf(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1099,7 +1099,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_InsertAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1143,7 +1143,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_RemoveAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1186,7 +1186,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_RemoveAtEnd(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1227,7 +1227,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableObservableVector_SetAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1894,7 +1894,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_Append(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1937,7 +1937,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_Clear(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1978,7 +1978,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_First(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2018,7 +2018,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_GetAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2060,7 +2060,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_GetView(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2100,7 +2100,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_IndexOf(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2156,7 +2156,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_InsertAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2200,7 +2200,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_RemoveAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2243,7 +2243,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_RemoveAtEnd(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2284,7 +2284,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVector_SetAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2822,7 +2822,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVectorView_First(py::wrapper::Windows::UI::Xaml::Interop::IBindableVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2862,7 +2862,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVectorView_GetAt(py::wrapper::Windows::UI::Xaml::Interop::IBindableVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2904,7 +2904,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static PyObject* IBindableVectorView_IndexOf(py::wrapper::Windows::UI::Xaml::Interop::IBindableVectorView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3491,7 +3491,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Interop::TypeName>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

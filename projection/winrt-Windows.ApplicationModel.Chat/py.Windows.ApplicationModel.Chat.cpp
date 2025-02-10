@@ -233,7 +233,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatCapabilitiesManager_GetCachedCapabilitiesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -275,7 +275,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatCapabilitiesManager_GetCachedCapabilitiesForTransportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -318,7 +318,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatCapabilitiesManager_GetCapabilitiesFromNetworkAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -360,7 +360,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatCapabilitiesManager_GetCapabilitiesFromNetworkForTransportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -464,7 +464,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversation_DeleteAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -504,7 +504,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversation_GetMessageReader(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -544,7 +544,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversation_MarkAllMessagesAsReadAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversation_MarkMessagesAsReadAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -626,7 +626,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversation_NotifyLocalParticipantComposing(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -671,7 +671,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversation_NotifyRemoteParticipantComposing(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -716,7 +716,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversation_SaveAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1289,7 +1289,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversationReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1329,7 +1329,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatConversationReader_ReadBatchWithCountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1427,7 +1427,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1823,7 +1823,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3587,7 +3587,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -4166,7 +4166,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageBlocking_MarkMessageAsBlockedAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4392,7 +4392,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageChangeReader_AcceptChanges(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4433,7 +4433,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageChangeReader_AcceptChangesThrough(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4476,7 +4476,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageChangeReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4582,7 +4582,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageChangeTracker_Enable(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4623,7 +4623,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageChangeTracker_GetChangeReader(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4663,7 +4663,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageChangeTracker_Reset(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeTracker* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4770,7 +4770,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageChangedDeferral_Complete(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4875,7 +4875,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageChangedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4971,7 +4971,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageManager_GetTransportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5013,7 +5013,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageManager_GetTransportsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5053,7 +5053,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageManager_RegisterTransportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5093,7 +5093,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5133,7 +5133,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageManager_RequestSyncManagerAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5173,7 +5173,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageManager_ShowComposeSmsMessageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5215,7 +5215,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageManager_ShowSmsSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5538,7 +5538,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5578,7 +5578,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageReader_ReadBatchWithCountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5685,7 +5685,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_DeleteMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5727,7 +5727,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_DownloadMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5769,7 +5769,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_ForwardMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5812,7 +5812,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetConversationAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5854,7 +5854,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetConversationForTransportsAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5897,7 +5897,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetConversationForTransportsReader(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5939,7 +5939,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetConversationFromThreadingInfoAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5981,7 +5981,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetConversationReader(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6021,7 +6021,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6063,7 +6063,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetMessageByRemoteIdAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6106,7 +6106,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetMessageBySyncIdAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6148,7 +6148,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetMessageReader1(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6188,7 +6188,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetMessageReader2(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6230,7 +6230,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetSearchReader(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6272,7 +6272,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetUnseenCountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6312,7 +6312,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_GetUnseenCountForTransportsReaderAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6354,7 +6354,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_MarkAsSeenAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6394,7 +6394,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_MarkAsSeenForTransportsAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6436,7 +6436,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_MarkMessageReadAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6478,7 +6478,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_RetrySendMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6520,7 +6520,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_SaveMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6562,7 +6562,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_SendMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6604,7 +6604,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_TryCancelDownloadMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6646,7 +6646,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_TryCancelSendMessageAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6688,7 +6688,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageStore_ValidateMessage(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7108,7 +7108,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatMessageTransport_RequestSetAsNotificationProviderAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageTransport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7794,7 +7794,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7949,7 +7949,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8408,7 +8408,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatSearchReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatSearchReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8448,7 +8448,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatSearchReader_ReadBatchWithCountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatSearchReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8758,7 +8758,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatSyncManager_AssociateAccountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8800,7 +8800,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatSyncManager_IsAccountAssociated(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8842,7 +8842,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatSyncManager_SetConfigurationAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8884,7 +8884,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatSyncManager_StartSync(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8925,7 +8925,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* ChatSyncManager_UnassociateAccountAsync(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9064,7 +9064,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* RcsEndUserMessage_SendResponseAsync(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9106,7 +9106,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* RcsEndUserMessage_SendResponseWithPinAsync(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9835,7 +9835,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* RcsManager_GetEndUserMessageManager(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9875,7 +9875,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* RcsManager_GetTransportAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9917,7 +9917,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* RcsManager_GetTransportsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9957,7 +9957,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* RcsManager_LeaveConversationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10221,7 +10221,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* RcsTransport_IsServiceKindSupported(py::wrapper::Windows::ApplicationModel::Chat::RcsTransport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10263,7 +10263,7 @@ namespace py::cpp::Windows::ApplicationModel::Chat
 
     static PyObject* RcsTransport_IsStoreAndForwardEnabled(py::wrapper::Windows::ApplicationModel::Chat::RcsTransport* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

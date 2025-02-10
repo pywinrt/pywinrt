@@ -23,7 +23,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationData_ClearAsync(py::wrapper::Microsoft::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationData_ClearPublisherCacheFolderAsync(py::wrapper::Microsoft::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationData_Close(py::wrapper::Microsoft::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -148,7 +148,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationData_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationData_GetForPackageFamily(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -230,7 +230,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationData_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationData_GetPublisherCacheFolder(py::wrapper::Microsoft::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -314,7 +314,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationData_GetPublisherCachePath(py::wrapper::Microsoft::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -845,7 +845,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationDataContainer_Close(py::wrapper::Microsoft::Windows::Storage::ApplicationDataContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -886,7 +886,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationDataContainer_CreateContainer(py::wrapper::Microsoft::Windows::Storage::ApplicationDataContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -929,7 +929,7 @@ namespace py::cpp::Microsoft::Windows::Storage
 
     static PyObject* ApplicationDataContainer_DeleteContainer(py::wrapper::Microsoft::Windows::Storage::ApplicationDataContainer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

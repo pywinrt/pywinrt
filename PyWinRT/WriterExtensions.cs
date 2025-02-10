@@ -856,7 +856,7 @@ static class WriterExtensions
         bool componentDlls
     )
     {
-        w.WriteLine("auto arg_count = PyTuple_Size(args);");
+        w.WriteLine("auto arg_count = PyTuple_GET_SIZE(args);");
         w.WriteBlankLine();
 
         foreach (
@@ -1086,7 +1086,7 @@ static class WriterExtensions
                 });
                 w.WriteBlankLine();
 
-                w.WriteLine("auto arg_count = PyTuple_Size(args);");
+                w.WriteLine("auto arg_count = PyTuple_GET_SIZE(args);");
 
                 if (type.IsComposable)
                 {

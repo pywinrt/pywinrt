@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -49,7 +49,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDClient_Close(py::wrapper::Windows::Media::Protection::PlayReady::NDClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -90,7 +90,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDClient_LicenseFetchAsync(py::wrapper::Windows::Media::Protection::PlayReady::NDClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -132,7 +132,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDClient_ReRegistrationAsync(py::wrapper::Windows::Media::Protection::PlayReady::NDClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -174,7 +174,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDClient_StartAsync(py::wrapper::Windows::Media::Protection::PlayReady::NDClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -612,7 +612,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -762,7 +762,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -793,7 +793,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDDownloadEngineNotifier_OnContentIDReceived(py::wrapper::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -836,7 +836,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDDownloadEngineNotifier_OnDataReceived(py::wrapper::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -880,7 +880,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDDownloadEngineNotifier_OnEndOfStream(py::wrapper::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -921,7 +921,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDDownloadEngineNotifier_OnNetworkError(py::wrapper::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -962,7 +962,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDDownloadEngineNotifier_OnPlayReadyObjectReceived(py::wrapper::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1005,7 +1005,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDDownloadEngineNotifier_OnStreamOpened(py::wrapper::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1106,7 +1106,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -1327,7 +1327,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1358,7 +1358,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDStorageFileHelper_GetFileURLs(py::wrapper::Windows::Media::Protection::PlayReady::NDStorageFileHelper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1455,7 +1455,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1486,7 +1486,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDStreamParserNotifier_OnBeginSetupDecryptor(py::wrapper::Windows::Media::Protection::PlayReady::NDStreamParserNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1531,7 +1531,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDStreamParserNotifier_OnContentIDReceived(py::wrapper::Windows::Media::Protection::PlayReady::NDStreamParserNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1574,7 +1574,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDStreamParserNotifier_OnMediaStreamDescriptorCreated(py::wrapper::Windows::Media::Protection::PlayReady::NDStreamParserNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1618,7 +1618,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDStreamParserNotifier_OnSampleParsed(py::wrapper::Windows::Media::Protection::PlayReady::NDStreamParserNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -1724,7 +1724,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1758,7 +1758,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDTCPMessenger_SendLicenseFetchRequestAsync(py::wrapper::Windows::Media::Protection::PlayReady::NDTCPMessenger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1801,7 +1801,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDTCPMessenger_SendProximityDetectionResponseAsync(py::wrapper::Windows::Media::Protection::PlayReady::NDTCPMessenger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1846,7 +1846,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDTCPMessenger_SendProximityDetectionStartAsync(py::wrapper::Windows::Media::Protection::PlayReady::NDTCPMessenger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1891,7 +1891,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* NDTCPMessenger_SendRegistrationRequestAsync(py::wrapper::Windows::Media::Protection::PlayReady::NDTCPMessenger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1992,7 +1992,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 8)
         {
             try
@@ -2087,7 +2087,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyContentHeader_GetSerializedHeader(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyContentHeader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2524,7 +2524,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyContentResolver_ServiceRequest(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2833,7 +2833,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2866,7 +2866,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainIterable_First(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2988,7 +2988,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainIterator_GetMany(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3030,7 +3030,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainIterator_MoveNext(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3221,7 +3221,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3252,7 +3252,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainJoinServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3292,7 +3292,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainJoinServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3332,7 +3332,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainJoinServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3372,7 +3372,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainJoinServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3915,7 +3915,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3946,7 +3946,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainLeaveServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3986,7 +3986,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainLeaveServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4026,7 +4026,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainLeaveServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4066,7 +4066,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyDomainLeaveServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4539,7 +4539,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4570,7 +4570,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyITADataGenerator_GenerateData(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4670,7 +4670,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4701,7 +4701,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyIndividualizationServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4741,7 +4741,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyIndividualizationServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4781,7 +4781,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyIndividualizationServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4821,7 +4821,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyIndividualizationServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5163,7 +5163,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicense_GetKIDAtChainDepth(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicense* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5570,7 +5570,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5601,7 +5601,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseAcquisitionServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5641,7 +5641,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseAcquisitionServiceRequest_CreateLicenseIterable(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5684,7 +5684,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseAcquisitionServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5724,7 +5724,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseAcquisitionServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5764,7 +5764,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseAcquisitionServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6269,7 +6269,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6316,7 +6316,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseIterable_First(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6438,7 +6438,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseIterator_GetMany(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6480,7 +6480,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseIterator_MoveNext(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6672,7 +6672,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseManagement_DeleteLicenses(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6763,7 +6763,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6796,7 +6796,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseSession_ConfigureMediaProtectionManager(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6839,7 +6839,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseSession_CreateLAServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6879,7 +6879,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyLicenseSession_CreateLicenseIterable(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6979,7 +6979,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7010,7 +7010,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyMeteringReportServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7050,7 +7050,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyMeteringReportServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7090,7 +7090,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyMeteringReportServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7130,7 +7130,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyMeteringReportServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7533,7 +7533,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7564,7 +7564,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyRevocationServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7604,7 +7604,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyRevocationServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7644,7 +7644,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyRevocationServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7684,7 +7684,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyRevocationServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8017,7 +8017,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8050,7 +8050,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadySecureStopIterable_First(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8172,7 +8172,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadySecureStopIterator_GetMany(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8214,7 +8214,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadySecureStopIterator_MoveNext(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8405,7 +8405,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8454,7 +8454,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadySecureStopServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8494,7 +8494,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadySecureStopServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8534,7 +8534,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadySecureStopServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8574,7 +8574,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadySecureStopServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9071,7 +9071,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadySoapMessage_GetMessageBody(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySoapMessage* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9229,7 +9229,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyStatics_CheckSupportedHardware(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9271,7 +9271,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* PlayReadyStatics_ResetHardwareDRMDisabled(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10309,7 +10309,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngine_Close(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10350,7 +10350,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngine_Open(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10394,7 +10394,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngine_Pause(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10435,7 +10435,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngine_Resume(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10476,7 +10476,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngine_Seek(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10995,7 +10995,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngineNotifier_OnContentIDReceived(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11038,7 +11038,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngineNotifier_OnDataReceived(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11082,7 +11082,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngineNotifier_OnEndOfStream(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11123,7 +11123,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngineNotifier_OnNetworkError(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11164,7 +11164,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngineNotifier_OnPlayReadyObjectReceived(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11207,7 +11207,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDDownloadEngineNotifier_OnStreamOpened(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12238,7 +12238,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDMessenger_SendLicenseFetchRequestAsync(py::wrapper::Windows::Media::Protection::PlayReady::INDMessenger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12281,7 +12281,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDMessenger_SendProximityDetectionResponseAsync(py::wrapper::Windows::Media::Protection::PlayReady::INDMessenger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -12326,7 +12326,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDMessenger_SendProximityDetectionStartAsync(py::wrapper::Windows::Media::Protection::PlayReady::INDMessenger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -12371,7 +12371,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDMessenger_SendRegistrationRequestAsync(py::wrapper::Windows::Media::Protection::PlayReady::INDMessenger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13602,7 +13602,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStorageFileHelper_GetFileURLs(py::wrapper::Windows::Media::Protection::PlayReady::INDStorageFileHelper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13800,7 +13800,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStreamParser_BeginOfStream(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13841,7 +13841,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStreamParser_EndOfStream(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13882,7 +13882,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStreamParser_GetStreamInformation(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13938,7 +13938,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStreamParser_ParseData(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14271,7 +14271,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStreamParserNotifier_OnBeginSetupDecryptor(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParserNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -14316,7 +14316,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStreamParserNotifier_OnContentIDReceived(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParserNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14359,7 +14359,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStreamParserNotifier_OnMediaStreamDescriptorCreated(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParserNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14403,7 +14403,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* INDStreamParserNotifier_OnSampleParsed(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParserNotifier* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -15829,7 +15829,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicense_GetKIDAtChainDepth(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicense* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16333,7 +16333,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseAcquisitionServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16373,7 +16373,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseAcquisitionServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16413,7 +16413,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseAcquisitionServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16453,7 +16453,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseAcquisitionServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17337,7 +17337,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseSession_ConfigureMediaProtectionManager(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17380,7 +17380,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseSession_CreateLAServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17601,7 +17601,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseSession2_ConfigureMediaProtectionManager(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17644,7 +17644,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseSession2_CreateLAServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17684,7 +17684,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyLicenseSession2_CreateLicenseIterable(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -17953,7 +17953,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadySecureStopServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17993,7 +17993,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadySecureStopServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18033,7 +18033,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadySecureStopServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18073,7 +18073,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadySecureStopServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18987,7 +18987,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyServiceRequest_BeginServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19027,7 +19027,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyServiceRequest_GenerateManualEnablingChallenge(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19067,7 +19067,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyServiceRequest_NextServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19107,7 +19107,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* IPlayReadyServiceRequest_ProcessManualEnablingResponse(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

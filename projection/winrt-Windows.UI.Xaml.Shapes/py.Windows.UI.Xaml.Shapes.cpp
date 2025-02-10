@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -99,7 +99,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Windows::UI::Xaml::Shapes::Path>();
         if (!self_type)
@@ -881,7 +881,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1189,7 +1189,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1497,7 +1497,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1848,7 +1848,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyObject* Shape_GetAlphaMask(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

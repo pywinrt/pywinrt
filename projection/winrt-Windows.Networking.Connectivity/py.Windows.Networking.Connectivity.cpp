@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1034,7 +1034,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetAttributedNetworkUsageAsync(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1078,7 +1078,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetConnectionCost(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1118,7 +1118,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetConnectivityIntervalsAsync(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1162,7 +1162,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetDataPlanStatus(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1202,7 +1202,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetDomainConnectivityLevel(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1242,7 +1242,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetLocalUsage(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1285,7 +1285,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetLocalUsagePerRoamingStates(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1329,7 +1329,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetNetworkConnectivityLevel(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1369,7 +1369,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetNetworkNames(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1409,7 +1409,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetNetworkUsageAsync(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1454,7 +1454,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetProviderNetworkUsageAsync(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1498,7 +1498,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_GetSignalBars(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1538,7 +1538,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_IsDomainAuthenticatedBy(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1580,7 +1580,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_TryDeleteAsync(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1967,7 +1967,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2722,7 +2722,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionSession_Close(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3000,7 +3000,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectivityManager_AcquireConnectionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3042,7 +3042,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectivityManager_AddHttpRoutePolicy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3085,7 +3085,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectivityManager_RemoveHttpRoutePolicy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4093,7 +4093,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkAdapter_GetConnectedProfileAsync(py::wrapper::Windows::Networking::Connectivity::NetworkAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4344,7 +4344,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_FindConnectionProfilesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4386,7 +4386,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_GetConnectionProfiles(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4426,7 +4426,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_GetHostNames(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4466,7 +4466,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_GetInternetConnectionProfile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4506,7 +4506,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_GetLanIdentifiers(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4546,7 +4546,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_GetProxyConfigurationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4588,7 +4588,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_GetSortedEndpointPairs(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4762,7 +4762,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkItem_GetNetworkTypes(py::wrapper::Windows::Networking::Connectivity::NetworkItem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5761,7 +5761,7 @@ namespace py::cpp::Windows::Networking::Connectivity
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -5952,7 +5952,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* WlanConnectionProfileDetails_GetConnectedSsid(py::wrapper::Windows::Networking::Connectivity::WlanConnectionProfileDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6056,7 +6056,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* WwanConnectionProfileDetails_GetCurrentDataClass(py::wrapper::Windows::Networking::Connectivity::WwanConnectionProfileDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6096,7 +6096,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* WwanConnectionProfileDetails_GetNetworkRegistrationState(py::wrapper::Windows::Networking::Connectivity::WwanConnectionProfileDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6335,7 +6335,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Connectivity::NetworkUsageStates>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

@@ -15,7 +15,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseManager_AddLicenseAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -57,7 +57,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseManager_GetSatisfactionInfosAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -100,7 +100,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseManager_RefreshLicensesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

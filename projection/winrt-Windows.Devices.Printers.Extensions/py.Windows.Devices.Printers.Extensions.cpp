@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflow_GetPrintModelPackage(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflowPrintRequestedEventArgs_SetExtendedStatus(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -405,7 +405,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflowPrintRequestedEventArgs_SetSource(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -448,7 +448,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* Print3DWorkflowPrintRequestedEventArgs_SetSourceChanged(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -674,7 +674,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintExtensionContext_FromDeviceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1099,7 +1099,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfigurationSaveRequest_Cancel(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1140,7 +1140,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfigurationSaveRequest_GetDeferral(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1180,7 +1180,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfigurationSaveRequest_Save(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1320,7 +1320,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyObject* PrintTaskConfigurationSaveRequestedDeferral_Complete(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

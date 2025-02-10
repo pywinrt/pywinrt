@@ -156,7 +156,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -274,7 +274,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -456,7 +456,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -574,7 +574,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -889,7 +889,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1325,7 +1325,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_PublishFrameForProvider(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1369,7 +1369,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_RegisterControlGroup(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1413,7 +1413,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_RegisterCorrelationGroup(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1457,7 +1457,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_RegisterFaceAuthenticationGroup(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1501,7 +1501,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_RegisterFrameProviderInfo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1545,7 +1545,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_UnregisterControlGroup(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1589,7 +1589,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_UnregisterCorrelationGroup(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1633,7 +1633,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_UnregisterFaceAuthenticationGroup(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1677,7 +1677,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_UnregisterFrameProviderInfo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1721,7 +1721,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionFrameProviderManagerService_UpdateAvailabilityForProvider(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1832,7 +1832,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionPropertyChangeRequest_GetDeferral(py::wrapper::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2059,7 +2059,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -2095,7 +2095,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionVideoFrameAllocator_AllocateFrame(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2135,7 +2135,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionVideoFrameAllocator_Close(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2176,7 +2176,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* PerceptionVideoFrameAllocator_CopyFromVideoFrame(py::wrapper::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2309,7 +2309,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* IPerceptionFrameProvider_Close(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2350,7 +2350,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* IPerceptionFrameProvider_SetProperty(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2393,7 +2393,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* IPerceptionFrameProvider_Start(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2434,7 +2434,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* IPerceptionFrameProvider_Stop(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2882,7 +2882,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* IPerceptionFrameProviderManager_Close(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2923,7 +2923,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     static PyObject* IPerceptionFrameProviderManager_GetFrameProvider(py::wrapper::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

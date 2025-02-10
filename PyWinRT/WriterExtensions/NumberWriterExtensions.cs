@@ -849,7 +849,7 @@ static class NumberWriterExtensions
                 () =>
                     w.WriteTryCatch(() =>
                     {
-                        w.WriteLine("auto n_args = PyTuple_Size(args);");
+                        w.WriteLine("auto n_args = PyTuple_GET_SIZE(args);");
                         w.WriteBlankLine();
 
                         foreach (var (i, overload) in overloads.Select((o, i) => (i, o)))

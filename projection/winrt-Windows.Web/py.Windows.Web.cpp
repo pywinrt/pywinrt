@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Web
 
     static PyObject* WebError_GetStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -115,7 +115,7 @@ namespace py::cpp::Windows::Web
 
     static PyObject* IUriToStreamResolver_UriToStreamAsync(py::wrapper::Windows::Web::IUriToStreamResolver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

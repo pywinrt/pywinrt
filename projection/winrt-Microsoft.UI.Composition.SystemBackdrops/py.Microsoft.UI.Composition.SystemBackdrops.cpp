@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_AddSystemBackdropTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -87,7 +87,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_Close(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -128,7 +128,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -168,7 +168,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_RemoveAllSystemBackdropTargets(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -209,7 +209,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_RemoveSystemBackdropTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -251,7 +251,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_ResetProperties(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -292,7 +292,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_SetSystemBackdropConfiguration(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -335,7 +335,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_SetTargetWithCoreWindow(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -378,7 +378,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_SetTargetWithWindowId(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1143,7 +1143,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1174,7 +1174,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_AddSystemBackdropTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1216,7 +1216,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_Close(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1257,7 +1257,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1297,7 +1297,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_RemoveAllSystemBackdropTargets(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1338,7 +1338,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_RemoveSystemBackdropTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1380,7 +1380,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_ResetProperties(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1421,7 +1421,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_SetSystemBackdropConfiguration(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1464,7 +1464,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_SetTargetWithCoreWindow(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1507,7 +1507,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_SetTargetWithWindowId(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2272,7 +2272,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2646,7 +2646,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropController_Close(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2687,7 +2687,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropController_SetTargetWithCoreWindow(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2730,7 +2730,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropController_SetTargetWithWindowId(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3036,7 +3036,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_AddSystemBackdropTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3078,7 +3078,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_Close(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3119,7 +3119,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_RemoveAllSystemBackdropTargets(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3160,7 +3160,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_RemoveSystemBackdropTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3202,7 +3202,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_SetSystemBackdropConfiguration(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3245,7 +3245,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_SetTargetWithCoreWindow(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3288,7 +3288,7 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_SetTargetWithWindowId(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

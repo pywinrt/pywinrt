@@ -1136,7 +1136,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_GetCurrentKeyEventDeviceId(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1176,7 +1176,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_GetCurrentKeyState(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1218,7 +1218,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_ReleasePointerCapture(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1259,7 +1259,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreComponentInputSource_SetPointerCapture(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2658,7 +2658,7 @@ namespace py::cpp::Windows::UI::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2817,7 +2817,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_ProcessEvents(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2860,7 +2860,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_RunAsync(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2903,7 +2903,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_RunIdleAsync(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2945,7 +2945,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_ShouldYield(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2985,7 +2985,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_ShouldYieldToPriority(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3027,7 +3027,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_StopProcessEvents(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3068,7 +3068,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_TryRunAsync(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3111,7 +3111,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreDispatcher_TryRunIdleAsync(py::wrapper::Windows::UI::Core::CoreDispatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3392,7 +3392,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_ReleasePointerCapture(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3433,7 +3433,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSource_SetPointerCapture(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4540,7 +4540,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSourceController_Close(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4581,7 +4581,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSourceController_CreateForIVisualElement(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4623,7 +4623,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSourceController_CreateForVisual(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4665,7 +4665,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSourceController_SetControlledInput(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4708,7 +4708,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreIndependentInputSourceController_SetControlledInputWithFilters(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5038,7 +5038,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_Activate(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5079,7 +5079,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_Close(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5120,7 +5120,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_GetAsyncKeyState(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5162,7 +5162,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_GetCurrentKeyEventDeviceId(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5202,7 +5202,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_GetForCurrentThread(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5242,7 +5242,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_GetKeyState(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5284,7 +5284,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_ReleasePointerCapture(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5325,7 +5325,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindow_SetPointerCapture(py::wrapper::Windows::UI::Core::CoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7518,7 +7518,7 @@ namespace py::cpp::Windows::UI::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -7564,7 +7564,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowDialog_ShowAsync(py::wrapper::Windows::UI::Core::CoreWindowDialog* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8302,7 +8302,7 @@ namespace py::cpp::Windows::UI::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8351,7 +8351,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowFlyout_ShowAsync(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8895,7 +8895,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowPopupShowingEventArgs_SetDesiredSize(py::wrapper::Windows::UI::Core::CoreWindowPopupShowingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9002,7 +9002,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowResizeManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9042,7 +9042,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* CoreWindowResizeManager_NotifyLayoutCompleted(py::wrapper::Windows::UI::Core::CoreWindowResizeManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9723,7 +9723,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* PointerEventArgs_GetIntermediatePoints(py::wrapper::Windows::UI::Core::PointerEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9959,7 +9959,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* SystemNavigationManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10221,7 +10221,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* TouchHitTestingEventArgs_EvaluateProximityToPolygon(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10263,7 +10263,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* TouchHitTestingEventArgs_EvaluateProximityToRect(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11732,7 +11732,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_ReleasePointerCapture(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11773,7 +11773,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource_SetPointerCapture(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13105,7 +13105,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_ReleasePointerCapture(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13146,7 +13146,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICorePointerInputSource2_SetPointerCapture(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15039,7 +15039,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_Activate(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15080,7 +15080,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_Close(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15121,7 +15121,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_GetAsyncKeyState(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15163,7 +15163,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_GetKeyState(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15205,7 +15205,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_ReleasePointerCapture(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15246,7 +15246,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* ICoreWindow_SetPointerCapture(py::wrapper::Windows::UI::Core::ICoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18650,7 +18650,7 @@ namespace py::cpp::Windows::UI::Core
 
     static PyObject* IInitializeWithCoreWindow_Initialize(py::wrapper::Windows::UI::Core::IInitializeWithCoreWindow* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18861,7 +18861,7 @@ namespace py::cpp::Windows::UI::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Core::CorePhysicalKeyStatus>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -19218,7 +19218,7 @@ namespace py::cpp::Windows::UI::Core
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Core::CoreProximityEvaluation>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

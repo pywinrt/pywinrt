@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Media::Devices::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 6)
         {
             try
@@ -52,7 +52,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* CameraIntrinsics_DistortPoint(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -94,7 +94,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* CameraIntrinsics_DistortPoints(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -138,7 +138,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* CameraIntrinsics_ProjectManyOntoFrame(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -182,7 +182,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* CameraIntrinsics_ProjectOntoFrame(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -224,7 +224,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* CameraIntrinsics_UndistortPoint(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -266,7 +266,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* CameraIntrinsics_UndistortPoints(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -310,7 +310,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* CameraIntrinsics_UnprojectAtUnitDepth(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -352,7 +352,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* CameraIntrinsics_UnprojectPixelsAtUnitDepth(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -684,7 +684,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* DepthCorrelatedCoordinateMapper_Close(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -725,7 +725,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* DepthCorrelatedCoordinateMapper_MapPoint(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -769,7 +769,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* DepthCorrelatedCoordinateMapper_MapPoints(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -815,7 +815,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* DepthCorrelatedCoordinateMapper_UnprojectPoint(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -858,7 +858,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* DepthCorrelatedCoordinateMapper_UnprojectPoints(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1236,7 +1236,7 @@ namespace py::cpp::Windows::Media::Devices::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3474,7 +3474,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* VariablePhotoSequenceController_GetCurrentFrameRate(py::wrapper::Windows::Media::Devices::Core::VariablePhotoSequenceController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3514,7 +3514,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyObject* VariablePhotoSequenceController_GetHighestConcurrentFrameRate(py::wrapper::Windows::Media::Devices::Core::VariablePhotoSequenceController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Media::Transcoding
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_AddAudioEffect(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -88,7 +88,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_AddAudioEffectWithSettings(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -133,7 +133,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_AddVideoEffect(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -176,7 +176,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_AddVideoEffectWithSettings(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -221,7 +221,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_ClearEffects(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -262,7 +262,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_PrepareFileTranscodeAsync(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -306,7 +306,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_PrepareMediaStreamSourceTranscodeAsync(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -350,7 +350,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_PrepareStreamTranscodeAsync(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -815,7 +815,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* PrepareTranscodeResult_TranscodeAsync(py::wrapper::Windows::Media::Transcoding::PrepareTranscodeResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -310,7 +310,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchPane_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -350,7 +350,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchPane_HideThisApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -391,7 +391,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchPane_SetLocalContentSuggestionSettings(py::wrapper::Windows::ApplicationModel::Search::SearchPane* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -434,7 +434,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchPane_ShowOverloadDefault(py::wrapper::Windows::ApplicationModel::Search::SearchPane* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -475,7 +475,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchPane_ShowOverloadWithQuery(py::wrapper::Windows::ApplicationModel::Search::SearchPane* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -518,7 +518,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchPane_TrySetQueryText(py::wrapper::Windows::ApplicationModel::Search::SearchPane* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1920,7 +1920,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchPaneSuggestionsRequest_GetDeferral(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2086,7 +2086,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchPaneSuggestionsRequestDeferral_Complete(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2463,7 +2463,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -2654,7 +2654,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchSuggestionCollection_AppendQuerySuggestion(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2697,7 +2697,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchSuggestionCollection_AppendQuerySuggestions(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2740,7 +2740,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchSuggestionCollection_AppendResultSuggestion(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2787,7 +2787,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchSuggestionCollection_AppendSearchSeparator(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2928,7 +2928,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchSuggestionsRequest_GetDeferral(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionsRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3094,7 +3094,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyObject* SearchSuggestionsRequestDeferral_Complete(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

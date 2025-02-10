@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -328,7 +328,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -372,7 +372,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -415,7 +415,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -458,7 +458,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -499,7 +499,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -542,7 +542,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -586,7 +586,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -626,7 +626,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCacheDirectiveHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1215,7 +1215,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1264,7 +1264,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1306,7 +1306,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1346,7 +1346,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1600,7 +1600,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1643,7 +1643,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1684,7 +1684,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1724,7 +1724,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1766,7 +1766,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1809,7 +1809,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1849,7 +1849,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1905,7 +1905,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1949,7 +1949,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1992,7 +1992,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2035,7 +2035,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2076,7 +2076,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2119,7 +2119,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2163,7 +2163,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2203,7 +2203,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpChallengeHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2512,7 +2512,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2545,7 +2545,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2587,7 +2587,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2627,7 +2627,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2819,7 +2819,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2862,7 +2862,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2903,7 +2903,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2943,7 +2943,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2985,7 +2985,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3028,7 +3028,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3068,7 +3068,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3124,7 +3124,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3168,7 +3168,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3211,7 +3211,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3254,7 +3254,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3295,7 +3295,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3338,7 +3338,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3382,7 +3382,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3422,7 +3422,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpConnectionOptionHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3731,7 +3731,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3764,7 +3764,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3806,7 +3806,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3846,7 +3846,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4038,7 +4038,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4081,7 +4081,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4122,7 +4122,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4162,7 +4162,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4204,7 +4204,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4247,7 +4247,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4287,7 +4287,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4343,7 +4343,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4387,7 +4387,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4430,7 +4430,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4473,7 +4473,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4514,7 +4514,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4557,7 +4557,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4601,7 +4601,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4641,7 +4641,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4950,7 +4950,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -4999,7 +4999,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5041,7 +5041,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5081,7 +5081,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5304,7 +5304,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5347,7 +5347,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5388,7 +5388,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5428,7 +5428,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5470,7 +5470,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5513,7 +5513,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5553,7 +5553,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5609,7 +5609,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5653,7 +5653,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5696,7 +5696,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5739,7 +5739,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5780,7 +5780,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5823,7 +5823,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5867,7 +5867,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5907,7 +5907,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentCodingWithQualityHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6216,7 +6216,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6249,7 +6249,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6291,7 +6291,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6331,7 +6331,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentDispositionHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6864,7 +6864,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6895,7 +6895,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6939,7 +6939,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6980,7 +6980,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7020,7 +7020,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7060,7 +7060,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_HasKey(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7102,7 +7102,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_Insert(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7145,7 +7145,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_Lookup(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7187,7 +7187,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_Remove(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7230,7 +7230,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7270,7 +7270,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentHeaderCollection_TryAppendWithoutValidation(py::wrapper::Windows::Web::Http::Headers::HttpContentHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8185,7 +8185,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8251,7 +8251,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentRangeHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8293,7 +8293,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentRangeHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpContentRangeHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8333,7 +8333,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpContentRangeHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8648,7 +8648,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -8697,7 +8697,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8739,7 +8739,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8779,7 +8779,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9041,7 +9041,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9084,7 +9084,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9125,7 +9125,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9165,7 +9165,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9207,7 +9207,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9250,7 +9250,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9290,7 +9290,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9346,7 +9346,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9390,7 +9390,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9433,7 +9433,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9476,7 +9476,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9517,7 +9517,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9560,7 +9560,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9604,7 +9604,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9644,7 +9644,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCookiePairHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9953,7 +9953,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10002,7 +10002,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCredentialsHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10044,7 +10044,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCredentialsHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpCredentialsHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10084,7 +10084,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpCredentialsHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10338,7 +10338,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpDateOrDeltaHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10380,7 +10380,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpDateOrDeltaHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10420,7 +10420,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpDateOrDeltaHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10634,7 +10634,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -10683,7 +10683,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10725,7 +10725,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10765,7 +10765,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11058,7 +11058,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11101,7 +11101,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11142,7 +11142,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11182,7 +11182,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11224,7 +11224,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11267,7 +11267,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11307,7 +11307,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11363,7 +11363,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11407,7 +11407,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11450,7 +11450,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11493,7 +11493,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11534,7 +11534,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11577,7 +11577,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11621,7 +11621,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11661,7 +11661,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpExpectationHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11979,7 +11979,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12022,7 +12022,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12063,7 +12063,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12103,7 +12103,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12145,7 +12145,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12188,7 +12188,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12228,7 +12228,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12284,7 +12284,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12328,7 +12328,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12371,7 +12371,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12414,7 +12414,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12455,7 +12455,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12498,7 +12498,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12542,7 +12542,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12582,7 +12582,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12891,7 +12891,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -12940,7 +12940,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12982,7 +12982,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13022,7 +13022,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13245,7 +13245,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13288,7 +13288,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13329,7 +13329,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13369,7 +13369,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13411,7 +13411,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13454,7 +13454,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13494,7 +13494,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13550,7 +13550,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13594,7 +13594,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13637,7 +13637,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13680,7 +13680,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13721,7 +13721,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13764,7 +13764,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -13808,7 +13808,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13848,7 +13848,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpLanguageRangeWithQualityHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14157,7 +14157,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -14190,7 +14190,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14232,7 +14232,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14272,7 +14272,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14595,7 +14595,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -14644,7 +14644,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14686,7 +14686,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14726,7 +14726,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15128,7 +15128,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15171,7 +15171,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15212,7 +15212,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15252,7 +15252,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15294,7 +15294,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15337,7 +15337,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15377,7 +15377,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15433,7 +15433,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15477,7 +15477,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15520,7 +15520,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15563,7 +15563,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15604,7 +15604,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15647,7 +15647,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15691,7 +15691,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15731,7 +15731,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMediaTypeWithQualityHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16049,7 +16049,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16092,7 +16092,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16133,7 +16133,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16173,7 +16173,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16215,7 +16215,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16258,7 +16258,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16298,7 +16298,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16354,7 +16354,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16398,7 +16398,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16441,7 +16441,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16484,7 +16484,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16525,7 +16525,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16568,7 +16568,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16612,7 +16612,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16652,7 +16652,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpMethodHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16961,7 +16961,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -17010,7 +17010,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpNameValueHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17052,7 +17052,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpNameValueHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpNameValueHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17092,7 +17092,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpNameValueHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17345,7 +17345,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -17394,7 +17394,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17436,7 +17436,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpProductHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17476,7 +17476,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17690,7 +17690,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -17739,7 +17739,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17781,7 +17781,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17821,7 +17821,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18044,7 +18044,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18087,7 +18087,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18128,7 +18128,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18168,7 +18168,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18210,7 +18210,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18253,7 +18253,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18293,7 +18293,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18349,7 +18349,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18393,7 +18393,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18436,7 +18436,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18479,7 +18479,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18520,7 +18520,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18563,7 +18563,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -18607,7 +18607,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18647,7 +18647,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpProductInfoHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18965,7 +18965,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19009,7 +19009,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19050,7 +19050,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19090,7 +19090,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19130,7 +19130,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_HasKey(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19172,7 +19172,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_Insert(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19215,7 +19215,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_Lookup(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19257,7 +19257,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_Remove(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19300,7 +19300,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19340,7 +19340,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpRequestHeaderCollection_TryAppendWithoutValidation(py::wrapper::Windows::Web::Http::Headers::HttpRequestHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20551,7 +20551,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20595,7 +20595,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20636,7 +20636,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20676,7 +20676,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20716,7 +20716,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_HasKey(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20758,7 +20758,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_Insert(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20801,7 +20801,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_Lookup(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20843,7 +20843,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_Remove(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20886,7 +20886,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20926,7 +20926,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpResponseHeaderCollection_TryAppendWithoutValidation(py::wrapper::Windows::Web::Http::Headers::HttpResponseHeaderCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21685,7 +21685,7 @@ namespace py::cpp::Windows::Web::Http::Headers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -21718,7 +21718,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21760,7 +21760,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValue_ToString(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21800,7 +21800,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22023,7 +22023,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_Append(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22066,7 +22066,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_Clear(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22107,7 +22107,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_First(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22147,7 +22147,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_GetAt(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22189,7 +22189,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_GetMany(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -22232,7 +22232,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_GetView(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22272,7 +22272,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_IndexOf(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22328,7 +22328,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_InsertAt(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -22372,7 +22372,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_ParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22415,7 +22415,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_RemoveAt(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22458,7 +22458,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_RemoveAtEnd(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22499,7 +22499,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_ReplaceAll(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -22542,7 +22542,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_SetAt(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -22586,7 +22586,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_ToString(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22626,7 +22626,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     static PyObject* HttpTransferCodingHeaderValueCollection_TryParseAdd(py::wrapper::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

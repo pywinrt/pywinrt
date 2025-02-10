@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ConditionForceEffect_SetParameters(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -96,7 +96,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ConditionForceEffect_Start(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -137,7 +137,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ConditionForceEffect_Stop(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -367,7 +367,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -398,7 +398,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ConstantForceEffect_SetParameters(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -442,7 +442,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ConstantForceEffect_SetParametersWithEnvelope(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 9)
         {
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ConstantForceEffect_Start(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -534,7 +534,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ConstantForceEffect_Stop(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -743,7 +743,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ForceFeedbackMotor_LoadEffectAsync(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ForceFeedbackMotor_PauseAllEffects(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -826,7 +826,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ForceFeedbackMotor_ResumeAllEffects(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -867,7 +867,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ForceFeedbackMotor_StopAllEffects(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -908,7 +908,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ForceFeedbackMotor_TryDisableAsync(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -948,7 +948,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ForceFeedbackMotor_TryEnableAsync(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -988,7 +988,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ForceFeedbackMotor_TryResetAsync(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1028,7 +1028,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* ForceFeedbackMotor_TryUnloadEffectAsync(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1295,7 +1295,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1328,7 +1328,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* PeriodicForceEffect_SetParameters(py::wrapper::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* PeriodicForceEffect_SetParametersWithEnvelope(py::wrapper::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 12)
         {
@@ -1429,7 +1429,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* PeriodicForceEffect_Start(py::wrapper::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1470,7 +1470,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* PeriodicForceEffect_Stop(py::wrapper::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1701,7 +1701,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1732,7 +1732,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* RampForceEffect_SetParameters(py::wrapper::Windows::Gaming::Input::ForceFeedback::RampForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1777,7 +1777,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* RampForceEffect_SetParametersWithEnvelope(py::wrapper::Windows::Gaming::Input::ForceFeedback::RampForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 10)
         {
@@ -1829,7 +1829,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* RampForceEffect_Start(py::wrapper::Windows::Gaming::Input::ForceFeedback::RampForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1870,7 +1870,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* RampForceEffect_Stop(py::wrapper::Windows::Gaming::Input::ForceFeedback::RampForceEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2079,7 +2079,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* IForceFeedbackEffect_Start(py::wrapper::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2120,7 +2120,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     static PyObject* IForceFeedbackEffect_Stop(py::wrapper::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

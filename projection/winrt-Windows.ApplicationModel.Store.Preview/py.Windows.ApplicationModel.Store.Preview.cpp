@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* DeliveryOptimizationSettings_GetCurrentSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -202,7 +202,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_FilterUnsupportedSystemFeaturesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -244,7 +244,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_GetEnterpriseStoreWebAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -284,7 +284,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_GetEnterpriseStoreWebAccountIdForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -326,7 +326,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_GetPurchasePromptingPolicyForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -368,7 +368,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_GetStoreLogDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -410,7 +410,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_GetStoreWebAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -450,7 +450,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_GetStoreWebAccountIdForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -492,7 +492,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_HasStoreWebAccount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_HasStoreWebAccountForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -574,7 +574,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_IsPinToDesktopSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -614,7 +614,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_IsPinToStartSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -654,7 +654,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_IsPinToTaskbarSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -694,7 +694,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_IsStoreWebAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -736,7 +736,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_IsStoreWebAccountIdForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -779,7 +779,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_PinToDesktop(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -822,7 +822,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_PinToDesktopForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -866,7 +866,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_SetEnterpriseStoreWebAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -909,7 +909,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_SetEnterpriseStoreWebAccountIdForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -953,7 +953,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_SetMobileOperatorConfiguration(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -998,7 +998,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_SetPurchasePromptingPolicyForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1042,7 +1042,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_SetStoreWebAccountId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1085,7 +1085,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_SetStoreWebAccountIdForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1129,7 +1129,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_SetSystemConfiguration(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1175,7 +1175,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_ShouldRestrictToEnterpriseStoreOnly(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1215,7 +1215,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StoreConfiguration_ShouldRestrictToEnterpriseStoreOnlyForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1619,7 +1619,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreview_LoadAddOnProductInfosAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1659,7 +1659,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* StorePreview_RequestProductPurchaseByProductIdAndSkuIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2407,7 +2407,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAndWebAccountAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2451,7 +2451,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyObject* WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

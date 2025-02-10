@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Data::Json
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_Append(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -88,7 +88,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_Clear(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -129,7 +129,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_First(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -169,7 +169,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetArray(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -209,7 +209,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetArrayAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -251,7 +251,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -293,7 +293,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetBoolean(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -333,7 +333,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetBooleanAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -375,7 +375,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetMany(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -418,7 +418,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetNumber(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -458,7 +458,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetNumberAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -500,7 +500,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetObject(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -540,7 +540,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetObjectAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -582,7 +582,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetString(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -622,7 +622,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetStringAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -664,7 +664,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_GetView(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -704,7 +704,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_IndexOf(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -760,7 +760,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_InsertAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -804,7 +804,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -846,7 +846,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_RemoveAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -889,7 +889,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_RemoveAtEnd(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -930,7 +930,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_ReplaceAll(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -973,7 +973,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_SetAt(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1017,7 +1017,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_Stringify(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1057,7 +1057,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_ToString(py::wrapper::Windows::Data::Json::JsonArray* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1097,7 +1097,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonArray_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1484,7 +1484,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonError_GetJsonStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1575,7 +1575,7 @@ namespace py::cpp::Windows::Data::Json
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1606,7 +1606,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_Clear(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1647,7 +1647,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_First(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1687,7 +1687,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetArray(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1727,7 +1727,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetBoolean(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1767,7 +1767,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedArray(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1809,7 +1809,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedArrayOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1852,7 +1852,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedBoolean(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1894,7 +1894,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedBooleanOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1937,7 +1937,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedNumber(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1979,7 +1979,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedNumberOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2022,7 +2022,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedObject(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2064,7 +2064,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedObjectOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2107,7 +2107,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedString(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2149,7 +2149,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedStringOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2192,7 +2192,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedValue(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2234,7 +2234,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNamedValueOrDefault(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2277,7 +2277,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetNumber(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2317,7 +2317,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetObject(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2357,7 +2357,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetString(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2397,7 +2397,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_GetView(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_HasKey(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2479,7 +2479,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_Insert(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2522,7 +2522,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_Lookup(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2564,7 +2564,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2606,7 +2606,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_Remove(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2649,7 +2649,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_SetNamedValue(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2693,7 +2693,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_Stringify(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2733,7 +2733,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_ToString(py::wrapper::Windows::Data::Json::JsonObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2773,7 +2773,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonObject_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3159,7 +3159,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_CreateBooleanValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3201,7 +3201,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_CreateNullValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3241,7 +3241,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_CreateNumberValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3283,7 +3283,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_CreateStringValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3325,7 +3325,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_GetArray(py::wrapper::Windows::Data::Json::JsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3365,7 +3365,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_GetBoolean(py::wrapper::Windows::Data::Json::JsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3405,7 +3405,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_GetNumber(py::wrapper::Windows::Data::Json::JsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3445,7 +3445,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_GetObject(py::wrapper::Windows::Data::Json::JsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3485,7 +3485,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_GetString(py::wrapper::Windows::Data::Json::JsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3525,7 +3525,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_Parse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3567,7 +3567,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_Stringify(py::wrapper::Windows::Data::Json::JsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3607,7 +3607,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_ToString(py::wrapper::Windows::Data::Json::JsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3647,7 +3647,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* JsonValue_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3849,7 +3849,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* IJsonValue_GetArray(py::wrapper::Windows::Data::Json::IJsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3889,7 +3889,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* IJsonValue_GetBoolean(py::wrapper::Windows::Data::Json::IJsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3929,7 +3929,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* IJsonValue_GetNumber(py::wrapper::Windows::Data::Json::IJsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3969,7 +3969,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* IJsonValue_GetObject(py::wrapper::Windows::Data::Json::IJsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4009,7 +4009,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* IJsonValue_GetString(py::wrapper::Windows::Data::Json::IJsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4049,7 +4049,7 @@ namespace py::cpp::Windows::Data::Json
 
     static PyObject* IJsonValue_Stringify(py::wrapper::Windows::Data::Json::IJsonValue* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

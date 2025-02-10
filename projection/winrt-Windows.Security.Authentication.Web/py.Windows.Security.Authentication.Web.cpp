@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyObject* WebAuthenticationBroker_AuthenticateAndContinue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -58,7 +58,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyObject* WebAuthenticationBroker_AuthenticateSilentlyAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -100,7 +100,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyObject* WebAuthenticationBroker_AuthenticateSilentlyWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyObject* WebAuthenticationBroker_AuthenticateWithCallbackUriAndContinue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyObject* WebAuthenticationBroker_AuthenticateWithCallbackUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyObject* WebAuthenticationBroker_AuthenticateWithCallbackUriContinuationDataAndOptionsAndContinue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -277,7 +277,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyObject* WebAuthenticationBroker_AuthenticateWithoutCallbackUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -320,7 +320,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyObject* WebAuthenticationBroker_GetCurrentApplicationCallbackUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Networking::Sockets
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ControlChannelTrigger_Close(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -106,7 +106,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ControlChannelTrigger_DecreaseNetworkKeepAliveInterval(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ControlChannelTrigger_FlushTransport(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ControlChannelTrigger_UsingTransport(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ControlChannelTrigger_WaitForPushEnabled(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -611,7 +611,7 @@ namespace py::cpp::Windows::Networking::Sockets
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -642,7 +642,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_BindEndpointAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -685,7 +685,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_BindServiceNameAndAdapterAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -728,7 +728,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_BindServiceNameAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -770,7 +770,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_CancelIOAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -810,7 +810,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_Close(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -851,7 +851,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_ConnectAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -894,7 +894,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_ConnectWithEndpointPairAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -936,7 +936,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_EnableTransferOwnership(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -979,7 +979,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_EnableTransferOwnershipWithConnectedStandbyAction(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1023,7 +1023,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_GetEndpointPairsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1066,7 +1066,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_GetEndpointPairsWithSortOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1110,7 +1110,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_GetOutputStreamAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1153,7 +1153,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_GetOutputStreamWithEndpointPairAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1195,7 +1195,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_JoinMulticastGroup(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1238,7 +1238,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_TransferOwnership(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1281,7 +1281,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_TransferOwnershipWithContext(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1325,7 +1325,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocket_TransferOwnershipWithContextAndKeepAliveTime(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2256,7 +2256,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocketMessageReceivedEventArgs_GetDataReader(py::wrapper::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2296,7 +2296,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* DatagramSocketMessageReceivedEventArgs_GetDataStream(py::wrapper::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2485,7 +2485,7 @@ namespace py::cpp::Windows::Networking::Sockets
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2516,7 +2516,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* MessageWebSocket_Close(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2557,7 +2557,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* MessageWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2601,7 +2601,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* MessageWebSocket_ConnectAsync(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2643,7 +2643,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* MessageWebSocket_SendFinalFrameAsync(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2685,7 +2685,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* MessageWebSocket_SendNonfinalFrameAsync(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2727,7 +2727,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* MessageWebSocket_SetRequestHeader(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4155,7 +4155,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* MessageWebSocketMessageReceivedEventArgs_GetDataReader(py::wrapper::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4195,7 +4195,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* MessageWebSocketMessageReceivedEventArgs_GetDataStream(py::wrapper::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4362,7 +4362,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ServerMessageWebSocket_Close(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4403,7 +4403,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ServerMessageWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5053,7 +5053,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ServerStreamWebSocket_Close(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5094,7 +5094,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* ServerStreamWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5535,7 +5535,7 @@ namespace py::cpp::Windows::Networking::Sockets
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6111,7 +6111,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* SocketError_GetStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6202,7 +6202,7 @@ namespace py::cpp::Windows::Networking::Sockets
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6233,7 +6233,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_CancelIOAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6273,7 +6273,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_Close(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6314,7 +6314,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_ConnectAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6357,7 +6357,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_ConnectWithEndpointPairAndProtectionLevelAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6400,7 +6400,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_ConnectWithEndpointPairAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6442,7 +6442,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_ConnectWithProtectionLevelAndAdapterAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6487,7 +6487,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_ConnectWithProtectionLevelAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6531,7 +6531,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_EnableTransferOwnership(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6574,7 +6574,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_EnableTransferOwnershipWithConnectedStandbyAction(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6618,7 +6618,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_GetEndpointPairsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6661,7 +6661,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_GetEndpointPairsWithSortOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6705,7 +6705,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_TransferOwnership(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6748,7 +6748,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_TransferOwnershipWithContext(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6792,7 +6792,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_TransferOwnershipWithContextAndKeepAliveTime(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6837,7 +6837,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocket_UpgradeToSslAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8270,7 +8270,7 @@ namespace py::cpp::Windows::Networking::Sockets
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8301,7 +8301,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_BindEndpointAsync(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8344,7 +8344,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_BindServiceNameAsync(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8386,7 +8386,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_BindServiceNameWithProtectionLevelAndAdapterAsync(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8430,7 +8430,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_BindServiceNameWithProtectionLevelAsync(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8473,7 +8473,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_CancelIOAsync(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8513,7 +8513,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_Close(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8554,7 +8554,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_EnableTransferOwnership(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8597,7 +8597,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_EnableTransferOwnershipWithConnectedStandbyAction(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8641,7 +8641,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_TransferOwnership(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8684,7 +8684,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamSocketListener_TransferOwnershipWithContext(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9547,7 +9547,7 @@ namespace py::cpp::Windows::Networking::Sockets
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9578,7 +9578,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamWebSocket_Close(py::wrapper::Windows::Networking::Sockets::StreamWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9619,7 +9619,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::StreamWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9663,7 +9663,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamWebSocket_ConnectAsync(py::wrapper::Windows::Networking::Sockets::StreamWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9705,7 +9705,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* StreamWebSocket_SetRequestHeader(py::wrapper::Windows::Networking::Sockets::StreamWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11072,7 +11072,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* WebSocketError_GetStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11163,7 +11163,7 @@ namespace py::cpp::Windows::Networking::Sockets
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11194,7 +11194,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* WebSocketKeepAlive_Run(py::wrapper::Windows::Networking::Sockets::WebSocketKeepAlive* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11301,7 +11301,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* WebSocketServerCustomValidationRequestedEventArgs_GetDeferral(py::wrapper::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11341,7 +11341,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* WebSocketServerCustomValidationRequestedEventArgs_Reject(py::wrapper::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12021,7 +12021,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* IWebSocket_Close(py::wrapper::Windows::Networking::Sockets::IWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12062,7 +12062,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* IWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::IWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12106,7 +12106,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* IWebSocket_ConnectAsync(py::wrapper::Windows::Networking::Sockets::IWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12148,7 +12148,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyObject* IWebSocket_SetRequestHeader(py::wrapper::Windows::Networking::Sockets::IWebSocket* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14511,7 +14511,7 @@ namespace py::cpp::Windows::Networking::Sockets
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Sockets::BandwidthStatistics>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -14870,7 +14870,7 @@ namespace py::cpp::Windows::Networking::Sockets
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

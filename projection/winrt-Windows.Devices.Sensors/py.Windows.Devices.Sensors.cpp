@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_GetDefaultWithAccelerometerReadingType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1527,7 +1527,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1569,7 +1569,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_GetCurrentReadingAsync(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1609,7 +1609,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1649,7 +1649,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1689,7 +1689,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_GetSystemHistoryAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1731,7 +1731,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_GetSystemHistoryWithDurationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2430,7 +2430,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensorTriggerDetails_ReadReports(py::wrapper::Windows::Devices::Sensors::ActivitySensorTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2667,7 +2667,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::Altimeter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2707,7 +2707,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3414,7 +3414,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3456,7 +3456,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::Barometer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3496,7 +3496,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3536,7 +3536,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4409,7 +4409,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4451,7 +4451,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4491,7 +4491,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4531,7 +4531,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5754,7 +5754,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5796,7 +5796,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5836,7 +5836,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5876,7 +5876,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7458,7 +7458,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7500,7 +7500,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_GetCurrentReadingAsync(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7540,7 +7540,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7580,7 +7580,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7620,7 +7620,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_GetRelatedToAdjacentPanelsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8294,7 +8294,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8336,7 +8336,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8378,7 +8378,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8418,7 +8418,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8458,7 +8458,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8498,7 +8498,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9370,7 +9370,7 @@ namespace py::cpp::Windows::Devices::Sensors
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9744,7 +9744,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_GetCurrentSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9784,7 +9784,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_GetCurrentSettingsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9824,7 +9824,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_GetSupportedFeaturesForSensorId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9866,7 +9866,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_GetSupportedFeaturesForSensorIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9908,7 +9908,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_GetSupportedLockOnLeaveTimeouts(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9948,7 +9948,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_UpdateSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9991,7 +9991,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_UpdateSettingsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10844,7 +10844,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10886,7 +10886,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10926,7 +10926,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10966,7 +10966,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_GetDefaultForRelativeReadings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11006,7 +11006,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_GetDefaultWithSensorReadingType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11048,7 +11048,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12259,7 +12259,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12301,7 +12301,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::LightSensor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12341,7 +12341,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12381,7 +12381,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13457,7 +13457,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13499,7 +13499,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13539,7 +13539,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13579,7 +13579,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14755,7 +14755,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14797,7 +14797,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14837,7 +14837,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14877,7 +14877,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_GetDefaultForRelativeReadings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14917,7 +14917,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_GetDefaultWithSensorReadingType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14959,7 +14959,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_GetDefaultWithSensorReadingTypeAndSensorOptimizationGoal(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15002,7 +15002,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15044,7 +15044,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_GetDeviceSelectorWithSensorReadingTypeAndSensorOptimizationGoal(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15923,7 +15923,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15965,7 +15965,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_GetCurrentReadings(py::wrapper::Windows::Devices::Sensors::Pedometer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16005,7 +16005,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16045,7 +16045,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16085,7 +16085,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_GetReadingsFromTriggerDetails(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16127,7 +16127,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_GetSystemHistoryAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16169,7 +16169,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_GetSystemHistoryWithDurationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -16524,7 +16524,7 @@ namespace py::cpp::Windows::Devices::Sensors
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -16902,7 +16902,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_CreateDisplayOnOffController(py::wrapper::Windows::Devices::Sensors::ProximitySensor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16942,7 +16942,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16984,7 +16984,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_GetCurrentReading(py::wrapper::Windows::Devices::Sensors::ProximitySensor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17024,7 +17024,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17064,7 +17064,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_GetReadingsFromTriggerDetails(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17346,7 +17346,7 @@ namespace py::cpp::Windows::Devices::Sensors
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -17442,7 +17442,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensorDisplayOnOffController_Close(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18476,7 +18476,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensor_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18518,7 +18518,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensor_GetCurrentOrientation(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18558,7 +18558,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensor_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18598,7 +18598,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensor_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19222,7 +19222,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* IHumanPresenceSensorExtension_Initialize(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19265,7 +19265,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* IHumanPresenceSensorExtension_ProcessReading(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19307,7 +19307,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* IHumanPresenceSensorExtension_ProcessReadingTimeoutExpired(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19350,7 +19350,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* IHumanPresenceSensorExtension_Reset(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19391,7 +19391,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* IHumanPresenceSensorExtension_Start(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19432,7 +19432,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* IHumanPresenceSensorExtension_Stop(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19473,7 +19473,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* IHumanPresenceSensorExtension_Uninitialize(py::wrapper::Windows::Devices::Sensors::IHumanPresenceSensorExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Management::Setup
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -933,7 +933,7 @@ namespace py::cpp::Windows::Management::Setup
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1681,7 +1681,7 @@ namespace py::cpp::Windows::Management::Setup
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2003,7 +2003,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static PyObject* MachineProvisioningProgressReporter_GetDevicePreparationExecutionContextAsync(py::wrapper::Windows::Management::Setup::MachineProvisioningProgressReporter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2043,7 +2043,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static PyObject* MachineProvisioningProgressReporter_GetForLaunchUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2086,7 +2086,7 @@ namespace py::cpp::Windows::Management::Setup
 
     static PyObject* MachineProvisioningProgressReporter_ReportProgress(py::wrapper::Windows::Management::Setup::MachineProvisioningProgressReporter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -192,7 +192,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -435,7 +435,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -613,7 +613,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -897,7 +897,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiInPort_Close(py::wrapper::Windows::Devices::Midi::MidiInPort* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -938,7 +938,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiInPort_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -980,7 +980,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiInPort_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1315,7 +1315,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -1590,7 +1590,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -1874,7 +1874,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiOutPort_Close(py::wrapper::Windows::Devices::Midi::MidiOutPort* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1915,7 +1915,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiOutPort_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1957,7 +1957,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiOutPort_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1997,7 +1997,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiOutPort_SendBuffer(py::wrapper::Windows::Devices::Midi::MidiOutPort* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2040,7 +2040,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiOutPort_SendMessage(py::wrapper::Windows::Devices::Midi::MidiOutPort* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2219,7 +2219,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2462,7 +2462,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -2737,7 +2737,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2980,7 +2980,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3191,7 +3191,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3402,7 +3402,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3580,7 +3580,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3767,7 +3767,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_Close(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3808,7 +3808,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3848,7 +3848,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_CreateFromAudioDeviceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3890,7 +3890,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_IsSynthesizer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3932,7 +3932,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_SendBuffer(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3975,7 +3975,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* MidiSynthesizer_SendMessage(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4256,7 +4256,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -4436,7 +4436,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4614,7 +4614,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -4857,7 +4857,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5035,7 +5035,7 @@ namespace py::cpp::Windows::Devices::Midi
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5498,7 +5498,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* IMidiOutPort_Close(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5539,7 +5539,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* IMidiOutPort_SendBuffer(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5582,7 +5582,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyObject* IMidiOutPort_SendMessage(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

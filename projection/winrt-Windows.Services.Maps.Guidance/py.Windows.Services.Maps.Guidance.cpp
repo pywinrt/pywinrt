@@ -957,7 +957,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_GetCurrent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -997,7 +997,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_Pause(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1038,7 +1038,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_RepeatLastAudioNotification(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1079,7 +1079,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_Resume(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1120,7 +1120,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_SetGuidanceVoice(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1164,7 +1164,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_StartNavigating(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1207,7 +1207,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_StartSimulating(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1251,7 +1251,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_StartTracking(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1292,7 +1292,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_Stop(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1333,7 +1333,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_UpdateUserLocation(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1376,7 +1376,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_UpdateUserLocationWithPositionOverride(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2977,7 +2977,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_CanCreateFromMapRoute(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3019,7 +3019,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_ConvertToMapRoute(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3059,7 +3059,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_TryCreateFromMapRoute(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3374,7 +3374,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceTelemetryCollector_ClearLocalData(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3415,7 +3415,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceTelemetryCollector_GetCurrent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

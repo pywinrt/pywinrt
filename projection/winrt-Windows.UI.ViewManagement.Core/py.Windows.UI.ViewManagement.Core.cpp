@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreFrameworkInputView_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreFrameworkInputView_GetForUIContext(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -606,7 +606,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_GetCoreInputViewOcclusions(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -646,7 +646,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -686,7 +686,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_GetForUIContext(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -728,7 +728,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_IsKindSupported(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -770,7 +770,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_TryHide(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -810,7 +810,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_TryHidePrimaryView(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -850,7 +850,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_TryShow(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -890,7 +890,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_TryShowPrimaryView(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -930,7 +930,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_TryShowWithKind(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -972,7 +972,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputView_TryTransferXYFocusToPrimaryView(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1773,7 +1773,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputViewHidingEventArgs_TryCancel(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2166,7 +2166,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* CoreInputViewShowingEventArgs_TryCancel(py::wrapper::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2535,7 +2535,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* UISettingsController_RequestDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2575,7 +2575,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* UISettingsController_SetAdvancedEffectsEnabled(py::wrapper::Windows::UI::ViewManagement::Core::UISettingsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2618,7 +2618,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* UISettingsController_SetAnimationsEnabled(py::wrapper::Windows::UI::ViewManagement::Core::UISettingsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2661,7 +2661,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* UISettingsController_SetAutoHideScrollBars(py::wrapper::Windows::UI::ViewManagement::Core::UISettingsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2704,7 +2704,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* UISettingsController_SetMessageDuration(py::wrapper::Windows::UI::ViewManagement::Core::UISettingsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2747,7 +2747,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyObject* UISettingsController_SetTextScaleFactor(py::wrapper::Windows::UI::ViewManagement::Core::UISettingsController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

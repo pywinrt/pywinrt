@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScanner_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScanner_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScanner_IsPreviewSupported(py::wrapper::Windows::Devices::Scanners::ImageScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScanner_IsScanSourceSupported(py::wrapper::Windows::Devices::Scanners::ImageScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScanner_ScanFilesToFolderAsync(py::wrapper::Windows::Devices::Scanners::ImageScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScanner_ScanPreviewToStreamAsync(py::wrapper::Windows::Devices::Scanners::ImageScanner* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -520,7 +520,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScannerAutoConfiguration_IsFormatSupported(py::wrapper::Windows::Devices::Scanners::ImageScannerAutoConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -727,7 +727,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScannerFeederConfiguration_IsAutoCroppingModeSupported(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -769,7 +769,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScannerFeederConfiguration_IsColorModeSupported(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -811,7 +811,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScannerFeederConfiguration_IsFormatSupported(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -853,7 +853,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScannerFeederConfiguration_IsPageSizeSupported(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2493,7 +2493,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScannerFlatbedConfiguration_IsAutoCroppingModeSupported(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2535,7 +2535,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScannerFlatbedConfiguration_IsColorModeSupported(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2577,7 +2577,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* ImageScannerFlatbedConfiguration_IsFormatSupported(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3890,7 +3890,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* IImageScannerFormatConfiguration_IsFormatSupported(py::wrapper::Windows::Devices::Scanners::IImageScannerFormatConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4252,7 +4252,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* IImageScannerSourceConfiguration_IsAutoCroppingModeSupported(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4294,7 +4294,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* IImageScannerSourceConfiguration_IsColorModeSupported(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4336,7 +4336,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyObject* IImageScannerSourceConfiguration_IsFormatSupported(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6217,7 +6217,7 @@ namespace py::cpp::Windows::Devices::Scanners
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Scanners::ImageScannerResolution>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

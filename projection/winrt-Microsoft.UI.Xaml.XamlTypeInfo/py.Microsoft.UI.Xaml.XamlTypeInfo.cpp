@@ -14,7 +14,7 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
 
     static PyObject* XamlControlsXamlMetaDataProvider_GetXamlType(py::wrapper::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -87,7 +87,7 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
 
     static PyObject* XamlControlsXamlMetaDataProvider_GetXamlTypeByFullName(py::wrapper::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -129,7 +129,7 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
 
     static PyObject* XamlControlsXamlMetaDataProvider_GetXmlnsDefinitions(py::wrapper::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -169,7 +169,7 @@ namespace py::cpp::Microsoft::UI::Xaml::XamlTypeInfo
 
     static PyObject* XamlControlsXamlMetaDataProvider_Initialize(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

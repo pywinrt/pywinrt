@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* PreviewBuildsManager_GetCurrentState(py::wrapper::Windows::Management::Update::PreviewBuildsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* PreviewBuildsManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* PreviewBuildsManager_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* PreviewBuildsManager_SyncAsync(py::wrapper::Windows::Management::Update::PreviewBuildsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -435,7 +435,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_AcceptEula(py::wrapper::Windows::Management::Update::WindowsUpdate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -476,7 +476,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdate_GetPropertyValue(py::wrapper::Windows::Management::Update::WindowsUpdate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1764,7 +1764,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_ApproveWindowsUpdate(py::wrapper::Windows::Management::Update::WindowsUpdateAdministrator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1808,7 +1808,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_ApproveWindowsUpdateAction(py::wrapper::Windows::Management::Update::WindowsUpdateAdministrator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1852,7 +1852,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_CancelRestartRequest(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1895,7 +1895,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_GetRegisteredAdministrator(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1937,7 +1937,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_GetRegisteredAdministratorName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_GetUpdates(py::wrapper::Windows::Management::Update::WindowsUpdateAdministrator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2017,7 +2017,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_RegisterForAdministration(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2060,7 +2060,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_RequestRestart(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2102,7 +2102,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_RevokeWindowsUpdateActionApproval(py::wrapper::Windows::Management::Update::WindowsUpdateAdministrator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2146,7 +2146,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_RevokeWindowsUpdateApproval(py::wrapper::Windows::Management::Update::WindowsUpdateAdministrator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2189,7 +2189,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_StartAdministratorScan(py::wrapper::Windows::Management::Update::WindowsUpdateAdministrator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2230,7 +2230,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateAdministrator_UnregisterForAdministration(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2359,7 +2359,7 @@ namespace py::cpp::Windows::Management::Update
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3480,7 +3480,7 @@ namespace py::cpp::Windows::Management::Update
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3513,7 +3513,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_GetApplicableUpdates(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3553,7 +3553,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_GetMostRecentCompletedUpdates(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3595,7 +3595,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_GetMostRecentCompletedUpdatesAsync(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3637,7 +3637,7 @@ namespace py::cpp::Windows::Management::Update
 
     static PyObject* WindowsUpdateManager_StartScan(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4358,7 +4358,7 @@ namespace py::cpp::Windows::Management::Update
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 5)
         {
             try

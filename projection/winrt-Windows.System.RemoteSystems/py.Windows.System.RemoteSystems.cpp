@@ -196,7 +196,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -236,7 +236,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_CreateWatcherForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -278,7 +278,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_CreateWatcherWithFilters(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -320,7 +320,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_CreateWatcherWithFiltersForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -363,7 +363,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_FindByHostNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -405,7 +405,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_GetCapabilitySupportedAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -447,7 +447,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_IsAuthorizationKindEnabled(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystem_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1336,7 +1336,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemAppRegistration_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1376,7 +1376,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemAppRegistration_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1418,7 +1418,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemAppRegistration_SaveAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAppRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1598,7 +1598,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1725,7 +1725,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemConnectionInfo_TryCreateFromAppServiceConnection(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1874,7 +1874,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1907,7 +1907,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemConnectionRequest_CreateForApp(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1949,7 +1949,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemConnectionRequest_CreateFromConnectionToken(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1991,7 +1991,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemConnectionRequest_CreateFromConnectionTokenForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2205,7 +2205,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2386,7 +2386,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2904,7 +2904,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_Close(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2945,7 +2945,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_CreateParticipantWatcher(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2985,7 +2985,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3025,7 +3025,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSession_SendInvitationAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3425,7 +3425,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3474,7 +3474,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionController_CreateSessionAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3514,7 +3514,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionController_RemoveParticipantAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3907,7 +3907,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionInfo_JoinAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4189,7 +4189,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4444,7 +4444,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionJoinRequest_Accept(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4580,7 +4580,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionJoinRequestedEventArgs_GetDeferral(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4831,7 +4831,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -4882,7 +4882,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionMessageChannel_BroadcastValueSetAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4924,7 +4924,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionMessageChannel_SendValueSetAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4967,7 +4967,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionMessageChannel_SendValueSetToParticipantsAsync(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5165,7 +5165,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5329,7 +5329,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipant_GetHostNames(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipant* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5652,7 +5652,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_Start(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5693,7 +5693,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionParticipantWatcher_Stop(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6344,7 +6344,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_Start(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6385,7 +6385,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemSessionWatcher_Stop(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6714,7 +6714,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -6935,7 +6935,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_Start(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6976,7 +6976,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     static PyObject* RemoteSystemWatcher_Stop(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7533,7 +7533,7 @@ namespace py::cpp::Windows::System::RemoteSystems
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try

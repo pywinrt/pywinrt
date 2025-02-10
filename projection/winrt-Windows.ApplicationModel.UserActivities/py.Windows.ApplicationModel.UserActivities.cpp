@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_CreateSession(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -87,7 +87,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_SaveAsync(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -127,7 +127,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_ToJson(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -167,7 +167,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_ToJsonArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -209,7 +209,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_TryParseFromJson(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -251,7 +251,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_TryParseFromJsonArray(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -887,7 +887,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1206,7 +1206,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_DeleteActivityAsync(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1248,7 +1248,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_DeleteAllActivitiesAsync(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1288,7 +1288,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_DisableAutoSessionCreation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1329,7 +1329,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1369,7 +1369,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1411,7 +1411,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_GetOrCreateUserActivityAsync(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1453,7 +1453,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_GetRecentUserActivitiesAsync(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1495,7 +1495,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_GetSessionHistoryItemsForUserActivityAsync(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1538,7 +1538,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityChannel_TryGetForWebAccount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1673,7 +1673,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityContentInfo_FromJson(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1715,7 +1715,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityContentInfo_ToJson(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityContentInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1841,7 +1841,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityRequest_SetUserActivity(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1948,7 +1948,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityRequestManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2140,7 +2140,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityRequestedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2275,7 +2275,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivitySession_Close(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3075,7 +3075,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* IUserActivityContentInfo_ToJson(py::wrapper::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* AsyncCausalityTracer_TraceOperationCompletion(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -62,7 +62,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* AsyncCausalityTracer_TraceOperationCreation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -110,7 +110,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* AsyncCausalityTracer_TraceOperationRelation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -157,7 +157,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* AsyncCausalityTracer_TraceSynchronousWorkCompletion(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -202,7 +202,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* AsyncCausalityTracer_TraceSynchronousWorkStart(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -378,7 +378,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ErrorDetails_CreateFromHResultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -589,7 +589,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -622,7 +622,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* FileLoggingSession_AddLoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* FileLoggingSession_AddLoggingChannelWithLevel(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -709,7 +709,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* FileLoggingSession_Close(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -750,7 +750,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* FileLoggingSession_CloseAndSaveToFileAsync(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -790,7 +790,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* FileLoggingSession_RemoveLoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1109,7 +1109,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -1160,7 +1160,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_Close(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1201,7 +1201,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_IsEnabled(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1241,7 +1241,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_IsEnabledWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1283,7 +1283,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_IsEnabledWithLevelAndKeywords(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1326,7 +1326,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_LogEvent(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1369,7 +1369,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_LogEventWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1413,7 +1413,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_LogEventWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1458,7 +1458,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_LogEventWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1504,7 +1504,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_StartActivity(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1546,7 +1546,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_StartActivityWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1589,7 +1589,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_StartActivityWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1633,7 +1633,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_StartActivityWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1678,7 +1678,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_StopActivity(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1721,7 +1721,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_StopActivityWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1765,7 +1765,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_StopActivityWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1997,7 +1997,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2063,7 +2063,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_Close(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_IsEnabled(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2144,7 +2144,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_IsEnabledWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2186,7 +2186,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_IsEnabledWithLevelAndKeywords(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2229,7 +2229,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_LogEvent(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2272,7 +2272,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_LogEventWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2316,7 +2316,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_LogEventWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2361,7 +2361,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_LogEventWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2407,7 +2407,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_LogMessage(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2450,7 +2450,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_LogMessageWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2494,7 +2494,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_LogValuePair(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2538,7 +2538,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_LogValuePairWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2583,7 +2583,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_StartActivity(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2625,7 +2625,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_StartActivityWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2668,7 +2668,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_StartActivityWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2712,7 +2712,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_StartActivityWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3043,7 +3043,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3213,7 +3213,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3244,7 +3244,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddBoolean(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3288,7 +3288,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddBooleanArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3332,7 +3332,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddBooleanArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3377,7 +3377,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddBooleanArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3423,7 +3423,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddBooleanWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3468,7 +3468,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddBooleanWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3514,7 +3514,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddChar16(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3558,7 +3558,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddChar16Array(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3602,7 +3602,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddChar16ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3647,7 +3647,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddChar16ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3693,7 +3693,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddChar16WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3738,7 +3738,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddChar16WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3784,7 +3784,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDateTime(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3828,7 +3828,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDateTimeArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3872,7 +3872,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDateTimeArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3917,7 +3917,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDateTimeArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3963,7 +3963,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDateTimeWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4008,7 +4008,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDateTimeWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4054,7 +4054,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDouble(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4098,7 +4098,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDoubleArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4142,7 +4142,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDoubleArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4187,7 +4187,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDoubleArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4233,7 +4233,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDoubleWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4278,7 +4278,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddDoubleWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4324,7 +4324,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddEmpty(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4367,7 +4367,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddEmptyWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4411,7 +4411,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddEmptyWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4456,7 +4456,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddGuid(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4500,7 +4500,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddGuidArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4544,7 +4544,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddGuidArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4589,7 +4589,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddGuidArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4635,7 +4635,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddGuidWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4680,7 +4680,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddGuidWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4726,7 +4726,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt16(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4770,7 +4770,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt16Array(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4814,7 +4814,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt16ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4859,7 +4859,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt16ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4905,7 +4905,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt16WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -4950,7 +4950,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt16WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -4996,7 +4996,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt32(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5040,7 +5040,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt32Array(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5084,7 +5084,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt32ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5129,7 +5129,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt32ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5175,7 +5175,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt32WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5220,7 +5220,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt32WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5266,7 +5266,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt64(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5310,7 +5310,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt64Array(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5354,7 +5354,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt64ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5399,7 +5399,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt64ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5445,7 +5445,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt64WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5490,7 +5490,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddInt64WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5536,7 +5536,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddPoint(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5580,7 +5580,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddPointArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5624,7 +5624,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddPointArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5669,7 +5669,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddPointArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5715,7 +5715,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddPointWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5760,7 +5760,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddPointWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5806,7 +5806,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddRect(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5850,7 +5850,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddRectArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5894,7 +5894,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddRectArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5939,7 +5939,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddRectArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5985,7 +5985,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddRectWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6030,7 +6030,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddRectWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6076,7 +6076,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSingle(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6120,7 +6120,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSingleArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6164,7 +6164,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSingleArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6209,7 +6209,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSingleArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6255,7 +6255,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSingleWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6300,7 +6300,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSingleWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6346,7 +6346,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSize(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6390,7 +6390,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSizeArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6434,7 +6434,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSizeArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6479,7 +6479,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSizeArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6525,7 +6525,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSizeWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6570,7 +6570,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddSizeWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6616,7 +6616,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddString(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6660,7 +6660,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddStringArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6704,7 +6704,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddStringArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6749,7 +6749,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddStringArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6795,7 +6795,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddStringWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6840,7 +6840,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddStringWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -6886,7 +6886,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddTimeSpan(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6930,7 +6930,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddTimeSpanArray(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6974,7 +6974,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddTimeSpanArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7019,7 +7019,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddTimeSpanArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7065,7 +7065,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddTimeSpanWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7110,7 +7110,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddTimeSpanWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7156,7 +7156,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt16(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7200,7 +7200,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt16Array(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7244,7 +7244,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt16ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7289,7 +7289,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt16ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7335,7 +7335,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt16WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7380,7 +7380,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt16WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7426,7 +7426,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt32(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7470,7 +7470,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt32Array(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7514,7 +7514,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt32ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7559,7 +7559,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt32ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7605,7 +7605,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt32WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7650,7 +7650,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt32WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7696,7 +7696,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt64(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7740,7 +7740,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt64Array(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7784,7 +7784,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt64ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7829,7 +7829,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt64ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7875,7 +7875,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt64WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -7920,7 +7920,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt64WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -7966,7 +7966,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt8(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8010,7 +8010,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt8Array(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8054,7 +8054,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt8ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8099,7 +8099,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt8ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -8145,7 +8145,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt8WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8190,7 +8190,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_AddUInt8WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -8236,7 +8236,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_BeginStruct(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8279,7 +8279,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_BeginStructWithTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8323,7 +8323,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_Clear(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8364,7 +8364,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingFields_EndStruct(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8574,7 +8574,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9094,7 +9094,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -9127,7 +9127,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingSession_AddLoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9170,7 +9170,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingSession_AddLoggingChannelWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9214,7 +9214,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingSession_Close(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9255,7 +9255,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingSession_RemoveLoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9298,7 +9298,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingSession_SaveToFileAsync(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9456,7 +9456,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9487,7 +9487,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* RuntimeBrokerErrorSettings_GetErrorOptions(py::wrapper::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9527,7 +9527,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* RuntimeBrokerErrorSettings_SetErrorOptions(py::wrapper::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9760,7 +9760,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IErrorReportingSettings_GetErrorOptions(py::wrapper::Windows::Foundation::Diagnostics::IErrorReportingSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9800,7 +9800,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IErrorReportingSettings_SetErrorOptions(py::wrapper::Windows::Foundation::Diagnostics::IErrorReportingSettings* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10024,7 +10024,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IFileLoggingSession_AddLoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10067,7 +10067,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IFileLoggingSession_AddLoggingChannelWithLevel(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10111,7 +10111,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IFileLoggingSession_Close(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10152,7 +10152,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IFileLoggingSession_CloseAndSaveToFileAsync(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10192,7 +10192,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IFileLoggingSession_RemoveLoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10720,7 +10720,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_Close(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10761,7 +10761,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_LogMessage(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10804,7 +10804,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_LogMessageWithLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10848,7 +10848,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_LogValuePair(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -10892,7 +10892,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_LogValuePairWithLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11558,7 +11558,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingSession_AddLoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11601,7 +11601,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingSession_AddLoggingChannelWithLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -11645,7 +11645,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingSession_Close(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11686,7 +11686,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingSession_RemoveLoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11729,7 +11729,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingSession_SaveToFileAsync(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12146,7 +12146,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_IsEnabled(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12186,7 +12186,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_IsEnabledWithLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12228,7 +12228,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_IsEnabledWithLevelAndKeywords(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12271,7 +12271,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_LogEvent(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12314,7 +12314,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_LogEventWithFields(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12358,7 +12358,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_LogEventWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -12403,7 +12403,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_LogEventWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -12449,7 +12449,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_StartActivity(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12491,7 +12491,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_StartActivityWithFields(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -12534,7 +12534,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_StartActivityWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -12578,7 +12578,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingTarget_StartActivityWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {

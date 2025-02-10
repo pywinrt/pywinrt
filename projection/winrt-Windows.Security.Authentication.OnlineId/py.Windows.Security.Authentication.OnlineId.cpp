@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdAuthenticator_AuthenticateUserAsync(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -87,7 +87,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdAuthenticator_AuthenticateUserAsyncAdvanced(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -130,7 +130,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdAuthenticator_SignOutUserAsync(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -515,7 +515,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -681,7 +681,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemAuthenticator_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -812,7 +812,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemAuthenticatorForUser_GetTicketAsync(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1300,7 +1300,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* SignOutUserOperation_Cancel(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1341,7 +1341,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* SignOutUserOperation_Close(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1382,7 +1382,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* SignOutUserOperation_GetResults(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1658,7 +1658,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserAuthenticationOperation_Cancel(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1699,7 +1699,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserAuthenticationOperation_Close(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1740,7 +1740,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserAuthenticationOperation_GetResults(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

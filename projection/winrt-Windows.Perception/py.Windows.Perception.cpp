@@ -171,7 +171,7 @@ namespace py::cpp::Windows::Perception
 
     static PyObject* PerceptionTimestampHelper_FromHistoricalTargetTime(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Perception
 
     static PyObject* PerceptionTimestampHelper_FromSystemRelativeTargetTime(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

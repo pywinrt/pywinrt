@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* ActivatedDeferral_Complete(py::wrapper::Windows::UI::WebUI::ActivatedDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -128,7 +128,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* ActivatedOperation_GetDeferral(py::wrapper::Windows::UI::WebUI::ActivatedOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -326,7 +326,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* EnteredBackgroundEventArgs_GetDeferral(py::wrapper::Windows::UI::WebUI::EnteredBackgroundEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -430,7 +430,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_Close(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -471,7 +471,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* HtmlPrintDocumentSource_TrySetPageRange(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1194,7 +1194,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* LeavingBackgroundEventArgs_GetDeferral(py::wrapper::Windows::UI::WebUI::LeavingBackgroundEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1298,7 +1298,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* NewWebUIViewCreatedEventArgs_GetDeferral(py::wrapper::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1495,7 +1495,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* SuspendingDeferral_Complete(py::wrapper::Windows::UI::WebUI::SuspendingDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1694,7 +1694,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* SuspendingOperation_GetDeferral(py::wrapper::Windows::UI::WebUI::SuspendingOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1821,7 +1821,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_EnablePrelaunch(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1864,7 +1864,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_RequestRestartAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1906,7 +1906,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIApplication_RequestRestartForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4118,7 +4118,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIBackgroundTaskInstanceRuntimeClass_GetDeferral(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11397,7 +11397,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUINavigatedDeferral_Complete(py::wrapper::Windows::UI::WebUI::WebUINavigatedDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11596,7 +11596,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUINavigatedOperation_GetDeferral(py::wrapper::Windows::UI::WebUI::WebUINavigatedOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -14843,7 +14843,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_AddInitializeScript(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14886,7 +14886,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_BuildLocalStreamUri(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14929,7 +14929,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_CapturePreviewToStreamAsync(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -14971,7 +14971,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_CaptureSelectedContentToDataPackageAsync(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15011,7 +15011,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15051,7 +15051,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_CreateWithUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15093,7 +15093,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_GetDeferredPermissionRequestById(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15143,7 +15143,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_GoBack(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15184,7 +15184,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_GoForward(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15225,7 +15225,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_InvokeScriptAsync(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15268,7 +15268,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_Navigate(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15311,7 +15311,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_NavigateToLocalStreamUri(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -15355,7 +15355,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_NavigateToString(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15398,7 +15398,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_NavigateWithHttpRequestMessage(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -15441,7 +15441,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_Refresh(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15482,7 +15482,7 @@ namespace py::cpp::Windows::UI::WebUI
 
     static PyObject* WebUIView_Stop(py::wrapper::Windows::UI::WebUI::WebUIView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

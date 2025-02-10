@@ -685,7 +685,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationFinder_FindLocalLocationsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -1217,7 +1217,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* PlaceInfoHelper_CreateFromLocalLocation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

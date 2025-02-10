@@ -241,7 +241,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyObject* EnterpriseKeyCredentialRegistrationManager_GetRegistrationsAsync(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Devices::I2c
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -320,7 +320,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cController_GetControllersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cController_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -402,7 +402,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cController_GetDevice(py::wrapper::Windows::Devices::I2c::I2cController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -531,7 +531,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_Close(py::wrapper::Windows::Devices::I2c::I2cDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -572,7 +572,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -615,7 +615,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -655,7 +655,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_GetDeviceSelectorFromFriendlyName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -697,7 +697,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_Read(py::wrapper::Windows::Devices::I2c::I2cDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -740,7 +740,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_ReadPartial(py::wrapper::Windows::Devices::I2c::I2cDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -782,7 +782,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_Write(py::wrapper::Windows::Devices::I2c::I2cDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -825,7 +825,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_WritePartial(py::wrapper::Windows::Devices::I2c::I2cDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -867,7 +867,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_WriteRead(py::wrapper::Windows::Devices::I2c::I2cDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -911,7 +911,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* I2cDevice_WriteReadPartial(py::wrapper::Windows::Devices::I2c::I2cDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1135,7 +1135,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* II2cDeviceStatics_FromIdAsync(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1178,7 +1178,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* II2cDeviceStatics_GetDeviceSelector(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1218,7 +1218,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     static PyObject* II2cDeviceStatics_GetDeviceSelectorFromFriendlyName(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1498,7 +1498,7 @@ namespace py::cpp::Windows::Devices::I2c
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::I2c::I2cTransferResult>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

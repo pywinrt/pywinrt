@@ -342,7 +342,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -663,7 +663,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -725,7 +725,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetDefaultResourceFilePath(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -765,7 +765,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetString(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -807,7 +807,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceLoader_GetStringForUri(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceLoader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -927,7 +927,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -973,7 +973,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceManager_CreateResourceContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1175,7 +1175,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_GetSubtree(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1217,7 +1217,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_GetValue(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1259,7 +1259,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_GetValueByIndex(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1301,7 +1301,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_GetValueByIndexWithContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1344,7 +1344,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_GetValueWithContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1387,7 +1387,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_TryGetSubtree(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1429,7 +1429,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_TryGetValue(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1471,7 +1471,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceMap_TryGetValueWithContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1616,7 +1616,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* ResourceNotFoundEventArgs_SetResolvedCandidate(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceNotFoundEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1959,7 +1959,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
 
     static PyObject* IResourceManager_CreateResourceContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::IResourceManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

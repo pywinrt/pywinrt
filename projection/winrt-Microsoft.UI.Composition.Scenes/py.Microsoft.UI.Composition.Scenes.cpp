@@ -356,7 +356,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_Append(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -399,7 +399,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_Clear(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -440,7 +440,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_First(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -480,7 +480,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_GetAt(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -522,7 +522,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_GetMany(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -565,7 +565,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_GetView(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -605,7 +605,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_IndexOf(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -661,7 +661,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_InsertAt(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -705,7 +705,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_RemoveAt(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -748,7 +748,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -789,7 +789,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_ReplaceAll(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -832,7 +832,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_SetAt(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1299,7 +1299,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMesh_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1341,7 +1341,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMesh_FillMeshAttribute(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMesh* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1573,7 +1573,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshMaterialAttributeMap_Clear(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1614,7 +1614,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshMaterialAttributeMap_First(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1654,7 +1654,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshMaterialAttributeMap_GetView(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1694,7 +1694,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshMaterialAttributeMap_HasKey(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1736,7 +1736,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshMaterialAttributeMap_Insert(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1779,7 +1779,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshMaterialAttributeMap_Lookup(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1821,7 +1821,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshMaterialAttributeMap_Remove(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2102,7 +2102,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshRendererComponent_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2400,7 +2400,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMetallicRoughnessMaterial_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3360,7 +3360,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNode_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3402,7 +3402,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNode_FindFirstComponentOfType(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNode* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3654,7 +3654,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_Append(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3697,7 +3697,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_Clear(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3738,7 +3738,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_First(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3778,7 +3778,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_GetAt(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3820,7 +3820,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_GetMany(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3863,7 +3863,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_GetView(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3903,7 +3903,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_IndexOf(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3959,7 +3959,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_InsertAt(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4003,7 +4003,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_RemoveAt(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4046,7 +4046,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_RemoveAtEnd(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4087,7 +4087,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_ReplaceAll(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4130,7 +4130,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_SetAt(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5311,7 +5311,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneSurfaceMaterialInput_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5718,7 +5718,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneVisual_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

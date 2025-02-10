@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Devices::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -130,7 +130,7 @@ namespace py::cpp::Windows::Devices::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseDevice_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -705,7 +705,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_IsSupported(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1099,7 +1099,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDevice_GetFromPointerId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1288,7 +1288,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDockListener_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1328,7 +1328,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDockListener_IsSupported(py::wrapper::Windows::Devices::Input::PenDockListener* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1970,7 +1970,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_GetPointerDevice(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2012,7 +2012,7 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_GetPointerDevices(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2346,7 +2346,7 @@ namespace py::cpp::Windows::Devices::Input
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2512,7 +2512,7 @@ namespace py::cpp::Windows::Devices::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Input::MouseDelta>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -2751,7 +2751,7 @@ namespace py::cpp::Windows::Devices::Input
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Input::PointerDeviceUsage>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

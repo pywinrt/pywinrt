@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Storage::Compression
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* Compressor_Close(py::wrapper::Windows::Storage::Compression::Compressor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* Compressor_DetachStream(py::wrapper::Windows::Storage::Compression::Compressor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* Compressor_FinishAsync(py::wrapper::Windows::Storage::Compression::Compressor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* Compressor_FlushAsync(py::wrapper::Windows::Storage::Compression::Compressor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -225,7 +225,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* Compressor_WriteAsync(py::wrapper::Windows::Storage::Compression::Compressor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::Storage::Compression
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -384,7 +384,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* Decompressor_Close(py::wrapper::Windows::Storage::Compression::Decompressor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -425,7 +425,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* Decompressor_DetachStream(py::wrapper::Windows::Storage::Compression::Decompressor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -465,7 +465,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyObject* Decompressor_ReadAsync(py::wrapper::Windows::Storage::Compression::Decompressor* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {

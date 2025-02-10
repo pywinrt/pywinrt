@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_Format(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -87,7 +87,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_FormatPartialString(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -129,7 +129,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_FormatString(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -171,7 +171,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_FormatStringWithLeftToRightMarkers(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_FormatWithOutputFormat(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -256,7 +256,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_GetCountryCodeForRegion(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -298,7 +298,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_GetNationalDirectDialingPrefixForRegion(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -341,7 +341,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_TryCreate(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -391,7 +391,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberFormatter_WrapWithLeftToRightMarkers(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -517,7 +517,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -550,7 +550,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_CheckNumberMatch(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -592,7 +592,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_GetGeographicRegionCode(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -632,7 +632,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_GetLengthOfGeographicalAreaCode(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -672,7 +672,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_GetLengthOfNationalDestinationCode(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -712,7 +712,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_GetNationalSignificantNumber(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -752,7 +752,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_PredictNumberKind(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -792,7 +792,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_ToString(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -832,7 +832,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_TryParse(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -888,7 +888,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_TryParseWithRegion(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

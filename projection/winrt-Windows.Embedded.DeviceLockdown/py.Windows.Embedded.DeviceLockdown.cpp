@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
     static PyObject* DeviceLockdownProfile_ApplyLockdownProfileAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -57,7 +57,7 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
     static PyObject* DeviceLockdownProfile_GetCurrentLockdownProfile(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
     static PyObject* DeviceLockdownProfile_GetLockdownProfileInformation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -139,7 +139,7 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
 
     static PyObject* DeviceLockdownProfile_GetSupportedLockdownProfiles(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

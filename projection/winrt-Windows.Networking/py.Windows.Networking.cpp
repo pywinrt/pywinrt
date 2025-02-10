@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Networking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -384,7 +384,7 @@ namespace py::cpp::Windows::Networking
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -417,7 +417,7 @@ namespace py::cpp::Windows::Networking
 
     static PyObject* HostName_Compare(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -460,7 +460,7 @@ namespace py::cpp::Windows::Networking
 
     static PyObject* HostName_IsEqual(py::wrapper::Windows::Networking::HostName* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -502,7 +502,7 @@ namespace py::cpp::Windows::Networking
 
     static PyObject* HostName_ToString(py::wrapper::Windows::Networking::HostName* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

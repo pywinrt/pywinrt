@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* EyesPose_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* EyesPose_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshObserver_GetTriangleIndices(py::wrapper::Windows::Perception::People::HandMeshObserver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -325,7 +325,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshObserver_GetVertexStateForPose(py::wrapper::Windows::Perception::People::HandMeshObserver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -618,7 +618,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandMeshVertexState_GetVertices(py::wrapper::Windows::Perception::People::HandMeshVertexState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -787,7 +787,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandPose_GetRelativeJoint(py::wrapper::Windows::Perception::People::HandPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -830,7 +830,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandPose_GetRelativeJoints(py::wrapper::Windows::Perception::People::HandPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -875,7 +875,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandPose_TryGetJoint(py::wrapper::Windows::Perception::People::HandPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -932,7 +932,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyObject* HandPose_TryGetJoints(py::wrapper::Windows::Perception::People::HandPose* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1209,7 +1209,7 @@ namespace py::cpp::Windows::Perception::People
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::People::HandMeshVertex>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -1444,7 +1444,7 @@ namespace py::cpp::Windows::Perception::People
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::People::JointPose>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

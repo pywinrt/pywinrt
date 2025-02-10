@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchor_TryCreateRelativeTo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchor_TryCreateWithPositionAndOrientationRelativeTo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -109,7 +109,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchor_TryCreateWithPositionRelativeTo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -555,7 +555,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorExporter_GetAnchorExportSufficiencyAsync(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExporter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -598,7 +598,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorExporter_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -638,7 +638,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorExporter_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -678,7 +678,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorExporter_TryExportAnchorAsync(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExporter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -802,7 +802,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -994,7 +994,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorStore_Clear(py::wrapper::Windows::Perception::Spatial::SpatialAnchorStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1035,7 +1035,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorStore_GetAllSavedAnchors(py::wrapper::Windows::Perception::Spatial::SpatialAnchorStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1075,7 +1075,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorStore_Remove(py::wrapper::Windows::Perception::Spatial::SpatialAnchorStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1118,7 +1118,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorStore_TrySave(py::wrapper::Windows::Perception::Spatial::SpatialAnchorStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1220,7 +1220,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorTransferManager_RequestAccessAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1260,7 +1260,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorTransferManager_TryExportAnchorsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1303,7 +1303,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialAnchorTransferManager_TryImportAnchorsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1405,7 +1405,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialBoundingVolume_FromBox(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1448,7 +1448,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialBoundingVolume_FromFrustum(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1491,7 +1491,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialBoundingVolume_FromOrientedBox(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1534,7 +1534,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialBoundingVolume_FromSphere(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1665,7 +1665,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialCoordinateSystem_TryGetTransformTo(py::wrapper::Windows::Perception::Spatial::SpatialCoordinateSystem* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1762,7 +1762,7 @@ namespace py::cpp::Windows::Perception::Spatial
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2155,7 +2155,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityStore_CreateEntityWatcher(py::wrapper::Windows::Perception::Spatial::SpatialEntityStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2195,7 +2195,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityStore_RemoveAsync(py::wrapper::Windows::Perception::Spatial::SpatialEntityStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2237,7 +2237,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityStore_SaveAsync(py::wrapper::Windows::Perception::Spatial::SpatialEntityStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2279,7 +2279,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityStore_TryGetForRemoteSystemSession(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2534,7 +2534,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_Start(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2575,7 +2575,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialEntityWatcher_Stop(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3291,7 +3291,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeading(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3331,7 +3331,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPosition(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3373,7 +3373,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPositionAndOrientation(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3416,7 +3416,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_CreateAttachedFrameOfReferenceAtCurrentHeadingWithPositionAndOrientationAndRelativeHeading(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3460,7 +3460,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocation(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3500,7 +3500,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPosition(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3542,7 +3542,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPositionAndOrientation(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3585,7 +3585,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_CreateStationaryFrameOfReferenceAtCurrentLocationWithPositionAndOrientationAndRelativeHeading(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3629,7 +3629,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3669,7 +3669,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocator_TryLocateAtTimestamp(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3971,7 +3971,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocatorAttachedFrameOfReference_AdjustHeading(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4014,7 +4014,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocatorAttachedFrameOfReference_GetStationaryCoordinateSystemAtTimestamp(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4056,7 +4056,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialLocatorAttachedFrameOfReference_TryGetRelativeHeadingAtTimestamp(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4437,7 +4437,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_GetCoordinateSystemAtCurrentLocation(py::wrapper::Windows::Perception::Spatial::SpatialStageFrameOfReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4479,7 +4479,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_RequestNewStageAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4519,7 +4519,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyObject* SpatialStageFrameOfReference_TryGetMovementBounds(py::wrapper::Windows::Perception::Spatial::SpatialStageFrameOfReference* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4943,7 +4943,7 @@ namespace py::cpp::Windows::Perception::Spatial
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingBox>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -5180,7 +5180,7 @@ namespace py::cpp::Windows::Perception::Spatial
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -5538,7 +5538,7 @@ namespace py::cpp::Windows::Perception::Spatial
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -5802,7 +5802,7 @@ namespace py::cpp::Windows::Perception::Spatial
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -6035,7 +6035,7 @@ namespace py::cpp::Windows::Perception::Spatial
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialRay>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

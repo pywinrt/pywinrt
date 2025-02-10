@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapBuffer_Close(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -64,7 +64,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapBuffer_CreateReference(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapBuffer_GetPlaneCount(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -144,7 +144,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapBuffer_GetPlaneDescription(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -465,7 +465,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -507,7 +507,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_CreateWithIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -550,7 +550,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetDecoderInformationEnumerator(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -590,7 +590,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetFrameAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -632,7 +632,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetPixelDataAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -672,7 +672,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetPixelDataTransformedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -718,7 +718,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetPreviewAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -758,7 +758,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetSoftwareBitmapAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -798,7 +798,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetSoftwareBitmapConvertedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -841,7 +841,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetSoftwareBitmapTransformedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -887,7 +887,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_GetThumbnailAsync(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1673,7 +1673,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1716,7 +1716,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_CreateForInPlacePropertyEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1758,7 +1758,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_CreateForTranscodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1801,7 +1801,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_CreateWithEncodingOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1845,7 +1845,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_FlushAsync(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1885,7 +1885,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_GetEncoderInformationEnumerator(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1925,7 +1925,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_GoToNextFrameAsync(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1965,7 +1965,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_GoToNextFrameWithEncodingOptionsAsync(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2007,7 +2007,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_SetPixelData(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -2056,7 +2056,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_SetSoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2744,7 +2744,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_GetPixelDataAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2784,7 +2784,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_GetPixelDataTransformedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2830,7 +2830,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_GetSoftwareBitmapAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2870,7 +2870,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_GetSoftwareBitmapConvertedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2913,7 +2913,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_GetSoftwareBitmapTransformedAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2959,7 +2959,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_GetThumbnailAsync(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3347,7 +3347,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapProperties_GetPropertiesAsync(py::wrapper::Windows::Graphics::Imaging::BitmapProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3389,7 +3389,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapProperties_SetPropertiesAsync(py::wrapper::Windows::Graphics::Imaging::BitmapProperties* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3496,7 +3496,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertiesView_GetPropertiesAsync(py::wrapper::Windows::Graphics::Imaging::BitmapPropertiesView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3593,7 +3593,7 @@ namespace py::cpp::Windows::Graphics::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3624,7 +3624,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertySet_Clear(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3665,7 +3665,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertySet_First(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3705,7 +3705,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertySet_GetView(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3745,7 +3745,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertySet_HasKey(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3787,7 +3787,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertySet_Insert(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3830,7 +3830,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertySet_Lookup(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3872,7 +3872,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertySet_Remove(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4144,7 +4144,7 @@ namespace py::cpp::Windows::Graphics::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4649,7 +4649,7 @@ namespace py::cpp::Windows::Graphics::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -4808,7 +4808,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_CloneStream(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4848,7 +4848,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_Close(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4889,7 +4889,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_FlushAsync(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4929,7 +4929,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_GetInputStreamAt(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4971,7 +4971,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_GetOutputStreamAt(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5013,7 +5013,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_ReadAsync(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5057,7 +5057,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_Seek(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5100,7 +5100,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_WriteAsync(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5432,7 +5432,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* PixelDataProvider_DetachPixelData(py::wrapper::Windows::Graphics::Imaging::PixelDataProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5527,7 +5527,7 @@ namespace py::cpp::Windows::Graphics::Imaging
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 3)
         {
             try
@@ -5580,7 +5580,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_Close(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5621,7 +5621,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_Convert(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5664,7 +5664,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_ConvertWithAlpha(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5708,7 +5708,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_Copy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5750,7 +5750,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_CopyFromBuffer(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5793,7 +5793,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_CopyTo(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5836,7 +5836,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_CopyToBuffer(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5879,7 +5879,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_CreateCopyFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -5924,7 +5924,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_CreateCopyFromSurfaceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5966,7 +5966,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_CreateCopyWithAlphaFromBuffer(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -6012,7 +6012,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_CreateCopyWithAlphaFromSurfaceAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6055,7 +6055,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_GetReadOnlyView(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6095,7 +6095,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_LockBuffer(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6554,7 +6554,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_GetPixelDataAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6594,7 +6594,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_GetPixelDataTransformedAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -6640,7 +6640,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_GetThumbnailAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7379,7 +7379,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_GetPixelDataAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7419,7 +7419,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_GetPixelDataTransformedAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -7465,7 +7465,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7505,7 +7505,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapConvertedAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7548,7 +7548,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_GetSoftwareBitmapTransformedAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -7594,7 +7594,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_GetThumbnailAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8468,7 +8468,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapPropertiesView_GetPropertiesAsync(py::wrapper::Windows::Graphics::Imaging::IBitmapPropertiesView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8678,7 +8678,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapBounds>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -8975,7 +8975,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -9270,7 +9270,7 @@ namespace py::cpp::Windows::Graphics::Imaging
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapSize>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

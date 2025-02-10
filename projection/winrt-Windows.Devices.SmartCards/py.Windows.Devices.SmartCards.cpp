@@ -322,7 +322,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCard_ConnectAsync(py::wrapper::Windows::Devices::SmartCards::SmartCard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCard_GetAnswerToResetAsync(py::wrapper::Windows::Devices::SmartCards::SmartCard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -402,7 +402,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCard_GetStatusAsync(py::wrapper::Windows::Devices::SmartCards::SmartCard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -530,7 +530,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 4)
         {
             try
@@ -1246,7 +1246,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardAppletIdGroupRegistration_RequestActivationPolicyChangeAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1288,7 +1288,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardAppletIdGroupRegistration_SetAutomaticResponseApdusAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1330,7 +1330,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardAppletIdGroupRegistration_SetPropertiesAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1553,7 +1553,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -2210,7 +2210,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardChallengeContext_ChangeAdministrativeKeyAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2253,7 +2253,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardChallengeContext_Close(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2294,7 +2294,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardChallengeContext_ProvisionAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2337,7 +2337,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardChallengeContext_ProvisionAsyncWithNewCardId(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2381,7 +2381,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardChallengeContext_VerifyResponseAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2547,7 +2547,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardConnection_Close(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2588,7 +2588,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardConnection_TransmitAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2720,7 +2720,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_CreateCryptogramMaterialStorageKeyAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -2765,7 +2765,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_DeleteCryptogramMaterialPackageAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2807,7 +2807,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_DeleteCryptogramMaterialStorageKeyAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2849,7 +2849,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_GetAllCryptogramMaterialCharacteristicsAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2892,7 +2892,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_GetAllCryptogramMaterialPackageCharacteristicsAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2932,7 +2932,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_GetAllCryptogramMaterialPackageCharacteristicsWithStorageKeyAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2974,7 +2974,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_GetAllCryptogramStorageKeyCharacteristicsAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3014,7 +3014,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_GetSmartCardCryptogramGeneratorAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3054,7 +3054,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_ImportCryptogramMaterialPackageAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -3099,7 +3099,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3139,7 +3139,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_RequestCryptogramMaterialStorageKeyInfoAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3183,7 +3183,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_RequestUnlockCryptogramMaterialForUseAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3225,7 +3225,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_TryProvePossessionOfCryptogramMaterialPackageAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -3271,7 +3271,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardCryptogramGenerator_ValidateRequestApduAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3559,7 +3559,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3706,7 +3706,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3853,7 +3853,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4000,7 +4000,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4333,7 +4333,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4667,7 +4667,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5382,7 +5382,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5911,7 +5911,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulator_GetAppletIdGroupRegistrationsAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5951,7 +5951,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulator_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5991,7 +5991,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulator_IsHostCardEmulationSupported(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6031,7 +6031,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulator_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6071,7 +6071,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulator_RegisterAppletIdGroupAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6113,7 +6113,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulator_Start(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6154,7 +6154,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulator_UnregisterAppletIdGroupAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6483,7 +6483,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulatorApduReceivedEventArgs_TryRespondAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6525,7 +6525,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulatorApduReceivedEventArgs_TryRespondWithCryptogramsAndStateAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -6569,7 +6569,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulatorApduReceivedEventArgs_TryRespondWithCryptogramsAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6612,7 +6612,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardEmulatorApduReceivedEventArgs_TryRespondWithStateAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -7087,7 +7087,7 @@ namespace py::cpp::Windows::Devices::SmartCards
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7601,7 +7601,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardPinResetDeferral_Complete(py::wrapper::Windows::Devices::SmartCards::SmartCardPinResetDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7706,7 +7706,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardPinResetRequest_GetDeferral(py::wrapper::Windows::Devices::SmartCards::SmartCardPinResetRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7746,7 +7746,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardPinResetRequest_SetResponse(py::wrapper::Windows::Devices::SmartCards::SmartCardPinResetRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7916,7 +7916,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_FromSmartCardAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7958,7 +7958,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_GetAuthorityKeyContainerNameAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardProvisioning* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7998,7 +7998,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_GetChallengeContextAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardProvisioning* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8038,7 +8038,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_GetIdAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardProvisioning* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8078,7 +8078,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_GetNameAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardProvisioning* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8118,7 +8118,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_RequestAttestedVirtualSmartCardCreationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8162,7 +8162,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_RequestAttestedVirtualSmartCardCreationAsyncWithCardId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -8207,7 +8207,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_RequestPinChangeAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardProvisioning* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8247,7 +8247,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_RequestPinResetAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardProvisioning* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8289,7 +8289,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_RequestVirtualSmartCardCreationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8333,7 +8333,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_RequestVirtualSmartCardCreationAsyncWithCardId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -8378,7 +8378,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardProvisioning_RequestVirtualSmartCardDeletionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8547,7 +8547,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardReader_FindAllCardsAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8587,7 +8587,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardReader_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8629,7 +8629,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardReader_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8669,7 +8669,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardReader_GetDeviceSelectorWithKind(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8711,7 +8711,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardReader_GetStatusAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9067,7 +9067,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardTriggerDetails_TryLaunchCurrentAppAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9109,7 +9109,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyObject* SmartCardTriggerDetails_TryLaunchCurrentAppWithBehaviorAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardTriggerDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

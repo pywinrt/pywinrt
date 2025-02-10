@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragDropManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -494,7 +494,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragOperation_SetDragUIContentFromSoftwareBitmap(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -537,7 +537,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragOperation_SetDragUIContentFromSoftwareBitmapWithAnchorPoint(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -581,7 +581,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragOperation_SetPointerId(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -624,7 +624,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragOperation_StartAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -902,7 +902,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragUIOverride_Clear(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -943,7 +943,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragUIOverride_SetContentFromSoftwareBitmap(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -986,7 +986,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragUIOverride_SetContentFromSoftwareBitmapWithAnchorPoint(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1376,7 +1376,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDropOperationTargetRequestedEventArgs_SetTarget(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1483,7 +1483,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* ICoreDropOperationTarget_DropAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1525,7 +1525,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* ICoreDropOperationTarget_EnterAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1568,7 +1568,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* ICoreDropOperationTarget_LeaveAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1610,7 +1610,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* ICoreDropOperationTarget_OverAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

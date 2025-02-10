@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Popups
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyObject* MessageDialog_ShowAsync(py::wrapper::Windows::UI::Popups::MessageDialog* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -539,7 +539,7 @@ namespace py::cpp::Windows::UI::Popups
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -570,7 +570,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyObject* PopupMenu_ShowAsync(py::wrapper::Windows::UI::Popups::PopupMenu* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -612,7 +612,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyObject* PopupMenu_ShowAsyncWithRect(py::wrapper::Windows::UI::Popups::PopupMenu* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -654,7 +654,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyObject* PopupMenu_ShowAsyncWithRectAndPlacement(py::wrapper::Windows::UI::Popups::PopupMenu* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::UI::Popups
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1128,7 +1128,7 @@ namespace py::cpp::Windows::UI::Popups
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

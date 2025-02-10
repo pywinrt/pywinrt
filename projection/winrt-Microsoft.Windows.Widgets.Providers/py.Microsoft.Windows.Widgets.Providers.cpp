@@ -1084,7 +1084,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetManager_DeleteWidget(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1127,7 +1127,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1167,7 +1167,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetManager_GetWidgetIds(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1207,7 +1207,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetManager_GetWidgetInfo(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1249,7 +1249,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetManager_GetWidgetInfos(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1289,7 +1289,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* WidgetManager_UpdateWidget(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1413,7 +1413,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1802,7 +1802,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetManager_DeleteWidget(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1845,7 +1845,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetManager_GetWidgetIds(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1885,7 +1885,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetManager_GetWidgetInfo(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1927,7 +1927,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetManager_GetWidgetInfos(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1967,7 +1967,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetManager_UpdateWidget(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2284,7 +2284,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProvider_Activate(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2327,7 +2327,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProvider_CreateWidget(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2370,7 +2370,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProvider_Deactivate(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2413,7 +2413,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProvider_DeleteWidget(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2457,7 +2457,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProvider_OnActionInvoked(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2500,7 +2500,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProvider_OnWidgetContextChanged(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2864,7 +2864,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProvider2_OnCustomizationRequested(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider2* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3061,7 +3061,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProviderAnalytics_OnAnalyticsInfoReported(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3258,7 +3258,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     static PyObject* IWidgetProviderErrors_OnErrorInfoReported(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

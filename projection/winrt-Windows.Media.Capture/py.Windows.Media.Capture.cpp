@@ -210,7 +210,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedPhotoCapture_CaptureAsync(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -250,7 +250,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedPhotoCapture_CaptureWithContextAsync(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -292,7 +292,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AdvancedPhotoCapture_FinishAsync(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundService_TerminateBroadcast(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastBackgroundServiceStreamInfo_ReportProblemWithStream(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3644,7 +3644,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastManager_ApplyGlobalSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3687,7 +3687,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastManager_ApplyProviderSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3730,7 +3730,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastManager_GetGlobalSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3770,7 +3770,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastManager_GetProviderSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4183,7 +4183,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugInManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4223,7 +4223,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPlugInManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4577,7 +4577,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreview_StopPreview(py::wrapper::Windows::Media::Capture::AppBroadcastPreview* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4967,7 +4967,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastPreviewStreamReader_TryGetNextVideoFrame(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6158,7 +6158,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_EnterBroadcastModeAsync(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6200,7 +6200,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_ExitBroadcastMode(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6243,7 +6243,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_PauseBroadcast(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6284,7 +6284,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_ResumeBroadcast(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6325,7 +6325,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_StartBroadcast(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6366,7 +6366,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastServices_StartPreview(py::wrapper::Windows::Media::Capture::AppBroadcastServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6905,7 +6905,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_RestartCameraCapture(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6946,7 +6946,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastState_RestartMicrophoneCapture(py::wrapper::Windows::Media::Capture::AppBroadcastState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8480,7 +8480,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_TryGetNextAudioFrame(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8520,7 +8520,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppBroadcastStreamReader_TryGetNextVideoFrame(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9632,7 +9632,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCapture_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9672,7 +9672,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCapture_SetAllowedAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11292,7 +11292,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureManager_ApplySettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11335,7 +11335,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureManager_GetCurrentSettings(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11425,7 +11425,7 @@ namespace py::cpp::Windows::Media::Capture
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -11456,7 +11456,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_AddDoubleEvent(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11501,7 +11501,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_AddInt32Event(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11546,7 +11546,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_AddStringEvent(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11591,7 +11591,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_Close(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11632,7 +11632,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_StartDoubleState(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11677,7 +11677,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_StartInt32State(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11722,7 +11722,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_StartStringState(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -11767,7 +11767,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_StopAllStates(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11808,7 +11808,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureMetadataWriter_StopState(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12171,7 +12171,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureRecordOperation_StopRecording(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12757,7 +12757,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureServices_Record(py::wrapper::Windows::Media::Capture::AppCaptureServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12797,7 +12797,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureServices_RecordTimeSpan(py::wrapper::Windows::Media::Capture::AppCaptureServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -14826,7 +14826,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* AppCaptureState_RestartMicrophoneCapture(py::wrapper::Windows::Media::Capture::AppCaptureState* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -15250,7 +15250,7 @@ namespace py::cpp::Windows::Media::Capture
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -15281,7 +15281,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraCaptureUI_CaptureFileAsync(py::wrapper::Windows::Media::Capture::CameraCaptureUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16197,7 +16197,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CameraOptionsUI_Show(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16298,7 +16298,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_CloneStream(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16338,7 +16338,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_Close(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16379,7 +16379,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_FlushAsync(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -16419,7 +16419,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_GetInputStreamAt(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16461,7 +16461,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_GetOutputStreamAt(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16503,7 +16503,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_ReadAsync(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -16547,7 +16547,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_Seek(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -16590,7 +16590,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* CapturedFrame_WriteAsync(py::wrapper::Windows::Media::Capture::CapturedFrame* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -17699,7 +17699,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_DisableCapture(py::wrapper::Windows::Media::Capture::GameBarServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -17740,7 +17740,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServices_EnableCapture(py::wrapper::Windows::Media::Capture::GameBarServices* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18193,7 +18193,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* GameBarServicesManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18666,7 +18666,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagMediaRecording_FinishAsync(py::wrapper::Windows::Media::Capture::LowLagMediaRecording* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18706,7 +18706,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagMediaRecording_PauseAsync(py::wrapper::Windows::Media::Capture::LowLagMediaRecording* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18748,7 +18748,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagMediaRecording_PauseWithResultAsync(py::wrapper::Windows::Media::Capture::LowLagMediaRecording* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -18790,7 +18790,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagMediaRecording_ResumeAsync(py::wrapper::Windows::Media::Capture::LowLagMediaRecording* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18830,7 +18830,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagMediaRecording_StartAsync(py::wrapper::Windows::Media::Capture::LowLagMediaRecording* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18870,7 +18870,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagMediaRecording_StopAsync(py::wrapper::Windows::Media::Capture::LowLagMediaRecording* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -18910,7 +18910,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagMediaRecording_StopWithResultAsync(py::wrapper::Windows::Media::Capture::LowLagMediaRecording* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19020,7 +19020,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagPhotoCapture_CaptureAsync(py::wrapper::Windows::Media::Capture::LowLagPhotoCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19060,7 +19060,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagPhotoCapture_FinishAsync(py::wrapper::Windows::Media::Capture::LowLagPhotoCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19165,7 +19165,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagPhotoSequenceCapture_FinishAsync(py::wrapper::Windows::Media::Capture::LowLagPhotoSequenceCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19205,7 +19205,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagPhotoSequenceCapture_StartAsync(py::wrapper::Windows::Media::Capture::LowLagPhotoSequenceCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19245,7 +19245,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* LowLagPhotoSequenceCapture_StopAsync(py::wrapper::Windows::Media::Capture::LowLagPhotoSequenceCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19409,7 +19409,7 @@ namespace py::cpp::Windows::Media::Capture
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -19440,7 +19440,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_AddAudioEffectAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19482,7 +19482,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_AddEffectAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -19526,7 +19526,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_AddVideoEffectAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19569,7 +19569,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_CapturePhotoToStorageFileAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19612,7 +19612,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_CapturePhotoToStreamAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19655,7 +19655,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_ClearEffectsAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19697,7 +19697,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_Close(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -19738,7 +19738,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_CreateFrameReaderAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19780,7 +19780,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_CreateFrameReaderWithSubtypeAndSizeAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -19824,7 +19824,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_CreateFrameReaderWithSubtypeAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19867,7 +19867,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_CreateMultiSourceFrameReaderAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19909,7 +19909,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_CreateRelativePanelWatcher(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -19952,7 +19952,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_FindAllVideoProfiles(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -19994,7 +19994,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_FindConcurrentProfiles(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20036,7 +20036,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_FindKnownVideoProfiles(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20079,7 +20079,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_GetEncoderProperty(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20122,7 +20122,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_GetPreviewFrameAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20162,7 +20162,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_GetPreviewFrameCopyAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20204,7 +20204,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_GetPreviewMirroring(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20244,7 +20244,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_GetPreviewRotation(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20284,7 +20284,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_GetRecordRotation(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20324,7 +20324,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_InitializeAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20364,7 +20364,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_InitializeWithSettingsAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20406,7 +20406,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_IsVideoProfileSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20448,7 +20448,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PauseRecordAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20490,7 +20490,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PauseRecordWithResultAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20532,7 +20532,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PrepareAdvancedPhotoCaptureAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20574,7 +20574,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PrepareLowLagPhotoCaptureAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20616,7 +20616,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PrepareLowLagPhotoSequenceCaptureAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20658,7 +20658,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PrepareLowLagRecordToCustomSinkAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20701,7 +20701,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PrepareLowLagRecordToCustomSinkIdAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -20745,7 +20745,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PrepareLowLagRecordToStorageFileAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20788,7 +20788,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PrepareLowLagRecordToStreamAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -20831,7 +20831,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_PrepareVariablePhotoSequenceCaptureAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20873,7 +20873,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_RemoveEffectAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -20915,7 +20915,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_ResumeRecordAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -20955,7 +20955,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_SetEncoderProperty(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -21000,7 +21000,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_SetEncodingPropertiesAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -21044,7 +21044,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_SetPreviewMirroring(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21087,7 +21087,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_SetPreviewRotation(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21130,7 +21130,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_SetRecordRotation(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -21173,7 +21173,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StartPreviewAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21213,7 +21213,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StartPreviewToCustomSinkAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21256,7 +21256,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StartPreviewToCustomSinkIdAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -21300,7 +21300,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StartRecordToCustomSinkAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21343,7 +21343,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StartRecordToCustomSinkIdAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -21387,7 +21387,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StartRecordToStorageFileAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21430,7 +21430,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StartRecordToStreamAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -21473,7 +21473,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StopPreviewAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21513,7 +21513,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StopRecordAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -21553,7 +21553,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapture_StopRecordWithResultAsync(py::wrapper::Windows::Media::Capture::MediaCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -22743,7 +22743,7 @@ namespace py::cpp::Windows::Media::Capture
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -24097,7 +24097,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCapturePauseResult_Close(py::wrapper::Windows::Media::Capture::MediaCapturePauseResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24289,7 +24289,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureRelativePanelWatcher_Close(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24330,7 +24330,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureRelativePanelWatcher_Start(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -24371,7 +24371,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureRelativePanelWatcher_Stop(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25098,7 +25098,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureStopResult_Close(py::wrapper::Windows::Media::Capture::MediaCaptureStopResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -25290,7 +25290,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* MediaCaptureVideoProfile_GetConcurrency(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26297,7 +26297,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyObject* ScreenCapture_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -26874,7 +26874,7 @@ namespace py::cpp::Windows::Media::Capture
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Capture::WhiteBalanceGain>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

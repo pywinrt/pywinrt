@@ -15,7 +15,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* ActivationRegistrationManager_RegisterForFileTypeActivation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -62,7 +62,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* ActivationRegistrationManager_RegisterForProtocolActivation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -108,7 +108,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* ActivationRegistrationManager_RegisterForStartupActivation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -152,7 +152,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* ActivationRegistrationManager_UnregisterForFileTypeActivation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -196,7 +196,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* ActivationRegistrationManager_UnregisterForProtocolActivation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -240,7 +240,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* ActivationRegistrationManager_UnregisterForStartupActivation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -471,7 +471,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_FindOrRegisterForKey(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -513,7 +513,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_GetActivatedEventArgs(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -553,7 +553,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_GetCurrent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -593,7 +593,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_GetInstances(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -633,7 +633,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_RedirectActivationToAsync(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -675,7 +675,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_Restart(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -717,7 +717,7 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_UnregisterKey(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

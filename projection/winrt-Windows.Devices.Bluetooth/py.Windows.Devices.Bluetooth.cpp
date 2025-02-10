@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_GetRadioAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -614,7 +614,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothClassOfDevice_FromParts(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothClassOfDevice_FromRawValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_Close(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -951,7 +951,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_FromBluetoothAddressAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -993,7 +993,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_FromHostNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1035,7 +1035,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1077,7 +1077,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1117,7 +1117,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetDeviceSelectorFromBluetoothAddress(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1159,7 +1159,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetDeviceSelectorFromClassOfDevice(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1201,7 +1201,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetDeviceSelectorFromConnectionStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1243,7 +1243,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetDeviceSelectorFromDeviceName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1285,7 +1285,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetDeviceSelectorFromPairingState(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1327,7 +1327,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetRfcommServicesAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1367,7 +1367,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetRfcommServicesForIdAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1409,7 +1409,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetRfcommServicesForIdWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1452,7 +1452,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_GetRfcommServicesWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1494,7 +1494,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_RequestAccessAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2231,7 +2231,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDeviceId_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2451,7 +2451,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearance_FromParts(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2494,7 +2494,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearance_FromRawValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4800,7 +4800,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_Close(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4841,7 +4841,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_FromBluetoothAddressAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4883,7 +4883,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_FromBluetoothAddressWithBluetoothAddressTypeAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4926,7 +4926,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4968,7 +4968,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetConnectionParameters(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5008,7 +5008,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetConnectionPhy(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5048,7 +5048,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5088,7 +5088,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetDeviceSelectorFromAppearance(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5130,7 +5130,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetDeviceSelectorFromBluetoothAddress(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5172,7 +5172,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetDeviceSelectorFromBluetoothAddressWithBluetoothAddressType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5215,7 +5215,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetDeviceSelectorFromConnectionStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5257,7 +5257,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetDeviceSelectorFromDeviceName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5299,7 +5299,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetDeviceSelectorFromPairingState(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5341,7 +5341,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetGattService(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5383,7 +5383,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetGattServicesAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5423,7 +5423,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetGattServicesForUuidAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5465,7 +5465,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetGattServicesForUuidWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -5508,7 +5508,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_GetGattServicesWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5550,7 +5550,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_RequestAccessAsync(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5590,7 +5590,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_RequestPreferredConnectionParameters(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6738,7 +6738,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParametersRequest_Close(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6890,7 +6890,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7256,7 +7256,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothUuidHelper_FromShortId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7298,7 +7298,7 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothUuidHelper_TryGetShortId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

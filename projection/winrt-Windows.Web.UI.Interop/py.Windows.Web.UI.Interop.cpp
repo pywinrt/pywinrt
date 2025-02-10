@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_AddInitializeScript(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_BuildLocalStreamUri(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -109,7 +109,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_CapturePreviewToStreamAsync(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -151,7 +151,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_CaptureSelectedContentToDataPackageAsync(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_Close(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_GetDeferredPermissionRequestById(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_GoBack(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -323,7 +323,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_GoForward(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_InvokeScriptAsync(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -407,7 +407,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_MoveFocus(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -450,7 +450,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_Navigate(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_NavigateToLocalStreamUri(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -537,7 +537,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_NavigateToString(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -580,7 +580,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_NavigateWithHttpRequestMessage(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -623,7 +623,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_Refresh(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -664,7 +664,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControl_Stop(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3100,7 +3100,7 @@ namespace py::cpp::Windows::Web::UI::Interop
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3146,7 +3146,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControlProcess_CreateWebViewControlAsync(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcess* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3189,7 +3189,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControlProcess_GetWebViewControls(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcess* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3229,7 +3229,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyObject* WebViewControlProcess_Terminate(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcess* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3487,7 +3487,7 @@ namespace py::cpp::Windows::Web::UI::Interop
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try

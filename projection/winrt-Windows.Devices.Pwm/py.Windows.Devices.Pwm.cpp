@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmController_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmController_GetControllersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmController_GetDefaultAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmController_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmController_GetDeviceSelectorFromFriendlyName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmController_OpenPin(py::wrapper::Windows::Devices::Pwm::PwmController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmController_SetDesiredFrequency(py::wrapper::Windows::Devices::Pwm::PwmController* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -528,7 +528,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmPin_Close(py::wrapper::Windows::Devices::Pwm::PwmPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -569,7 +569,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmPin_GetActiveDutyCyclePercentage(py::wrapper::Windows::Devices::Pwm::PwmPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -609,7 +609,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmPin_SetActiveDutyCyclePercentage(py::wrapper::Windows::Devices::Pwm::PwmPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -652,7 +652,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmPin_Start(py::wrapper::Windows::Devices::Pwm::PwmPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -693,7 +693,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyObject* PwmPin_Stop(py::wrapper::Windows::Devices::Pwm::PwmPin* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_Clear(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_First(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -126,7 +126,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_GetView(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -166,7 +166,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_HasKey(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -208,7 +208,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_Insert(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -251,7 +251,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_Lookup(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -293,7 +293,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* PropertySet_Remove(py::wrapper::Windows::Foundation::Collections::PropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -632,7 +632,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -663,7 +663,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_Clear(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -704,7 +704,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_First(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -744,7 +744,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_GetView(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -784,7 +784,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_HasKey(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -826,7 +826,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_Insert(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -869,7 +869,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_Lookup(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -911,7 +911,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* StringMap_Remove(py::wrapper::Windows::Foundation::Collections::StringMap* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1250,7 +1250,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1281,7 +1281,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_Clear(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1322,7 +1322,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_First(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1362,7 +1362,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_GetView(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1402,7 +1402,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_HasKey(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1444,7 +1444,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_Insert(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1487,7 +1487,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_Lookup(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1529,7 +1529,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* ValueSet_Remove(py::wrapper::Windows::Foundation::Collections::ValueSet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3321,7 +3321,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_Clear(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3362,7 +3362,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_First(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3402,7 +3402,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_GetView(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3442,7 +3442,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_HasKey(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3484,7 +3484,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_Insert(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3527,7 +3527,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_Lookup(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3569,7 +3569,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* IPropertySet_Remove(py::wrapper::Windows::Foundation::Collections::IPropertySet* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

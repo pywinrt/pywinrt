@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintBindingOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -533,7 +533,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintBorderingOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1043,7 +1043,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintCollationOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1553,7 +1553,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintColorModeOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2063,7 +2063,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintCopiesOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2768,7 +2768,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintCustomItemListOptionDetails_AddItem(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2847,7 +2847,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintCustomItemListOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3428,7 +3428,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintCustomTextOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4047,7 +4047,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintCustomToggleOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4596,7 +4596,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintDuplexOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5106,7 +5106,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintHolePunchOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -5616,7 +5616,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintMediaSizeOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6126,7 +6126,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintMediaTypeOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6636,7 +6636,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintOrientationOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7146,7 +7146,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintPageRangeOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7625,7 +7625,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintQualityOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8135,7 +8135,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintStapleOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8739,7 +8739,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintTaskOptionDetails_CreateItemListOption(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8782,7 +8782,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintTaskOptionDetails_CreateTextOption(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8825,7 +8825,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintTaskOptionDetails_CreateToggleOption(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8868,7 +8868,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintTaskOptionDetails_GetFromPrintTaskOptions(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8910,7 +8910,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* PrintTaskOptionDetails_GetPageDescription(py::wrapper::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9237,7 +9237,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* IPrintCustomOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9927,7 +9927,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* IPrintItemListOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10555,7 +10555,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* IPrintNumberOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11234,7 +11234,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* IPrintOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11811,7 +11811,7 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 
     static PyObject* IPrintTextOptionDetails_TrySetValue(py::wrapper::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

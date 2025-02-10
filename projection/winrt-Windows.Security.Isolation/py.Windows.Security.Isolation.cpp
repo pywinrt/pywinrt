@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_ChangePriority(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_CreateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_CreateWithTelemetryAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -151,7 +151,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_FindByOwnerId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -193,7 +193,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_GetById(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -235,7 +235,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_GetUserInfo(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -275,7 +275,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_LaunchFileWithUIAndTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -320,7 +320,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_LaunchFileWithUIAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_PostMessageToReceiverAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -407,7 +407,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_PostMessageToReceiverWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_RegisterMessageReceiver(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -495,7 +495,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_ShareFileAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -538,7 +538,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_ShareFileWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -582,7 +582,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_ShareFolderAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -625,7 +625,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_ShareFolderWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -669,7 +669,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_StartProcessSilentlyAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -713,7 +713,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_StartProcessSilentlyWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -758,7 +758,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_TerminateAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -798,7 +798,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_TerminateWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -840,7 +840,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironment_UnregisterMessageReceiver(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentCreateResult_ChangeCreationPriority(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1218,7 +1218,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentFile_Close(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1705,7 +1705,7 @@ namespace py::cpp::Windows::Security::Isolation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1736,7 +1736,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOptions_ShareHostFolderForUntrustedItems(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2668,7 +2668,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOwnerRegistration_Register(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2711,7 +2711,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentOwnerRegistration_Unregister(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2804,7 +2804,7 @@ namespace py::cpp::Windows::Security::Isolation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3272,7 +3272,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentProcess_WaitForExit(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3313,7 +3313,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentProcess_WaitForExitAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3353,7 +3353,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentProcess_WaitForExitWithTimeout(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3515,7 +3515,7 @@ namespace py::cpp::Windows::Security::Isolation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3826,7 +3826,7 @@ namespace py::cpp::Windows::Security::Isolation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4262,7 +4262,7 @@ namespace py::cpp::Windows::Security::Isolation
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4426,7 +4426,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentUserInfo_TryWaitForSignInAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4466,7 +4466,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsEnvironmentUserInfo_TryWaitForSignInWithProgressAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4625,7 +4625,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsHostMessenger_GetFileId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4667,7 +4667,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsHostMessenger_PostMessageToReceiver(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4711,7 +4711,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsHostMessenger_RegisterHostMessageReceiver(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4755,7 +4755,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyObject* IsolatedWindowsHostMessenger_UnregisterHostMessageReceiver(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4869,7 +4869,7 @@ namespace py::cpp::Windows::Security::Isolation
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

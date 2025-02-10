@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObject_CreateFromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -67,7 +67,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObject_CreateWatcher(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -110,7 +110,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObject_CreateWatcherAqsFilter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -154,7 +154,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObject_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -197,7 +197,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObject_FindAllAsyncAqsFilter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -241,7 +241,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObject_Update(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObject* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -467,7 +467,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObjectCollection_First(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -507,7 +507,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObjectCollection_GetAt(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -549,7 +549,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObjectCollection_GetMany(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -592,7 +592,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObjectCollection_IndexOf(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1023,7 +1023,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObjectWatcher_Start(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1064,7 +1064,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyObject* PnpObjectWatcher_Stop(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

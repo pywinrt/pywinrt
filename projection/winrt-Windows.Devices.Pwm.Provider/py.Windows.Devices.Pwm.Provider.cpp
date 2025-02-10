@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_AcquirePin(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_DisablePin(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -109,7 +109,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_EnablePin(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -152,7 +152,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_ReleasePin(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -195,7 +195,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_SetDesiredFrequency(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_SetPulseParameters(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -815,7 +815,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmProvider_GetControllers(py::wrapper::Windows::Devices::Pwm::Provider::IPwmProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

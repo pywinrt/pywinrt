@@ -881,7 +881,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToManager_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -921,7 +921,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToManager_ShowPlayToUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1243,7 +1243,7 @@ namespace py::cpp::Windows::Media::PlayTo
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1274,7 +1274,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyDurationChange(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1317,7 +1317,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyEnded(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1358,7 +1358,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyError(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1399,7 +1399,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyLoadedMetadata(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1440,7 +1440,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyPaused(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1481,7 +1481,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyPlaying(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1522,7 +1522,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyRateChange(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1565,7 +1565,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifySeeked(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1606,7 +1606,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifySeeking(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1647,7 +1647,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyStopped(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1688,7 +1688,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyTimeUpdate(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1731,7 +1731,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_NotifyVolumeChange(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1775,7 +1775,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_StartAsync(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1815,7 +1815,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_StopAsync(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2846,7 +2846,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSource_PlayNext(py::wrapper::Windows::Media::PlayTo::PlayToSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3122,7 +3122,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceDeferral_Complete(py::wrapper::Windows::Media::PlayTo::PlayToSourceDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3227,7 +3227,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceRequest_DisplayErrorString(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3270,7 +3270,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceRequest_GetDeferral(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3310,7 +3310,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceRequest_SetSource(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequest* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_AcceptPhoneCall(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -58,7 +58,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_AcceptPhoneCallOnEndpoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -102,7 +102,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_AcceptPhoneCallWithVideo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_AcceptPhoneCallWithVideoOnAudioEndpoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_ClearToast(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_DecreaseVolume(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -275,7 +275,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_DisableAllAccessoryNotificationTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -316,7 +316,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_DisableEmailNotificationEmailAccount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -359,7 +359,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_DisableNotificationsForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -402,7 +402,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_DismissAlarm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -445,7 +445,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_DismissAlarmByInstanceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -488,7 +488,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_DismissReminder(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -531,7 +531,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_DismissReminderByInstanceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -574,7 +574,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_EnableAccessoryNotificationTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -617,7 +617,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_EnableEmailNotificationEmailAccount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -660,7 +660,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_EnableEmailNotificationFolderFilter(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -704,7 +704,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_EnableNotificationsForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -747,7 +747,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_EndPhoneCall(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -790,7 +790,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetAllEmailAccounts(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -830,7 +830,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetAppIcon(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -872,7 +872,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetApps(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -912,7 +912,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetEnabledAccessoryNotificationTypes(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -952,7 +952,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetFolders(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -994,7 +994,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetMediaMetadata(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1034,7 +1034,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetNextTriggerDetails(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1074,7 +1074,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetPhoneLineDetails(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1116,7 +1116,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_GetUserConsent(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1156,7 +1156,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_HoldPhoneCall(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1200,7 +1200,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_IncreaseVolume(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1243,7 +1243,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_IsNotificationEnabledForApplication(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1285,7 +1285,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_MakePhoneCall(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1329,7 +1329,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_MakePhoneCallOnAudioEndpoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1374,7 +1374,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_MakePhoneCallWithVideo(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1418,7 +1418,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_MakePhoneCallWithVideoOnAudioEndpoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1463,7 +1463,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_PerformMediaPlaybackCommand(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1506,7 +1506,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_ProcessTriggerDetails(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1549,7 +1549,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_RegisterAccessoryApp(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1589,7 +1589,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_RejectPhoneCall(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1632,7 +1632,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_RejectPhoneCallWithText(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1676,7 +1676,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_RingDevice(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1717,7 +1717,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SetMute(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1760,7 +1760,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SetRingerVibrate(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1804,7 +1804,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SnoozeAlarm(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1847,7 +1847,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SnoozeAlarmByInstanceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1890,7 +1890,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SnoozeAlarmForSpecifiedTime(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1934,7 +1934,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SnoozeReminder(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SnoozeReminderByInstanceId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2020,7 +2020,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SnoozeReminderForSpecifiedTime(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2064,7 +2064,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_SwapPhoneCalls(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2108,7 +2108,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyObject* AccessoryManager_UpdateEmailReadStatus(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {

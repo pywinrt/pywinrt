@@ -210,7 +210,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoSequenceCapture_FinishAsync(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -250,7 +250,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoSequenceCapture_StartAsync(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -290,7 +290,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoSequenceCapture_StopAsync(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -330,7 +330,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoSequenceCapture_UpdateSettingsAsync(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

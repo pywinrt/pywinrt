@@ -107,7 +107,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader>();
         if (!self_type)
@@ -168,7 +168,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
 
     static PyObject* CustomXamlResourceLoader_GetResource(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {

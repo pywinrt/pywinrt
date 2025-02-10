@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1135,7 +1135,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_DeleteAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1175,7 +1175,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_DeleteTaskAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1217,7 +1217,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_GetTaskAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1259,7 +1259,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_GetTaskReader(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1299,7 +1299,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_GetTaskReaderWithOptions(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1341,7 +1341,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_RegisterSyncManagerAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1381,7 +1381,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_SaveAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1421,7 +1421,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_SaveTaskAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1899,7 +1899,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListLimitedWriteOperations_TryCompleteTaskAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1941,7 +1941,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListLimitedWriteOperations_TryCreateOrUpdateTaskAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1983,7 +1983,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListLimitedWriteOperations_TryDeleteTaskAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2025,7 +2025,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListLimitedWriteOperations_TrySkipOccurrenceAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2134,7 +2134,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListSyncManager_SyncAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2515,7 +2515,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2555,7 +2555,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2597,7 +2597,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskManager_RequestStoreAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2748,7 +2748,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2982,7 +2982,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3077,7 +3077,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3722,7 +3722,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4096,7 +4096,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskStore_CreateListAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4138,7 +4138,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskStore_CreateListInAccountAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4181,7 +4181,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskStore_FindListsAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4221,7 +4221,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskStore_GetListAsync(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

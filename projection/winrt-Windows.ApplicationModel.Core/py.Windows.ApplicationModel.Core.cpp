@@ -23,7 +23,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* AppListEntry_LaunchAsync(py::wrapper::Windows::ApplicationModel::Core::AppListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* AppListEntry_LaunchForUserAsync(py::wrapper::Windows::ApplicationModel::Core::AppListEntry* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_CreateNewView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -298,7 +298,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_CreateNewViewFromMainView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -338,7 +338,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_CreateNewViewWithViewSource(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -380,7 +380,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_DecrementApplicationUseCount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -421,7 +421,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_EnablePrelaunch(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -464,7 +464,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_Exit(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -505,7 +505,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_GetCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -545,7 +545,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_IncrementApplicationUseCount(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -586,7 +586,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_RequestRestartAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -628,7 +628,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_RequestRestartForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -671,7 +671,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_Run(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -714,7 +714,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_RunWithActivationFactories(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2255,7 +2255,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* HostedViewClosingEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Core::HostedViewClosingEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2359,7 +2359,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* UnhandledError_Propagate(py::wrapper::Windows::ApplicationModel::Core::UnhandledError* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2841,7 +2841,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* IFrameworkView_Initialize(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2884,7 +2884,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* IFrameworkView_Load(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2927,7 +2927,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* IFrameworkView_Run(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2968,7 +2968,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* IFrameworkView_SetWindow(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3011,7 +3011,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* IFrameworkView_Uninitialize(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3318,7 +3318,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* IFrameworkViewSource_CreateView(py::wrapper::Windows::ApplicationModel::Core::IFrameworkViewSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

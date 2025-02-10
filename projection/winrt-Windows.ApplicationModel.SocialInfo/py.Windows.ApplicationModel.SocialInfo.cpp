@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -706,7 +706,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1475,7 +1475,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1871,7 +1871,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1902,7 +1902,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyObject* SocialItemThumbnail_SetImageAsync(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

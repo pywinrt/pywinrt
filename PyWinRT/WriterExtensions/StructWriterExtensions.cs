@@ -176,7 +176,7 @@ static class StructWriterExtensions
             );
             w.WriteLine("std::construct_at(&self->obj);");
             w.WriteBlankLine();
-            w.WriteLine("auto tuple_size = PyTuple_Size(args);");
+            w.WriteLine("auto tuple_size = PyTuple_GET_SIZE(args);");
             w.WriteLine("if ((tuple_size == 0) && (!kwds))");
             w.WriteBlock(() =>
             {

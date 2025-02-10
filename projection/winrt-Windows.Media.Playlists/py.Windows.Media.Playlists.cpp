@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Media::Playlists
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -45,7 +45,7 @@ namespace py::cpp::Windows::Media::Playlists
 
     static PyObject* Playlist_LoadAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -87,7 +87,7 @@ namespace py::cpp::Windows::Media::Playlists
 
     static PyObject* Playlist_SaveAsAsync(py::wrapper::Windows::Media::Playlists::Playlist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -131,7 +131,7 @@ namespace py::cpp::Windows::Media::Playlists
 
     static PyObject* Playlist_SaveAsWithFormatAsync(py::wrapper::Windows::Media::Playlists::Playlist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -176,7 +176,7 @@ namespace py::cpp::Windows::Media::Playlists
 
     static PyObject* Playlist_SaveAsync(py::wrapper::Windows::Media::Playlists::Playlist* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

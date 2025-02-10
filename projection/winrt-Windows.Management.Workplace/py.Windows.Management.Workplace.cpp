@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyObject* MdmPolicy_GetMessagingSyncPolicy(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -55,7 +55,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyObject* MdmPolicy_IsBrowserAllowed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -95,7 +95,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyObject* MdmPolicy_IsCameraAllowed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -135,7 +135,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyObject* MdmPolicy_IsMicrosoftAccountAllowed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -175,7 +175,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyObject* MdmPolicy_IsStoreAllowed(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

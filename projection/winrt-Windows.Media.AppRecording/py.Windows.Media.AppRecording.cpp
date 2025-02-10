@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingManager_GetStatus(py::wrapper::Windows::Media::AppRecording::AppRecordingManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingManager_RecordTimeSpanToFileAsync(py::wrapper::Windows::Media::AppRecording::AppRecordingManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -147,7 +147,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingManager_SaveScreenshotToFilesAsync(py::wrapper::Windows::Media::AppRecording::AppRecordingManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -192,7 +192,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingManager_StartRecordingToFileAsync(py::wrapper::Windows::Media::AppRecording::AppRecordingManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

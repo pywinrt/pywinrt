@@ -15,7 +15,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GameControllerFactoryManager_RegisterCustomFactoryForGipInterface(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -59,7 +59,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GameControllerFactoryManager_RegisterCustomFactoryForHardwareId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GameControllerFactoryManager_RegisterCustomFactoryForXusbType(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -149,7 +149,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GameControllerFactoryManager_TryGetFactoryControllerFromGameController(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipGameControllerProvider_SendMessage(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -454,7 +454,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipGameControllerProvider_SendReceiveMessage(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -500,7 +500,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* GipGameControllerProvider_UpdateFirmwareAsync(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -763,7 +763,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_GetFeatureReport(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -807,7 +807,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_SendFeatureReport(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -851,7 +851,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* HidGameControllerProvider_SendOutputReport(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1178,7 +1178,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* XusbGameControllerProvider_SetVibration(py::wrapper::Windows::Gaming::Input::Custom::XusbGameControllerProvider* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1441,7 +1441,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* ICustomGameControllerFactory_CreateGameController(py::wrapper::Windows::Gaming::Input::Custom::ICustomGameControllerFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1483,7 +1483,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* ICustomGameControllerFactory_OnGameControllerAdded(py::wrapper::Windows::Gaming::Input::Custom::ICustomGameControllerFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1526,7 +1526,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* ICustomGameControllerFactory_OnGameControllerRemoved(py::wrapper::Windows::Gaming::Input::Custom::ICustomGameControllerFactory* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1787,7 +1787,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGameControllerInputSink_OnInputResumed(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1830,7 +1830,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGameControllerInputSink_OnInputSuspended(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2436,7 +2436,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGipGameControllerInputSink_OnInputResumed(py::wrapper::Windows::Gaming::Input::Custom::IGipGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2479,7 +2479,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGipGameControllerInputSink_OnInputSuspended(py::wrapper::Windows::Gaming::Input::Custom::IGipGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2522,7 +2522,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGipGameControllerInputSink_OnKeyReceived(py::wrapper::Windows::Gaming::Input::Custom::IGipGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2567,7 +2567,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IGipGameControllerInputSink_OnMessageReceived(py::wrapper::Windows::Gaming::Input::Custom::IGipGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -2909,7 +2909,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IHidGameControllerInputSink_OnInputReportReceived(py::wrapper::Windows::Gaming::Input::Custom::IHidGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -2954,7 +2954,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IHidGameControllerInputSink_OnInputResumed(py::wrapper::Windows::Gaming::Input::Custom::IHidGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2997,7 +2997,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IHidGameControllerInputSink_OnInputSuspended(py::wrapper::Windows::Gaming::Input::Custom::IHidGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3274,7 +3274,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IXusbGameControllerInputSink_OnInputReceived(py::wrapper::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3319,7 +3319,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IXusbGameControllerInputSink_OnInputResumed(py::wrapper::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3362,7 +3362,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static PyObject* IXusbGameControllerInputSink_OnInputSuspended(py::wrapper::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3651,7 +3651,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();
@@ -3946,7 +3946,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>*>(self_obj.get());
         std::construct_at(&self->obj);
 
-        auto tuple_size = PyTuple_Size(args);
+        auto tuple_size = PyTuple_GET_SIZE(args);
         if ((tuple_size == 0) && (!kwds))
         {
             return self_obj.detach();

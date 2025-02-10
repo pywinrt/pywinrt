@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -63,7 +63,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_IsAvailableAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -145,7 +145,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_ShowInsightsAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_ShowInsightsForImageAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_ShowInsightsForImageWithOptionsAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -272,7 +272,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_ShowInsightsForTextAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -314,7 +314,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_ShowInsightsForTextWithOptionsAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -357,7 +357,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaActionableInsights_ShowInsightsWithOptionsAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -515,7 +515,7 @@ namespace py::cpp::Windows::Services::Cortana
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -749,7 +749,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaPermissionsManager_ArePermissionsGrantedAsync(py::wrapper::Windows::Services::Cortana::CortanaPermissionsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -791,7 +791,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaPermissionsManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -831,7 +831,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaPermissionsManager_GrantPermissionsAsync(py::wrapper::Windows::Services::Cortana::CortanaPermissionsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -873,7 +873,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaPermissionsManager_IsSupported(py::wrapper::Windows::Services::Cortana::CortanaPermissionsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -913,7 +913,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaPermissionsManager_RevokePermissionsAsync(py::wrapper::Windows::Services::Cortana::CortanaPermissionsManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1044,7 +1044,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaSettings_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1084,7 +1084,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyObject* CortanaSettings_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

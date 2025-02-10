@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Web::AtomPub
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -60,7 +60,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_CancelAsyncOperations(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -101,7 +101,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_CreateMediaResourceAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -146,7 +146,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_CreateResourceAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -190,7 +190,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_DeleteResourceAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_DeleteResourceItemAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -274,7 +274,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_RetrieveFeedAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -316,7 +316,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_RetrieveMediaResourceAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_RetrieveResourceAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -400,7 +400,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_RetrieveServiceDocumentAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -442,7 +442,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_SetRequestHeader(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -486,7 +486,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_UpdateMediaResourceAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -530,7 +530,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_UpdateResourceAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -573,7 +573,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_UpdateResourceItemAsync(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1041,7 +1041,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_GetXmlDocument(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1683,7 +1683,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_GetXmlDocument(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2232,7 +2232,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_GetXmlDocument(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

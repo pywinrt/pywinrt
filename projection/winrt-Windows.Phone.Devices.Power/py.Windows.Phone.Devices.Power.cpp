@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
     static PyObject* Battery_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

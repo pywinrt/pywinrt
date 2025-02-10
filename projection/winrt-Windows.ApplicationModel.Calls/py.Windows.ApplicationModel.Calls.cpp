@@ -14,7 +14,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -495,7 +495,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -1289,7 +1289,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -2199,7 +2199,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* LockScreenCallEndCallDeferral_Complete(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2304,7 +2304,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* LockScreenCallEndRequestedEventArgs_GetDeferral(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2439,7 +2439,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* LockScreenCallUI_Dismiss(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallUI* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2833,7 +2833,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -3253,7 +3253,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_AcceptIncoming(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3293,7 +3293,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_AcceptIncomingAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3333,7 +3333,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_ChangeAudioDevice(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3375,7 +3375,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_ChangeAudioDeviceAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3417,7 +3417,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_End(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3457,7 +3457,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_EndAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3497,7 +3497,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_GetFromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3539,7 +3539,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_GetPhoneCallInfo(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3579,7 +3579,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_GetPhoneCallInfoAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3619,7 +3619,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_Hold(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3659,7 +3659,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_HoldAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3699,7 +3699,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_Mute(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3739,7 +3739,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_MuteAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3779,7 +3779,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_RejectIncoming(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3819,7 +3819,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_RejectIncomingAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3859,7 +3859,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_ResumeFromHold(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3899,7 +3899,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_ResumeFromHoldAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3939,7 +3939,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_SendDtmfKey(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3982,7 +3982,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_SendDtmfKeyAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -4025,7 +4025,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_Unmute(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4065,7 +4065,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCall_UnmuteAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4527,7 +4527,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallBlocking_SetCallBlockingListAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4758,7 +4758,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6025,7 +6025,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -6406,7 +6406,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6601,7 +6601,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryEntryReader_ReadBatchAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -6697,7 +6697,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryManager_GetForUser(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6739,7 +6739,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6840,7 +6840,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryManagerForUser_RequestStoreAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6977,7 +6977,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_DeleteEntriesAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7019,7 +7019,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_DeleteEntryAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7061,7 +7061,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_GetEntryAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7103,7 +7103,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_GetEntryReader(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7143,7 +7143,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_GetEntryReaderWithOptions(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7185,7 +7185,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_GetSourcesUnseenCountAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7227,7 +7227,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_GetUnseenCountAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7267,7 +7267,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_MarkAllAsSeenAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7307,7 +7307,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_MarkEntriesAsSeenAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7349,7 +7349,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_MarkEntryAsSeenAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7391,7 +7391,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_MarkSourcesAsSeenAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7433,7 +7433,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallHistoryStore_SaveEntryAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7791,7 +7791,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallManager_RequestStoreAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7831,7 +7831,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallManager_ShowPhoneCallSettingsUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -7872,7 +7872,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallManager_ShowPhoneCallUI(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8105,7 +8105,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallStore_GetDefaultLineAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8145,7 +8145,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallStore_IsEmergencyPhoneNumberAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8187,7 +8187,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallStore_RequestLineWatcher(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -8379,7 +8379,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneCallVideoCapabilitiesManager_GetCapabilitiesAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8595,7 +8595,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -9109,7 +9109,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_Dial(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9153,7 +9153,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_DialWithOptions(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9196,7 +9196,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_DialWithResult(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9239,7 +9239,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_DialWithResultAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -9282,7 +9282,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_EnableTextReply(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9325,7 +9325,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -9367,7 +9367,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_GetAllActivePhoneCalls(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9407,7 +9407,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_GetAllActivePhoneCallsAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -9447,7 +9447,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLine_IsImmediateDialNumberAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10052,7 +10052,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineCellularDetails_GetNetworkOperatorDisplayText(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineCellularDetails* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10532,7 +10532,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_Connect(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10572,7 +10572,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_ConnectAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10612,7 +10612,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_FromId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10654,7 +10654,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10694,7 +10694,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_GetDeviceSelectorForPhoneLineTransport(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10736,7 +10736,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_IsRegistered(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10776,7 +10776,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_RegisterApp(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10817,7 +10817,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_RegisterAppForUser(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -10860,7 +10860,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_RequestAccessAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10900,7 +10900,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_UnregisterApp(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -10941,7 +10941,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineTransportDevice_UnregisterAppForUser(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -11337,7 +11337,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineWatcher_Start(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11378,7 +11378,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneLineWatcher_Stop(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineWatcher* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -11944,7 +11944,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* PhoneVoicemail_DialVoicemailAsync(py::wrapper::Windows::ApplicationModel::Calls::PhoneVoicemail* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12141,7 +12141,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_CancelUpgrade(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12184,7 +12184,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12224,7 +12224,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_GetDeviceSelectorForCallControl(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12264,7 +12264,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_IsCallControlDeviceKindSupportedForAssociation(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12306,7 +12306,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_NotifyMuted(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12347,7 +12347,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_NotifyUnmuted(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12388,7 +12388,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestIncomingUpgradeToVideoCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 9)
         {
@@ -12438,7 +12438,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestNewAppInitiatedCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -12484,7 +12484,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestNewAppInitiatedCallWithOptions(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12526,7 +12526,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestNewIncomingCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 10)
         {
@@ -12577,7 +12577,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestNewIncomingCallWithContactRemoteId(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 11)
         {
@@ -12629,7 +12629,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestNewIncomingCallWithOptions(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12671,7 +12671,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestNewOutgoingCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -12716,7 +12716,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestNewOutgoingCallWithOptions(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12758,7 +12758,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_RequestOutgoingUpgradeToVideoCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -12803,7 +12803,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_ReserveCallResourcesAsync(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12845,7 +12845,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_ReserveOneProcessCallResourcesAsync(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -12885,7 +12885,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_SetupNewAcceptedCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -12931,7 +12931,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_SetupNewAcceptedCallWithOptions(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -12973,7 +12973,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipCallCoordinator_TerminateCellularCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13187,7 +13187,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_AddAssociatedCallControlDevice(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13230,7 +13230,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_GetAssociatedCallControlDevices(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13270,7 +13270,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_NotifyCallAccepted(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13313,7 +13313,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_NotifyCallActive(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13354,7 +13354,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_NotifyCallActiveOnDevices(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13397,7 +13397,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_NotifyCallEnded(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13438,7 +13438,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_NotifyCallHeld(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13479,7 +13479,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_NotifyCallReady(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -13520,7 +13520,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_RemoveAssociatedCallControlDevice(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13563,7 +13563,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_SetAssociatedCallControlDevices(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -13606,7 +13606,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyObject* VoipPhoneCall_TryShowAppUI(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {

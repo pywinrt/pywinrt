@@ -14,7 +14,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 2)
         {
             try
@@ -48,7 +48,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyObject* CoreIncrementalInkStroke_AppendInkPoints(py::wrapper::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -90,7 +90,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyObject* CoreIncrementalInkStroke_CreateInkStroke(py::wrapper::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -288,7 +288,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyObject* CoreInkIndependentInputSource_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -976,7 +976,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1366,7 +1366,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     static PyObject* CoreWetStrokeUpdateSource_Create(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

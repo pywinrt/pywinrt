@@ -15,7 +15,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* AdaptiveCardBuilder_CreateAdaptiveCardFromJson(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -115,7 +115,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSession_End(py::wrapper::Windows::UI::Shell::FocusSession* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -251,7 +251,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_DeactivateFocus(py::wrapper::Windows::UI::Shell::FocusSessionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -292,7 +292,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -332,7 +332,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_GetSession(py::wrapper::Windows::UI::Shell::FocusSessionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -374,7 +374,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_TryStartFocusSession(py::wrapper::Windows::UI::Shell::FocusSessionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -414,7 +414,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* FocusSessionManager_TryStartFocusSession2(py::wrapper::Windows::UI::Shell::FocusSessionManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::UI::Shell
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -696,7 +696,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* SecurityAppManager_Register(py::wrapper::Windows::UI::Shell::SecurityAppManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 4)
         {
@@ -741,7 +741,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* SecurityAppManager_Unregister(py::wrapper::Windows::UI::Shell::SecurityAppManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* SecurityAppManager_UpdateState(py::wrapper::Windows::UI::Shell::SecurityAppManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 5)
         {
@@ -1062,7 +1062,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandSource_GetForCurrentView(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1102,7 +1102,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandSource_ReportCommandChanged(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1143,7 +1143,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandSource_Start(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1184,7 +1184,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* ShareWindowCommandSource_Stop(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1447,7 +1447,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_GetDefault(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1487,7 +1487,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_IsAppListEntryPinnedAsync(py::wrapper::Windows::UI::Shell::TaskbarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1529,7 +1529,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_IsCurrentAppPinnedAsync(py::wrapper::Windows::UI::Shell::TaskbarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1569,7 +1569,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_IsSecondaryTilePinnedAsync(py::wrapper::Windows::UI::Shell::TaskbarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1611,7 +1611,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_RequestPinAppListEntryAsync(py::wrapper::Windows::UI::Shell::TaskbarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1653,7 +1653,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_RequestPinCurrentAppAsync(py::wrapper::Windows::UI::Shell::TaskbarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1693,7 +1693,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_RequestPinSecondaryTileAsync(py::wrapper::Windows::UI::Shell::TaskbarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1735,7 +1735,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* TaskbarManager_TryUnpinSecondaryTileAsync(py::wrapper::Windows::UI::Shell::TaskbarManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1922,7 +1922,7 @@ namespace py::cpp::Windows::UI::Shell
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1953,7 +1953,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTab_ReportThumbnailAvailable(py::wrapper::Windows::UI::Shell::WindowTab* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2502,7 +2502,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_Append(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2545,7 +2545,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_Clear(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2586,7 +2586,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_First(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2626,7 +2626,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_GetAt(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2668,7 +2668,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_GetMany(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2711,7 +2711,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_GetView(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2751,7 +2751,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_IndexOf(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2807,7 +2807,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_InsertAt(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2851,7 +2851,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_MoveTab(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -2895,7 +2895,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_RemoveAt(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -2938,7 +2938,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_RemoveAtEnd(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -2979,7 +2979,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_ReplaceAll(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3022,7 +3022,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabCollection_SetAt(py::wrapper::Windows::UI::Shell::WindowTabCollection* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3313,7 +3313,7 @@ namespace py::cpp::Windows::UI::Shell
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -3547,7 +3547,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabIcon_CreateFromFontGlyph(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -3590,7 +3590,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabIcon_CreateFromFontGlyphWithUri(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -3634,7 +3634,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabIcon_CreateFromImage(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3763,7 +3763,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_GetForWindow(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -3805,7 +3805,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3845,7 +3845,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_IsTabTearOutSupported(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -3885,7 +3885,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabManager_SetActiveTab(py::wrapper::Windows::UI::Shell::WindowTabManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4409,7 +4409,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabTearOutRequestedEventArgs_GetDeferral(py::wrapper::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4614,7 +4614,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* WindowTabThumbnailRequestedEventArgs_GetDeferral(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4881,7 +4881,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* IAdaptiveCard_ToJson(py::wrapper::Windows::UI::Shell::IAdaptiveCard* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5071,7 +5071,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyObject* IAdaptiveCardBuilderStatics_CreateAdaptiveCardFromJson(py::wrapper::Windows::UI::Shell::IAdaptiveCardBuilderStatics* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {

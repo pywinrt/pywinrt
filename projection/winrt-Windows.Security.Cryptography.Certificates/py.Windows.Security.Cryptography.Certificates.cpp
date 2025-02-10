@@ -14,7 +14,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -47,7 +47,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_BuildChainAsync(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -89,7 +89,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_BuildChainWithParametersAsync(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -132,7 +132,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_GetCertificateBlob(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -172,7 +172,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_GetHashValue(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -212,7 +212,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_GetHashValueWithAlgorithm(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -919,7 +919,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateChain_GetCertificates(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateChain* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -961,7 +961,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateChain_Validate(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateChain* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -1001,7 +1001,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateChain_ValidateWithParameters(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateChain* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1101,7 +1101,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateEnrollmentManager_CreateRequestAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1143,7 +1143,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateEnrollmentManager_ImportPfxDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -1190,7 +1190,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateEnrollmentManager_ImportPfxDataToKspAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -1238,7 +1238,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateEnrollmentManager_ImportPfxDataToKspWithParametersAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -1282,7 +1282,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateEnrollmentManager_InstallCertificateAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -1409,7 +1409,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -1440,7 +1440,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateExtension_EncodeValue(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -1748,7 +1748,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2393,7 +2393,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -2999,7 +2999,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -4376,7 +4376,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStore_Add(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4419,7 +4419,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStore_Delete(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4550,7 +4550,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStores_FindAllAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -4590,7 +4590,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStores_FindAllWithQueryAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4632,7 +4632,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStores_GetStoreByName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4674,7 +4674,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStores_GetUserStoreByName(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -4830,7 +4830,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5327,7 +5327,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -5552,7 +5552,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -5585,7 +5585,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsAttachedSignature_GenerateSignatureAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5629,7 +5629,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsAttachedSignature_VerifySignature(py::wrapper::Windows::Security::Cryptography::Certificates::CmsAttachedSignature* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 0)
         {
@@ -5839,7 +5839,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 1)
         {
             try
@@ -5872,7 +5872,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsDetachedSignature_GenerateSignatureAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -5916,7 +5916,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsDetachedSignature_VerifySignatureAsync(py::wrapper::Windows::Security::Cryptography::Certificates::CmsDetachedSignature* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6097,7 +6097,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -6869,7 +6869,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAttestationHelper_DecryptTpmAttestationCredentialAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -6911,7 +6911,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAttestationHelper_DecryptTpmAttestationCredentialWithContainerNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -6954,7 +6954,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAttestationHelper_GetTpmAttestationCredentialId(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -7220,7 +7220,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -7937,7 +7937,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
             return nullptr;
         }
 
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
         if (arg_count == 0)
         {
             try
@@ -8434,7 +8434,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* UserCertificateEnrollmentManager_CreateRequestAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8476,7 +8476,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* UserCertificateEnrollmentManager_ImportPfxDataAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 6)
         {
@@ -8523,7 +8523,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* UserCertificateEnrollmentManager_ImportPfxDataToKspAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 7)
         {
@@ -8571,7 +8571,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* UserCertificateEnrollmentManager_ImportPfxDataToKspWithParametersAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 3)
         {
@@ -8615,7 +8615,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* UserCertificateEnrollmentManager_InstallCertificateAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 2)
         {
@@ -8726,7 +8726,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* UserCertificateStore_RequestAddAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
@@ -8768,7 +8768,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* UserCertificateStore_RequestDeleteAsync(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateStore* self, PyObject* args) noexcept
     {
-        auto arg_count = PyTuple_Size(args);
+        auto arg_count = PyTuple_GET_SIZE(args);
 
         if (arg_count == 1)
         {
