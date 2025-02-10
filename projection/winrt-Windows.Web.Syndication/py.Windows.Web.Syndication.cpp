@@ -12417,6 +12417,22 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- RetrievalProgress struct --------------------
 
+    winrt::Windows::Web::Syndication::RetrievalProgress RetrievalProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Web::Syndication::RetrievalProgress result{};
+
+        result.BytesRetrieved = py::convert_to<uint32_t>(tuple, 0);
+        result.TotalBytesToRetrieve = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_RetrievalProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -12579,6 +12595,24 @@ namespace py::cpp::Windows::Web::Syndication
         _type_slots_RetrievalProgress};
 
     // ----- TransferProgress struct --------------------
+
+    winrt::Windows::Web::Syndication::TransferProgress TransferProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Web::Syndication::TransferProgress result{};
+
+        result.BytesSent = py::convert_to<uint32_t>(tuple, 0);
+        result.TotalBytesToSend = py::convert_to<uint32_t>(tuple, 1);
+        result.BytesRetrieved = py::convert_to<uint32_t>(tuple, 2);
+        result.TotalBytesToRetrieve = py::convert_to<uint32_t>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_TransferProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12977,12 +13011,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle RetrievalProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(RetrievalProgress_from_tuple),"winrt._winrt_windows_web_syndication.RetrievalProgress_from_tuple", nullptr)};
+    if (!RetrievalProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "RetrievalProgress_from_tuple", RetrievalProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle TransferProgress_type{py::register_python_type(module.get(), &type_spec_TransferProgress, nullptr, nullptr)};
     if (!TransferProgress_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle TransferProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(TransferProgress_from_tuple),"winrt._winrt_windows_web_syndication.TransferProgress_from_tuple", nullptr)};
+    if (!TransferProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "TransferProgress_from_tuple", TransferProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

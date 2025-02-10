@@ -27489,6 +27489,21 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- KeyTime struct --------------------
 
+    winrt::Windows::UI::Xaml::Media::Animation::KeyTime KeyTime_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Xaml::Media::Animation::KeyTime result{};
+
+        result.TimeSpan = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_KeyTime(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -27629,6 +27644,23 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         _type_slots_KeyTime};
 
     // ----- RepeatBehavior struct --------------------
+
+    winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior RepeatBehavior_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior result{};
+
+        result.Count = py::convert_to<double>(tuple, 0);
+        result.Duration = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 1);
+        result.Type = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>(tuple, 2);
+
+        return result;
+    }
 
     PyObject* _new_RepeatBehavior(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -29610,12 +29642,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle KeyTime_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(KeyTime_from_tuple),"winrt._winrt_windows_ui_xaml_media_animation.KeyTime_from_tuple", nullptr)};
+    if (!KeyTime_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "KeyTime_from_tuple", KeyTime_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle RepeatBehavior_type{py::register_python_type(module.get(), &type_spec_RepeatBehavior, nullptr, nullptr)};
     if (!RepeatBehavior_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle RepeatBehavior_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(RepeatBehavior_from_tuple),"winrt._winrt_windows_ui_xaml_media_animation.RepeatBehavior_from_tuple", nullptr)};
+    if (!RepeatBehavior_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "RepeatBehavior_from_tuple", RepeatBehavior_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

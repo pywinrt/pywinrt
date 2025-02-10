@@ -11657,6 +11657,30 @@ namespace py::cpp::TestComponent
 
     // ----- Blittable struct --------------------
 
+    winrt::TestComponent::Blittable Blittable_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 10)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::TestComponent::Blittable result{};
+
+        result.A = py::convert_to<uint8_t>(tuple, 0);
+        result.B = py::convert_to<uint16_t>(tuple, 1);
+        result.C = py::convert_to<uint32_t>(tuple, 2);
+        result.D = py::convert_to<uint64_t>(tuple, 3);
+        result.E = py::convert_to<int16_t>(tuple, 4);
+        result.F = py::convert_to<int32_t>(tuple, 5);
+        result.G = py::convert_to<int64_t>(tuple, 6);
+        result.H = py::convert_to<float>(tuple, 7);
+        result.I = py::convert_to<double>(tuple, 8);
+        result.J = py::convert_to<winrt::guid>(tuple, 9);
+
+        return result;
+    }
+
     PyObject* _new_Blittable(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -11996,6 +12020,22 @@ namespace py::cpp::TestComponent
 
     // ----- Nested struct --------------------
 
+    winrt::TestComponent::Nested Nested_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::TestComponent::Nested result{};
+
+        result.Blittable = py::convert_to<winrt::TestComponent::Blittable>(tuple, 0);
+        result.NonBlittable = py::convert_to<winrt::TestComponent::NonBlittable>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_Nested(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -12158,6 +12198,24 @@ namespace py::cpp::TestComponent
         _type_slots_Nested};
 
     // ----- NonBlittable struct --------------------
+
+    winrt::TestComponent::NonBlittable NonBlittable_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::TestComponent::NonBlittable result{};
+
+        result.A = py::convert_to<bool>(tuple, 0);
+        result.B = py::convert_to<char16_t>(tuple, 1);
+        result.C = py::convert_to<winrt::hstring>(tuple, 2);
+        result.D = py::convert_to<winrt::Windows::Foundation::IReference<int64_t>>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_NonBlittable(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12608,18 +12666,48 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Blittable_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Blittable_from_tuple),"winrt._winrt_testcomponent.Blittable_from_tuple", nullptr)};
+    if (!Blittable_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Blittable_from_tuple", Blittable_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle Nested_type{py::register_python_type(module.get(), &type_spec_Nested, nullptr, nullptr)};
     if (!Nested_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle Nested_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Nested_from_tuple),"winrt._winrt_testcomponent.Nested_from_tuple", nullptr)};
+    if (!Nested_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Nested_from_tuple", Nested_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle NonBlittable_type{py::register_python_type(module.get(), &type_spec_NonBlittable, nullptr, nullptr)};
     if (!NonBlittable_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle NonBlittable_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(NonBlittable_from_tuple),"winrt._winrt_testcomponent.NonBlittable_from_tuple", nullptr)};
+    if (!NonBlittable_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "NonBlittable_from_tuple", NonBlittable_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

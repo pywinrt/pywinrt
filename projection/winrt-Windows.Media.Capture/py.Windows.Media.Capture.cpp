@@ -26846,6 +26846,23 @@ namespace py::cpp::Windows::Media::Capture
 
     // ----- WhiteBalanceGain struct --------------------
 
+    winrt::Windows::Media::Capture::WhiteBalanceGain WhiteBalanceGain_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Media::Capture::WhiteBalanceGain result{};
+
+        result.R = py::convert_to<double>(tuple, 0);
+        result.G = py::convert_to<double>(tuple, 1);
+        result.B = py::convert_to<double>(tuple, 2);
+
+        return result;
+    }
+
     PyObject* _new_WhiteBalanceGain(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -27626,6 +27643,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle WhiteBalanceGain_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(WhiteBalanceGain_from_tuple),"winrt._winrt_windows_media_capture.WhiteBalanceGain_from_tuple", nullptr)};
+    if (!WhiteBalanceGain_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "WhiteBalanceGain_from_tuple", WhiteBalanceGain_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

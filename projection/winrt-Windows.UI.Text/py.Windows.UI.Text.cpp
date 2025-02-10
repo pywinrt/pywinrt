@@ -21480,6 +21480,21 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- FontWeight struct --------------------
 
+    winrt::Windows::UI::Text::FontWeight FontWeight_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Text::FontWeight result{};
+
+        result.Weight = py::convert_to<uint16_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_FontWeight(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -21815,6 +21830,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle FontWeight_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(FontWeight_from_tuple),"winrt._winrt_windows_ui_text.FontWeight_from_tuple", nullptr)};
+    if (!FontWeight_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "FontWeight_from_tuple", FontWeight_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

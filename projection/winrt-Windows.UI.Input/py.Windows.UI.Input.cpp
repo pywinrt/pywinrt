@@ -14645,6 +14645,24 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- CrossSlideThresholds struct --------------------
 
+    winrt::Windows::UI::Input::CrossSlideThresholds CrossSlideThresholds_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Input::CrossSlideThresholds result{};
+
+        result.SelectionStart = py::convert_to<float>(tuple, 0);
+        result.SpeedBumpStart = py::convert_to<float>(tuple, 1);
+        result.SpeedBumpEnd = py::convert_to<float>(tuple, 2);
+        result.RearrangeStart = py::convert_to<float>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_CrossSlideThresholds(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -14852,6 +14870,24 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationDelta struct --------------------
 
+    winrt::Windows::UI::Input::ManipulationDelta ManipulationDelta_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Input::ManipulationDelta result{};
+
+        result.Translation = py::convert_to<winrt::Windows::Foundation::Point>(tuple, 0);
+        result.Scale = py::convert_to<float>(tuple, 1);
+        result.Rotation = py::convert_to<float>(tuple, 2);
+        result.Expansion = py::convert_to<float>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_ManipulationDelta(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -15058,6 +15094,23 @@ namespace py::cpp::Windows::UI::Input
         _type_slots_ManipulationDelta};
 
     // ----- ManipulationVelocities struct --------------------
+
+    winrt::Windows::UI::Input::ManipulationVelocities ManipulationVelocities_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Input::ManipulationVelocities result{};
+
+        result.Linear = py::convert_to<winrt::Windows::Foundation::Point>(tuple, 0);
+        result.Angular = py::convert_to<float>(tuple, 1);
+        result.Expansion = py::convert_to<float>(tuple, 2);
+
+        return result;
+    }
 
     PyObject* _new_ManipulationVelocities(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15694,18 +15747,48 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle CrossSlideThresholds_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(CrossSlideThresholds_from_tuple),"winrt._winrt_windows_ui_input.CrossSlideThresholds_from_tuple", nullptr)};
+    if (!CrossSlideThresholds_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "CrossSlideThresholds_from_tuple", CrossSlideThresholds_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle ManipulationDelta_type{py::register_python_type(module.get(), &type_spec_ManipulationDelta, nullptr, nullptr)};
     if (!ManipulationDelta_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle ManipulationDelta_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(ManipulationDelta_from_tuple),"winrt._winrt_windows_ui_input.ManipulationDelta_from_tuple", nullptr)};
+    if (!ManipulationDelta_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "ManipulationDelta_from_tuple", ManipulationDelta_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle ManipulationVelocities_type{py::register_python_type(module.get(), &type_spec_ManipulationVelocities, nullptr, nullptr)};
     if (!ManipulationVelocities_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle ManipulationVelocities_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(ManipulationVelocities_from_tuple),"winrt._winrt_windows_ui_input.ManipulationVelocities_from_tuple", nullptr)};
+    if (!ManipulationVelocities_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "ManipulationVelocities_from_tuple", ManipulationVelocities_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

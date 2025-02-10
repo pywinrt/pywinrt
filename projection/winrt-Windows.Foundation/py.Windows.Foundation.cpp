@@ -10866,6 +10866,21 @@ namespace py::cpp::Windows::Foundation
 
     // ----- EventRegistrationToken struct --------------------
 
+    winrt::event_token EventRegistrationToken_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::event_token result{};
+
+        result.value = py::convert_to<int64_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_EventRegistrationToken(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -11007,6 +11022,21 @@ namespace py::cpp::Windows::Foundation
 
     // ----- HResult struct --------------------
 
+    winrt::hresult HResult_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::hresult result{};
+
+        result.value = py::convert_to<int32_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_HResult(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -11147,6 +11177,22 @@ namespace py::cpp::Windows::Foundation
         _type_slots_HResult};
 
     // ----- Point struct --------------------
+
+    winrt::Windows::Foundation::Point Point_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Point result{};
+
+        result.X = py::convert_to<float>(tuple, 0);
+        result.Y = py::convert_to<float>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_Point(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11310,6 +11356,24 @@ namespace py::cpp::Windows::Foundation
         _type_slots_Point};
 
     // ----- Rect struct --------------------
+
+    winrt::Windows::Foundation::Rect Rect_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Rect result{};
+
+        result.X = py::convert_to<float>(tuple, 0);
+        result.Y = py::convert_to<float>(tuple, 1);
+        result.Width = py::convert_to<float>(tuple, 2);
+        result.Height = py::convert_to<float>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_Rect(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11517,6 +11581,22 @@ namespace py::cpp::Windows::Foundation
         _type_slots_Rect};
 
     // ----- Size struct --------------------
+
+    winrt::Windows::Foundation::Size Size_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Size result{};
+
+        result.Width = py::convert_to<float>(tuple, 0);
+        result.Height = py::convert_to<float>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_Size(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12052,30 +12132,80 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle EventRegistrationToken_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(EventRegistrationToken_from_tuple),"winrt._winrt_windows_foundation.EventRegistrationToken_from_tuple", nullptr)};
+    if (!EventRegistrationToken_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "EventRegistrationToken_from_tuple", EventRegistrationToken_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle HResult_type{py::register_python_type(module.get(), &type_spec_HResult, nullptr, nullptr)};
     if (!HResult_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle HResult_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(HResult_from_tuple),"winrt._winrt_windows_foundation.HResult_from_tuple", nullptr)};
+    if (!HResult_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "HResult_from_tuple", HResult_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle Point_type{py::register_python_type(module.get(), &type_spec_Point, nullptr, nullptr)};
     if (!Point_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle Point_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Point_from_tuple),"winrt._winrt_windows_foundation.Point_from_tuple", nullptr)};
+    if (!Point_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Point_from_tuple", Point_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle Rect_type{py::register_python_type(module.get(), &type_spec_Rect, nullptr, nullptr)};
     if (!Rect_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle Rect_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Rect_from_tuple),"winrt._winrt_windows_foundation.Rect_from_tuple", nullptr)};
+    if (!Rect_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Rect_from_tuple", Rect_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle Size_type{py::register_python_type(module.get(), &type_spec_Size, nullptr, nullptr)};
     if (!Size_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle Size_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Size_from_tuple),"winrt._winrt_windows_foundation.Size_from_tuple", nullptr)};
+    if (!Size_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Size_from_tuple", Size_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

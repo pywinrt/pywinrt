@@ -476,6 +476,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::BandwidthStatistics>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_networking_sockets.BandwidthStatistics_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.BandwidthStatistics";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "BandwidthStatistics";
@@ -484,6 +485,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_networking_sockets.RoundTripTimeStatistics_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.RoundTripTimeStatistics";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "RoundTripTimeStatistics";

@@ -4535,6 +4535,23 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     // ----- BasicGeoposition struct --------------------
 
+    winrt::Windows::Devices::Geolocation::BasicGeoposition BasicGeoposition_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::Geolocation::BasicGeoposition result{};
+
+        result.Latitude = py::convert_to<double>(tuple, 0);
+        result.Longitude = py::convert_to<double>(tuple, 1);
+        result.Altitude = py::convert_to<double>(tuple, 2);
+
+        return result;
+    }
+
     PyObject* _new_BasicGeoposition(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -4924,6 +4941,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle BasicGeoposition_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(BasicGeoposition_from_tuple),"winrt._winrt_windows_devices_geolocation.BasicGeoposition_from_tuple", nullptr)};
+    if (!BasicGeoposition_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "BasicGeoposition_from_tuple", BasicGeoposition_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

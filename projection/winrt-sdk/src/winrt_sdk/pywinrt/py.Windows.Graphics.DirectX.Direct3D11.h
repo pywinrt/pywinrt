@@ -62,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_directx_direct3d11.Direct3DMultisampleDescription_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "Direct3DMultisampleDescription";
@@ -70,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_directx_direct3d11.Direct3DSurfaceDescription_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DSurfaceDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "Direct3DSurfaceDescription";

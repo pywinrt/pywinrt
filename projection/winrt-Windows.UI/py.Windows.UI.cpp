@@ -4791,6 +4791,24 @@ namespace py::cpp::Windows::UI
 
     // ----- Color struct --------------------
 
+    winrt::Windows::UI::Color Color_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Color result{};
+
+        result.A = py::convert_to<uint8_t>(tuple, 0);
+        result.R = py::convert_to<uint8_t>(tuple, 1);
+        result.G = py::convert_to<uint8_t>(tuple, 2);
+        result.B = py::convert_to<uint8_t>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_Color(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -4997,6 +5015,21 @@ namespace py::cpp::Windows::UI
         _type_slots_Color};
 
     // ----- WindowId struct --------------------
+
+    winrt::Windows::UI::WindowId WindowId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::WindowId result{};
+
+        result.Value = py::convert_to<uint64_t>(tuple, 0);
+
+        return result;
+    }
 
     PyObject* _new_WindowId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5242,12 +5275,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Color_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Color_from_tuple),"winrt._winrt_windows_ui.Color_from_tuple", nullptr)};
+    if (!Color_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Color_from_tuple", Color_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle WindowId_type{py::register_python_type(module.get(), &type_spec_WindowId, nullptr, nullptr)};
     if (!WindowId_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle WindowId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(WindowId_from_tuple),"winrt._winrt_windows_ui.WindowId_from_tuple", nullptr)};
+    if (!WindowId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "WindowId_from_tuple", WindowId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

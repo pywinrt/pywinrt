@@ -26665,6 +26665,22 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MseTimeRange struct --------------------
 
+    winrt::Windows::Media::Core::MseTimeRange MseTimeRange_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Media::Core::MseTimeRange result{};
+
+        result.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 0);
+        result.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_MseTimeRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -26828,6 +26844,22 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextDouble struct --------------------
 
+    winrt::Windows::Media::Core::TimedTextDouble TimedTextDouble_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Media::Core::TimedTextDouble result{};
+
+        result.Value = py::convert_to<double>(tuple, 0);
+        result.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_TimedTextDouble(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -26990,6 +27022,25 @@ namespace py::cpp::Windows::Media::Core
         _type_slots_TimedTextDouble};
 
     // ----- TimedTextPadding struct --------------------
+
+    winrt::Windows::Media::Core::TimedTextPadding TimedTextPadding_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 5)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Media::Core::TimedTextPadding result{};
+
+        result.Before = py::convert_to<double>(tuple, 0);
+        result.After = py::convert_to<double>(tuple, 1);
+        result.Start = py::convert_to<double>(tuple, 2);
+        result.End = py::convert_to<double>(tuple, 3);
+        result.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(tuple, 4);
+
+        return result;
+    }
 
     PyObject* _new_TimedTextPadding(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -27220,6 +27271,23 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextPoint struct --------------------
 
+    winrt::Windows::Media::Core::TimedTextPoint TimedTextPoint_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Media::Core::TimedTextPoint result{};
+
+        result.X = py::convert_to<double>(tuple, 0);
+        result.Y = py::convert_to<double>(tuple, 1);
+        result.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(tuple, 2);
+
+        return result;
+    }
+
     PyObject* _new_TimedTextPoint(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -27404,6 +27472,23 @@ namespace py::cpp::Windows::Media::Core
         _type_slots_TimedTextPoint};
 
     // ----- TimedTextSize struct --------------------
+
+    winrt::Windows::Media::Core::TimedTextSize TimedTextSize_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Media::Core::TimedTextSize result{};
+
+        result.Height = py::convert_to<double>(tuple, 0);
+        result.Width = py::convert_to<double>(tuple, 1);
+        result.Unit = py::convert_to<winrt::Windows::Media::Core::TimedTextUnit>(tuple, 2);
+
+        return result;
+    }
 
     PyObject* _new_TimedTextSize(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -28262,30 +28347,80 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle MseTimeRange_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(MseTimeRange_from_tuple),"winrt._winrt_windows_media_core.MseTimeRange_from_tuple", nullptr)};
+    if (!MseTimeRange_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "MseTimeRange_from_tuple", MseTimeRange_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle TimedTextDouble_type{py::register_python_type(module.get(), &type_spec_TimedTextDouble, nullptr, nullptr)};
     if (!TimedTextDouble_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle TimedTextDouble_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(TimedTextDouble_from_tuple),"winrt._winrt_windows_media_core.TimedTextDouble_from_tuple", nullptr)};
+    if (!TimedTextDouble_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "TimedTextDouble_from_tuple", TimedTextDouble_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle TimedTextPadding_type{py::register_python_type(module.get(), &type_spec_TimedTextPadding, nullptr, nullptr)};
     if (!TimedTextPadding_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle TimedTextPadding_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(TimedTextPadding_from_tuple),"winrt._winrt_windows_media_core.TimedTextPadding_from_tuple", nullptr)};
+    if (!TimedTextPadding_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "TimedTextPadding_from_tuple", TimedTextPadding_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle TimedTextPoint_type{py::register_python_type(module.get(), &type_spec_TimedTextPoint, nullptr, nullptr)};
     if (!TimedTextPoint_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle TimedTextPoint_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(TimedTextPoint_from_tuple),"winrt._winrt_windows_media_core.TimedTextPoint_from_tuple", nullptr)};
+    if (!TimedTextPoint_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "TimedTextPoint_from_tuple", TimedTextPoint_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle TimedTextSize_type{py::register_python_type(module.get(), &type_spec_TimedTextSize, nullptr, nullptr)};
     if (!TimedTextSize_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle TimedTextSize_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(TimedTextSize_from_tuple),"winrt._winrt_windows_media_core.TimedTextSize_from_tuple", nullptr)};
+    if (!TimedTextSize_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "TimedTextSize_from_tuple", TimedTextSize_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

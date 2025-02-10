@@ -40,6 +40,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DisplayAdapterId>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics.DisplayAdapterId_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.DisplayAdapterId";
         static constexpr const char* module_name = "winrt.windows.graphics";
         static constexpr const char* type_name = "DisplayAdapterId";
@@ -48,6 +49,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DisplayId>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics.DisplayId_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.DisplayId";
         static constexpr const char* module_name = "winrt.windows.graphics";
         static constexpr const char* type_name = "DisplayId";
@@ -56,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::PointInt32>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics.PointInt32_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.PointInt32";
         static constexpr const char* module_name = "winrt.windows.graphics";
         static constexpr const char* type_name = "PointInt32";
@@ -64,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::RectInt32>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics.RectInt32_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.RectInt32";
         static constexpr const char* module_name = "winrt.windows.graphics";
         static constexpr const char* type_name = "RectInt32";
@@ -72,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::SizeInt32>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics.SizeInt32_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.SizeInt32";
         static constexpr const char* module_name = "winrt.windows.graphics";
         static constexpr const char* type_name = "SizeInt32";

@@ -25283,6 +25283,26 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     // ----- Matrix struct --------------------
 
+    winrt::Microsoft::UI::Xaml::Media::Matrix Matrix_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 6)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::Media::Matrix result{};
+
+        result.M11 = py::convert_to<double>(tuple, 0);
+        result.M12 = py::convert_to<double>(tuple, 1);
+        result.M21 = py::convert_to<double>(tuple, 2);
+        result.M22 = py::convert_to<double>(tuple, 3);
+        result.OffsetX = py::convert_to<double>(tuple, 4);
+        result.OffsetY = py::convert_to<double>(tuple, 5);
+
+        return result;
+    }
+
     PyObject* _new_Matrix(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -26855,6 +26875,16 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Matrix_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Matrix_from_tuple),"winrt._winrt_microsoft_ui_xaml_media.Matrix_from_tuple", nullptr)};
+    if (!Matrix_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Matrix_from_tuple", Matrix_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

@@ -1,6 +1,7 @@
 import atexit
 import tempfile
 from ctypes import WinError
+from typing import Tuple, Union
 
 from typing_extensions import override
 
@@ -31,7 +32,7 @@ from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import
 from winrt.runtime import ApartmentType, init_apartment
 from winrt.system import Array
 from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation
-from winrt.windows.ui.xaml.interop import TypeName
+from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 
 
 def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
@@ -122,7 +123,7 @@ class App(Application, IXamlMetadataProvider):
         env_op.completed = on_env
 
     @override
-    def get_xaml_type(self, type: TypeName) -> IXamlType:
+    def get_xaml_type(self, type: Union[TypeName, Tuple[str, TypeKind]]) -> IXamlType:
         return self._provider.get_xaml_type(type)
 
     @override

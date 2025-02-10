@@ -389,6 +389,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkUsageStates>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_networking_connectivity.NetworkUsageStates_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkUsageStates";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkUsageStates";

@@ -73,6 +73,8 @@ static class StructWriterExtensions
     )
     {
         w.WriteLine($"// ----- {type.Name} struct --------------------");
+        w.WriteBlankLine();
+        w.WriteStructFromTuple(type);
         w.WriteStructConstructor(type);
         w.WriteDeallocFunction(type);
 
@@ -109,6 +111,35 @@ static class StructWriterExtensions
         {
             w.WriteMetaclass(type, moduleSuffix);
         }
+    }
+
+    static void WriteStructFromTuple(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine($"{type.CppWinrtType} {type.Name}_from_tuple(PyObject* tuple)");
+        w.WriteBlock(() =>
+        {
+            w.WriteLine($"if (PyTuple_GET_SIZE(tuple) != {type.Type.Fields.Count})");
+            w.WriteBlock(() =>
+            {
+                w.WriteLine("PyErr_SetString(PyExc_TypeError, \"Incorrect number of fields\");");
+                w.WriteLine("throw python_exception();");
+            });
+            w.WriteBlankLine();
+
+            w.WriteLine($"{type.CppWinrtType} result{{}};");
+            w.WriteBlankLine();
+
+            for (var i = 0; i < type.Type.Fields.Count; i++)
+            {
+                var field = type.Type.Fields[i];
+                w.WriteLine(
+                    $"result.{field.ToWinrtFieldName()} = py::convert_to<{field.FieldType.ToCppTypeName()}>(tuple, {i});"
+                );
+            }
+
+            w.WriteBlankLine();
+            w.WriteLine("return result;");
+        });
     }
 
     static void WriteStructConstructor(this IndentedTextWriter w, ProjectedType type)

@@ -1114,6 +1114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::WhiteBalanceGain>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media_capture.WhiteBalanceGain_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.media.capture.WhiteBalanceGain";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "WhiteBalanceGain";

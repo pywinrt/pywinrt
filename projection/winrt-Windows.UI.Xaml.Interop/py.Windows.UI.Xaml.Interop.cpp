@@ -3464,6 +3464,22 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- TypeName struct --------------------
 
+    winrt::Windows::UI::Xaml::Interop::TypeName TypeName_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Xaml::Interop::TypeName result{};
+
+        result.Name = py::convert_to<winrt::hstring>(tuple, 0);
+        result.Kind = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeKind>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_TypeName(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -3802,6 +3818,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle TypeName_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(TypeName_from_tuple),"winrt._winrt_windows_ui_xaml_interop.TypeName_from_tuple", nullptr)};
+    if (!TypeName_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "TypeName_from_tuple", TypeName_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

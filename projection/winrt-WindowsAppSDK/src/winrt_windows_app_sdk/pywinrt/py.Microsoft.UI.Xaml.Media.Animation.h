@@ -792,6 +792,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTime>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_media_animation.KeyTime_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.animation.KeyTime";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.animation";
         static constexpr const char* type_name = "KeyTime";
@@ -800,6 +801,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Animation::RepeatBehavior>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_media_animation.RepeatBehavior_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.animation.RepeatBehavior";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.animation";
         static constexpr const char* type_name = "RepeatBehavior";

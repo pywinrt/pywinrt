@@ -219,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextRange>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_text_core.CoreTextRange_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextRange";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextRange";

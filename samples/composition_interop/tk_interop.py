@@ -2,9 +2,7 @@ from datetime import timedelta
 from random import randint
 from tkinter import Canvas, Tk, Button
 
-from winrt.windows.foundation.numerics import Vector2, Vector3
 from winrt.windows.system.interop import create_dispatcher_queue_controller
-from winrt.windows.ui import Color
 from winrt.windows.ui.composition import Compositor, ContainerVisual
 from winrt.windows.ui.composition.interop import create_desktop_window_target
 
@@ -31,8 +29,8 @@ controller = create_dispatcher_queue_controller()
 compositor = Compositor()
 target = create_desktop_window_target(compositor, canvas.winfo_id())
 c_root = compositor.create_container_visual()
-c_root.relative_size_adjustment = Vector2(1, 1)
-c_root.offset = Vector3(124, 12, 0)
+c_root.relative_size_adjustment = (1, 1)
+c_root.offset = (124, 12, 0)
 target.root = c_root
 
 
@@ -44,13 +42,13 @@ def add_element(size: float, x: float, y: float) -> None:
     g = randint(0, 255)
     b = randint(0, 255)
 
-    element.brush = compositor.create_color_brush_with_color(Color(255, r, g, b))
-    element.size = Vector2(size, size)
-    element.offset = Vector3(x, y, 0)
+    element.brush = compositor.create_color_brush_with_color((255, r, g, b))
+    element.size = (size, size)
+    element.offset = (x, y, 0)
 
     animation = compositor.create_vector3_key_frame_animation()
     bottom = 600 - element.size.y
-    animation.insert_key_frame(1, Vector3(element.offset.x, bottom, 0))
+    animation.insert_key_frame(1, (element.offset.x, bottom, 0))
 
     animation.duration = timedelta(seconds=2)
     animation.delay_time = timedelta(seconds=3)

@@ -279,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapBounds>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_imaging.BitmapBounds_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapBounds";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapBounds";
@@ -287,6 +288,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_imaging.BitmapPlaneDescription_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapPlaneDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapPlaneDescription";
@@ -295,6 +297,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapSize>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_graphics_imaging.BitmapSize_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapSize";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapSize";

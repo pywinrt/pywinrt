@@ -10324,6 +10324,22 @@ namespace py::cpp::Windows::Media
 
     // ----- MediaTimeRange struct --------------------
 
+    winrt::Windows::Media::MediaTimeRange MediaTimeRange_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Media::MediaTimeRange result{};
+
+        result.Start = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 0);
+        result.End = py::convert_to<winrt::Windows::Foundation::TimeSpan>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_MediaTimeRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -10802,6 +10818,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle MediaTimeRange_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(MediaTimeRange_from_tuple),"winrt._winrt_windows_media.MediaTimeRange_from_tuple", nullptr)};
+    if (!MediaTimeRange_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "MediaTimeRange_from_tuple", MediaTimeRange_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

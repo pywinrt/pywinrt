@@ -501,6 +501,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::CrossSlideThresholds>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_input.CrossSlideThresholds_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.CrossSlideThresholds";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "CrossSlideThresholds";
@@ -509,6 +510,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::ManipulationDelta>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_input.ManipulationDelta_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.ManipulationDelta";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationDelta";
@@ -517,6 +519,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::ManipulationVelocities>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_input.ManipulationVelocities_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.ManipulationVelocities";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationVelocities";

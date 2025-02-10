@@ -65,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_windows_pushnotifications.PushNotificationCreateChannelStatus_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.windows.pushnotifications.PushNotificationCreateChannelStatus";
         static constexpr const char* module_name = "winrt.microsoft.windows.pushnotifications";
         static constexpr const char* type_name = "PushNotificationCreateChannelStatus";

@@ -128,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Preview::HeadsetGeqGains>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input_preview.HeadsetGeqGains_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.preview.HeadsetGeqGains";
         static constexpr const char* module_name = "winrt.windows.gaming.input.preview";
         static constexpr const char* type_name = "HeadsetGeqGains";

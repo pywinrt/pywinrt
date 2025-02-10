@@ -234,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_web_http.HttpProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpProgress";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpProgress";

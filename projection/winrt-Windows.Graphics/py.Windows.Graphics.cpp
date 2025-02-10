@@ -129,6 +129,22 @@ namespace py::cpp::Windows::Graphics
 
     // ----- DisplayAdapterId struct --------------------
 
+    winrt::Windows::Graphics::DisplayAdapterId DisplayAdapterId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::DisplayAdapterId result{};
+
+        result.LowPart = py::convert_to<uint32_t>(tuple, 0);
+        result.HighPart = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_DisplayAdapterId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -292,6 +308,21 @@ namespace py::cpp::Windows::Graphics
 
     // ----- DisplayId struct --------------------
 
+    winrt::Windows::Graphics::DisplayId DisplayId_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::DisplayId result{};
+
+        result.Value = py::convert_to<uint64_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_DisplayId(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -432,6 +463,22 @@ namespace py::cpp::Windows::Graphics
         _type_slots_DisplayId};
 
     // ----- PointInt32 struct --------------------
+
+    winrt::Windows::Graphics::PointInt32 PointInt32_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::PointInt32 result{};
+
+        result.X = py::convert_to<int32_t>(tuple, 0);
+        result.Y = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_PointInt32(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -595,6 +642,24 @@ namespace py::cpp::Windows::Graphics
         _type_slots_PointInt32};
 
     // ----- RectInt32 struct --------------------
+
+    winrt::Windows::Graphics::RectInt32 RectInt32_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::RectInt32 result{};
+
+        result.X = py::convert_to<int32_t>(tuple, 0);
+        result.Y = py::convert_to<int32_t>(tuple, 1);
+        result.Width = py::convert_to<int32_t>(tuple, 2);
+        result.Height = py::convert_to<int32_t>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_RectInt32(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -802,6 +867,22 @@ namespace py::cpp::Windows::Graphics
         _type_slots_RectInt32};
 
     // ----- SizeInt32 struct --------------------
+
+    winrt::Windows::Graphics::SizeInt32 SizeInt32_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::SizeInt32 result{};
+
+        result.Width = py::convert_to<int32_t>(tuple, 0);
+        result.Height = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_SizeInt32(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1038,30 +1119,80 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle DisplayAdapterId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(DisplayAdapterId_from_tuple),"winrt._winrt_windows_graphics.DisplayAdapterId_from_tuple", nullptr)};
+    if (!DisplayAdapterId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "DisplayAdapterId_from_tuple", DisplayAdapterId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle DisplayId_type{py::register_python_type(module.get(), &type_spec_DisplayId, nullptr, nullptr)};
     if (!DisplayId_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle DisplayId_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(DisplayId_from_tuple),"winrt._winrt_windows_graphics.DisplayId_from_tuple", nullptr)};
+    if (!DisplayId_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "DisplayId_from_tuple", DisplayId_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle PointInt32_type{py::register_python_type(module.get(), &type_spec_PointInt32, nullptr, nullptr)};
     if (!PointInt32_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle PointInt32_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(PointInt32_from_tuple),"winrt._winrt_windows_graphics.PointInt32_from_tuple", nullptr)};
+    if (!PointInt32_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "PointInt32_from_tuple", PointInt32_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle RectInt32_type{py::register_python_type(module.get(), &type_spec_RectInt32, nullptr, nullptr)};
     if (!RectInt32_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle RectInt32_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(RectInt32_from_tuple),"winrt._winrt_windows_graphics.RectInt32_from_tuple", nullptr)};
+    if (!RectInt32_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "RectInt32_from_tuple", RectInt32_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle SizeInt32_type{py::register_python_type(module.get(), &type_spec_SizeInt32, nullptr, nullptr)};
     if (!SizeInt32_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle SizeInt32_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(SizeInt32_from_tuple),"winrt._winrt_windows_graphics.SizeInt32_from_tuple", nullptr)};
+    if (!SizeInt32_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "SizeInt32_from_tuple", SizeInt32_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

@@ -1125,6 +1125,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_web_webview2_core.CoreWebView2PhysicalKeyStatus_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.web.webview2.core.CoreWebView2PhysicalKeyStatus";
         static constexpr const char* module_name = "winrt.microsoft.web.webview2.core";
         static constexpr const char* type_name = "CoreWebView2PhysicalKeyStatus";

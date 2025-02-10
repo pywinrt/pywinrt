@@ -204,6 +204,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::SortEntry>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_storage_search.SortEntry_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.storage.search.SortEntry";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "SortEntry";

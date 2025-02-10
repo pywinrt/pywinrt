@@ -440,6 +440,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_display_core.DisplayPresentationRate_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayPresentationRate";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayPresentationRate";

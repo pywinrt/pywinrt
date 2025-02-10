@@ -18830,6 +18830,26 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CorePhysicalKeyStatus struct --------------------
 
+    winrt::Windows::UI::Core::CorePhysicalKeyStatus CorePhysicalKeyStatus_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 6)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Core::CorePhysicalKeyStatus result{};
+
+        result.RepeatCount = py::convert_to<uint32_t>(tuple, 0);
+        result.ScanCode = py::convert_to<uint32_t>(tuple, 1);
+        result.IsExtendedKey = py::convert_to<bool>(tuple, 2);
+        result.IsMenuKeyDown = py::convert_to<bool>(tuple, 3);
+        result.WasKeyDown = py::convert_to<bool>(tuple, 4);
+        result.IsKeyReleased = py::convert_to<bool>(tuple, 5);
+
+        return result;
+    }
+
     PyObject* _new_CorePhysicalKeyStatus(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -19080,6 +19100,22 @@ namespace py::cpp::Windows::UI::Core
         _type_slots_CorePhysicalKeyStatus};
 
     // ----- CoreProximityEvaluation struct --------------------
+
+    winrt::Windows::UI::Core::CoreProximityEvaluation CoreProximityEvaluation_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::UI::Core::CoreProximityEvaluation result{};
+
+        result.Score = py::convert_to<int32_t>(tuple, 0);
+        result.AdjustedPoint = py::convert_to<winrt::Windows::Foundation::Point>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_CoreProximityEvaluation(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -19639,12 +19675,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle CorePhysicalKeyStatus_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(CorePhysicalKeyStatus_from_tuple),"winrt._winrt_windows_ui_core.CorePhysicalKeyStatus_from_tuple", nullptr)};
+    if (!CorePhysicalKeyStatus_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "CorePhysicalKeyStatus_from_tuple", CorePhysicalKeyStatus_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle CoreProximityEvaluation_type{py::register_python_type(module.get(), &type_spec_CoreProximityEvaluation, nullptr, nullptr)};
     if (!CoreProximityEvaluation_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle CoreProximityEvaluation_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(CoreProximityEvaluation_from_tuple),"winrt._winrt_windows_ui_core.CoreProximityEvaluation_from_tuple", nullptr)};
+    if (!CoreProximityEvaluation_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "CoreProximityEvaluation_from_tuple", CoreProximityEvaluation_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

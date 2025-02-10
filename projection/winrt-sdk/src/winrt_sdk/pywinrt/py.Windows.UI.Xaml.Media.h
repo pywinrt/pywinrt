@@ -807,6 +807,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Matrix>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml_media.Matrix_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Matrix";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Matrix";

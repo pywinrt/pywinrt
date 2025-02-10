@@ -923,6 +923,23 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     // ----- PushNotificationCreateChannelStatus struct --------------------
 
+    winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus PushNotificationCreateChannelStatus_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus result{};
+
+        result.status = py::convert_to<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>(tuple, 0);
+        result.extendedError = py::convert_to<winrt::hresult>(tuple, 1);
+        result.retryCount = py::convert_to<uint32_t>(tuple, 2);
+
+        return result;
+    }
+
     PyObject* _new_PushNotificationCreateChannelStatus(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -1199,6 +1216,16 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_pushnotifications(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle PushNotificationCreateChannelStatus_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(PushNotificationCreateChannelStatus_from_tuple),"winrt._winrt_microsoft_windows_pushnotifications.PushNotificationCreateChannelStatus_from_tuple", nullptr)};
+    if (!PushNotificationCreateChannelStatus_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "PushNotificationCreateChannelStatus_from_tuple", PushNotificationCreateChannelStatus_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

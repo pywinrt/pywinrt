@@ -1027,6 +1027,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MseTimeRange>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media_core.MseTimeRange_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.media.core.MseTimeRange";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MseTimeRange";
@@ -1035,6 +1036,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextDouble>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media_core.TimedTextDouble_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextDouble";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextDouble";
@@ -1043,6 +1045,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextPadding>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media_core.TimedTextPadding_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextPadding";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextPadding";
@@ -1051,6 +1054,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextPoint>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media_core.TimedTextPoint_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextPoint";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextPoint";
@@ -1059,6 +1063,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextSize>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_media_core.TimedTextSize_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextSize";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextSize";

@@ -155,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Text::TextSegment>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_data_text.TextSegment_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.data.text.TextSegment";
         static constexpr const char* module_name = "winrt.windows.data.text";
         static constexpr const char* type_name = "TextSegment";

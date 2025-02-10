@@ -83,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContextId_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "PackageDependencyContextId";

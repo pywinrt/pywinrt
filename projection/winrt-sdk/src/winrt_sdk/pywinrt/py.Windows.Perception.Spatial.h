@@ -272,6 +272,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingBox>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_spatial.SpatialBoundingBox_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingBox";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingBox";
@@ -280,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_spatial.SpatialBoundingFrustum_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingFrustum";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingFrustum";
@@ -288,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_spatial.SpatialBoundingOrientedBox_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingOrientedBox";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingOrientedBox";
@@ -296,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_spatial.SpatialBoundingSphere_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingSphere";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingSphere";
@@ -304,6 +308,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialRay>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_spatial.SpatialRay_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialRay";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialRay";

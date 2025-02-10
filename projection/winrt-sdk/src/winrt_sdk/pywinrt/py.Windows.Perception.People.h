@@ -91,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::People::HandMeshVertex>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_people.HandMeshVertex_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.perception.people.HandMeshVertex";
         static constexpr const char* module_name = "winrt.windows.perception.people";
         static constexpr const char* type_name = "HandMeshVertex";
@@ -99,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::People::JointPose>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_perception_people.JointPose_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.perception.people.JointPose";
         static constexpr const char* module_name = "winrt.windows.perception.people";
         static constexpr const char* type_name = "JointPose";

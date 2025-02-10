@@ -1076,6 +1076,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_networking_networkoperators.ESimProfileInstallProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimProfileInstallProgress";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimProfileInstallProgress";
@@ -1084,6 +1085,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ProfileUsage>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_networking_networkoperators.ProfileUsage_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ProfileUsage";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ProfileUsage";

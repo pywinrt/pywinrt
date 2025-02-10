@@ -383,6 +383,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePackageUpdateStatus>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_services_store.StorePackageUpdateStatus_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePackageUpdateStatus";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePackageUpdateStatus";

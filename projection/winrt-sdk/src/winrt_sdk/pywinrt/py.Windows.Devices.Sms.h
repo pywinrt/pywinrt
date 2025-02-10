@@ -376,6 +376,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sms::SmsEncodedLength>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_devices_sms.SmsEncodedLength_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.devices.sms.SmsEncodedLength";
         static constexpr const char* module_name = "winrt.windows.devices.sms";
         static constexpr const char* type_name = "SmsEncodedLength";

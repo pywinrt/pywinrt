@@ -386,6 +386,7 @@ namespace py::cpp::_winrt
         .abi_version_minor = py::runtime_abi_version_minor,
         .register_python_type = py::register_python_type,
         .get_python_type = py::get_python_type,
+        .get_struct_from_tuple_func = py::get_struct_from_tuple_func,
         .wrap_mapping_iter = py::wrap_mapping_iter,
         .is_buffer_compatible = py::is_buffer_compatible,
         .convert_datetime = py::convert_datetime,
@@ -562,6 +563,11 @@ namespace py::cpp::_winrt
             Py_VISIT(value);
         }
 
+        for (const auto& [key, value] : state->struct_from_tuple_cache)
+        {
+            Py_VISIT(value);
+        }
+
         return 0;
     }
 
@@ -578,6 +584,13 @@ namespace py::cpp::_winrt
         auto type_cache = std::move(state->type_cache);
 
         for (auto& [key, value] : type_cache)
+        {
+            Py_XDECREF(value);
+        }
+
+        auto struct_from_tuple_cache = std::move(state->struct_from_tuple_cache);
+
+        for (auto& [key, value] : struct_from_tuple_cache)
         {
             Py_XDECREF(value);
         }
@@ -601,6 +614,13 @@ namespace py::cpp::_winrt
         }
 
         std::destroy_at(&state->type_cache);
+
+        for (auto& [key, value] : state->struct_from_tuple_cache)
+        {
+            Py_XDECREF(value);
+        }
+
+        std::destroy_at(&state->struct_from_tuple_cache);
     }
 
     PyDoc_STRVAR(module_doc, "_winrt");
@@ -697,6 +717,7 @@ namespace py::cpp::_winrt
 
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
         std::construct_at(&state->type_cache);
+        std::construct_at(&state->struct_from_tuple_cache);
 
         py::pytype_handle inspectable_meta_type{py::register_python_type(
             module.get(), &IInspectable_Static_type_spec, nullptr, nullptr)};

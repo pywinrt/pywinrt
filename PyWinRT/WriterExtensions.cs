@@ -1343,6 +1343,20 @@ static class WriterExtensions
             )
             {
                 w.WriteNamespaceInitPythonType(t);
+
+                if (t.Category == Category.Struct)
+                {
+                    w.WriteLine(
+                        $"py::pyobj_handle {t.Name}_from_tuple_capsule{{PyCapsule_New(reinterpret_cast<void*>({t.Name}_from_tuple),\"winrt.{t.PyExtModuleName}.{t.Name}_from_tuple\", nullptr)}};"
+                    );
+                    w.WriteLine($"if (!{t.Name}_from_tuple_capsule)");
+                    w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                    w.WriteBlankLine();
+                    w.WriteLine(
+                        $"if (PyModule_AddObjectRef(module.get(), \"{t.Name}_from_tuple\", {t.Name}_from_tuple_capsule.get()) == -1)"
+                    );
+                    w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                }
             }
 
             w.WriteBlankLine();
@@ -1517,6 +1531,13 @@ static class WriterExtensions
         w.WriteBlock(
             () =>
             {
+                if (type.Category == Category.Struct)
+                {
+                    w.WriteLine(
+                        $"static constexpr std::string_view from_tuple = \"winrt.{type.PyExtModuleName}.{type.Name}_from_tuple\";"
+                    );
+                }
+
                 w.WriteLine(
                     $"static constexpr std::string_view qualified_name = \"{type.PyModuleName}.{type.PyWrapperTypeName}\";"
                 );

@@ -332,7 +332,8 @@ static class TypeExtensions
         TypeRefNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false,
-        bool usePythonCollectionTypes = true
+        bool usePythonCollectionTypes = true,
+        bool useStructTupleUnion = false
     ) =>
         string.Format(
             (nullabilityInfo.AllowNull || nullabilityInfo.MaybeNull)
@@ -400,10 +401,19 @@ static class TypeExtensions
                 { FullName: "System.Object" } => "winrt.system.Object",
                 { FullName: "Windows.Foundation.DateTime" } => "datetime.datetime",
                 { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
+                { IsValueType: true } when useStructTupleUnion && !type.Resolve().IsEnum
+                    => $"typing.Union[{type.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)}, {type.ToPyTupleTyping(ns, quoteImportedTypes)}]",
                 _
                     => $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.Namespace.ToPyModuleAlias()}.")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}"
             }
         );
+
+    private static string ToPyTupleTyping(
+        this TypeReference type,
+        string ns,
+        bool quoteImportedTypes
+    ) =>
+        $"typing.Tuple[{string.Join(", ", type.Resolve().Fields.Select(f => f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), default, quoteImportedTypes)))}]";
 
     public static string ToPyInParamTyping(
         this ParameterDefinition param,
@@ -415,7 +425,13 @@ static class TypeExtensions
         param.GetCategory() switch
         {
             ParamCategory.In
-                => param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes),
+                => param.ParameterType.ToPyTypeName(
+                    ns,
+                    nullabilityInfo,
+                    map,
+                    quoteImportedTypes,
+                    useStructTupleUnion: true
+                ),
             ParamCategory.PassArray
                 => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",
             ParamCategory.FillArray

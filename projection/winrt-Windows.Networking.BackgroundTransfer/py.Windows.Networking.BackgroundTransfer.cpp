@@ -7725,6 +7725,25 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundDownloadProgress struct --------------------
 
+    winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress BackgroundDownloadProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 5)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress result{};
+
+        result.BytesReceived = py::convert_to<uint64_t>(tuple, 0);
+        result.TotalBytesToReceive = py::convert_to<uint64_t>(tuple, 1);
+        result.Status = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(tuple, 2);
+        result.HasResponseChanged = py::convert_to<bool>(tuple, 3);
+        result.HasRestarted = py::convert_to<bool>(tuple, 4);
+
+        return result;
+    }
+
     PyObject* _new_BackgroundDownloadProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -7954,6 +7973,22 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundTransferFileRange struct --------------------
 
+    winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange BackgroundTransferFileRange_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange result{};
+
+        result.Offset = py::convert_to<uint64_t>(tuple, 0);
+        result.Length = py::convert_to<uint64_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_BackgroundTransferFileRange(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -8116,6 +8151,27 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         _type_slots_BackgroundTransferFileRange};
 
     // ----- BackgroundUploadProgress struct --------------------
+
+    winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress BackgroundUploadProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 7)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress result{};
+
+        result.BytesReceived = py::convert_to<uint64_t>(tuple, 0);
+        result.BytesSent = py::convert_to<uint64_t>(tuple, 1);
+        result.TotalBytesToReceive = py::convert_to<uint64_t>(tuple, 2);
+        result.TotalBytesToSend = py::convert_to<uint64_t>(tuple, 3);
+        result.Status = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(tuple, 4);
+        result.HasResponseChanged = py::convert_to<bool>(tuple, 5);
+        result.HasRestarted = py::convert_to<bool>(tuple, 6);
+
+        return result;
+    }
 
     PyObject* _new_BackgroundUploadProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8651,18 +8707,48 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
         return nullptr;
     }
 
+    py::pyobj_handle BackgroundDownloadProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(BackgroundDownloadProgress_from_tuple),"winrt._winrt_windows_networking_backgroundtransfer.BackgroundDownloadProgress_from_tuple", nullptr)};
+    if (!BackgroundDownloadProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "BackgroundDownloadProgress_from_tuple", BackgroundDownloadProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle BackgroundTransferFileRange_type{py::register_python_type(module.get(), &type_spec_BackgroundTransferFileRange, nullptr, nullptr)};
     if (!BackgroundTransferFileRange_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle BackgroundTransferFileRange_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(BackgroundTransferFileRange_from_tuple),"winrt._winrt_windows_networking_backgroundtransfer.BackgroundTransferFileRange_from_tuple", nullptr)};
+    if (!BackgroundTransferFileRange_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "BackgroundTransferFileRange_from_tuple", BackgroundTransferFileRange_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle BackgroundUploadProgress_type{py::register_python_type(module.get(), &type_spec_BackgroundUploadProgress, nullptr, nullptr)};
     if (!BackgroundUploadProgress_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle BackgroundUploadProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(BackgroundUploadProgress_from_tuple),"winrt._winrt_windows_networking_backgroundtransfer.BackgroundUploadProgress_from_tuple", nullptr)};
+    if (!BackgroundUploadProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "BackgroundUploadProgress_from_tuple", BackgroundUploadProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

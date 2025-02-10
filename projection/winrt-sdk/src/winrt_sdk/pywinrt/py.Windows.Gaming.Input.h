@@ -212,6 +212,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ArcadeStickReading>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.ArcadeStickReading_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.ArcadeStickReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "ArcadeStickReading";
@@ -220,6 +221,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::FlightStickReading>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.FlightStickReading_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.FlightStickReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "FlightStickReading";
@@ -228,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GamepadReading>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.GamepadReading_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GamepadReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "GamepadReading";
@@ -236,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GamepadVibration>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.GamepadVibration_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GamepadVibration";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "GamepadVibration";
@@ -244,6 +248,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::RacingWheelReading>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.RacingWheelReading_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RacingWheelReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "RacingWheelReading";
@@ -252,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::UINavigationReading>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_gaming_input.UINavigationReading_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.UINavigationReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "UINavigationReading";

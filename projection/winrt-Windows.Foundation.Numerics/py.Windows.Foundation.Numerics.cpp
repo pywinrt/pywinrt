@@ -6,6 +6,26 @@ namespace py::cpp::Windows::Foundation::Numerics
 {
     // ----- Matrix3x2 struct --------------------
 
+    winrt::Windows::Foundation::Numerics::float3x2 Matrix3x2_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 6)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Numerics::float3x2 result{};
+
+        result.m11 = py::convert_to<float>(tuple, 0);
+        result.m12 = py::convert_to<float>(tuple, 1);
+        result.m21 = py::convert_to<float>(tuple, 2);
+        result.m22 = py::convert_to<float>(tuple, 3);
+        result.m31 = py::convert_to<float>(tuple, 4);
+        result.m32 = py::convert_to<float>(tuple, 5);
+
+        return result;
+    }
+
     PyObject* _new_Matrix3x2(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -764,6 +784,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         type_slots_Matrix3x2_Static};
 
     // ----- Matrix4x4 struct --------------------
+
+    winrt::Windows::Foundation::Numerics::float4x4 Matrix4x4_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 16)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Numerics::float4x4 result{};
+
+        result.m11 = py::convert_to<float>(tuple, 0);
+        result.m12 = py::convert_to<float>(tuple, 1);
+        result.m13 = py::convert_to<float>(tuple, 2);
+        result.m14 = py::convert_to<float>(tuple, 3);
+        result.m21 = py::convert_to<float>(tuple, 4);
+        result.m22 = py::convert_to<float>(tuple, 5);
+        result.m23 = py::convert_to<float>(tuple, 6);
+        result.m24 = py::convert_to<float>(tuple, 7);
+        result.m31 = py::convert_to<float>(tuple, 8);
+        result.m32 = py::convert_to<float>(tuple, 9);
+        result.m33 = py::convert_to<float>(tuple, 10);
+        result.m34 = py::convert_to<float>(tuple, 11);
+        result.m41 = py::convert_to<float>(tuple, 12);
+        result.m42 = py::convert_to<float>(tuple, 13);
+        result.m43 = py::convert_to<float>(tuple, 14);
+        result.m44 = py::convert_to<float>(tuple, 15);
+
+        return result;
+    }
 
     PyObject* _new_Matrix4x4(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2303,6 +2353,22 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Plane struct --------------------
 
+    winrt::Windows::Foundation::Numerics::plane Plane_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Numerics::plane result{};
+
+        result.normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 0);
+        result.d = py::convert_to<float>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_Plane(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -2636,6 +2702,24 @@ namespace py::cpp::Windows::Foundation::Numerics
         type_slots_Plane_Static};
 
     // ----- Quaternion struct --------------------
+
+    winrt::Windows::Foundation::Numerics::quaternion Quaternion_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Numerics::quaternion result{};
+
+        result.x = py::convert_to<float>(tuple, 0);
+        result.y = py::convert_to<float>(tuple, 1);
+        result.z = py::convert_to<float>(tuple, 2);
+        result.w = py::convert_to<float>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_Quaternion(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3266,6 +3350,22 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Rational struct --------------------
 
+    winrt::Windows::Foundation::Numerics::Rational Rational_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Numerics::Rational result{};
+
+        result.Numerator = py::convert_to<uint32_t>(tuple, 0);
+        result.Denominator = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_Rational(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -3428,6 +3528,22 @@ namespace py::cpp::Windows::Foundation::Numerics
         _type_slots_Rational};
 
     // ----- Vector2 struct --------------------
+
+    winrt::Windows::Foundation::Numerics::float2 Vector2_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Numerics::float2 result{};
+
+        result.x = py::convert_to<float>(tuple, 0);
+        result.y = py::convert_to<float>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_Vector2(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4124,6 +4240,23 @@ namespace py::cpp::Windows::Foundation::Numerics
         type_slots_Vector2_Static};
 
     // ----- Vector3 struct --------------------
+
+    winrt::Windows::Foundation::Numerics::float3 Vector3_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Numerics::float3 result{};
+
+        result.x = py::convert_to<float>(tuple, 0);
+        result.y = py::convert_to<float>(tuple, 1);
+        result.z = py::convert_to<float>(tuple, 2);
+
+        return result;
+    }
 
     PyObject* _new_Vector3(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4842,6 +4975,24 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Vector4 struct --------------------
 
+    winrt::Windows::Foundation::Numerics::float4 Vector4_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Foundation::Numerics::float4 result{};
+
+        result.x = py::convert_to<float>(tuple, 0);
+        result.y = py::convert_to<float>(tuple, 1);
+        result.z = py::convert_to<float>(tuple, 2);
+        result.w = py::convert_to<float>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_Vector4(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5551,6 +5702,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Matrix3x2_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Matrix3x2_from_tuple),"winrt._winrt_windows_foundation_numerics.Matrix3x2_from_tuple", nullptr)};
+    if (!Matrix3x2_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Matrix3x2_from_tuple", Matrix3x2_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pyobj_handle type_Matrix4x4_Static{PyType_FromSpec(&type_spec_Matrix4x4_Static)};
     if (!type_Matrix4x4_Static)
     {
@@ -5563,6 +5724,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Matrix4x4_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Matrix4x4_from_tuple),"winrt._winrt_windows_foundation_numerics.Matrix4x4_from_tuple", nullptr)};
+    if (!Matrix4x4_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Matrix4x4_from_tuple", Matrix4x4_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pyobj_handle type_Plane_Static{PyType_FromSpec(&type_spec_Plane_Static)};
     if (!type_Plane_Static)
     {
@@ -5575,6 +5746,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Plane_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Plane_from_tuple),"winrt._winrt_windows_foundation_numerics.Plane_from_tuple", nullptr)};
+    if (!Plane_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Plane_from_tuple", Plane_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pyobj_handle type_Quaternion_Static{PyType_FromSpec(&type_spec_Quaternion_Static)};
     if (!type_Quaternion_Static)
     {
@@ -5587,12 +5768,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Quaternion_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Quaternion_from_tuple),"winrt._winrt_windows_foundation_numerics.Quaternion_from_tuple", nullptr)};
+    if (!Quaternion_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Quaternion_from_tuple", Quaternion_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle Rational_type{py::register_python_type(module.get(), &type_spec_Rational, nullptr, nullptr)};
     if (!Rational_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle Rational_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Rational_from_tuple),"winrt._winrt_windows_foundation_numerics.Rational_from_tuple", nullptr)};
+    if (!Rational_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Rational_from_tuple", Rational_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pyobj_handle type_Vector2_Static{PyType_FromSpec(&type_spec_Vector2_Static)};
     if (!type_Vector2_Static)
     {
@@ -5605,6 +5806,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Vector2_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Vector2_from_tuple),"winrt._winrt_windows_foundation_numerics.Vector2_from_tuple", nullptr)};
+    if (!Vector2_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Vector2_from_tuple", Vector2_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pyobj_handle type_Vector3_Static{PyType_FromSpec(&type_spec_Vector3_Static)};
     if (!type_Vector3_Static)
     {
@@ -5617,6 +5828,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Vector3_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Vector3_from_tuple),"winrt._winrt_windows_foundation_numerics.Vector3_from_tuple", nullptr)};
+    if (!Vector3_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Vector3_from_tuple", Vector3_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pyobj_handle type_Vector4_Static{PyType_FromSpec(&type_spec_Vector4_Static)};
     if (!type_Vector4_Static)
     {
@@ -5629,6 +5850,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Vector4_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(Vector4_from_tuple),"winrt._winrt_windows_foundation_numerics.Vector4_from_tuple", nullptr)};
+    if (!Vector4_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "Vector4_from_tuple", Vector4_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

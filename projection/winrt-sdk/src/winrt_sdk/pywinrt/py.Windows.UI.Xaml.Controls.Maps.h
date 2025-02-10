@@ -616,6 +616,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml_controls_maps.MapZoomLevelRange_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapZoomLevelRange";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapZoomLevelRange";

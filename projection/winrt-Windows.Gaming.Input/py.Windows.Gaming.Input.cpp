@@ -5947,6 +5947,22 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- ArcadeStickReading struct --------------------
 
+    winrt::Windows::Gaming::Input::ArcadeStickReading ArcadeStickReading_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::ArcadeStickReading result{};
+
+        result.Timestamp = py::convert_to<uint64_t>(tuple, 0);
+        result.Buttons = py::convert_to<winrt::Windows::Gaming::Input::ArcadeStickButtons>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_ArcadeStickReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -6109,6 +6125,27 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_ArcadeStickReading};
 
     // ----- FlightStickReading struct --------------------
+
+    winrt::Windows::Gaming::Input::FlightStickReading FlightStickReading_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 7)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::FlightStickReading result{};
+
+        result.Timestamp = py::convert_to<uint64_t>(tuple, 0);
+        result.Buttons = py::convert_to<winrt::Windows::Gaming::Input::FlightStickButtons>(tuple, 1);
+        result.HatSwitch = py::convert_to<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>(tuple, 2);
+        result.Roll = py::convert_to<double>(tuple, 3);
+        result.Pitch = py::convert_to<double>(tuple, 4);
+        result.Yaw = py::convert_to<double>(tuple, 5);
+        result.Throttle = py::convert_to<double>(tuple, 6);
+
+        return result;
+    }
 
     PyObject* _new_FlightStickReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6382,6 +6419,28 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_FlightStickReading};
 
     // ----- GamepadReading struct --------------------
+
+    winrt::Windows::Gaming::Input::GamepadReading GamepadReading_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 8)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::GamepadReading result{};
+
+        result.Timestamp = py::convert_to<uint64_t>(tuple, 0);
+        result.Buttons = py::convert_to<winrt::Windows::Gaming::Input::GamepadButtons>(tuple, 1);
+        result.LeftTrigger = py::convert_to<double>(tuple, 2);
+        result.RightTrigger = py::convert_to<double>(tuple, 3);
+        result.LeftThumbstickX = py::convert_to<double>(tuple, 4);
+        result.LeftThumbstickY = py::convert_to<double>(tuple, 5);
+        result.RightThumbstickX = py::convert_to<double>(tuple, 6);
+        result.RightThumbstickY = py::convert_to<double>(tuple, 7);
+
+        return result;
+    }
 
     PyObject* _new_GamepadReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6678,6 +6737,24 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- GamepadVibration struct --------------------
 
+    winrt::Windows::Gaming::Input::GamepadVibration GamepadVibration_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::GamepadVibration result{};
+
+        result.LeftMotor = py::convert_to<double>(tuple, 0);
+        result.RightMotor = py::convert_to<double>(tuple, 1);
+        result.LeftTrigger = py::convert_to<double>(tuple, 2);
+        result.RightTrigger = py::convert_to<double>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_GamepadVibration(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -6884,6 +6961,28 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_GamepadVibration};
 
     // ----- RacingWheelReading struct --------------------
+
+    winrt::Windows::Gaming::Input::RacingWheelReading RacingWheelReading_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 8)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::RacingWheelReading result{};
+
+        result.Timestamp = py::convert_to<uint64_t>(tuple, 0);
+        result.Buttons = py::convert_to<winrt::Windows::Gaming::Input::RacingWheelButtons>(tuple, 1);
+        result.PatternShifterGear = py::convert_to<int32_t>(tuple, 2);
+        result.Wheel = py::convert_to<double>(tuple, 3);
+        result.Throttle = py::convert_to<double>(tuple, 4);
+        result.Brake = py::convert_to<double>(tuple, 5);
+        result.Clutch = py::convert_to<double>(tuple, 6);
+        result.Handbrake = py::convert_to<double>(tuple, 7);
+
+        return result;
+    }
 
     PyObject* _new_RacingWheelReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7179,6 +7278,23 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_RacingWheelReading};
 
     // ----- UINavigationReading struct --------------------
+
+    winrt::Windows::Gaming::Input::UINavigationReading UINavigationReading_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::UINavigationReading result{};
+
+        result.Timestamp = py::convert_to<uint64_t>(tuple, 0);
+        result.RequiredButtons = py::convert_to<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>(tuple, 1);
+        result.OptionalButtons = py::convert_to<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>(tuple, 2);
+
+        return result;
+    }
 
     PyObject* _new_UINavigationReading(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7568,36 +7684,96 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle ArcadeStickReading_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(ArcadeStickReading_from_tuple),"winrt._winrt_windows_gaming_input.ArcadeStickReading_from_tuple", nullptr)};
+    if (!ArcadeStickReading_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "ArcadeStickReading_from_tuple", ArcadeStickReading_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle FlightStickReading_type{py::register_python_type(module.get(), &type_spec_FlightStickReading, nullptr, nullptr)};
     if (!FlightStickReading_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle FlightStickReading_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(FlightStickReading_from_tuple),"winrt._winrt_windows_gaming_input.FlightStickReading_from_tuple", nullptr)};
+    if (!FlightStickReading_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "FlightStickReading_from_tuple", FlightStickReading_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle GamepadReading_type{py::register_python_type(module.get(), &type_spec_GamepadReading, nullptr, nullptr)};
     if (!GamepadReading_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle GamepadReading_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(GamepadReading_from_tuple),"winrt._winrt_windows_gaming_input.GamepadReading_from_tuple", nullptr)};
+    if (!GamepadReading_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "GamepadReading_from_tuple", GamepadReading_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle GamepadVibration_type{py::register_python_type(module.get(), &type_spec_GamepadVibration, nullptr, nullptr)};
     if (!GamepadVibration_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle GamepadVibration_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(GamepadVibration_from_tuple),"winrt._winrt_windows_gaming_input.GamepadVibration_from_tuple", nullptr)};
+    if (!GamepadVibration_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "GamepadVibration_from_tuple", GamepadVibration_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle RacingWheelReading_type{py::register_python_type(module.get(), &type_spec_RacingWheelReading, nullptr, nullptr)};
     if (!RacingWheelReading_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle RacingWheelReading_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(RacingWheelReading_from_tuple),"winrt._winrt_windows_gaming_input.RacingWheelReading_from_tuple", nullptr)};
+    if (!RacingWheelReading_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "RacingWheelReading_from_tuple", RacingWheelReading_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle UINavigationReading_type{py::register_python_type(module.get(), &type_spec_UINavigationReading, nullptr, nullptr)};
     if (!UINavigationReading_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle UINavigationReading_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(UINavigationReading_from_tuple),"winrt._winrt_windows_gaming_input.UINavigationReading_from_tuple", nullptr)};
+    if (!UINavigationReading_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "UINavigationReading_from_tuple", UINavigationReading_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

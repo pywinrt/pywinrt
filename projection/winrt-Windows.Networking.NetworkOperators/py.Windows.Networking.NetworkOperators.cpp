@@ -20689,6 +20689,22 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimProfileInstallProgress struct --------------------
 
+    winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress ESimProfileInstallProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress result{};
+
+        result.TotalSizeInBytes = py::convert_to<int32_t>(tuple, 0);
+        result.InstalledSizeInBytes = py::convert_to<int32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_ESimProfileInstallProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -20851,6 +20867,22 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         _type_slots_ESimProfileInstallProgress};
 
     // ----- ProfileUsage struct --------------------
+
+    winrt::Windows::Networking::NetworkOperators::ProfileUsage ProfileUsage_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Networking::NetworkOperators::ProfileUsage result{};
+
+        result.UsageInMegabytes = py::convert_to<uint32_t>(tuple, 0);
+        result.LastSyncTime = py::convert_to<winrt::Windows::Foundation::DateTime>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_ProfileUsage(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -21718,12 +21750,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle ESimProfileInstallProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(ESimProfileInstallProgress_from_tuple),"winrt._winrt_windows_networking_networkoperators.ESimProfileInstallProgress_from_tuple", nullptr)};
+    if (!ESimProfileInstallProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "ESimProfileInstallProgress_from_tuple", ESimProfileInstallProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle ProfileUsage_type{py::register_python_type(module.get(), &type_spec_ProfileUsage, nullptr, nullptr)};
     if (!ProfileUsage_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle ProfileUsage_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(ProfileUsage_from_tuple),"winrt._winrt_windows_networking_networkoperators.ProfileUsage_from_tuple", nullptr)};
+    if (!ProfileUsage_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "ProfileUsage_from_tuple", ProfileUsage_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

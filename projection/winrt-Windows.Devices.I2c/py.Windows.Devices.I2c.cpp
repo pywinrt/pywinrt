@@ -1471,6 +1471,22 @@ namespace py::cpp::Windows::Devices::I2c
 
     // ----- I2cTransferResult struct --------------------
 
+    winrt::Windows::Devices::I2c::I2cTransferResult I2cTransferResult_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Devices::I2c::I2cTransferResult result{};
+
+        result.Status = py::convert_to<winrt::Windows::Devices::I2c::I2cTransferStatus>(tuple, 0);
+        result.BytesTransferred = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_I2cTransferResult(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -1748,6 +1764,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle I2cTransferResult_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(I2cTransferResult_from_tuple),"winrt._winrt_windows_devices_i2c.I2cTransferResult_from_tuple", nullptr)};
+    if (!I2cTransferResult_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "I2cTransferResult_from_tuple", I2cTransferResult_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

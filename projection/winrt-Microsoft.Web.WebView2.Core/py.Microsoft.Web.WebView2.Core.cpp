@@ -21592,6 +21592,26 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     // ----- CoreWebView2PhysicalKeyStatus struct --------------------
 
+    winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus CoreWebView2PhysicalKeyStatus_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 6)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2PhysicalKeyStatus result{};
+
+        result.RepeatCount = py::convert_to<uint32_t>(tuple, 0);
+        result.ScanCode = py::convert_to<uint32_t>(tuple, 1);
+        result.IsExtendedKey = py::convert_to<int32_t>(tuple, 2);
+        result.IsMenuKeyDown = py::convert_to<int32_t>(tuple, 3);
+        result.WasKeyDown = py::convert_to<int32_t>(tuple, 4);
+        result.IsKeyReleased = py::convert_to<int32_t>(tuple, 5);
+
+        return result;
+    }
+
     PyObject* _new_CoreWebView2PhysicalKeyStatus(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -22353,6 +22373,16 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle CoreWebView2PhysicalKeyStatus_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(CoreWebView2PhysicalKeyStatus_from_tuple),"winrt._winrt_microsoft_web_webview2_core.CoreWebView2PhysicalKeyStatus_from_tuple", nullptr)};
+    if (!CoreWebView2PhysicalKeyStatus_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "CoreWebView2PhysicalKeyStatus_from_tuple", CoreWebView2PhysicalKeyStatus_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

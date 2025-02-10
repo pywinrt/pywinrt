@@ -99,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::TypeName>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml_interop.TypeName_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.TypeName";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "TypeName";

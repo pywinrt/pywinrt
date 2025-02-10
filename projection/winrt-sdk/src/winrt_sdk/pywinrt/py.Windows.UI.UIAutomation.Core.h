@@ -124,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_uiautomation_core.AutomationAnnotationTypeRegistration_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.AutomationAnnotationTypeRegistration";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "AutomationAnnotationTypeRegistration";
@@ -132,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_uiautomation_core.AutomationRemoteOperationOperandId_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "AutomationRemoteOperationOperandId";

@@ -41,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Numerics::float3x2>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation_numerics.Matrix3x2_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.numerics.Matrix3x2";
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Matrix3x2";
@@ -49,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Numerics::float4x4>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation_numerics.Matrix4x4_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.numerics.Matrix4x4";
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Matrix4x4";
@@ -57,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Numerics::plane>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation_numerics.Plane_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.numerics.Plane";
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Plane";
@@ -65,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Numerics::quaternion>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation_numerics.Quaternion_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.numerics.Quaternion";
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Quaternion";
@@ -73,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Numerics::Rational>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation_numerics.Rational_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.numerics.Rational";
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Rational";
@@ -81,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Numerics::float2>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation_numerics.Vector2_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.numerics.Vector2";
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Vector2";
@@ -89,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Numerics::float3>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation_numerics.Vector3_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.numerics.Vector3";
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Vector3";
@@ -97,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Numerics::float4>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_foundation_numerics.Vector4_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.foundation.numerics.Vector4";
         static constexpr const char* module_name = "winrt.windows.foundation.numerics";
         static constexpr const char* type_name = "Vector4";

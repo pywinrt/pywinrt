@@ -331,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeploymentProgress>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_management_deployment.DeploymentProgress_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.DeploymentProgress";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "DeploymentProgress";

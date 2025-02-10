@@ -9006,6 +9006,21 @@ namespace py::cpp::Microsoft::UI::Xaml::Data
 
     // ----- LoadMoreItemsResult struct --------------------
 
+    winrt::Microsoft::UI::Xaml::Data::LoadMoreItemsResult LoadMoreItemsResult_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 1)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::UI::Xaml::Data::LoadMoreItemsResult result{};
+
+        result.Count = py::convert_to<uint32_t>(tuple, 0);
+
+        return result;
+    }
+
     PyObject* _new_LoadMoreItemsResult(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -9617,6 +9632,16 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle LoadMoreItemsResult_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(LoadMoreItemsResult_from_tuple),"winrt._winrt_microsoft_ui_xaml_data.LoadMoreItemsResult_from_tuple", nullptr)};
+    if (!LoadMoreItemsResult_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "LoadMoreItemsResult_from_tuple", LoadMoreItemsResult_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

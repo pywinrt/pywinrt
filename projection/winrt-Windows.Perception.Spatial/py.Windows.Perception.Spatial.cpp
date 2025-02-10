@@ -4916,6 +4916,22 @@ namespace py::cpp::Windows::Perception::Spatial
 
     // ----- SpatialBoundingBox struct --------------------
 
+    winrt::Windows::Perception::Spatial::SpatialBoundingBox SpatialBoundingBox_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Perception::Spatial::SpatialBoundingBox result{};
+
+        result.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 0);
+        result.Extents = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_SpatialBoundingBox(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5078,6 +5094,26 @@ namespace py::cpp::Windows::Perception::Spatial
         _type_slots_SpatialBoundingBox};
 
     // ----- SpatialBoundingFrustum struct --------------------
+
+    winrt::Windows::Perception::Spatial::SpatialBoundingFrustum SpatialBoundingFrustum_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 6)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Perception::Spatial::SpatialBoundingFrustum result{};
+
+        result.Near = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(tuple, 0);
+        result.Far = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(tuple, 1);
+        result.Right = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(tuple, 2);
+        result.Left = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(tuple, 3);
+        result.Top = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(tuple, 4);
+        result.Bottom = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(tuple, 5);
+
+        return result;
+    }
 
     PyObject* _new_SpatialBoundingFrustum(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5330,6 +5366,23 @@ namespace py::cpp::Windows::Perception::Spatial
 
     // ----- SpatialBoundingOrientedBox struct --------------------
 
+    winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox SpatialBoundingOrientedBox_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox result{};
+
+        result.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 0);
+        result.Extents = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 1);
+        result.Orientation = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(tuple, 2);
+
+        return result;
+    }
+
     PyObject* _new_SpatialBoundingOrientedBox(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5515,6 +5568,22 @@ namespace py::cpp::Windows::Perception::Spatial
 
     // ----- SpatialBoundingSphere struct --------------------
 
+    winrt::Windows::Perception::Spatial::SpatialBoundingSphere SpatialBoundingSphere_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Perception::Spatial::SpatialBoundingSphere result{};
+
+        result.Center = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 0);
+        result.Radius = py::convert_to<float>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_SpatialBoundingSphere(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -5677,6 +5746,22 @@ namespace py::cpp::Windows::Perception::Spatial
         _type_slots_SpatialBoundingSphere};
 
     // ----- SpatialRay struct --------------------
+
+    winrt::Windows::Perception::Spatial::SpatialRay SpatialRay_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Perception::Spatial::SpatialRay result{};
+
+        result.Origin = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 0);
+        result.Direction = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_SpatialRay(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6118,30 +6203,80 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle SpatialBoundingBox_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(SpatialBoundingBox_from_tuple),"winrt._winrt_windows_perception_spatial.SpatialBoundingBox_from_tuple", nullptr)};
+    if (!SpatialBoundingBox_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "SpatialBoundingBox_from_tuple", SpatialBoundingBox_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle SpatialBoundingFrustum_type{py::register_python_type(module.get(), &type_spec_SpatialBoundingFrustum, nullptr, nullptr)};
     if (!SpatialBoundingFrustum_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle SpatialBoundingFrustum_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(SpatialBoundingFrustum_from_tuple),"winrt._winrt_windows_perception_spatial.SpatialBoundingFrustum_from_tuple", nullptr)};
+    if (!SpatialBoundingFrustum_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "SpatialBoundingFrustum_from_tuple", SpatialBoundingFrustum_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle SpatialBoundingOrientedBox_type{py::register_python_type(module.get(), &type_spec_SpatialBoundingOrientedBox, nullptr, nullptr)};
     if (!SpatialBoundingOrientedBox_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle SpatialBoundingOrientedBox_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(SpatialBoundingOrientedBox_from_tuple),"winrt._winrt_windows_perception_spatial.SpatialBoundingOrientedBox_from_tuple", nullptr)};
+    if (!SpatialBoundingOrientedBox_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "SpatialBoundingOrientedBox_from_tuple", SpatialBoundingOrientedBox_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle SpatialBoundingSphere_type{py::register_python_type(module.get(), &type_spec_SpatialBoundingSphere, nullptr, nullptr)};
     if (!SpatialBoundingSphere_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle SpatialBoundingSphere_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(SpatialBoundingSphere_from_tuple),"winrt._winrt_windows_perception_spatial.SpatialBoundingSphere_from_tuple", nullptr)};
+    if (!SpatialBoundingSphere_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "SpatialBoundingSphere_from_tuple", SpatialBoundingSphere_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle SpatialRay_type{py::register_python_type(module.get(), &type_spec_SpatialRay, nullptr, nullptr)};
     if (!SpatialRay_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle SpatialRay_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(SpatialRay_from_tuple),"winrt._winrt_windows_perception_spatial.SpatialRay_from_tuple", nullptr)};
+    if (!SpatialRay_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "SpatialRay_from_tuple", SpatialRay_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

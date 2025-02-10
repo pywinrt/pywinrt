@@ -116,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::TestComponent::Blittable>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_testcomponent.Blittable_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.testcomponent.Blittable";
         static constexpr const char* module_name = "winrt.testcomponent";
         static constexpr const char* type_name = "Blittable";
@@ -124,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::TestComponent::Nested>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_testcomponent.Nested_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.testcomponent.Nested";
         static constexpr const char* module_name = "winrt.testcomponent";
         static constexpr const char* type_name = "Nested";
@@ -132,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::TestComponent::NonBlittable>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_testcomponent.NonBlittable_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.testcomponent.NonBlittable";
         static constexpr const char* module_name = "winrt.testcomponent";
         static constexpr const char* type_name = "NonBlittable";

@@ -464,3 +464,32 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(len(exceptions), 1)
         self.assertEqual(exceptions[0].exc_type, TypeError)
+
+    def test_tuple_to_struct(self):
+        test = tc.TestRunner.make_tests()
+
+        # can pass unspecialized tuple as projected struct
+        _, _ = test.param13(
+            (1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
+            tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
+        )
+
+    def test_tuple_to_struct_wrong_arity(self):
+        test = tc.TestRunner.make_tests()
+
+        # passing 9-tuple as 10-field struct results in TypeError
+        with self.assertRaises(TypeError):
+            _, _ = test.param13(
+                (1, 2, 3, 4, 5, 6, 7, 8, 9),  # type: ignore
+                tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
+            )
+
+    def test_tuple_to_struct_wrong_type(self):
+        test = tc.TestRunner.make_tests()
+
+        # passing wrong type for one of the tuple elements results in TypeError
+        with self.assertRaises(TypeError):
+            _, _ = test.param13(
+                (1, 2, 3, 4, 5, 6, 7, 8, 9, 10),  # type: ignore
+                tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
+            )

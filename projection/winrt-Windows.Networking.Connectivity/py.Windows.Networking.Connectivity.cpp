@@ -6308,6 +6308,22 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkUsageStates struct --------------------
 
+    winrt::Windows::Networking::Connectivity::NetworkUsageStates NetworkUsageStates_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Networking::Connectivity::NetworkUsageStates result{};
+
+        result.Roaming = py::convert_to<winrt::Windows::Networking::Connectivity::TriStates>(tuple, 0);
+        result.Shared = py::convert_to<winrt::Windows::Networking::Connectivity::TriStates>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_NetworkUsageStates(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -6700,6 +6716,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_connectivity(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle NetworkUsageStates_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(NetworkUsageStates_from_tuple),"winrt._winrt_windows_networking_connectivity.NetworkUsageStates_from_tuple", nullptr)};
+    if (!NetworkUsageStates_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "NetworkUsageStates_from_tuple", NetworkUsageStates_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

@@ -9837,6 +9837,26 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpProgress struct --------------------
 
+    winrt::Windows::Web::Http::HttpProgress HttpProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 6)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Web::Http::HttpProgress result{};
+
+        result.Stage = py::convert_to<winrt::Windows::Web::Http::HttpProgressStage>(tuple, 0);
+        result.BytesSent = py::convert_to<uint64_t>(tuple, 1);
+        result.TotalBytesToSend = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(tuple, 2);
+        result.BytesReceived = py::convert_to<uint64_t>(tuple, 3);
+        result.TotalBytesToReceive = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(tuple, 4);
+        result.Retries = py::convert_to<uint32_t>(tuple, 5);
+
+        return result;
+    }
+
     PyObject* _new_HttpProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -10280,6 +10300,16 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle HttpProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(HttpProgress_from_tuple),"winrt._winrt_windows_web_http.HttpProgress_from_tuple", nullptr)};
+    if (!HttpProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "HttpProgress_from_tuple", HttpProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

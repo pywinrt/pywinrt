@@ -1182,6 +1182,22 @@ namespace py::cpp::Windows::Perception::People
 
     // ----- HandMeshVertex struct --------------------
 
+    winrt::Windows::Perception::People::HandMeshVertex HandMeshVertex_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Perception::People::HandMeshVertex result{};
+
+        result.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 0);
+        result.Normal = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 1);
+
+        return result;
+    }
+
     PyObject* _new_HandMeshVertex(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -1344,6 +1360,24 @@ namespace py::cpp::Windows::Perception::People
         _type_slots_HandMeshVertex};
 
     // ----- JointPose struct --------------------
+
+    winrt::Windows::Perception::People::JointPose JointPose_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Perception::People::JointPose result{};
+
+        result.Orientation = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(tuple, 0);
+        result.Position = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(tuple, 1);
+        result.Radius = py::convert_to<float>(tuple, 2);
+        result.Accuracy = py::convert_to<winrt::Windows::Perception::People::JointPoseAccuracy>(tuple, 3);
+
+        return result;
+    }
 
     PyObject* _new_JointPose(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1649,12 +1683,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_people(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle HandMeshVertex_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(HandMeshVertex_from_tuple),"winrt._winrt_windows_perception_people.HandMeshVertex_from_tuple", nullptr)};
+    if (!HandMeshVertex_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "HandMeshVertex_from_tuple", HandMeshVertex_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle JointPose_type{py::register_python_type(module.get(), &type_spec_JointPose, nullptr, nullptr)};
     if (!JointPose_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle JointPose_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(JointPose_from_tuple),"winrt._winrt_windows_perception_people.JointPose_from_tuple", nullptr)};
+    if (!JointPose_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "JointPose_from_tuple", JointPose_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

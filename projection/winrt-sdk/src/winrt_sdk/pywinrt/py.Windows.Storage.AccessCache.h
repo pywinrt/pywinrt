@@ -94,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::AccessListEntry>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_storage_accesscache.AccessListEntry_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.AccessListEntry";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "AccessListEntry";

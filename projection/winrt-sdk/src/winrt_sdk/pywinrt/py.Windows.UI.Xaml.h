@@ -1007,6 +1007,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::CornerRadius>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml.CornerRadius_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.CornerRadius";
         static constexpr const char* module_name = "winrt.windows.ui.xaml";
         static constexpr const char* type_name = "CornerRadius";
@@ -1015,6 +1016,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Duration>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml.Duration_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.Duration";
         static constexpr const char* module_name = "winrt.windows.ui.xaml";
         static constexpr const char* type_name = "Duration";
@@ -1023,6 +1025,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::GridLength>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml.GridLength_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.GridLength";
         static constexpr const char* module_name = "winrt.windows.ui.xaml";
         static constexpr const char* type_name = "GridLength";
@@ -1031,6 +1034,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Thickness>
     {
+        static constexpr std::string_view from_tuple = "winrt._winrt_windows_ui_xaml.Thickness_from_tuple";
         static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.Thickness";
         static constexpr const char* module_name = "winrt.windows.ui.xaml";
         static constexpr const char* type_name = "Thickness";

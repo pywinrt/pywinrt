@@ -8649,6 +8649,24 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapBounds struct --------------------
 
+    winrt::Windows::Graphics::Imaging::BitmapBounds BitmapBounds_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Imaging::BitmapBounds result{};
+
+        result.X = py::convert_to<uint32_t>(tuple, 0);
+        result.Y = py::convert_to<uint32_t>(tuple, 1);
+        result.Width = py::convert_to<uint32_t>(tuple, 2);
+        result.Height = py::convert_to<uint32_t>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_BitmapBounds(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -8856,6 +8874,24 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapPlaneDescription struct --------------------
 
+    winrt::Windows::Graphics::Imaging::BitmapPlaneDescription BitmapPlaneDescription_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Imaging::BitmapPlaneDescription result{};
+
+        result.StartIndex = py::convert_to<int32_t>(tuple, 0);
+        result.Width = py::convert_to<int32_t>(tuple, 1);
+        result.Height = py::convert_to<int32_t>(tuple, 2);
+        result.Stride = py::convert_to<int32_t>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_BitmapPlaneDescription(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -9062,6 +9098,22 @@ namespace py::cpp::Windows::Graphics::Imaging
         _type_slots_BitmapPlaneDescription};
 
     // ----- BitmapSize struct --------------------
+
+    winrt::Windows::Graphics::Imaging::BitmapSize BitmapSize_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Graphics::Imaging::BitmapSize result{};
+
+        result.Width = py::convert_to<uint32_t>(tuple, 0);
+        result.Height = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_BitmapSize(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9446,18 +9498,48 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle BitmapBounds_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(BitmapBounds_from_tuple),"winrt._winrt_windows_graphics_imaging.BitmapBounds_from_tuple", nullptr)};
+    if (!BitmapBounds_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "BitmapBounds_from_tuple", BitmapBounds_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle BitmapPlaneDescription_type{py::register_python_type(module.get(), &type_spec_BitmapPlaneDescription, nullptr, nullptr)};
     if (!BitmapPlaneDescription_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle BitmapPlaneDescription_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(BitmapPlaneDescription_from_tuple),"winrt._winrt_windows_graphics_imaging.BitmapPlaneDescription_from_tuple", nullptr)};
+    if (!BitmapPlaneDescription_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "BitmapPlaneDescription_from_tuple", BitmapPlaneDescription_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle BitmapSize_type{py::register_python_type(module.get(), &type_spec_BitmapSize, nullptr, nullptr)};
     if (!BitmapSize_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle BitmapSize_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(BitmapSize_from_tuple),"winrt._winrt_windows_graphics_imaging.BitmapSize_from_tuple", nullptr)};
+    if (!BitmapSize_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "BitmapSize_from_tuple", BitmapSize_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

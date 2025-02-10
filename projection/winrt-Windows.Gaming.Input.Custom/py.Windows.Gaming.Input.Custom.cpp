@@ -3622,6 +3622,24 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- GameControllerVersionInfo struct --------------------
 
+    winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo GameControllerVersionInfo_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 4)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo result{};
+
+        result.Major = py::convert_to<uint16_t>(tuple, 0);
+        result.Minor = py::convert_to<uint16_t>(tuple, 1);
+        result.Build = py::convert_to<uint16_t>(tuple, 2);
+        result.Revision = py::convert_to<uint16_t>(tuple, 3);
+
+        return result;
+    }
+
     PyObject* _new_GameControllerVersionInfo(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
         pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
@@ -3828,6 +3846,22 @@ namespace py::cpp::Windows::Gaming::Input::Custom
         _type_slots_GameControllerVersionInfo};
 
     // ----- GipFirmwareUpdateProgress struct --------------------
+
+    winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress GipFirmwareUpdateProgress_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 2)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress result{};
+
+        result.PercentCompleted = py::convert_to<double>(tuple, 0);
+        result.CurrentComponentId = py::convert_to<uint32_t>(tuple, 1);
+
+        return result;
+    }
 
     PyObject* _new_GipFirmwareUpdateProgress(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4191,12 +4225,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle GameControllerVersionInfo_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(GameControllerVersionInfo_from_tuple),"winrt._winrt_windows_gaming_input_custom.GameControllerVersionInfo_from_tuple", nullptr)};
+    if (!GameControllerVersionInfo_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "GameControllerVersionInfo_from_tuple", GameControllerVersionInfo_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
     py::pytype_handle GipFirmwareUpdateProgress_type{py::register_python_type(module.get(), &type_spec_GipFirmwareUpdateProgress, nullptr, nullptr)};
     if (!GipFirmwareUpdateProgress_type)
     {
         return nullptr;
     }
 
+    py::pyobj_handle GipFirmwareUpdateProgress_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(GipFirmwareUpdateProgress_from_tuple),"winrt._winrt_windows_gaming_input_custom.GipFirmwareUpdateProgress_from_tuple", nullptr)};
+    if (!GipFirmwareUpdateProgress_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "GipFirmwareUpdateProgress_from_tuple", GipFirmwareUpdateProgress_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }
