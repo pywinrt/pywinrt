@@ -8729,8 +8729,39 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_BitmapBounds(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _X{self->obj.X};
+            uint32_t _Y{self->obj.Y};
+            uint32_t _Width{self->obj.Width};
+            uint32_t _Height{self->obj.Height};
+
+            static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIII", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.X = _X;
+            copy.Y = _Y;
+            copy.Width = _Width;
+            copy.Height = _Height;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BitmapBounds[] = {
         { "_assign_array_", _assign_array_BitmapBounds, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapBounds), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* BitmapBounds_get_X(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, void* /*unused*/) noexcept
@@ -8954,8 +8985,39 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_BitmapPlaneDescription(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _StartIndex{self->obj.StartIndex};
+            int32_t _Width{self->obj.Width};
+            int32_t _Height{self->obj.Height};
+            int32_t _Stride{self->obj.Stride};
+
+            static const char* kwlist[] = {"start_index", "width", "height", "stride", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iiii", const_cast<char**>(kwlist), &_StartIndex, &_Width, &_Height, &_Stride))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.StartIndex = _StartIndex;
+            copy.Width = _Width;
+            copy.Height = _Height;
+            copy.Stride = _Stride;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BitmapPlaneDescription[] = {
         { "_assign_array_", _assign_array_BitmapPlaneDescription, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapPlaneDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* BitmapPlaneDescription_get_StartIndex(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, void* /*unused*/) noexcept
@@ -9173,8 +9235,35 @@ namespace py::cpp::Windows::Graphics::Imaging
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_BitmapSize(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _Width{self->obj.Width};
+            uint32_t _Height{self->obj.Height};
+
+            static const char* kwlist[] = {"width", "height", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$II", const_cast<char**>(kwlist), &_Width, &_Height))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Width = _Width;
+            copy.Height = _Height;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BitmapSize[] = {
         { "_assign_array_", _assign_array_BitmapSize, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BitmapSize), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* BitmapSize_get_Width(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, void* /*unused*/) noexcept

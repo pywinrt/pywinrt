@@ -366,6 +366,13 @@ static class WriterExtensions
             );
         }
 
+        if (type.Category == Category.Struct)
+        {
+            w.WriteLine(
+                $"{{ \"__replace__\", reinterpret_cast<PyCFunction>(_replace_{type.Name}), METH_VARARGS | METH_KEYWORDS, nullptr }},"
+            );
+        }
+
         // TODO: support _from for generic types
 
         if (type.Category == Category.Class && !(type.IsGeneric || type.IsStatic))

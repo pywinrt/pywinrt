@@ -14725,8 +14725,39 @@ namespace py::cpp::Windows::UI::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_CrossSlideThresholds(py::wrapper::Windows::UI::Input::CrossSlideThresholds* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _SelectionStart{self->obj.SelectionStart};
+            float _SpeedBumpStart{self->obj.SpeedBumpStart};
+            float _SpeedBumpEnd{self->obj.SpeedBumpEnd};
+            float _RearrangeStart{self->obj.RearrangeStart};
+
+            static const char* kwlist[] = {"selection_start", "speed_bump_start", "speed_bump_end", "rearrange_start", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ffff", const_cast<char**>(kwlist), &_SelectionStart, &_SpeedBumpStart, &_SpeedBumpEnd, &_RearrangeStart))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.SelectionStart = _SelectionStart;
+            copy.SpeedBumpStart = _SpeedBumpStart;
+            copy.SpeedBumpEnd = _SpeedBumpEnd;
+            copy.RearrangeStart = _RearrangeStart;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_CrossSlideThresholds[] = {
         { "_assign_array_", _assign_array_CrossSlideThresholds, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CrossSlideThresholds), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* CrossSlideThresholds_get_SelectionStart(py::wrapper::Windows::UI::Input::CrossSlideThresholds* self, void* /*unused*/) noexcept
@@ -14950,8 +14981,39 @@ namespace py::cpp::Windows::UI::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_ManipulationDelta(py::wrapper::Windows::UI::Input::ManipulationDelta* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Translation{};
+            float _Scale{self->obj.Scale};
+            float _Rotation{self->obj.Rotation};
+            float _Expansion{self->obj.Expansion};
+
+            static const char* kwlist[] = {"translation", "scale", "rotation", "expansion", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Offf", const_cast<char**>(kwlist), &_Translation, &_Scale, &_Rotation, &_Expansion))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Translation = _Translation ? py::convert_to<winrt::Windows::Foundation::Point>(_Translation) : self->obj.Translation;
+            copy.Scale = _Scale;
+            copy.Rotation = _Rotation;
+            copy.Expansion = _Expansion;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_ManipulationDelta[] = {
         { "_assign_array_", _assign_array_ManipulationDelta, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ManipulationDelta), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* ManipulationDelta_get_Translation(py::wrapper::Windows::UI::Input::ManipulationDelta* self, void* /*unused*/) noexcept
@@ -15172,8 +15234,37 @@ namespace py::cpp::Windows::UI::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_ManipulationVelocities(py::wrapper::Windows::UI::Input::ManipulationVelocities* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Linear{};
+            float _Angular{self->obj.Angular};
+            float _Expansion{self->obj.Expansion};
+
+            static const char* kwlist[] = {"linear", "angular", "expansion", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Off", const_cast<char**>(kwlist), &_Linear, &_Angular, &_Expansion))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Linear = _Linear ? py::convert_to<winrt::Windows::Foundation::Point>(_Linear) : self->obj.Linear;
+            copy.Angular = _Angular;
+            copy.Expansion = _Expansion;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_ManipulationVelocities[] = {
         { "_assign_array_", _assign_array_ManipulationVelocities, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ManipulationVelocities), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* ManipulationVelocities_get_Linear(py::wrapper::Windows::UI::Input::ManipulationVelocities* self, void* /*unused*/) noexcept

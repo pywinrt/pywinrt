@@ -10377,8 +10377,33 @@ namespace py::cpp::Windows::ApplicationModel
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PackageInstallProgress(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _PercentComplete{self->obj.PercentComplete};
+
+            static const char* kwlist[] = {"percent_complete", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$I", const_cast<char**>(kwlist), &_PercentComplete))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.PercentComplete = _PercentComplete;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PackageInstallProgress[] = {
         { "_assign_array_", _assign_array_PackageInstallProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageInstallProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PackageInstallProgress_get_PercentComplete(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, void* /*unused*/) noexcept
@@ -10542,8 +10567,39 @@ namespace py::cpp::Windows::ApplicationModel
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PackageVersion(py::wrapper::Windows::ApplicationModel::PackageVersion* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint16_t _Major{self->obj.Major};
+            uint16_t _Minor{self->obj.Minor};
+            uint16_t _Build{self->obj.Build};
+            uint16_t _Revision{self->obj.Revision};
+
+            static const char* kwlist[] = {"major", "minor", "build", "revision", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$HHHH", const_cast<char**>(kwlist), &_Major, &_Minor, &_Build, &_Revision))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Major = _Major;
+            copy.Minor = _Minor;
+            copy.Build = _Build;
+            copy.Revision = _Revision;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PackageVersion[] = {
         { "_assign_array_", _assign_array_PackageVersion, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PackageVersion), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PackageVersion_get_Major(py::wrapper::Windows::ApplicationModel::PackageVersion* self, void* /*unused*/) noexcept

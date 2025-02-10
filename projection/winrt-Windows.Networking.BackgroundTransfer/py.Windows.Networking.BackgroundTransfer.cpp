@@ -7808,8 +7808,41 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_BackgroundDownloadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _BytesReceived{self->obj.BytesReceived};
+            uint64_t _TotalBytesToReceive{self->obj.TotalBytesToReceive};
+            int32_t _Status{static_cast<int32_t>(self->obj.Status)};
+            int _HasResponseChanged{self->obj.HasResponseChanged};
+            int _HasRestarted{self->obj.HasRestarted};
+
+            static const char* kwlist[] = {"bytes_received", "total_bytes_to_receive", "status", "has_response_changed", "has_restarted", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KKipp", const_cast<char**>(kwlist), &_BytesReceived, &_TotalBytesToReceive, &_Status, &_HasResponseChanged, &_HasRestarted))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.BytesReceived = _BytesReceived;
+            copy.TotalBytesToReceive = _TotalBytesToReceive;
+            copy.Status = static_cast<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(_Status);
+            copy.HasResponseChanged = _HasResponseChanged;
+            copy.HasRestarted = _HasRestarted;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BackgroundDownloadProgress[] = {
         { "_assign_array_", _assign_array_BackgroundDownloadProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundDownloadProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* BackgroundDownloadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, void* /*unused*/) noexcept
@@ -8047,8 +8080,35 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_BackgroundTransferFileRange(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Offset{self->obj.Offset};
+            uint64_t _Length{self->obj.Length};
+
+            static const char* kwlist[] = {"offset", "length", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KK", const_cast<char**>(kwlist), &_Offset, &_Length))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Offset = _Offset;
+            copy.Length = _Length;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BackgroundTransferFileRange[] = {
         { "_assign_array_", _assign_array_BackgroundTransferFileRange, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundTransferFileRange), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* BackgroundTransferFileRange_get_Offset(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, void* /*unused*/) noexcept
@@ -8241,8 +8301,45 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_BackgroundUploadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _BytesReceived{self->obj.BytesReceived};
+            uint64_t _BytesSent{self->obj.BytesSent};
+            uint64_t _TotalBytesToReceive{self->obj.TotalBytesToReceive};
+            uint64_t _TotalBytesToSend{self->obj.TotalBytesToSend};
+            int32_t _Status{static_cast<int32_t>(self->obj.Status)};
+            int _HasResponseChanged{self->obj.HasResponseChanged};
+            int _HasRestarted{self->obj.HasRestarted};
+
+            static const char* kwlist[] = {"bytes_received", "bytes_sent", "total_bytes_to_receive", "total_bytes_to_send", "status", "has_response_changed", "has_restarted", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KKKKipp", const_cast<char**>(kwlist), &_BytesReceived, &_BytesSent, &_TotalBytesToReceive, &_TotalBytesToSend, &_Status, &_HasResponseChanged, &_HasRestarted))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.BytesReceived = _BytesReceived;
+            copy.BytesSent = _BytesSent;
+            copy.TotalBytesToReceive = _TotalBytesToReceive;
+            copy.TotalBytesToSend = _TotalBytesToSend;
+            copy.Status = static_cast<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus>(_Status);
+            copy.HasResponseChanged = _HasResponseChanged;
+            copy.HasRestarted = _HasRestarted;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BackgroundUploadProgress[] = {
         { "_assign_array_", _assign_array_BackgroundUploadProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BackgroundUploadProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* BackgroundUploadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, void* /*unused*/) noexcept

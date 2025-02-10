@@ -6338,8 +6338,39 @@ namespace py::cpp::Windows::Graphics::Printing
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PrintPageDescription(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _PageSize{};
+            PyObject* _ImageableRect{};
+            uint32_t _DpiX{self->obj.DpiX};
+            uint32_t _DpiY{self->obj.DpiY};
+
+            static const char* kwlist[] = {"page_size", "imageable_rect", "dpi_x", "dpi_y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OOII", const_cast<char**>(kwlist), &_PageSize, &_ImageableRect, &_DpiX, &_DpiY))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.PageSize = _PageSize ? py::convert_to<winrt::Windows::Foundation::Size>(_PageSize) : self->obj.PageSize;
+            copy.ImageableRect = _ImageableRect ? py::convert_to<winrt::Windows::Foundation::Rect>(_ImageableRect) : self->obj.ImageableRect;
+            copy.DpiX = _DpiX;
+            copy.DpiY = _DpiY;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PrintPageDescription[] = {
         { "_assign_array_", _assign_array_PrintPageDescription, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PrintPageDescription), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PrintPageDescription_get_PageSize(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, void* /*unused*/) noexcept

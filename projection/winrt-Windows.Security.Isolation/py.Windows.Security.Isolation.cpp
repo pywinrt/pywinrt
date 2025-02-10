@@ -4916,8 +4916,35 @@ namespace py::cpp::Windows::Security::Isolation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_IsolatedWindowsEnvironmentCreateProgress(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _State{static_cast<int32_t>(self->obj.State)};
+            uint32_t _PercentComplete{self->obj.PercentComplete};
+
+            static const char* kwlist[] = {"state", "percent_complete", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iI", const_cast<char**>(kwlist), &_State, &_PercentComplete))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.State = static_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>(_State);
+            copy.PercentComplete = _PercentComplete;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_IsolatedWindowsEnvironmentCreateProgress[] = {
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironmentCreateProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_IsolatedWindowsEnvironmentCreateProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* IsolatedWindowsEnvironmentCreateProgress_get_State(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self, void* /*unused*/) noexcept

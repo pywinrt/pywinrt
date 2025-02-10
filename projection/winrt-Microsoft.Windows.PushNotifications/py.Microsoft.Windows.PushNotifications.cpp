@@ -1000,8 +1000,37 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PushNotificationCreateChannelStatus(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _status{static_cast<int32_t>(self->obj.status)};
+            PyObject* _extendedError{};
+            uint32_t _retryCount{self->obj.retryCount};
+
+            static const char* kwlist[] = {"status", "extended_error", "retry_count", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iOI", const_cast<char**>(kwlist), &_status, &_extendedError, &_retryCount))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.status = static_cast<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>(_status);
+            copy.extendedError = _extendedError ? py::convert_to<winrt::hresult>(_extendedError) : self->obj.extendedError;
+            copy.retryCount = _retryCount;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PushNotificationCreateChannelStatus[] = {
         { "_assign_array_", _assign_array_PushNotificationCreateChannelStatus, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PushNotificationCreateChannelStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PushNotificationCreateChannelStatus_get_status(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, void* /*unused*/) noexcept

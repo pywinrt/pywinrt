@@ -21551,8 +21551,33 @@ namespace py::cpp::Windows::UI::Text
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_FontWeight(py::wrapper::Windows::UI::Text::FontWeight* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint16_t _Weight{self->obj.Weight};
+
+            static const char* kwlist[] = {"weight", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$H", const_cast<char**>(kwlist), &_Weight))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Weight = _Weight;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_FontWeight[] = {
         { "_assign_array_", _assign_array_FontWeight, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_FontWeight), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* FontWeight_get_Weight(py::wrapper::Windows::UI::Text::FontWeight* self, void* /*unused*/) noexcept

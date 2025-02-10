@@ -4372,8 +4372,37 @@ namespace py::cpp::Windows::Graphics::Display
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_NitRange(py::wrapper::Windows::Graphics::Display::NitRange* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            float _MinNits{self->obj.MinNits};
+            float _MaxNits{self->obj.MaxNits};
+            float _StepSizeNits{self->obj.StepSizeNits};
+
+            static const char* kwlist[] = {"min_nits", "max_nits", "step_size_nits", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$fff", const_cast<char**>(kwlist), &_MinNits, &_MaxNits, &_StepSizeNits))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.MinNits = _MinNits;
+            copy.MaxNits = _MaxNits;
+            copy.StepSizeNits = _StepSizeNits;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_NitRange[] = {
         { "_assign_array_", _assign_array_NitRange, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_NitRange), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* NitRange_get_MinNits(py::wrapper::Windows::Graphics::Display::NitRange* self, void* /*unused*/) noexcept

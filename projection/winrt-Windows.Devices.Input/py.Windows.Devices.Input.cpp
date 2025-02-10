@@ -2559,8 +2559,35 @@ namespace py::cpp::Windows::Devices::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_MouseDelta(py::wrapper::Windows::Devices::Input::MouseDelta* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _X{self->obj.X};
+            int32_t _Y{self->obj.Y};
+
+            static const char* kwlist[] = {"x", "y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_X, &_Y))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.X = _X;
+            copy.Y = _Y;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_MouseDelta[] = {
         { "_assign_array_", _assign_array_MouseDelta, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_MouseDelta), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* MouseDelta_get_X(py::wrapper::Windows::Devices::Input::MouseDelta* self, void* /*unused*/) noexcept
@@ -2756,8 +2783,47 @@ namespace py::cpp::Windows::Devices::Input
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PointerDeviceUsage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _UsagePage{self->obj.UsagePage};
+            uint32_t _Usage{self->obj.Usage};
+            int32_t _MinLogical{self->obj.MinLogical};
+            int32_t _MaxLogical{self->obj.MaxLogical};
+            int32_t _MinPhysical{self->obj.MinPhysical};
+            int32_t _MaxPhysical{self->obj.MaxPhysical};
+            uint32_t _Unit{self->obj.Unit};
+            float _PhysicalMultiplier{self->obj.PhysicalMultiplier};
+
+            static const char* kwlist[] = {"usage_page", "usage", "min_logical", "max_logical", "min_physical", "max_physical", "unit", "physical_multiplier", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIiiiiIf", const_cast<char**>(kwlist), &_UsagePage, &_Usage, &_MinLogical, &_MaxLogical, &_MinPhysical, &_MaxPhysical, &_Unit, &_PhysicalMultiplier))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.UsagePage = _UsagePage;
+            copy.Usage = _Usage;
+            copy.MinLogical = _MinLogical;
+            copy.MaxLogical = _MaxLogical;
+            copy.MinPhysical = _MinPhysical;
+            copy.MaxPhysical = _MaxPhysical;
+            copy.Unit = _Unit;
+            copy.PhysicalMultiplier = _PhysicalMultiplier;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PointerDeviceUsage[] = {
         { "_assign_array_", _assign_array_PointerDeviceUsage, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PointerDeviceUsage), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PointerDeviceUsage_get_UsagePage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, void* /*unused*/) noexcept

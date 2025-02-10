@@ -10398,8 +10398,35 @@ namespace py::cpp::Windows::Media
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_MediaTimeRange(py::wrapper::Windows::Media::MediaTimeRange* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Start{};
+            PyObject* _End{};
+
+            static const char* kwlist[] = {"start", "end", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_Start, &_End))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Start = _Start ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_Start) : self->obj.Start;
+            copy.End = _End ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_End) : self->obj.End;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_MediaTimeRange[] = {
         { "_assign_array_", _assign_array_MediaTimeRange, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_MediaTimeRange), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* MediaTimeRange_get_Start(py::wrapper::Windows::Media::MediaTimeRange* self, void* /*unused*/) noexcept

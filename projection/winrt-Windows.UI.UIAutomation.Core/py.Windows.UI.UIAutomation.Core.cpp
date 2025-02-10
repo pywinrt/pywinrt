@@ -2312,8 +2312,33 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_AutomationAnnotationTypeRegistration(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _LocalId{self->obj.LocalId};
+
+            static const char* kwlist[] = {"local_id", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$i", const_cast<char**>(kwlist), &_LocalId))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.LocalId = _LocalId;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_AutomationAnnotationTypeRegistration[] = {
         { "_assign_array_", _assign_array_AutomationAnnotationTypeRegistration, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_AutomationAnnotationTypeRegistration), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* AutomationAnnotationTypeRegistration_get_LocalId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, void* /*unused*/) noexcept
@@ -2468,8 +2493,33 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_AutomationRemoteOperationOperandId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Value{self->obj.Value};
+
+            static const char* kwlist[] = {"value", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$i", const_cast<char**>(kwlist), &_Value))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Value = _Value;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_AutomationRemoteOperationOperandId[] = {
         { "_assign_array_", _assign_array_AutomationRemoteOperationOperandId, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_AutomationRemoteOperationOperandId), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* AutomationRemoteOperationOperandId_get_Value(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, void* /*unused*/) noexcept

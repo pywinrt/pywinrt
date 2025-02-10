@@ -203,8 +203,35 @@ namespace py::cpp::Windows::Graphics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_DisplayAdapterId(py::wrapper::Windows::Graphics::DisplayAdapterId* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _LowPart{self->obj.LowPart};
+            int32_t _HighPart{self->obj.HighPart};
+
+            static const char* kwlist[] = {"low_part", "high_part", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Ii", const_cast<char**>(kwlist), &_LowPart, &_HighPart))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.LowPart = _LowPart;
+            copy.HighPart = _HighPart;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DisplayAdapterId[] = {
         { "_assign_array_", _assign_array_DisplayAdapterId, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayAdapterId), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* DisplayAdapterId_get_LowPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, void* /*unused*/) noexcept
@@ -379,8 +406,33 @@ namespace py::cpp::Windows::Graphics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_DisplayId(py::wrapper::Windows::Graphics::DisplayId* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Value{self->obj.Value};
+
+            static const char* kwlist[] = {"value", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$K", const_cast<char**>(kwlist), &_Value))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Value = _Value;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DisplayId[] = {
         { "_assign_array_", _assign_array_DisplayId, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayId), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* DisplayId_get_Value(py::wrapper::Windows::Graphics::DisplayId* self, void* /*unused*/) noexcept
@@ -538,8 +590,35 @@ namespace py::cpp::Windows::Graphics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_PointInt32(py::wrapper::Windows::Graphics::PointInt32* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _X{self->obj.X};
+            int32_t _Y{self->obj.Y};
+
+            static const char* kwlist[] = {"x", "y", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_X, &_Y))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.X = _X;
+            copy.Y = _Y;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_PointInt32[] = {
         { "_assign_array_", _assign_array_PointInt32, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_PointInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* PointInt32_get_X(py::wrapper::Windows::Graphics::PointInt32* self, void* /*unused*/) noexcept
@@ -723,8 +802,39 @@ namespace py::cpp::Windows::Graphics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_RectInt32(py::wrapper::Windows::Graphics::RectInt32* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _X{self->obj.X};
+            int32_t _Y{self->obj.Y};
+            int32_t _Width{self->obj.Width};
+            int32_t _Height{self->obj.Height};
+
+            static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iiii", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.X = _X;
+            copy.Y = _Y;
+            copy.Width = _Width;
+            copy.Height = _Height;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_RectInt32[] = {
         { "_assign_array_", _assign_array_RectInt32, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RectInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* RectInt32_get_X(py::wrapper::Windows::Graphics::RectInt32* self, void* /*unused*/) noexcept
@@ -942,8 +1052,35 @@ namespace py::cpp::Windows::Graphics
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SizeInt32(py::wrapper::Windows::Graphics::SizeInt32* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Width{self->obj.Width};
+            int32_t _Height{self->obj.Height};
+
+            static const char* kwlist[] = {"width", "height", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_Width, &_Height))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Width = _Width;
+            copy.Height = _Height;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SizeInt32[] = {
         { "_assign_array_", _assign_array_SizeInt32, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SizeInt32), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SizeInt32_get_Width(py::wrapper::Windows::Graphics::SizeInt32* self, void* /*unused*/) noexcept

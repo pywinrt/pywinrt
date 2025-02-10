@@ -42068,8 +42068,35 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_GeneratorPosition(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Index{self->obj.Index};
+            int32_t _Offset{self->obj.Offset};
+
+            static const char* kwlist[] = {"index", "offset", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_Index, &_Offset))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Index = _Index;
+            copy.Offset = _Offset;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GeneratorPosition[] = {
         { "_assign_array_", _assign_array_GeneratorPosition, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GeneratorPosition), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* GeneratorPosition_get_Index(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::GeneratorPosition* self, void* /*unused*/) noexcept

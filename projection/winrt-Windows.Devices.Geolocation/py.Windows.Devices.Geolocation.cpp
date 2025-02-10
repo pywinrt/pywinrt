@@ -4612,8 +4612,37 @@ namespace py::cpp::Windows::Devices::Geolocation
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_BasicGeoposition(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _Latitude{self->obj.Latitude};
+            double _Longitude{self->obj.Longitude};
+            double _Altitude{self->obj.Altitude};
+
+            static const char* kwlist[] = {"latitude", "longitude", "altitude", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ddd", const_cast<char**>(kwlist), &_Latitude, &_Longitude, &_Altitude))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Latitude = _Latitude;
+            copy.Longitude = _Longitude;
+            copy.Altitude = _Altitude;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BasicGeoposition[] = {
         { "_assign_array_", _assign_array_BasicGeoposition, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BasicGeoposition), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* BasicGeoposition_get_Latitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, void* /*unused*/) noexcept

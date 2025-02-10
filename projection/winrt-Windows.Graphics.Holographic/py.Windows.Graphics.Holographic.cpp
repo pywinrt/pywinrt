@@ -6044,8 +6044,35 @@ namespace py::cpp::Windows::Graphics::Holographic
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_HolographicAdapterId(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _LowPart{self->obj.LowPart};
+            int32_t _HighPart{self->obj.HighPart};
+
+            static const char* kwlist[] = {"low_part", "high_part", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Ii", const_cast<char**>(kwlist), &_LowPart, &_HighPart))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.LowPart = _LowPart;
+            copy.HighPart = _HighPart;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_HolographicAdapterId[] = {
         { "_assign_array_", _assign_array_HolographicAdapterId, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HolographicAdapterId), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HolographicAdapterId_get_LowPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, void* /*unused*/) noexcept
@@ -6220,8 +6247,33 @@ namespace py::cpp::Windows::Graphics::Holographic
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_HolographicFrameId(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _Value{self->obj.Value};
+
+            static const char* kwlist[] = {"value", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$K", const_cast<char**>(kwlist), &_Value))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Value = _Value;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_HolographicFrameId[] = {
         { "_assign_array_", _assign_array_HolographicFrameId, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HolographicFrameId), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HolographicFrameId_get_Value(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, void* /*unused*/) noexcept
@@ -6379,8 +6431,35 @@ namespace py::cpp::Windows::Graphics::Holographic
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_HolographicStereoTransform(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Left{};
+            PyObject* _Right{};
+
+            static const char* kwlist[] = {"left", "right", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_Left, &_Right))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Left = _Left ? py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(_Left) : self->obj.Left;
+            copy.Right = _Right ? py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(_Right) : self->obj.Right;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_HolographicStereoTransform[] = {
         { "_assign_array_", _assign_array_HolographicStereoTransform, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HolographicStereoTransform), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HolographicStereoTransform_get_Left(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, void* /*unused*/) noexcept

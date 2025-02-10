@@ -8949,8 +8949,43 @@ namespace py::cpp::Windows::Services::Store
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_StorePackageUpdateStatus(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _PackageFamilyName{};
+            uint64_t _PackageDownloadSizeInBytes{self->obj.PackageDownloadSizeInBytes};
+            uint64_t _PackageBytesDownloaded{self->obj.PackageBytesDownloaded};
+            double _PackageDownloadProgress{self->obj.PackageDownloadProgress};
+            double _TotalDownloadProgress{self->obj.TotalDownloadProgress};
+            int32_t _PackageUpdateState{static_cast<int32_t>(self->obj.PackageUpdateState)};
+
+            static const char* kwlist[] = {"package_family_name", "package_download_size_in_bytes", "package_bytes_downloaded", "package_download_progress", "total_download_progress", "package_update_state", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OKKddi", const_cast<char**>(kwlist), &_PackageFamilyName, &_PackageDownloadSizeInBytes, &_PackageBytesDownloaded, &_PackageDownloadProgress, &_TotalDownloadProgress, &_PackageUpdateState))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.PackageFamilyName = _PackageFamilyName ? py::convert_to<winrt::hstring>(_PackageFamilyName) : self->obj.PackageFamilyName;
+            copy.PackageDownloadSizeInBytes = _PackageDownloadSizeInBytes;
+            copy.PackageBytesDownloaded = _PackageBytesDownloaded;
+            copy.PackageDownloadProgress = _PackageDownloadProgress;
+            copy.TotalDownloadProgress = _TotalDownloadProgress;
+            copy.PackageUpdateState = static_cast<winrt::Windows::Services::Store::StorePackageUpdateState>(_PackageUpdateState);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_StorePackageUpdateStatus[] = {
         { "_assign_array_", _assign_array_StorePackageUpdateStatus, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_StorePackageUpdateStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* StorePackageUpdateStatus_get_PackageFamilyName(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self, void* /*unused*/) noexcept

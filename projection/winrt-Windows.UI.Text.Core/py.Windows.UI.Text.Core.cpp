@@ -4189,8 +4189,35 @@ namespace py::cpp::Windows::UI::Text::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_CoreTextRange(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _StartCaretPosition{self->obj.StartCaretPosition};
+            int32_t _EndCaretPosition{self->obj.EndCaretPosition};
+
+            static const char* kwlist[] = {"start_caret_position", "end_caret_position", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_StartCaretPosition, &_EndCaretPosition))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.StartCaretPosition = _StartCaretPosition;
+            copy.EndCaretPosition = _EndCaretPosition;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_CoreTextRange[] = {
         { "_assign_array_", _assign_array_CoreTextRange, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CoreTextRange), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* CoreTextRange_get_StartCaretPosition(py::wrapper::Windows::UI::Text::Core::CoreTextRange* self, void* /*unused*/) noexcept

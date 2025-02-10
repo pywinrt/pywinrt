@@ -1,4 +1,6 @@
+import copy
 import gc
+import sys
 import threading
 import unittest
 import weakref
@@ -493,3 +495,58 @@ class TestTestComponent(unittest.TestCase):
                 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10),  # type: ignore
                 tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
             )
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    def test_struct_replace_bool(self):
+        orig = tc.NonBlittable(True, "b", "c", 4)
+        cpy = copy.replace(orig, a=False)
+        self.assertIs(cpy.a, False)
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    def test_struct_replace_str(self):
+        orig = tc.NonBlittable(True, "b", "c", 4)
+        cpy = copy.replace(orig, b="B", c="C")
+        self.assertEqual(cpy.b, "B")
+        self.assertEqual(cpy.c, "C")
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    def test_struct_replace_ireference(self):
+        orig = tc.NonBlittable(True, "b", "c", 4)
+        cpy = copy.replace(orig, d=None)
+        self.assertIsNone(cpy.d)
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    def test_struct_replace_int(self):
+        orig = tc.Blittable(
+            1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
+        )
+        cpy = copy.replace(orig, a=10, b=20, c=30, d=40, e=50, f=60, g=70)
+        self.assertEqual(cpy.a, 10)
+        self.assertEqual(cpy.b, 20)
+        self.assertEqual(cpy.c, 30)
+        self.assertEqual(cpy.d, 40)
+        self.assertEqual(cpy.e, 50)
+        self.assertEqual(cpy.f, 60)
+        self.assertEqual(cpy.g, 70)
+        self.assertAlmostEqual(cpy.h, 8)
+        self.assertAlmostEqual(cpy.i, 9)
+        self.assertEqual(cpy.j, UUID("10000000-1000-1000-1000-100000000000"))
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    def test_struct_replace_float(self):
+        orig = tc.Blittable(
+            1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
+        )
+        cpy = copy.replace(orig, h=1.1, i=2.2)
+        self.assertEqual(cpy.a, 1)
+        self.assertAlmostEqual(cpy.h, 1.1)
+        self.assertAlmostEqual(cpy.i, 2.2)
+
+    @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
+    def test_struct_replace_uuid(self):
+        orig = tc.Blittable(
+            1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
+        )
+        cpy = copy.replace(orig, j=UUID("20000000-2000-2000-2000-200000000000"))
+        self.assertEqual(cpy.a, 1)
+        self.assertEqual(cpy.j, UUID("20000000-2000-2000-2000-200000000000"))

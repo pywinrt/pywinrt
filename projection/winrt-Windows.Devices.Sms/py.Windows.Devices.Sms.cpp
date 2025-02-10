@@ -13033,8 +13033,41 @@ namespace py::cpp::Windows::Devices::Sms
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SmsEncodedLength(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _SegmentCount{self->obj.SegmentCount};
+            uint32_t _CharacterCountLastSegment{self->obj.CharacterCountLastSegment};
+            uint32_t _CharactersPerSegment{self->obj.CharactersPerSegment};
+            uint32_t _ByteCountLastSegment{self->obj.ByteCountLastSegment};
+            uint32_t _BytesPerSegment{self->obj.BytesPerSegment};
+
+            static const char* kwlist[] = {"segment_count", "character_count_last_segment", "characters_per_segment", "byte_count_last_segment", "bytes_per_segment", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIIII", const_cast<char**>(kwlist), &_SegmentCount, &_CharacterCountLastSegment, &_CharactersPerSegment, &_ByteCountLastSegment, &_BytesPerSegment))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.SegmentCount = _SegmentCount;
+            copy.CharacterCountLastSegment = _CharacterCountLastSegment;
+            copy.CharactersPerSegment = _CharactersPerSegment;
+            copy.ByteCountLastSegment = _ByteCountLastSegment;
+            copy.BytesPerSegment = _BytesPerSegment;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SmsEncodedLength[] = {
         { "_assign_array_", _assign_array_SmsEncodedLength, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SmsEncodedLength), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SmsEncodedLength_get_SegmentCount(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, void* /*unused*/) noexcept

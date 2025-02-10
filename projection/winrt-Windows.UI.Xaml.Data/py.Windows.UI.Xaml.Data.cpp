@@ -8542,8 +8542,33 @@ namespace py::cpp::Windows::UI::Xaml::Data
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_LoadMoreItemsResult(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _Count{self->obj.Count};
+
+            static const char* kwlist[] = {"count", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$I", const_cast<char**>(kwlist), &_Count))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Count = _Count;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_LoadMoreItemsResult[] = {
         { "_assign_array_", _assign_array_LoadMoreItemsResult, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_LoadMoreItemsResult), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* LoadMoreItemsResult_get_Count(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self, void* /*unused*/) noexcept

@@ -18916,8 +18916,43 @@ namespace py::cpp::Windows::UI::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_CorePhysicalKeyStatus(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _RepeatCount{self->obj.RepeatCount};
+            uint32_t _ScanCode{self->obj.ScanCode};
+            int _IsExtendedKey{self->obj.IsExtendedKey};
+            int _IsMenuKeyDown{self->obj.IsMenuKeyDown};
+            int _WasKeyDown{self->obj.WasKeyDown};
+            int _IsKeyReleased{self->obj.IsKeyReleased};
+
+            static const char* kwlist[] = {"repeat_count", "scan_code", "is_extended_key", "is_menu_key_down", "was_key_down", "is_key_released", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIpppp", const_cast<char**>(kwlist), &_RepeatCount, &_ScanCode, &_IsExtendedKey, &_IsMenuKeyDown, &_WasKeyDown, &_IsKeyReleased))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.RepeatCount = _RepeatCount;
+            copy.ScanCode = _ScanCode;
+            copy.IsExtendedKey = _IsExtendedKey;
+            copy.IsMenuKeyDown = _IsMenuKeyDown;
+            copy.WasKeyDown = _WasKeyDown;
+            copy.IsKeyReleased = _IsKeyReleased;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_CorePhysicalKeyStatus[] = {
         { "_assign_array_", _assign_array_CorePhysicalKeyStatus, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CorePhysicalKeyStatus), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* CorePhysicalKeyStatus_get_RepeatCount(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, void* /*unused*/) noexcept
@@ -19175,8 +19210,35 @@ namespace py::cpp::Windows::UI::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_CoreProximityEvaluation(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Score{self->obj.Score};
+            PyObject* _AdjustedPoint{};
+
+            static const char* kwlist[] = {"score", "adjusted_point", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$iO", const_cast<char**>(kwlist), &_Score, &_AdjustedPoint))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Score = _Score;
+            copy.AdjustedPoint = _AdjustedPoint ? py::convert_to<winrt::Windows::Foundation::Point>(_AdjustedPoint) : self->obj.AdjustedPoint;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_CoreProximityEvaluation[] = {
         { "_assign_array_", _assign_array_CoreProximityEvaluation, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CoreProximityEvaluation), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* CoreProximityEvaluation_get_Score(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, void* /*unused*/) noexcept

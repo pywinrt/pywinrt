@@ -42240,8 +42240,39 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_CornerRadius(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _TopLeft{self->obj.TopLeft};
+            double _TopRight{self->obj.TopRight};
+            double _BottomRight{self->obj.BottomRight};
+            double _BottomLeft{self->obj.BottomLeft};
+
+            static const char* kwlist[] = {"top_left", "top_right", "bottom_right", "bottom_left", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dddd", const_cast<char**>(kwlist), &_TopLeft, &_TopRight, &_BottomRight, &_BottomLeft))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.TopLeft = _TopLeft;
+            copy.TopRight = _TopRight;
+            copy.BottomRight = _BottomRight;
+            copy.BottomLeft = _BottomLeft;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_CornerRadius[] = {
         { "_assign_array_", _assign_array_CornerRadius, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_CornerRadius), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* CornerRadius_get_TopLeft(py::wrapper::Microsoft::UI::Xaml::CornerRadius* self, void* /*unused*/) noexcept
@@ -42459,8 +42490,35 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Duration(py::wrapper::Microsoft::UI::Xaml::Duration* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _TimeSpan{};
+            int32_t _Type{static_cast<int32_t>(self->obj.Type)};
+
+            static const char* kwlist[] = {"time_span", "type", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Oi", const_cast<char**>(kwlist), &_TimeSpan, &_Type))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.TimeSpan = _TimeSpan ? py::convert_to<winrt::Windows::Foundation::TimeSpan>(_TimeSpan) : self->obj.TimeSpan;
+            copy.Type = static_cast<winrt::Microsoft::UI::Xaml::DurationType>(_Type);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Duration[] = {
         { "_assign_array_", _assign_array_Duration, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Duration), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Duration_get_TimeSpan(py::wrapper::Microsoft::UI::Xaml::Duration* self, void* /*unused*/) noexcept
@@ -42638,8 +42696,35 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_GridLength(py::wrapper::Microsoft::UI::Xaml::GridLength* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _Value{self->obj.Value};
+            int32_t _GridUnitType{static_cast<int32_t>(self->obj.GridUnitType)};
+
+            static const char* kwlist[] = {"value", "grid_unit_type", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$di", const_cast<char**>(kwlist), &_Value, &_GridUnitType))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Value = _Value;
+            copy.GridUnitType = static_cast<winrt::Microsoft::UI::Xaml::GridUnitType>(_GridUnitType);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_GridLength[] = {
         { "_assign_array_", _assign_array_GridLength, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_GridLength), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* GridLength_get_Value(py::wrapper::Microsoft::UI::Xaml::GridLength* self, void* /*unused*/) noexcept
@@ -42823,8 +42908,39 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Thickness(py::wrapper::Microsoft::UI::Xaml::Thickness* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            double _Left{self->obj.Left};
+            double _Top{self->obj.Top};
+            double _Right{self->obj.Right};
+            double _Bottom{self->obj.Bottom};
+
+            static const char* kwlist[] = {"left", "top", "right", "bottom", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$dddd", const_cast<char**>(kwlist), &_Left, &_Top, &_Right, &_Bottom))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Left = _Left;
+            copy.Top = _Top;
+            copy.Right = _Right;
+            copy.Bottom = _Bottom;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Thickness[] = {
         { "_assign_array_", _assign_array_Thickness, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Thickness), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Thickness_get_Left(py::wrapper::Microsoft::UI::Xaml::Thickness* self, void* /*unused*/) noexcept

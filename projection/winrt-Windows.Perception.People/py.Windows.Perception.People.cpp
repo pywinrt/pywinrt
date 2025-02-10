@@ -1256,8 +1256,35 @@ namespace py::cpp::Windows::Perception::People
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_HandMeshVertex(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Position{};
+            PyObject* _Normal{};
+
+            static const char* kwlist[] = {"position", "normal", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_Position, &_Normal))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Position = _Position ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Position) : self->obj.Position;
+            copy.Normal = _Normal ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Normal) : self->obj.Normal;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_HandMeshVertex[] = {
         { "_assign_array_", _assign_array_HandMeshVertex, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_HandMeshVertex), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* HandMeshVertex_get_Position(py::wrapper::Windows::Perception::People::HandMeshVertex* self, void* /*unused*/) noexcept
@@ -1441,8 +1468,39 @@ namespace py::cpp::Windows::Perception::People
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_JointPose(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Orientation{};
+            PyObject* _Position{};
+            float _Radius{self->obj.Radius};
+            int32_t _Accuracy{static_cast<int32_t>(self->obj.Accuracy)};
+
+            static const char* kwlist[] = {"orientation", "position", "radius", "accuracy", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OOfi", const_cast<char**>(kwlist), &_Orientation, &_Position, &_Radius, &_Accuracy))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Orientation = _Orientation ? py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(_Orientation) : self->obj.Orientation;
+            copy.Position = _Position ? py::convert_to<winrt::Windows::Foundation::Numerics::float3>(_Position) : self->obj.Position;
+            copy.Radius = _Radius;
+            copy.Accuracy = static_cast<winrt::Windows::Perception::People::JointPoseAccuracy>(_Accuracy);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_JointPose[] = {
         { "_assign_array_", _assign_array_JointPose, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_JointPose), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* JointPose_get_Orientation(py::wrapper::Windows::Perception::People::JointPose* self, void* /*unused*/) noexcept

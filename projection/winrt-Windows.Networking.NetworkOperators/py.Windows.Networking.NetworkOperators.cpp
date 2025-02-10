@@ -20763,8 +20763,35 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_ESimProfileInstallProgress(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _TotalSizeInBytes{self->obj.TotalSizeInBytes};
+            int32_t _InstalledSizeInBytes{self->obj.InstalledSizeInBytes};
+
+            static const char* kwlist[] = {"total_size_in_bytes", "installed_size_in_bytes", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_TotalSizeInBytes, &_InstalledSizeInBytes))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.TotalSizeInBytes = _TotalSizeInBytes;
+            copy.InstalledSizeInBytes = _InstalledSizeInBytes;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_ESimProfileInstallProgress[] = {
         { "_assign_array_", _assign_array_ESimProfileInstallProgress, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ESimProfileInstallProgress), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* ESimProfileInstallProgress_get_TotalSizeInBytes(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self, void* /*unused*/) noexcept
@@ -20942,8 +20969,35 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_ProfileUsage(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _UsageInMegabytes{self->obj.UsageInMegabytes};
+            PyObject* _LastSyncTime{};
+
+            static const char* kwlist[] = {"usage_in_megabytes", "last_sync_time", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IO", const_cast<char**>(kwlist), &_UsageInMegabytes, &_LastSyncTime))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.UsageInMegabytes = _UsageInMegabytes;
+            copy.LastSyncTime = _LastSyncTime ? py::convert_to<winrt::Windows::Foundation::DateTime>(_LastSyncTime) : self->obj.LastSyncTime;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_ProfileUsage[] = {
         { "_assign_array_", _assign_array_ProfileUsage, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ProfileUsage), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* ProfileUsage_get_UsageInMegabytes(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, void* /*unused*/) noexcept

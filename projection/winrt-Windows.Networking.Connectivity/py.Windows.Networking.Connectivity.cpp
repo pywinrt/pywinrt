@@ -6382,8 +6382,35 @@ namespace py::cpp::Windows::Networking::Connectivity
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_NetworkUsageStates(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _Roaming{static_cast<int32_t>(self->obj.Roaming)};
+            int32_t _Shared{static_cast<int32_t>(self->obj.Shared)};
+
+            static const char* kwlist[] = {"roaming", "shared", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_Roaming, &_Shared))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Roaming = static_cast<winrt::Windows::Networking::Connectivity::TriStates>(_Roaming);
+            copy.Shared = static_cast<winrt::Windows::Networking::Connectivity::TriStates>(_Shared);
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_NetworkUsageStates[] = {
         { "_assign_array_", _assign_array_NetworkUsageStates, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_NetworkUsageStates), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* NetworkUsageStates_get_Roaming(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, void* /*unused*/) noexcept

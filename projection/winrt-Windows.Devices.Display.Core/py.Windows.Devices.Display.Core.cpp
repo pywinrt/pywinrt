@@ -8008,8 +8008,35 @@ namespace py::cpp::Windows::Devices::Display::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_DisplayPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _VerticalSyncRate{};
+            int32_t _VerticalSyncsPerPresentation{self->obj.VerticalSyncsPerPresentation};
+
+            static const char* kwlist[] = {"vertical_sync_rate", "vertical_syncs_per_presentation", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Oi", const_cast<char**>(kwlist), &_VerticalSyncRate, &_VerticalSyncsPerPresentation))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.VerticalSyncRate = _VerticalSyncRate ? py::convert_to<winrt::Windows::Foundation::Numerics::Rational>(_VerticalSyncRate) : self->obj.VerticalSyncRate;
+            copy.VerticalSyncsPerPresentation = _VerticalSyncsPerPresentation;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_DisplayPresentationRate[] = {
         { "_assign_array_", _assign_array_DisplayPresentationRate, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_DisplayPresentationRate), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* DisplayPresentationRate_get_VerticalSyncRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, void* /*unused*/) noexcept

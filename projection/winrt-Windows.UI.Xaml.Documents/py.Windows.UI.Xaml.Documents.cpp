@@ -17946,8 +17946,35 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_TextRange(py::wrapper::Windows::UI::Xaml::Documents::TextRange* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int32_t _StartIndex{self->obj.StartIndex};
+            int32_t _Length{self->obj.Length};
+
+            static const char* kwlist[] = {"start_index", "length", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$ii", const_cast<char**>(kwlist), &_StartIndex, &_Length))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.StartIndex = _StartIndex;
+            copy.Length = _Length;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_TextRange[] = {
         { "_assign_array_", _assign_array_TextRange, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_TextRange), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* TextRange_get_StartIndex(py::wrapper::Windows::UI::Xaml::Documents::TextRange* self, void* /*unused*/) noexcept

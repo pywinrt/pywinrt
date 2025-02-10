@@ -5693,8 +5693,41 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_ResourceLayoutInfo(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _MajorVersion{self->obj.MajorVersion};
+            uint32_t _MinorVersion{self->obj.MinorVersion};
+            uint32_t _ResourceSubtreeCount{self->obj.ResourceSubtreeCount};
+            uint32_t _NamedResourceCount{self->obj.NamedResourceCount};
+            int32_t _Checksum{self->obj.Checksum};
+
+            static const char* kwlist[] = {"major_version", "minor_version", "resource_subtree_count", "named_resource_count", "checksum", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIIIi", const_cast<char**>(kwlist), &_MajorVersion, &_MinorVersion, &_ResourceSubtreeCount, &_NamedResourceCount, &_Checksum))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.MajorVersion = _MajorVersion;
+            copy.MinorVersion = _MinorVersion;
+            copy.ResourceSubtreeCount = _ResourceSubtreeCount;
+            copy.NamedResourceCount = _NamedResourceCount;
+            copy.Checksum = _Checksum;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_ResourceLayoutInfo[] = {
         { "_assign_array_", _assign_array_ResourceLayoutInfo, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_ResourceLayoutInfo), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* ResourceLayoutInfo_get_MajorVersion(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, void* /*unused*/) noexcept

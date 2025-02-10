@@ -11755,8 +11755,51 @@ namespace py::cpp::TestComponent
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Blittable(py::wrapper::TestComponent::Blittable* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint8_t _A{self->obj.A};
+            uint16_t _B{self->obj.B};
+            uint32_t _C{self->obj.C};
+            uint64_t _D{self->obj.D};
+            int16_t _E{self->obj.E};
+            int32_t _F{self->obj.F};
+            int64_t _G{self->obj.G};
+            float _H{self->obj.H};
+            double _I{self->obj.I};
+            PyObject* _J{};
+
+            static const char* kwlist[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$BHIKhiLfdO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D, &_E, &_F, &_G, &_H, &_I, &_J))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.A = _A;
+            copy.B = _B;
+            copy.C = _C;
+            copy.D = _D;
+            copy.E = _E;
+            copy.F = _F;
+            copy.G = _G;
+            copy.H = _H;
+            copy.I = _I;
+            copy.J = _J ? py::convert_to<winrt::guid>(_J) : self->obj.J;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Blittable[] = {
         { "_assign_array_", _assign_array_Blittable, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Blittable), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Blittable_get_A(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
@@ -12094,8 +12137,35 @@ namespace py::cpp::TestComponent
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_Nested(py::wrapper::TestComponent::Nested* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _Blittable{};
+            PyObject* _NonBlittable{};
+
+            static const char* kwlist[] = {"blittable", "non_blittable", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$OO", const_cast<char**>(kwlist), &_Blittable, &_NonBlittable))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Blittable = _Blittable ? py::convert_to<winrt::TestComponent::Blittable>(_Blittable) : self->obj.Blittable;
+            copy.NonBlittable = _NonBlittable ? py::convert_to<winrt::TestComponent::NonBlittable>(_NonBlittable) : self->obj.NonBlittable;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_Nested[] = {
         { "_assign_array_", _assign_array_Nested, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_Nested), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* Nested_get_Blittable(py::wrapper::TestComponent::Nested* self, void* /*unused*/) noexcept
@@ -12279,8 +12349,39 @@ namespace py::cpp::TestComponent
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_NonBlittable(py::wrapper::TestComponent::NonBlittable* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            int _A{self->obj.A};
+            PyObject* _B{};
+            PyObject* _C{};
+            PyObject* _D{};
+
+            static const char* kwlist[] = {"a", "b", "c", "d", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$pOOO", const_cast<char**>(kwlist), &_A, &_B, &_C, &_D))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.A = _A;
+            copy.B = _B ? py::convert_to<char16_t>(_B) : self->obj.B;
+            copy.C = _C ? py::convert_to<winrt::hstring>(_C) : self->obj.C;
+            copy.D = _D ? py::convert_to<winrt::Windows::Foundation::IReference<int64_t>>(_D) : self->obj.D;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_NonBlittable[] = {
         { "_assign_array_", _assign_array_NonBlittable, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_NonBlittable), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* NonBlittable_get_A(py::wrapper::TestComponent::NonBlittable* self, void* /*unused*/) noexcept

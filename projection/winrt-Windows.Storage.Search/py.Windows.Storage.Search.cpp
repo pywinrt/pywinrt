@@ -7497,8 +7497,35 @@ namespace py::cpp::Windows::Storage::Search
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_SortEntry(py::wrapper::Windows::Storage::Search::SortEntry* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            PyObject* _PropertyName{};
+            int _AscendingOrder{self->obj.AscendingOrder};
+
+            static const char* kwlist[] = {"property_name", "ascending_order", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$Op", const_cast<char**>(kwlist), &_PropertyName, &_AscendingOrder))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.PropertyName = _PropertyName ? py::convert_to<winrt::hstring>(_PropertyName) : self->obj.PropertyName;
+            copy.AscendingOrder = _AscendingOrder;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_SortEntry[] = {
         { "_assign_array_", _assign_array_SortEntry, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_SortEntry), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* SortEntry_get_PropertyName(py::wrapper::Windows::Storage::Search::SortEntry* self, void* /*unused*/) noexcept

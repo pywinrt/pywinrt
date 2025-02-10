@@ -29340,8 +29340,35 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_RawElementProviderRuntimeId(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _Part1{self->obj.Part1};
+            uint32_t _Part2{self->obj.Part2};
+
+            static const char* kwlist[] = {"part1", "part2", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$II", const_cast<char**>(kwlist), &_Part1, &_Part2))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Part1 = _Part1;
+            copy.Part2 = _Part2;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_RawElementProviderRuntimeId[] = {
         { "_assign_array_", _assign_array_RawElementProviderRuntimeId, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RawElementProviderRuntimeId), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* RawElementProviderRuntimeId_get_Part1(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, void* /*unused*/) noexcept

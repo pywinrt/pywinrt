@@ -14566,8 +14566,43 @@ namespace py::cpp::Windows::Networking::Sockets
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_BandwidthStatistics(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint64_t _OutboundBitsPerSecond{self->obj.OutboundBitsPerSecond};
+            uint64_t _InboundBitsPerSecond{self->obj.InboundBitsPerSecond};
+            uint64_t _OutboundBitsPerSecondInstability{self->obj.OutboundBitsPerSecondInstability};
+            uint64_t _InboundBitsPerSecondInstability{self->obj.InboundBitsPerSecondInstability};
+            int _OutboundBandwidthPeaked{self->obj.OutboundBandwidthPeaked};
+            int _InboundBandwidthPeaked{self->obj.InboundBandwidthPeaked};
+
+            static const char* kwlist[] = {"outbound_bits_per_second", "inbound_bits_per_second", "outbound_bits_per_second_instability", "inbound_bits_per_second_instability", "outbound_bandwidth_peaked", "inbound_bandwidth_peaked", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$KKKKpp", const_cast<char**>(kwlist), &_OutboundBitsPerSecond, &_InboundBitsPerSecond, &_OutboundBitsPerSecondInstability, &_InboundBitsPerSecondInstability, &_OutboundBandwidthPeaked, &_InboundBandwidthPeaked))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.OutboundBitsPerSecond = _OutboundBitsPerSecond;
+            copy.InboundBitsPerSecond = _InboundBitsPerSecond;
+            copy.OutboundBitsPerSecondInstability = _OutboundBitsPerSecondInstability;
+            copy.InboundBitsPerSecondInstability = _InboundBitsPerSecondInstability;
+            copy.OutboundBandwidthPeaked = _OutboundBandwidthPeaked;
+            copy.InboundBandwidthPeaked = _InboundBandwidthPeaked;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BandwidthStatistics[] = {
         { "_assign_array_", _assign_array_BandwidthStatistics, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_BandwidthStatistics), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* BandwidthStatistics_get_OutboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, void* /*unused*/) noexcept
@@ -14831,8 +14866,39 @@ namespace py::cpp::Windows::Networking::Sockets
         Py_RETURN_NONE;
     }
 
+    PyObject* _replace_RoundTripTimeStatistics(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _Variance{self->obj.Variance};
+            uint32_t _Max{self->obj.Max};
+            uint32_t _Min{self->obj.Min};
+            uint32_t _Sum{self->obj.Sum};
+
+            static const char* kwlist[] = {"variance", "max", "min", "sum", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$IIII", const_cast<char**>(kwlist), &_Variance, &_Max, &_Min, &_Sum))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Variance = _Variance;
+            copy.Max = _Max;
+            copy.Min = _Min;
+            copy.Sum = _Sum;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_RoundTripTimeStatistics[] = {
         { "_assign_array_", _assign_array_RoundTripTimeStatistics, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(_replace_RoundTripTimeStatistics), METH_VARARGS | METH_KEYWORDS, nullptr },
         { }};
 
     static PyObject* RoundTripTimeStatistics_get_Variance(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, void* /*unused*/) noexcept
