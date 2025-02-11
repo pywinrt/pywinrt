@@ -48,6 +48,7 @@ to the corresponding Python builtin types.
 =========== ================== ===================== ===========
 WinRT type  Python type        Python format string  Description
 =========== ================== ===================== ===========
+``Boolean`` :class:`bool`      ``"?"``               an 8-bit Boolean value
 ``Int8``    :class:`int`       ``"b"``               an 8-bit signed integer
 ``Int16``   :class:`int`       ``"h"``               a 16-bit signed integer
 ``Int32``   :class:`int`       ``"i"``               a 32-bit signed integer
@@ -59,7 +60,6 @@ WinRT type  Python type        Python format string  Description
 ``Single``  :class:`float`     ``"f"``               a 32-bit IEEE 754 floating point number
 ``Double``  :class:`float`     ``"d"``               a 64-bit IEEE 754 floating point number
 ``Char16``  :class:`str` [#s]_ ``"u"`` [#u]_         a 16-bit non-numeric value representing a UTF-16 code unit
-``Boolean`` :class:`bool`      ``"?"``               an 8-bit Boolean value
 ``String``  :class:`str`       ``"P"``               an immutable sequence of Char16 used to represent text
 ``Guid``    :class:`uuid.UUID` ``"T{I2H8B}"`` [#g]_  a 128-bit standard globally unique identifier
 =========== ================== ===================== ===========
