@@ -6370,13 +6370,31 @@ namespace py::cpp::Windows::Graphics::Printing
 
     PyObject* unpack_PrintPageDescription(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle PageSize{convert(self->obj.PageSize)};
         if (!PageSize)
         {
             return nullptr;
         }
 
+        PageSize.attach(PyObject_CallMethodNoArgs(PageSize.get(), unpack_str.get()));
+        if (!PageSize)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle ImageableRect{convert(self->obj.ImageableRect)};
+        if (!ImageableRect)
+        {
+            return nullptr;
+        }
+
+        ImageableRect.attach(PyObject_CallMethodNoArgs(ImageableRect.get(), unpack_str.get()));
         if (!ImageableRect)
         {
             return nullptr;

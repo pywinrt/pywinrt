@@ -66,7 +66,9 @@ static class StructWriterExtensions
 
         if (type.Type.Fields.Count > 1)
         {
-            w.WriteLine($"def unpack(self) -> {type.Type.ToPyTupleTyping(ns)}: ...");
+            w.WriteLine(
+                $"def unpack(self) -> {type.Type.ToPyTupleTyping(ns, isUnpack: true)}: ..."
+            );
         }
 
         w.Indent--;
@@ -336,6 +338,14 @@ static class StructWriterExtensions
         );
         w.WriteBlock(() =>
         {
+            if (type.Type.Fields.Any(f => f.FieldType.IsStruct()))
+            {
+                w.WriteLine("py::pyobj_handle unpack_str{PyUnicode_InternFromString(\"unpack\")};");
+                w.WriteLine("if (!unpack_str)");
+                w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                w.WriteBlankLine();
+            }
+
             foreach (var field in type.Type.Fields)
             {
                 w.WriteLine(
@@ -344,6 +354,16 @@ static class StructWriterExtensions
                 w.WriteLine($"if (!{field.Name})");
                 w.WriteBlock(() => w.WriteLine("return nullptr;"));
                 w.WriteBlankLine();
+
+                if (field.FieldType.IsStruct())
+                {
+                    w.WriteLine(
+                        $"{field.Name}.attach(PyObject_CallMethodNoArgs({field.Name}.get(), unpack_str.get()));"
+                    );
+                    w.WriteLine($"if (!{field.Name})");
+                    w.WriteBlock(() => w.WriteLine("return nullptr;"));
+                    w.WriteBlankLine();
+                }
             }
 
             w.WriteLine($"pyobj_handle tuple{{PyTuple_New({type.Type.Fields.Count})}};");

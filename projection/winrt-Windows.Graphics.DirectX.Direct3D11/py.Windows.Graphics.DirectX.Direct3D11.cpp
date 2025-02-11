@@ -896,6 +896,12 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     PyObject* unpack_Direct3DSurfaceDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Width{convert(self->obj.Width)};
         if (!Width)
         {
@@ -915,6 +921,12 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         }
 
         py::pyobj_handle MultisampleDescription{convert(self->obj.MultisampleDescription)};
+        if (!MultisampleDescription)
+        {
+            return nullptr;
+        }
+
+        MultisampleDescription.attach(PyObject_CallMethodNoArgs(MultisampleDescription.get(), unpack_str.get()));
         if (!MultisampleDescription)
         {
             return nullptr;

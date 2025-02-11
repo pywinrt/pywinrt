@@ -27777,6 +27777,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     PyObject* unpack_RepeatBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Count{convert(self->obj.Count)};
         if (!Count)
         {
@@ -27784,6 +27790,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
 
         py::pyobj_handle Duration{convert(self->obj.Duration)};
+        if (!Duration)
+        {
+            return nullptr;
+        }
+
+        Duration.attach(PyObject_CallMethodNoArgs(Duration.get(), unpack_str.get()));
         if (!Duration)
         {
             return nullptr;

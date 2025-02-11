@@ -6486,13 +6486,31 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     PyObject* unpack_HolographicStereoTransform(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Left{convert(self->obj.Left)};
         if (!Left)
         {
             return nullptr;
         }
 
+        Left.attach(PyObject_CallMethodNoArgs(Left.get(), unpack_str.get()));
+        if (!Left)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Right{convert(self->obj.Right)};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        Right.attach(PyObject_CallMethodNoArgs(Right.get(), unpack_str.get()));
         if (!Right)
         {
             return nullptr;

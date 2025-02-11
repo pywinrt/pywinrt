@@ -1030,6 +1030,12 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     PyObject* unpack_PushNotificationCreateChannelStatus(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle status{convert(self->obj.status)};
         if (!status)
         {
@@ -1037,6 +1043,12 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
         }
 
         py::pyobj_handle extendedError{convert(self->obj.extendedError)};
+        if (!extendedError)
+        {
+            return nullptr;
+        }
+
+        extendedError.attach(PyObject_CallMethodNoArgs(extendedError.get(), unpack_str.get()));
         if (!extendedError)
         {
             return nullptr;

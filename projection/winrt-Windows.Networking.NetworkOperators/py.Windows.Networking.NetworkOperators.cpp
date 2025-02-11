@@ -21024,6 +21024,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     PyObject* unpack_ProfileUsage(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle UsageInMegabytes{convert(self->obj.UsageInMegabytes)};
         if (!UsageInMegabytes)
         {
@@ -21031,6 +21037,12 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
 
         py::pyobj_handle LastSyncTime{convert(self->obj.LastSyncTime)};
+        if (!LastSyncTime)
+        {
+            return nullptr;
+        }
+
+        LastSyncTime.attach(PyObject_CallMethodNoArgs(LastSyncTime.get(), unpack_str.get()));
         if (!LastSyncTime)
         {
             return nullptr;

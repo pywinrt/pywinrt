@@ -19293,6 +19293,12 @@ namespace py::cpp::Windows::UI::Core
 
     PyObject* unpack_CoreProximityEvaluation(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Score{convert(self->obj.Score)};
         if (!Score)
         {
@@ -19300,6 +19306,12 @@ namespace py::cpp::Windows::UI::Core
         }
 
         py::pyobj_handle AdjustedPoint{convert(self->obj.AdjustedPoint)};
+        if (!AdjustedPoint)
+        {
+            return nullptr;
+        }
+
+        AdjustedPoint.attach(PyObject_CallMethodNoArgs(AdjustedPoint.get(), unpack_str.get()));
         if (!AdjustedPoint)
         {
             return nullptr;

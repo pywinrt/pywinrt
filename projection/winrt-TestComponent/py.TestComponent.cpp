@@ -12248,13 +12248,31 @@ namespace py::cpp::TestComponent
 
     PyObject* unpack_Nested(py::wrapper::TestComponent::Nested* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Blittable{convert(self->obj.Blittable)};
         if (!Blittable)
         {
             return nullptr;
         }
 
+        Blittable.attach(PyObject_CallMethodNoArgs(Blittable.get(), unpack_str.get()));
+        if (!Blittable)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle NonBlittable{convert(self->obj.NonBlittable)};
+        if (!NonBlittable)
+        {
+            return nullptr;
+        }
+
+        NonBlittable.attach(PyObject_CallMethodNoArgs(NonBlittable.get(), unpack_str.get()));
         if (!NonBlittable)
         {
             return nullptr;

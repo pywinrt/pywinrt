@@ -8036,7 +8036,19 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     PyObject* unpack_DisplayPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle VerticalSyncRate{convert(self->obj.VerticalSyncRate)};
+        if (!VerticalSyncRate)
+        {
+            return nullptr;
+        }
+
+        VerticalSyncRate.attach(PyObject_CallMethodNoArgs(VerticalSyncRate.get(), unpack_str.get()));
         if (!VerticalSyncRate)
         {
             return nullptr;

@@ -5018,13 +5018,31 @@ namespace py::cpp::Windows::Perception::Spatial
 
     PyObject* unpack_SpatialBoundingBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Center{convert(self->obj.Center)};
         if (!Center)
         {
             return nullptr;
         }
 
+        Center.attach(PyObject_CallMethodNoArgs(Center.get(), unpack_str.get()));
+        if (!Center)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Extents{convert(self->obj.Extents)};
+        if (!Extents)
+        {
+            return nullptr;
+        }
+
+        Extents.attach(PyObject_CallMethodNoArgs(Extents.get(), unpack_str.get()));
         if (!Extents)
         {
             return nullptr;
@@ -5271,7 +5289,19 @@ namespace py::cpp::Windows::Perception::Spatial
 
     PyObject* unpack_SpatialBoundingFrustum(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Near{convert(self->obj.Near)};
+        if (!Near)
+        {
+            return nullptr;
+        }
+
+        Near.attach(PyObject_CallMethodNoArgs(Near.get(), unpack_str.get()));
         if (!Near)
         {
             return nullptr;
@@ -5283,7 +5313,19 @@ namespace py::cpp::Windows::Perception::Spatial
             return nullptr;
         }
 
+        Far.attach(PyObject_CallMethodNoArgs(Far.get(), unpack_str.get()));
+        if (!Far)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Right{convert(self->obj.Right)};
+        if (!Right)
+        {
+            return nullptr;
+        }
+
+        Right.attach(PyObject_CallMethodNoArgs(Right.get(), unpack_str.get()));
         if (!Right)
         {
             return nullptr;
@@ -5295,13 +5337,31 @@ namespace py::cpp::Windows::Perception::Spatial
             return nullptr;
         }
 
+        Left.attach(PyObject_CallMethodNoArgs(Left.get(), unpack_str.get()));
+        if (!Left)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Top{convert(self->obj.Top)};
         if (!Top)
         {
             return nullptr;
         }
 
+        Top.attach(PyObject_CallMethodNoArgs(Top.get(), unpack_str.get()));
+        if (!Top)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Bottom{convert(self->obj.Bottom)};
+        if (!Bottom)
+        {
+            return nullptr;
+        }
+
+        Bottom.attach(PyObject_CallMethodNoArgs(Bottom.get(), unpack_str.get()));
         if (!Bottom)
         {
             return nullptr;
@@ -5617,7 +5677,19 @@ namespace py::cpp::Windows::Perception::Spatial
 
     PyObject* unpack_SpatialBoundingOrientedBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Center{convert(self->obj.Center)};
+        if (!Center)
+        {
+            return nullptr;
+        }
+
+        Center.attach(PyObject_CallMethodNoArgs(Center.get(), unpack_str.get()));
         if (!Center)
         {
             return nullptr;
@@ -5629,7 +5701,19 @@ namespace py::cpp::Windows::Perception::Spatial
             return nullptr;
         }
 
+        Extents.attach(PyObject_CallMethodNoArgs(Extents.get(), unpack_str.get()));
+        if (!Extents)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Orientation{convert(self->obj.Orientation)};
+        if (!Orientation)
+        {
+            return nullptr;
+        }
+
+        Orientation.attach(PyObject_CallMethodNoArgs(Orientation.get(), unpack_str.get()));
         if (!Orientation)
         {
             return nullptr;
@@ -5877,7 +5961,19 @@ namespace py::cpp::Windows::Perception::Spatial
 
     PyObject* unpack_SpatialBoundingSphere(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Center{convert(self->obj.Center)};
+        if (!Center)
+        {
+            return nullptr;
+        }
+
+        Center.attach(PyObject_CallMethodNoArgs(Center.get(), unpack_str.get()));
         if (!Center)
         {
             return nullptr;
@@ -6110,13 +6206,31 @@ namespace py::cpp::Windows::Perception::Spatial
 
     PyObject* unpack_SpatialRay(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Origin{convert(self->obj.Origin)};
         if (!Origin)
         {
             return nullptr;
         }
 
+        Origin.attach(PyObject_CallMethodNoArgs(Origin.get(), unpack_str.get()));
+        if (!Origin)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Direction{convert(self->obj.Direction)};
+        if (!Direction)
+        {
+            return nullptr;
+        }
+
+        Direction.attach(PyObject_CallMethodNoArgs(Direction.get(), unpack_str.get()));
         if (!Direction)
         {
             return nullptr;

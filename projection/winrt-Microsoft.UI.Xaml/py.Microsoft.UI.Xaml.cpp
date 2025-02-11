@@ -42559,7 +42559,19 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     PyObject* unpack_Duration(py::wrapper::Microsoft::UI::Xaml::Duration* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle TimeSpan{convert(self->obj.TimeSpan)};
+        if (!TimeSpan)
+        {
+            return nullptr;
+        }
+
+        TimeSpan.attach(PyObject_CallMethodNoArgs(TimeSpan.get(), unpack_str.get()));
         if (!TimeSpan)
         {
             return nullptr;

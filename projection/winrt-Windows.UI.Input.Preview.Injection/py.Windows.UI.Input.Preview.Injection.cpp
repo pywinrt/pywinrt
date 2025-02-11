@@ -3372,6 +3372,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     PyObject* unpack_InjectedInputPointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle PointerId{convert(self->obj.PointerId)};
         if (!PointerId)
         {
@@ -3385,6 +3391,12 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
         }
 
         py::pyobj_handle PixelLocation{convert(self->obj.PixelLocation)};
+        if (!PixelLocation)
+        {
+            return nullptr;
+        }
+
+        PixelLocation.attach(PyObject_CallMethodNoArgs(PixelLocation.get(), unpack_str.get()));
         if (!PixelLocation)
         {
             return nullptr;
