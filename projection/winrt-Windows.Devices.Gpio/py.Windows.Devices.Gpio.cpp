@@ -2243,6 +2243,12 @@ namespace py::cpp::Windows::Devices::Gpio
 
     PyObject* unpack_GpioChangeCount(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Count{convert(self->obj.Count)};
         if (!Count)
         {
@@ -2250,6 +2256,12 @@ namespace py::cpp::Windows::Devices::Gpio
         }
 
         py::pyobj_handle RelativeTime{convert(self->obj.RelativeTime)};
+        if (!RelativeTime)
+        {
+            return nullptr;
+        }
+
+        RelativeTime.attach(PyObject_CallMethodNoArgs(RelativeTime.get(), unpack_str.get()));
         if (!RelativeTime)
         {
             return nullptr;
@@ -2476,7 +2488,19 @@ namespace py::cpp::Windows::Devices::Gpio
 
     PyObject* unpack_GpioChangeRecord(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle RelativeTime{convert(self->obj.RelativeTime)};
+        if (!RelativeTime)
+        {
+            return nullptr;
+        }
+
+        RelativeTime.attach(PyObject_CallMethodNoArgs(RelativeTime.get(), unpack_str.get()));
         if (!RelativeTime)
         {
             return nullptr;

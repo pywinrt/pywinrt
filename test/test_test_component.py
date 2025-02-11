@@ -496,6 +496,18 @@ class TestTestComponent(unittest.TestCase):
                 tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
             )
 
+    def test_tuple_to_struct_nested(self):
+        test = tc.TestRunner.make_tests()
+
+        # nested structs can also be tuples
+        _, _ = test.param15(
+            ((1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)), (True, "b", "c", 4)),
+            tc.Nested(
+                tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
+                tc.NonBlittable(True, "b", "c", 4),
+            ),
+        )
+
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     def test_struct_replace_bool(self):
         orig = tc.NonBlittable(True, "b", "c", 4)
@@ -558,3 +570,24 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(b, "b")
         self.assertEqual(c, "c")
         self.assertEqual(d, 4)
+
+    def test_struct_unpack_nested(self):
+        n = tc.Nested(
+            tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
+            tc.NonBlittable(True, "b", "c", 4),
+        )
+        ((a, b, c, d, e, f, g, h, i, j), (w, x, y, z)) = n.unpack()
+        self.assertEqual(a, 1)
+        self.assertEqual(b, 2)
+        self.assertEqual(c, 3)
+        self.assertEqual(d, 4)
+        self.assertEqual(e, 5)
+        self.assertEqual(f, 6)
+        self.assertEqual(g, 7)
+        self.assertEqual(h, 8)
+        self.assertEqual(i, 9)
+        self.assertEqual(j, UUID(int=10))
+        self.assertIs(w, True)
+        self.assertEqual(x, "b")
+        self.assertEqual(y, "c")
+        self.assertEqual(z, 4)

@@ -26767,13 +26767,31 @@ namespace py::cpp::Windows::Media::Core
 
     PyObject* unpack_MseTimeRange(py::wrapper::Windows::Media::Core::MseTimeRange* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Start{convert(self->obj.Start)};
         if (!Start)
         {
             return nullptr;
         }
 
+        Start.attach(PyObject_CallMethodNoArgs(Start.get(), unpack_str.get()));
+        if (!Start)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle End{convert(self->obj.End)};
+        if (!End)
+        {
+            return nullptr;
+        }
+
+        End.attach(PyObject_CallMethodNoArgs(End.get(), unpack_str.get()));
         if (!End)
         {
             return nullptr;

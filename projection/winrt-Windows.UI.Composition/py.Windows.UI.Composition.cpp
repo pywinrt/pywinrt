@@ -38715,7 +38715,19 @@ namespace py::cpp::Windows::UI::Composition
 
     PyObject* unpack_InkTrailPoint(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Point{convert(self->obj.Point)};
+        if (!Point)
+        {
+            return nullptr;
+        }
+
+        Point.attach(PyObject_CallMethodNoArgs(Point.get(), unpack_str.get()));
         if (!Point)
         {
             return nullptr;

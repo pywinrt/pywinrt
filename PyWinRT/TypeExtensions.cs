@@ -370,7 +370,8 @@ static class TypeExtensions
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
         bool quoteImportedTypes = false,
         bool usePythonCollectionTypes = true,
-        bool useStructTupleUnion = false
+        bool useStructTupleUnion = false,
+        bool isUnpack = false
     ) =>
         string.Format(
             (nullabilityInfo.AllowNull || nullabilityInfo.MaybeNull)
@@ -438,6 +439,8 @@ static class TypeExtensions
                 { FullName: "System.Object" } => "winrt.system.Object",
                 { FullName: "Windows.Foundation.DateTime" } => "datetime.datetime",
                 { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
+                { IsValueType: true } when isUnpack && !type.Resolve().IsEnum
+                    => type.ToPyTupleTyping(ns, quoteImportedTypes, isUnpack: true),
                 { IsValueType: true } when useStructTupleUnion && !type.Resolve().IsEnum
                     => $"typing.Union[{type.ToPyTypeName(ns, nullabilityInfo, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)}, {type.ToPyTupleTyping(ns, quoteImportedTypes)}]",
                 _
@@ -448,9 +451,10 @@ static class TypeExtensions
     public static string ToPyTupleTyping(
         this TypeReference type,
         string ns,
-        bool quoteImportedTypes = false
+        bool quoteImportedTypes = false,
+        bool isUnpack = false
     ) =>
-        $"typing.Tuple[{string.Join(", ", type.Resolve().Fields.Select(f => f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), default, quoteImportedTypes)))}]";
+        $"typing.Tuple[{string.Join(", ", type.Resolve().Fields.Select(f => f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), default, quoteImportedTypes, useStructTupleUnion: !isUnpack, isUnpack: isUnpack)))}]";
 
     public static string ToPyInParamTyping(
         this ParameterDefinition param,
@@ -852,4 +856,17 @@ static class TypeExtensions
             || gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
             || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
         );
+
+    public static bool IsStruct(this TypeReference type)
+    {
+        try
+        {
+            return type.Resolve().GetCategory() == Category.Struct;
+        }
+        catch
+        {
+            // if we can't resolve, then it is a fundamental type, so not a struct
+            return false;
+        }
+    }
 }

@@ -15054,7 +15054,19 @@ namespace py::cpp::Windows::UI::Input
 
     PyObject* unpack_ManipulationDelta(py::wrapper::Windows::UI::Input::ManipulationDelta* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Translation{convert(self->obj.Translation)};
+        if (!Translation)
+        {
+            return nullptr;
+        }
+
+        Translation.attach(PyObject_CallMethodNoArgs(Translation.get(), unpack_str.get()));
         if (!Translation)
         {
             return nullptr;
@@ -15346,7 +15358,19 @@ namespace py::cpp::Windows::UI::Input
 
     PyObject* unpack_ManipulationVelocities(py::wrapper::Windows::UI::Input::ManipulationVelocities* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Linear{convert(self->obj.Linear)};
+        if (!Linear)
+        {
+            return nullptr;
+        }
+
+        Linear.attach(PyObject_CallMethodNoArgs(Linear.get(), unpack_str.get()));
         if (!Linear)
         {
             return nullptr;

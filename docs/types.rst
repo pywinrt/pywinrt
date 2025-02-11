@@ -102,23 +102,48 @@ Structs
 -------
 
 Structs are simple data types that are passed by value in WinRT. In the Python
-projection, each struct is wrapped in a Python object.
+projection, each struct is wrapped in a Python object that is similar to a
+:class:`typing.NamedTuple` or frozen :mod:`dataclasses`. The names of fields are
+converted to use the ``lower_case_with_underscores`` :ref:`naming convention <naming>`.
 
-Fields
-======
+Projected structs are :func:`@typing.final <typing.final>` classes, so they
+cannot be subclassed. Projected structs are immutable. To modify a struct, use
+:func:`copy.replace` which creates a modified copy.
 
-The fields of a structure are projected as Python :term:`descriptor`-like
-attributes. Getting and setting are supported but deleting is not allowed. The
-names of fields are converted to use the ``lower_case_with_underscores``
-:ref:`naming convention <naming>`.
+As a convenience, plain :class:`tuple` objects can be used in place of projected
+structs when calling methods that expect a projected struct or when setting
+properties that expect a projected struct.
+
+Each projected struct with more than one field also has a ``unpack()`` method
+the converts the projected struct to a tuple.
 
 Example::
 
-    from winrt.windows.foundation import Point
+    # window.position is a winrt.windows.graphics.PointInt32
 
-    point = Point(1, 2)
-    x = point.x
-    point.x = 3
+    # fails with AttributeError because Point is immutable
+    window.position.x = 200
+
+    # modifying
+    new = copy.replace(window.position, x=200)
+
+    # passing a tuple
+    window.move_and_resize((100, 100, 800, 600))
+
+    # unpacking
+    x, y = window.position.unpack()
+
+.. versionchanged:: 2.2
+
+    Changed ``__repr__`` implementation to give a representation that can be
+    passed to ``eval()``.
+
+.. versionchanged:: unreleased
+
+    Structs are now immutable. In previous versions, attributes could be set.
+    Added ``__replace__`` method to allow for use with :func:`copy.replace`.
+    Added ``unpack()`` method to convert to a tuple. Added support for using
+    plain tuples in place of projected structs.
 
 -------
 Objects

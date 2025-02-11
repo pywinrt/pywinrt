@@ -1284,13 +1284,31 @@ namespace py::cpp::Windows::Perception::People
 
     PyObject* unpack_HandMeshVertex(py::wrapper::Windows::Perception::People::HandMeshVertex* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Position{convert(self->obj.Position)};
         if (!Position)
         {
             return nullptr;
         }
 
+        Position.attach(PyObject_CallMethodNoArgs(Position.get(), unpack_str.get()));
+        if (!Position)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Normal{convert(self->obj.Normal)};
+        if (!Normal)
+        {
+            return nullptr;
+        }
+
+        Normal.attach(PyObject_CallMethodNoArgs(Normal.get(), unpack_str.get()));
         if (!Normal)
         {
             return nullptr;
@@ -1527,13 +1545,31 @@ namespace py::cpp::Windows::Perception::People
 
     PyObject* unpack_JointPose(py::wrapper::Windows::Perception::People::JointPose* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Orientation{convert(self->obj.Orientation)};
         if (!Orientation)
         {
             return nullptr;
         }
 
+        Orientation.attach(PyObject_CallMethodNoArgs(Orientation.get(), unpack_str.get()));
+        if (!Orientation)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Position{convert(self->obj.Position)};
+        if (!Position)
+        {
+            return nullptr;
+        }
+
+        Position.attach(PyObject_CallMethodNoArgs(Position.get(), unpack_str.get()));
         if (!Position)
         {
             return nullptr;

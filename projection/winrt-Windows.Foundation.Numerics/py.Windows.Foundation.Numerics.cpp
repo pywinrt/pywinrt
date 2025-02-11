@@ -2869,7 +2869,19 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     PyObject* unpack_Plane(py::wrapper::Windows::Foundation::Numerics::Plane* self, PyObject* /*unused*/) noexcept
     {
+        py::pyobj_handle unpack_str{PyUnicode_InternFromString("unpack")};
+        if (!unpack_str)
+        {
+            return nullptr;
+        }
+
         py::pyobj_handle Normal{convert(self->obj.normal)};
+        if (!Normal)
+        {
+            return nullptr;
+        }
+
+        Normal.attach(PyObject_CallMethodNoArgs(Normal.get(), unpack_str.get()));
         if (!Normal)
         {
             return nullptr;
