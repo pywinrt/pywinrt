@@ -19,8 +19,10 @@ In the Python projection, names are adapted to fit `PEP8 naming conventions`_.
 
 - Type names remain as ``CapitalizedWords``.
 - Constants, such as enum members are converted to ``UPPER_CASE_WITH_UNDERSCORES``.
+- Namespaces are converted to ``lowercasewithoutunderscores``.
 - All other identifiers are converted to ``lower_case_with_underscores``
-  (namespaces, fields, properties, methods, events, etc.).
+  (fields, properties, methods, events, etc.).
+- If an identifier is a Python keyword, an underscore is appended to the name.
 
 .. _PEP8 naming conventions: https://peps.python.org/pep-0008/#naming-conventions
 
