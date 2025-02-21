@@ -9,7 +9,7 @@ from typing import Any, Callable, Coroutine, Iterable, Sequence, TypeVar, cast
 import winrt.windows.ai.machinelearning as winml
 from winrt.windows.graphics.imaging import BitmapDecoder
 from winrt.windows.media import VideoFrame
-from winrt.windows.storage import FileAccessMode, StorageFile
+from winrt.windows.storage import StorageFile
 
 if os.environ.get("MSYSTEM", ""):
     _getfullpathname: Callable[[str], str]
@@ -67,7 +67,7 @@ def load_model(model_path: Path) -> winml.LearningModel:
 async def load_image_file(file_path: Path) -> VideoFrame:
     file = await StorageFile.get_file_from_path_async(abspath(file_path))
 
-    with await file.open_async(FileAccessMode.READ) as stream:
+    with await file.open_read_async() as stream:
         decoder = await BitmapDecoder.create_async(stream)
         software_bitmap = await decoder.get_software_bitmap_async()
 
