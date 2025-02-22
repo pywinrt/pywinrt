@@ -98,7 +98,7 @@ subprocess.check_call(
     ]
 )
 
-# generate code for windows app sdk
+# generate code for windows app sdk (winui3)
 
 WINDOWS_APP_SDK_PACKAGE_METADATA = (
     REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK" / "lib" / "uap10.0"
@@ -130,7 +130,7 @@ subprocess.check_call(
         "--reference",
         WINDOWS_SDK,
         "--output",
-        PROJECTION_PATH,
+        PROJECTION_PATH / "winui3",
         "--header-path",
         WINDOWS_APP_SDK_PACKAGE_PATH,
         "--nullability-json",
