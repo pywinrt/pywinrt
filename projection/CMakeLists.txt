@@ -83,8 +83,8 @@ function(pywinrt_add_library target sources)
 endfunction()
 
 set(circular_dependency_packages
-    "winrt-Microsoft.UI.Xaml.Controls"
-    "winrt-Microsoft.UI.Xaml.Controls.Primitives"
+    "winui3/winrt-Microsoft.UI.Xaml.Controls"
+    "winui3/winrt-Microsoft.UI.Xaml.Controls.Primitives"
     "winrt-Windows.UI.Xaml.Controls"
     "winrt-Windows.UI.Xaml.Controls.Primitives"
 )
@@ -134,10 +134,10 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 
 if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt-Windows.*")
-    file(GLOB app_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt-Microsoft.*")
+    file(GLOB winui3_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui3/winrt-*")
     file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/winrt-*")
     file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Windows.*")
-    file(GLOB app_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Microsoft.*")
+    file(GLOB winui3_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Microsoft.*")
 else()
     # minimum set of packages required for unit tests
     set(packages
@@ -161,9 +161,9 @@ else()
         "winrt-Windows.UI.Composition.Desktop"
         "winrt-Windows.UI.WindowManagement"
     )
-    set(app_packages
-        "winrt-Microsoft.UI"
-        "winrt-Microsoft.Windows.AppNotifications"
+    set(winui3_packages
+        "winui3/winrt-Microsoft.UI"
+        "winui3/winrt-Microsoft.Windows.AppNotifications"
     )
     set(interop_packages
         "interop/winrt-Windows.Graphics.Capture.Interop"
@@ -171,17 +171,17 @@ else()
         "interop/winrt-Windows.System.Interop"
         "interop/winrt-Windows.UI.Composition.Interop"
     )
-    set(app_interop_packages
+    set(winui3_interop_packages
         "interop/winrt-Microsoft.UI.Interop"
         "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     )
 endif()
 
-foreach(package ${packages} ${app_packages} ${webview2_packages} ${interop_packages} ${app_interop_packages})
+foreach(package ${packages} ${winui3_packages} ${webview2_packages} ${interop_packages} ${winui3_interop_packages})
     pywinrt_add_namespace_package(${package})
 
     # speed up builds by precompiling frequently used headers
-    if (package IN_LIST packages OR package IN_LIST app_packages)
+    if (package IN_LIST packages OR package IN_LIST winui3_packages)
         if (NOT first_target)
             set(first_target ${package_target})
 
@@ -211,7 +211,7 @@ foreach(package ${packages} ${app_packages} ${webview2_packages} ${interop_packa
     endif()
 
     # windows app sdk headers
-    if (package IN_LIST app_packages OR package IN_LIST app_interop_packages)
+    if (package IN_LIST winui3_packages OR package IN_LIST winui3_interop_packages)
         target_include_directories(${package_target} PRIVATE
             "${WINRT_WINDOWS_APP_SDK_PATH}/cppwinrt"
             "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt"
@@ -228,7 +228,7 @@ foreach(package ${packages} ${app_packages} ${webview2_packages} ${interop_packa
         endif()
     endif()
 
-    if (package IN_LIST app_interop_packages)
+    if (package IN_LIST winui3_interop_packages)
         target_include_directories(${package_target} PRIVATE
             "${WINDOWS_APP_SDK_PATH}/include"
         )
