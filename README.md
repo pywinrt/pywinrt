@@ -4,6 +4,15 @@
 
 Access Windows Runtime (WinRT) APIs directly from Python!
 
+### Overview
+
+What can you do with PyWinRT?
+
+* Access hardware, like Bluetooth, USB, serial ports, cameras and more from
+  Python.
+* Access Windows OS features like notifications and screen capture from Python.
+* Write WinUI 2 or WinUI 3 apps using Python.
+
 ### Documentation
 
 https://pywinrt.readthedocs.io
