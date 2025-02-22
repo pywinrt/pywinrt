@@ -91,7 +91,7 @@ subprocess.check_call(
         "--reference",
         WINDOWS_SDK,
         "--output",
-        PROJECTION_PATH,
+        PROJECTION_PATH / "webview2",
         "--nullability-json",
         WEBVIEW2_NULLABILITY_JSON_PATH,
         "--component-dlls",

@@ -16,7 +16,7 @@ def get_include_dirs() -> List[str]:
     except ModuleNotFoundError:
         # hack for building on CI without binary packages
         webview2_dir = package_dir.joinpath(
-            "..", "..", "..", "winrt-Microsoft.Web.WebView2.Core"
+            "..", "..", "..", "webview2", "winrt-Microsoft.Web.WebView2.Core"
         )
 
     return [package_dir.joinpath(d) for d in ["cppwinrt", "pywinrt"]] + [

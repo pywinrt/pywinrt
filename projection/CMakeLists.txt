@@ -42,7 +42,7 @@ find_package(Python3 REQUIRED COMPONENTS Development.Module)
 
 set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
 set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
-set(WINRT_WEBVIEW2_PATH "winrt-Microsoft.Web.WebView2.Core")
+set(WINRT_WEBVIEW2_PATH "webview2/winrt-Microsoft.Web.WebView2.Core")
 set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK")
 set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2")
 
@@ -135,8 +135,7 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt-Windows.*")
     file(GLOB app_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt-Microsoft.*")
-    file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt-Microsoft.Web.WebView2.*")
-    list(REMOVE_ITEM app_packages ${webview2_packages})
+    file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/winrt-*")
     file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Windows.*")
     file(GLOB app_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Microsoft.*")
 else()
@@ -259,7 +258,7 @@ foreach(package ${packages} ${app_packages} ${webview2_packages} ${interop_packa
             DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
     endif()
 
-    if (${package} STREQUAL "winrt-Microsoft.Web.WebView2.Core")
+    if (${package} STREQUAL "webview2/winrt-Microsoft.Web.WebView2.Core")
         install(FILES "${WEBVIEW2_PATH}/runtimes/win-${WINDOWS_APP_SDK_ARCH}/native_uap/Microsoft.Web.WebView2.Core.dll"
             DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/microsoft/web/webview2/core")
     endif()

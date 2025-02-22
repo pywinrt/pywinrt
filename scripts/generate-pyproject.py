@@ -437,6 +437,7 @@ for package_path in chain(
     (PROJECTION_PATH / "interop").glob("winrt-*"),
     (PROJECTION_PATH).glob("winrt-Windows.*"),
     (PROJECTION_PATH).glob("winrt-Microsoft.*"),
+    (PROJECTION_PATH / "webview2").glob("winrt-*"),
     [
         PROJECTION_PATH / "winrt-sdk",
         PROJECTION_PATH / "winrt-WindowsAppSDK",

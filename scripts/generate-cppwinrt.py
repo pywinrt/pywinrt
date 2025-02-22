@@ -43,7 +43,7 @@ WEBVIEW2_PACKAGE_METADATA = (
 )
 
 WEBVIEW2_PACKAGE_PATH = (
-    PROJECTION_PATH / "winrt-Microsoft.Web.WebView2.Core" / "cppwinrt"
+    PROJECTION_PATH / "webview2" / "winrt-Microsoft.Web.WebView2.Core" / "cppwinrt"
 )
 
 shutil.rmtree(WEBVIEW2_PACKAGE_PATH, ignore_errors=True)
