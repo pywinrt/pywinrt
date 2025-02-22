@@ -149,7 +149,7 @@ TEST_PACKAGE_METADATA = (
     / "TestComponent.winmd"
 )
 
-TEST_PACKAGE_NULLABILITY_JSON = REPO_ROOT_PATH / "nullability" / "test-component.json"
+TEST_PACKAGE_NULLABILITY_JSON = REPO_ROOT_PATH / "nullability" / "test-winrt.json"
 
 subprocess.check_call(
     DOTNET
