@@ -160,7 +160,7 @@ subprocess.check_call(
         "--reference",
         WINDOWS_SDK,
         "--output",
-        PROJECTION_PATH,
+        PROJECTION_PATH / "test-winrt",
         "--nullability-json",
         TEST_PACKAGE_NULLABILITY_JSON,
         "--component-dlls",
