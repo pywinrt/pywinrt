@@ -313,7 +313,7 @@ class TestTestComponent(unittest.TestCase):
         b = tc.Blittable()
 
         with self.assertRaisesRegex(AttributeError, "is not writable"):
-            b.a = 1
+            b.a = 1  # type: ignore
 
     def test_blittable_default(self):
         b = tc.Blittable()
