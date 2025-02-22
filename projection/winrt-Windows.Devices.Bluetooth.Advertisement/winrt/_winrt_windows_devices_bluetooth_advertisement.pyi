@@ -14,7 +14,7 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.storage.streams as windows_storage_streams
 
-from winrt.windows.devices.bluetooth.advertisement import BluetoothLEAdvertisementFlags, BluetoothLEAdvertisementPublisherStatus, BluetoothLEAdvertisementType, BluetoothLEAdvertisementWatcherStatus, BluetoothLEScanningMode
+from winrt.windows.devices.bluetooth.advertisement import BluetoothLEAdvertisementFlags, BluetoothLEAdvertisementPhyType, BluetoothLEAdvertisementPublisherStatus, BluetoothLEAdvertisementType, BluetoothLEAdvertisementWatcherStatus, BluetoothLEScanningMode
 
 Self = typing.TypeVar('Self')
 
@@ -221,6 +221,18 @@ class BluetoothLEAdvertisementPublisher(winrt.system.Object):
     # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher::put_IncludeTransmitPowerLevel(System.Boolean)
     @include_transmit_power_level.setter
     def include_transmit_power_level(self, value: bool) -> None: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher::get_SecondaryPhy()
+    @_property
+    def secondary_phy(self) -> BluetoothLEAdvertisementPhyType: ...
+    # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher::put_SecondaryPhy(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType)
+    @secondary_phy.setter
+    def secondary_phy(self, value: BluetoothLEAdvertisementPhyType) -> None: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher::get_PrimaryPhy()
+    @_property
+    def primary_phy(self) -> BluetoothLEAdvertisementPhyType: ...
+    # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher::put_PrimaryPhy(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType)
+    @primary_phy.setter
+    def primary_phy(self, value: BluetoothLEAdvertisementPhyType) -> None: ...
 
 @typing.final
 class BluetoothLEAdvertisementPublisherStatusChangedEventArgs(winrt.system.Object):
@@ -272,6 +284,28 @@ class BluetoothLEAdvertisementReceivedEventArgs(winrt.system.Object):
     # Windows.Foundation.IReference`1<System.Int16> Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs::get_TransmitPowerLevelInDBm()
     @_property
     def transmit_power_level_in_dbm(self) -> typing.Optional[winrt.system.Int16]: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs::get_PrimaryPhy()
+    @_property
+    def primary_phy(self) -> BluetoothLEAdvertisementPhyType: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs::get_SecondaryPhy()
+    @_property
+    def secondary_phy(self) -> BluetoothLEAdvertisementPhyType: ...
+
+@typing.final
+class BluetoothLEAdvertisementScanParameters_Static(winrt._winrt.IInspectable_Static):
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters::CoexistenceOptimized()
+    def coexistence_optimized(cls) -> BluetoothLEAdvertisementScanParameters: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters::LowLatency()
+    def low_latency(cls) -> BluetoothLEAdvertisementScanParameters: ...
+
+@typing.final
+class BluetoothLEAdvertisementScanParameters(winrt.system.Object, metaclass=BluetoothLEAdvertisementScanParameters_Static):
+    # System.UInt16 Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters::get_ScanInterval()
+    @_property
+    def scan_interval(self) -> winrt.system.UInt16: ...
+    # System.UInt16 Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters::get_ScanWindow()
+    @_property
+    def scan_window(self) -> winrt.system.UInt16: ...
 
 @typing.final
 class BluetoothLEAdvertisementWatcher(winrt.system.Object):
@@ -330,6 +364,30 @@ class BluetoothLEAdvertisementWatcher(winrt.system.Object):
     # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::put_AllowExtendedAdvertisements(System.Boolean)
     @allow_extended_advertisements.setter
     def allow_extended_advertisements(self, value: bool) -> None: ...
+    # System.Boolean Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::get_UseUncoded1MPhy()
+    @_property
+    def use_uncoded1_m_phy(self) -> bool: ...
+    # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::put_UseUncoded1MPhy(System.Boolean)
+    @use_uncoded1_m_phy.setter
+    def use_uncoded1_m_phy(self, value: bool) -> None: ...
+    # System.Boolean Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::get_UseHardwareFilter()
+    @_property
+    def use_hardware_filter(self) -> bool: ...
+    # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::put_UseHardwareFilter(System.Boolean)
+    @use_hardware_filter.setter
+    def use_hardware_filter(self, value: bool) -> None: ...
+    # System.Boolean Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::get_UseCodedPhy()
+    @_property
+    def use_coded_phy(self) -> bool: ...
+    # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::put_UseCodedPhy(System.Boolean)
+    @use_coded_phy.setter
+    def use_coded_phy(self, value: bool) -> None: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::get_ScanParameters()
+    @_property
+    def scan_parameters(self) -> BluetoothLEAdvertisementScanParameters: ...
+    # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::put_ScanParameters(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters)
+    @scan_parameters.setter
+    def scan_parameters(self, value: BluetoothLEAdvertisementScanParameters) -> None: ...
 
 @typing.final
 class BluetoothLEAdvertisementWatcherStoppedEventArgs(winrt.system.Object):

@@ -513,6 +513,66 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
     }
 
+    static PyObject* BluetoothAdapter_get_IsLowEnergyCodedPhySupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsLowEnergyCodedPhySupported");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLowEnergyCodedPhySupported();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BluetoothAdapter_get_IsLowEnergyUncoded2MPhySupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsLowEnergyUncoded2MPhySupported");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsLowEnergyUncoded2MPhySupported();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_BluetoothAdapter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Bluetooth::BluetoothAdapter>>();
@@ -555,6 +615,8 @@ namespace py::cpp::Windows::Devices::Bluetooth
         { "are_low_energy_secure_connections_supported", reinterpret_cast<getter>(BluetoothAdapter_get_AreLowEnergySecureConnectionsSupported), nullptr, nullptr, nullptr },
         { "is_extended_advertising_supported", reinterpret_cast<getter>(BluetoothAdapter_get_IsExtendedAdvertisingSupported), nullptr, nullptr, nullptr },
         { "max_advertisement_data_length", reinterpret_cast<getter>(BluetoothAdapter_get_MaxAdvertisementDataLength), nullptr, nullptr, nullptr },
+        { "is_low_energy_coded_phy_supported", reinterpret_cast<getter>(BluetoothAdapter_get_IsLowEnergyCodedPhySupported), nullptr, nullptr, nullptr },
+        { "is_low_energy_uncoded2_m_phy_supported", reinterpret_cast<getter>(BluetoothAdapter_get_IsLowEnergyUncoded2MPhySupported), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_BluetoothAdapter[] = {

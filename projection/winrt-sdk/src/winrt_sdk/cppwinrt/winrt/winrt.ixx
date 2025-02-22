@@ -228,6 +228,7 @@ export module winrt;
 #include "winrt/Windows.Graphics.Printing.OptionDetails.h"
 #include "winrt/Windows.Graphics.Printing.PrintSupport.h"
 #include "winrt/Windows.Graphics.Printing.PrintTicket.h"
+#include "winrt/Windows.Graphics.Printing.ProtectedPrint.h"
 #include "winrt/Windows.Graphics.Printing.Workflow.h"
 #include "winrt/Windows.Graphics.Printing3D.h"
 #include "winrt/Windows.Management.h"

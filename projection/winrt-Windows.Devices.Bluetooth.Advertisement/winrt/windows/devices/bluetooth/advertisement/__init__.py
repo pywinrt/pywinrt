@@ -12,6 +12,7 @@ from winrt._winrt_windows_devices_bluetooth_advertisement import (
     BluetoothLEAdvertisementPublisher,
     BluetoothLEAdvertisementPublisherStatusChangedEventArgs,
     BluetoothLEAdvertisementReceivedEventArgs,
+    BluetoothLEAdvertisementScanParameters,
     BluetoothLEAdvertisementWatcher,
     BluetoothLEAdvertisementWatcherStoppedEventArgs,
     BluetoothLEManufacturerData,
@@ -19,6 +20,7 @@ from winrt._winrt_windows_devices_bluetooth_advertisement import (
 
 __all__ = [
     "BluetoothLEAdvertisementFlags",
+    "BluetoothLEAdvertisementPhyType",
     "BluetoothLEAdvertisementPublisherStatus",
     "BluetoothLEAdvertisementType",
     "BluetoothLEAdvertisementWatcherStatus",
@@ -31,6 +33,7 @@ __all__ = [
     "BluetoothLEAdvertisementPublisher",
     "BluetoothLEAdvertisementPublisherStatusChangedEventArgs",
     "BluetoothLEAdvertisementReceivedEventArgs",
+    "BluetoothLEAdvertisementScanParameters",
     "BluetoothLEAdvertisementWatcher",
     "BluetoothLEAdvertisementWatcherStoppedEventArgs",
     "BluetoothLEManufacturerData",
@@ -43,6 +46,12 @@ class BluetoothLEAdvertisementFlags(enum.IntFlag):
     CLASSIC_NOT_SUPPORTED = 0x4
     DUAL_MODE_CONTROLLER_CAPABLE = 0x8
     DUAL_MODE_HOST_CAPABLE = 0x10
+
+class BluetoothLEAdvertisementPhyType(enum.IntEnum):
+    UNSPECIFIED = 0
+    UNCODED1_M_PHY = 1
+    UNCODED2_M_PHY = 2
+    CODED_PHY = 3
 
 class BluetoothLEAdvertisementPublisherStatus(enum.IntEnum):
     CREATED = 0

@@ -1243,6 +1243,16 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->put_DistanceInMillimeters(*(void**)(&value)));
     }
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate2<D>::OnlookerPresence() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate2)->get_OnlookerPresence(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate2<D>::OnlookerPresence(winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate2)->put_OnlookerPresence(*(void**)(&value)));
+    }
     template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensorStatics<D>::GetDeviceSelector() const
     {
         void* result{};
@@ -4525,6 +4535,27 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate2> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate2>
+    {
+        int32_t __stdcall get_OnlookerPresence(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence>>(this->shim().OnlookerPresence());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_OnlookerPresence(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnlookerPresence(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics>
     {
         int32_t __stdcall GetDeviceSelector(void** result) noexcept final try
@@ -6938,6 +6969,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettings> : winrt::impl::hash_base {};

@@ -592,6 +592,49 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
         }
     }
 
+    static PyObject* GattServiceProviderConnection_UpdateAdvertisingParameters(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Background.GattServiceProviderConnection", L"UpdateAdvertisingParameters", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateAdvertisingParameters(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* GattServiceProviderConnection_get_Service(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection* self, void* /*unused*/) noexcept
     {
         try
@@ -708,6 +751,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     static PyMethodDef _methods_GattServiceProviderConnection[] = {
         { "start", reinterpret_cast<PyCFunction>(GattServiceProviderConnection_Start), METH_VARARGS, nullptr },
+        { "update_advertising_parameters", reinterpret_cast<PyCFunction>(GattServiceProviderConnection_UpdateAdvertisingParameters), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GattServiceProviderConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GattServiceProviderConnection), METH_O | METH_STATIC, nullptr },
         { }};

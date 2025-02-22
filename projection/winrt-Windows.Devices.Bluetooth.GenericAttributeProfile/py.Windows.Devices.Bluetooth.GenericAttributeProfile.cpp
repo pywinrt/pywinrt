@@ -11632,6 +11632,49 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         }
     }
 
+    static PyObject* GattServiceProvider_UpdateAdvertisingParameters(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider", L"UpdateAdvertisingParameters", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.UpdateAdvertisingParameters(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* GattServiceProvider_get_AdvertisementStatus(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider* self, void* /*unused*/) noexcept
     {
         try
@@ -11785,6 +11828,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { "start_advertising", reinterpret_cast<PyCFunction>(GattServiceProvider_StartAdvertising), METH_VARARGS, nullptr },
         { "start_advertising_with_parameters", reinterpret_cast<PyCFunction>(GattServiceProvider_StartAdvertisingWithParameters), METH_VARARGS, nullptr },
         { "stop_advertising", reinterpret_cast<PyCFunction>(GattServiceProvider_StopAdvertising), METH_VARARGS, nullptr },
+        { "update_advertising_parameters", reinterpret_cast<PyCFunction>(GattServiceProvider_UpdateAdvertisingParameters), METH_VARARGS, nullptr },
         { "add_advertisement_status_changed", reinterpret_cast<PyCFunction>(GattServiceProvider_add_AdvertisementStatusChanged), METH_O, nullptr },
         { "remove_advertisement_status_changed", reinterpret_cast<PyCFunction>(GattServiceProvider_remove_AdvertisementStatusChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_GattServiceProvider, METH_O | METH_STATIC, nullptr },
@@ -12203,6 +12247,144 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         }
     }
 
+    static PyObject* GattServiceProviderAdvertisingParameters_get_UseLowEnergyUncoded2MPhyAsSecondaryPhy(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"UseLowEnergyUncoded2MPhyAsSecondaryPhy");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UseLowEnergyUncoded2MPhyAsSecondaryPhy();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GattServiceProviderAdvertisingParameters_put_UseLowEnergyUncoded2MPhyAsSecondaryPhy(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"UseLowEnergyUncoded2MPhyAsSecondaryPhy");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.UseLowEnergyUncoded2MPhyAsSecondaryPhy(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* GattServiceProviderAdvertisingParameters_get_UseLowEnergyUncoded1MPhyAsSecondaryPhy(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"UseLowEnergyUncoded1MPhyAsSecondaryPhy");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.UseLowEnergyUncoded1MPhyAsSecondaryPhy();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GattServiceProviderAdvertisingParameters_put_UseLowEnergyUncoded1MPhyAsSecondaryPhy(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters", L"UseLowEnergyUncoded1MPhyAsSecondaryPhy");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.UseLowEnergyUncoded1MPhyAsSecondaryPhy(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_GattServiceProviderAdvertisingParameters(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters>>();
@@ -12236,6 +12418,8 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { "is_discoverable", reinterpret_cast<getter>(GattServiceProviderAdvertisingParameters_get_IsDiscoverable), reinterpret_cast<setter>(GattServiceProviderAdvertisingParameters_put_IsDiscoverable), nullptr, nullptr },
         { "is_connectable", reinterpret_cast<getter>(GattServiceProviderAdvertisingParameters_get_IsConnectable), reinterpret_cast<setter>(GattServiceProviderAdvertisingParameters_put_IsConnectable), nullptr, nullptr },
         { "service_data", reinterpret_cast<getter>(GattServiceProviderAdvertisingParameters_get_ServiceData), reinterpret_cast<setter>(GattServiceProviderAdvertisingParameters_put_ServiceData), nullptr, nullptr },
+        { "use_low_energy_uncoded2_m_phy_as_secondary_phy", reinterpret_cast<getter>(GattServiceProviderAdvertisingParameters_get_UseLowEnergyUncoded2MPhyAsSecondaryPhy), reinterpret_cast<setter>(GattServiceProviderAdvertisingParameters_put_UseLowEnergyUncoded2MPhyAsSecondaryPhy), nullptr, nullptr },
+        { "use_low_energy_uncoded1_m_phy_as_secondary_phy", reinterpret_cast<getter>(GattServiceProviderAdvertisingParameters_get_UseLowEnergyUncoded1MPhyAsSecondaryPhy), reinterpret_cast<setter>(GattServiceProviderAdvertisingParameters_put_UseLowEnergyUncoded1MPhyAsSecondaryPhy), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_GattServiceProviderAdvertisingParameters[] = {

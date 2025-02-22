@@ -801,6 +801,12 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::IMouseWheelParameters)->put_PageTranslation(impl::bind_in(value)));
     }
+    template <typename D> auto consume_Windows_UI_Input_IPhysicalGestureRecognizer<D>::IsActive() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::IPhysicalGestureRecognizer)->get_IsActive(&value));
+        return value;
+    }
     template <typename D> auto consume_Windows_UI_Input_IPhysicalGestureRecognizer<D>::GestureSettings() const
     {
         winrt::Windows::UI::Input::GestureSettings value{};
@@ -1893,15 +1899,15 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITappedEventArgs2)->get_ContactCount(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::GesturesEnabled() const
+    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::Enabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->get_GesturesEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->get_Enabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::GesturesEnabled(bool value) const
+    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::Enabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->put_GesturesEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->put_Enabled(value));
     }
     template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::SupportedGestures() const
     {
@@ -1955,19 +1961,19 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->remove_PointerReleased(impl::bind_in(token));
     }
-    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::TouchpadGlobalActionPerformed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::GlobalActionPerformed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->add_TouchpadGlobalActionPerformed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->add_GlobalActionPerformed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::TouchpadGlobalActionPerformed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const& handler) const
+    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::GlobalActionPerformed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const& handler) const
     {
-        return impl::make_event_revoker<D, TouchpadGlobalActionPerformed_revoker>(this, TouchpadGlobalActionPerformed(handler));
+        return impl::make_event_revoker<D, GlobalActionPerformed_revoker>(this, GlobalActionPerformed(handler));
     }
-    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::TouchpadGlobalActionPerformed(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesController<D>::GlobalActionPerformed(winrt::event_token const& token) const noexcept
     {
-        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->remove_TouchpadGlobalActionPerformed(impl::bind_in(token));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGesturesController)->remove_GlobalActionPerformed(impl::bind_in(token));
     }
     template <typename D> auto consume_Windows_UI_Input_ITouchpadGesturesControllerStatics<D>::IsSupported() const
     {
@@ -1986,6 +1992,12 @@ namespace winrt::impl
         winrt::Windows::UI::Input::TouchpadGlobalAction value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGlobalActionEventArgs)->get_Action(reinterpret_cast<int32_t*>(&value)));
         return value;
+    }
+    template <typename D> auto consume_Windows_UI_Input_ITouchpadGlobalActionEventArgs<D>::PointerDevice() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Input::ITouchpadGlobalActionEventArgs)->get_PointerDevice(&value));
+        return winrt::Windows::Devices::Input::PointerDevice{ value, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -3130,6 +3142,13 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::UI::Input::IPhysicalGestureRecognizer> : produce_base<D, winrt::Windows::UI::Input::IPhysicalGestureRecognizer>
     {
+        int32_t __stdcall get_IsActive(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsActive());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
         int32_t __stdcall get_GestureSettings(uint32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
@@ -4739,17 +4758,17 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::UI::Input::ITouchpadGesturesController> : produce_base<D, winrt::Windows::UI::Input::ITouchpadGesturesController>
     {
-        int32_t __stdcall get_GesturesEnabled(bool* value) noexcept final try
+        int32_t __stdcall get_Enabled(bool* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<bool>(this->shim().GesturesEnabled());
+            *value = detach_from<bool>(this->shim().Enabled());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall put_GesturesEnabled(bool value) noexcept final try
+        int32_t __stdcall put_Enabled(bool value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().GesturesEnabled(value);
+            this->shim().Enabled(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4809,18 +4828,18 @@ namespace winrt::impl
             this->shim().PointerReleased(*reinterpret_cast<winrt::event_token const*>(&token));
             return 0;
         }
-        int32_t __stdcall add_TouchpadGlobalActionPerformed(void* handler, winrt::event_token* token) noexcept final try
+        int32_t __stdcall add_GlobalActionPerformed(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().TouchpadGlobalActionPerformed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().GlobalActionPerformed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall remove_TouchpadGlobalActionPerformed(winrt::event_token token) noexcept final
+        int32_t __stdcall remove_GlobalActionPerformed(winrt::event_token token) noexcept final
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().TouchpadGlobalActionPerformed(*reinterpret_cast<winrt::event_token const*>(&token));
+            this->shim().GlobalActionPerformed(*reinterpret_cast<winrt::event_token const*>(&token));
             return 0;
         }
     };
@@ -4854,6 +4873,14 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::UI::Input::TouchpadGlobalAction>(this->shim().Action());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PointerDevice(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Devices::Input::PointerDevice>(this->shim().PointerDevice());
             return 0;
         }
         catch (...) { return to_hresult(); }

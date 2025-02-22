@@ -6585,6 +6585,36 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
+    static PyObject* PhysicalGestureRecognizer_get_IsActive(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"IsActive");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsActive();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* PhysicalGestureRecognizer_add_Holding(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
     {
         try
@@ -6963,6 +6993,7 @@ namespace py::cpp::Windows::UI::Input
         { "hold_min_contact_count", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_HoldMinContactCount), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_HoldMinContactCount), nullptr, nullptr },
         { "hold_max_contact_count", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_HoldMaxContactCount), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_HoldMaxContactCount), nullptr, nullptr },
         { "gesture_settings", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_GestureSettings), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_GestureSettings), nullptr, nullptr },
+        { "is_active", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_IsActive), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_PhysicalGestureRecognizer[] = {
@@ -13801,7 +13832,7 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
-    static PyObject* TouchpadGesturesController_get_GesturesEnabled(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, void* /*unused*/) noexcept
+    static PyObject* TouchpadGesturesController_get_Enabled(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, void* /*unused*/) noexcept
     {
         try
         {
@@ -13809,7 +13840,7 @@ namespace py::cpp::Windows::UI::Input
 
             if (!is_property_present.has_value())
             {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGesturesController", L"GesturesEnabled");
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGesturesController", L"Enabled");
             }
 
             if (!is_property_present.value())
@@ -13821,7 +13852,7 @@ namespace py::cpp::Windows::UI::Input
             return py::convert([&]()
             {
                 auto _gil = release_gil();
-                return self->obj.GesturesEnabled();
+                return self->obj.Enabled();
             }());
         }
         catch (...)
@@ -13831,7 +13862,7 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
-    static int TouchpadGesturesController_put_GesturesEnabled(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg, void* /*unused*/) noexcept
+    static int TouchpadGesturesController_put_Enabled(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg, void* /*unused*/) noexcept
     {
         if (!arg)
         {
@@ -13845,7 +13876,7 @@ namespace py::cpp::Windows::UI::Input
 
             if (!is_property_present.has_value())
             {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGesturesController", L"GesturesEnabled");
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGesturesController", L"Enabled");
             }
 
             if (!is_property_present.value())
@@ -13858,7 +13889,7 @@ namespace py::cpp::Windows::UI::Input
 
             {
                 auto _gil = release_gil();
-                self->obj.GesturesEnabled(param0);
+                self->obj.Enabled(param0);
             }
 
             return 0;
@@ -13867,6 +13898,71 @@ namespace py::cpp::Windows::UI::Input
         {
             py::to_PyErr();
             return -1;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_add_GlobalActionPerformed(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"GlobalActionPerformed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>>(arg);
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.GlobalActionPerformed(param0);
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_remove_GlobalActionPerformed(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"GlobalActionPerformed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.GlobalActionPerformed(param0);
+            }
+
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
         }
     }
 
@@ -14065,71 +14161,6 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
-    static PyObject* TouchpadGesturesController_add_TouchpadGlobalActionPerformed(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"TouchpadGlobalActionPerformed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
-            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>>(arg);
-
-            return py::convert([&]()
-            {
-                auto _gil = release_gil();
-                return self->obj.TouchpadGlobalActionPerformed(param0);
-            }());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static PyObject* TouchpadGesturesController_remove_TouchpadGlobalActionPerformed(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_event_present{};
-
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"TouchpadGlobalActionPerformed");
-            }
-
-            if (!is_event_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-                return nullptr;
-            }
-
-            auto param0 = py::convert_to<winrt::event_token>(arg);
-
-            {
-                auto _gil = release_gil();
-                self->obj.TouchpadGlobalActionPerformed(param0);
-            }
-
-            Py_RETURN_NONE;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_TouchpadGesturesController(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::TouchpadGesturesController>>();
@@ -14155,21 +14186,21 @@ namespace py::cpp::Windows::UI::Input
     }
 
     static PyMethodDef _methods_TouchpadGesturesController[] = {
+        { "add_global_action_performed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_GlobalActionPerformed), METH_O, nullptr },
+        { "remove_global_action_performed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_GlobalActionPerformed), METH_O, nullptr },
         { "add_pointer_moved", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_PointerMoved), METH_O, nullptr },
         { "remove_pointer_moved", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_PointerMoved), METH_O, nullptr },
         { "add_pointer_pressed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_PointerPressed), METH_O, nullptr },
         { "remove_pointer_pressed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_PointerPressed), METH_O, nullptr },
         { "add_pointer_released", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_PointerReleased), METH_O, nullptr },
         { "remove_pointer_released", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_PointerReleased), METH_O, nullptr },
-        { "add_touchpad_global_action_performed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_TouchpadGlobalActionPerformed), METH_O, nullptr },
-        { "remove_touchpad_global_action_performed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_TouchpadGlobalActionPerformed), METH_O, nullptr },
         { "_assign_array_", _assign_array_TouchpadGesturesController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TouchpadGesturesController), METH_O | METH_STATIC, nullptr },
         { }};
 
     static PyGetSetDef _getset_TouchpadGesturesController[] = {
         { "supported_gestures", reinterpret_cast<getter>(TouchpadGesturesController_get_SupportedGestures), reinterpret_cast<setter>(TouchpadGesturesController_put_SupportedGestures), nullptr, nullptr },
-        { "gestures_enabled", reinterpret_cast<getter>(TouchpadGesturesController_get_GesturesEnabled), reinterpret_cast<setter>(TouchpadGesturesController_put_GesturesEnabled), nullptr, nullptr },
+        { "enabled", reinterpret_cast<getter>(TouchpadGesturesController_get_Enabled), reinterpret_cast<setter>(TouchpadGesturesController_put_Enabled), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_TouchpadGesturesController[] = {
@@ -14256,6 +14287,36 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
+    static PyObject* TouchpadGlobalActionEventArgs_get_PointerDevice(py::wrapper::Windows::UI::Input::TouchpadGlobalActionEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGlobalActionEventArgs", L"PointerDevice");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PointerDevice();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_TouchpadGlobalActionEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>>();
@@ -14287,6 +14348,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyGetSetDef _getset_TouchpadGlobalActionEventArgs[] = {
         { "action", reinterpret_cast<getter>(TouchpadGlobalActionEventArgs_get_Action), nullptr, nullptr, nullptr },
+        { "pointer_device", reinterpret_cast<getter>(TouchpadGlobalActionEventArgs_get_PointerDevice), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_TouchpadGlobalActionEventArgs[] = {

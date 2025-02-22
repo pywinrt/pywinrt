@@ -33,6 +33,12 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Printers::PageConfigurationSource> = "i";
 
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Devices::Printers::VirtualPrinterInstallationStatus> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Devices::Printers::VirtualPrinterPreferredInputFormat> = "i";
+
 
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppAttributeErrorReason>
@@ -72,6 +78,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.PageConfigurationSource";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "PageConfigurationSource";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Printers::VirtualPrinterInstallationStatus>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.VirtualPrinterInstallationStatus";
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "VirtualPrinterInstallationStatus";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Printers::VirtualPrinterPreferredInputFormat>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.VirtualPrinterPreferredInputFormat";
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "VirtualPrinterPreferredInputFormat";
     };
 
     template<>
@@ -169,6 +191,38 @@ namespace py
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "PrintSchema";
     };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.VirtualPrinterInstallationParameters";
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "VirtualPrinterInstallationParameters";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Printers::VirtualPrinterInstallationResult>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.VirtualPrinterInstallationResult";
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "VirtualPrinterInstallationResult";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Printers::VirtualPrinterManager>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.VirtualPrinterManager";
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "VirtualPrinterManager";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Printers::VirtualPrinterSupportedFormat>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.VirtualPrinterSupportedFormat";
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "VirtualPrinterSupportedFormat";
+    };
 }
 
 #if __has_include("py.Windows.Foundation.h")
@@ -209,6 +263,10 @@ namespace py::wrapper::Windows::Devices::Printers
     using PdlPassthroughTarget = py::winrt_wrapper<winrt::Windows::Devices::Printers::PdlPassthroughTarget>;
     using Print3DDevice = py::winrt_wrapper<winrt::Windows::Devices::Printers::Print3DDevice>;
     using PrintSchema = py::winrt_wrapper<winrt::Windows::Devices::Printers::PrintSchema>;
+    using VirtualPrinterInstallationParameters = py::winrt_wrapper<winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters>;
+    using VirtualPrinterInstallationResult = py::winrt_wrapper<winrt::Windows::Devices::Printers::VirtualPrinterInstallationResult>;
+    using VirtualPrinterManager = py::winrt_wrapper<winrt::Windows::Devices::Printers::VirtualPrinterManager>;
+    using VirtualPrinterSupportedFormat = py::winrt_wrapper<winrt::Windows::Devices::Printers::VirtualPrinterSupportedFormat>;
 }
 
 namespace py

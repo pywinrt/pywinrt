@@ -563,7 +563,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::IManipulationUpdatedEventArgs>{ 0xCB354CE5,0xABB8,0x4F9F,{ 0xB3,0xCE,0x81,0x81,0xAA,0x61,0xAD,0x82 } }; // CB354CE5-ABB8-4F9F-B3CE-8181AA61AD82
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::IManipulationUpdatedEventArgs2>{ 0xF3DFB96A,0x3306,0x5903,{ 0xA1,0xC5,0xFF,0x97,0x57,0xA8,0x68,0x9E } }; // F3DFB96A-3306-5903-A1C5-FF9757A8689E
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::IMouseWheelParameters>{ 0xEAD0CA44,0x9DED,0x4037,{ 0x81,0x49,0x5E,0x4C,0xC2,0x56,0x44,0x68 } }; // EAD0CA44-9DED-4037-8149-5E4CC2564468
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::IPhysicalGestureRecognizer>{ 0xA3BB83E5,0x6937,0x5F29,{ 0x87,0x07,0xAE,0x48,0x75,0xF8,0xFD,0xA3 } }; // A3BB83E5-6937-5F29-8707-AE4875F8FDA3
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::IPhysicalGestureRecognizer>{ 0x79A29F4D,0x32A6,0x5AA5,{ 0xA9,0x99,0x42,0xB0,0xB4,0x20,0xC6,0x6D } }; // 79A29F4D-32A6-5AA5-A999-42B0B420C66D
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::IPointerPoint>{ 0xE995317D,0x7296,0x42D9,{ 0x82,0x33,0xC5,0xBE,0x73,0xB7,0x4A,0x4A } }; // E995317D-7296-42D9-8233-C5BE73B74A4A
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::IPointerPointPhysicalPosition>{ 0x003185A3,0xA5E7,0x4859,{ 0x9C,0x0B,0x89,0x34,0x02,0x04,0x80,0x6C } }; // 003185A3-A5E7-4859-9C0B-89340204806C
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::IPointerPointProperties>{ 0xC79D8A4B,0xC163,0x4EE7,{ 0x80,0x3F,0x67,0xCE,0x79,0xF9,0x97,0x2D } }; // C79D8A4B-C163-4EE7-803F-67CE79F9972D
@@ -607,9 +607,9 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::ISystemFunctionLockIndicatorChangedEventArgs>{ 0xB212B94E,0x7A6F,0x58AE,{ 0xB3,0x04,0xBA,0xE6,0x1D,0x03,0x71,0xB9 } }; // B212B94E-7A6F-58AE-B304-BAE61D0371B9
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::ITappedEventArgs>{ 0xCFA126E4,0x253A,0x4C3C,{ 0x95,0x3B,0x39,0x5C,0x37,0xAE,0xD3,0x09 } }; // CFA126E4-253A-4C3C-953B-395C37AED309
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::ITappedEventArgs2>{ 0x294388F2,0x177E,0x51D5,{ 0xBE,0x56,0xEE,0x08,0x66,0xFA,0x96,0x8C } }; // 294388F2-177E-51D5-BE56-EE0866FA968C
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::ITouchpadGesturesController>{ 0xB58F88D0,0x58EA,0x51B5,{ 0xB5,0xBF,0x61,0xCC,0x08,0x1B,0xF2,0x1D } }; // B58F88D0-58EA-51B5-B5BF-61CC081BF21D
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::ITouchpadGesturesController>{ 0x28C13CDD,0xE068,0x549F,{ 0x89,0xC6,0x1A,0x44,0x0C,0x6F,0xC3,0x27 } }; // 28C13CDD-E068-549F-89C6-1A440C6FC327
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::ITouchpadGesturesControllerStatics>{ 0x207EF171,0x1A73,0x51CD,{ 0xA6,0x94,0x88,0x40,0xE0,0x9D,0xBA,0xFA } }; // 207EF171-1A73-51CD-A694-8840E09DBAFA
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::ITouchpadGlobalActionEventArgs>{ 0x08103525,0xDBB6,0x5F7F,{ 0x9F,0xFE,0x98,0xC8,0x4B,0xB4,0x95,0x91 } }; // 08103525-DBB6-5F7F-9FFE-98C84BB49591
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Input::ITouchpadGlobalActionEventArgs>{ 0x6EDAD206,0xE4E3,0x5F39,{ 0x9D,0x13,0x85,0x75,0xE8,0xE2,0xA1,0x2B } }; // 6EDAD206-E4E3-5F39-9D13-8575E8E2A12B
     template <> struct default_interface<winrt::Windows::UI::Input::AttachableInputObject>{ using type = winrt::Windows::UI::Input::IAttachableInputObject; };
     template <> struct default_interface<winrt::Windows::UI::Input::CrossSlidingEventArgs>{ using type = winrt::Windows::UI::Input::ICrossSlidingEventArgs; };
     template <> struct default_interface<winrt::Windows::UI::Input::DraggingEventArgs>{ using type = winrt::Windows::UI::Input::IDraggingEventArgs; };
@@ -948,6 +948,7 @@ namespace winrt::impl
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
+            virtual int32_t __stdcall get_IsActive(bool*) noexcept = 0;
             virtual int32_t __stdcall get_GestureSettings(uint32_t*) noexcept = 0;
             virtual int32_t __stdcall put_GestureSettings(uint32_t) noexcept = 0;
             virtual int32_t __stdcall get_TapMinContactCount(uint32_t*) noexcept = 0;
@@ -1397,8 +1398,8 @@ namespace winrt::impl
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
-            virtual int32_t __stdcall get_GesturesEnabled(bool*) noexcept = 0;
-            virtual int32_t __stdcall put_GesturesEnabled(bool) noexcept = 0;
+            virtual int32_t __stdcall get_Enabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_Enabled(bool) noexcept = 0;
             virtual int32_t __stdcall get_SupportedGestures(uint32_t*) noexcept = 0;
             virtual int32_t __stdcall put_SupportedGestures(uint32_t) noexcept = 0;
             virtual int32_t __stdcall add_PointerPressed(void*, winrt::event_token*) noexcept = 0;
@@ -1407,8 +1408,8 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_PointerMoved(winrt::event_token) noexcept = 0;
             virtual int32_t __stdcall add_PointerReleased(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_PointerReleased(winrt::event_token) noexcept = 0;
-            virtual int32_t __stdcall add_TouchpadGlobalActionPerformed(void*, winrt::event_token*) noexcept = 0;
-            virtual int32_t __stdcall remove_TouchpadGlobalActionPerformed(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_GlobalActionPerformed(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_GlobalActionPerformed(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::UI::Input::ITouchpadGesturesControllerStatics>
@@ -1424,6 +1425,7 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall get_Action(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_PointerDevice(void**) noexcept = 0;
         };
     };
     template <typename D>
@@ -1804,6 +1806,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_IPhysicalGestureRecognizer
     {
+        [[nodiscard]] auto IsActive() const;
         [[nodiscard]] auto GestureSettings() const;
         auto GestureSettings(winrt::Windows::UI::Input::GestureSettings const& value) const;
         [[nodiscard]] auto TapMinContactCount() const;
@@ -2381,8 +2384,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Input_ITouchpadGesturesController
     {
-        [[nodiscard]] auto GesturesEnabled() const;
-        auto GesturesEnabled(bool value) const;
+        [[nodiscard]] auto Enabled() const;
+        auto Enabled(bool value) const;
         [[nodiscard]] auto SupportedGestures() const;
         auto SupportedGestures(winrt::Windows::UI::Input::TouchpadGlobalGestureKinds const& value) const;
         auto PointerPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const;
@@ -2397,10 +2400,10 @@ namespace winrt::impl
         using PointerReleased_revoker = impl::event_revoker<winrt::Windows::UI::Input::ITouchpadGesturesController, &impl::abi_t<winrt::Windows::UI::Input::ITouchpadGesturesController>::remove_PointerReleased>;
         [[nodiscard]] auto PointerReleased(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const;
         auto PointerReleased(winrt::event_token const& token) const noexcept;
-        auto TouchpadGlobalActionPerformed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const& handler) const;
-        using TouchpadGlobalActionPerformed_revoker = impl::event_revoker<winrt::Windows::UI::Input::ITouchpadGesturesController, &impl::abi_t<winrt::Windows::UI::Input::ITouchpadGesturesController>::remove_TouchpadGlobalActionPerformed>;
-        [[nodiscard]] auto TouchpadGlobalActionPerformed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const& handler) const;
-        auto TouchpadGlobalActionPerformed(winrt::event_token const& token) const noexcept;
+        auto GlobalActionPerformed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const& handler) const;
+        using GlobalActionPerformed_revoker = impl::event_revoker<winrt::Windows::UI::Input::ITouchpadGesturesController, &impl::abi_t<winrt::Windows::UI::Input::ITouchpadGesturesController>::remove_GlobalActionPerformed>;
+        [[nodiscard]] auto GlobalActionPerformed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs> const& handler) const;
+        auto GlobalActionPerformed(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::UI::Input::ITouchpadGesturesController>
     {
@@ -2420,6 +2423,7 @@ namespace winrt::impl
     struct consume_Windows_UI_Input_ITouchpadGlobalActionEventArgs
     {
         [[nodiscard]] auto Action() const;
+        [[nodiscard]] auto PointerDevice() const;
     };
     template <> struct consume<winrt::Windows::UI::Input::ITouchpadGlobalActionEventArgs>
     {
