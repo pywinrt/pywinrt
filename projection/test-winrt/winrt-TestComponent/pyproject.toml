@@ -37,7 +37,7 @@ exclude = ["cppwrint"]
 
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
-environment = { PYTHONPATH="../winrt-sdk/src" }
+environment = { PYTHONPATH="../../winrt-sdk/src" }
 # don't install winrt-sdk from PyPI
 build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
 before-build = "uv pip install setuptools"

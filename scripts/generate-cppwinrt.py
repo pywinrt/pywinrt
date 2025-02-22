@@ -103,7 +103,7 @@ TEST_PACKAGE_METADATA = (
     / "uap10.0"
     / "TestComponent.winmd"
 )
-TEST_PACKAGE_PATH = PROJECTION_PATH / "winrt-TestComponent" / "cppwinrt"
+TEST_PACKAGE_PATH = PROJECTION_PATH / "test-winrt" / "winrt-TestComponent" / "cppwinrt"
 
 shutil.rmtree(TEST_PACKAGE_PATH, ignore_errors=True)
 subprocess.check_call(

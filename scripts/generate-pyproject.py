@@ -440,7 +440,7 @@ for package_path in chain(
     [
         PROJECTION_PATH / "winrt-sdk",
         PROJECTION_PATH / "winrt-WindowsAppSDK",
-        PROJECTION_PATH / "winrt-TestComponent",
+        PROJECTION_PATH / "test-winrt" / "winrt-TestComponent",
     ],
 ):
     namespace = package_path.name.removeprefix("winrt-")
