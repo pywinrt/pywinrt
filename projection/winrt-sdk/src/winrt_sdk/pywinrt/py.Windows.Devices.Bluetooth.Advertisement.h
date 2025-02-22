@@ -21,6 +21,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags> = "I";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPhyType> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatus> = "i";
 
     template<>
@@ -39,6 +42,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFlags";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementFlags";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPhyType>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPhyType";
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
+        static constexpr const char* type_name = "BluetoothLEAdvertisementPhyType";
     };
 
     template<>
@@ -138,6 +149,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementScanParameters>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementScanParameters";
+        static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
+        static constexpr const char* type_name = "BluetoothLEAdvertisementScanParameters";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcher";
@@ -192,6 +211,7 @@ namespace py::wrapper::Windows::Devices::Bluetooth::Advertisement
     using BluetoothLEAdvertisementPublisher = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher>;
     using BluetoothLEAdvertisementPublisherStatusChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs>;
     using BluetoothLEAdvertisementReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs>;
+    using BluetoothLEAdvertisementScanParameters = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementScanParameters>;
     using BluetoothLEAdvertisementWatcher = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher>;
     using BluetoothLEAdvertisementWatcherStoppedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs>;
     using BluetoothLEManufacturerData = py::winrt_wrapper<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData>;

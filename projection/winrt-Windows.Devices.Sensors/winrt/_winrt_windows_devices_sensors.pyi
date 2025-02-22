@@ -731,6 +731,12 @@ class HumanPresenceSensorReadingUpdate(winrt.system.Object):
     # System.Void Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate::put_DistanceInMillimeters(Windows.Foundation.IReference`1<System.UInt32>)
     @distance_in_millimeters.setter
     def distance_in_millimeters(self, value: typing.Optional[winrt.system.UInt32]) -> None: ...
+    # Windows.Foundation.IReference`1<Windows.Devices.Sensors.HumanPresence> Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate::get_OnlookerPresence()
+    @_property
+    def onlooker_presence(self) -> typing.Optional[HumanPresence]: ...
+    # System.Void Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate::put_OnlookerPresence(Windows.Foundation.IReference`1<Windows.Devices.Sensors.HumanPresence>)
+    @onlooker_presence.setter
+    def onlooker_presence(self, value: typing.Optional[HumanPresence]) -> None: ...
 
 @typing.final
 class HumanPresenceSettings_Static(winrt._winrt.IInspectable_Static):

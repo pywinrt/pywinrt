@@ -5247,6 +5247,1319 @@ namespace py::cpp::Windows::Devices::Printers
         Py_TPFLAGS_DEFAULT,
         _type_slots_PrintSchema};
 
+    // ----- VirtualPrinterInstallationParameters class --------------------
+
+    static PyObject* _new_VirtualPrinterInstallationParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_VirtualPrinterInstallationParameters(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* VirtualPrinterInstallationParameters_get_PrinterUri(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PrinterUri");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterUri();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VirtualPrinterInstallationParameters_put_PrinterUri(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PrinterUri");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PrinterUri(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VirtualPrinterInstallationParameters_get_PrinterName(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PrinterName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrinterName();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VirtualPrinterInstallationParameters_put_PrinterName(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PrinterName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PrinterName(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VirtualPrinterInstallationParameters_get_PrintDeviceResourcesPackageRelativeFilePath(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PrintDeviceResourcesPackageRelativeFilePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintDeviceResourcesPackageRelativeFilePath();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VirtualPrinterInstallationParameters_put_PrintDeviceResourcesPackageRelativeFilePath(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PrintDeviceResourcesPackageRelativeFilePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PrintDeviceResourcesPackageRelativeFilePath(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VirtualPrinterInstallationParameters_get_PrintDeviceCapabilitiesPackageRelativeFilePath(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PrintDeviceCapabilitiesPackageRelativeFilePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PrintDeviceCapabilitiesPackageRelativeFilePath();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VirtualPrinterInstallationParameters_put_PrintDeviceCapabilitiesPackageRelativeFilePath(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PrintDeviceCapabilitiesPackageRelativeFilePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PrintDeviceCapabilitiesPackageRelativeFilePath(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VirtualPrinterInstallationParameters_get_PreferredInputFormat(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PreferredInputFormat");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PreferredInputFormat();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VirtualPrinterInstallationParameters_put_PreferredInputFormat(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"PreferredInputFormat");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Devices::Printers::VirtualPrinterPreferredInputFormat>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PreferredInputFormat(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VirtualPrinterInstallationParameters_get_EntryPoint(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"EntryPoint");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.EntryPoint();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VirtualPrinterInstallationParameters_put_EntryPoint(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"EntryPoint");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.EntryPoint(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VirtualPrinterInstallationParameters_get_OutputFileExtensions(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"OutputFileExtensions");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OutputFileExtensions();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterInstallationParameters_get_SupportedInputFormats(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationParameters", L"SupportedInputFormats");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.SupportedInputFormats();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_VirtualPrinterInstallationParameters(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_VirtualPrinterInstallationParameters(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_VirtualPrinterInstallationParameters[] = {
+        { "_assign_array_", _assign_array_VirtualPrinterInstallationParameters, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_VirtualPrinterInstallationParameters), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_VirtualPrinterInstallationParameters[] = {
+        { "printer_uri", reinterpret_cast<getter>(VirtualPrinterInstallationParameters_get_PrinterUri), reinterpret_cast<setter>(VirtualPrinterInstallationParameters_put_PrinterUri), nullptr, nullptr },
+        { "printer_name", reinterpret_cast<getter>(VirtualPrinterInstallationParameters_get_PrinterName), reinterpret_cast<setter>(VirtualPrinterInstallationParameters_put_PrinterName), nullptr, nullptr },
+        { "print_device_resources_package_relative_file_path", reinterpret_cast<getter>(VirtualPrinterInstallationParameters_get_PrintDeviceResourcesPackageRelativeFilePath), reinterpret_cast<setter>(VirtualPrinterInstallationParameters_put_PrintDeviceResourcesPackageRelativeFilePath), nullptr, nullptr },
+        { "print_device_capabilities_package_relative_file_path", reinterpret_cast<getter>(VirtualPrinterInstallationParameters_get_PrintDeviceCapabilitiesPackageRelativeFilePath), reinterpret_cast<setter>(VirtualPrinterInstallationParameters_put_PrintDeviceCapabilitiesPackageRelativeFilePath), nullptr, nullptr },
+        { "preferred_input_format", reinterpret_cast<getter>(VirtualPrinterInstallationParameters_get_PreferredInputFormat), reinterpret_cast<setter>(VirtualPrinterInstallationParameters_put_PreferredInputFormat), nullptr, nullptr },
+        { "entry_point", reinterpret_cast<getter>(VirtualPrinterInstallationParameters_get_EntryPoint), reinterpret_cast<setter>(VirtualPrinterInstallationParameters_put_EntryPoint), nullptr, nullptr },
+        { "output_file_extensions", reinterpret_cast<getter>(VirtualPrinterInstallationParameters_get_OutputFileExtensions), nullptr, nullptr, nullptr },
+        { "supported_input_formats", reinterpret_cast<getter>(VirtualPrinterInstallationParameters_get_SupportedInputFormats), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_VirtualPrinterInstallationParameters[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_VirtualPrinterInstallationParameters) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VirtualPrinterInstallationParameters) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_VirtualPrinterInstallationParameters) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_VirtualPrinterInstallationParameters) },
+        { }};
+
+    static PyType_Spec type_spec_VirtualPrinterInstallationParameters = {
+        "winrt._winrt_windows_devices_printers.VirtualPrinterInstallationParameters",
+        sizeof(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationParameters),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_VirtualPrinterInstallationParameters};
+
+    // ----- VirtualPrinterInstallationResult class --------------------
+
+    static PyObject* _new_VirtualPrinterInstallationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::VirtualPrinterInstallationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::VirtualPrinterInstallationResult>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_VirtualPrinterInstallationResult(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationResult* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* VirtualPrinterInstallationResult_get_ExtendedError(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationResult", L"ExtendedError");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ExtendedError();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterInstallationResult_get_Status(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterInstallationResult", L"Status");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Status();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_VirtualPrinterInstallationResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Printers::VirtualPrinterInstallationResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_VirtualPrinterInstallationResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Printers::VirtualPrinterInstallationResult>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_VirtualPrinterInstallationResult[] = {
+        { "_assign_array_", _assign_array_VirtualPrinterInstallationResult, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_VirtualPrinterInstallationResult), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_VirtualPrinterInstallationResult[] = {
+        { "extended_error", reinterpret_cast<getter>(VirtualPrinterInstallationResult_get_ExtendedError), nullptr, nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(VirtualPrinterInstallationResult_get_Status), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_VirtualPrinterInstallationResult[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_VirtualPrinterInstallationResult) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VirtualPrinterInstallationResult) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_VirtualPrinterInstallationResult) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_VirtualPrinterInstallationResult) },
+        { }};
+
+    static PyType_Spec type_spec_VirtualPrinterInstallationResult = {
+        "winrt._winrt_windows_devices_printers.VirtualPrinterInstallationResult",
+        sizeof(py::wrapper::Windows::Devices::Printers::VirtualPrinterInstallationResult),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_VirtualPrinterInstallationResult};
+
+    // ----- VirtualPrinterManager class --------------------
+
+    static PyObject* _new_VirtualPrinterManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::VirtualPrinterManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::VirtualPrinterManager>::type_name);
+        return nullptr;
+    }
+
+    static PyObject* VirtualPrinterManager_FindAllVirtualPrinters(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.VirtualPrinterManager", L"FindAllVirtualPrinters", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::VirtualPrinterManager::FindAllVirtualPrinters();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterManager_FindAllVirtualPrinters2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.VirtualPrinterManager", L"FindAllVirtualPrinters", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::VirtualPrinterManager::FindAllVirtualPrinters(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterManager_InstallVirtualPrinterAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.VirtualPrinterManager", L"InstallVirtualPrinterAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::VirtualPrinterManager::InstallVirtualPrinterAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterManager_InstallVirtualPrinterAsync2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.VirtualPrinterManager", L"InstallVirtualPrinterAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::VirtualPrinterManager::InstallVirtualPrinterAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterManager_InstallVirtualPrinterForAllUsersAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.VirtualPrinterManager", L"InstallVirtualPrinterForAllUsersAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::VirtualPrinterManager::InstallVirtualPrinterForAllUsersAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterManager_InstallVirtualPrinterForAllUsersAsync2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.VirtualPrinterManager", L"InstallVirtualPrinterForAllUsersAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Printers::VirtualPrinterInstallationParameters>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::VirtualPrinterManager::InstallVirtualPrinterForAllUsersAsync(param0, param1);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterManager_RemoveVirtualPrinterAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.VirtualPrinterManager", L"RemoveVirtualPrinterAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::VirtualPrinterManager::RemoveVirtualPrinterAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VirtualPrinterManager_RemoveVirtualPrinterForAllUsersAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.VirtualPrinterManager", L"RemoveVirtualPrinterForAllUsersAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return winrt::Windows::Devices::Printers::VirtualPrinterManager::RemoveVirtualPrinterForAllUsersAsync(param0);
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_VirtualPrinterManager[] = {
+        { }};
+
+    static PyGetSetDef _getset_VirtualPrinterManager[] = {
+        { }};
+
+    static PyType_Slot _type_slots_VirtualPrinterManager[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_VirtualPrinterManager) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_VirtualPrinterManager) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_VirtualPrinterManager) },
+        { }};
+
+    static PyType_Spec type_spec_VirtualPrinterManager = {
+        "winrt._winrt_windows_devices_printers.VirtualPrinterManager",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_VirtualPrinterManager};
+
+    static PyGetSetDef getset_VirtualPrinterManager_Static[] = {
+        { }};
+
+    static PyMethodDef methods_VirtualPrinterManager_Static[] = {
+        { "find_all_virtual_printers", reinterpret_cast<PyCFunction>(VirtualPrinterManager_FindAllVirtualPrinters), METH_VARARGS, nullptr },
+        { "find_all_virtual_printers2", reinterpret_cast<PyCFunction>(VirtualPrinterManager_FindAllVirtualPrinters2), METH_VARARGS, nullptr },
+        { "install_virtual_printer_async", reinterpret_cast<PyCFunction>(VirtualPrinterManager_InstallVirtualPrinterAsync), METH_VARARGS, nullptr },
+        { "install_virtual_printer_async2", reinterpret_cast<PyCFunction>(VirtualPrinterManager_InstallVirtualPrinterAsync2), METH_VARARGS, nullptr },
+        { "install_virtual_printer_for_all_users_async", reinterpret_cast<PyCFunction>(VirtualPrinterManager_InstallVirtualPrinterForAllUsersAsync), METH_VARARGS, nullptr },
+        { "install_virtual_printer_for_all_users_async2", reinterpret_cast<PyCFunction>(VirtualPrinterManager_InstallVirtualPrinterForAllUsersAsync2), METH_VARARGS, nullptr },
+        { "remove_virtual_printer_async", reinterpret_cast<PyCFunction>(VirtualPrinterManager_RemoveVirtualPrinterAsync), METH_VARARGS, nullptr },
+        { "remove_virtual_printer_for_all_users_async", reinterpret_cast<PyCFunction>(VirtualPrinterManager_RemoveVirtualPrinterForAllUsersAsync), METH_VARARGS, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_VirtualPrinterManager_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_VirtualPrinterManager_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_VirtualPrinterManager_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_VirtualPrinterManager_Static = {
+        "winrt._winrt_windows_devices_printers.VirtualPrinterManager_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_VirtualPrinterManager_Static};
+
+    // ----- VirtualPrinterSupportedFormat class --------------------
+
+    static PyObject* _new_VirtualPrinterSupportedFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                winrt::Windows::Devices::Printers::VirtualPrinterSupportedFormat instance{param0, param1};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_VirtualPrinterSupportedFormat(py::wrapper::Windows::Devices::Printers::VirtualPrinterSupportedFormat* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* VirtualPrinterSupportedFormat_get_MaxSupportedVersion(py::wrapper::Windows::Devices::Printers::VirtualPrinterSupportedFormat* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterSupportedFormat", L"MaxSupportedVersion");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.MaxSupportedVersion();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VirtualPrinterSupportedFormat_put_MaxSupportedVersion(py::wrapper::Windows::Devices::Printers::VirtualPrinterSupportedFormat* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterSupportedFormat", L"MaxSupportedVersion");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.MaxSupportedVersion(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* VirtualPrinterSupportedFormat_get_ContentType(py::wrapper::Windows::Devices::Printers::VirtualPrinterSupportedFormat* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterSupportedFormat", L"ContentType");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentType();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int VirtualPrinterSupportedFormat_put_ContentType(py::wrapper::Windows::Devices::Printers::VirtualPrinterSupportedFormat* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.VirtualPrinterSupportedFormat", L"ContentType");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.ContentType(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_VirtualPrinterSupportedFormat(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Printers::VirtualPrinterSupportedFormat>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_VirtualPrinterSupportedFormat(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Printers::VirtualPrinterSupportedFormat>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_VirtualPrinterSupportedFormat[] = {
+        { "_assign_array_", _assign_array_VirtualPrinterSupportedFormat, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_VirtualPrinterSupportedFormat), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_VirtualPrinterSupportedFormat[] = {
+        { "max_supported_version", reinterpret_cast<getter>(VirtualPrinterSupportedFormat_get_MaxSupportedVersion), reinterpret_cast<setter>(VirtualPrinterSupportedFormat_put_MaxSupportedVersion), nullptr, nullptr },
+        { "content_type", reinterpret_cast<getter>(VirtualPrinterSupportedFormat_get_ContentType), reinterpret_cast<setter>(VirtualPrinterSupportedFormat_put_ContentType), nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_VirtualPrinterSupportedFormat[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_VirtualPrinterSupportedFormat) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_VirtualPrinterSupportedFormat) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_VirtualPrinterSupportedFormat) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_VirtualPrinterSupportedFormat) },
+        { }};
+
+    static PyType_Spec type_spec_VirtualPrinterSupportedFormat = {
+        "winrt._winrt_windows_devices_printers.VirtualPrinterSupportedFormat",
+        sizeof(py::wrapper::Windows::Devices::Printers::VirtualPrinterSupportedFormat),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_VirtualPrinterSupportedFormat};
+
     // ----- Windows.Devices.Printers Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Printers");
@@ -5402,6 +6715,42 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
 
     py::pytype_handle PrintSchema_type{py::register_python_type(module.get(), &type_spec_PrintSchema, object_bases.get(), inspectable_meta_type)};
     if (!PrintSchema_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VirtualPrinterInstallationParameters_type{py::register_python_type(module.get(), &type_spec_VirtualPrinterInstallationParameters, object_bases.get(), inspectable_meta_type)};
+    if (!VirtualPrinterInstallationParameters_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VirtualPrinterInstallationResult_type{py::register_python_type(module.get(), &type_spec_VirtualPrinterInstallationResult, object_bases.get(), inspectable_meta_type)};
+    if (!VirtualPrinterInstallationResult_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle VirtualPrinterManager_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!VirtualPrinterManager_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VirtualPrinterManager_Static{PyType_FromSpecWithBases(&type_spec_VirtualPrinterManager_Static, VirtualPrinterManager_Static_bases.get())};
+    if (!type_VirtualPrinterManager_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VirtualPrinterManager_type{py::register_python_type(module.get(), &type_spec_VirtualPrinterManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VirtualPrinterManager_Static.get()))};
+    if (!VirtualPrinterManager_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VirtualPrinterSupportedFormat_type{py::register_python_type(module.get(), &type_spec_VirtualPrinterSupportedFormat, object_bases.get(), inspectable_meta_type)};
+    if (!VirtualPrinterSupportedFormat_type)
     {
         return nullptr;
     }

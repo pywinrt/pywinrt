@@ -153,5 +153,40 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Printers
         IPrintSchema(std::nullptr_t = nullptr) noexcept {}
         IPrintSchema(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IVirtualPrinterInstallationParameters :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IVirtualPrinterInstallationParameters>
+    {
+        IVirtualPrinterInstallationParameters(std::nullptr_t = nullptr) noexcept {}
+        IVirtualPrinterInstallationParameters(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IVirtualPrinterInstallationResult :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IVirtualPrinterInstallationResult>
+    {
+        IVirtualPrinterInstallationResult(std::nullptr_t = nullptr) noexcept {}
+        IVirtualPrinterInstallationResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IVirtualPrinterManagerStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IVirtualPrinterManagerStatics>
+    {
+        IVirtualPrinterManagerStatics(std::nullptr_t = nullptr) noexcept {}
+        IVirtualPrinterManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IVirtualPrinterSupportedFormat :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IVirtualPrinterSupportedFormat>
+    {
+        IVirtualPrinterSupportedFormat(std::nullptr_t = nullptr) noexcept {}
+        IVirtualPrinterSupportedFormat(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IVirtualPrinterSupportedFormatFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IVirtualPrinterSupportedFormatFactory>
+    {
+        IVirtualPrinterSupportedFormatFactory(std::nullptr_t = nullptr) noexcept {}
+        IVirtualPrinterSupportedFormatFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
 #endif

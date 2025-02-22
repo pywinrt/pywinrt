@@ -15,7 +15,7 @@ import winrt.windows.graphics.printing as windows_graphics_printing
 import winrt.windows.graphics.printing.printticket as windows_graphics_printing_printticket
 import winrt.windows.storage.streams as windows_storage_streams
 
-from winrt.windows.devices.printers import IppAttributeErrorReason, IppAttributeValueKind, IppPrintDeviceKind, IppResolutionUnit, PageConfigurationSource
+from winrt.windows.devices.printers import IppAttributeErrorReason, IppAttributeValueKind, IppPrintDeviceKind, IppResolutionUnit, PageConfigurationSource, VirtualPrinterInstallationStatus, VirtualPrinterPreferredInputFormat
 
 Self = typing.TypeVar('Self')
 
@@ -311,4 +311,98 @@ class PrintSchema(winrt.system.Object):
     def get_default_print_ticket_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Devices.Printers.PrintSchema::MergeAndValidateWithDefaultPrintTicketAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)
     def merge_and_validate_with_default_print_ticket_async(self, delta_ticket: windows_storage_streams.IRandomAccessStreamWithContentType, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
+
+@typing.final
+class VirtualPrinterInstallationParameters(winrt.system.Object):
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+    # Windows.Foundation.Uri Windows.Devices.Printers.VirtualPrinterInstallationParameters::get_PrinterUri()
+    @_property
+    def printer_uri(self) -> windows_foundation.Uri: ...
+    # System.Void Windows.Devices.Printers.VirtualPrinterInstallationParameters::put_PrinterUri(Windows.Foundation.Uri)
+    @printer_uri.setter
+    def printer_uri(self, value: windows_foundation.Uri) -> None: ...
+    # System.String Windows.Devices.Printers.VirtualPrinterInstallationParameters::get_PrinterName()
+    @_property
+    def printer_name(self) -> str: ...
+    # System.Void Windows.Devices.Printers.VirtualPrinterInstallationParameters::put_PrinterName(System.String)
+    @printer_name.setter
+    def printer_name(self, value: str) -> None: ...
+    # System.String Windows.Devices.Printers.VirtualPrinterInstallationParameters::get_PrintDeviceResourcesPackageRelativeFilePath()
+    @_property
+    def print_device_resources_package_relative_file_path(self) -> str: ...
+    # System.Void Windows.Devices.Printers.VirtualPrinterInstallationParameters::put_PrintDeviceResourcesPackageRelativeFilePath(System.String)
+    @print_device_resources_package_relative_file_path.setter
+    def print_device_resources_package_relative_file_path(self, value: str) -> None: ...
+    # System.String Windows.Devices.Printers.VirtualPrinterInstallationParameters::get_PrintDeviceCapabilitiesPackageRelativeFilePath()
+    @_property
+    def print_device_capabilities_package_relative_file_path(self) -> str: ...
+    # System.Void Windows.Devices.Printers.VirtualPrinterInstallationParameters::put_PrintDeviceCapabilitiesPackageRelativeFilePath(System.String)
+    @print_device_capabilities_package_relative_file_path.setter
+    def print_device_capabilities_package_relative_file_path(self, value: str) -> None: ...
+    # Windows.Devices.Printers.VirtualPrinterPreferredInputFormat Windows.Devices.Printers.VirtualPrinterInstallationParameters::get_PreferredInputFormat()
+    @_property
+    def preferred_input_format(self) -> VirtualPrinterPreferredInputFormat: ...
+    # System.Void Windows.Devices.Printers.VirtualPrinterInstallationParameters::put_PreferredInputFormat(Windows.Devices.Printers.VirtualPrinterPreferredInputFormat)
+    @preferred_input_format.setter
+    def preferred_input_format(self, value: VirtualPrinterPreferredInputFormat) -> None: ...
+    # System.String Windows.Devices.Printers.VirtualPrinterInstallationParameters::get_EntryPoint()
+    @_property
+    def entry_point(self) -> str: ...
+    # System.Void Windows.Devices.Printers.VirtualPrinterInstallationParameters::put_EntryPoint(System.String)
+    @entry_point.setter
+    def entry_point(self, value: str) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Devices.Printers.VirtualPrinterInstallationParameters::get_OutputFileExtensions()
+    @_property
+    def output_file_extensions(self) -> typing.MutableSequence[str]: ...
+    # Windows.Foundation.Collections.IVector`1<Windows.Devices.Printers.VirtualPrinterSupportedFormat> Windows.Devices.Printers.VirtualPrinterInstallationParameters::get_SupportedInputFormats()
+    @_property
+    def supported_input_formats(self) -> typing.MutableSequence[VirtualPrinterSupportedFormat]: ...
+
+@typing.final
+class VirtualPrinterInstallationResult(winrt.system.Object):
+    # Windows.Foundation.HResult Windows.Devices.Printers.VirtualPrinterInstallationResult::get_ExtendedError()
+    @_property
+    def extended_error(self) -> windows_foundation.HResult: ...
+    # Windows.Devices.Printers.VirtualPrinterInstallationStatus Windows.Devices.Printers.VirtualPrinterInstallationResult::get_Status()
+    @_property
+    def status(self) -> VirtualPrinterInstallationStatus: ...
+
+@typing.final
+class VirtualPrinterManager_Static(winrt._winrt.IInspectable_Static):
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Printers.VirtualPrinterManager::FindAllVirtualPrinters()
+    def find_all_virtual_printers(cls) -> typing.Sequence[str]: ...
+    # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Printers.VirtualPrinterManager::FindAllVirtualPrinters(System.String)
+    def find_all_virtual_printers2(cls, app_package_family_name: str, /) -> typing.Sequence[str]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters)
+    def install_virtual_printer_async(cls, parameters: VirtualPrinterInstallationParameters, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters,System.String)
+    def install_virtual_printer_async2(cls, parameters: VirtualPrinterInstallationParameters, app_package_family_name: str, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterForAllUsersAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters)
+    def install_virtual_printer_for_all_users_async(cls, parameters: VirtualPrinterInstallationParameters, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.VirtualPrinterInstallationResult> Windows.Devices.Printers.VirtualPrinterManager::InstallVirtualPrinterForAllUsersAsync(Windows.Devices.Printers.VirtualPrinterInstallationParameters,System.String)
+    def install_virtual_printer_for_all_users_async2(cls, parameters: VirtualPrinterInstallationParameters, app_package_family_name: str, /) -> windows_foundation.IAsyncOperation[VirtualPrinterInstallationResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.Printers.VirtualPrinterManager::RemoveVirtualPrinterAsync(System.String)
+    def remove_virtual_printer_async(cls, printer_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.Printers.VirtualPrinterManager::RemoveVirtualPrinterForAllUsersAsync(System.String)
+    def remove_virtual_printer_for_all_users_async(cls, printer_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
+
+@typing.final
+class VirtualPrinterManager(winrt.system.Object, metaclass=VirtualPrinterManager_Static):
+    pass
+
+@typing.final
+class VirtualPrinterSupportedFormat(winrt.system.Object):
+    def __new__(cls: typing.Type[Self], content_type: str, max_supported_version: str) -> Self: ...
+    # System.String Windows.Devices.Printers.VirtualPrinterSupportedFormat::get_MaxSupportedVersion()
+    @_property
+    def max_supported_version(self) -> str: ...
+    # System.Void Windows.Devices.Printers.VirtualPrinterSupportedFormat::put_MaxSupportedVersion(System.String)
+    @max_supported_version.setter
+    def max_supported_version(self, value: str) -> None: ...
+    # System.String Windows.Devices.Printers.VirtualPrinterSupportedFormat::get_ContentType()
+    @_property
+    def content_type(self) -> str: ...
+    # System.Void Windows.Devices.Printers.VirtualPrinterSupportedFormat::put_ContentType(System.String)
+    @content_type.setter
+    def content_type(self, value: str) -> None: ...
 

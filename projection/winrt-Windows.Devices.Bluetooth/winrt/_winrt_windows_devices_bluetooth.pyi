@@ -68,6 +68,12 @@ class BluetoothAdapter(winrt.system.Object, metaclass=BluetoothAdapter_Static):
     # System.UInt32 Windows.Devices.Bluetooth.BluetoothAdapter::get_MaxAdvertisementDataLength()
     @_property
     def max_advertisement_data_length(self) -> winrt.system.UInt32: ...
+    # System.Boolean Windows.Devices.Bluetooth.BluetoothAdapter::get_IsLowEnergyCodedPhySupported()
+    @_property
+    def is_low_energy_coded_phy_supported(self) -> bool: ...
+    # System.Boolean Windows.Devices.Bluetooth.BluetoothAdapter::get_IsLowEnergyUncoded2MPhySupported()
+    @_property
+    def is_low_energy_uncoded2_m_phy_supported(self) -> bool: ...
 
 @typing.final
 class BluetoothClassOfDevice_Static(winrt._winrt.IInspectable_Static):

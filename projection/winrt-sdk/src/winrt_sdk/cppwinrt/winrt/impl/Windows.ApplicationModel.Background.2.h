@@ -159,14 +159,14 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Background
         [[nodiscard]] static auto AppLastThrottledInStandbyTimestamp();
     };
     struct WINRT_IMPL_EMPTY_BASES BluetoothLEAdvertisementPublisherTrigger : winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger,
-        impl::require<BluetoothLEAdvertisementPublisherTrigger, winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2>
+        impl::require<BluetoothLEAdvertisementPublisherTrigger, winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger2, winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger3>
     {
         BluetoothLEAdvertisementPublisherTrigger(std::nullptr_t) noexcept {}
         BluetoothLEAdvertisementPublisherTrigger(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementPublisherTrigger(ptr, take_ownership_from_abi) {}
         BluetoothLEAdvertisementPublisherTrigger();
     };
     struct WINRT_IMPL_EMPTY_BASES BluetoothLEAdvertisementWatcherTrigger : winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger,
-        impl::require<BluetoothLEAdvertisementWatcherTrigger, winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger2>
+        impl::require<BluetoothLEAdvertisementWatcherTrigger, winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger2, winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger3>
     {
         BluetoothLEAdvertisementWatcherTrigger(std::nullptr_t) noexcept {}
         BluetoothLEAdvertisementWatcherTrigger(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Background::IBluetoothLEAdvertisementWatcherTrigger(ptr, take_ownership_from_abi) {}

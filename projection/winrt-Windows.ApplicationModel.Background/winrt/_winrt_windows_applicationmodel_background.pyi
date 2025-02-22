@@ -348,6 +348,18 @@ class BluetoothLEAdvertisementPublisherTrigger(winrt.system.Object, IBackgroundT
     # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger::put_IncludeTransmitPowerLevel(System.Boolean)
     @include_transmit_power_level.setter
     def include_transmit_power_level(self, value: bool) -> None: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger::get_SecondaryPhy()
+    @_property
+    def secondary_phy(self) -> windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPhyType: ...
+    # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger::put_SecondaryPhy(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType)
+    @secondary_phy.setter
+    def secondary_phy(self, value: windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPhyType) -> None: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger::get_PrimaryPhy()
+    @_property
+    def primary_phy(self) -> windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPhyType: ...
+    # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger::put_PrimaryPhy(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType)
+    @primary_phy.setter
+    def primary_phy(self, value: windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPhyType) -> None: ...
 
 @typing.final
 class BluetoothLEAdvertisementWatcherTrigger(winrt.system.Object, IBackgroundTrigger):
@@ -382,6 +394,24 @@ class BluetoothLEAdvertisementWatcherTrigger(winrt.system.Object, IBackgroundTri
     # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::put_AllowExtendedAdvertisements(System.Boolean)
     @allow_extended_advertisements.setter
     def allow_extended_advertisements(self, value: bool) -> None: ...
+    # System.Boolean Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::get_UseUncoded1MPhy()
+    @_property
+    def use_uncoded1_m_phy(self) -> bool: ...
+    # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::put_UseUncoded1MPhy(System.Boolean)
+    @use_uncoded1_m_phy.setter
+    def use_uncoded1_m_phy(self, value: bool) -> None: ...
+    # System.Boolean Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::get_UseCodedPhy()
+    @_property
+    def use_coded_phy(self) -> bool: ...
+    # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::put_UseCodedPhy(System.Boolean)
+    @use_coded_phy.setter
+    def use_coded_phy(self, value: bool) -> None: ...
+    # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::get_ScanParameters()
+    @_property
+    def scan_parameters(self) -> windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementScanParameters: ...
+    # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::put_ScanParameters(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters)
+    @scan_parameters.setter
+    def scan_parameters(self, value: windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementScanParameters) -> None: ...
 
 @typing.final
 class CachedFileUpdaterTrigger(winrt.system.Object, IBackgroundTrigger):

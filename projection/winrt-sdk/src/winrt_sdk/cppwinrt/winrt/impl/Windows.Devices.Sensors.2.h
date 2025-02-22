@@ -228,7 +228,8 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
         HumanPresenceSensorReadingChangedEventArgs(std::nullptr_t) noexcept {}
         HumanPresenceSensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES HumanPresenceSensorReadingUpdate : winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate
+    struct WINRT_IMPL_EMPTY_BASES HumanPresenceSensorReadingUpdate : winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate,
+        impl::require<HumanPresenceSensorReadingUpdate, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate2>
     {
         HumanPresenceSensorReadingUpdate(std::nullptr_t) noexcept {}
         HumanPresenceSensorReadingUpdate(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate(ptr, take_ownership_from_abi) {}

@@ -28,6 +28,7 @@
 - Implemented type hints for interface inheritance ([#80]).
 - Implemented proper inheritance of composable classes ([#25]).
 - Failing to convert from `uuid.UUID` now raises `TypeError`.
+- Regenerated files for Windows 11 SDK 10.0.26100.2454.
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
@@ -46,7 +47,7 @@
 - Added `winrt.windows.graphics.directx.direct3d11.interop` package.
 
 ### Changed
-- Regenerated files for Windows 11 SDK 10.0.26100.0 (24H2).
+- Regenerated files for Windows 11 SDK 10.0.26100.1742 (24H2).
 - Updated to Windows App SDK 1.6.240829007
 
 ### Fixed

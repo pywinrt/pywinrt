@@ -9675,6 +9675,75 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
+    static PyObject* HumanPresenceSensorReadingUpdate_get_OnlookerPresence(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"OnlookerPresence");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.OnlookerPresence();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int HumanPresenceSensorReadingUpdate_put_OnlookerPresence(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"OnlookerPresence");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.OnlookerPresence(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_HumanPresenceSensorReadingUpdate(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate>>();
@@ -9709,6 +9778,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "presence", reinterpret_cast<getter>(HumanPresenceSensorReadingUpdate_get_Presence), reinterpret_cast<setter>(HumanPresenceSensorReadingUpdate_put_Presence), nullptr, nullptr },
         { "engagement", reinterpret_cast<getter>(HumanPresenceSensorReadingUpdate_get_Engagement), reinterpret_cast<setter>(HumanPresenceSensorReadingUpdate_put_Engagement), nullptr, nullptr },
         { "distance_in_millimeters", reinterpret_cast<getter>(HumanPresenceSensorReadingUpdate_get_DistanceInMillimeters), reinterpret_cast<setter>(HumanPresenceSensorReadingUpdate_put_DistanceInMillimeters), nullptr, nullptr },
+        { "onlooker_presence", reinterpret_cast<getter>(HumanPresenceSensorReadingUpdate_get_OnlookerPresence), reinterpret_cast<setter>(HumanPresenceSensorReadingUpdate_put_OnlookerPresence), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_HumanPresenceSensorReadingUpdate[] = {

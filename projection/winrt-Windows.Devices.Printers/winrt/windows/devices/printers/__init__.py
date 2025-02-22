@@ -16,6 +16,10 @@ from winrt._winrt_windows_devices_printers import (
     PdlPassthroughTarget,
     Print3DDevice,
     PrintSchema,
+    VirtualPrinterInstallationParameters,
+    VirtualPrinterInstallationResult,
+    VirtualPrinterManager,
+    VirtualPrinterSupportedFormat,
 )
 
 __all__ = [
@@ -24,6 +28,8 @@ __all__ = [
     "IppPrintDeviceKind",
     "IppResolutionUnit",
     "PageConfigurationSource",
+    "VirtualPrinterInstallationStatus",
+    "VirtualPrinterPreferredInputFormat",
     "IppAttributeError",
     "IppAttributeValue",
     "IppIntegerRange",
@@ -36,6 +42,10 @@ __all__ = [
     "PdlPassthroughTarget",
     "Print3DDevice",
     "PrintSchema",
+    "VirtualPrinterInstallationParameters",
+    "VirtualPrinterInstallationResult",
+    "VirtualPrinterManager",
+    "VirtualPrinterSupportedFormat",
 ]
 
 class IppAttributeErrorReason(enum.IntEnum):
@@ -80,4 +90,14 @@ class IppResolutionUnit(enum.IntEnum):
 class PageConfigurationSource(enum.IntEnum):
     PRINT_JOB_CONFIGURATION = 0
     PDL_CONTENT = 1
+
+class VirtualPrinterInstallationStatus(enum.IntEnum):
+    INSTALLATION_SUCCEEDED = 0
+    PRINTER_ALREADY_INSTALLED = 1
+    PRINTER_INSTALLATION_ACCESS_DENIED = 2
+    PRINTER_INSTALLATION_FAILED = 3
+
+class VirtualPrinterPreferredInputFormat(enum.IntEnum):
+    OPEN_XPS = 0
+    POST_SCRIPT = 1
 
