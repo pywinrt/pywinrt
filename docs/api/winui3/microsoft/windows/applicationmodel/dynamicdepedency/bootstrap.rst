@@ -1,10 +1,13 @@
-==================================================================================
-:mod:`winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap` module
-==================================================================================
+===================================================================================
+:mod:`winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap` module
+===================================================================================
 
 APIs for bootstrapping the Windows App runtime.
 
-.. currentmodule:: winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap
+.. versionchanged:: unreleased
+    The top-level package name has been changed from ``winrt`` to ``winui3``.
+
+.. currentmodule:: winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap
 
 .. function:: initialize(version: str = RELEASE_VERSION, min_version: str = RUNTIME_VERSION, options: InitializeOptions = InitializeOptions.NONE) -> Shutdown
 

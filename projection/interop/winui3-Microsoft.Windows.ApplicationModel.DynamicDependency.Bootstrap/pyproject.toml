@@ -5,7 +5,7 @@ requires = ["setuptools", "winrt-sdk", "winrt-WindowsAppSDK"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "winrt-Microsoft.UI.Interop"
+name = "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = { text = "MIT" }
@@ -43,3 +43,4 @@ test-skip = "*-win_arm64"
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
+repair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"

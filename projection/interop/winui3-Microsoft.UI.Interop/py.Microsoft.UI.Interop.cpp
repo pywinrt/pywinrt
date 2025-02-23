@@ -166,7 +166,7 @@ namespace py::cpp::Microsoft::UI::Interop
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_microsoft_ui_interop",
+           "_winui3_microsoft_ui_interop",
            module_doc,
            0,
            module_methods,
@@ -177,7 +177,7 @@ namespace py::cpp::Microsoft::UI::Interop
 
 } // namespace py::cpp::Microsoft::UI::Interop
 
-PyMODINIT_FUNC PyInit__winrt_microsoft_ui_interop(void) noexcept
+PyMODINIT_FUNC PyInit__winui3_microsoft_ui_interop(void) noexcept
 {
     using namespace py::cpp::Microsoft::UI::Interop;
 

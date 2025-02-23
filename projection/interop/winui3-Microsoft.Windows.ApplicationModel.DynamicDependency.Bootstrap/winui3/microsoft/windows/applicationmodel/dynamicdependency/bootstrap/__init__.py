@@ -1,7 +1,7 @@
 import enum
 
-from ...... import (
-    _winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap as bootstrap,
+from winui3 import (
+    _winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap as bootstrap,
 )
 
 __all__ = ["InitializeOptions", "initialize"]

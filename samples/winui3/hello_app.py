@@ -17,7 +17,7 @@ from winui3.microsoft.ui.xaml.markup import (
     XmlnsDefinition,
 )
 from winui3.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
-from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
+from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
     initialize,
 )

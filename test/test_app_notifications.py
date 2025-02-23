@@ -1,7 +1,7 @@
 import os
 import unittest
 
-import winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap as bootstrap
+import winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap as bootstrap
 import winui3.microsoft.windows.appnotifications as an
 
 ON_CI = os.environ.get("CI")
