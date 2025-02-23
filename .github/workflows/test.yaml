@@ -95,11 +95,34 @@ jobs:
       - name: merge packages
         run: |
           mkdir -p _install/lint
-          find projection -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winrt" -exec cp -r {} _install/lint/ \;
+          find projection/interop/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winrt" -exec cp -r {} _install/lint/ \;
+          find projection/interop/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winui3" -exec cp -r {} _install/lint/ \;
+          find projection/winrt-runtime/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winrt" -exec cp -r {} _install/lint/ \;
+          find projection/winrt/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winrt" -exec cp -r {} _install/lint/ \;
+          find projection/winui2/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winui2" -exec cp -r {} _install/lint/ \;
+          find projection/winui3/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "winui3" -exec cp -r {} _install/lint/ \;
+          find projection/webview2/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "webview2" -exec cp -r {} _install/lint/ \;
+          find projection/test-winrt/* -type d -name "cppwinrt" -prune -o -type d -name ".mypy_cache" -prune -o -type d -name "test_winrt" -exec cp -r {} _install/lint/ \;
       - name: Run mypy on winrt
         env:
           MYPYPATH: _install/lint
         run: pipx run mypy -p winrt
+      - name: Run mypy on winui2
+        env:
+          MYPYPATH: _install/lint
+        run: pipx run mypy -p winui2
+      - name: Run mypy on winui3
+        env:
+          MYPYPATH: _install/lint
+        run: pipx run mypy -p winui3
+      - name: Run mypy on webview2
+        env:
+          MYPYPATH: _install/lint
+        run: pipx run mypy -p webview2
+      - name: Run mypy on test-winrt
+        env:
+          MYPYPATH: _install/lint
+        run: pipx run mypy -p test_winrt
       - name: Run mypy on tests
         env:
           MYPYPATH: _install/lint
