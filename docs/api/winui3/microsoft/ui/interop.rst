@@ -1,12 +1,15 @@
-========================================
-:mod:`winrt.microsoft.ui.interop` module
-========================================
+=========================================
+:mod:`winui3.microsoft.ui.interop` module
+=========================================
 
-Exposes interop functions from the Microsoft.UI.Interop namespace.
+Exposes interop functions from the ``Microsoft.UI.Interop`` namespace.
 
 See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-microsoft.ui.interop/
 
-.. currentmodule:: winrt.microsoft.ui.interop
+.. versionchanged:: unreleased
+    The top-level package name has been changed from ``winrt`` to ``winui3``.
+
+.. currentmodule:: winui3.microsoft.ui.interop
 
 .. function:: get_window_id_from_window(int hwnd) -> winui3.microsoft.ui.WindowId
 

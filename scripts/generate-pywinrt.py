@@ -175,6 +175,7 @@ for path in itertools.chain(
         PROJECTION_PATH / "winrt-runtime",
     ],
     (PROJECTION_PATH / "interop").glob("winrt-*"),
+    (PROJECTION_PATH / "interop").glob("winui3-*"),
 ):
     try:
         shutil.copy(

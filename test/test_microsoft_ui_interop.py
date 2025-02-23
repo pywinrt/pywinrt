@@ -2,7 +2,7 @@ import os
 import unittest
 
 import winui3.microsoft.ui as ui
-import winrt.microsoft.ui.interop as interop
+import winui3.microsoft.ui.interop as interop
 
 ON_CI = os.environ.get("CI")
 

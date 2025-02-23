@@ -10,4 +10,4 @@ API reference
    runtime.interop
    system
    windows
-   winui3
+   winui3/index

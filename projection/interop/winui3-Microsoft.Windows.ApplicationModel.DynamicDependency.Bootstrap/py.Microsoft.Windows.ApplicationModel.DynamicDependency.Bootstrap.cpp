@@ -173,7 +173,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
         {}};
 
     static PyType_Spec shutdown_type_spec{
-        "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap.Shutdown",
+        "winrt._winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap.Shutdown",
         sizeof(ShutdownObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -182,7 +182,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Boot
   // py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::Bootstrap
 
 PyMODINIT_FUNC
-PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap(
+PyInit__winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap(
     void) noexcept
 {
     using namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency::
@@ -195,9 +195,9 @@ PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap(
             "RELEASE_VERSION",
             std::string_view(WINDOWSAPPSDK_RELEASE_VERSION_TAG).empty()
                 ? Py_STRINGIFY(WINDOWSAPPSDK_RELEASE_MAJOR) "." Py_STRINGIFY(
-                    WINDOWSAPPSDK_RELEASE_MINOR)
+                      WINDOWSAPPSDK_RELEASE_MINOR)
                 : Py_STRINGIFY(WINDOWSAPPSDK_RELEASE_MAJOR) "." Py_STRINGIFY(
-                    WINDOWSAPPSDK_RELEASE_MINOR) "-" WINDOWSAPPSDK_RELEASE_VERSION_TAG)
+                      WINDOWSAPPSDK_RELEASE_MINOR) "-" WINDOWSAPPSDK_RELEASE_VERSION_TAG)
         == -1)
     {
         return nullptr;

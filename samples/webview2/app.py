@@ -25,7 +25,7 @@ from winui3.microsoft.ui.xaml.markup import (
 )
 from winui3.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
 from webview2.microsoft.web.webview2.core import CoreWebView2Environment
-from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
+from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
     initialize,
 )

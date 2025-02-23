@@ -156,8 +156,8 @@ if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt/winrt-*")
     file(GLOB winui3_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui3/winui3-*")
     file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/webview2-*")
-    file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Windows.*")
-    file(GLOB winui3_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Microsoft.*")
+    file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-*")
+    file(GLOB winui3_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winui3-*")
 else()
     # minimum set of packages required for unit tests
     set(packages
@@ -192,8 +192,8 @@ else()
         "interop/winrt-Windows.UI.Composition.Interop"
     )
     set(winui3_interop_packages
-        "interop/winrt-Microsoft.UI.Interop"
-        "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+        "interop/winui3-Microsoft.UI.Interop"
+        "interop/winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     )
 endif()
 
@@ -265,17 +265,17 @@ foreach(package ${packages} ${winui3_packages} ${webview2_packages} ${interop_pa
         target_link_libraries(${package_target} PRIVATE "CoreMessaging")
     endif()
 
-    if (${package} STREQUAL "interop/winrt-Microsoft.UI.Interop")
+    if (${package} STREQUAL "interop/winui3-Microsoft.UI.Interop")
         if (NOT CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-            # winrt/Microsoft.UI.Interop.h has stuff that other compilers don't like
+            # winui3/Microsoft.UI.Interop.h has stuff that other compilers don't like
             target_compile_options(${package_target} PRIVATE -Wno-unknown-pragmas)
         endif()
     endif()
 
-    if (${package} STREQUAL "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap")
+    if (${package} STREQUAL "interop/winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap")
         target_link_libraries(${package_target} PRIVATE "Microsoft.WindowsAppRuntime.Bootstrap")
         install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win-${WINDOWS_APP_SDK_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
-            DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+            DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winui3")
     endif()
 
     if (${package} STREQUAL "webview2/webview2-Microsoft.Web.WebView2.Core")

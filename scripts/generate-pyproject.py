@@ -225,14 +225,14 @@ def is_sdk_package(name: str) -> bool:
 
 def is_app_sdk_interop_package(name: str) -> bool:
     return name in [
-        "winrt-Microsoft.UI.Interop",
-        "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap",
+        "winui3-Microsoft.UI.Interop",
+        "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap",
     ]
 
 
 def is_app_sdk_bootstrap_package(name: str) -> bool:
     return (
-        name == "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+        name == "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     )
 
 
@@ -435,6 +435,7 @@ write_project_files(
 
 for package_path in chain(
     (PROJECTION_PATH / "interop").glob("winrt-*"),
+    (PROJECTION_PATH / "interop").glob("winui3-*"),
     (PROJECTION_PATH / "winrt").glob("winrt-*"),
     (PROJECTION_PATH / "winui3").glob("winui3-*"),
     (PROJECTION_PATH / "webview2").glob("webview2-*"),

@@ -34,7 +34,7 @@ setup(
     cmdclass = {'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
-            "winrt._winrt_microsoft_ui_interop",
+            "winrt._winui3_microsoft_ui_interop",
             sources=["py.Microsoft.UI.Interop.cpp"],
             include_dirs=get_include_dirs()+ get_app_sdk_include_dirs()+ [os.fspath(WINDOWS_APP_SDK_PATH / "include")],
             libraries=["windowsapp"],
