@@ -5,14 +5,22 @@ param(
     [string]$CppWinRTVersion = "2.0.240111.5",
     [switch]$noCppWinRT,
 
+    # WinUI 2
+    [Parameter(Mandatory=$false)]
+    [string]$MicrosoftUiXaml = "2.8.7",
+    [switch]$noMicrosoftUiXaml,
+
+    # WinUI 3
     [Parameter(Mandatory=$false)]
     [string]$WindowsAppSDKVersion = "1.6.240829007",
     [switch]$noWindowsAppSDK,
 
+    # WebView2
     [Parameter(Mandatory=$false)]
     [string]$WebView2Version = "1.0.2739.15",
     [switch]$noWebView2,
 
+    # TestWinRT
     [Parameter(Mandatory=$false)]
     [string]$TestWinRTVersion = "1.2.0",
     [switch]$noTestWinRT
@@ -29,6 +37,14 @@ try {
 
 if (!$noCppWinRT) {
     & nuget install Microsoft.Windows.CppWinRT -Version $CppWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
+}
+
+if (!$noMicrosoftUiXaml) {
+    & nuget install Microsoft.UI.Xaml -Version $MicrosoftUiXaml -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE

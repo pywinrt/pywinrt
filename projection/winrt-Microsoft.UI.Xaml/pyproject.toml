@@ -1,0 +1,35 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winrt-Microsoft.UI.Xaml"
+description = "Windows Runtime SDK for Python header files"
+readme = "README.md"
+license = { text = "MIT" }
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
+]
+dynamic = ["version", "dependencies"]
+requires-python = ">=3.9"
+
+[project.urls]
+# Homepage = "https://github.com/pywinrt/pywinrt"
+Documentation = "https://pywinrt.readthedocs.io"
+Repository = "https://github.com/pywinrt/pywinrt"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = { file = "pywinrt-version.txt" }
+dependencies = { file = "requirements.txt" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.h"]
