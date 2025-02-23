@@ -7,15 +7,9 @@ on:
   pull_request:
     paths:
       - .github/workflows/generate.yaml
-      - projection/winrt-sdk/src/winrt_sdk/cppwinrt/**
-      - projection/winrt-sdk/src/winrt_sdk/pywinrt/**
-      - projection/winrt-*/winrt/**/__init__.py
-      - projection/winrt-*/winrt/_winrt_*.pyi
-      - projection/winrt-*/py.*.cpp
-      - projection/winrt-*/pyproject.toml
-      - projection/winrt-*/README.md
-      - projection/winrt-*/requirements.txt
-      - projection/winrt-*/setup.py
+      - projection/**
+      - '!projection/interop/**'
+      - '!projection/winrt-runtime/**'
       - PyWinRT/**
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
