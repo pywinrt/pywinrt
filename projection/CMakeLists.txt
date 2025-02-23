@@ -83,10 +83,10 @@ function(pywinrt_add_library target sources)
 endfunction()
 
 set(circular_dependency_packages
+    "winrt/winrt-Windows.UI.Xaml.Controls"
+    "winrt/winrt-Windows.UI.Xaml.Controls.Primitives"
     "winui3/winrt-Microsoft.UI.Xaml.Controls"
     "winui3/winrt-Microsoft.UI.Xaml.Controls.Primitives"
-    "winrt-Windows.UI.Xaml.Controls"
-    "winrt-Windows.UI.Xaml.Controls.Primitives"
 )
 
 function(pywinrt_add_namespace_package package)
@@ -133,7 +133,7 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 ################################################################################
 
 if (PYWINRT_FULL_PROJECTION)
-    file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt-Windows.*")
+    file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt/winrt-*")
     file(GLOB winui3_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui3/winrt-*")
     file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/winrt-*")
     file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Windows.*")
@@ -141,25 +141,25 @@ if (PYWINRT_FULL_PROJECTION)
 else()
     # minimum set of packages required for unit tests
     set(packages
-        "winrt-Windows.ApplicationModel.Core"
-        "winrt-Windows.Data.Json"
-        "winrt-Windows.Devices"
-        "winrt-Windows.Devices.Geolocation"
-        "winrt-Windows.Foundation"
-        "winrt-Windows.Foundation.Collections"
-        "winrt-Windows.Foundation.Numerics"
-        "winrt-Windows.Graphics"
-        "winrt-Windows.Graphics.Capture"
-        "winrt-Windows.Graphics.DirectX"
-        "winrt-Windows.Graphics.DirectX.Direct3D11"
-        "winrt-Windows.Graphics.Imaging"
-        "winrt-Windows.Storage"
-        "winrt-Windows.Storage.Streams"
-        "winrt-Windows.System"
-        "winrt-Windows.UI"
-        "winrt-Windows.UI.Composition"
-        "winrt-Windows.UI.Composition.Desktop"
-        "winrt-Windows.UI.WindowManagement"
+        "winrt/winrt-Windows.ApplicationModel.Core"
+        "winrt/winrt-Windows.Data.Json"
+        "winrt/winrt-Windows.Devices"
+        "winrt/winrt-Windows.Devices.Geolocation"
+        "winrt/winrt-Windows.Foundation"
+        "winrt/winrt-Windows.Foundation.Collections"
+        "winrt/winrt-Windows.Foundation.Numerics"
+        "winrt/winrt-Windows.Graphics"
+        "winrt/winrt-Windows.Graphics.Capture"
+        "winrt/winrt-Windows.Graphics.DirectX"
+        "winrt/winrt-Windows.Graphics.DirectX.Direct3D11"
+        "winrt/winrt-Windows.Graphics.Imaging"
+        "winrt/winrt-Windows.Storage"
+        "winrt/winrt-Windows.Storage.Streams"
+        "winrt/winrt-Windows.System"
+        "winrt/winrt-Windows.UI"
+        "winrt/winrt-Windows.UI.Composition"
+        "winrt/winrt-Windows.UI.Composition.Desktop"
+        "winrt/winrt-Windows.UI.WindowManagement"
     )
     set(winui3_packages
         "winui3/winrt-Microsoft.UI"
