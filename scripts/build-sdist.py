@@ -27,8 +27,8 @@ for package_path in chain(
     [os.fspath(PROJECTION_PATH / "winrt-runtime")],
     iglob(os.fspath(PROJECTION_PATH / "interop" / "winrt-*")),
     iglob(os.fspath(PROJECTION_PATH / "winrt" / "winrt-*")),
-    iglob(os.fspath(PROJECTION_PATH / "winui3" / "winrt-*")),
-    iglob(os.fspath(PROJECTION_PATH / "webview2" / "winrt-*")),
+    iglob(os.fspath(PROJECTION_PATH / "winui3" / "winui3-*")),
+    iglob(os.fspath(PROJECTION_PATH / "webview2" / "webview2-*")),
 ):
     subprocess.check_call(
         [

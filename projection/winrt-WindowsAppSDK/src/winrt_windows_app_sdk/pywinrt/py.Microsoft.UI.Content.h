@@ -4,14 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.h>
-#include <winrt/Microsoft.UI.Composition.h>
-#include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Graphics.h>
 #include <winrt/Windows.UI.Composition.h>
+#include <winrt/Microsoft.UI.h>
+#include <winrt/Microsoft.UI.Composition.h>
+#include <winrt/Microsoft.UI.Dispatching.h>
 
 #include <winrt/Microsoft.UI.Content.h>
 
@@ -34,167 +34,155 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentCoordinateRoundingMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentCoordinateRoundingMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentCoordinateRoundingMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentLayoutDirection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentLayoutDirection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentLayoutDirection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentLayoutDirection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSizePolicy>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSizePolicy";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentSizePolicy";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSizePolicy";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentCoordinateConverter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentCoordinateConverter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentCoordinateConverter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentCoordinateConverter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentDeferral>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentDeferral";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentDeferral";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentDeferral";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentEnvironmentSettingChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentEnvironmentSettingChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentEnvironmentSettingChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentEnvironmentStateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentEnvironmentStateChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentEnvironmentStateChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentIsland>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentIsland";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentIsland";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentIsland";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentIslandAutomationProviderRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentIslandAutomationProviderRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentIslandAutomationProviderRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentIslandEnvironment>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentIslandEnvironment";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentIslandEnvironment";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentIslandEnvironment";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentIslandStateChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentIslandStateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentIslandStateChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentIslandStateChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSite>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSite";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentSite";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSite";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSiteEnvironment>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSiteEnvironment";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentSiteEnvironment";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSiteEnvironment";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSiteEnvironmentView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentSiteEnvironmentView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSiteEnvironmentView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSiteRequestedStateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentSiteRequestedStateChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSiteRequestedStateChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSiteView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSiteView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.ContentSiteView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSiteView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.DesktopChildSiteBridge";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.DesktopChildSiteBridge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "DesktopChildSiteBridge";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::DesktopSiteBridge>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.DesktopSiteBridge";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content.DesktopSiteBridge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "DesktopSiteBridge";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Content::IContentSiteBridge>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content._IContentSiteBridge";
-        static constexpr const char* module_name = "winrt.microsoft.ui.content";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.content._IContentSiteBridge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.content";
         static constexpr const char* type_name = "_IContentSiteBridge";
     };
 }
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -214,6 +202,18 @@ namespace py
 
 #if __has_include("py.Windows.UI.Composition.h")
 #include "py.Windows.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Dispatching.h")
+#include "py.Microsoft.UI.Dispatching.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Content

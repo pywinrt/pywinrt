@@ -237,15 +237,15 @@ def is_app_sdk_bootstrap_package(name: str) -> bool:
 
 
 def is_webview2_package(name: str) -> bool:
-    return name.startswith("winrt-Microsoft.Web.WebView2.")
+    return name.startswith("webview2-Microsoft.Web.WebView2.")
 
 
 def is_windows_app_package(name: str) -> bool:
-    return name.startswith("winrt-Microsoft.") and not is_webview2_package(name)
+    return name.startswith("winui3-Microsoft.") or is_app_sdk_interop_package(name)
 
 
 def is_component_pacakge(name: str) -> bool:
-    return name in ["winrt-TestComponent"] or is_webview2_package(name)
+    return name in ["test-winrt-TestComponent"] or is_webview2_package(name)
 
 
 def is_dispatcher_queue_package(name: str) -> bool:
@@ -436,16 +436,19 @@ write_project_files(
 for package_path in chain(
     (PROJECTION_PATH / "interop").glob("winrt-*"),
     (PROJECTION_PATH / "winrt").glob("winrt-*"),
-    (PROJECTION_PATH / "winui3").glob("winrt-*"),
-    (PROJECTION_PATH / "webview2").glob("winrt-*"),
+    (PROJECTION_PATH / "winui3").glob("winui3-*"),
+    (PROJECTION_PATH / "webview2").glob("webview2-*"),
     [
         PROJECTION_PATH / "winrt-sdk",
         PROJECTION_PATH / "winrt-WindowsAppSDK",
-        PROJECTION_PATH / "test-winrt" / "winrt-TestComponent",
+        PROJECTION_PATH / "test-winrt" / "test-winrt-TestComponent",
     ],
 ):
-    namespace = package_path.name.removeprefix("winrt-")
-    module_name = f"winrt.{winrt_ns_to_py_package(namespace)}"
+    root_package = package_path.name[: package_path.name.rindex("-")]
+    namespace = package_path.name.removeprefix(f"{root_package}-")
+    module_name = (
+        f"{root_package.replace('-', '_')}.{winrt_ns_to_py_package(namespace)}"
+    )
     ext_module_name = f"_{module_name.replace('.', '_')}"
     source_file = f"py.{namespace}.cpp"
     second_ext_source_file = f"py.{namespace}_2.cpp"

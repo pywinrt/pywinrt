@@ -8,7 +8,7 @@ from uuid import UUID
 
 from typing_extensions import override
 
-import winrt.testcomponent as tc
+import test_winrt.testcomponent as tc
 import winrt.windows.foundation.collections as wfc
 
 from test._util import catch_unraisable

@@ -9,7 +9,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Mono.Cecil;
 
-var inputOption = new Option<string[]>(
+var inputOption = new Option<(string, string)[]>(
     "--input",
     CommandReader.ParseSpec,
     default,
@@ -20,7 +20,7 @@ var inputOption = new Option<string[]>(
     ArgumentHelpName = "spec",
 };
 
-var referenceOption = new Option<string[]>(
+var referenceOption = new Option<(string, string)[]>(
     "--reference",
     CommandReader.ParseSpec,
     default,
@@ -97,6 +97,7 @@ rootCommand.SetHandler(
     {
         var resolver = new MetadataResolver();
         var types = new List<TypeDefinition>();
+        var packageMap = new Dictionary<string, string>();
 
         var input = invocationContext.ParseResult.GetValueForOption(inputOption)!;
         var reference = invocationContext.ParseResult.GetValueForOption(referenceOption)!;
@@ -110,14 +111,26 @@ rootCommand.SetHandler(
         var componentDlls = invocationContext.ParseResult.GetValueForOption(componentDllsOption);
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
-        foreach (var file in input)
+        var inputPackage = default(string);
+
+        foreach (var (file, package) in input)
         {
+            if (inputPackage is null)
+            {
+                inputPackage = package;
+            }
+            else if (inputPackage != package)
+            {
+                throw new Exception("All input packages must be the same python package");
+            }
+
             var assembly = AssemblyDefinition.ReadAssembly(
                 file,
                 new ReaderParameters { MetadataResolver = resolver }
             );
 
             resolver.Register(assembly);
+            packageMap.Add(assembly.Modules.Single().Name, package);
 
             types.AddRange(
                 assembly
@@ -127,7 +140,12 @@ rootCommand.SetHandler(
             );
         }
 
-        foreach (var file in reference)
+        if (inputPackage is null)
+        {
+            throw new Exception("At least one input package is required");
+        }
+
+        foreach (var (file, package) in reference)
         {
             var assembly = AssemblyDefinition.ReadAssembly(
                 file,
@@ -135,6 +153,14 @@ rootCommand.SetHandler(
             );
 
             resolver.Register(assembly);
+            packageMap.Add(assembly.Modules.Single().Name, package);
+
+            if (package == inputPackage)
+            {
+                throw new Exception(
+                    $"Reference package ({package}) must not match input package for {file}"
+                );
+            }
         }
 
         if (verbose)
@@ -203,11 +229,12 @@ rootCommand.SetHandler(
                     FileWriters.WriteNamespaceFiles(
                         output,
                         headerPath,
-                        group.Key,
+                        new QualifiedNamespace(inputPackage, group.Key),
                         nullabilityInfo.GetOrAdd(
                             group.Key,
                             _ => new NamespaceNullabilityInfo(group.Key, [])
                         ),
+                        packageMap,
                         group,
                         componentDlls
                     );
@@ -251,7 +278,7 @@ var parser = new CommandLineBuilder(rootCommand)
                     Console.WriteLine("Where <spec> is one or more of:");
                     Console.WriteLine();
                     Console.WriteLine(
-                        "  <path>              Path to winmd file or recursively scanned folder"
+                        "  <package>:<path>    Python package name and path to winmd file or recursively scanned folder"
                     );
                     Console.WriteLine(
                         "  local               Local %WinDir%\\System32\\WinMetadata folder"

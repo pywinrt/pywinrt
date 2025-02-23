@@ -22,18 +22,19 @@ static class FileWriters
     internal static void WriteNamespaceFiles(
         DirectoryInfo outputPath,
         DirectoryInfo? headerPath,
-        string ns,
+        QualifiedNamespace ns,
         NamespaceNullabilityInfo nullabilityInfo,
+        IReadOnlyDictionary<string, string> packageMap,
         IEnumerable<TypeDefinition> typeDefinitions,
         bool componentDlls
     )
     {
-        var nsPackageName = $"winrt-{ns}";
+        var nsPackageName = $"{ns.PyPackage}-{ns.Namespace}";
         var nsPackageDir = new DirectoryInfo(Path.Combine(outputPath.FullName, nsPackageName));
-        var nsWinrtDir = new DirectoryInfo(Path.Combine(nsPackageDir.FullName, "winrt"));
-        var nsDir = nsWinrtDir;
+        var rootDir = new DirectoryInfo(Path.Combine(nsPackageDir.FullName, ns.PyPackageModule));
+        var nsDir = rootDir;
 
-        foreach (var nsSegment in ns.Split('.'))
+        foreach (var nsSegment in ns.Namespace.Split('.'))
         {
             var segment = nsSegment.ToLowerInvariant().ToPythonIdentifier();
             nsDir = new DirectoryInfo(Path.Combine(nsDir.FullName, segment));
@@ -70,22 +71,26 @@ static class FileWriters
                 .Select(m => new KeyValuePair<string, MethodNullabilityInfo>(m.Signature, m))
         ).AsReadOnly();
 
-        WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls, 0);
-        WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls, 1);
-        WriteNamespaceH(headerDir, ns, members, componentDlls);
-        WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, members, componentDlls);
-        WriteNamespacePyi(nsWinrtDir, ns, nullabilityMap, members, 0);
-        WriteNamespacePyi(nsWinrtDir, ns, nullabilityMap, members, 1);
+        WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 0);
+        WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 1);
+        WriteNamespaceH(headerDir, ns, packageMap, members, componentDlls);
+        WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, packageMap, members, componentDlls);
+        WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0);
+        WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1);
         WritePyWinRTVersionTxt(nsPackageDir);
-        WriteRequirementsTxt(nsPackageDir, members);
+        WriteRequirementsTxt(nsPackageDir, packageMap, members);
 
-        if (members.GetReferencedNamespaces(includeDelegates: true).Any())
+        if (members.GetReferencedNamespaces(packageMap, includeDelegates: true).Any())
         {
-            WriteAllRequirementsTxt(nsPackageDir, members);
+            WriteAllRequirementsTxt(nsPackageDir, packageMap, members);
         }
     }
 
-    private static void WriteAllRequirementsTxt(DirectoryInfo nsPackageDir, Members members)
+    private static void WriteAllRequirementsTxt(
+        DirectoryInfo nsPackageDir,
+        IReadOnlyDictionary<string, string> packageMap,
+        Members members
+    )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
@@ -93,15 +98,19 @@ static class FileWriters
         w.WriteLicense("#");
         w.WriteBlankLine();
 
-        foreach (var ns in members.GetReferencedNamespaces(includeDelegates: true))
+        foreach (var ns in members.GetReferencedNamespaces(packageMap, includeDelegates: true))
         {
-            w.WriteLine($"winrt-{ns}[all]=={PyWinRT.VersionString}");
+            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}[all]=={PyWinRT.VersionString}");
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "all-requirements.txt");
     }
 
-    private static void WriteRequirementsTxt(DirectoryInfo nsPackageDir, Members members)
+    private static void WriteRequirementsTxt(
+        DirectoryInfo nsPackageDir,
+        IReadOnlyDictionary<string, string> packageMap,
+        Members members
+    )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
@@ -110,9 +119,9 @@ static class FileWriters
         w.WriteBlankLine();
         w.WriteLine($"winrt-runtime=={PyWinRT.VersionString}");
 
-        foreach (var ns in members.GetRequiredNamespaces())
+        foreach (var ns in members.GetRequiredNamespaces(packageMap))
         {
-            w.WriteLine($"winrt-{ns}=={PyWinRT.VersionString}");
+            w.WriteLine($"{ns.PyPackage}-{ns.Namespace}=={PyWinRT.VersionString}");
         }
 
         sw.WriteFileIfChanged(nsPackageDir, "requirements.txt");
@@ -130,8 +139,9 @@ static class FileWriters
 
     private static void WriteNamespacePyi(
         DirectoryInfo nsWinrtDir,
-        string ns,
+        QualifiedNamespace ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
         Members members,
         int dependencyDepth
     )
@@ -160,14 +170,13 @@ static class FileWriters
         w.WriteLine("import winrt.system");
 
         var referencedNamespaces = members.GetReferencedNamespaces(
+            packageMap,
             includeInheritedInterfaces: true
         );
 
         foreach (var rns in referencedNamespaces)
         {
-            var moduleName = rns.ToLowerInvariant();
-            var alias = moduleName.Replace(".", "_");
-            w.WriteLine($"import winrt.{moduleName} as {alias}");
+            w.WriteLine($"import {rns.PyModuleName} as {rns.PyModuleAlias}");
         }
 
         w.WriteBlankLine();
@@ -194,7 +203,7 @@ static class FileWriters
             }
 
             var suffix = depth == 0 ? "" : $"_{depth + 1}";
-            w.WriteLine($"from .{ns.ToNsModuleName()}{suffix} import (");
+            w.WriteLine($"from .{ns.NsModuleName}{suffix} import (");
             w.Indent++;
 
             foreach (var type in dependencyTypes)
@@ -215,14 +224,14 @@ static class FileWriters
         if (members.Enums.Count != 0)
         {
             w.WriteLine(
-                $"from {ns.ToPyModuleName()} import {string.Join(", ", members.Enums.Select(e => e.Name))}"
+                $"from {ns.PyModuleName} import {string.Join(", ", members.Enums.Select(e => e.Name))}"
             );
         }
 
         if (members.Delegates.Count != 0)
         {
             w.WriteLine(
-                $"from {ns.ToPyModuleName()} import {string.Join(", ", members.Delegates.Select(d => d.Name))}"
+                $"from {ns.PyModuleName} import {string.Join(", ", members.Delegates.Select(d => d.Name))}"
             );
         }
 
@@ -251,7 +260,7 @@ static class FileWriters
             )
         )
         {
-            w.WritePythonStructTyping(type, ns);
+            w.WritePythonStructTyping(type, ns.Namespace, packageMap);
             didWriteClass = true;
         }
 
@@ -261,24 +270,25 @@ static class FileWriters
                 .Where(t => t.CircularDependencyDepth == dependencyDepth)
         )
         {
-            w.WritePythonClassTyping(type, ns, nullabilityMap);
+            w.WritePythonClassTyping(type, ns.Namespace, nullabilityMap, packageMap);
             didWriteClass = true;
         }
 
-        // only write the file if we wrote at least one class
-        if (!didWriteClass)
+        // only write extra files if we wrote at least one class
+        if (dependencyDepth != 0 && !didWriteClass)
         {
             return;
         }
 
         var moduleSuffix = dependencyDepth == 0 ? "" : $"_{dependencyDepth + 1}";
-        sw.WriteFileIfChanged(nsWinrtDir, $"{ns.ToNsModuleName()}{moduleSuffix}.pyi");
+        sw.WriteFileIfChanged(nsWinrtDir, $"{ns.NsModuleName}{moduleSuffix}.pyi");
     }
 
     private static void WriteNamespaceDunderInitPy(
         DirectoryInfo nsDir,
-        string ns,
+        QualifiedNamespace ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
         Members members,
         bool componentDlls
     )
@@ -321,7 +331,7 @@ static class FileWriters
 
             if (dependencyModuleTypes.Any())
             {
-                w.WriteLine($"from winrt.{ns.ToNsModuleName()}{suffix} import (");
+                w.WriteLine($"from {ns.PyPackageModule}.{ns.NsModuleName}{suffix} import (");
                 w.Indent++;
 
                 foreach (var type in dependencyModuleTypes)
@@ -349,7 +359,7 @@ static class FileWriters
                 w.WriteLine("from typing import TYPE_CHECKING");
                 w.WriteLine("if TYPE_CHECKING:");
                 w.Indent++;
-                w.WriteLine($"from winrt.{ns.ToNsModuleName()}{suffix} import (");
+                w.WriteLine($"from {ns.PyPackageModule}.{ns.NsModuleName}{suffix} import (");
                 w.Indent++;
 
                 foreach (var type in composableTypes)
@@ -368,7 +378,7 @@ static class FileWriters
         // them when type checking is enabled and quote the types to avoid
         // to avoid runtime errors.
 
-        var delegateReferencedNamespaces = new SortedSet<string>(
+        var delegateReferencedNamespaces = new SortedSet<QualifiedNamespace>(
             members.Delegates.SelectMany(d =>
             {
                 var method = d.Type.Methods.Single(m => m.Name == "Invoke");
@@ -383,8 +393,8 @@ static class FileWriters
                             && t.Name == "IIterable`1"
                         )
                     )
-                    .Select(t => t.Namespace)
-                    .Where(n => n != ns && n != "System");
+                    .Select(t => t.GetQualifiedNamespace(packageMap))
+                    .Where(n => n != ns && n.Namespace != "System");
             })
         );
 
@@ -396,7 +406,7 @@ static class FileWriters
 
             foreach (var n in delegateReferencedNamespaces)
             {
-                w.WriteLine($"import {n.ToPyModuleName()} as {n.ToPyModuleAlias()}");
+                w.WriteLine($"import {n.PyModuleName} as {n.PyModuleAlias}");
             }
 
             w.Indent--;
@@ -488,8 +498,9 @@ static class FileWriters
                 .Parameters.Where(p => p.IsPythonInParam())
                 .Select(p =>
                     p.ToPyCallbackInParamTyping(
-                        ns,
+                        ns.Namespace,
                         nullabilityInfo.Parameters[p.Index].Type,
+                        packageMap,
                         quoteImportedTypes: true
                     )
                 );
@@ -498,7 +509,7 @@ static class FileWriters
             // instead of ToPyReturnTyping(). For now, this isn't a problem outside
             // of the TestComponent modules since most callbacks only return None or bool.
             w.WriteLine(
-                $"{type.Name} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns, nullabilityInfo, quoteImportedTypes: true)}]"
+                $"{type.Name} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns.Namespace, nullabilityInfo, packageMap, quoteImportedTypes: true)}]"
             );
         }
 
@@ -507,7 +518,8 @@ static class FileWriters
 
     private static void WriteNamespaceH(
         DirectoryInfo headerDir,
-        string ns,
+        QualifiedNamespace ns,
+        IReadOnlyDictionary<string, string> packageMap,
         Members members,
         bool componentDlls
     )
@@ -515,7 +527,10 @@ static class FileWriters
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
 
-        var referencedNamespaces = members.GetReferencedNamespaces(includeDelegates: true);
+        var referencedNamespaces = members.GetReferencedNamespaces(
+            packageMap,
+            includeDelegates: true
+        );
 
         w.WriteLicense();
         w.WriteBlankLine();
@@ -528,14 +543,14 @@ static class FileWriters
 
         foreach (var rns in referencedNamespaces)
         {
-            w.WriteLine($"#include <winrt/{rns}.h>");
+            w.WriteLine($"#include <winrt/{rns.Namespace}.h>");
         }
 
         w.WriteBlankLine();
-        w.WriteLine($"#include <winrt/{ns}.h>");
+        w.WriteLine($"#include <winrt/{ns.Namespace}.h>");
         w.WriteBlankLine();
 
-        w.WriteLine($"namespace py::proj::{ns.ToCppNamespace()}");
+        w.WriteLine($"namespace py::proj::{ns.Namespace.ToCppNamespace()}");
         w.WriteBlock(() =>
         {
             foreach (
@@ -574,20 +589,20 @@ static class FileWriters
                     .Concat(members.Structs)
             )
             {
-                w.WritePyTypeSpecializationStruct(type);
+                w.WritePyTypeSpecializationStruct(type, ns);
             }
         });
 
         foreach (var rns in referencedNamespaces)
         {
             w.WriteBlankLine();
-            w.WriteLine($"#if __has_include(\"py.{rns}.h\")");
-            w.WriteLine($"#include \"py.{rns}.h\"");
+            w.WriteLine($"#if __has_include(\"py.{rns.Namespace}.h\")");
+            w.WriteLine($"#include \"py.{rns.Namespace}.h\"");
             w.WriteLine("#endif");
         }
 
         w.WriteBlankLine();
-        w.WriteLine($"namespace py::impl::{ns.ToCppNamespace()}");
+        w.WriteLine($"namespace py::impl::{ns.Namespace.ToCppNamespace()}");
         w.WriteBlock(() =>
         {
             var n = 0;
@@ -614,7 +629,7 @@ static class FileWriters
         });
 
         w.WriteBlankLine();
-        w.WriteLine($"namespace py::wrapper::{ns.ToCppNamespace()}");
+        w.WriteLine($"namespace py::wrapper::{ns.Namespace.ToCppNamespace()}");
         w.WriteBlock(() =>
         {
             foreach (
@@ -642,12 +657,13 @@ static class FileWriters
             }
         });
 
-        sw.WriteFileIfChanged(headerDir, $"py.{ns}.h");
+        sw.WriteFileIfChanged(headerDir, $"py.{ns.Namespace}.h");
     }
 
     private static void WriteNamespaceCpp(
         DirectoryInfo nsPackageDir,
-        string ns,
+        QualifiedNamespace ns,
+        IReadOnlyDictionary<string, string> packageMap,
         Members members,
         bool componentDlls,
         int dependencyDepth
@@ -662,10 +678,10 @@ static class FileWriters
         w.WriteLicense();
         w.WriteBlankLine();
 
-        w.WriteLine($"#include \"py.{ns}.h\"");
+        w.WriteLine($"#include \"py.{ns.Namespace}.h\"");
         w.WriteBlankLine();
 
-        w.WriteLine($"namespace py::cpp::{ns.ToCppNamespace()}");
+        w.WriteLine($"namespace py::cpp::{ns.Namespace.ToCppNamespace()}");
         w.WriteBlock(
             () =>
             {
@@ -682,12 +698,12 @@ static class FileWriters
                         w.WriteBlankLine();
                     }
 
-                    w.WriteInspectableType(t, componentDlls, moduleSuffix);
+                    w.WriteInspectableType(t, componentDlls, ns, moduleSuffix);
 
                     if (t.Category == Category.Interface)
                     {
                         w.WriteBlankLine();
-                        w.WriteImplementsInterfaceImpl(t, moduleSuffix);
+                        w.WriteImplementsInterfaceImpl(t, ns, moduleSuffix);
                     }
 
                     didWriteClass = true;
@@ -704,7 +720,7 @@ static class FileWriters
                         w.WriteBlankLine();
                     }
 
-                    w.WriteStruct(t, moduleSuffix);
+                    w.WriteStruct(t, ns, moduleSuffix);
                     didWriteClass = true;
                 }
 
@@ -715,18 +731,18 @@ static class FileWriters
 
                 w.WriteNamespaceInitialization(ns, moduleSuffix);
             },
-            $" // py::cpp::{ns.ToCppNamespace()}"
+            $" // py::cpp::{ns.Namespace.ToCppNamespace()}"
         );
         w.WriteBlankLine();
 
-        w.WriteNamespaceModuleInitFunction(ns, members, dependencyDepth, moduleSuffix);
+        w.WriteNamespaceModuleInitFunction(ns, packageMap, members, dependencyDepth, moduleSuffix);
 
-        // only write the file if we wrote at least one class
-        if (!didWriteClass)
+        // only write extra modules if we wrote at least one class
+        if (dependencyDepth != 0 && !didWriteClass)
         {
             return;
         }
 
-        sw.WriteFileIfChanged(nsPackageDir, $"py.{ns}{moduleSuffix}.cpp");
+        sw.WriteFileIfChanged(nsPackageDir, $"py.{ns.Namespace}{moduleSuffix}.cpp");
     }
 }

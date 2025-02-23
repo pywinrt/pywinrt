@@ -4,8 +4,8 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.Xaml.Markup.h>
 #include <winrt/Windows.UI.Xaml.Interop.h>
+#include <winrt/Microsoft.UI.Xaml.Markup.h>
 
 #include <winrt/Microsoft.UI.Xaml.XamlTypeInfo.h>
 
@@ -19,18 +19,18 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::XamlTypeInfo::XamlControlsXamlMetaDataProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.xamltypeinfo.XamlControlsXamlMetaDataProvider";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.xamltypeinfo";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.xamltypeinfo.XamlControlsXamlMetaDataProvider";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.xamltypeinfo";
         static constexpr const char* type_name = "XamlControlsXamlMetaDataProvider";
     };
 }
 
-#if __has_include("py.Microsoft.UI.Xaml.Markup.h")
-#include "py.Microsoft.UI.Xaml.Markup.h"
-#endif
-
 #if __has_include("py.Windows.UI.Xaml.Interop.h")
 #include "py.Windows.UI.Xaml.Interop.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Markup.h")
+#include "py.Microsoft.UI.Xaml.Markup.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Xaml::XamlTypeInfo

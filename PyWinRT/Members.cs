@@ -120,9 +120,11 @@ sealed class Members
         }
     }
 
-    public IEnumerable<string> GetRequiredNamespaces()
+    public IEnumerable<QualifiedNamespace> GetRequiredNamespaces(
+        IReadOnlyDictionary<string, string> packageMap
+    )
     {
-        var namespaces = new SortedSet<string>(StringComparer.Ordinal);
+        var namespaces = new SortedSet<QualifiedNamespace>();
 
         foreach (var type in Classes)
         {
@@ -132,19 +134,20 @@ sealed class Members
                 && baseType.Namespace != "System"
             )
             {
-                namespaces.Add(baseType.Namespace);
+                namespaces.Add(baseType.GetQualifiedNamespace(packageMap));
             }
         }
 
         return namespaces;
     }
 
-    public IEnumerable<string> GetReferencedNamespaces(
+    public IEnumerable<QualifiedNamespace> GetReferencedNamespaces(
+        IReadOnlyDictionary<string, string> packageMap,
         bool includeDelegates = false,
         bool includeInheritedInterfaces = false
     )
     {
-        var namespaces = new SortedSet<string>(StringComparer.Ordinal);
+        var namespaces = new SortedSet<QualifiedNamespace>();
 
         foreach (
             var type in Structs.SelectMany(s =>
@@ -158,7 +161,7 @@ sealed class Members
             )
         )
         {
-            namespaces.Add(type.Namespace);
+            namespaces.Add(type.GetQualifiedNamespace(packageMap));
         }
 
         foreach (var type in Classes.Concat(Interfaces))
@@ -169,14 +172,14 @@ sealed class Members
                 && baseType.Namespace != "System"
             )
             {
-                namespaces.Add(baseType.Namespace);
+                namespaces.Add(baseType.GetQualifiedNamespace(packageMap));
             }
 
             if (includeInheritedInterfaces)
             {
                 foreach (var t in type.Interfaces.Where(t => t.Namespace != type.Namespace))
                 {
-                    namespaces.Add(t.Namespace);
+                    namespaces.Add(t.GetQualifiedNamespace(packageMap));
                 }
             }
 
@@ -212,7 +215,7 @@ sealed class Members
                         )
                 )
                 {
-                    namespaces.Add(t.Namespace);
+                    namespaces.Add(t.GetQualifiedNamespace(packageMap));
                 }
             }
         }
@@ -233,7 +236,7 @@ sealed class Members
                         )
                 )
                 {
-                    namespaces.Add(t.Namespace);
+                    namespaces.Add(t.GetQualifiedNamespace(packageMap));
                 }
             }
         }

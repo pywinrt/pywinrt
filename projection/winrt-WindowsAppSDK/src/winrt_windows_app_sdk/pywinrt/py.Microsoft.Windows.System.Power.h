@@ -42,72 +42,72 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::BatteryStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.BatteryStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.BatteryStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "BatteryStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::DisplayStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.DisplayStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.DisplayStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "DisplayStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::EffectivePowerMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.EffectivePowerMode";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.EffectivePowerMode";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "EffectivePowerMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::EnergySaverStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.EnergySaverStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.EnergySaverStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "EnergySaverStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::PowerSourceKind>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.PowerSourceKind";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.PowerSourceKind";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "PowerSourceKind";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::PowerSupplyStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.PowerSupplyStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.PowerSupplyStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "PowerSupplyStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::SystemSuspendStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.SystemSuspendStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.SystemSuspendStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "SystemSuspendStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::UserPresenceStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.UserPresenceStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.UserPresenceStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "UserPresenceStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::System::Power::PowerManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.power.PowerManager";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system.power";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.power.PowerManager";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system.power";
         static constexpr const char* type_name = "PowerManager";
     };
 }

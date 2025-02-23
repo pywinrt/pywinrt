@@ -6,7 +6,8 @@ static class StructWriterExtensions
     public static void WritePythonStructTyping(
         this IndentedTextWriter w,
         ProjectedType type,
-        string ns
+        string ns,
+        IReadOnlyDictionary<string, string> packageMap
     )
     {
         var metaclass = "";
@@ -44,12 +45,12 @@ static class StructWriterExtensions
         {
             w.WriteLine("@_property");
             w.WriteLine(
-                $"def {field.Name.ToPythonIdentifier()}(self) -> {field.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(field.FieldType))}: ..."
+                $"def {field.Name.ToPythonIdentifier()}(self) -> {field.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(field.FieldType), packageMap)}: ..."
             );
         }
 
         w.WriteLine(
-            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType))} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> {type.Name}: ..."
+            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap)} = {f.FieldType.GetDefaultPyValue(ns, packageMap)}"))}) -> {type.Name}: ..."
         );
 
         w.WriteLine($"def __replace__(self, /, **changes: typing.Any) -> {type.Name}: ...");
@@ -67,7 +68,7 @@ static class StructWriterExtensions
         if (type.Type.Fields.Count > 1)
         {
             w.WriteLine(
-                $"def unpack(self) -> {type.Type.ToPyTupleTyping(ns, isUnpack: true)}: ..."
+                $"def unpack(self) -> {type.Type.ToPyTupleTyping(ns, packageMap, isUnpack: true)}: ..."
             );
         }
 
@@ -78,6 +79,7 @@ static class StructWriterExtensions
     public static void WriteStruct(
         this IndentedTextWriter w,
         ProjectedType type,
+        QualifiedNamespace ns,
         string moduleSuffix
     )
     {
@@ -123,11 +125,11 @@ static class StructWriterExtensions
         w.WriteStructEqualityMethods(type);
         w.WriteStructRepr(type);
         w.WriteTypeSlotTable(type);
-        w.WriteTypeSpec(type, moduleSuffix);
+        w.WriteTypeSpec(type, ns, moduleSuffix);
 
         if (type.PyRequiresMetaclass)
         {
-            w.WriteMetaclass(type, moduleSuffix);
+            w.WriteMetaclass(type, ns, moduleSuffix);
         }
     }
 

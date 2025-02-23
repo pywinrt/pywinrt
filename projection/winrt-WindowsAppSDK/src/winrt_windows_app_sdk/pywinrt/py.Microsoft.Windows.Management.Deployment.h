@@ -4,10 +4,10 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h>
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h>
 
 #include <winrt/Microsoft.Windows.Management.Deployment.h>
 
@@ -39,168 +39,164 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentFeature";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageDeploymentFeature";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentFeature";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentProgressStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageDeploymentProgressStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentProgressStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageDeploymentStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageReadyOrNewerAvailableStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageReadyOrNewerAvailableStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageReadyOrNewerAvailableStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.StubPackageOption";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.StubPackageOption";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "StubPackageOption";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.AddPackageOptions";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.AddPackageOptions";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "AddPackageOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.EnsureReadyOptions";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.EnsureReadyOptions";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "EnsureReadyOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentManager";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageDeploymentManager";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentManager";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentResult>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentResult";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageDeploymentResult";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentResult";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageRuntimeManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageRuntimeManager";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageRuntimeManager";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageRuntimeManager";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageSet>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageSet";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageSet";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageSet";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageSetItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageSetItem";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageSetItem";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageSetItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageSetItemRuntimeDisposition";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageSetItemRuntimeDisposition";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageSetItemRuntimeDisposition";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageSetRuntimeDisposition";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageSetRuntimeDisposition";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageSetRuntimeDisposition";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageVolume";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageVolume";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageVolume";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.ProvisionPackageOptions";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.ProvisionPackageOptions";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "ProvisionPackageOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.RegisterPackageOptions";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.RegisterPackageOptions";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "RegisterPackageOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.RemovePackageOptions";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.RemovePackageOptions";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "RemovePackageOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.StagePackageOptions";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.StagePackageOptions";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "StagePackageOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_windows_management_deployment.PackageDeploymentProgress_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentProgress";
-        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_windows_management_deployment.PackageDeploymentProgress_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.management.deployment.PackageDeploymentProgress";
+        static constexpr const char* module_name = "winui3.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentProgress";
     };
 }
-
-#if __has_include("py.Microsoft.Windows.ApplicationModel.DynamicDependency.h")
-#include "py.Microsoft.Windows.ApplicationModel.DynamicDependency.h"
-#endif
 
 #if __has_include("py.Windows.ApplicationModel.h")
 #include "py.Windows.ApplicationModel.h"
@@ -212,6 +208,10 @@ namespace py
 
 #if __has_include("py.Windows.Foundation.Collections.h")
 #include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Microsoft.Windows.ApplicationModel.DynamicDependency.h")
+#include "py.Microsoft.Windows.ApplicationModel.DynamicDependency.h"
 #endif
 
 namespace py::impl::Microsoft::Windows::Management::Deployment

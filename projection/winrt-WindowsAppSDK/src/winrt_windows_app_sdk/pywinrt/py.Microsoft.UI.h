@@ -28,51 +28,51 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::ColorHelper>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.ColorHelper";
-        static constexpr const char* module_name = "winrt.microsoft.ui";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.ColorHelper";
+        static constexpr const char* module_name = "winui3.microsoft.ui";
         static constexpr const char* type_name = "ColorHelper";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Colors>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.Colors";
-        static constexpr const char* module_name = "winrt.microsoft.ui";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.Colors";
+        static constexpr const char* module_name = "winui3.microsoft.ui";
         static constexpr const char* type_name = "Colors";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::IClosableNotifier>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui._IClosableNotifier";
-        static constexpr const char* module_name = "winrt.microsoft.ui";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui._IClosableNotifier";
+        static constexpr const char* module_name = "winui3.microsoft.ui";
         static constexpr const char* type_name = "_IClosableNotifier";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::DisplayId>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui.DisplayId_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.DisplayId";
-        static constexpr const char* module_name = "winrt.microsoft.ui";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui.DisplayId_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.DisplayId";
+        static constexpr const char* module_name = "winui3.microsoft.ui";
         static constexpr const char* type_name = "DisplayId";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::IconId>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui.IconId_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.IconId";
-        static constexpr const char* module_name = "winrt.microsoft.ui";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui.IconId_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.IconId";
+        static constexpr const char* module_name = "winui3.microsoft.ui";
         static constexpr const char* type_name = "IconId";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::WindowId>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui.WindowId_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.WindowId";
-        static constexpr const char* module_name = "winrt.microsoft.ui";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui.WindowId_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.WindowId";
+        static constexpr const char* module_name = "winui3.microsoft.ui";
         static constexpr const char* type_name = "WindowId";
     };
 }

@@ -4,10 +4,10 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.h>
-#include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Storage.Streams.h>
+#include <winrt/Microsoft.UI.h>
+#include <winrt/Microsoft.UI.Dispatching.h>
 
 #include <winrt/Microsoft.Graphics.Display.h>
 
@@ -27,43 +27,35 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorKind>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.display.DisplayAdvancedColorKind";
-        static constexpr const char* module_name = "winrt.microsoft.graphics.display";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.display.DisplayAdvancedColorKind";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayAdvancedColorKind";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayHdrMetadataFormat>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.display.DisplayHdrMetadataFormat";
-        static constexpr const char* module_name = "winrt.microsoft.graphics.display";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.display.DisplayHdrMetadataFormat";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayHdrMetadataFormat";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.display.DisplayAdvancedColorInfo";
-        static constexpr const char* module_name = "winrt.microsoft.graphics.display";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.display.DisplayAdvancedColorInfo";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayAdvancedColorInfo";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayInformation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.display.DisplayInformation";
-        static constexpr const char* module_name = "winrt.microsoft.graphics.display";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.display.DisplayInformation";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayInformation";
     };
 }
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -71,6 +63,14 @@ namespace py
 
 #if __has_include("py.Windows.Storage.Streams.h")
 #include "py.Windows.Storage.Streams.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Dispatching.h")
+#include "py.Microsoft.UI.Dispatching.h"
 #endif
 
 namespace py::impl::Microsoft::Graphics::Display

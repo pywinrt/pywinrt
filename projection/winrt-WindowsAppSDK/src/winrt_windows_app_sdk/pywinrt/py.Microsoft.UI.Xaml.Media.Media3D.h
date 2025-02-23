@@ -21,41 +21,41 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.CompositeTransform3D";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.media3d.CompositeTransform3D";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "CompositeTransform3D";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.Matrix3DHelper";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.media3d.Matrix3DHelper";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "Matrix3DHelper";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.PerspectiveTransform3D";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.media3d.PerspectiveTransform3D";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "PerspectiveTransform3D";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3D>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.Transform3D";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.media3d.Transform3D";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "Transform3D";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_media_media3d.Matrix3D_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.Matrix3D";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_xaml_media_media3d.Matrix3D_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.media.media3d.Matrix3D";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "Matrix3D";
     };
 }

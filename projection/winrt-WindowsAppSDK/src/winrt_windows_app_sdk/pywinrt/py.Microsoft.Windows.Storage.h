@@ -27,32 +27,32 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Storage::ApplicationDataCreateDisposition>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.storage.ApplicationDataCreateDisposition";
-        static constexpr const char* module_name = "winrt.microsoft.windows.storage";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.storage.ApplicationDataCreateDisposition";
+        static constexpr const char* module_name = "winui3.microsoft.windows.storage";
         static constexpr const char* type_name = "ApplicationDataCreateDisposition";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Storage::ApplicationDataLocality>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.storage.ApplicationDataLocality";
-        static constexpr const char* module_name = "winrt.microsoft.windows.storage";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.storage.ApplicationDataLocality";
+        static constexpr const char* module_name = "winui3.microsoft.windows.storage";
         static constexpr const char* type_name = "ApplicationDataLocality";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Storage::ApplicationData>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.storage.ApplicationData";
-        static constexpr const char* module_name = "winrt.microsoft.windows.storage";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.storage.ApplicationData";
+        static constexpr const char* module_name = "winui3.microsoft.windows.storage";
         static constexpr const char* type_name = "ApplicationData";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Storage::ApplicationDataContainer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.storage.ApplicationDataContainer";
-        static constexpr const char* module_name = "winrt.microsoft.windows.storage";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.storage.ApplicationDataContainer";
+        static constexpr const char* module_name = "winui3.microsoft.windows.storage";
         static constexpr const char* type_name = "ApplicationDataContainer";
     };
 }

@@ -14,7 +14,7 @@ enum XmlRequirement
 class CommandReader
 {
     static void AddFilesFromXml(
-        ISet<string> files,
+        IDictionary<string, string> files,
         string sdkVersion,
         string xmlPath,
         string sdkPath,
@@ -57,7 +57,7 @@ class CommandReader
             path = Path.Combine(path, name);
 
             path += ".winmd";
-            files.Add(path);
+            files.TryAdd(path, "winrt");
         }
     }
 
@@ -144,9 +144,9 @@ class CommandReader
         return result.ToString();
     }
 
-    public static string[] ParseSpec(ArgumentResult result)
+    public static (string, string)[] ParseSpec(ArgumentResult result)
     {
-        var files = new SortedSet<string>(StringComparer.Ordinal);
+        var files = new SortedDictionary<string, string>(StringComparer.Ordinal);
 
         foreach (var token in result.Tokens)
         {
@@ -157,24 +157,6 @@ class CommandReader
 
             if (token.Value is string value)
             {
-                // spec can be path to a directory containing .winmd files
-                if (Directory.Exists(value))
-                {
-                    foreach (var file in Directory.EnumerateFiles(value, "*.winmd"))
-                    {
-                        files.Add(file);
-                    }
-
-                    continue;
-                }
-
-                // or path to a .winmd file
-                if (File.Exists(value))
-                {
-                    files.Add(value);
-                    continue;
-                }
-
                 // or the special value "local" which means to use the local Windows WinMetadata directory
                 if (value == "local")
                 {
@@ -187,7 +169,7 @@ class CommandReader
 
                     foreach (var file in Directory.EnumerateFiles(local))
                     {
-                        files.Add(file);
+                        files.Add(file, "winrt");
                     }
 
                     continue;
@@ -249,11 +231,39 @@ class CommandReader
                     continue;
                 }
 
+                var split = value.Split(";");
+                if (split.Length != 2)
+                {
+                    result.ErrorMessage = $"Invalid spec '{value}'";
+                    return [];
+                }
+
+                var package = split[0];
+                var path = split[1];
+
+                // spec can be path to a directory containing .winmd files
+                if (Directory.Exists(path))
+                {
+                    foreach (var file in Directory.EnumerateFiles(path, "*.winmd"))
+                    {
+                        files.TryAdd(file, package);
+                    }
+
+                    continue;
+                }
+
+                // or path to a .winmd file
+                if (File.Exists(path))
+                {
+                    files.TryAdd(path, package);
+                    continue;
+                }
+
                 result.ErrorMessage = $"Path '{value}' is not a file or directory";
                 return [];
             }
         }
 
-        return [.. files];
+        return [.. files.Select((kvp) => (kvp.Key, kvp.Value))];
     }
 }

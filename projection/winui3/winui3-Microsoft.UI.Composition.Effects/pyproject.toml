@@ -1,0 +1,47 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+[build-system]
+requires = ["setuptools", "winrt-sdk", "winrt-WindowsAppSDK"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winui3-Microsoft.UI.Composition.Effects"
+description = "Python projection of Windows Runtime (WinRT) APIs"
+readme = "README.md"
+license = { text = "MIT" }
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
+]
+dynamic = ["version", "dependencies", "optional-dependencies"]
+requires-python = ">=3.9"
+
+[project.urls]
+# Homepage = "https://github.com/pywinrt/pywinrt"
+Documentation = "https://pywinrt.readthedocs.io"
+Repository = "https://github.com/pywinrt/pywinrt"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = { file = "pywinrt-version.txt" }
+dependencies = { file = "requirements.txt" }
+optional-dependencies.all = { file = "all-requirements.txt" }
+
+[tool.setuptools.package-data]
+"*" = ["*.pyi", "py.typed"]
+
+[tool.cibuildwheel]
+# use local winrt-sdk build dependency
+environment = { PYTHONPATH="../../winrt-sdk/src;../../winrt-WindowsAppSDK/src" }
+# don't install winrt-sdk from PyPI
+build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
+before-build = "uv pip install setuptools"
+# don't build for PyPy
+skip = "pp*"
+# suppress warnings about ARM64 testing
+test-skip = "*-win_arm64"
+
+[tool.cibuildwheel.windows]
+archs = ["x86", "AMD64", "ARM64"]

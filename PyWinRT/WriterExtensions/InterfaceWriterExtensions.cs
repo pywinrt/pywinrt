@@ -201,6 +201,7 @@ static class InterfaceWriterExtensions
     public static void WriteImplementsInterfaceImpl(
         this IndentedTextWriter w,
         ProjectedType type,
+        QualifiedNamespace ns,
         string moduleSuffix
     )
     {
@@ -322,7 +323,7 @@ static class InterfaceWriterExtensions
 
         w.WriteLine($"static PyType_Spec type_spec_Implements{type.Name} = {{");
         w.Indent++;
-        w.WriteLine($"\"winrt.{type.PyExtModuleName}{moduleSuffix}.{type.Name}\",");
+        w.WriteLine($"\"{ns.PyPackageModule}.{ns.NsModuleName}{moduleSuffix}.{type.Name}\",");
         w.WriteLine("0,");
         w.WriteLine("0,");
         w.WriteLine("Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,");
@@ -525,7 +526,8 @@ static class InterfaceWriterExtensions
         this IndentedTextWriter w,
         ProjectedType type,
         string ns,
-        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap
     )
     {
         var methods = type.Methods.Where(m =>
@@ -541,7 +543,12 @@ static class InterfaceWriterExtensions
         var interfaces = string.Join(
             ", ",
             type.Interfaces.Select(i =>
-                i.ToPyTypeName(ns, new TypeRefNullabilityInfo(i), usePythonCollectionTypes: false)
+                i.ToPyTypeName(
+                    ns,
+                    new TypeRefNullabilityInfo(i),
+                    packageMap,
+                    usePythonCollectionTypes: false
+                )
             )
         );
 
@@ -550,7 +557,7 @@ static class InterfaceWriterExtensions
         if (type.IsGeneric && !type.Interfaces.Any(i => i.ContainsGenericParameter))
         {
             generic =
-                $"{(interfaces.Any() ? ", " : "")}typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p))))}]";
+                $"{(interfaces.Any() ? ", " : "")}typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p), packageMap)))}]";
         }
 
         var mixin = type switch
@@ -603,11 +610,23 @@ static class InterfaceWriterExtensions
             && (type.Name == "IMap" || type.Name == "IMapView")
         )
         {
-            w.WriteMapPythonSpecialMethods(type, ns, nullabilityMap, out var keyParamType);
+            w.WriteMapPythonSpecialMethods(
+                type,
+                ns,
+                nullabilityMap,
+                packageMap,
+                out var keyParamType
+            );
 
             if (type.Name == "IMap")
             {
-                w.WriteMutableMapPythonSpecialMethods(type, ns, nullabilityMap, keyParamType);
+                w.WriteMutableMapPythonSpecialMethods(
+                    type,
+                    ns,
+                    nullabilityMap,
+                    packageMap,
+                    keyParamType
+                );
             }
         }
 
@@ -616,11 +635,11 @@ static class InterfaceWriterExtensions
             && (type.Name == "IVector" || type.Name == "IVectorView")
         )
         {
-            w.WriteSeqPythonSpecialMethods(type, ns, nullabilityMap);
+            w.WriteSeqPythonSpecialMethods(type, ns, nullabilityMap, packageMap);
 
             if (type.Name == "IVector")
             {
-                w.WriteMutableSeqPythonSpecialMethods(type, ns, nullabilityMap);
+                w.WriteMutableSeqPythonSpecialMethods(type, ns, nullabilityMap, packageMap);
             }
         }
 
@@ -643,7 +662,11 @@ static class InterfaceWriterExtensions
             {
                 returnType = type
                     .Type.GenericParameters[0]
-                    .ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.GenericParameters[0]));
+                    .ToPyTypeName(
+                        ns,
+                        new TypeRefNullabilityInfo(type.Type.GenericParameters[0]),
+                        packageMap
+                    );
             }
 
             w.WriteLine(
@@ -653,18 +676,37 @@ static class InterfaceWriterExtensions
 
         foreach (var method in methods)
         {
-            w.WritePythonMethodTyping(method, ns, nullabilityMap, isAbstract: true);
+            w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap, isAbstract: true);
         }
 
         foreach (var evt in events)
         {
-            w.WritePythonMethodTyping(evt.AddMethod, ns, nullabilityMap, isAbstract: true);
-            w.WritePythonMethodTyping(evt.RemoveMethod, ns, nullabilityMap, isAbstract: true);
+            w.WritePythonMethodTyping(
+                evt.AddMethod,
+                ns,
+                nullabilityMap,
+                packageMap,
+                isAbstract: true
+            );
+            w.WritePythonMethodTyping(
+                evt.RemoveMethod,
+                ns,
+                nullabilityMap,
+                packageMap,
+                isAbstract: true
+            );
         }
 
         foreach (var prop in properties)
         {
-            w.WritePythonPropertyTyping(type, prop, ns, nullabilityMap, isAbstract: true);
+            w.WritePythonPropertyTyping(
+                type,
+                prop,
+                ns,
+                nullabilityMap,
+                packageMap,
+                isAbstract: true
+            );
         }
 
         if (!hasMembers)

@@ -23,16 +23,16 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.text.TextPatternRangeEndpoint";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.text";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.automation.text.TextPatternRangeEndpoint";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.automation.text";
         static constexpr const char* type_name = "TextPatternRangeEndpoint";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.text.TextUnit";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.text";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.automation.text.TextUnit";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.automation.text";
         static constexpr const char* type_name = "TextUnit";
     };
 }

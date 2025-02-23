@@ -38,7 +38,7 @@ dll = os.fspath(
 
 # put .dll in the wheel
 print("Adding", dll)
-shutil.copy(dll, wheel_dir + "/winrt/microsoft/web/webview2/core/")
+shutil.copy(dll, wheel_dir + "/webview2/microsoft/web/webview2/core/")
 
 subprocess.check_call(["wheel", "pack", wheel_dir, "-d", dest_dir])
 

@@ -4,12 +4,12 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.Xaml.h>
-#include <winrt/Microsoft.UI.Xaml.Input.h>
-#include <winrt/Microsoft.UI.Xaml.Media.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.UI.Text.h>
+#include <winrt/Microsoft.UI.Xaml.h>
+#include <winrt/Microsoft.UI.Xaml.Input.h>
+#include <winrt/Microsoft.UI.Xaml.Media.h>
 
 #include <winrt/Microsoft.UI.Xaml.Documents.h>
 
@@ -32,200 +32,188 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::LogicalDirection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.LogicalDirection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.LogicalDirection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "LogicalDirection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::UnderlineStyle>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.UnderlineStyle";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.UnderlineStyle";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "UnderlineStyle";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Block>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Block";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Block";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Block";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::BlockCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.BlockCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.BlockCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "BlockCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Bold>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Bold";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Bold";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Bold";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Glyphs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Glyphs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Glyphs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Glyphs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Hyperlink>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Hyperlink";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Hyperlink";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Hyperlink";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::HyperlinkClickEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.HyperlinkClickEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.HyperlinkClickEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "HyperlinkClickEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Inline>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Inline";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Inline";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Inline";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::InlineCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.InlineCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.InlineCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "InlineCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::InlineUIContainer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.InlineUIContainer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.InlineUIContainer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "InlineUIContainer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Italic>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Italic";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Italic";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Italic";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::LineBreak>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.LineBreak";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.LineBreak";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "LineBreak";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Paragraph>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Paragraph";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Paragraph";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Paragraph";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Run>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Run";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Run";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Run";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Span>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Span";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Span";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Span";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::TextElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.TextElement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.TextElement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "TextElement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::TextHighlighter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.TextHighlighter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.TextHighlighter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "TextHighlighter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::TextHighlighterBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.TextHighlighterBase";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.TextHighlighterBase";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "TextHighlighterBase";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::TextPointer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.TextPointer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.TextPointer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "TextPointer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Typography>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Typography";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Typography";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Typography";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::Underline>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.Underline";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.Underline";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "Underline";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Documents::TextRange>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_documents.TextRange_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.documents.TextRange";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.documents";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_xaml_documents.TextRange_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.documents.TextRange";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.documents";
         static constexpr const char* type_name = "TextRange";
     };
 }
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Input.h")
-#include "py.Microsoft.UI.Xaml.Input.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.h")
-#include "py.Microsoft.UI.Xaml.Media.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -237,6 +225,18 @@ namespace py
 
 #if __has_include("py.Windows.UI.Text.h")
 #include "py.Windows.UI.Text.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Input.h")
+#include "py.Microsoft.UI.Xaml.Input.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Media.h")
+#include "py.Microsoft.UI.Xaml.Media.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Xaml::Documents

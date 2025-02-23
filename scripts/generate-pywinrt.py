@@ -87,7 +87,7 @@ subprocess.check_call(
     + [
         PYWINRT_EXE,
         "--input",
-        WEBVIEW2_PACKAGE_METADATA,
+        f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         WINDOWS_SDK,
         "--output",
@@ -122,11 +122,11 @@ subprocess.check_call(
     + [
         PYWINRT_EXE,
         "--input",
-        WINDOWS_APP_SDK_PACKAGE_METADATA,
+        f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA}",
         "--input",
-        WINDOWS_APP_SDK_PACKAGE_METADATA2,
+        f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA2}",
         "--reference",
-        WEBVIEW2_PACKAGE_METADATA,
+        f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         WINDOWS_SDK,
         "--output",
@@ -156,7 +156,7 @@ subprocess.check_call(
     + [
         PYWINRT_EXE,
         "--input",
-        TEST_PACKAGE_METADATA,
+        f"test-winrt;{TEST_PACKAGE_METADATA}",
         "--reference",
         WINDOWS_SDK,
         "--output",

@@ -48,6 +48,7 @@ static class WriterExtensions
         this IndentedTextWriter w,
         ProjectedType type,
         bool componentDlls,
+        QualifiedNamespace ns,
         string moduleSuffix
     )
     {
@@ -67,17 +68,18 @@ static class WriterExtensions
         w.WriteMethodTable(type);
         w.WriteGetSetTable(type);
         w.WriteTypeSlotTable(type);
-        w.WriteTypeSpec(type, moduleSuffix);
+        w.WriteTypeSpec(type, ns, moduleSuffix);
 
         if (type.PyRequiresMetaclass)
         {
-            w.WriteMetaclass(type, moduleSuffix);
+            w.WriteMetaclass(type, ns, moduleSuffix);
         }
     }
 
     public static void WriteMetaclass(
         this IndentedTextWriter w,
         ProjectedType type,
+        QualifiedNamespace ns,
         string moduleSuffix
     )
     {
@@ -105,7 +107,7 @@ static class WriterExtensions
         w.WriteLine($"static PyType_Spec type_spec_{type.Name}_Static = {{");
         w.Indent++;
         w.WriteLine(
-            $"\"winrt.{type.PyExtModuleName}{moduleSuffix}.{type.PyWrapperTypeName}_Static\","
+            $"\"{ns.PyPackageModule}.{ns.NsModuleName}{moduleSuffix}.{type.PyWrapperTypeName}_Static\","
         );
         w.WriteLine("static_cast<int>(PyType_Type.tp_basicsize),");
         w.WriteLine("static_cast<int>(PyType_Type.tp_itemsize),");
@@ -176,13 +178,16 @@ static class WriterExtensions
     public static void WriteTypeSpec(
         this IndentedTextWriter w,
         ProjectedType type,
+        QualifiedNamespace ns,
         string moduleSuffix
     )
     {
         w.WriteBlankLine();
         w.WriteLine($"static PyType_Spec type_spec_{type.Name} = {{");
         w.Indent++;
-        w.WriteLine($"\"winrt.{type.PyExtModuleName}{moduleSuffix}.{type.PyWrapperTypeName}\",");
+        w.WriteLine(
+            $"\"{ns.PyPackageModule}.{ns.NsModuleName}{moduleSuffix}.{type.PyWrapperTypeName}\","
+        );
 
         if (type.IsStatic)
         {
@@ -1235,18 +1240,18 @@ static class WriterExtensions
 
     public static void WriteNamespaceInitialization(
         this IndentedTextWriter w,
-        string ns,
+        QualifiedNamespace ns,
         string moduleSuffix
     )
     {
-        w.WriteLine($"// ----- {ns} Initialization --------------------");
+        w.WriteLine($"// ----- {ns.Namespace} Initialization --------------------");
         w.WriteBlankLine();
-        w.WriteLine($"PyDoc_STRVAR(module_doc, \"{ns}\");");
+        w.WriteLine($"PyDoc_STRVAR(module_doc, \"{ns.Namespace}\");");
         w.WriteBlankLine();
         w.WriteLine("static PyModuleDef module_def = {");
         w.Indent++;
         w.WriteLine("PyModuleDef_HEAD_INIT,");
-        w.WriteLine($"\"{ns.ToNsModuleName()}{moduleSuffix}\",");
+        w.WriteLine($"\"{ns.NsModuleName}{moduleSuffix}\",");
         w.WriteLine("module_doc,");
         w.WriteLine("0,");
         w.WriteLine("nullptr,");
@@ -1266,16 +1271,17 @@ static class WriterExtensions
 
     public static void WriteNamespaceModuleInitFunction(
         this IndentedTextWriter w,
-        string ns,
+        QualifiedNamespace ns,
+        IReadOnlyDictionary<string, string> packageMap,
         Members members,
         int dependencyDepth,
         string moduleSuffix
     )
     {
-        w.WriteLine($"PyMODINIT_FUNC PyInit_{ns.ToNsModuleName()}{moduleSuffix}(void) noexcept");
+        w.WriteLine($"PyMODINIT_FUNC PyInit_{ns.NsModuleName}{moduleSuffix}(void) noexcept");
         w.WriteBlock(() =>
         {
-            w.WriteLine($"using namespace py::cpp::{ns.ToCppNamespace()};");
+            w.WriteLine($"using namespace py::cpp::{ns.Namespace.ToCppNamespace()};");
             w.WriteBlankLine();
 
             w.WriteLine("if (py::import_winrt_runtime() == -1)");
@@ -1319,18 +1325,21 @@ static class WriterExtensions
                     )
                     .Where(t =>
                         t.BaseType.Namespace != "System"
-                        && (t.BaseType.Namespace != ns || t.DependencyDepth != dependencyDepth)
+                        && (
+                            t.BaseType.GetQualifiedNamespace(packageMap) != ns
+                            || t.DependencyDepth != dependencyDepth
+                        )
                     )
-                    .GroupBy(t => (t.BaseType.Namespace, t.DependencyDepth))
+                    .GroupBy(t => (t.BaseType.GetQualifiedNamespace(packageMap), t.DependencyDepth))
             )
             {
                 var (bns, bdd) = bts.Key;
                 var suffix = bdd == 0 ? "" : $"_{bdd + 1}";
 
                 w.WriteLine(
-                    $"py::pyobj_handle {bns.ToPyModuleAlias()}{suffix}_module{{PyImport_ImportModule(\"winrt.{bns.ToNsModuleName()}{suffix}\")}};"
+                    $"py::pyobj_handle {bns.PyModuleAlias}{suffix}_module{{PyImport_ImportModule(\"{bns.PyPackageModule}.{bns.NsModuleName}{suffix}\")}};"
                 );
-                w.WriteLine($"if (!{bns.ToPyModuleAlias()}{suffix}_module)");
+                w.WriteLine($"if (!{bns.PyModuleAlias}{suffix}_module)");
                 w.WriteBlock(() => w.WriteLine("return nullptr;"));
                 w.WriteBlankLine();
 
@@ -1340,9 +1349,9 @@ static class WriterExtensions
                 )
                 {
                     w.WriteLine(
-                        $"py::pyobj_handle {bns.ToPyModuleAlias()}_{bt.Name}_type{{PyObject_GetAttrString({bns.ToPyModuleAlias()}{suffix}_module.get(), \"{bt.Name}\")}};"
+                        $"py::pyobj_handle {bns.PyModuleAlias}_{bt.Name}_type{{PyObject_GetAttrString({bns.PyModuleAlias}{suffix}_module.get(), \"{bt.Name}\")}};"
                     );
-                    w.WriteLine($"if (!{bns.ToPyModuleAlias()}_{bt.Name}_type)");
+                    w.WriteLine($"if (!{bns.PyModuleAlias}_{bt.Name}_type)");
                     w.WriteBlock(() => w.WriteLine("return nullptr;"));
                     w.WriteBlankLine();
                 }
@@ -1356,12 +1365,12 @@ static class WriterExtensions
                     .Where(t => t.CircularDependencyDepth == dependencyDepth)
             )
             {
-                w.WriteNamespaceInitPythonType(t);
+                w.WriteNamespaceInitPythonType(t, packageMap);
 
                 if (t.Category == Category.Struct)
                 {
                     w.WriteLine(
-                        $"py::pyobj_handle {t.Name}_from_tuple_capsule{{PyCapsule_New(reinterpret_cast<void*>({t.Name}_from_tuple),\"winrt.{t.PyExtModuleName}.{t.Name}_from_tuple\", nullptr)}};"
+                        $"py::pyobj_handle {t.Name}_from_tuple_capsule{{PyCapsule_New(reinterpret_cast<void*>({t.Name}_from_tuple),\"{ns.PyPackageModule}.{ns.NsModuleName}.{t.Name}_from_tuple\", nullptr)}};"
                     );
                     w.WriteLine($"if (!{t.Name}_from_tuple_capsule)");
                     w.WriteBlock(() => w.WriteLine("return nullptr;"));
@@ -1382,7 +1391,11 @@ static class WriterExtensions
     /// Writes the type initialization for a binary extension Python type inside
     /// the module init function.
     /// </summary>
-    static void WriteNamespaceInitPythonType(this IndentedTextWriter w, ProjectedType type)
+    static void WriteNamespaceInitPythonType(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        IReadOnlyDictionary<string, string> packageMap
+    )
     {
         var hasComposableBase =
             type.Type.BaseType is not null && type.Type.BaseType.Namespace != "System";
@@ -1403,7 +1416,8 @@ static class WriterExtensions
 
                     if (baseType.Namespace != type.Namespace)
                     {
-                        baseTypePtr = $"{baseType.Namespace.ToPyModuleAlias()}_{baseTypePtr}";
+                        baseTypePtr =
+                            $"{baseType.GetQualifiedNamespace(packageMap).PyModuleAlias}_{baseTypePtr}";
                     }
 
                     baseTypePtr = $"Py_TYPE({baseTypePtr}.get())";
@@ -1441,7 +1455,7 @@ static class WriterExtensions
 
             if (baseType.Namespace != type.Namespace)
             {
-                baseName = $"{baseType.Namespace.ToPyModuleAlias()}_{baseName}";
+                baseName = $"{baseType.GetQualifiedNamespace(packageMap).PyModuleAlias}_{baseName}";
             }
 
             w.WriteLine(
@@ -1536,7 +1550,8 @@ static class WriterExtensions
 
     public static void WritePyTypeSpecializationStruct(
         this IndentedTextWriter w,
-        ProjectedType type
+        ProjectedType type,
+        QualifiedNamespace ns
     )
     {
         w.WriteBlankLine();
@@ -1548,14 +1563,14 @@ static class WriterExtensions
                 if (type.Category == Category.Struct)
                 {
                     w.WriteLine(
-                        $"static constexpr std::string_view from_tuple = \"winrt.{type.PyExtModuleName}.{type.Name}_from_tuple\";"
+                        $"static constexpr std::string_view from_tuple = \"{ns.PyPackageModule}.{ns.NsModuleName}.{type.Name}_from_tuple\";"
                     );
                 }
 
                 w.WriteLine(
-                    $"static constexpr std::string_view qualified_name = \"{type.PyModuleName}.{type.PyWrapperTypeName}\";"
+                    $"static constexpr std::string_view qualified_name = \"{ns.PyModuleName}.{type.PyWrapperTypeName}\";"
                 );
-                w.WriteLine($"static constexpr const char* module_name = \"{type.PyModuleName}\";");
+                w.WriteLine($"static constexpr const char* module_name = \"{ns.PyModuleName}\";");
                 w.WriteLine(
                     $"static constexpr const char* type_name = \"{type.PyWrapperTypeName}\";"
                 );
@@ -1569,6 +1584,7 @@ static class WriterExtensions
         ProjectedMethod method,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
         string self = "self",
         bool isAbstract = false
     )
@@ -1601,11 +1617,11 @@ static class WriterExtensions
         if (method.Method.Parameters.Any(p => p.IsPythonInParam()))
         {
             paramList =
-                $", {string.Join(", ", method.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, method.GenericArgMap)}"))}, /";
+                $", {string.Join(", ", method.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap, method.GenericArgMap)}"))}, /";
         }
 
         w.WriteLine(
-            $"def {method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, nullabilityInfo, method.GenericArgMap)}: ...{typeIgnore}"
+            $"def {method.PyName}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, nullabilityInfo, packageMap, method.GenericArgMap)}: ...{typeIgnore}"
         );
     }
 
@@ -1615,6 +1631,7 @@ static class WriterExtensions
         ProjectedProperty prop,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
         string self = "self",
         bool isAbstract = false
     )
@@ -1626,7 +1643,8 @@ static class WriterExtensions
         );
         var propType = prop.Property.PropertyType.ToPyTypeName(
             ns,
-            getterNullabilityInfo.Return.Type
+            getterNullabilityInfo.Return.Type,
+            packageMap
         );
 
         w.WriteLine($"# {prop.GetMethod.Signature}");
@@ -1668,7 +1686,7 @@ static class WriterExtensions
             );
             var setType = prop
                 .SetMethod.Method.Parameters[0]
-                .ToPyInParamTyping(ns, setterNullabilityInfo.Parameters[0].Type);
+                .ToPyInParamTyping(ns, setterNullabilityInfo.Parameters[0].Type, packageMap);
 
             w.WriteLine($"# {prop.SetMethod.Signature}");
 

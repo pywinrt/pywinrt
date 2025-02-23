@@ -8,7 +8,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
 
 .. currentmodule:: winrt.microsoft.ui.interop
 
-.. function:: get_window_id_from_window(int hwnd) -> winrt.microsoft.ui.WindowId
+.. function:: get_window_id_from_window(int hwnd) -> winui3.microsoft.ui.WindowId
 
     Gets the WindowId that corresponds to the specified hwnd, if the provided HWND is valid.
 
@@ -23,7 +23,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
 
     .. versionadded:: 2.1
 
-.. function:: get_window_from_window_id(winrt.microsoft.ui.WindowId windowId) -> int
+.. function:: get_window_from_window_id(winui3.microsoft.ui.WindowId windowId) -> int
 
     Gets the window handle that corresponds to the specified windowId, if the
     provided windowId is valid and the system has an HWND that represents the
@@ -40,7 +40,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
 
     .. versionadded:: 2.1
 
-.. function:: get_display_id_from_monitor(int hmonitor) -> winrt.microsoft.ui.DisplayId
+.. function:: get_display_id_from_monitor(int hmonitor) -> winui3.microsoft.ui.DisplayId
 
     Gets the DisplayId that corresponds to the specified hmonitor, if the
     provided HMONITOR is valid.
@@ -57,7 +57,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
 
     .. versionadded:: 2.1
 
-.. function:: get_monitor_from_display_id(winrt.microsoft.ui.DisplayId displayId) -> int
+.. function:: get_monitor_from_display_id(winui3.microsoft.ui.DisplayId displayId) -> int
 
     Gets the display monitor handle that corresponds to the specified displayId,
     if the provided displayId is valid and the system has an HMONITOR that
@@ -75,7 +75,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
 
     .. versionadded:: 2.1
 
-.. function:: get_icon_id_from_icon(int hicon) -> winrt.microsoft.ui.IconId
+.. function:: get_icon_id_from_icon(int hicon) -> winui3.microsoft.ui.IconId
 
     Gets the IconId that corresponds to the specified hicon, if the provided
     HICON is valid.
@@ -92,7 +92,7 @@ See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-m
 
     .. versionadded:: 2.1
 
-.. function:: get_icon_from_icon_id(winrt.microsoft.ui.IconId iconId) -> int
+.. function:: get_icon_from_icon_id(winui3.microsoft.ui.IconId iconId) -> int
 
     Gets the icon handle that corresponds to the specified iconId, if the
     provided iconId is valid and the system has an HICON that represents the
