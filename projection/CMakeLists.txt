@@ -41,6 +41,7 @@ find_package(Python3 REQUIRED COMPONENTS Development.Module)
 ################################################################################
 
 set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
+set(WINRT_MICROSOFT_UI_XAML_PATH "winrt-Microsoft.UI.Xaml/src/winrt_microsoft_ui_xaml")
 set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
 set(WINRT_WEBVIEW2_PATH "webview2/webview2-Microsoft.Web.WebView2.Core")
 set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK")
@@ -154,6 +155,7 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 
 if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt/winrt-*")
+    file(GLOB winui2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui2/winui2-*")
     file(GLOB winui3_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui3/winui3-*")
     file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/webview2-*")
     file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-*")
@@ -197,11 +199,11 @@ else()
     )
 endif()
 
-foreach(package ${packages} ${winui3_packages} ${webview2_packages} ${interop_packages} ${winui3_interop_packages})
+foreach(package ${packages} ${winui2_packages} ${winui3_packages} ${webview2_packages} ${interop_packages} ${winui3_interop_packages})
     pywinrt_add_namespace_package(${package})
 
     # speed up builds by precompiling frequently used headers
-    if (package IN_LIST packages OR package IN_LIST winui3_packages)
+    if (package IN_LIST packages OR package IN_LIST winui2_packages OR package IN_LIST winui3_packages)
         if (NOT first_target)
             set(first_target ${package_target})
 
@@ -228,6 +230,16 @@ foreach(package ${packages} ${winui3_packages} ${webview2_packages} ${interop_pa
     set_target_properties(${package_target} PROPERTIES DEFINE_SYMBOL "")
     if (${package} IN_LIST circular_dependency_packages)
         set_target_properties(${package_target}_2 PROPERTIES DEFINE_SYMBOL "")
+    endif()
+
+    # microsft ui xaml headers
+    if (package IN_LIST winui2_packages)
+        target_include_directories(${package_target} PRIVATE
+            "${WINRT_MICROSOFT_UI_XAML_PATH}/cppwinrt"
+            "${WINRT_MICROSOFT_UI_XAML_PATH}/pywinrt"
+            "${WINRT_WEBVIEW2_PATH}/cppwinrt"
+            "${WINRT_WEBVIEW2_PATH}"
+        )
     endif()
 
     # windows app sdk headers

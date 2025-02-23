@@ -59,7 +59,36 @@ subprocess.check_call(
     ]
 )
 
-# generate headers for windows app sdk
+# generate headers for Microsoft.UI.Xaml (winui2)
+
+MICROSOFT_UI_XAML_PACKAGE_METADATA = (
+    REPO_ROOT_PATH / "_tools" / "Microsoft.UI.Xaml" / "lib" / "uap10.0"
+)
+MICROSOFT_UI_XAML_PACKAGE_PATH = (
+    PROJECTION_PATH
+    / "winrt-Microsoft.UI.Xaml"
+    / "src"
+    / "winrt_microsoft_ui_xaml"
+    / "cppwinrt"
+)
+
+shutil.rmtree(MICROSOFT_UI_XAML_PACKAGE_PATH, ignore_errors=True)
+subprocess.check_call(
+    [
+        CPPWINRT_EXE,
+        "-input",
+        MICROSOFT_UI_XAML_PACKAGE_METADATA,
+        "-reference",
+        WEBVIEW2_PACKAGE_METADATA,
+        "-reference",
+        WINDOWS_SDK,
+        "-output",
+        MICROSOFT_UI_XAML_PACKAGE_PATH,
+    ]
+)
+
+
+# generate headers for windows app sdk (winui3)
 
 WINDOWS_APP_SDK_PACKAGE_METADATA = (
     REPO_ROOT_PATH / "_tools" / "Microsoft.WindowsAppSDK" / "lib" / "uap10.0"

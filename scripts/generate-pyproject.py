@@ -220,7 +220,7 @@ def avoid_keyword(name: str) -> str:
 
 
 def is_sdk_package(name: str) -> bool:
-    return name in ["winrt-sdk", "winrt-WindowsAppSDK"]
+    return name in ["winrt-sdk", "winrt-Microsoft.UI.Xaml", "winrt-WindowsAppSDK"]
 
 
 def is_app_sdk_interop_package(name: str) -> bool:
@@ -441,6 +441,7 @@ for package_path in chain(
     (PROJECTION_PATH / "webview2").glob("webview2-*"),
     [
         PROJECTION_PATH / "winrt-sdk",
+        PROJECTION_PATH / "winrt-Microsoft.UI.Xaml",
         PROJECTION_PATH / "winrt-WindowsAppSDK",
         PROJECTION_PATH / "test-winrt" / "test-winrt-TestComponent",
     ],
