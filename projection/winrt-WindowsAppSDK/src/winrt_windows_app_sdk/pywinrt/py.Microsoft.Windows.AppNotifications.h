@@ -28,56 +28,56 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationPriority>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.AppNotificationPriority";
-        static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationPriority";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
         static constexpr const char* type_name = "AppNotificationPriority";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressResult>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.AppNotificationProgressResult";
-        static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationProgressResult";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
         static constexpr const char* type_name = "AppNotificationProgressResult";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationSetting>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.AppNotificationSetting";
-        static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationSetting";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
         static constexpr const char* type_name = "AppNotificationSetting";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotification>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.AppNotification";
-        static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotification";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
         static constexpr const char* type_name = "AppNotification";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationActivatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.AppNotificationActivatedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationActivatedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
         static constexpr const char* type_name = "AppNotificationActivatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.AppNotificationManager";
-        static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationManager";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
         static constexpr const char* type_name = "AppNotificationManager";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.AppNotificationProgressData";
-        static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.appnotifications.AppNotificationProgressData";
+        static constexpr const char* module_name = "winui3.microsoft.windows.appnotifications";
         static constexpr const char* type_name = "AppNotificationProgressData";
     };
 }

@@ -1,7 +1,7 @@
-diff --git a/projection/test-winrt/winrt-TestComponent/cppwinrt/winrt/TestComponent.h b/projection/test-winrt/winrt-TestComponent/cppwinrt/winrt/TestComponent.h
+diff --git a/projection/test-winrt/test-winrt-TestComponent/cppwinrt/winrt/TestComponent.h b/projection/test-winrt/test-winrt-TestComponent/cppwinrt/winrt/TestComponent.h
 index bf309d334..0a747f1fc 100644
---- a/projection/test-winrt/winrt-TestComponent/cppwinrt/winrt/TestComponent.h
-+++ b/projection/test-winrt/winrt-TestComponent/cppwinrt/winrt/TestComponent.h
+--- a/projection/test-winrt/test-winrt-TestComponent/cppwinrt/winrt/TestComponent.h
++++ b/projection/test-winrt/test-winrt-TestComponent/cppwinrt/winrt/TestComponent.h
 @@ -4596,6 +4596,8 @@ WINRT_EXPORT namespace winrt::TestComponent
      {
          using composable = OverloadClass;

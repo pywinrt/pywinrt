@@ -21,16 +21,16 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Effects::SceneLightingEffectReflectanceModel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.effects.SceneLightingEffectReflectanceModel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.effects";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.effects.SceneLightingEffectReflectanceModel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.effects";
         static constexpr const char* type_name = "SceneLightingEffectReflectanceModel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Effects::SceneLightingEffect>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.effects.SceneLightingEffect";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.effects";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.effects.SceneLightingEffect";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.effects";
         static constexpr const char* type_name = "SceneLightingEffect";
     };
 }

@@ -25,49 +25,49 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.pushnotifications.PushNotificationChannelStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.pushnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationChannelStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
         static constexpr const char* type_name = "PushNotificationChannelStatus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationChannel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.pushnotifications.PushNotificationChannel";
-        static constexpr const char* module_name = "winrt.microsoft.windows.pushnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationChannel";
+        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
         static constexpr const char* type_name = "PushNotificationChannel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelResult>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.pushnotifications.PushNotificationCreateChannelResult";
-        static constexpr const char* module_name = "winrt.microsoft.windows.pushnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationCreateChannelResult";
+        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
         static constexpr const char* type_name = "PushNotificationCreateChannelResult";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.pushnotifications.PushNotificationManager";
-        static constexpr const char* module_name = "winrt.microsoft.windows.pushnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationManager";
+        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
         static constexpr const char* type_name = "PushNotificationManager";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.pushnotifications.PushNotificationReceivedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.windows.pushnotifications";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationReceivedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
         static constexpr const char* type_name = "PushNotificationReceivedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelStatus>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_windows_pushnotifications.PushNotificationCreateChannelStatus_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.pushnotifications.PushNotificationCreateChannelStatus";
-        static constexpr const char* module_name = "winrt.microsoft.windows.pushnotifications";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_windows_pushnotifications.PushNotificationCreateChannelStatus_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.pushnotifications.PushNotificationCreateChannelStatus";
+        static constexpr const char* module_name = "winui3.microsoft.windows.pushnotifications";
         static constexpr const char* type_name = "PushNotificationCreateChannelStatus";
     };
 }

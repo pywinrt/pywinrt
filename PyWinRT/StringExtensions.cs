@@ -155,23 +155,6 @@ static class StringExtensions
     public static string ToCppNamespace(this string ns) => ns.Replace(".", "::");
 
     /// <summary>
-    /// Converts a WinRT dotted namespace to a python extension module name.
-    /// </summary>
-    public static string ToNsModuleName(this string ns) =>
-        $"_winrt_{string.Join("_", ns.ToLowerInvariant().Split(".").Select(s => s.ToPythonIdentifier()))}";
-
-    /// <summary>
-    /// Converts a WinRT dotted namespace to a Python dotted module name.
-    /// </summary>
-    public static string ToPyModuleName(this string ns) =>
-        $"winrt.{string.Join(".", ns.ToLowerInvariant().Split(".").Select(s => s.ToPythonIdentifier()))}";
-
-    /// <summary>
-    /// Converts a WinRT dotted namespace to a Python dotted module name.
-    /// </summary>
-    public static string ToPyModuleAlias(this string ns) => ns.ToLowerInvariant().Replace(".", "_");
-
-    /// <summary>
     /// Strips generic bits from type names (e.g '1)
     /// </summary>
     public static string ToNonGeneric(this string name)

@@ -241,6 +241,7 @@ static class MapWriterExtensions
         ProjectedType type,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
         out string keyParamType
     )
     {
@@ -251,10 +252,16 @@ static class MapWriterExtensions
         );
         keyParamType = method
             .Method.Parameters[0]
-            .ToPyInParamTyping(ns, nullabilityInfo.Parameters[0].Type, method.GenericArgMap);
+            .ToPyInParamTyping(
+                ns,
+                nullabilityInfo.Parameters[0].Type,
+                packageMap,
+                method.GenericArgMap
+            );
         var valueReturnType = method.Method.ToPyReturnTyping(
             ns,
             nullabilityInfo,
+            packageMap,
             method.GenericArgMap
         );
 
@@ -270,6 +277,7 @@ static class MapWriterExtensions
         ProjectedType type,
         string ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
         string keyParamType
     )
     {
@@ -280,7 +288,12 @@ static class MapWriterExtensions
         );
         var valParamType = setMethod
             .Method.Parameters[1]
-            .ToPyInParamTyping(ns, setNullabilityInfo.Parameters[1].Type, setMethod.GenericArgMap);
+            .ToPyInParamTyping(
+                ns,
+                setNullabilityInfo.Parameters[1].Type,
+                packageMap,
+                setMethod.GenericArgMap
+            );
 
         w.WriteLine(
             $"def __setitem__(self, key: {keyParamType}, value: {valParamType}) -> None: ..."

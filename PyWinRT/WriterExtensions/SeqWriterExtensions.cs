@@ -217,7 +217,8 @@ static class SeqWriterExtensions
         this IndentedTextWriter w,
         ProjectedType type,
         string ns,
-        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap
     )
     {
         var method = type.Methods.Single(m => m.Name == "GetAt");
@@ -225,7 +226,12 @@ static class SeqWriterExtensions
             method.Signature,
             new MethodNullabilityInfo(method.Method)
         );
-        var elementType = method.Method.ToPyReturnTyping(ns, nullabilityInfo, method.GenericArgMap);
+        var elementType = method.Method.ToPyReturnTyping(
+            ns,
+            nullabilityInfo,
+            packageMap,
+            method.GenericArgMap
+        );
 
         w.WriteLine("def __len__(self) -> int: ...");
         w.WriteLine($"def __iter__(self) -> typing.Iterator[{elementType}]: ...");
@@ -241,7 +247,8 @@ static class SeqWriterExtensions
         this IndentedTextWriter w,
         ProjectedType type,
         string ns,
-        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap
     )
     {
         var setMethod = type.Methods.Single(m => m.Name == "SetAt");
@@ -251,7 +258,12 @@ static class SeqWriterExtensions
         );
         var valParamType = setMethod
             .Method.Parameters[1]
-            .ToPyInParamTyping(ns, setNullabilityInfo.Parameters[1].Type, setMethod.GenericArgMap);
+            .ToPyInParamTyping(
+                ns,
+                setNullabilityInfo.Parameters[1].Type,
+                packageMap,
+                setMethod.GenericArgMap
+            );
 
         w.WriteLine("@typing.overload");
         w.WriteLine($"def __delitem__(self, index: typing.SupportsIndex) -> None: ...");

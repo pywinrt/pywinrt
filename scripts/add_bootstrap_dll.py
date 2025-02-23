@@ -28,7 +28,7 @@ subprocess.check_call(["wheel", "unpack", wheel])
 
 # get name of extracted directory
 wheel_dir = glob.glob(
-    "winrt_Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap-*"
+    "winui3_Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap-*"
 )[0]
 
 bootstrap_dll = os.fspath(
@@ -41,7 +41,7 @@ bootstrap_dll = os.fspath(
 
 # put .dll in the wheel
 print("Adding", bootstrap_dll)
-shutil.copy(bootstrap_dll, wheel_dir + "/winrt/")
+shutil.copy(bootstrap_dll, wheel_dir + "/winui3/")
 
 subprocess.check_call(["wheel", "pack", wheel_dir, "-d", dest_dir])
 

@@ -21,24 +21,24 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.diagnostics.CompositionDebugOverdrawContentKinds";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.diagnostics";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.diagnostics.CompositionDebugOverdrawContentKinds";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.diagnostics";
         static constexpr const char* type_name = "CompositionDebugOverdrawContentKinds";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugHeatMaps>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.diagnostics.CompositionDebugHeatMaps";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.diagnostics";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.diagnostics.CompositionDebugHeatMaps";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.diagnostics";
         static constexpr const char* type_name = "CompositionDebugHeatMaps";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.diagnostics.CompositionDebugSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.diagnostics";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.diagnostics.CompositionDebugSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.diagnostics";
         static constexpr const char* type_name = "CompositionDebugSettings";
     };
 }

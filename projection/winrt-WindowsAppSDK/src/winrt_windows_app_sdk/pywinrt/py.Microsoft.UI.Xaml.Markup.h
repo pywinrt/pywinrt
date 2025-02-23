@@ -4,11 +4,11 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.Xaml.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.UI.Xaml.Interop.h>
+#include <winrt/Microsoft.UI.Xaml.h>
 
 #include <winrt/Microsoft.UI.Xaml.Markup.h>
 
@@ -28,153 +28,149 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::MarkupExtension>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.MarkupExtension";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup.MarkupExtension";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "MarkupExtension";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::ProvideValueTargetProperty>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.ProvideValueTargetProperty";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup.ProvideValueTargetProperty";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "ProvideValueTargetProperty";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.XamlBinaryWriter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup.XamlBinaryWriter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "XamlBinaryWriter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::XamlBindingHelper>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.XamlBindingHelper";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup.XamlBindingHelper";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "XamlBindingHelper";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::XamlMarkupHelper>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.XamlMarkupHelper";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup.XamlMarkupHelper";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "XamlMarkupHelper";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::XamlReader>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.XamlReader";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup.XamlReader";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "XamlReader";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IComponentConnector>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IComponentConnector";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IComponentConnector";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IComponentConnector";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IDataTemplateComponent>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IDataTemplateComponent";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IDataTemplateComponent";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IDataTemplateComponent";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IProvideValueTarget>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IProvideValueTarget";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IProvideValueTarget";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IProvideValueTarget";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IRootObjectProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IRootObjectProvider";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IRootObjectProvider";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IRootObjectProvider";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IUriContext>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IUriContext";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IUriContext";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IUriContext";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IXamlBindScopeDiagnostics>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IXamlBindScopeDiagnostics";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IXamlBindScopeDiagnostics";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IXamlBindScopeDiagnostics";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IXamlMember>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IXamlMember";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IXamlMember";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IXamlMember";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IXamlMetadataProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IXamlMetadataProvider";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IXamlMetadataProvider";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IXamlMetadataProvider";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IXamlType>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IXamlType";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IXamlType";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IXamlType";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::IXamlTypeResolver>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup._IXamlTypeResolver";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup._IXamlTypeResolver";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "_IXamlTypeResolver";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::XamlBinaryWriterErrorInformation>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_markup.XamlBinaryWriterErrorInformation_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.XamlBinaryWriterErrorInformation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_xaml_markup.XamlBinaryWriterErrorInformation_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup.XamlBinaryWriterErrorInformation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "XamlBinaryWriterErrorInformation";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Markup::XmlnsDefinition>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_xaml_markup.XmlnsDefinition_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.markup.XmlnsDefinition";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.markup";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_xaml_markup.XmlnsDefinition_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.markup.XmlnsDefinition";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.markup";
         static constexpr const char* type_name = "XmlnsDefinition";
     };
 }
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -190,6 +186,10 @@ namespace py
 
 #if __has_include("py.Windows.UI.Xaml.Interop.h")
 #include "py.Windows.UI.Xaml.Interop.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Xaml::Markup

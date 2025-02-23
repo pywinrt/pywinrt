@@ -2,21 +2,21 @@ from typing import Tuple, Union
 
 from typing_extensions import override
 
-from winrt.microsoft.ui.xaml import (
+from winui3.microsoft.ui.xaml import (
     Application,
     ApplicationInitializationCallbackParams,
     FrameworkElement,
     LaunchActivatedEventArgs,
     Window,
 )
-from winrt.microsoft.ui.xaml.controls import Button, XamlControlsResources
-from winrt.microsoft.ui.xaml.markup import (
+from winui3.microsoft.ui.xaml.controls import Button, XamlControlsResources
+from winui3.microsoft.ui.xaml.markup import (
     IXamlMetadataProvider,
     IXamlType,
     XamlReader,
     XmlnsDefinition,
 )
-from winrt.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
+from winui3.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
 from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
     initialize,

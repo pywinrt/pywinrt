@@ -18,8 +18,8 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::System::EnvironmentManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.system.EnvironmentManager";
-        static constexpr const char* module_name = "winrt.microsoft.windows.system";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.system.EnvironmentManager";
+        static constexpr const char* module_name = "winui3.microsoft.windows.system";
         static constexpr const char* type_name = "EnvironmentManager";
     };
 }

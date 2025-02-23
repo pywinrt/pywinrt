@@ -4,19 +4,6 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.h>
-#include <winrt/Microsoft.UI.Composition.h>
-#include <winrt/Microsoft.UI.Input.h>
-#include <winrt/Microsoft.UI.Text.h>
-#include <winrt/Microsoft.UI.Xaml.h>
-#include <winrt/Microsoft.UI.Xaml.Controls.Primitives.h>
-#include <winrt/Microsoft.UI.Xaml.Data.h>
-#include <winrt/Microsoft.UI.Xaml.Documents.h>
-#include <winrt/Microsoft.UI.Xaml.Input.h>
-#include <winrt/Microsoft.UI.Xaml.Interop.h>
-#include <winrt/Microsoft.UI.Xaml.Media.h>
-#include <winrt/Microsoft.UI.Xaml.Media.Animation.h>
-#include <winrt/Microsoft.UI.Xaml.Navigation.h>
 #include <winrt/Microsoft.Web.WebView2.Core.h>
 #include <winrt/Windows.ApplicationModel.Contacts.h>
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
@@ -31,6 +18,19 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Text.h>
 #include <winrt/Windows.UI.Xaml.Interop.h>
+#include <winrt/Microsoft.UI.h>
+#include <winrt/Microsoft.UI.Composition.h>
+#include <winrt/Microsoft.UI.Input.h>
+#include <winrt/Microsoft.UI.Text.h>
+#include <winrt/Microsoft.UI.Xaml.h>
+#include <winrt/Microsoft.UI.Xaml.Controls.Primitives.h>
+#include <winrt/Microsoft.UI.Xaml.Data.h>
+#include <winrt/Microsoft.UI.Xaml.Documents.h>
+#include <winrt/Microsoft.UI.Xaml.Input.h>
+#include <winrt/Microsoft.UI.Xaml.Interop.h>
+#include <winrt/Microsoft.UI.Xaml.Media.h>
+#include <winrt/Microsoft.UI.Xaml.Media.Animation.h>
+#include <winrt/Microsoft.UI.Xaml.Navigation.h>
 
 #include <winrt/Microsoft.UI.Xaml.Controls.h>
 
@@ -329,3567 +329,3515 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnnotatedScrollBarScrollingEventKind>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnnotatedScrollBarScrollingEventKind";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnnotatedScrollBarScrollingEventKind";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnnotatedScrollBarScrollingEventKind";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AppBarClosedDisplayMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AppBarClosedDisplayMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AppBarClosedDisplayMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AppBarClosedDisplayMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AutoSuggestionBoxTextChangeReason>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AutoSuggestionBoxTextChangeReason";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AutoSuggestionBoxTextChangeReason";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AutoSuggestionBoxTextChangeReason";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::BackgroundSizing>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.BackgroundSizing";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.BackgroundSizing";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "BackgroundSizing";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CalendarViewDisplayMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CalendarViewDisplayMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CalendarViewDisplayMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CalendarViewDisplayMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CalendarViewSelectionMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CalendarViewSelectionMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CalendarViewSelectionMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CalendarViewSelectionMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CandidateWindowAlignment>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CandidateWindowAlignment";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CandidateWindowAlignment";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CandidateWindowAlignment";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CharacterCasing>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CharacterCasing";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CharacterCasing";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CharacterCasing";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ClickMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ClickMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ClickMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ClickMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ColorPickerHsvChannel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ColorPickerHsvChannel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ColorPickerHsvChannel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ColorPickerHsvChannel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ColorSpectrumComponents>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ColorSpectrumComponents";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ColorSpectrumComponents";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ColorSpectrumComponents";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ColorSpectrumShape>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ColorSpectrumShape";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ColorSpectrumShape";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ColorSpectrumShape";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ComboBoxSelectionChangedTrigger>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ComboBoxSelectionChangedTrigger";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ComboBoxSelectionChangedTrigger";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ComboBoxSelectionChangedTrigger";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CommandBarDefaultLabelPosition>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CommandBarDefaultLabelPosition";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CommandBarDefaultLabelPosition";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CommandBarDefaultLabelPosition";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CommandBarDynamicOverflowAction>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CommandBarDynamicOverflowAction";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CommandBarDynamicOverflowAction";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CommandBarDynamicOverflowAction";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CommandBarLabelPosition>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CommandBarLabelPosition";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CommandBarLabelPosition";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CommandBarLabelPosition";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CommandBarOverflowButtonVisibility>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CommandBarOverflowButtonVisibility";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CommandBarOverflowButtonVisibility";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CommandBarOverflowButtonVisibility";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogButton>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogButton";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogButton";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogButton";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogPlacement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogPlacement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogPlacement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogPlacement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogResult>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogResult";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogResult";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogResult";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DisabledFormattingAccelerators>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DisabledFormattingAccelerators";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DisabledFormattingAccelerators";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DisabledFormattingAccelerators";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ElementRealizationOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ElementRealizationOptions";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ElementRealizationOptions";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ElementRealizationOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ExpandDirection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ExpandDirection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ExpandDirection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ExpandDirection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IncrementalLoadingTrigger>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.IncrementalLoadingTrigger";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.IncrementalLoadingTrigger";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "IncrementalLoadingTrigger";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IndexBasedLayoutOrientation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.IndexBasedLayoutOrientation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.IndexBasedLayoutOrientation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "IndexBasedLayoutOrientation";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBarCloseReason>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.InfoBarCloseReason";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBarCloseReason";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBarCloseReason";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBarSeverity>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.InfoBarSeverity";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBarSeverity";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBarSeverity";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemCollectionTransitionOperation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemCollectionTransitionOperation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemCollectionTransitionOperation";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionTriggers>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemCollectionTransitionTriggers";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemCollectionTransitionTriggers";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemCollectionTransitionTriggers";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsUpdatingScrollMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsUpdatingScrollMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsUpdatingScrollMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsUpdatingScrollMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsViewSelectionMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsViewSelectionMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsViewSelectionMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsViewSelectionMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::LightDismissOverlayMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.LightDismissOverlayMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LightDismissOverlayMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "LightDismissOverlayMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemsJustification>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.LinedFlowLayoutItemsJustification";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LinedFlowLayoutItemsJustification";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "LinedFlowLayoutItemsJustification";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemsStretch>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.LinedFlowLayoutItemsStretch";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LinedFlowLayoutItemsStretch";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "LinedFlowLayoutItemsStretch";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyoutSelectionMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListPickerFlyoutSelectionMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListPickerFlyoutSelectionMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListPickerFlyoutSelectionMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListViewReorderMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListViewReorderMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListViewReorderMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListViewReorderMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListViewSelectionMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListViewSelectionMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListViewSelectionMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListViewSelectionMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewBackButtonVisible>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewBackButtonVisible";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewBackButtonVisible";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewBackButtonVisible";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewDisplayMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewDisplayMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewDisplayMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewDisplayMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewOverflowLabelMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewOverflowLabelMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewOverflowLabelMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewOverflowLabelMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewPaneDisplayMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewPaneDisplayMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewPaneDisplayMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewPaneDisplayMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewSelectionFollowsFocus>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewSelectionFollowsFocus";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewSelectionFollowsFocus";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewSelectionFollowsFocus";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewShoulderNavigationEnabled>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewShoulderNavigationEnabled";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewShoulderNavigationEnabled";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewShoulderNavigationEnabled";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NumberBoxSpinButtonPlacementMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NumberBoxSpinButtonPlacementMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NumberBoxSpinButtonPlacementMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NumberBoxSpinButtonPlacementMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NumberBoxValidationMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NumberBoxValidationMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NumberBoxValidationMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NumberBoxValidationMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Orientation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Orientation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Orientation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Orientation";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PanelScrollingDirection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PanelScrollingDirection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PanelScrollingDirection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PanelScrollingDirection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ParallaxSourceOffsetKind>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ParallaxSourceOffsetKind";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ParallaxSourceOffsetKind";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ParallaxSourceOffsetKind";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PasswordRevealMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PasswordRevealMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PasswordRevealMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PasswordRevealMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PipsPagerButtonVisibility>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PipsPagerButtonVisibility";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PipsPagerButtonVisibility";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PipsPagerButtonVisibility";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PipsPagerWrapMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PipsPagerWrapMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PipsPagerWrapMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PipsPagerWrapMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PivotHeaderFocusVisualPlacement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PivotHeaderFocusVisualPlacement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PivotHeaderFocusVisualPlacement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PivotHeaderFocusVisualPlacement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PivotSlideInAnimationGroup>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PivotSlideInAnimationGroup";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PivotSlideInAnimationGroup";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PivotSlideInAnimationGroup";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PlayerAnimationOptimization>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PlayerAnimationOptimization";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PlayerAnimationOptimization";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PlayerAnimationOptimization";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshPullDirection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RefreshPullDirection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshPullDirection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RefreshPullDirection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshVisualizerOrientation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RefreshVisualizerOrientation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshVisualizerOrientation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RefreshVisualizerOrientation";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshVisualizerState>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RefreshVisualizerState";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshVisualizerState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RefreshVisualizerState";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RequiresPointer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RequiresPointer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RequiresPointer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RequiresPointer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RichEditClipboardFormat>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RichEditClipboardFormat";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RichEditClipboardFormat";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RichEditClipboardFormat";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollBarVisibility>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollBarVisibility";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollBarVisibility";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollBarVisibility";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollIntoViewAlignment>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollIntoViewAlignment";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollIntoViewAlignment";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollIntoViewAlignment";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingAnimationMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingAnimationMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingAnimationMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingAnimationMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingChainMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingChainMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingChainMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingChainMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingContentOrientation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingContentOrientation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingContentOrientation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingContentOrientation";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingInputKinds>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingInputKinds";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingInputKinds";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingInputKinds";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingInteractionState>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingInteractionState";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingInteractionState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingInteractionState";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingRailMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingRailMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingRailMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingRailMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollBarVisibility>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingScrollBarVisibility";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingScrollBarVisibility";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingScrollBarVisibility";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingScrollMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingScrollMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingScrollMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingSnapPointsMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingSnapPointsMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingSnapPointsMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingSnapPointsMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingZoomMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingZoomMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingZoomMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectionMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SelectionMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectionMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SelectionMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SnapPointsType>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SnapPointsType";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SnapPointsType";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SnapPointsType";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SplitViewDisplayMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SplitViewDisplayMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SplitViewDisplayMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SplitViewDisplayMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SplitViewPanePlacement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SplitViewPanePlacement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SplitViewPanePlacement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SplitViewPanePlacement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::StretchDirection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.StretchDirection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.StretchDirection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "StretchDirection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SwipeBehaviorOnInvoked>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SwipeBehaviorOnInvoked";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SwipeBehaviorOnInvoked";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SwipeBehaviorOnInvoked";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SwipeMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SwipeMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SwipeMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SwipeMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Symbol>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Symbol";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Symbol";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Symbol";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewCloseButtonOverlayMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewCloseButtonOverlayMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewCloseButtonOverlayMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewCloseButtonOverlayMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewWidthMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewWidthMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewWidthMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewWidthMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTipCloseReason>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TeachingTipCloseReason";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipCloseReason";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTipCloseReason";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTipHeroContentPlacementMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TeachingTipHeroContentPlacementMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipHeroContentPlacementMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTipHeroContentPlacementMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTipPlacementMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TeachingTipPlacementMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipPlacementMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTipPlacementMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTipTailVisibility>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TeachingTipTailVisibility";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipTailVisibility";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTipTailVisibility";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewSelectionMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewSelectionMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewSelectionMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewSelectionMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TwoPaneViewMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TwoPaneViewMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TwoPaneViewMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TwoPaneViewMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TwoPaneViewPriority>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TwoPaneViewPriority";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TwoPaneViewPriority";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TwoPaneViewPriority";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TwoPaneViewTallModeConfiguration>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TwoPaneViewTallModeConfiguration";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TwoPaneViewTallModeConfiguration";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TwoPaneViewTallModeConfiguration";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TwoPaneViewWideModeConfiguration>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TwoPaneViewWideModeConfiguration";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TwoPaneViewWideModeConfiguration";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TwoPaneViewWideModeConfiguration";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutItemsJustification>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.UniformGridLayoutItemsJustification";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.UniformGridLayoutItemsJustification";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "UniformGridLayoutItemsJustification";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayoutItemsStretch>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.UniformGridLayoutItemsStretch";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.UniformGridLayoutItemsStretch";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "UniformGridLayoutItemsStretch";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::VirtualizationMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.VirtualizationMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.VirtualizationMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "VirtualizationMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ZoomMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ZoomMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ZoomMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ZoomMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnchorRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnchorRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnchorRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnchorRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedIcon>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnimatedIcon";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnimatedIcon";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnimatedIcon";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedIconSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnimatedIconSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnimatedIconSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnimatedIconSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisualPlayer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnimatedVisualPlayer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnimatedVisualPlayer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnimatedVisualPlayer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnnotatedScrollBar>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnnotatedScrollBar";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnnotatedScrollBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnnotatedScrollBar";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnnotatedScrollBarDetailLabelRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnnotatedScrollBarDetailLabelRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnnotatedScrollBarDetailLabelRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnnotatedScrollBarDetailLabelRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnnotatedScrollBarLabel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnnotatedScrollBarLabel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnnotatedScrollBarLabel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnnotatedScrollBarLabel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnnotatedScrollBarScrollingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AnnotatedScrollBarScrollingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AnnotatedScrollBarScrollingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AnnotatedScrollBarScrollingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AppBar>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AppBar";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AppBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AppBar";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AppBarButton>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AppBarButton";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AppBarButton";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AppBarButton";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AppBarElementContainer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AppBarElementContainer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AppBarElementContainer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AppBarElementContainer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AppBarSeparator>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AppBarSeparator";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AppBarSeparator";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AppBarSeparator";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AppBarToggleButton>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AppBarToggleButton";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AppBarToggleButton";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AppBarToggleButton";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AutoSuggestBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AutoSuggestBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AutoSuggestBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AutoSuggestBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AutoSuggestBoxQuerySubmittedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AutoSuggestBoxQuerySubmittedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AutoSuggestBoxQuerySubmittedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AutoSuggestBoxQuerySubmittedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AutoSuggestBoxSuggestionChosenEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AutoSuggestBoxSuggestionChosenEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AutoSuggestBoxSuggestionChosenEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AutoSuggestBoxSuggestionChosenEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AutoSuggestBoxTextChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.AutoSuggestBoxTextChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.AutoSuggestBoxTextChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "AutoSuggestBoxTextChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::BitmapIcon>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.BitmapIcon";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.BitmapIcon";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "BitmapIcon";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::BitmapIconSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.BitmapIconSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.BitmapIconSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "BitmapIconSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Border>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Border";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Border";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Border";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::BreadcrumbBar>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.BreadcrumbBar";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.BreadcrumbBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "BreadcrumbBar";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::BreadcrumbBarItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.BreadcrumbBarItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.BreadcrumbBarItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "BreadcrumbBarItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::BreadcrumbBarItemClickedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.BreadcrumbBarItemClickedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.BreadcrumbBarItemClickedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "BreadcrumbBarItemClickedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Button>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Button";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Button";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Button";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CalendarDatePicker>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CalendarDatePicker";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CalendarDatePicker";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CalendarDatePicker";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CalendarDatePickerDateChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CalendarDatePickerDateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CalendarDatePickerDateChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CalendarDatePickerDateChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CalendarView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CalendarView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CalendarView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CalendarView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CalendarViewDayItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CalendarViewDayItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CalendarViewDayItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CalendarViewDayItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CalendarViewDayItemChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CalendarViewDayItemChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CalendarViewDayItemChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CalendarViewSelectedDatesChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CalendarViewSelectedDatesChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CalendarViewSelectedDatesChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CalendarViewSelectedDatesChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CandidateWindowBoundsChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CandidateWindowBoundsChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CandidateWindowBoundsChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CandidateWindowBoundsChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Canvas>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Canvas";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Canvas";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Canvas";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CheckBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CheckBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CheckBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CheckBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ChoosingGroupHeaderContainerEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ChoosingGroupHeaderContainerEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ChoosingGroupHeaderContainerEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ChoosingGroupHeaderContainerEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ChoosingItemContainerEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ChoosingItemContainerEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ChoosingItemContainerEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ChoosingItemContainerEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CleanUpVirtualizedItemEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CleanUpVirtualizedItemEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CleanUpVirtualizedItemEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ColorChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ColorChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ColorChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ColorChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ColorPicker>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ColorPicker";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ColorPicker";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ColorPicker";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ColumnDefinition>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ColumnDefinition";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ColumnDefinition";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ColumnDefinition";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ColumnDefinitionCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ColumnDefinitionCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ColumnDefinitionCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ColumnDefinitionCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ComboBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ComboBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ComboBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ComboBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ComboBoxItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ComboBoxItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ComboBoxItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ComboBoxItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ComboBoxTextSubmittedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ComboBoxTextSubmittedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ComboBoxTextSubmittedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ComboBoxTextSubmittedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CommandBar>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CommandBar";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CommandBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CommandBar";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CommandBarFlyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CommandBarFlyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CommandBarFlyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CommandBarOverflowPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CommandBarOverflowPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CommandBarOverflowPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CommandBarOverflowPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContainerContentChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContainerContentChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContainerContentChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContainerContentChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentControl>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentControl";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentControl";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentControl";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialog>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialog";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialog";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialog";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogButtonClickDeferral>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogButtonClickDeferral";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogButtonClickDeferral";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogButtonClickDeferral";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogButtonClickEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogButtonClickEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogButtonClickEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogButtonClickEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogClosedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogClosedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogClosedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogClosedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogClosingDeferral>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogClosingDeferral";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogClosingDeferral";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogClosingDeferral";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogClosingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogClosingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogClosingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogClosingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentDialogOpenedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentDialogOpenedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentDialogOpenedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentDialogOpenedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContentPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContentPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContentPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContentPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ContextMenuEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ContextMenuEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ContextMenuEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ContextMenuEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Control>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Control";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Control";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Control";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ControlTemplate>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ControlTemplate";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ControlTemplate";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ControlTemplate";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::CoreWebView2InitializedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.CoreWebView2InitializedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.CoreWebView2InitializedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "CoreWebView2InitializedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DataTemplateSelector>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DataTemplateSelector";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DataTemplateSelector";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DataTemplateSelector";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DatePickedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DatePickedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DatePickedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DatePickedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DatePicker>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DatePicker";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DatePicker";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DatePicker";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DatePickerFlyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DatePickerFlyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DatePickerFlyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyoutItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DatePickerFlyoutItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DatePickerFlyoutItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DatePickerFlyoutItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyoutPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DatePickerFlyoutPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DatePickerFlyoutPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DatePickerFlyoutPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DatePickerSelectedValueChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DatePickerSelectedValueChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DatePickerSelectedValueChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DatePickerSelectedValueChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DatePickerValueChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DatePickerValueChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DatePickerValueChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DatePickerValueChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DragItemsCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DragItemsCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DragItemsCompletedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DragItemsCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DragItemsStartingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DragItemsStartingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DragItemsStartingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DragItemsStartingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DropDownButton>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DropDownButton";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DropDownButton";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DropDownButton";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::DynamicOverflowItemsChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.DynamicOverflowItemsChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.DynamicOverflowItemsChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "DynamicOverflowItemsChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Expander>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Expander";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Expander";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Expander";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ExpanderCollapsedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ExpanderCollapsedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ExpanderCollapsedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ExpanderCollapsedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ExpanderExpandingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ExpanderExpandingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ExpanderExpandingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ExpanderExpandingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ExpanderTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ExpanderTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ExpanderTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ExpanderTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::FlipView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.FlipView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FlipView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "FlipView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::FlipViewItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.FlipViewItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FlipViewItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "FlipViewItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Flyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Flyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Flyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Flyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::FlyoutPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.FlyoutPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FlyoutPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "FlyoutPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::FocusDisengagedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.FocusDisengagedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FocusDisengagedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "FocusDisengagedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::FocusEngagedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.FocusEngagedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FocusEngagedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "FocusEngagedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::FontIcon>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.FontIcon";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FontIcon";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "FontIcon";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::FontIconSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.FontIconSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.FontIconSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "FontIconSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Frame>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Frame";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Frame";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Frame";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Grid>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Grid";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Grid";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Grid";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::GridView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.GridView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.GridView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "GridView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::GridViewHeaderItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.GridViewHeaderItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.GridViewHeaderItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "GridViewHeaderItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::GridViewItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.GridViewItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.GridViewItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "GridViewItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::GroupItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.GroupItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.GroupItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "GroupItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::GroupStyle>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.GroupStyle";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.GroupStyle";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "GroupStyle";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::GroupStyleSelector>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.GroupStyleSelector";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.GroupStyleSelector";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "GroupStyleSelector";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::HasValidationErrorsChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.HasValidationErrorsChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.HasValidationErrorsChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "HasValidationErrorsChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Hub>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Hub";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Hub";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Hub";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::HubSection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.HubSection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.HubSection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "HubSection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::HubSectionCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.HubSectionCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.HubSectionCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "HubSectionCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::HubSectionHeaderClickEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.HubSectionHeaderClickEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.HubSectionHeaderClickEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "HubSectionHeaderClickEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::HyperlinkButton>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.HyperlinkButton";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.HyperlinkButton";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "HyperlinkButton";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IconElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.IconElement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.IconElement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "IconElement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IconSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.IconSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.IconSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "IconSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IconSourceElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.IconSourceElement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.IconSourceElement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "IconSourceElement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Image>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Image";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Image";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Image";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ImageIcon>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ImageIcon";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ImageIcon";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ImageIcon";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ImageIconSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ImageIconSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ImageIconSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ImageIconSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBadge>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.InfoBadge";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBadge";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBadge";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBadgeTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.InfoBadgeTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBadgeTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBadgeTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBar>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.InfoBar";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBar";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.InfoBarClosedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBarClosedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBarClosedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBarClosingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.InfoBarClosingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBarClosingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBarClosingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::InfoBarTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.InfoBarTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.InfoBarTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "InfoBarTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IsTextTrimmedChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.IsTextTrimmedChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.IsTextTrimmedChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "IsTextTrimmedChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemClickEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemClickEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemClickEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemClickEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransition>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemCollectionTransition";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemCollectionTransition";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemCollectionTransition";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemCollectionTransitionCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemCollectionTransitionCompletedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemCollectionTransitionCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionProgress>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemCollectionTransitionProgress";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemCollectionTransitionProgress";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemCollectionTransitionProgress";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemCollectionTransitionProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemCollectionTransitionProvider";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemCollectionTransitionProvider";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemCollectionTransitionProvider";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemContainer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemContainer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemContainer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemContainer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemContainerGenerator>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemContainerGenerator";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemContainerGenerator";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemContainerGenerator";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsControl>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsControl";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsControl";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsControl";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsPanelTemplate>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsPanelTemplate";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsPanelTemplate";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsPanelTemplate";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsPickedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsPickedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsPickedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsPickedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsRepeater>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsRepeater";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsRepeater";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsRepeater";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsRepeaterElementClearingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsRepeaterElementClearingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsRepeaterElementClearingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsRepeaterElementClearingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsRepeaterElementIndexChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsRepeaterElementIndexChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsRepeaterElementIndexChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsRepeaterElementIndexChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsRepeaterElementPreparedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsRepeaterElementPreparedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsRepeaterElementPreparedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsRepeaterElementPreparedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsRepeaterScrollHost>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsRepeaterScrollHost";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsRepeaterScrollHost";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsRepeaterScrollHost";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsSourceView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsSourceView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsSourceView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsSourceView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsStackPanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsStackPanel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsStackPanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsStackPanel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsViewItemInvokedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsViewItemInvokedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsViewItemInvokedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsViewItemInvokedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsViewSelectionChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsViewSelectionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsViewSelectionChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsViewSelectionChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ItemsWrapGrid>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ItemsWrapGrid";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ItemsWrapGrid";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ItemsWrapGrid";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Layout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Layout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Layout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Layout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::LayoutContext>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.LayoutContext";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LayoutContext";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "LayoutContext";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.LinedFlowLayout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LinedFlowLayout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "LinedFlowLayout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemCollectionTransitionProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.LinedFlowLayoutItemCollectionTransitionProvider";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LinedFlowLayoutItemCollectionTransitionProvider";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "LinedFlowLayoutItemCollectionTransitionProvider";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::LinedFlowLayoutItemsInfoRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.LinedFlowLayoutItemsInfoRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.LinedFlowLayoutItemsInfoRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "LinedFlowLayoutItemsInfoRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListBoxItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListBoxItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListBoxItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListBoxItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListPickerFlyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListPickerFlyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListPickerFlyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyoutPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListPickerFlyoutPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListPickerFlyoutPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListPickerFlyoutPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListViewBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListViewBase";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListViewBase";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListViewBase";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListViewBaseHeaderItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListViewBaseHeaderItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListViewBaseHeaderItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListViewBaseHeaderItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListViewHeaderItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListViewHeaderItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListViewHeaderItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListViewHeaderItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListViewItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListViewItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListViewItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListViewItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ListViewPersistenceHelper>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ListViewPersistenceHelper";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ListViewPersistenceHelper";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ListViewPersistenceHelper";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapControl>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MapControl";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MapControl";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MapControl";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapControlMapServiceErrorOccurredEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MapControlMapServiceErrorOccurredEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MapControlMapServiceErrorOccurredEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MapControlMapServiceErrorOccurredEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MapElement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MapElement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MapElement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapElementClickEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MapElementClickEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MapElementClickEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MapElementClickEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapElementsLayer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MapElementsLayer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MapElementsLayer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MapElementsLayer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapIcon>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MapIcon";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MapIcon";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MapIcon";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MapLayer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MapLayer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MapLayer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MapLayer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MediaPlayerElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MediaPlayerElement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MediaPlayerElement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MediaPlayerElement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MediaPlayerPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MediaPlayerPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MediaPlayerPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MediaPlayerPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MediaTransportControls>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MediaTransportControls";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MediaTransportControls";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MediaTransportControls";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MediaTransportControlsHelper>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MediaTransportControlsHelper";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MediaTransportControlsHelper";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MediaTransportControlsHelper";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuBar>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuBar";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuBar";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuBarItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuBarItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuBarItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuBarItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuBarItemFlyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuBarItemFlyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuBarItemFlyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuFlyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuFlyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuFlyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuFlyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuFlyoutItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuFlyoutItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuFlyoutItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutItemBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuFlyoutItemBase";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuFlyoutItemBase";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuFlyoutItemBase";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuFlyoutPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuFlyoutPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuFlyoutPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutSeparator>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuFlyoutSeparator";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuFlyoutSeparator";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuFlyoutSeparator";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutSubItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.MenuFlyoutSubItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.MenuFlyoutSubItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "MenuFlyoutSubItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewBackRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewBackRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewBackRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewDisplayModeChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewDisplayModeChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewDisplayModeChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewDisplayModeChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewItemBase>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewItemBase";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewItemBase";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewItemBase";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewItemCollapsedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewItemCollapsedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewItemCollapsedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewItemCollapsedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewItemExpandingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewItemExpandingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewItemExpandingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewItemExpandingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewItemHeader>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewItemHeader";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewItemHeader";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewItemHeader";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewItemInvokedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewItemInvokedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewItemInvokedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewItemSeparator>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewItemSeparator";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewItemSeparator";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewItemSeparator";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewPaneClosingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewPaneClosingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewPaneClosingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewPaneClosingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewSelectionChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewSelectionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewSelectionChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewSelectionChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NavigationViewTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NavigationViewTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NavigationViewTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NavigationViewTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NonVirtualizingLayout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NonVirtualizingLayout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NonVirtualizingLayout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NonVirtualizingLayout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NonVirtualizingLayoutContext>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NonVirtualizingLayoutContext";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NonVirtualizingLayoutContext";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NonVirtualizingLayoutContext";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NumberBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NumberBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NumberBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NumberBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::NumberBoxValueChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.NumberBoxValueChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.NumberBoxValueChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "NumberBoxValueChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Page>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Page";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Page";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Page";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Panel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Panel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Panel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Panel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ParallaxView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ParallaxView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ParallaxView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ParallaxView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PasswordBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PasswordBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PasswordBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PasswordBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PasswordBoxPasswordChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PasswordBoxPasswordChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PasswordBoxPasswordChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PasswordBoxPasswordChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PathIcon>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PathIcon";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PathIcon";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PathIcon";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PathIconSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PathIconSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PathIconSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PathIconSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PersonPicture>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PersonPicture";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PersonPicture";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PersonPicture";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PersonPictureTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PersonPictureTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PersonPictureTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PersonPictureTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PickerConfirmedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PickerConfirmedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PickerConfirmedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PickerConfirmedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PickerFlyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PickerFlyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PickerFlyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PickerFlyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PickerFlyoutPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PickerFlyoutPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PickerFlyoutPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PickerFlyoutPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PipsPager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PipsPager";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PipsPager";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PipsPager";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PipsPagerSelectedIndexChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PipsPagerSelectedIndexChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PipsPagerSelectedIndexChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PipsPagerSelectedIndexChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PipsPagerTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PipsPagerTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PipsPagerTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PipsPagerTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Pivot>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Pivot";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Pivot";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Pivot";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PivotItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PivotItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PivotItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PivotItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::PivotItemEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PivotItemEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.PivotItemEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PivotItemEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ProgressBar>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ProgressBar";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ProgressBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ProgressBar";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ProgressBarTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ProgressBarTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ProgressBarTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ProgressBarTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ProgressRing>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ProgressRing";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ProgressRing";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ProgressRing";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ProgressRingTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ProgressRingTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ProgressRingTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ProgressRingTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RadioButton>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RadioButton";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RadioButton";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RadioButton";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RadioButtons>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RadioButtons";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RadioButtons";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RadioButtons";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RadioMenuFlyoutItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RadioMenuFlyoutItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RadioMenuFlyoutItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RadioMenuFlyoutItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RatingControl>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RatingControl";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RatingControl";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RatingControl";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RatingItemFontInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RatingItemFontInfo";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RatingItemFontInfo";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RatingItemFontInfo";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RatingItemImageInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RatingItemImageInfo";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RatingItemImageInfo";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RatingItemImageInfo";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RatingItemInfo>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RatingItemInfo";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RatingItemInfo";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RatingItemInfo";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshContainer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RefreshContainer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshContainer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RefreshContainer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshInteractionRatioChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RefreshInteractionRatioChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshInteractionRatioChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RefreshInteractionRatioChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RefreshRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RefreshRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshStateChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RefreshStateChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshStateChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RefreshStateChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RefreshVisualizer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RefreshVisualizer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RefreshVisualizer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RefreshVisualizer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RelativePanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RelativePanel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RelativePanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RelativePanel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RevealListViewItemPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RevealListViewItemPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RevealListViewItemPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RevealListViewItemPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RichEditBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RichEditBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RichEditBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RichEditBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RichEditBoxSelectionChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RichEditBoxSelectionChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RichEditBoxSelectionChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RichEditBoxSelectionChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RichEditBoxTextChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RichEditBoxTextChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RichEditBoxTextChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RichEditBoxTextChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RichTextBlock>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RichTextBlock";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RichTextBlock";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RichTextBlock";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RichTextBlockOverflow>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RichTextBlockOverflow";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RichTextBlockOverflow";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RichTextBlockOverflow";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RowDefinition>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RowDefinition";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RowDefinition";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RowDefinition";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::RowDefinitionCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.RowDefinitionCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.RowDefinitionCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "RowDefinitionCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollContentPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollContentPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollContentPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollContentPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollViewer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollViewer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollViewer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollViewer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollViewerView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollViewerView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollViewerView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollViewerView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollViewerViewChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollViewerViewChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollViewerViewChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollViewerViewChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollViewerViewChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollViewerViewChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollViewerViewChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollViewerViewChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingAnchorRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingAnchorRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingAnchorRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingAnchorRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingBringingIntoViewEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingBringingIntoViewEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingBringingIntoViewEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingBringingIntoViewEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollAnimationStartingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingScrollAnimationStartingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingScrollAnimationStartingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingScrollAnimationStartingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingScrollCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingScrollCompletedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingScrollCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingScrollOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingScrollOptions";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingScrollOptions";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingScrollOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomAnimationStartingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingZoomAnimationStartingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingZoomAnimationStartingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingZoomAnimationStartingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingZoomCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingZoomCompletedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingZoomCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ScrollingZoomOptions>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ScrollingZoomOptions";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ScrollingZoomOptions";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ScrollingZoomOptions";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SectionsInViewChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SectionsInViewChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SectionsInViewChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SectionsInViewChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SelectionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectionChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SelectionChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectorBar>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SelectorBar";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectorBar";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SelectorBar";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectorBarItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SelectorBarItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectorBarItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SelectorBarItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SelectorBarSelectionChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SelectorBarSelectionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SelectorBarSelectionChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SelectorBarSelectionChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SemanticZoom>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SemanticZoom";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SemanticZoom";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SemanticZoom";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SemanticZoomLocation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SemanticZoomLocation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SemanticZoomLocation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SemanticZoomLocation";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SemanticZoomViewChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SemanticZoomViewChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SemanticZoomViewChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Slider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Slider";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Slider";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Slider";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SplitButton>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SplitButton";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SplitButton";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SplitButton";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SplitButtonClickEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SplitButtonClickEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SplitButtonClickEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SplitButtonClickEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SplitView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SplitView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SplitView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SplitView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SplitViewPaneClosingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SplitViewPaneClosingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SplitViewPaneClosingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SplitViewPaneClosingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::StackLayout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.StackLayout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.StackLayout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "StackLayout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::StackPanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.StackPanel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.StackPanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "StackPanel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::StyleSelector>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.StyleSelector";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.StyleSelector";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "StyleSelector";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SwapChainBackgroundPanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SwapChainBackgroundPanel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SwapChainBackgroundPanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SwapChainBackgroundPanel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SwapChainPanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SwapChainPanel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SwapChainPanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SwapChainPanel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SwipeControl>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SwipeControl";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SwipeControl";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SwipeControl";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SwipeItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SwipeItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SwipeItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SwipeItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SwipeItemInvokedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SwipeItemInvokedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SwipeItemInvokedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SwipeItemInvokedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SwipeItems>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SwipeItems";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SwipeItems";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SwipeItems";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SymbolIcon>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SymbolIcon";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SymbolIcon";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SymbolIcon";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::SymbolIconSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.SymbolIconSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.SymbolIconSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "SymbolIconSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewExternalTornOutTabsDroppedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewExternalTornOutTabsDroppedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewExternalTornOutTabsDroppedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewExternalTornOutTabsDroppingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewExternalTornOutTabsDroppingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewExternalTornOutTabsDroppingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewItemTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewItemTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewItemTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewItemTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewTabCloseRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabCloseRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewTabCloseRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewTabCloseRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabDragCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewTabDragCompletedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewTabDragCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragStartingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabDragStartingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewTabDragStartingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewTabDragStartingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDroppedOutsideEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabDroppedOutsideEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewTabDroppedOutsideEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewTabDroppedOutsideEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabTearOutRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewTabTearOutRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewTabTearOutRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutWindowRequestedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabTearOutWindowRequestedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TabViewTabTearOutWindowRequestedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewTabTearOutWindowRequestedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTip>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TeachingTip";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTip";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTip";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TeachingTipClosedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipClosedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTipClosedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TeachingTipClosingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipClosingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTipClosingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TeachingTipTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TeachingTipTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TeachingTipTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TeachingTipTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextBlock>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextBlock";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextBlock";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextBlock";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextBoxBeforeTextChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextBoxBeforeTextChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextBoxBeforeTextChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextBoxBeforeTextChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextBoxSelectionChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextBoxSelectionChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextBoxSelectionChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextBoxSelectionChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextBoxTextChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextBoxTextChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextBoxTextChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextBoxTextChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextCommandBarFlyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextCommandBarFlyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextCommandBarFlyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextCommandBarFlyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextCompositionChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextCompositionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextCompositionChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextCompositionChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextCompositionEndedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextCompositionEndedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextCompositionEndedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextCompositionEndedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextCompositionStartedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextCompositionStartedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextCompositionStartedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextCompositionStartedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextControlCopyingToClipboardEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextControlCopyingToClipboardEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextControlCopyingToClipboardEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextControlCopyingToClipboardEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextControlCuttingToClipboardEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextControlCuttingToClipboardEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextControlCuttingToClipboardEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextControlCuttingToClipboardEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TextControlPasteEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TextControlPasteEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TextControlPasteEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TextControlPasteEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TimePickedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TimePickedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TimePickedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TimePickedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TimePicker>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TimePicker";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TimePicker";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TimePicker";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TimePickerFlyout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TimePickerFlyout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TimePickerFlyout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyoutPresenter>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TimePickerFlyoutPresenter";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TimePickerFlyoutPresenter";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TimePickerFlyoutPresenter";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TimePickerSelectedValueChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TimePickerSelectedValueChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TimePickerSelectedValueChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TimePickerValueChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TimePickerValueChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TimePickerValueChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TimePickerValueChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ToggleMenuFlyoutItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ToggleMenuFlyoutItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ToggleMenuFlyoutItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ToggleSplitButton";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ToggleSplitButton";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ToggleSplitButton";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ToggleSplitButtonIsCheckedChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ToggleSplitButtonIsCheckedChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ToggleSplitButtonIsCheckedChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ToggleSwitch>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ToggleSwitch";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ToggleSwitch";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ToggleSwitch";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ToolTip>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ToolTip";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ToolTip";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ToolTip";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ToolTipService>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.ToolTipService";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.ToolTipService";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "ToolTipService";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewCollapsedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewCollapsedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewCollapsedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewCollapsedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewDragItemsCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewDragItemsCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewDragItemsCompletedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewDragItemsCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewDragItemsStartingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewDragItemsStartingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewDragItemsStartingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewDragItemsStartingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewExpandingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewExpandingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewExpandingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewExpandingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewItem>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewItem";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewItem";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewItem";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewItemInvokedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewItemInvokedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewItemInvokedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewItemInvokedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewItemTemplateSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewItemTemplateSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewItemTemplateSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewItemTemplateSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewList>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewList";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewList";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewList";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewNode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewNode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewNode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewNode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TreeViewSelectionChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TreeViewSelectionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TreeViewSelectionChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TreeViewSelectionChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TwoPaneView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TwoPaneView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.TwoPaneView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TwoPaneView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::UIElementCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.UIElementCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.UIElementCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "UIElementCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::UniformGridLayout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.UniformGridLayout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.UniformGridLayout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "UniformGridLayout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::UserControl>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.UserControl";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.UserControl";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "UserControl";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::VariableSizedWrapGrid>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.VariableSizedWrapGrid";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.VariableSizedWrapGrid";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "VariableSizedWrapGrid";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::Viewbox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.Viewbox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.Viewbox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "Viewbox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayout>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.VirtualizingLayout";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.VirtualizingLayout";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "VirtualizingLayout";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.VirtualizingLayoutContext";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.VirtualizingLayoutContext";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "VirtualizingLayoutContext";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::VirtualizingPanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.VirtualizingPanel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.VirtualizingPanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "VirtualizingPanel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::VirtualizingStackPanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.VirtualizingStackPanel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.VirtualizingStackPanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "VirtualizingStackPanel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::WebView2>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.WebView2";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.WebView2";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "WebView2";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::WrapGrid>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.WrapGrid";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.WrapGrid";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "WrapGrid";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::XamlControlsResources>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.XamlControlsResources";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls.XamlControlsResources";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "XamlControlsResources";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IAnimatedVisual";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IAnimatedVisual";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IAnimatedVisual";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisual2>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IAnimatedVisual2";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IAnimatedVisual2";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IAnimatedVisual2";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IAnimatedVisualSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IAnimatedVisualSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IAnimatedVisualSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource2>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IAnimatedVisualSource2";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IAnimatedVisualSource2";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IAnimatedVisualSource2";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IAnimatedVisualSource3>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IAnimatedVisualSource3";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IAnimatedVisualSource3";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IAnimatedVisualSource3";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ICommandBarElement>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._ICommandBarElement";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._ICommandBarElement";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_ICommandBarElement";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IDynamicAnimatedVisualSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IDynamicAnimatedVisualSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IDynamicAnimatedVisualSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IDynamicAnimatedVisualSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IInsertionPanel>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IInsertionPanel";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IInsertionPanel";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IInsertionPanel";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IItemContainerMapping>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IItemContainerMapping";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IItemContainerMapping";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IItemContainerMapping";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IKeyIndexMapping";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IKeyIndexMapping";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IKeyIndexMapping";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::INavigate>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._INavigate";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._INavigate";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_INavigate";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::IScrollAnchorProvider>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._IScrollAnchorProvider";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._IScrollAnchorProvider";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_IScrollAnchorProvider";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::ISemanticZoomInformation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls._ISemanticZoomInformation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.controls._ISemanticZoomInformation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "_ISemanticZoomInformation";
     };
 }
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Input.h")
-#include "py.Microsoft.UI.Input.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Text.h")
-#include "py.Microsoft.UI.Text.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.h")
-#include "py.Microsoft.UI.Xaml.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.h")
-#include "py.Microsoft.UI.Xaml.Controls.Primitives.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Data.h")
-#include "py.Microsoft.UI.Xaml.Data.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Documents.h")
-#include "py.Microsoft.UI.Xaml.Documents.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Input.h")
-#include "py.Microsoft.UI.Xaml.Input.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Interop.h")
-#include "py.Microsoft.UI.Xaml.Interop.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.h")
-#include "py.Microsoft.UI.Xaml.Media.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.Animation.h")
-#include "py.Microsoft.UI.Xaml.Media.Animation.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Navigation.h")
-#include "py.Microsoft.UI.Xaml.Navigation.h"
-#endif
 
 #if __has_include("py.Microsoft.Web.WebView2.Core.h")
 #include "py.Microsoft.Web.WebView2.Core.h"
@@ -3945,6 +3893,58 @@ namespace py
 
 #if __has_include("py.Windows.UI.Xaml.Interop.h")
 #include "py.Windows.UI.Xaml.Interop.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Input.h")
+#include "py.Microsoft.UI.Input.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Text.h")
+#include "py.Microsoft.UI.Text.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.h")
+#include "py.Microsoft.UI.Xaml.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Controls.Primitives.h")
+#include "py.Microsoft.UI.Xaml.Controls.Primitives.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Data.h")
+#include "py.Microsoft.UI.Xaml.Data.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Documents.h")
+#include "py.Microsoft.UI.Xaml.Documents.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Input.h")
+#include "py.Microsoft.UI.Xaml.Input.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Interop.h")
+#include "py.Microsoft.UI.Xaml.Interop.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Media.h")
+#include "py.Microsoft.UI.Xaml.Media.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Media.Animation.h")
+#include "py.Microsoft.UI.Xaml.Media.Animation.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Xaml.Navigation.h")
+#include "py.Microsoft.UI.Xaml.Navigation.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Xaml::Controls

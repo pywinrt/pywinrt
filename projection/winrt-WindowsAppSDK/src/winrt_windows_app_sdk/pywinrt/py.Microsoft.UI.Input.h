@@ -4,14 +4,14 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.h>
-#include <winrt/Microsoft.UI.Content.h>
-#include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.h>
 #include <winrt/Windows.System.h>
 #include <winrt/Windows.UI.Core.h>
+#include <winrt/Microsoft.UI.h>
+#include <winrt/Microsoft.UI.Content.h>
+#include <winrt/Microsoft.UI.Dispatching.h>
 
 #include <winrt/Microsoft.UI.Input.h>
 
@@ -79,531 +79,519 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::CrossSlidingState>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.CrossSlidingState";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.CrossSlidingState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "CrossSlidingState";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DraggingState>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.DraggingState";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.DraggingState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "DraggingState";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::FocusNavigationReason>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.FocusNavigationReason";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.FocusNavigationReason";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "FocusNavigationReason";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::FocusNavigationResult>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.FocusNavigationResult";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.FocusNavigationResult";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "FocusNavigationResult";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::GestureSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.GestureSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.GestureSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "GestureSettings";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::HoldingState>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.HoldingState";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.HoldingState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "HoldingState";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputActivationState>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputActivationState";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputActivationState";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputActivationState";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputPointerSourceDeviceKinds";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputPointerSourceDeviceKinds";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputPointerSourceDeviceKinds";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputSystemCursorShape>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputSystemCursorShape";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputSystemCursorShape";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputSystemCursorShape";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::MoveSizeOperation>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.MoveSizeOperation";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.MoveSizeOperation";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "MoveSizeOperation";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::NonClientRegionKind>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.NonClientRegionKind";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.NonClientRegionKind";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "NonClientRegionKind";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::PointerDeviceType>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.PointerDeviceType";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PointerDeviceType";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PointerDeviceType";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::PointerUpdateKind>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.PointerUpdateKind";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PointerUpdateKind";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PointerUpdateKind";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::VirtualKeyStates>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.VirtualKeyStates";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.VirtualKeyStates";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "VirtualKeyStates";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.CharacterReceivedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.CharacterReceivedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "CharacterReceivedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ContextMenuKeyEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ContextMenuKeyEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "ContextMenuKeyEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.CrossSlidingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.CrossSlidingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "CrossSlidingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DraggingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.DraggingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.DraggingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "DraggingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.EnteredMoveSizeEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.EnteredMoveSizeEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "EnteredMoveSizeEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.EnteringMoveSizeEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.EnteringMoveSizeEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "EnteringMoveSizeEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ExitedMoveSizeEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ExitedMoveSizeEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "ExitedMoveSizeEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::FocusChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.FocusChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.FocusChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "FocusChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::FocusNavigationRequest>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.FocusNavigationRequest";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.FocusNavigationRequest";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "FocusNavigationRequest";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.FocusNavigationRequestEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.FocusNavigationRequestEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "FocusNavigationRequestEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::GestureRecognizer>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.GestureRecognizer";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.GestureRecognizer";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "GestureRecognizer";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::HoldingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.HoldingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.HoldingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "HoldingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputActivationListener>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputActivationListener";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputActivationListener";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputActivationListener";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputActivationListenerActivationChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputActivationListenerActivationChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputActivationListenerActivationChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputActivationListenerActivationChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputCursor>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputCursor";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputCursor";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputCursor";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputCustomCursor>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputCustomCursor";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputCustomCursor";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputCustomCursor";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputDesktopNamedResourceCursor";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputDesktopNamedResourceCursor";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputDesktopNamedResourceCursor";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputDesktopResourceCursor>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputDesktopResourceCursor";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputDesktopResourceCursor";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputDesktopResourceCursor";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputFocusController>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputFocusController";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputFocusController";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputFocusController";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputFocusNavigationHost>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputFocusNavigationHost";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputFocusNavigationHost";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputFocusNavigationHost";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputKeyboardSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputKeyboardSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputKeyboardSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputKeyboardSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputLightDismissAction>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputLightDismissAction";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputLightDismissAction";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputLightDismissAction";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputLightDismissEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputLightDismissEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputLightDismissEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputLightDismissEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputNonClientPointerSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputNonClientPointerSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputNonClientPointerSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputNonClientPointerSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputObject>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputObject";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputObject";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputObject";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputPointerSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputPointerSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputPointerSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputPointerSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputPreTranslateKeyboardSource>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputPreTranslateKeyboardSource";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputPreTranslateKeyboardSource";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputPreTranslateKeyboardSource";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::InputSystemCursor>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.InputSystemCursor";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.InputSystemCursor";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "InputSystemCursor";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::KeyEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.KeyEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.KeyEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "KeyEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::ManipulationCompletedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ManipulationCompletedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ManipulationCompletedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "ManipulationCompletedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::ManipulationInertiaStartingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ManipulationInertiaStartingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ManipulationInertiaStartingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "ManipulationInertiaStartingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::ManipulationStartedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ManipulationStartedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ManipulationStartedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "ManipulationStartedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::ManipulationUpdatedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ManipulationUpdatedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ManipulationUpdatedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "ManipulationUpdatedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::MouseWheelParameters>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.MouseWheelParameters";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.MouseWheelParameters";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "MouseWheelParameters";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::NonClientCaptionTappedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.NonClientCaptionTappedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.NonClientCaptionTappedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "NonClientCaptionTappedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::NonClientPointerEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.NonClientPointerEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.NonClientPointerEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "NonClientPointerEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::NonClientRegionsChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.NonClientRegionsChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.NonClientRegionsChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "NonClientRegionsChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::PointerEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.PointerEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PointerEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PointerEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::PointerPoint>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.PointerPoint";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PointerPoint";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PointerPoint";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::PointerPointProperties>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.PointerPointProperties";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PointerPointProperties";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PointerPointProperties";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::PointerPredictor>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.PointerPredictor";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PointerPredictor";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PointerPredictor";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::RightTappedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.RightTappedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.RightTappedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "RightTappedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::TappedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.TappedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.TappedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "TappedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.WindowRectChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.WindowRectChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "WindowRectChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.WindowRectChangingEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.WindowRectChangingEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "WindowRectChangingEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::IPointerPointTransform>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input._IPointerPointTransform";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input._IPointerPointTransform";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "_IPointerPointTransform";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::CrossSlideThresholds>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_input.CrossSlideThresholds_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.CrossSlideThresholds";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_input.CrossSlideThresholds_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.CrossSlideThresholds";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "CrossSlideThresholds";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::ManipulationDelta>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_input.ManipulationDelta_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ManipulationDelta";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_input.ManipulationDelta_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ManipulationDelta";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "ManipulationDelta";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::ManipulationVelocities>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_input.ManipulationVelocities_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ManipulationVelocities";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_input.ManipulationVelocities_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.ManipulationVelocities";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "ManipulationVelocities";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Input::PhysicalKeyStatus>
     {
-        static constexpr std::string_view from_tuple = "winrt._winrt_microsoft_ui_input.PhysicalKeyStatus_from_tuple";
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.PhysicalKeyStatus";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr std::string_view from_tuple = "winui3._winui3_microsoft_ui_input.PhysicalKeyStatus_from_tuple";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.PhysicalKeyStatus";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input";
         static constexpr const char* type_name = "PhysicalKeyStatus";
     };
 }
-
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Content.h")
-#include "py.Microsoft.UI.Content.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -623,6 +611,18 @@ namespace py
 
 #if __has_include("py.Windows.UI.Core.h")
 #include "py.Windows.UI.Core.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Content.h")
+#include "py.Microsoft.UI.Content.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Dispatching.h")
+#include "py.Microsoft.UI.Dispatching.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Input

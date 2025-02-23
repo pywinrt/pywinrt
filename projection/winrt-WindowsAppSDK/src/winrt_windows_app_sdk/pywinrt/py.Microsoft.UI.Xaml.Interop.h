@@ -21,64 +21,64 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedAction>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.NotifyCollectionChangedAction";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.interop.NotifyCollectionChangedAction";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "NotifyCollectionChangedAction";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.NotifyCollectionChangedEventArgs";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.interop.NotifyCollectionChangedEventArgs";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "NotifyCollectionChangedEventArgs";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableIterable>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop._IBindableIterable";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.interop._IBindableIterable";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "_IBindableIterable";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableIterator>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop._IBindableIterator";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.interop._IBindableIterator";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "_IBindableIterator";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableObservableVector>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop._IBindableObservableVector";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.interop._IBindableObservableVector";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "_IBindableObservableVector";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableVector>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop._IBindableVector";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.interop._IBindableVector";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "_IBindableVector";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableVectorView>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop._IBindableVectorView";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.interop._IBindableVectorView";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "_IBindableVectorView";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::INotifyCollectionChanged>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop._INotifyCollectionChanged";
-        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.interop._INotifyCollectionChanged";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "_INotifyCollectionChanged";
     };
 }

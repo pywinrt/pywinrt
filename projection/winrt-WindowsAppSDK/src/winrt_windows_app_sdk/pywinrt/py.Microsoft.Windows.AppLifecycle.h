@@ -23,32 +23,32 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppLifecycle::ExtendedActivationKind>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applifecycle.ExtendedActivationKind";
-        static constexpr const char* module_name = "winrt.microsoft.windows.applifecycle";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applifecycle.ExtendedActivationKind";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applifecycle";
         static constexpr const char* type_name = "ExtendedActivationKind";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applifecycle.ActivationRegistrationManager";
-        static constexpr const char* module_name = "winrt.microsoft.windows.applifecycle";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applifecycle.ActivationRegistrationManager";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applifecycle";
         static constexpr const char* type_name = "ActivationRegistrationManager";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppLifecycle::AppActivationArguments>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applifecycle.AppActivationArguments";
-        static constexpr const char* module_name = "winrt.microsoft.windows.applifecycle";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applifecycle.AppActivationArguments";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applifecycle";
         static constexpr const char* type_name = "AppActivationArguments";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::AppLifecycle::AppInstance>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applifecycle.AppInstance";
-        static constexpr const char* module_name = "winrt.microsoft.windows.applifecycle";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.applifecycle.AppInstance";
+        static constexpr const char* module_name = "winui3.microsoft.windows.applifecycle";
         static constexpr const char* type_name = "AppInstance";
     };
 }

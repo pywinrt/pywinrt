@@ -6,8 +6,8 @@ API reference
    :maxdepth: 2
    :caption: Contents:
 
-   microsoft
    runtime
    runtime.interop
    system
    windows
+   winui3

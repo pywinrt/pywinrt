@@ -4,8 +4,8 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.h>
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Microsoft.UI.h>
 
 #include <winrt/Microsoft.UI.System.h>
 
@@ -19,18 +19,18 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::System::ThemeSettings>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.system.ThemeSettings";
-        static constexpr const char* module_name = "winrt.microsoft.ui.system";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.system.ThemeSettings";
+        static constexpr const char* module_name = "winui3.microsoft.ui.system";
         static constexpr const char* type_name = "ThemeSettings";
     };
 }
 
-#if __has_include("py.Microsoft.UI.h")
-#include "py.Microsoft.UI.h"
-#endif
-
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
 #endif
 
 namespace py::impl::Microsoft::UI::System

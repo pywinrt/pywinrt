@@ -18,8 +18,8 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Globalization::ApplicationLanguages>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.globalization.ApplicationLanguages";
-        static constexpr const char* module_name = "winrt.microsoft.windows.globalization";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.globalization.ApplicationLanguages";
+        static constexpr const char* module_name = "winui3.microsoft.windows.globalization";
         static constexpr const char* type_name = "ApplicationLanguages";
     };
 }

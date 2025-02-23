@@ -4,8 +4,8 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.UI.Input.h>
 #include <winrt/Windows.Devices.Input.h>
+#include <winrt/Microsoft.UI.Input.h>
 
 #include <winrt/Microsoft.UI.Input.Interop.h>
 
@@ -19,18 +19,18 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::Interop::PenDeviceInterop>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.interop.PenDeviceInterop";
-        static constexpr const char* module_name = "winrt.microsoft.ui.input.interop";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.input.interop.PenDeviceInterop";
+        static constexpr const char* module_name = "winui3.microsoft.ui.input.interop";
         static constexpr const char* type_name = "PenDeviceInterop";
     };
 }
 
-#if __has_include("py.Microsoft.UI.Input.h")
-#include "py.Microsoft.UI.Input.h"
-#endif
-
 #if __has_include("py.Windows.Devices.Input.h")
 #include "py.Windows.Devices.Input.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Input.h")
+#include "py.Microsoft.UI.Input.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Input::Interop

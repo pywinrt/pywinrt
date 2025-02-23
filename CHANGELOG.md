@@ -14,6 +14,8 @@
 - Added `unpack()` method on projected structs with more than one field.
 
 ### Changed
+- BREAKING: Namespaces other than the Windows SDK now have a different top-level
+  package name other than ``winrt``.
 - BREAKING: Use `[Windows.Foundation.Metadata.Overload]` attribute for method
   names when available. This exposes some APIs that otherwise could not be called
   but also renames many existing methods.

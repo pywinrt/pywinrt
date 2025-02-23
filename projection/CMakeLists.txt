@@ -42,7 +42,7 @@ find_package(Python3 REQUIRED COMPONENTS Development.Module)
 
 set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
 set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
-set(WINRT_WEBVIEW2_PATH "webview2/winrt-Microsoft.Web.WebView2.Core")
+set(WINRT_WEBVIEW2_PATH "webview2/webview2-Microsoft.Web.WebView2.Core")
 set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK")
 set(WEBVIEW2_PATH "../_tools/Microsoft.Web.WebView2")
 
@@ -85,23 +85,43 @@ endfunction()
 set(circular_dependency_packages
     "winrt/winrt-Windows.UI.Xaml.Controls"
     "winrt/winrt-Windows.UI.Xaml.Controls.Primitives"
-    "winui3/winrt-Microsoft.UI.Xaml.Controls"
-    "winui3/winrt-Microsoft.UI.Xaml.Controls.Primitives"
+    "winui3/winui3-Microsoft.UI.Xaml.Controls"
+    "winui3/winui3-Microsoft.UI.Xaml.Controls.Primitives"
 )
 
 function(pywinrt_add_namespace_package package)
+    # package_name: e.g. winrt-Windows.Foundation, test-winrt-TestComponent
     get_filename_component(package_name "${package}" NAME)
-    string(REPLACE "winrt-" "" package_namespace "${package_name}")
+
+    # split package name on last dash
+    string(FIND "${package_name}" "-" index REVERSE)
+    math(EXPR index_plus "${index} + 1")
+
+    # package_root: e.g. winrt, test-winrt
+    string(SUBSTRING "${package_name}" 0 ${index} package_root)
+
+    # package_root_dir: e.g. winrt, test_winrt
+    string(REPLACE "-" "_" package_root_dir "${package_root}")
+
+    # package_namespace: e.g. Windows.Foundation, TestComponent
+    string(SUBSTRING "${package_name}" ${index_plus} -1 package_namespace)
+
+    # package_namespace_lower: e.g. windows.foundation, testcomponent
     string(TOLOWER "${package_namespace}" package_namespace_lower)
+
+    # package_target: e.g. _winrt_windows_foundation, _test_winrt_testcomponent
     string(REPLACE "." "_" package_target_suffix "${package_namespace_lower}")
-    set(package_target "_winrt_${package_target_suffix}" )
+    set(package_target "_${package_root_dir}_${package_target_suffix}")
+
+    # package_sources: e.g. py.Windows.Foundation.cpp, py.TestComponent.cpp
     set(package_sources "${package}/py.${package_namespace}.cpp")
+
 
     pywinrt_add_library(${package_target} "${package_sources}")
     target_include_directories(${package_target} PRIVATE "${package}/cppwinrt" "${package}")
 
-    install(TARGETS ${package_target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
-    install(DIRECTORY "${package}/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+    install(TARGETS ${package_target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${package_root_dir}")
+    install(DIRECTORY "${package}/${package_root_dir}/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${package_root_dir}")
 
     if (package IN_LIST circular_dependency_packages)
         set(package_sources_2 "${package}/py.${package_namespace}_2.cpp")
@@ -109,7 +129,7 @@ function(pywinrt_add_namespace_package package)
         pywinrt_add_library(${package_target}_2 "${package_sources_2}")
         target_include_directories(${package_target}_2 PRIVATE "${package}/cppwinrt" "${package}")
 
-        install(TARGETS ${package_target}_2 DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+        install(TARGETS ${package_target}_2 DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${package_root_dir}")
     endif()
 
     return(PROPAGATE package_target)
@@ -134,8 +154,8 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 
 if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winrt/winrt-*")
-    file(GLOB winui3_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui3/winrt-*")
-    file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/winrt-*")
+    file(GLOB winui3_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "winui3/winui3-*")
+    file(GLOB webview2_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "webview2/webview2-*")
     file(GLOB interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Windows.*")
     file(GLOB winui3_interop_packages RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" CONFIGURE_DEPENDS "interop/winrt-Microsoft.*")
 else()
@@ -162,8 +182,8 @@ else()
         "winrt/winrt-Windows.UI.WindowManagement"
     )
     set(winui3_packages
-        "winui3/winrt-Microsoft.UI"
-        "winui3/winrt-Microsoft.Windows.AppNotifications"
+        "winui3/winui3-Microsoft.UI"
+        "winui3/winui3-Microsoft.Windows.AppNotifications"
     )
     set(interop_packages
         "interop/winrt-Windows.Graphics.Capture.Interop"
@@ -258,15 +278,15 @@ foreach(package ${packages} ${winui3_packages} ${webview2_packages} ${interop_pa
             DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
     endif()
 
-    if (${package} STREQUAL "webview2/winrt-Microsoft.Web.WebView2.Core")
+    if (${package} STREQUAL "webview2/webview2-Microsoft.Web.WebView2.Core")
         install(FILES "${WEBVIEW2_PATH}/runtimes/win-${WINDOWS_APP_SDK_ARCH}/native_uap/Microsoft.Web.WebView2.Core.dll"
-            DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/microsoft/web/webview2/core")
+            DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/webview2/microsoft/web/webview2/core")
     endif()
 endforeach()
 
 # test component package
 ################################################################################
 
-pywinrt_add_namespace_package("test-winrt/winrt-TestComponent")
+pywinrt_add_namespace_package("test-winrt/test-winrt-TestComponent")
 install(FILES "../_tools/PyWinRT.TestWinRT/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/TestComponent.dll"
-    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/testcomponent/")
+    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/test_winrt/testcomponent/")

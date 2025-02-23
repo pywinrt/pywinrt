@@ -4,11 +4,11 @@
 
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
-#include <winrt/Microsoft.Graphics.DirectX.h>
-#include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
+#include <winrt/Microsoft.Graphics.DirectX.h>
+#include <winrt/Microsoft.UI.Composition.h>
 
 #include <winrt/Microsoft.UI.Composition.Scenes.h>
 
@@ -34,179 +34,171 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneAlphaMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneAlphaMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneAlphaMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneAlphaMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneAttributeSemantic>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneAttributeSemantic";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneAttributeSemantic";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneAttributeSemantic";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneComponentType>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneComponentType";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneComponentType";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneComponentType";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneWrappingMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneWrappingMode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneWrappingMode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneWrappingMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneBoundingBox>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneBoundingBox";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneBoundingBox";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneBoundingBox";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneComponent>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneComponent";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneComponent";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneComponent";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneComponentCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneComponentCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneComponentCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneComponentCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneMaterial>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneMaterial";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneMaterial";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneMaterial";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneMaterialInput>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneMaterialInput";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneMaterialInput";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneMaterialInput";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneMesh>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneMesh";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneMesh";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneMesh";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneMeshMaterialAttributeMap";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneMeshMaterialAttributeMap";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneMeshMaterialAttributeMap";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneMeshRendererComponent";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneMeshRendererComponent";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneMeshRendererComponent";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneMetallicRoughnessMaterial";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneMetallicRoughnessMaterial";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneMetallicRoughnessMaterial";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneModelTransform>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneModelTransform";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneModelTransform";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneModelTransform";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneNode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneNode";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneNode";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneNode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneNodeCollection>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneNodeCollection";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneNodeCollection";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneNodeCollection";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneObject>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneObject";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneObject";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneObject";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::ScenePbrMaterial>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.ScenePbrMaterial";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.ScenePbrMaterial";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "ScenePbrMaterial";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneRendererComponent>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneRendererComponent";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneRendererComponent";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneRendererComponent";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneSurfaceMaterialInput";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneSurfaceMaterialInput";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneSurfaceMaterialInput";
     };
 
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Scenes::SceneVisual>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.scenes.SceneVisual";
-        static constexpr const char* module_name = "winrt.microsoft.ui.composition.scenes";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.composition.scenes.SceneVisual";
+        static constexpr const char* module_name = "winui3.microsoft.ui.composition.scenes";
         static constexpr const char* type_name = "SceneVisual";
     };
 }
-
-#if __has_include("py.Microsoft.Graphics.DirectX.h")
-#include "py.Microsoft.Graphics.DirectX.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Composition.h")
-#include "py.Microsoft.UI.Composition.h"
-#endif
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
@@ -218,6 +210,14 @@ namespace py
 
 #if __has_include("py.Windows.Foundation.Numerics.h")
 #include "py.Windows.Foundation.Numerics.h"
+#endif
+
+#if __has_include("py.Microsoft.Graphics.DirectX.h")
+#include "py.Microsoft.Graphics.DirectX.h"
+#endif
+
+#if __has_include("py.Microsoft.UI.Composition.h")
+#include "py.Microsoft.UI.Composition.h"
 #endif
 
 namespace py::impl::Microsoft::UI::Composition::Scenes

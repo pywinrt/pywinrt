@@ -29,32 +29,32 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Graphics::DirectX::DirectXAlphaMode>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.directx.DirectXAlphaMode";
-        static constexpr const char* module_name = "winrt.microsoft.graphics.directx";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.directx.DirectXAlphaMode";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.directx";
         static constexpr const char* type_name = "DirectXAlphaMode";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Graphics::DirectX::DirectXColorSpace>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.directx.DirectXColorSpace";
-        static constexpr const char* module_name = "winrt.microsoft.graphics.directx";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.directx.DirectXColorSpace";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.directx";
         static constexpr const char* type_name = "DirectXColorSpace";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.directx.DirectXPixelFormat";
-        static constexpr const char* module_name = "winrt.microsoft.graphics.directx";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.directx.DirectXPixelFormat";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.directx";
         static constexpr const char* type_name = "DirectXPixelFormat";
     };
 
     template<>
     struct py_type<winrt::Microsoft::Graphics::DirectX::DirectXPrimitiveTopology>
     {
-        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.directx.DirectXPrimitiveTopology";
-        static constexpr const char* module_name = "winrt.microsoft.graphics.directx";
+        static constexpr std::string_view qualified_name = "winui3.microsoft.graphics.directx.DirectXPrimitiveTopology";
+        static constexpr const char* module_name = "winui3.microsoft.graphics.directx";
         static constexpr const char* type_name = "DirectXPrimitiveTopology";
     };
 }
