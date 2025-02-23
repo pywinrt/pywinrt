@@ -26,7 +26,7 @@ except ImportError:
 for package_path in chain(
     [os.fspath(PROJECTION_PATH / "winrt-runtime")],
     iglob(os.fspath(PROJECTION_PATH / "interop" / "winrt-*")),
-    iglob(os.fspath(PROJECTION_PATH / "winrt-Windows.*")),
+    iglob(os.fspath(PROJECTION_PATH / "winrt" / "winrt-*")),
     iglob(os.fspath(PROJECTION_PATH / "winui3" / "winrt-*")),
     iglob(os.fspath(PROJECTION_PATH / "webview2" / "winrt-*")),
 ):

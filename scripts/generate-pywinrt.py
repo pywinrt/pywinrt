@@ -62,7 +62,7 @@ subprocess.check_call(
         "--input",
         WINDOWS_SDK,
         "--output",
-        PROJECTION_PATH,
+        PROJECTION_PATH / "winrt",
         "--header-path",
         SDK_PACKAGE_PATH,
         "--nullability-json",
@@ -179,7 +179,10 @@ for path in itertools.chain(
     try:
         shutil.copy(
             os.fspath(
-                PROJECTION_PATH / "winrt-Windows.Foundation" / "pywinrt-version.txt"
+                PROJECTION_PATH
+                / "winrt"
+                / "winrt-Windows.Foundation"
+                / "pywinrt-version.txt"
             ),
             os.fspath(path / "pywinrt-version.txt"),
         )
