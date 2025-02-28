@@ -1,0 +1,9 @@
+from winrt.system import Object
+
+from typing_extensions import Buffer
+
+class DesktopWindowXamlSourceNative(Object):
+    def attach_to_window(self, hwnd: int) -> None: ...
+    def pretranslate_message(self, msg: Buffer) -> bool: ...
+    @property
+    def window_handle(self) -> int: ...
