@@ -182,6 +182,7 @@ else()
         "winrt/winrt-Windows.UI.Composition"
         "winrt/winrt-Windows.UI.Composition.Desktop"
         "winrt/winrt-Windows.UI.WindowManagement"
+        "winrt/winrt-Windows.UI.Xaml.Hosting"
     )
     set(winui3_packages
         "winui3/winui3-Microsoft.UI"
@@ -192,6 +193,7 @@ else()
         "interop/winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
         "interop/winrt-Windows.System.Interop"
         "interop/winrt-Windows.UI.Composition.Interop"
+        "interop/winrt-Windows.UI.Xaml.Hosting.Interop"
     )
     set(winui3_interop_packages
         "interop/winui3-Microsoft.UI.Interop"
