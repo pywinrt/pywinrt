@@ -2097,12 +2097,14 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     // ----- IWebUICommandBarElement interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebUICommandBarElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebUICommandBarElement(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarElement* self) noexcept
     {
@@ -2119,7 +2121,9 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }};
 
     static PyType_Slot _type_slots_IWebUICommandBarElement[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUICommandBarElement) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUICommandBarElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUICommandBarElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUICommandBarElement) },
@@ -2129,7 +2133,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
         "winrt._winrt_windows_ui_webui_core._IWebUICommandBarElement",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarElement),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebUICommandBarElement};
 
     struct ImplementsIWebUICommandBarElement : py::ImplementsInterfaceT<ImplementsIWebUICommandBarElement, winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>
@@ -2215,17 +2223,23 @@ namespace py::cpp::Windows::UI::WebUI::Core
         "winrt._winrt_windows_ui_webui_core.IWebUICommandBarElement",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebUICommandBarElement};
 
     // ----- IWebUICommandBarIcon interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebUICommandBarIcon(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebUICommandBarIcon(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarIcon* self) noexcept
     {
@@ -2242,7 +2256,9 @@ namespace py::cpp::Windows::UI::WebUI::Core
         { }};
 
     static PyType_Slot _type_slots_IWebUICommandBarIcon[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUICommandBarIcon) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUICommandBarIcon) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUICommandBarIcon) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUICommandBarIcon) },
@@ -2252,7 +2268,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
         "winrt._winrt_windows_ui_webui_core._IWebUICommandBarIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarIcon),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebUICommandBarIcon};
 
     struct ImplementsIWebUICommandBarIcon : py::ImplementsInterfaceT<ImplementsIWebUICommandBarIcon, winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>
@@ -2338,7 +2358,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
         "winrt._winrt_windows_ui_webui_core.IWebUICommandBarIcon",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebUICommandBarIcon};
 
     // ----- Windows.UI.WebUI.Core Initialization --------------------

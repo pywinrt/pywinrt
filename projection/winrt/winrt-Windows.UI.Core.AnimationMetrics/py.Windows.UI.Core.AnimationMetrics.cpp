@@ -1338,12 +1338,14 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     // ----- IPropertyAnimation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IPropertyAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IPropertyAnimation(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation* self) noexcept
     {
@@ -1515,7 +1517,9 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         { }};
 
     static PyType_Slot _type_slots_IPropertyAnimation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertyAnimation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertyAnimation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertyAnimation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertyAnimation) },
@@ -1525,7 +1529,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         "winrt._winrt_windows_ui_core_animationmetrics._IPropertyAnimation",
         sizeof(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IPropertyAnimation};
 
     struct ImplementsIPropertyAnimation : py::ImplementsInterfaceT<ImplementsIPropertyAnimation, winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
@@ -1711,7 +1719,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
         "winrt._winrt_windows_ui_core_animationmetrics.IPropertyAnimation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIPropertyAnimation};
 
     // ----- Windows.UI.Core.AnimationMetrics Initialization --------------------

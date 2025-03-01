@@ -326,7 +326,11 @@ static class InterfaceWriterExtensions
         w.WriteLine($"\"{ns.PyPackageModule}.{ns.NsModuleName}{moduleSuffix}.{type.Name}\",");
         w.WriteLine("0,");
         w.WriteLine("0,");
-        w.WriteLine("Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,");
+        w.WriteLine("Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE");
+        w.WriteLine("#if PY_VERSION_HEX >= 0x030A0000");
+        w.WriteLine("| Py_TPFLAGS_DISALLOW_INSTANTIATION");
+        w.WriteLine("#endif");
+        w.WriteLine(",");
         w.WriteLine($"type_slots_Implements{type.Name}}};");
         w.Indent--;
     }

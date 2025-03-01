@@ -7066,12 +7066,14 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     // ----- IDeviceEnumerationSettings interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IDeviceEnumerationSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IDeviceEnumerationSettings(py::wrapper::Windows::Devices::Enumeration::IDeviceEnumerationSettings* self) noexcept
     {
@@ -7088,7 +7090,9 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }};
 
     static PyType_Slot _type_slots_IDeviceEnumerationSettings[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IDeviceEnumerationSettings) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDeviceEnumerationSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDeviceEnumerationSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDeviceEnumerationSettings) },
@@ -7098,7 +7102,11 @@ namespace py::cpp::Windows::Devices::Enumeration
         "winrt._winrt_windows_devices_enumeration._IDeviceEnumerationSettings",
         sizeof(py::wrapper::Windows::Devices::Enumeration::IDeviceEnumerationSettings),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IDeviceEnumerationSettings};
 
     struct ImplementsIDeviceEnumerationSettings : py::ImplementsInterfaceT<ImplementsIDeviceEnumerationSettings, winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>
@@ -7184,17 +7192,23 @@ namespace py::cpp::Windows::Devices::Enumeration
         "winrt._winrt_windows_devices_enumeration.IDeviceEnumerationSettings",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIDeviceEnumerationSettings};
 
     // ----- IDevicePairingSettings interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IDevicePairingSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IDevicePairingSettings(py::wrapper::Windows::Devices::Enumeration::IDevicePairingSettings* self) noexcept
     {
@@ -7211,7 +7225,9 @@ namespace py::cpp::Windows::Devices::Enumeration
         { }};
 
     static PyType_Slot _type_slots_IDevicePairingSettings[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IDevicePairingSettings) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDevicePairingSettings) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDevicePairingSettings) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDevicePairingSettings) },
@@ -7221,7 +7237,11 @@ namespace py::cpp::Windows::Devices::Enumeration
         "winrt._winrt_windows_devices_enumeration._IDevicePairingSettings",
         sizeof(py::wrapper::Windows::Devices::Enumeration::IDevicePairingSettings),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IDevicePairingSettings};
 
     struct ImplementsIDevicePairingSettings : py::ImplementsInterfaceT<ImplementsIDevicePairingSettings, winrt::Windows::Devices::Enumeration::IDevicePairingSettings>
@@ -7307,7 +7327,11 @@ namespace py::cpp::Windows::Devices::Enumeration
         "winrt._winrt_windows_devices_enumeration.IDevicePairingSettings",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIDevicePairingSettings};
 
     // ----- Windows.Devices.Enumeration Initialization --------------------

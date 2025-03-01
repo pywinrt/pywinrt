@@ -18333,12 +18333,14 @@ namespace py::cpp::Windows::UI::WebUI
 
     // ----- IActivatedEventArgsDeferral interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IActivatedEventArgsDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IActivatedEventArgsDeferral(py::wrapper::Windows::UI::WebUI::IActivatedEventArgsDeferral* self) noexcept
     {
@@ -18386,7 +18388,9 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Slot _type_slots_IActivatedEventArgsDeferral[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IActivatedEventArgsDeferral) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IActivatedEventArgsDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IActivatedEventArgsDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IActivatedEventArgsDeferral) },
@@ -18396,7 +18400,11 @@ namespace py::cpp::Windows::UI::WebUI
         "winrt._winrt_windows_ui_webui._IActivatedEventArgsDeferral",
         sizeof(py::wrapper::Windows::UI::WebUI::IActivatedEventArgsDeferral),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IActivatedEventArgsDeferral};
 
     struct ImplementsIActivatedEventArgsDeferral : py::ImplementsInterfaceT<ImplementsIActivatedEventArgsDeferral, winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>
@@ -18502,17 +18510,23 @@ namespace py::cpp::Windows::UI::WebUI
         "winrt._winrt_windows_ui_webui.IActivatedEventArgsDeferral",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIActivatedEventArgsDeferral};
 
     // ----- IWebUIBackgroundTaskInstance interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebUIBackgroundTaskInstance(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebUIBackgroundTaskInstance(py::wrapper::Windows::UI::WebUI::IWebUIBackgroundTaskInstance* self) noexcept
     {
@@ -18599,7 +18613,9 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Slot _type_slots_IWebUIBackgroundTaskInstance[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUIBackgroundTaskInstance) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUIBackgroundTaskInstance) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUIBackgroundTaskInstance) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUIBackgroundTaskInstance) },
@@ -18609,7 +18625,11 @@ namespace py::cpp::Windows::UI::WebUI
         "winrt._winrt_windows_ui_webui._IWebUIBackgroundTaskInstance",
         sizeof(py::wrapper::Windows::UI::WebUI::IWebUIBackgroundTaskInstance),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebUIBackgroundTaskInstance};
 
     struct ImplementsIWebUIBackgroundTaskInstance : py::ImplementsInterfaceT<ImplementsIWebUIBackgroundTaskInstance, winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>
@@ -18738,17 +18758,23 @@ namespace py::cpp::Windows::UI::WebUI
         "winrt._winrt_windows_ui_webui.IWebUIBackgroundTaskInstance",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebUIBackgroundTaskInstance};
 
     // ----- IWebUINavigatedEventArgs interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebUINavigatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebUINavigatedEventArgs(py::wrapper::Windows::UI::WebUI::IWebUINavigatedEventArgs* self) noexcept
     {
@@ -18796,7 +18822,9 @@ namespace py::cpp::Windows::UI::WebUI
         { }};
 
     static PyType_Slot _type_slots_IWebUINavigatedEventArgs[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebUINavigatedEventArgs) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebUINavigatedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebUINavigatedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebUINavigatedEventArgs) },
@@ -18806,7 +18834,11 @@ namespace py::cpp::Windows::UI::WebUI
         "winrt._winrt_windows_ui_webui._IWebUINavigatedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::IWebUINavigatedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebUINavigatedEventArgs};
 
     struct ImplementsIWebUINavigatedEventArgs : py::ImplementsInterfaceT<ImplementsIWebUINavigatedEventArgs, winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>
@@ -18912,7 +18944,11 @@ namespace py::cpp::Windows::UI::WebUI
         "winrt._winrt_windows_ui_webui.IWebUINavigatedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebUINavigatedEventArgs};
 
     // ----- Windows.UI.WebUI Initialization --------------------

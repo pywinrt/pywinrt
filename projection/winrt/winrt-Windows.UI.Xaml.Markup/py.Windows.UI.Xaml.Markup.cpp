@@ -1790,12 +1790,14 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
     // ----- IComponentConnector interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IComponentConnector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IComponentConnector(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector* self) noexcept
     {
@@ -1857,7 +1859,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Slot _type_slots_IComponentConnector[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IComponentConnector) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IComponentConnector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IComponentConnector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IComponentConnector) },
@@ -1867,7 +1871,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup._IComponentConnector",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IComponentConnector};
 
     struct ImplementsIComponentConnector : py::ImplementsInterfaceT<ImplementsIComponentConnector, winrt::Windows::UI::Xaml::Markup::IComponentConnector>
@@ -1995,17 +2003,23 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup.IComponentConnector",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIComponentConnector};
 
     // ----- IComponentConnector2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IComponentConnector2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IComponentConnector2(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector2* self) noexcept
     {
@@ -2066,7 +2080,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Slot _type_slots_IComponentConnector2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IComponentConnector2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IComponentConnector2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IComponentConnector2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IComponentConnector2) },
@@ -2076,7 +2092,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup._IComponentConnector2",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IComponentConnector2};
 
     struct ImplementsIComponentConnector2 : py::ImplementsInterfaceT<ImplementsIComponentConnector2, winrt::Windows::UI::Xaml::Markup::IComponentConnector2>
@@ -2206,17 +2226,23 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup.IComponentConnector2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIComponentConnector2};
 
     // ----- IDataTemplateComponent interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IDataTemplateComponent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IDataTemplateComponent(py::wrapper::Windows::UI::Xaml::Markup::IDataTemplateComponent* self) noexcept
     {
@@ -2328,7 +2354,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Slot _type_slots_IDataTemplateComponent[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IDataTemplateComponent) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDataTemplateComponent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDataTemplateComponent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDataTemplateComponent) },
@@ -2338,7 +2366,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup._IDataTemplateComponent",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IDataTemplateComponent),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IDataTemplateComponent};
 
     struct ImplementsIDataTemplateComponent : py::ImplementsInterfaceT<ImplementsIDataTemplateComponent, winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>
@@ -2498,17 +2530,23 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup.IDataTemplateComponent",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIDataTemplateComponent};
 
     // ----- IXamlBindScopeDiagnostics interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXamlBindScopeDiagnostics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXamlBindScopeDiagnostics(py::wrapper::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics* self) noexcept
     {
@@ -2570,7 +2608,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Slot _type_slots_IXamlBindScopeDiagnostics[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlBindScopeDiagnostics) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlBindScopeDiagnostics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlBindScopeDiagnostics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlBindScopeDiagnostics) },
@@ -2580,7 +2620,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup._IXamlBindScopeDiagnostics",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXamlBindScopeDiagnostics};
 
     struct ImplementsIXamlBindScopeDiagnostics : py::ImplementsInterfaceT<ImplementsIXamlBindScopeDiagnostics, winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>
@@ -2708,17 +2752,23 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup.IXamlBindScopeDiagnostics",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXamlBindScopeDiagnostics};
 
     // ----- IXamlMember interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXamlMember(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlMember>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlMember>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXamlMember(py::wrapper::Windows::UI::Xaml::Markup::IXamlMember* self) noexcept
     {
@@ -3009,7 +3059,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Slot _type_slots_IXamlMember[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlMember) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlMember) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlMember) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlMember) },
@@ -3019,7 +3071,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup._IXamlMember",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlMember),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXamlMember};
 
     struct ImplementsIXamlMember : py::ImplementsInterfaceT<ImplementsIXamlMember, winrt::Windows::UI::Xaml::Markup::IXamlMember>
@@ -3299,17 +3355,23 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup.IXamlMember",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXamlMember};
 
     // ----- IXamlMetadataProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXamlMetadataProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXamlMetadataProvider(py::wrapper::Windows::UI::Xaml::Markup::IXamlMetadataProvider* self) noexcept
     {
@@ -3453,7 +3515,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Slot _type_slots_IXamlMetadataProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlMetadataProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlMetadataProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlMetadataProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlMetadataProvider) },
@@ -3463,7 +3527,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup._IXamlMetadataProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlMetadataProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXamlMetadataProvider};
 
     struct ImplementsIXamlMetadataProvider : py::ImplementsInterfaceT<ImplementsIXamlMetadataProvider, winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>
@@ -3640,17 +3708,23 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup.IXamlMetadataProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXamlMetadataProvider};
 
     // ----- IXamlType interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXamlType(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlType>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlType>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXamlType(py::wrapper::Windows::UI::Xaml::Markup::IXamlType* self) noexcept
     {
@@ -4299,7 +4373,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Slot _type_slots_IXamlType[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlType) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlType) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlType) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlType) },
@@ -4309,7 +4385,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup._IXamlType",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlType),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXamlType};
 
     struct ImplementsIXamlType : py::ImplementsInterfaceT<ImplementsIXamlType, winrt::Windows::UI::Xaml::Markup::IXamlType>
@@ -4839,17 +4919,23 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup.IXamlType",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXamlType};
 
     // ----- IXamlType2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXamlType2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlType2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlType2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXamlType2(py::wrapper::Windows::UI::Xaml::Markup::IXamlType2* self) noexcept
     {
@@ -5529,7 +5615,9 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         { }};
 
     static PyType_Slot _type_slots_IXamlType2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXamlType2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXamlType2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXamlType2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXamlType2) },
@@ -5539,7 +5627,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup._IXamlType2",
         sizeof(py::wrapper::Windows::UI::Xaml::Markup::IXamlType2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXamlType2};
 
     struct ImplementsIXamlType2 : py::ImplementsInterfaceT<ImplementsIXamlType2, winrt::Windows::UI::Xaml::Markup::IXamlType2>
@@ -6089,7 +6181,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
         "winrt._winrt_windows_ui_xaml_markup.IXamlType2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXamlType2};
 
     // ----- XamlBinaryWriterErrorInformation struct --------------------

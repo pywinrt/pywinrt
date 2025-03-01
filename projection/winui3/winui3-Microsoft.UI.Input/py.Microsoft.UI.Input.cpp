@@ -13335,12 +13335,14 @@ namespace py::cpp::Microsoft::UI::Input
 
     // ----- IPointerPointTransform interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IPointerPointTransform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Input::IPointerPointTransform>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::IPointerPointTransform>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IPointerPointTransform(py::wrapper::Microsoft::UI::Input::IPointerPointTransform* self) noexcept
     {
@@ -13502,7 +13504,9 @@ namespace py::cpp::Microsoft::UI::Input
         { }};
 
     static PyType_Slot _type_slots_IPointerPointTransform[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IPointerPointTransform) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPointerPointTransform) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPointerPointTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPointerPointTransform) },
@@ -13512,7 +13516,11 @@ namespace py::cpp::Microsoft::UI::Input
         "winui3._winui3_microsoft_ui_input._IPointerPointTransform",
         sizeof(py::wrapper::Microsoft::UI::Input::IPointerPointTransform),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IPointerPointTransform};
 
     struct ImplementsIPointerPointTransform : py::ImplementsInterfaceT<ImplementsIPointerPointTransform, winrt::Microsoft::UI::Input::IPointerPointTransform>
@@ -13686,7 +13694,11 @@ namespace py::cpp::Microsoft::UI::Input
         "winui3._winui3_microsoft_ui_input.IPointerPointTransform",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIPointerPointTransform};
 
     // ----- CrossSlideThresholds struct --------------------

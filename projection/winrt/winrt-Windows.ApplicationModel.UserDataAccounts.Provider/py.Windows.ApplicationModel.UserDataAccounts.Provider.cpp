@@ -696,12 +696,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     // ----- IUserDataAccountProviderOperation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IUserDataAccountProviderOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IUserDataAccountProviderOperation(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation* self) noexcept
     {
@@ -749,7 +751,9 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         { }};
 
     static PyType_Slot _type_slots_IUserDataAccountProviderOperation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IUserDataAccountProviderOperation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IUserDataAccountProviderOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IUserDataAccountProviderOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IUserDataAccountProviderOperation) },
@@ -759,7 +763,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider._IUserDataAccountProviderOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IUserDataAccountProviderOperation};
 
     struct ImplementsIUserDataAccountProviderOperation : py::ImplementsInterfaceT<ImplementsIUserDataAccountProviderOperation, winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>
@@ -865,7 +873,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
         "winrt._winrt_windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIUserDataAccountProviderOperation};
 
     // ----- Windows.ApplicationModel.UserDataAccounts.Provider Initialization --------------------

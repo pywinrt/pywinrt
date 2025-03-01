@@ -406,12 +406,14 @@ namespace py::cpp::Windows::Devices
 
     // ----- ILowLevelDevicesAggregateProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ILowLevelDevicesAggregateProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ILowLevelDevicesAggregateProvider(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider* self) noexcept
     {
@@ -583,7 +585,9 @@ namespace py::cpp::Windows::Devices
         { }};
 
     static PyType_Slot _type_slots_ILowLevelDevicesAggregateProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ILowLevelDevicesAggregateProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILowLevelDevicesAggregateProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILowLevelDevicesAggregateProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILowLevelDevicesAggregateProvider) },
@@ -593,7 +597,11 @@ namespace py::cpp::Windows::Devices
         "winrt._winrt_windows_devices._ILowLevelDevicesAggregateProvider",
         sizeof(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ILowLevelDevicesAggregateProvider};
 
     struct ImplementsILowLevelDevicesAggregateProvider : py::ImplementsInterfaceT<ImplementsILowLevelDevicesAggregateProvider, winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>
@@ -779,7 +787,11 @@ namespace py::cpp::Windows::Devices
         "winrt._winrt_windows_devices.ILowLevelDevicesAggregateProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsILowLevelDevicesAggregateProvider};
 
     // ----- Windows.Devices Initialization --------------------

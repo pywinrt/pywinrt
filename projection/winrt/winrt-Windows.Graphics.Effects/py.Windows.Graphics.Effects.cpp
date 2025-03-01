@@ -6,12 +6,14 @@ namespace py::cpp::Windows::Graphics::Effects
 {
     // ----- IGraphicsEffect interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IGraphicsEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IGraphicsEffect(py::wrapper::Windows::Graphics::Effects::IGraphicsEffect* self) noexcept
     {
@@ -98,7 +100,9 @@ namespace py::cpp::Windows::Graphics::Effects
         { }};
 
     static PyType_Slot _type_slots_IGraphicsEffect[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IGraphicsEffect) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGraphicsEffect) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGraphicsEffect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGraphicsEffect) },
@@ -108,7 +112,11 @@ namespace py::cpp::Windows::Graphics::Effects
         "winrt._winrt_windows_graphics_effects._IGraphicsEffect",
         sizeof(py::wrapper::Windows::Graphics::Effects::IGraphicsEffect),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IGraphicsEffect};
 
     struct ImplementsIGraphicsEffect : py::ImplementsInterfaceT<ImplementsIGraphicsEffect, winrt::Windows::Graphics::Effects::IGraphicsEffect>
@@ -237,17 +245,23 @@ namespace py::cpp::Windows::Graphics::Effects
         "winrt._winrt_windows_graphics_effects.IGraphicsEffect",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIGraphicsEffect};
 
     // ----- IGraphicsEffectSource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IGraphicsEffectSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IGraphicsEffectSource(py::wrapper::Windows::Graphics::Effects::IGraphicsEffectSource* self) noexcept
     {
@@ -264,7 +278,9 @@ namespace py::cpp::Windows::Graphics::Effects
         { }};
 
     static PyType_Slot _type_slots_IGraphicsEffectSource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IGraphicsEffectSource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGraphicsEffectSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGraphicsEffectSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGraphicsEffectSource) },
@@ -274,7 +290,11 @@ namespace py::cpp::Windows::Graphics::Effects
         "winrt._winrt_windows_graphics_effects._IGraphicsEffectSource",
         sizeof(py::wrapper::Windows::Graphics::Effects::IGraphicsEffectSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IGraphicsEffectSource};
 
     struct ImplementsIGraphicsEffectSource : py::ImplementsInterfaceT<ImplementsIGraphicsEffectSource, winrt::Windows::Graphics::Effects::IGraphicsEffectSource>
@@ -360,7 +380,11 @@ namespace py::cpp::Windows::Graphics::Effects
         "winrt._winrt_windows_graphics_effects.IGraphicsEffectSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIGraphicsEffectSource};
 
     // ----- Windows.Graphics.Effects Initialization --------------------

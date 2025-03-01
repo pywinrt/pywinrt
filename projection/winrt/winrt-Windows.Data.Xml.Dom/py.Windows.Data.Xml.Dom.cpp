@@ -18898,12 +18898,14 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- IXmlCharacterData interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXmlCharacterData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXmlCharacterData(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self) noexcept
     {
@@ -20342,7 +20344,9 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Slot _type_slots_IXmlCharacterData[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlCharacterData) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlCharacterData) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlCharacterData) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlCharacterData) },
@@ -20352,7 +20356,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom._IXmlCharacterData",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXmlCharacterData};
 
     struct ImplementsIXmlCharacterData : py::ImplementsInterfaceT<ImplementsIXmlCharacterData, winrt::Windows::Data::Xml::Dom::IXmlCharacterData>
@@ -21488,17 +21496,23 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom.IXmlCharacterData",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXmlCharacterData};
 
     // ----- IXmlNode interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXmlNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXmlNode(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self) noexcept
     {
@@ -22612,7 +22626,9 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Slot _type_slots_IXmlNode[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNode) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNode) },
@@ -22622,7 +22638,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom._IXmlNode",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNode),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXmlNode};
 
     struct ImplementsIXmlNode : py::ImplementsInterfaceT<ImplementsIXmlNode, winrt::Windows::Data::Xml::Dom::IXmlNode>
@@ -23489,17 +23509,23 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom.IXmlNode",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXmlNode};
 
     // ----- IXmlNodeSelector interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXmlNodeSelector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXmlNodeSelector(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector* self) noexcept
     {
@@ -23690,7 +23716,9 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Slot _type_slots_IXmlNodeSelector[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNodeSelector) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNodeSelector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNodeSelector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNodeSelector) },
@@ -23700,7 +23728,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom._IXmlNodeSelector",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXmlNodeSelector};
 
     struct ImplementsIXmlNodeSelector : py::ImplementsInterfaceT<ImplementsIXmlNodeSelector, winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>
@@ -23938,17 +23970,23 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom.IXmlNodeSelector",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXmlNodeSelector};
 
     // ----- IXmlNodeSerializer interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXmlNodeSerializer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXmlNodeSerializer(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer* self) noexcept
     {
@@ -24076,7 +24114,9 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Slot _type_slots_IXmlNodeSerializer[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlNodeSerializer) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlNodeSerializer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlNodeSerializer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlNodeSerializer) },
@@ -24086,7 +24126,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom._IXmlNodeSerializer",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXmlNodeSerializer};
 
     struct ImplementsIXmlNodeSerializer : py::ImplementsInterfaceT<ImplementsIXmlNodeSerializer, winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>
@@ -24241,17 +24285,23 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom.IXmlNodeSerializer",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXmlNodeSerializer};
 
     // ----- IXmlText interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IXmlText(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlText>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlText>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IXmlText(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self) noexcept
     {
@@ -25733,7 +25783,9 @@ namespace py::cpp::Windows::Data::Xml::Dom
         { }};
 
     static PyType_Slot _type_slots_IXmlText[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IXmlText) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IXmlText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IXmlText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IXmlText) },
@@ -25743,7 +25795,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom._IXmlText",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlText),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IXmlText};
 
     struct ImplementsIXmlText : py::ImplementsInterfaceT<ImplementsIXmlText, winrt::Windows::Data::Xml::Dom::IXmlText>
@@ -26911,7 +26967,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
         "winrt._winrt_windows_data_xml_dom.IXmlText",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIXmlText};
 
     // ----- Windows.Data.Xml.Dom Initialization --------------------

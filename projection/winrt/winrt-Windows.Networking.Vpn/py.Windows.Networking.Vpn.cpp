@@ -12111,12 +12111,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnChannelStatics interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnChannelStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnChannelStatics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnChannelStatics>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnChannelStatics(py::wrapper::Windows::Networking::Vpn::IVpnChannelStatics* self) noexcept
     {
@@ -12178,7 +12180,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnChannelStatics[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnChannelStatics) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnChannelStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnChannelStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnChannelStatics) },
@@ -12188,7 +12192,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnChannelStatics",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnChannelStatics),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnChannelStatics};
 
     struct ImplementsIVpnChannelStatics : py::ImplementsInterfaceT<ImplementsIVpnChannelStatics, winrt::Windows::Networking::Vpn::IVpnChannelStatics>
@@ -12316,17 +12324,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnChannelStatics",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnChannelStatics};
 
     // ----- IVpnCredential interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnCredential(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnCredential>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnCredential>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnCredential(py::wrapper::Windows::Networking::Vpn::IVpnCredential* self) noexcept
     {
@@ -12467,7 +12481,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnCredential[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCredential) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCredential) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCredential) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCredential) },
@@ -12477,7 +12493,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnCredential",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnCredential),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnCredential};
 
     struct ImplementsIVpnCredential : py::ImplementsInterfaceT<ImplementsIVpnCredential, winrt::Windows::Networking::Vpn::IVpnCredential>
@@ -12643,17 +12663,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnCredential",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnCredential};
 
     // ----- IVpnCustomPrompt interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnCustomPrompt(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnCustomPrompt(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self) noexcept
     {
@@ -12880,7 +12906,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnCustomPrompt[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCustomPrompt) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCustomPrompt) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCustomPrompt) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCustomPrompt) },
@@ -12890,7 +12918,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnCustomPrompt",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnCustomPrompt};
 
     struct ImplementsIVpnCustomPrompt : py::ImplementsInterfaceT<ImplementsIVpnCustomPrompt, winrt::Windows::Networking::Vpn::IVpnCustomPrompt>
@@ -13105,17 +13137,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnCustomPrompt",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnCustomPrompt};
 
     // ----- IVpnCustomPromptElement interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnCustomPromptElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnCustomPromptElement(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self) noexcept
     {
@@ -13342,7 +13380,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnCustomPromptElement[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnCustomPromptElement) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnCustomPromptElement) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnCustomPromptElement) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnCustomPromptElement) },
@@ -13352,7 +13392,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnCustomPromptElement",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnCustomPromptElement};
 
     struct ImplementsIVpnCustomPromptElement : py::ImplementsInterfaceT<ImplementsIVpnCustomPromptElement, winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>
@@ -13567,17 +13611,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnCustomPromptElement",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnCustomPromptElement};
 
     // ----- IVpnDomainNameInfoFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnDomainNameInfoFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnDomainNameInfoFactory(py::wrapper::Windows::Networking::Vpn::IVpnDomainNameInfoFactory* self) noexcept
     {
@@ -13640,7 +13690,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnDomainNameInfoFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnDomainNameInfoFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnDomainNameInfoFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnDomainNameInfoFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnDomainNameInfoFactory) },
@@ -13650,7 +13702,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnDomainNameInfoFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnDomainNameInfoFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnDomainNameInfoFactory};
 
     struct ImplementsIVpnDomainNameInfoFactory : py::ImplementsInterfaceT<ImplementsIVpnDomainNameInfoFactory, winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>
@@ -13792,17 +13848,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnDomainNameInfoFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnDomainNameInfoFactory};
 
     // ----- IVpnInterfaceIdFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnInterfaceIdFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnInterfaceIdFactory(py::wrapper::Windows::Networking::Vpn::IVpnInterfaceIdFactory* self) noexcept
     {
@@ -13862,7 +13924,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnInterfaceIdFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnInterfaceIdFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnInterfaceIdFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnInterfaceIdFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnInterfaceIdFactory) },
@@ -13872,7 +13936,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnInterfaceIdFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnInterfaceIdFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnInterfaceIdFactory};
 
     struct ImplementsIVpnInterfaceIdFactory : py::ImplementsInterfaceT<ImplementsIVpnInterfaceIdFactory, winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>
@@ -13990,17 +14058,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnInterfaceIdFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnInterfaceIdFactory};
 
     // ----- IVpnNamespaceInfoFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnNamespaceInfoFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnNamespaceInfoFactory(py::wrapper::Windows::Networking::Vpn::IVpnNamespaceInfoFactory* self) noexcept
     {
@@ -14062,7 +14136,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnNamespaceInfoFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnNamespaceInfoFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnNamespaceInfoFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnNamespaceInfoFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnNamespaceInfoFactory) },
@@ -14072,7 +14148,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnNamespaceInfoFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnNamespaceInfoFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnNamespaceInfoFactory};
 
     struct ImplementsIVpnNamespaceInfoFactory : py::ImplementsInterfaceT<ImplementsIVpnNamespaceInfoFactory, winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>
@@ -14208,17 +14288,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnNamespaceInfoFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnNamespaceInfoFactory};
 
     // ----- IVpnPacketBufferFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnPacketBufferFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnPacketBufferFactory(py::wrapper::Windows::Networking::Vpn::IVpnPacketBufferFactory* self) noexcept
     {
@@ -14280,7 +14366,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnPacketBufferFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPacketBufferFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPacketBufferFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPacketBufferFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPacketBufferFactory) },
@@ -14290,7 +14378,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnPacketBufferFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnPacketBufferFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnPacketBufferFactory};
 
     struct ImplementsIVpnPacketBufferFactory : py::ImplementsInterfaceT<ImplementsIVpnPacketBufferFactory, winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>
@@ -14426,17 +14518,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnPacketBufferFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnPacketBufferFactory};
 
     // ----- IVpnPlugIn interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnPlugIn(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnPlugIn>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnPlugIn>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnPlugIn(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn* self) noexcept
     {
@@ -14685,7 +14783,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnPlugIn[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPlugIn) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPlugIn) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPlugIn) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPlugIn) },
@@ -14695,7 +14795,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnPlugIn",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnPlugIn};
 
     struct ImplementsIVpnPlugIn : py::ImplementsInterfaceT<ImplementsIVpnPlugIn, winrt::Windows::Networking::Vpn::IVpnPlugIn>
@@ -14975,17 +15079,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnPlugIn",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnPlugIn};
 
     // ----- IVpnPlugInReconnectTransport interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnPlugInReconnectTransport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnPlugInReconnectTransport(py::wrapper::Windows::Networking::Vpn::IVpnPlugInReconnectTransport* self) noexcept
     {
@@ -15047,7 +15157,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnPlugInReconnectTransport[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPlugInReconnectTransport) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPlugInReconnectTransport) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPlugInReconnectTransport) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPlugInReconnectTransport) },
@@ -15057,7 +15169,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnPlugInReconnectTransport",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnPlugInReconnectTransport),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnPlugInReconnectTransport};
 
     struct ImplementsIVpnPlugInReconnectTransport : py::ImplementsInterfaceT<ImplementsIVpnPlugInReconnectTransport, winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>
@@ -15185,17 +15301,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnPlugInReconnectTransport",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnPlugInReconnectTransport};
 
     // ----- IVpnProfile interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnProfile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnProfile>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnProfile>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnProfile(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self) noexcept
     {
@@ -15546,7 +15668,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnProfile[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnProfile) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnProfile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnProfile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnProfile) },
@@ -15556,7 +15680,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnProfile",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnProfile),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnProfile};
 
     struct ImplementsIVpnProfile : py::ImplementsInterfaceT<ImplementsIVpnProfile, winrt::Windows::Networking::Vpn::IVpnProfile>
@@ -15851,17 +15979,23 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnProfile",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnProfile};
 
     // ----- IVpnRouteFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVpnRouteFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnRouteFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnRouteFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVpnRouteFactory(py::wrapper::Windows::Networking::Vpn::IVpnRouteFactory* self) noexcept
     {
@@ -15922,7 +16056,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { }};
 
     static PyType_Slot _type_slots_IVpnRouteFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVpnRouteFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnRouteFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnRouteFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnRouteFactory) },
@@ -15932,7 +16068,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn._IVpnRouteFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnRouteFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVpnRouteFactory};
 
     struct ImplementsIVpnRouteFactory : py::ImplementsInterfaceT<ImplementsIVpnRouteFactory, winrt::Windows::Networking::Vpn::IVpnRouteFactory>
@@ -16062,7 +16202,11 @@ namespace py::cpp::Windows::Networking::Vpn
         "winrt._winrt_windows_networking_vpn.IVpnRouteFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVpnRouteFactory};
 
     // ----- Windows.Networking.Vpn Initialization --------------------

@@ -5846,12 +5846,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- IBackgroundTransferBase interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBackgroundTransferBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBackgroundTransferBase(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self) noexcept
     {
@@ -6263,7 +6265,9 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTransferBase[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTransferBase) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTransferBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTransferBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTransferBase) },
@@ -6273,7 +6277,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         "winrt._winrt_windows_networking_backgroundtransfer._IBackgroundTransferBase",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBackgroundTransferBase};
 
     struct ImplementsIBackgroundTransferBase : py::ImplementsInterfaceT<ImplementsIBackgroundTransferBase, winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>
@@ -6616,17 +6624,23 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferBase",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBackgroundTransferBase};
 
     // ----- IBackgroundTransferContentPartFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBackgroundTransferContentPartFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBackgroundTransferContentPartFactory(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory* self) noexcept
     {
@@ -6730,7 +6744,9 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTransferContentPartFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTransferContentPartFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTransferContentPartFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTransferContentPartFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTransferContentPartFactory) },
@@ -6740,7 +6756,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         "winrt._winrt_windows_networking_backgroundtransfer._IBackgroundTransferContentPartFactory",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBackgroundTransferContentPartFactory};
 
     struct ImplementsIBackgroundTransferContentPartFactory : py::ImplementsInterfaceT<ImplementsIBackgroundTransferContentPartFactory, winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>
@@ -6902,17 +6922,23 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferContentPartFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBackgroundTransferContentPartFactory};
 
     // ----- IBackgroundTransferOperation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBackgroundTransferOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBackgroundTransferOperation(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self) noexcept
     {
@@ -7207,7 +7233,9 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTransferOperation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTransferOperation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTransferOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTransferOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTransferOperation) },
@@ -7217,7 +7245,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         "winrt._winrt_windows_networking_backgroundtransfer._IBackgroundTransferOperation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBackgroundTransferOperation};
 
     struct ImplementsIBackgroundTransferOperation : py::ImplementsInterfaceT<ImplementsIBackgroundTransferOperation, winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>
@@ -7484,17 +7516,23 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBackgroundTransferOperation};
 
     // ----- IBackgroundTransferOperationPriority interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBackgroundTransferOperationPriority(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBackgroundTransferOperationPriority(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority* self) noexcept
     {
@@ -7581,7 +7619,9 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         { }};
 
     static PyType_Slot _type_slots_IBackgroundTransferOperationPriority[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBackgroundTransferOperationPriority) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBackgroundTransferOperationPriority) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBackgroundTransferOperationPriority) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBackgroundTransferOperationPriority) },
@@ -7591,7 +7631,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         "winrt._winrt_windows_networking_backgroundtransfer._IBackgroundTransferOperationPriority",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBackgroundTransferOperationPriority};
 
     struct ImplementsIBackgroundTransferOperationPriority : py::ImplementsInterfaceT<ImplementsIBackgroundTransferOperationPriority, winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>
@@ -7720,7 +7764,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         "winrt._winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperationPriority",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBackgroundTransferOperationPriority};
 
     // ----- BackgroundDownloadProgress struct --------------------

@@ -5606,12 +5606,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- INumberFormatter interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_INumberFormatter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_INumberFormatter(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self) noexcept
     {
@@ -5757,7 +5759,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }};
 
     static PyType_Slot _type_slots_INumberFormatter[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatter) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatter) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatter) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatter) },
@@ -5767,7 +5771,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting._INumberFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_INumberFormatter};
 
     struct ImplementsINumberFormatter : py::ImplementsInterfaceT<ImplementsINumberFormatter, winrt::Windows::Globalization::NumberFormatting::INumberFormatter>
@@ -5949,17 +5957,23 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatter",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsINumberFormatter};
 
     // ----- INumberFormatter2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_INumberFormatter2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_INumberFormatter2(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter2* self) noexcept
     {
@@ -6105,7 +6119,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }};
 
     static PyType_Slot _type_slots_INumberFormatter2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatter2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatter2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatter2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatter2) },
@@ -6115,7 +6131,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting._INumberFormatter2",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_INumberFormatter2};
 
     struct ImplementsINumberFormatter2 : py::ImplementsInterfaceT<ImplementsINumberFormatter2, winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>
@@ -6297,17 +6317,23 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatter2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsINumberFormatter2};
 
     // ----- INumberFormatterOptions interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_INumberFormatterOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_INumberFormatterOptions(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self) noexcept
     {
@@ -6798,7 +6824,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }};
 
     static PyType_Slot _type_slots_INumberFormatterOptions[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberFormatterOptions) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberFormatterOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberFormatterOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberFormatterOptions) },
@@ -6808,7 +6836,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting._INumberFormatterOptions",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_INumberFormatterOptions};
 
     struct ImplementsINumberFormatterOptions : py::ImplementsInterfaceT<ImplementsINumberFormatterOptions, winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>
@@ -7189,17 +7221,23 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting.INumberFormatterOptions",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsINumberFormatterOptions};
 
     // ----- INumberParser interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_INumberParser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_INumberParser(py::wrapper::Windows::Globalization::NumberFormatting::INumberParser* self) noexcept
     {
@@ -7345,7 +7383,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }};
 
     static PyType_Slot _type_slots_INumberParser[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberParser) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberParser) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberParser) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberParser) },
@@ -7355,7 +7395,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting._INumberParser",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberParser),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_INumberParser};
 
     struct ImplementsINumberParser : py::ImplementsInterfaceT<ImplementsINumberParser, winrt::Windows::Globalization::NumberFormatting::INumberParser>
@@ -7537,17 +7581,23 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting.INumberParser",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsINumberParser};
 
     // ----- INumberRounder interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_INumberRounder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_INumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder* self) noexcept
     {
@@ -7822,7 +7872,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }};
 
     static PyType_Slot _type_slots_INumberRounder[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberRounder) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberRounder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberRounder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberRounder) },
@@ -7832,7 +7884,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting._INumberRounder",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_INumberRounder};
 
     struct ImplementsINumberRounder : py::ImplementsInterfaceT<ImplementsINumberRounder, winrt::Windows::Globalization::NumberFormatting::INumberRounder>
@@ -8110,17 +8166,23 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting.INumberRounder",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsINumberRounder};
 
     // ----- INumberRounderOption interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_INumberRounderOption(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_INumberRounderOption(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounderOption* self) noexcept
     {
@@ -8207,7 +8269,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }};
 
     static PyType_Slot _type_slots_INumberRounderOption[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_INumberRounderOption) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INumberRounderOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INumberRounderOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INumberRounderOption) },
@@ -8217,7 +8281,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting._INumberRounderOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounderOption),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_INumberRounderOption};
 
     struct ImplementsINumberRounderOption : py::ImplementsInterfaceT<ImplementsINumberRounderOption, winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>
@@ -8346,17 +8414,23 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting.INumberRounderOption",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsINumberRounderOption};
 
     // ----- ISignedZeroOption interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISignedZeroOption(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISignedZeroOption(py::wrapper::Windows::Globalization::NumberFormatting::ISignedZeroOption* self) noexcept
     {
@@ -8443,7 +8517,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }};
 
     static PyType_Slot _type_slots_ISignedZeroOption[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISignedZeroOption) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISignedZeroOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISignedZeroOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISignedZeroOption) },
@@ -8453,7 +8529,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting._ISignedZeroOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::ISignedZeroOption),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISignedZeroOption};
 
     struct ImplementsISignedZeroOption : py::ImplementsInterfaceT<ImplementsISignedZeroOption, winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>
@@ -8582,17 +8662,23 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting.ISignedZeroOption",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISignedZeroOption};
 
     // ----- ISignificantDigitsOption interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISignificantDigitsOption(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISignificantDigitsOption(py::wrapper::Windows::Globalization::NumberFormatting::ISignificantDigitsOption* self) noexcept
     {
@@ -8679,7 +8765,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         { }};
 
     static PyType_Slot _type_slots_ISignificantDigitsOption[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISignificantDigitsOption) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISignificantDigitsOption) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISignificantDigitsOption) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISignificantDigitsOption) },
@@ -8689,7 +8777,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting._ISignificantDigitsOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::ISignificantDigitsOption),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISignificantDigitsOption};
 
     struct ImplementsISignificantDigitsOption : py::ImplementsInterfaceT<ImplementsISignificantDigitsOption, winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>
@@ -8818,7 +8910,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         "winrt._winrt_windows_globalization_numberformatting.ISignificantDigitsOption",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISignificantDigitsOption};
 
     // ----- Windows.Globalization.NumberFormatting Initialization --------------------

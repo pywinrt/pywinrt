@@ -11047,12 +11047,14 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ICoreAcceleratorKeys interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICoreAcceleratorKeys(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICoreAcceleratorKeys(py::wrapper::Windows::UI::Core::ICoreAcceleratorKeys* self) noexcept
     {
@@ -11136,7 +11138,9 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Slot _type_slots_ICoreAcceleratorKeys[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreAcceleratorKeys) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreAcceleratorKeys) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreAcceleratorKeys) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreAcceleratorKeys) },
@@ -11146,7 +11150,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core._ICoreAcceleratorKeys",
         sizeof(py::wrapper::Windows::UI::Core::ICoreAcceleratorKeys),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICoreAcceleratorKeys};
 
     struct ImplementsICoreAcceleratorKeys : py::ImplementsInterfaceT<ImplementsICoreAcceleratorKeys, winrt::Windows::UI::Core::ICoreAcceleratorKeys>
@@ -11294,17 +11302,23 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core.ICoreAcceleratorKeys",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICoreAcceleratorKeys};
 
     // ----- ICoreInputSourceBase interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICoreInputSourceBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICoreInputSourceBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICoreInputSourceBase>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICoreInputSourceBase(py::wrapper::Windows::UI::Core::ICoreInputSourceBase* self) noexcept
     {
@@ -11489,7 +11503,9 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Slot _type_slots_ICoreInputSourceBase[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreInputSourceBase) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreInputSourceBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreInputSourceBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreInputSourceBase) },
@@ -11499,7 +11515,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core._ICoreInputSourceBase",
         sizeof(py::wrapper::Windows::UI::Core::ICoreInputSourceBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICoreInputSourceBase};
 
     struct ImplementsICoreInputSourceBase : py::ImplementsInterfaceT<ImplementsICoreInputSourceBase, winrt::Windows::UI::Core::ICoreInputSourceBase>
@@ -11710,17 +11730,23 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core.ICoreInputSourceBase",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICoreInputSourceBase};
 
     // ----- ICorePointerInputSource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICorePointerInputSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICorePointerInputSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICorePointerInputSource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICorePointerInputSource(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self) noexcept
     {
@@ -12422,7 +12448,9 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Slot _type_slots_ICorePointerInputSource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICorePointerInputSource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICorePointerInputSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICorePointerInputSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICorePointerInputSource) },
@@ -12432,7 +12460,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core._ICorePointerInputSource",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerInputSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICorePointerInputSource};
 
     struct ImplementsICorePointerInputSource : py::ImplementsInterfaceT<ImplementsICorePointerInputSource, winrt::Windows::UI::Core::ICorePointerInputSource>
@@ -13083,17 +13115,23 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core.ICorePointerInputSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICorePointerInputSource};
 
     // ----- ICorePointerInputSource2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICorePointerInputSource2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICorePointerInputSource2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICorePointerInputSource2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICorePointerInputSource2(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self) noexcept
     {
@@ -13826,7 +13864,9 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Slot _type_slots_ICorePointerInputSource2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICorePointerInputSource2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICorePointerInputSource2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICorePointerInputSource2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICorePointerInputSource2) },
@@ -13836,7 +13876,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core._ICorePointerInputSource2",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerInputSource2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICorePointerInputSource2};
 
     struct ImplementsICorePointerInputSource2 : py::ImplementsInterfaceT<ImplementsICorePointerInputSource2, winrt::Windows::UI::Core::ICorePointerInputSource2>
@@ -14507,17 +14551,23 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core.ICorePointerInputSource2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICorePointerInputSource2};
 
     // ----- ICorePointerRedirector interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICorePointerRedirector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICorePointerRedirector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICorePointerRedirector>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICorePointerRedirector(py::wrapper::Windows::UI::Core::ICorePointerRedirector* self) noexcept
     {
@@ -14735,7 +14785,9 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Slot _type_slots_ICorePointerRedirector[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICorePointerRedirector) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICorePointerRedirector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICorePointerRedirector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICorePointerRedirector) },
@@ -14745,7 +14797,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core._ICorePointerRedirector",
         sizeof(py::wrapper::Windows::UI::Core::ICorePointerRedirector),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICorePointerRedirector};
 
     struct ImplementsICorePointerRedirector : py::ImplementsInterfaceT<ImplementsICorePointerRedirector, winrt::Windows::UI::Core::ICorePointerRedirector>
@@ -15017,17 +15073,23 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core.ICorePointerRedirector",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICorePointerRedirector};
 
     // ----- ICoreWindow interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICoreWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICoreWindow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICoreWindow>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICoreWindow(py::wrapper::Windows::UI::Core::ICoreWindow* self) noexcept
     {
@@ -16833,7 +16895,9 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Slot _type_slots_ICoreWindow[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreWindow) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreWindow) },
@@ -16843,7 +16907,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core._ICoreWindow",
         sizeof(py::wrapper::Windows::UI::Core::ICoreWindow),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICoreWindow};
 
     struct ImplementsICoreWindow : py::ImplementsInterfaceT<ImplementsICoreWindow, winrt::Windows::UI::Core::ICoreWindow>
@@ -18392,17 +18460,23 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core.ICoreWindow",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICoreWindow};
 
     // ----- ICoreWindowEventArgs interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICoreWindowEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICoreWindowEventArgs(py::wrapper::Windows::UI::Core::ICoreWindowEventArgs* self) noexcept
     {
@@ -18489,7 +18563,9 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Slot _type_slots_ICoreWindowEventArgs[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreWindowEventArgs) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreWindowEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreWindowEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreWindowEventArgs) },
@@ -18499,7 +18575,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core._ICoreWindowEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::ICoreWindowEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICoreWindowEventArgs};
 
     struct ImplementsICoreWindowEventArgs : py::ImplementsInterfaceT<ImplementsICoreWindowEventArgs, winrt::Windows::UI::Core::ICoreWindowEventArgs>
@@ -18628,17 +18708,23 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core.ICoreWindowEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICoreWindowEventArgs};
 
     // ----- IInitializeWithCoreWindow interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IInitializeWithCoreWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IInitializeWithCoreWindow(py::wrapper::Windows::UI::Core::IInitializeWithCoreWindow* self) noexcept
     {
@@ -18699,7 +18785,9 @@ namespace py::cpp::Windows::UI::Core
         { }};
 
     static PyType_Slot _type_slots_IInitializeWithCoreWindow[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IInitializeWithCoreWindow) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInitializeWithCoreWindow) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInitializeWithCoreWindow) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInitializeWithCoreWindow) },
@@ -18709,7 +18797,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core._IInitializeWithCoreWindow",
         sizeof(py::wrapper::Windows::UI::Core::IInitializeWithCoreWindow),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IInitializeWithCoreWindow};
 
     struct ImplementsIInitializeWithCoreWindow : py::ImplementsInterfaceT<ImplementsIInitializeWithCoreWindow, winrt::Windows::UI::Core::IInitializeWithCoreWindow>
@@ -18825,7 +18917,11 @@ namespace py::cpp::Windows::UI::Core
         "winrt._winrt_windows_ui_core.IInitializeWithCoreWindow",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIInitializeWithCoreWindow};
 
     // ----- CorePhysicalKeyStatus struct --------------------

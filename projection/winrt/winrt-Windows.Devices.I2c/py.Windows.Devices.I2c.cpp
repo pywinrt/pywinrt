@@ -1118,12 +1118,14 @@ namespace py::cpp::Windows::Devices::I2c
 
     // ----- II2cDeviceStatics interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_II2cDeviceStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_II2cDeviceStatics(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics* self) noexcept
     {
@@ -1268,7 +1270,9 @@ namespace py::cpp::Windows::Devices::I2c
         { }};
 
     static PyType_Slot _type_slots_II2cDeviceStatics[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_II2cDeviceStatics) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_II2cDeviceStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_II2cDeviceStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_II2cDeviceStatics) },
@@ -1278,7 +1282,11 @@ namespace py::cpp::Windows::Devices::I2c
         "winrt._winrt_windows_devices_i2c._II2cDeviceStatics",
         sizeof(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_II2cDeviceStatics};
 
     struct ImplementsII2cDeviceStatics : py::ImplementsInterfaceT<ImplementsII2cDeviceStatics, winrt::Windows::Devices::I2c::II2cDeviceStatics>
@@ -1466,7 +1474,11 @@ namespace py::cpp::Windows::Devices::I2c
         "winrt._winrt_windows_devices_i2c.II2cDeviceStatics",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsII2cDeviceStatics};
 
     // ----- I2cTransferResult struct --------------------

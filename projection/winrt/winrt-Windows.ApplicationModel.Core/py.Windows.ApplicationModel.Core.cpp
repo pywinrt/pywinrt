@@ -2572,12 +2572,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- ICoreApplicationUnhandledError interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICoreApplicationUnhandledError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICoreApplicationUnhandledError(py::wrapper::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError* self) noexcept
     {
@@ -2661,7 +2663,9 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Slot _type_slots_ICoreApplicationUnhandledError[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreApplicationUnhandledError) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreApplicationUnhandledError) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreApplicationUnhandledError) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreApplicationUnhandledError) },
@@ -2671,7 +2675,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
         "winrt._winrt_windows_applicationmodel_core._ICoreApplicationUnhandledError",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICoreApplicationUnhandledError};
 
     struct ImplementsICoreApplicationUnhandledError : py::ImplementsInterfaceT<ImplementsICoreApplicationUnhandledError, winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>
@@ -2819,17 +2827,23 @@ namespace py::cpp::Windows::ApplicationModel::Core
         "winrt._winrt_windows_applicationmodel_core.ICoreApplicationUnhandledError",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICoreApplicationUnhandledError};
 
     // ----- IFrameworkView interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IFrameworkView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IFrameworkView(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView* self) noexcept
     {
@@ -3062,7 +3076,9 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Slot _type_slots_IFrameworkView[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IFrameworkView) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFrameworkView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFrameworkView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFrameworkView) },
@@ -3072,7 +3088,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
         "winrt._winrt_windows_applicationmodel_core._IFrameworkView",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IFrameworkView};
 
     struct ImplementsIFrameworkView : py::ImplementsInterfaceT<ImplementsIFrameworkView, winrt::Windows::ApplicationModel::Core::IFrameworkView>
@@ -3296,17 +3316,23 @@ namespace py::cpp::Windows::ApplicationModel::Core
         "winrt._winrt_windows_applicationmodel_core.IFrameworkView",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIFrameworkView};
 
     // ----- IFrameworkViewSource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IFrameworkViewSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IFrameworkViewSource(py::wrapper::Windows::ApplicationModel::Core::IFrameworkViewSource* self) noexcept
     {
@@ -3364,7 +3390,9 @@ namespace py::cpp::Windows::ApplicationModel::Core
         { }};
 
     static PyType_Slot _type_slots_IFrameworkViewSource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IFrameworkViewSource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFrameworkViewSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IFrameworkViewSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IFrameworkViewSource) },
@@ -3374,7 +3402,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
         "winrt._winrt_windows_applicationmodel_core._IFrameworkViewSource",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::IFrameworkViewSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IFrameworkViewSource};
 
     struct ImplementsIFrameworkViewSource : py::ImplementsInterfaceT<ImplementsIFrameworkViewSource, winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>
@@ -3486,7 +3518,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
         "winrt._winrt_windows_applicationmodel_core.IFrameworkViewSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIFrameworkViewSource};
 
     // ----- Windows.ApplicationModel.Core Initialization --------------------

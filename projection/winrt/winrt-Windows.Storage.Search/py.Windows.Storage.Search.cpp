@@ -4776,12 +4776,14 @@ namespace py::cpp::Windows::Storage::Search
 
     // ----- IIndexableContent interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IIndexableContent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Search::IIndexableContent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::IIndexableContent>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IIndexableContent(py::wrapper::Windows::Storage::Search::IIndexableContent* self) noexcept
     {
@@ -5039,7 +5041,9 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Slot _type_slots_IIndexableContent[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IIndexableContent) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIndexableContent) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIndexableContent) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIndexableContent) },
@@ -5049,7 +5053,11 @@ namespace py::cpp::Windows::Storage::Search
         "winrt._winrt_windows_storage_search._IIndexableContent",
         sizeof(py::wrapper::Windows::Storage::Search::IIndexableContent),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IIndexableContent};
 
     struct ImplementsIIndexableContent : py::ImplementsInterfaceT<ImplementsIIndexableContent, winrt::Windows::Storage::Search::IIndexableContent>
@@ -5284,17 +5292,23 @@ namespace py::cpp::Windows::Storage::Search
         "winrt._winrt_windows_storage_search.IIndexableContent",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIIndexableContent};
 
     // ----- IStorageFolderQueryOperations interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageFolderQueryOperations(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageFolderQueryOperations(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self) noexcept
     {
@@ -6039,7 +6053,9 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Slot _type_slots_IStorageFolderQueryOperations[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageFolderQueryOperations) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageFolderQueryOperations) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageFolderQueryOperations) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageFolderQueryOperations) },
@@ -6049,7 +6065,11 @@ namespace py::cpp::Windows::Storage::Search
         "winrt._winrt_windows_storage_search._IStorageFolderQueryOperations",
         sizeof(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageFolderQueryOperations};
 
     struct ImplementsIStorageFolderQueryOperations : py::ImplementsInterfaceT<ImplementsIStorageFolderQueryOperations, winrt::Windows::Storage::Search::IStorageFolderQueryOperations>
@@ -6703,17 +6723,23 @@ namespace py::cpp::Windows::Storage::Search
         "winrt._winrt_windows_storage_search.IStorageFolderQueryOperations",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageFolderQueryOperations};
 
     // ----- IStorageQueryResultBase interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageQueryResultBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageQueryResultBase(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase* self) noexcept
     {
@@ -7064,7 +7090,9 @@ namespace py::cpp::Windows::Storage::Search
         { }};
 
     static PyType_Slot _type_slots_IStorageQueryResultBase[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageQueryResultBase) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageQueryResultBase) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageQueryResultBase) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageQueryResultBase) },
@@ -7074,7 +7102,11 @@ namespace py::cpp::Windows::Storage::Search
         "winrt._winrt_windows_storage_search._IStorageQueryResultBase",
         sizeof(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageQueryResultBase};
 
     struct ImplementsIStorageQueryResultBase : py::ImplementsInterfaceT<ImplementsIStorageQueryResultBase, winrt::Windows::Storage::Search::IStorageQueryResultBase>
@@ -7418,7 +7450,11 @@ namespace py::cpp::Windows::Storage::Search
         "winrt._winrt_windows_storage_search.IStorageQueryResultBase",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageQueryResultBase};
 
     // ----- SortEntry struct --------------------

@@ -2554,12 +2554,14 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- IWebViewControl interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebViewControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::IWebViewControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::IWebViewControl>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebViewControl(py::wrapper::Windows::Web::UI::IWebViewControl* self) noexcept
     {
@@ -4609,7 +4611,9 @@ namespace py::cpp::Windows::Web::UI
         { }};
 
     static PyType_Slot _type_slots_IWebViewControl[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebViewControl) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebViewControl) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebViewControl) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebViewControl) },
@@ -4619,7 +4623,11 @@ namespace py::cpp::Windows::Web::UI
         "winrt._winrt_windows_web_ui._IWebViewControl",
         sizeof(py::wrapper::Windows::Web::UI::IWebViewControl),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebViewControl};
 
     struct ImplementsIWebViewControl : py::ImplementsInterfaceT<ImplementsIWebViewControl, winrt::Windows::Web::UI::IWebViewControl>
@@ -6371,17 +6379,23 @@ namespace py::cpp::Windows::Web::UI
         "winrt._winrt_windows_web_ui.IWebViewControl",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebViewControl};
 
     // ----- IWebViewControl2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebViewControl2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::IWebViewControl2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::IWebViewControl2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebViewControl2(py::wrapper::Windows::Web::UI::IWebViewControl2* self) noexcept
     {
@@ -6442,7 +6456,9 @@ namespace py::cpp::Windows::Web::UI
         { }};
 
     static PyType_Slot _type_slots_IWebViewControl2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebViewControl2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebViewControl2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebViewControl2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebViewControl2) },
@@ -6452,7 +6468,11 @@ namespace py::cpp::Windows::Web::UI
         "winrt._winrt_windows_web_ui._IWebViewControl2",
         sizeof(py::wrapper::Windows::Web::UI::IWebViewControl2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebViewControl2};
 
     struct ImplementsIWebViewControl2 : py::ImplementsInterfaceT<ImplementsIWebViewControl2, winrt::Windows::Web::UI::IWebViewControl2>
@@ -6568,7 +6588,11 @@ namespace py::cpp::Windows::Web::UI
         "winrt._winrt_windows_web_ui.IWebViewControl2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebViewControl2};
 
     // ----- Windows.Web.UI Initialization --------------------

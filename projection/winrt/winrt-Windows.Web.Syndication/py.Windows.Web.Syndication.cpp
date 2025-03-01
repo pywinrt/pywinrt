@@ -9498,12 +9498,14 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- ISyndicationClient interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISyndicationClient(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Syndication::ISyndicationClient>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Syndication::ISyndicationClient>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISyndicationClient(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self) noexcept
     {
@@ -9958,7 +9960,9 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Slot _type_slots_ISyndicationClient[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationClient) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationClient) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationClient) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationClient) },
@@ -9968,7 +9972,11 @@ namespace py::cpp::Windows::Web::Syndication
         "winrt._winrt_windows_web_syndication._ISyndicationClient",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationClient),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISyndicationClient};
 
     struct ImplementsISyndicationClient : py::ImplementsInterfaceT<ImplementsISyndicationClient, winrt::Windows::Web::Syndication::ISyndicationClient>
@@ -10343,17 +10351,23 @@ namespace py::cpp::Windows::Web::Syndication
         "winrt._winrt_windows_web_syndication.ISyndicationClient",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISyndicationClient};
 
     // ----- ISyndicationNode interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISyndicationNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Syndication::ISyndicationNode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Syndication::ISyndicationNode>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISyndicationNode(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self) noexcept
     {
@@ -10825,7 +10839,9 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Slot _type_slots_ISyndicationNode[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationNode) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationNode) },
@@ -10835,7 +10851,11 @@ namespace py::cpp::Windows::Web::Syndication
         "winrt._winrt_windows_web_syndication._ISyndicationNode",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationNode),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISyndicationNode};
 
     struct ImplementsISyndicationNode : py::ImplementsInterfaceT<ImplementsISyndicationNode, winrt::Windows::Web::Syndication::ISyndicationNode>
@@ -11208,17 +11228,23 @@ namespace py::cpp::Windows::Web::Syndication
         "winrt._winrt_windows_web_syndication.ISyndicationNode",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISyndicationNode};
 
     // ----- ISyndicationText interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISyndicationText(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Syndication::ISyndicationText>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Syndication::ISyndicationText>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISyndicationText(py::wrapper::Windows::Web::Syndication::ISyndicationText* self) noexcept
     {
@@ -11900,7 +11926,9 @@ namespace py::cpp::Windows::Web::Syndication
         { }};
 
     static PyType_Slot _type_slots_ISyndicationText[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISyndicationText) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISyndicationText) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISyndicationText) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISyndicationText) },
@@ -11910,7 +11938,11 @@ namespace py::cpp::Windows::Web::Syndication
         "winrt._winrt_windows_web_syndication._ISyndicationText",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationText),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISyndicationText};
 
     struct ImplementsISyndicationText : py::ImplementsInterfaceT<ImplementsISyndicationText, winrt::Windows::Web::Syndication::ISyndicationText>
@@ -12412,7 +12444,11 @@ namespace py::cpp::Windows::Web::Syndication
         "winrt._winrt_windows_web_syndication.ISyndicationText",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISyndicationText};
 
     // ----- RetrievalProgress struct --------------------

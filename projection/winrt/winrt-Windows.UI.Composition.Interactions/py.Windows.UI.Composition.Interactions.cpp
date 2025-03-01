@@ -6114,12 +6114,14 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- ICompositionInteractionSource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICompositionInteractionSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICompositionInteractionSource(py::wrapper::Windows::UI::Composition::Interactions::ICompositionInteractionSource* self) noexcept
     {
@@ -6136,7 +6138,9 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }};
 
     static PyType_Slot _type_slots_ICompositionInteractionSource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICompositionInteractionSource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICompositionInteractionSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICompositionInteractionSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICompositionInteractionSource) },
@@ -6146,7 +6150,11 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions._ICompositionInteractionSource",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::ICompositionInteractionSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICompositionInteractionSource};
 
     struct ImplementsICompositionInteractionSource : py::ImplementsInterfaceT<ImplementsICompositionInteractionSource, winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>
@@ -6232,17 +6240,23 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions.ICompositionInteractionSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICompositionInteractionSource};
 
     // ----- IInteractionTrackerOwner interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IInteractionTrackerOwner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IInteractionTrackerOwner(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner* self) noexcept
     {
@@ -6529,7 +6543,9 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         { }};
 
     static PyType_Slot _type_slots_IInteractionTrackerOwner[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IInteractionTrackerOwner) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInteractionTrackerOwner) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInteractionTrackerOwner) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInteractionTrackerOwner) },
@@ -6539,7 +6555,11 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions._IInteractionTrackerOwner",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IInteractionTrackerOwner};
 
     struct ImplementsIInteractionTrackerOwner : py::ImplementsInterfaceT<ImplementsIInteractionTrackerOwner, winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>
@@ -6877,7 +6897,11 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions.IInteractionTrackerOwner",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIInteractionTrackerOwner};
 
     // ----- Windows.UI.Composition.Interactions Initialization --------------------

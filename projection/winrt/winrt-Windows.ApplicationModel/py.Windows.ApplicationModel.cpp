@@ -9124,12 +9124,14 @@ namespace py::cpp::Windows::ApplicationModel
 
     // ----- IEnteredBackgroundEventArgs interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IEnteredBackgroundEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IEnteredBackgroundEventArgs(py::wrapper::Windows::ApplicationModel::IEnteredBackgroundEventArgs* self) noexcept
     {
@@ -9187,7 +9189,9 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Slot _type_slots_IEnteredBackgroundEventArgs[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IEnteredBackgroundEventArgs) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IEnteredBackgroundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IEnteredBackgroundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IEnteredBackgroundEventArgs) },
@@ -9197,7 +9201,11 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel._IEnteredBackgroundEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::IEnteredBackgroundEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IEnteredBackgroundEventArgs};
 
     struct ImplementsIEnteredBackgroundEventArgs : py::ImplementsInterfaceT<ImplementsIEnteredBackgroundEventArgs, winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>
@@ -9309,17 +9317,23 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel.IEnteredBackgroundEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIEnteredBackgroundEventArgs};
 
     // ----- ILeavingBackgroundEventArgs interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ILeavingBackgroundEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ILeavingBackgroundEventArgs(py::wrapper::Windows::ApplicationModel::ILeavingBackgroundEventArgs* self) noexcept
     {
@@ -9377,7 +9391,9 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Slot _type_slots_ILeavingBackgroundEventArgs[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ILeavingBackgroundEventArgs) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILeavingBackgroundEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILeavingBackgroundEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILeavingBackgroundEventArgs) },
@@ -9387,7 +9403,11 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel._ILeavingBackgroundEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ILeavingBackgroundEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ILeavingBackgroundEventArgs};
 
     struct ImplementsILeavingBackgroundEventArgs : py::ImplementsInterfaceT<ImplementsILeavingBackgroundEventArgs, winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>
@@ -9499,17 +9519,23 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel.ILeavingBackgroundEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsILeavingBackgroundEventArgs};
 
     // ----- IPackageCatalogStatics2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IPackageCatalogStatics2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IPackageCatalogStatics2(py::wrapper::Windows::ApplicationModel::IPackageCatalogStatics2* self) noexcept
     {
@@ -9569,7 +9595,9 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Slot _type_slots_IPackageCatalogStatics2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IPackageCatalogStatics2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPackageCatalogStatics2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPackageCatalogStatics2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPackageCatalogStatics2) },
@@ -9579,7 +9607,11 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel._IPackageCatalogStatics2",
         sizeof(py::wrapper::Windows::ApplicationModel::IPackageCatalogStatics2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IPackageCatalogStatics2};
 
     struct ImplementsIPackageCatalogStatics2 : py::ImplementsInterfaceT<ImplementsIPackageCatalogStatics2, winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
@@ -9697,17 +9729,23 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel.IPackageCatalogStatics2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIPackageCatalogStatics2};
 
     // ----- ISuspendingDeferral interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISuspendingDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ISuspendingDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ISuspendingDeferral>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISuspendingDeferral(py::wrapper::Windows::ApplicationModel::ISuspendingDeferral* self) noexcept
     {
@@ -9766,7 +9804,9 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Slot _type_slots_ISuspendingDeferral[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISuspendingDeferral) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISuspendingDeferral) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISuspendingDeferral) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISuspendingDeferral) },
@@ -9776,7 +9816,11 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel._ISuspendingDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingDeferral),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISuspendingDeferral};
 
     struct ImplementsISuspendingDeferral : py::ImplementsInterfaceT<ImplementsISuspendingDeferral, winrt::Windows::ApplicationModel::ISuspendingDeferral>
@@ -9886,17 +9930,23 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel.ISuspendingDeferral",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISuspendingDeferral};
 
     // ----- ISuspendingEventArgs interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISuspendingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ISuspendingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ISuspendingEventArgs>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISuspendingEventArgs(py::wrapper::Windows::ApplicationModel::ISuspendingEventArgs* self) noexcept
     {
@@ -9944,7 +9994,9 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Slot _type_slots_ISuspendingEventArgs[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISuspendingEventArgs) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISuspendingEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISuspendingEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISuspendingEventArgs) },
@@ -9954,7 +10006,11 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel._ISuspendingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISuspendingEventArgs};
 
     struct ImplementsISuspendingEventArgs : py::ImplementsInterfaceT<ImplementsISuspendingEventArgs, winrt::Windows::ApplicationModel::ISuspendingEventArgs>
@@ -10060,17 +10116,23 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel.ISuspendingEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISuspendingEventArgs};
 
     // ----- ISuspendingOperation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISuspendingOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ISuspendingOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ISuspendingOperation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISuspendingOperation(py::wrapper::Windows::ApplicationModel::ISuspendingOperation* self) noexcept
     {
@@ -10159,7 +10221,9 @@ namespace py::cpp::Windows::ApplicationModel
         { }};
 
     static PyType_Slot _type_slots_ISuspendingOperation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISuspendingOperation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISuspendingOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISuspendingOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISuspendingOperation) },
@@ -10169,7 +10233,11 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel._ISuspendingOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingOperation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISuspendingOperation};
 
     struct ImplementsISuspendingOperation : py::ImplementsInterfaceT<ImplementsISuspendingOperation, winrt::Windows::ApplicationModel::ISuspendingOperation>
@@ -10301,7 +10369,11 @@ namespace py::cpp::Windows::ApplicationModel
         "winrt._winrt_windows_applicationmodel.ISuspendingOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISuspendingOperation};
 
     // ----- PackageInstallProgress struct --------------------

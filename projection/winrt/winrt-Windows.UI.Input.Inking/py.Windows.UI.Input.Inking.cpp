@@ -9632,12 +9632,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     // ----- IInkPointFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IInkPointFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkPointFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkPointFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IInkPointFactory(py::wrapper::Windows::UI::Input::Inking::IInkPointFactory* self) noexcept
     {
@@ -9698,7 +9700,9 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Slot _type_slots_IInkPointFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkPointFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkPointFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkPointFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkPointFactory) },
@@ -9708,7 +9712,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking._IInkPointFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPointFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IInkPointFactory};
 
     struct ImplementsIInkPointFactory : py::ImplementsInterfaceT<ImplementsIInkPointFactory, winrt::Windows::UI::Input::Inking::IInkPointFactory>
@@ -9838,17 +9846,23 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking.IInkPointFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIInkPointFactory};
 
     // ----- IInkPresenterRulerFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IInkPresenterRulerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IInkPresenterRulerFactory(py::wrapper::Windows::UI::Input::Inking::IInkPresenterRulerFactory* self) noexcept
     {
@@ -9908,7 +9922,9 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Slot _type_slots_IInkPresenterRulerFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkPresenterRulerFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkPresenterRulerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkPresenterRulerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkPresenterRulerFactory) },
@@ -9918,7 +9934,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking._IInkPresenterRulerFactory",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPresenterRulerFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IInkPresenterRulerFactory};
 
     struct ImplementsIInkPresenterRulerFactory : py::ImplementsInterfaceT<ImplementsIInkPresenterRulerFactory, winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>
@@ -10036,17 +10056,23 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking.IInkPresenterRulerFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIInkPresenterRulerFactory};
 
     // ----- IInkPresenterStencil interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IInkPresenterStencil(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IInkPresenterStencil(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self) noexcept
     {
@@ -10374,7 +10400,9 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Slot _type_slots_IInkPresenterStencil[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkPresenterStencil) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkPresenterStencil) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkPresenterStencil) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkPresenterStencil) },
@@ -10384,7 +10412,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking._IInkPresenterStencil",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IInkPresenterStencil};
 
     struct ImplementsIInkPresenterStencil : py::ImplementsInterfaceT<ImplementsIInkPresenterStencil, winrt::Windows::UI::Input::Inking::IInkPresenterStencil>
@@ -10662,17 +10694,23 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking.IInkPresenterStencil",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIInkPresenterStencil};
 
     // ----- IInkRecognizerContainer interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IInkRecognizerContainer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IInkRecognizerContainer(py::wrapper::Windows::UI::Input::Inking::IInkRecognizerContainer* self) noexcept
     {
@@ -10818,7 +10856,9 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Slot _type_slots_IInkRecognizerContainer[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkRecognizerContainer) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkRecognizerContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkRecognizerContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkRecognizerContainer) },
@@ -10828,7 +10868,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking._IInkRecognizerContainer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkRecognizerContainer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IInkRecognizerContainer};
 
     struct ImplementsIInkRecognizerContainer : py::ImplementsInterfaceT<ImplementsIInkRecognizerContainer, winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>
@@ -11014,17 +11058,23 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking.IInkRecognizerContainer",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIInkRecognizerContainer};
 
     // ----- IInkStrokeContainer interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IInkStrokeContainer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IInkStrokeContainer(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self) noexcept
     {
@@ -11625,7 +11675,9 @@ namespace py::cpp::Windows::UI::Input::Inking
         { }};
 
     static PyType_Slot _type_slots_IInkStrokeContainer[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IInkStrokeContainer) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInkStrokeContainer) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInkStrokeContainer) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInkStrokeContainer) },
@@ -11635,7 +11687,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking._IInkStrokeContainer",
         sizeof(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IInkStrokeContainer};
 
     struct ImplementsIInkStrokeContainer : py::ImplementsInterfaceT<ImplementsIInkStrokeContainer, winrt::Windows::UI::Input::Inking::IInkStrokeContainer>
@@ -12133,7 +12189,11 @@ namespace py::cpp::Windows::UI::Input::Inking
         "winrt._winrt_windows_ui_input_inking.IInkStrokeContainer",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIInkStrokeContainer};
 
     // ----- Windows.UI.Input.Inking Initialization --------------------

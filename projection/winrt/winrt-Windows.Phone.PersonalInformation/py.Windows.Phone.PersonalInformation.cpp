@@ -4561,12 +4561,14 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     // ----- IContactInformation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IContactInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IContactInformation(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self) noexcept
     {
@@ -5173,7 +5175,9 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }};
 
     static PyType_Slot _type_slots_IContactInformation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactInformation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactInformation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactInformation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactInformation) },
@@ -5183,7 +5187,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         "winrt._winrt_windows_phone_personalinformation._IContactInformation",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IContactInformation};
 
     struct ImplementsIContactInformation : py::ImplementsInterfaceT<ImplementsIContactInformation, winrt::Windows::Phone::PersonalInformation::IContactInformation>
@@ -5646,17 +5654,23 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         "winrt._winrt_windows_phone_personalinformation.IContactInformation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIContactInformation};
 
     // ----- IContactInformation2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IContactInformation2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IContactInformation2(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation2* self) noexcept
     {
@@ -5743,7 +5757,9 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { }};
 
     static PyType_Slot _type_slots_IContactInformation2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IContactInformation2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IContactInformation2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IContactInformation2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IContactInformation2) },
@@ -5753,7 +5769,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         "winrt._winrt_windows_phone_personalinformation._IContactInformation2",
         sizeof(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IContactInformation2};
 
     struct ImplementsIContactInformation2 : py::ImplementsInterfaceT<ImplementsIContactInformation2, winrt::Windows::Phone::PersonalInformation::IContactInformation2>
@@ -5882,7 +5902,11 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         "winrt._winrt_windows_phone_personalinformation.IContactInformation2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIContactInformation2};
 
     // ----- Windows.Phone.PersonalInformation Initialization --------------------

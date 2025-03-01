@@ -39405,12 +39405,14 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
     // ----- IScrollController interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IScrollController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IScrollController(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollController* self) noexcept
     {
@@ -40036,7 +40038,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { }};
 
     static PyType_Slot _type_slots_IScrollController[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollController) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollController) },
@@ -40046,7 +40050,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         "winui3._winui3_microsoft_ui_xaml_controls_primitives._IScrollController",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollController),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IScrollController};
 
     struct ImplementsIScrollController : py::ImplementsInterfaceT<ImplementsIScrollController, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollController>
@@ -40672,17 +40680,23 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         "winui3._winui3_microsoft_ui_xaml_controls_primitives.IScrollController",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIScrollController};
 
     // ----- IScrollControllerPanningInfo interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IScrollControllerPanningInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IScrollControllerPanningInfo(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo* self) noexcept
     {
@@ -40974,7 +40988,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { }};
 
     static PyType_Slot _type_slots_IScrollControllerPanningInfo[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollControllerPanningInfo) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollControllerPanningInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollControllerPanningInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollControllerPanningInfo) },
@@ -40984,7 +41000,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         "winui3._winui3_microsoft_ui_xaml_controls_primitives._IScrollControllerPanningInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IScrollControllerPanningInfo};
 
     struct ImplementsIScrollControllerPanningInfo : py::ImplementsInterfaceT<ImplementsIScrollControllerPanningInfo, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollControllerPanningInfo>
@@ -41314,17 +41334,23 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         "winui3._winui3_microsoft_ui_xaml_controls_primitives.IScrollControllerPanningInfo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIScrollControllerPanningInfo};
 
     // ----- IScrollSnapPointsInfo interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IScrollSnapPointsInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IScrollSnapPointsInfo(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self) noexcept
     {
@@ -41639,7 +41665,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         { }};
 
     static PyType_Slot _type_slots_IScrollSnapPointsInfo[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollSnapPointsInfo) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollSnapPointsInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollSnapPointsInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollSnapPointsInfo) },
@@ -41649,7 +41677,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         "winui3._winui3_microsoft_ui_xaml_controls_primitives._IScrollSnapPointsInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IScrollSnapPointsInfo};
 
     struct ImplementsIScrollSnapPointsInfo : py::ImplementsInterfaceT<ImplementsIScrollSnapPointsInfo, winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>
@@ -41989,7 +42021,11 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         "winui3._winui3_microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIScrollSnapPointsInfo};
 
     // ----- GeneratorPosition struct --------------------

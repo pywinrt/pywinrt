@@ -5094,12 +5094,14 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- IGameController interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IGameController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::IGameController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::IGameController>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IGameController(py::wrapper::Windows::Gaming::Input::IGameController* self) noexcept
     {
@@ -5410,7 +5412,9 @@ namespace py::cpp::Windows::Gaming::Input
         { }};
 
     static PyType_Slot _type_slots_IGameController[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameController) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameController) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameController) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameController) },
@@ -5420,7 +5424,11 @@ namespace py::cpp::Windows::Gaming::Input
         "winrt._winrt_windows_gaming_input._IGameController",
         sizeof(py::wrapper::Windows::Gaming::Input::IGameController),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IGameController};
 
     struct ImplementsIGameController : py::ImplementsInterfaceT<ImplementsIGameController, winrt::Windows::Gaming::Input::IGameController>
@@ -5752,17 +5760,23 @@ namespace py::cpp::Windows::Gaming::Input
         "winrt._winrt_windows_gaming_input.IGameController",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIGameController};
 
     // ----- IGameControllerBatteryInfo interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IGameControllerBatteryInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IGameControllerBatteryInfo(py::wrapper::Windows::Gaming::Input::IGameControllerBatteryInfo* self) noexcept
     {
@@ -5820,7 +5834,9 @@ namespace py::cpp::Windows::Gaming::Input
         { }};
 
     static PyType_Slot _type_slots_IGameControllerBatteryInfo[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IGameControllerBatteryInfo) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGameControllerBatteryInfo) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGameControllerBatteryInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGameControllerBatteryInfo) },
@@ -5830,7 +5846,11 @@ namespace py::cpp::Windows::Gaming::Input
         "winrt._winrt_windows_gaming_input._IGameControllerBatteryInfo",
         sizeof(py::wrapper::Windows::Gaming::Input::IGameControllerBatteryInfo),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IGameControllerBatteryInfo};
 
     struct ImplementsIGameControllerBatteryInfo : py::ImplementsInterfaceT<ImplementsIGameControllerBatteryInfo, winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>
@@ -5942,7 +5962,11 @@ namespace py::cpp::Windows::Gaming::Input
         "winrt._winrt_windows_gaming_input.IGameControllerBatteryInfo",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIGameControllerBatteryInfo};
 
     // ----- ArcadeStickReading struct --------------------
