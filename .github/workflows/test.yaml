@@ -60,6 +60,9 @@ jobs:
           - mingw64
           - ucrt64
           - clang64
+        include:
+          - sys: mingw32
+            jobs: -j2
     name: 'Building on MSYS ${{ matrix.sys }}'
     defaults:
       run:
@@ -81,7 +84,7 @@ jobs:
       - name: configure
         run: ${MINGW_PREFIX}/bin/cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -DPython3_ROOT_DIR=${MINGW_PREFIX}
       - name: build
-        run: ${MINGW_PREFIX}/bin/cmake --build _build/projection --verbose
+        run: ${MINGW_PREFIX}/bin/cmake --build _build/projection --verbose ${{ matrix.jobs }}
       - name: install
         run: ${MINGW_PREFIX}/bin/cmake --install _build/projection --prefix _install/projection
       - name: test
