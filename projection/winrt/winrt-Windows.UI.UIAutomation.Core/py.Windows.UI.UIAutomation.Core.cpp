@@ -1775,12 +1775,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- ICoreAutomationConnectionBoundObjectProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICoreAutomationConnectionBoundObjectProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICoreAutomationConnectionBoundObjectProvider(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider* self) noexcept
     {
@@ -1828,7 +1830,9 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }};
 
     static PyType_Slot _type_slots_ICoreAutomationConnectionBoundObjectProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreAutomationConnectionBoundObjectProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreAutomationConnectionBoundObjectProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreAutomationConnectionBoundObjectProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreAutomationConnectionBoundObjectProvider) },
@@ -1838,7 +1842,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         "winrt._winrt_windows_ui_uiautomation_core._ICoreAutomationConnectionBoundObjectProvider",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICoreAutomationConnectionBoundObjectProvider};
 
     struct ImplementsICoreAutomationConnectionBoundObjectProvider : py::ImplementsInterfaceT<ImplementsICoreAutomationConnectionBoundObjectProvider, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>
@@ -1944,17 +1952,23 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationConnectionBoundObjectProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICoreAutomationConnectionBoundObjectProvider};
 
     // ----- ICoreAutomationRemoteOperationExtensionProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICoreAutomationRemoteOperationExtensionProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICoreAutomationRemoteOperationExtensionProvider(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider* self) noexcept
     {
@@ -2060,7 +2074,9 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         { }};
 
     static PyType_Slot _type_slots_ICoreAutomationRemoteOperationExtensionProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICoreAutomationRemoteOperationExtensionProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICoreAutomationRemoteOperationExtensionProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICoreAutomationRemoteOperationExtensionProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICoreAutomationRemoteOperationExtensionProvider) },
@@ -2070,7 +2086,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         "winrt._winrt_windows_ui_uiautomation_core._ICoreAutomationRemoteOperationExtensionProvider",
         sizeof(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICoreAutomationRemoteOperationExtensionProvider};
 
     struct ImplementsICoreAutomationRemoteOperationExtensionProvider : py::ImplementsInterfaceT<ImplementsICoreAutomationRemoteOperationExtensionProvider, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>
@@ -2236,7 +2256,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         "winrt._winrt_windows_ui_uiautomation_core.ICoreAutomationRemoteOperationExtensionProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICoreAutomationRemoteOperationExtensionProvider};
 
     // ----- AutomationAnnotationTypeRegistration struct --------------------

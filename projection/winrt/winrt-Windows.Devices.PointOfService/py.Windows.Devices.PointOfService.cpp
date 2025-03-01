@@ -31841,12 +31841,14 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ICashDrawerEventSourceEventArgs interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICashDrawerEventSourceEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICashDrawerEventSourceEventArgs(py::wrapper::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs* self) noexcept
     {
@@ -31894,7 +31896,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Slot _type_slots_ICashDrawerEventSourceEventArgs[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICashDrawerEventSourceEventArgs) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICashDrawerEventSourceEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICashDrawerEventSourceEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICashDrawerEventSourceEventArgs) },
@@ -31904,7 +31908,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice._ICashDrawerEventSourceEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICashDrawerEventSourceEventArgs};
 
     struct ImplementsICashDrawerEventSourceEventArgs : py::ImplementsInterfaceT<ImplementsICashDrawerEventSourceEventArgs, winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>
@@ -32010,17 +32018,23 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice.ICashDrawerEventSourceEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICashDrawerEventSourceEventArgs};
 
     // ----- ICommonClaimedPosPrinterStation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICommonClaimedPosPrinterStation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICommonClaimedPosPrinterStation(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation* self) noexcept
     {
@@ -32678,7 +32692,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Slot _type_slots_ICommonClaimedPosPrinterStation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommonClaimedPosPrinterStation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommonClaimedPosPrinterStation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommonClaimedPosPrinterStation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommonClaimedPosPrinterStation) },
@@ -32688,7 +32704,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice._ICommonClaimedPosPrinterStation",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICommonClaimedPosPrinterStation};
 
     struct ImplementsICommonClaimedPosPrinterStation : py::ImplementsInterfaceT<ImplementsICommonClaimedPosPrinterStation, winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
@@ -33181,17 +33201,23 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice.ICommonClaimedPosPrinterStation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICommonClaimedPosPrinterStation};
 
     // ----- ICommonPosPrintStationCapabilities interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICommonPosPrintStationCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICommonPosPrintStationCapabilities(py::wrapper::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities* self) noexcept
     {
@@ -33611,7 +33637,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Slot _type_slots_ICommonPosPrintStationCapabilities[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommonPosPrintStationCapabilities) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommonPosPrintStationCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommonPosPrintStationCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommonPosPrintStationCapabilities) },
@@ -33621,7 +33649,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice._ICommonPosPrintStationCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICommonPosPrintStationCapabilities};
 
     struct ImplementsICommonPosPrintStationCapabilities : py::ImplementsInterfaceT<ImplementsICommonPosPrintStationCapabilities, winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>
@@ -33967,17 +33999,23 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice.ICommonPosPrintStationCapabilities",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICommonPosPrintStationCapabilities};
 
     // ----- ICommonReceiptSlipCapabilities interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICommonReceiptSlipCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICommonReceiptSlipCapabilities(py::wrapper::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities* self) noexcept
     {
@@ -34676,7 +34714,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Slot _type_slots_ICommonReceiptSlipCapabilities[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICommonReceiptSlipCapabilities) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICommonReceiptSlipCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICommonReceiptSlipCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICommonReceiptSlipCapabilities) },
@@ -34686,7 +34726,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice._ICommonReceiptSlipCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICommonReceiptSlipCapabilities};
 
     struct ImplementsICommonReceiptSlipCapabilities : py::ImplementsInterfaceT<ImplementsICommonReceiptSlipCapabilities, winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>
@@ -35212,17 +35256,23 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice.ICommonReceiptSlipCapabilities",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICommonReceiptSlipCapabilities};
 
     // ----- IPosPrinterJob interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IPosPrinterJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::IPosPrinterJob>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::IPosPrinterJob>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IPosPrinterJob(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob* self) noexcept
     {
@@ -35410,7 +35460,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Slot _type_slots_IPosPrinterJob[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IPosPrinterJob) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPosPrinterJob) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPosPrinterJob) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPosPrinterJob) },
@@ -35420,7 +35472,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice._IPosPrinterJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IPosPrinterJob};
 
     struct ImplementsIPosPrinterJob : py::ImplementsInterfaceT<ImplementsIPosPrinterJob, winrt::Windows::Devices::PointOfService::IPosPrinterJob>
@@ -35616,17 +35672,23 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice.IPosPrinterJob",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIPosPrinterJob};
 
     // ----- IReceiptOrSlipJob interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IReceiptOrSlipJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IReceiptOrSlipJob(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self) noexcept
     {
@@ -36505,7 +36567,9 @@ namespace py::cpp::Windows::Devices::PointOfService
         { }};
 
     static PyType_Slot _type_slots_IReceiptOrSlipJob[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IReceiptOrSlipJob) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IReceiptOrSlipJob) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IReceiptOrSlipJob) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IReceiptOrSlipJob) },
@@ -36515,7 +36579,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice._IReceiptOrSlipJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IReceiptOrSlipJob};
 
     struct ImplementsIReceiptOrSlipJob : py::ImplementsInterfaceT<ImplementsIReceiptOrSlipJob, winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>
@@ -37419,7 +37487,11 @@ namespace py::cpp::Windows::Devices::PointOfService
         "winrt._winrt_windows_devices_pointofservice.IReceiptOrSlipJob",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIReceiptOrSlipJob};
 
     // ----- SizeUInt32 struct --------------------

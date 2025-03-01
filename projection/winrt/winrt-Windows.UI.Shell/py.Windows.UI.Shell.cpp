@@ -4864,12 +4864,14 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- IAdaptiveCard interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IAdaptiveCard(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCard>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCard>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IAdaptiveCard(py::wrapper::Windows::UI::Shell::IAdaptiveCard* self) noexcept
     {
@@ -4927,7 +4929,9 @@ namespace py::cpp::Windows::UI::Shell
         { }};
 
     static PyType_Slot _type_slots_IAdaptiveCard[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdaptiveCard) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdaptiveCard) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdaptiveCard) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdaptiveCard) },
@@ -4937,7 +4941,11 @@ namespace py::cpp::Windows::UI::Shell
         "winrt._winrt_windows_ui_shell._IAdaptiveCard",
         sizeof(py::wrapper::Windows::UI::Shell::IAdaptiveCard),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IAdaptiveCard};
 
     struct ImplementsIAdaptiveCard : py::ImplementsInterfaceT<ImplementsIAdaptiveCard, winrt::Windows::UI::Shell::IAdaptiveCard>
@@ -5049,17 +5057,23 @@ namespace py::cpp::Windows::UI::Shell
         "winrt._winrt_windows_ui_shell.IAdaptiveCard",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIAdaptiveCard};
 
     // ----- IAdaptiveCardBuilderStatics interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IAdaptiveCardBuilderStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IAdaptiveCardBuilderStatics(py::wrapper::Windows::UI::Shell::IAdaptiveCardBuilderStatics* self) noexcept
     {
@@ -5119,7 +5133,9 @@ namespace py::cpp::Windows::UI::Shell
         { }};
 
     static PyType_Slot _type_slots_IAdaptiveCardBuilderStatics[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IAdaptiveCardBuilderStatics) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAdaptiveCardBuilderStatics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAdaptiveCardBuilderStatics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAdaptiveCardBuilderStatics) },
@@ -5129,7 +5145,11 @@ namespace py::cpp::Windows::UI::Shell
         "winrt._winrt_windows_ui_shell._IAdaptiveCardBuilderStatics",
         sizeof(py::wrapper::Windows::UI::Shell::IAdaptiveCardBuilderStatics),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IAdaptiveCardBuilderStatics};
 
     struct ImplementsIAdaptiveCardBuilderStatics : py::ImplementsInterfaceT<ImplementsIAdaptiveCardBuilderStatics, winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>
@@ -5247,7 +5267,11 @@ namespace py::cpp::Windows::UI::Shell
         "winrt._winrt_windows_ui_shell.IAdaptiveCardBuilderStatics",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIAdaptiveCardBuilderStatics};
 
     // ----- Windows.UI.Shell Initialization --------------------

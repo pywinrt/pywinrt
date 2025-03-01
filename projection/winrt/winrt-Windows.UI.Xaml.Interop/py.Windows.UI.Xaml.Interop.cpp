@@ -338,12 +338,14 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- IBindableIterable interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBindableIterable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBindableIterable(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterable* self) noexcept
     {
@@ -401,7 +403,9 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { }};
 
     static PyType_Slot _type_slots_IBindableIterable[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableIterable) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableIterable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableIterable) },
@@ -411,7 +415,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop._IBindableIterable",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterable),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBindableIterable};
 
     struct ImplementsIBindableIterable : py::ImplementsInterfaceT<ImplementsIBindableIterable, winrt::Windows::UI::Xaml::Interop::IBindableIterable>
@@ -523,17 +531,23 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop.IBindableIterable",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBindableIterable};
 
     // ----- IBindableIterator interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBindableIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBindableIterator(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterator* self) noexcept
     {
@@ -653,7 +667,9 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { }};
 
     static PyType_Slot _type_slots_IBindableIterator[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableIterator) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableIterator) },
@@ -663,7 +679,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop._IBindableIterator",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterator),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBindableIterator};
 
     struct ImplementsIBindableIterator : py::ImplementsInterfaceT<ImplementsIBindableIterator, winrt::Windows::UI::Xaml::Interop::IBindableIterator>
@@ -815,17 +835,23 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop.IBindableIterator",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBindableIterator};
 
     // ----- IBindableObservableVector interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBindableObservableVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBindableObservableVector(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self) noexcept
     {
@@ -1384,7 +1410,9 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { }};
 
     static PyType_Slot _type_slots_IBindableObservableVector[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableObservableVector) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableObservableVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableObservableVector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableObservableVector) },
@@ -1394,7 +1422,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop._IBindableObservableVector",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBindableObservableVector};
 
     struct ImplementsIBindableObservableVector : py::ImplementsInterfaceT<ImplementsIBindableObservableVector, winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>
@@ -1872,17 +1904,23 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop.IBindableObservableVector",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBindableObservableVector};
 
     // ----- IBindableVector interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBindableVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBindableVector(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self) noexcept
     {
@@ -2374,7 +2412,9 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { }};
 
     static PyType_Slot _type_slots_IBindableVector[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableVector) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableVector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableVector) },
@@ -2384,7 +2424,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop._IBindableVector",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBindableVector};
 
     struct ImplementsIBindableVector : py::ImplementsInterfaceT<ImplementsIBindableVector, winrt::Windows::UI::Xaml::Interop::IBindableVector>
@@ -2800,17 +2844,23 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop.IBindableVector",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBindableVector};
 
     // ----- IBindableVectorView interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IBindableVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IBindableVectorView(py::wrapper::Windows::UI::Xaml::Interop::IBindableVectorView* self) noexcept
     {
@@ -2999,7 +3049,9 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { }};
 
     static PyType_Slot _type_slots_IBindableVectorView[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IBindableVectorView) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IBindableVectorView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IBindableVectorView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IBindableVectorView) },
@@ -3009,7 +3061,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop._IBindableVectorView",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::IBindableVectorView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IBindableVectorView};
 
     struct ImplementsIBindableVectorView : py::ImplementsInterfaceT<ImplementsIBindableVectorView, winrt::Windows::UI::Xaml::Interop::IBindableVectorView>
@@ -3207,17 +3263,23 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop.IBindableVectorView",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIBindableVectorView};
 
     // ----- INotifyCollectionChanged interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_INotifyCollectionChanged(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_INotifyCollectionChanged(py::wrapper::Windows::UI::Xaml::Interop::INotifyCollectionChanged* self) noexcept
     {
@@ -3301,7 +3363,9 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         { }};
 
     static PyType_Slot _type_slots_INotifyCollectionChanged[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_INotifyCollectionChanged) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_INotifyCollectionChanged) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_INotifyCollectionChanged) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_INotifyCollectionChanged) },
@@ -3311,7 +3375,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop._INotifyCollectionChanged",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::INotifyCollectionChanged),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_INotifyCollectionChanged};
 
     struct ImplementsINotifyCollectionChanged : py::ImplementsInterfaceT<ImplementsINotifyCollectionChanged, winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>
@@ -3459,7 +3527,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop.INotifyCollectionChanged",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsINotifyCollectionChanged};
 
     // ----- TypeName struct --------------------

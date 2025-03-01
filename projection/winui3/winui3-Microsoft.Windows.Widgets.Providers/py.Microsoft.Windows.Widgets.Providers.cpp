@@ -1785,12 +1785,14 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
 
     // ----- IWidgetManager interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWidgetManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWidgetManager(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager* self) noexcept
     {
@@ -2020,7 +2022,9 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Slot _type_slots_IWidgetManager[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWidgetManager) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWidgetManager) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWidgetManager) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWidgetManager) },
@@ -2030,7 +2034,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers._IWidgetManager",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWidgetManager};
 
     struct ImplementsIWidgetManager : py::ImplementsInterfaceT<ImplementsIWidgetManager, winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>
@@ -2262,17 +2270,23 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers.IWidgetManager",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWidgetManager};
 
     // ----- IWidgetProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWidgetProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWidgetProvider(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider* self) noexcept
     {
@@ -2554,7 +2568,9 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Slot _type_slots_IWidgetProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWidgetProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWidgetProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWidgetProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWidgetProvider) },
@@ -2564,7 +2580,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers._IWidgetProvider",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWidgetProvider};
 
     struct ImplementsIWidgetProvider : py::ImplementsInterfaceT<ImplementsIWidgetProvider, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>
@@ -2842,17 +2862,23 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers.IWidgetProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWidgetProvider};
 
     // ----- IWidgetProvider2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWidgetProvider2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWidgetProvider2(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider2* self) noexcept
     {
@@ -2913,7 +2939,9 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Slot _type_slots_IWidgetProvider2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWidgetProvider2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWidgetProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWidgetProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWidgetProvider2) },
@@ -2923,7 +2951,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers._IWidgetProvider2",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProvider2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWidgetProvider2};
 
     struct ImplementsIWidgetProvider2 : py::ImplementsInterfaceT<ImplementsIWidgetProvider2, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>
@@ -3039,17 +3071,23 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers.IWidgetProvider2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWidgetProvider2};
 
     // ----- IWidgetProviderAnalytics interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWidgetProviderAnalytics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWidgetProviderAnalytics(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics* self) noexcept
     {
@@ -3110,7 +3148,9 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Slot _type_slots_IWidgetProviderAnalytics[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWidgetProviderAnalytics) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWidgetProviderAnalytics) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWidgetProviderAnalytics) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWidgetProviderAnalytics) },
@@ -3120,7 +3160,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers._IWidgetProviderAnalytics",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWidgetProviderAnalytics};
 
     struct ImplementsIWidgetProviderAnalytics : py::ImplementsInterfaceT<ImplementsIWidgetProviderAnalytics, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>
@@ -3236,17 +3280,23 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers.IWidgetProviderAnalytics",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWidgetProviderAnalytics};
 
     // ----- IWidgetProviderErrors interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWidgetProviderErrors(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWidgetProviderErrors(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors* self) noexcept
     {
@@ -3307,7 +3357,9 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { }};
 
     static PyType_Slot _type_slots_IWidgetProviderErrors[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWidgetProviderErrors) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWidgetProviderErrors) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWidgetProviderErrors) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWidgetProviderErrors) },
@@ -3317,7 +3369,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers._IWidgetProviderErrors",
         sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWidgetProviderErrors};
 
     struct ImplementsIWidgetProviderErrors : py::ImplementsInterfaceT<ImplementsIWidgetProviderErrors, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>
@@ -3433,7 +3489,11 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         "winui3._winui3_microsoft_windows_widgets_providers.IWidgetProviderErrors",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWidgetProviderErrors};
 
     // ----- Microsoft.Windows.Widgets.Providers Initialization --------------------

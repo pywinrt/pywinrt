@@ -8858,12 +8858,14 @@ namespace py::cpp::Windows::Media
 
     // ----- IMediaExtension interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IMediaExtension(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::IMediaExtension>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::IMediaExtension>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IMediaExtension(py::wrapper::Windows::Media::IMediaExtension* self) noexcept
     {
@@ -8924,7 +8926,9 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Slot _type_slots_IMediaExtension[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaExtension) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaExtension) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaExtension) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaExtension) },
@@ -8934,7 +8938,11 @@ namespace py::cpp::Windows::Media
         "winrt._winrt_windows_media._IMediaExtension",
         sizeof(py::wrapper::Windows::Media::IMediaExtension),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IMediaExtension};
 
     struct ImplementsIMediaExtension : py::ImplementsInterfaceT<ImplementsIMediaExtension, winrt::Windows::Media::IMediaExtension>
@@ -9050,17 +9058,23 @@ namespace py::cpp::Windows::Media
         "winrt._winrt_windows_media.IMediaExtension",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIMediaExtension};
 
     // ----- IMediaFrame interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IMediaFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::IMediaFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::IMediaFrame>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IMediaFrame(py::wrapper::Windows::Media::IMediaFrame* self) noexcept
     {
@@ -9517,7 +9531,9 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Slot _type_slots_IMediaFrame[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaFrame) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaFrame) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaFrame) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaFrame) },
@@ -9527,7 +9543,11 @@ namespace py::cpp::Windows::Media
         "winrt._winrt_windows_media._IMediaFrame",
         sizeof(py::wrapper::Windows::Media::IMediaFrame),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IMediaFrame};
 
     struct ImplementsIMediaFrame : py::ImplementsInterfaceT<ImplementsIMediaFrame, winrt::Windows::Media::IMediaFrame>
@@ -9869,17 +9889,23 @@ namespace py::cpp::Windows::Media
         "winrt._winrt_windows_media.IMediaFrame",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIMediaFrame};
 
     // ----- IMediaMarker interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IMediaMarker(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::IMediaMarker>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::IMediaMarker>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IMediaMarker(py::wrapper::Windows::Media::IMediaMarker* self) noexcept
     {
@@ -9989,7 +10015,9 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Slot _type_slots_IMediaMarker[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaMarker) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaMarker) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaMarker) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaMarker) },
@@ -9999,7 +10027,11 @@ namespace py::cpp::Windows::Media
         "winrt._winrt_windows_media._IMediaMarker",
         sizeof(py::wrapper::Windows::Media::IMediaMarker),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IMediaMarker};
 
     struct ImplementsIMediaMarker : py::ImplementsInterfaceT<ImplementsIMediaMarker, winrt::Windows::Media::IMediaMarker>
@@ -10145,17 +10177,23 @@ namespace py::cpp::Windows::Media
         "winrt._winrt_windows_media.IMediaMarker",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIMediaMarker};
 
     // ----- IMediaMarkers interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IMediaMarkers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::IMediaMarkers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::IMediaMarkers>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IMediaMarkers(py::wrapper::Windows::Media::IMediaMarkers* self) noexcept
     {
@@ -10203,7 +10241,9 @@ namespace py::cpp::Windows::Media
         { }};
 
     static PyType_Slot _type_slots_IMediaMarkers[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IMediaMarkers) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMediaMarkers) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMediaMarkers) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMediaMarkers) },
@@ -10213,7 +10253,11 @@ namespace py::cpp::Windows::Media
         "winrt._winrt_windows_media._IMediaMarkers",
         sizeof(py::wrapper::Windows::Media::IMediaMarkers),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IMediaMarkers};
 
     struct ImplementsIMediaMarkers : py::ImplementsInterfaceT<ImplementsIMediaMarkers, winrt::Windows::Media::IMediaMarkers>
@@ -10319,7 +10363,11 @@ namespace py::cpp::Windows::Media
         "winrt._winrt_windows_media.IMediaMarkers",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIMediaMarkers};
 
     // ----- MediaTimeRange struct --------------------

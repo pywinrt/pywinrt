@@ -10338,12 +10338,14 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- IAppointmentParticipant interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IAppointmentParticipant(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IAppointmentParticipant(py::wrapper::Windows::ApplicationModel::Appointments::IAppointmentParticipant* self) noexcept
     {
@@ -10500,7 +10502,9 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { }};
 
     static PyType_Slot _type_slots_IAppointmentParticipant[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IAppointmentParticipant) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAppointmentParticipant) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAppointmentParticipant) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAppointmentParticipant) },
@@ -10510,7 +10514,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         "winrt._winrt_windows_applicationmodel_appointments._IAppointmentParticipant",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::IAppointmentParticipant),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IAppointmentParticipant};
 
     struct ImplementsIAppointmentParticipant : py::ImplementsInterfaceT<ImplementsIAppointmentParticipant, winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>
@@ -10682,7 +10690,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         "winrt._winrt_windows_applicationmodel_appointments.IAppointmentParticipant",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIAppointmentParticipant};
 
     // ----- Windows.ApplicationModel.Appointments Initialization --------------------

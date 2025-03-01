@@ -13017,12 +13017,14 @@ namespace py::cpp::Windows::System
 
     // ----- ILauncherViewOptions interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ILauncherViewOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::ILauncherViewOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::ILauncherViewOptions>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ILauncherViewOptions(py::wrapper::Windows::System::ILauncherViewOptions* self) noexcept
     {
@@ -13109,7 +13111,9 @@ namespace py::cpp::Windows::System
         { }};
 
     static PyType_Slot _type_slots_ILauncherViewOptions[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ILauncherViewOptions) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ILauncherViewOptions) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ILauncherViewOptions) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ILauncherViewOptions) },
@@ -13119,7 +13123,11 @@ namespace py::cpp::Windows::System
         "winrt._winrt_windows_system._ILauncherViewOptions",
         sizeof(py::wrapper::Windows::System::ILauncherViewOptions),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ILauncherViewOptions};
 
     struct ImplementsILauncherViewOptions : py::ImplementsInterfaceT<ImplementsILauncherViewOptions, winrt::Windows::System::ILauncherViewOptions>
@@ -13248,7 +13256,11 @@ namespace py::cpp::Windows::System
         "winrt._winrt_windows_system.ILauncherViewOptions",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsILauncherViewOptions};
 
     // ----- Windows.System Initialization --------------------

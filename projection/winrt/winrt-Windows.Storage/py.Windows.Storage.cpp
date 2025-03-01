@@ -15177,12 +15177,14 @@ namespace py::cpp::Windows::Storage
 
     // ----- IStorageFile interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageFile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageFile>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageFile>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageFile(py::wrapper::Windows::Storage::IStorageFile* self) noexcept
     {
@@ -16156,7 +16158,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageFile[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageFile) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageFile) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageFile) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageFile) },
@@ -16166,7 +16170,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageFile",
         sizeof(py::wrapper::Windows::Storage::IStorageFile),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageFile};
 
     struct ImplementsIStorageFile : py::ImplementsInterfaceT<ImplementsIStorageFile, winrt::Windows::Storage::IStorageFile>
@@ -16990,17 +16998,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageFile",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageFile};
 
     // ----- IStorageFile2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageFile2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageFile2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageFile2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageFile2(py::wrapper::Windows::Storage::IStorageFile2* self) noexcept
     {
@@ -17104,7 +17118,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageFile2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageFile2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageFile2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageFile2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageFile2) },
@@ -17114,7 +17130,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageFile2",
         sizeof(py::wrapper::Windows::Storage::IStorageFile2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageFile2};
 
     struct ImplementsIStorageFile2 : py::ImplementsInterfaceT<ImplementsIStorageFile2, winrt::Windows::Storage::IStorageFile2>
@@ -17276,17 +17296,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageFile2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageFile2};
 
     // ----- IStorageFilePropertiesWithAvailability interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageFilePropertiesWithAvailability(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageFilePropertiesWithAvailability(py::wrapper::Windows::Storage::IStorageFilePropertiesWithAvailability* self) noexcept
     {
@@ -17334,7 +17360,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageFilePropertiesWithAvailability[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageFilePropertiesWithAvailability) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageFilePropertiesWithAvailability) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageFilePropertiesWithAvailability) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageFilePropertiesWithAvailability) },
@@ -17344,7 +17372,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageFilePropertiesWithAvailability",
         sizeof(py::wrapper::Windows::Storage::IStorageFilePropertiesWithAvailability),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageFilePropertiesWithAvailability};
 
     struct ImplementsIStorageFilePropertiesWithAvailability : py::ImplementsInterfaceT<ImplementsIStorageFilePropertiesWithAvailability, winrt::Windows::Storage::IStorageFilePropertiesWithAvailability>
@@ -17450,17 +17482,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageFilePropertiesWithAvailability",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageFilePropertiesWithAvailability};
 
     // ----- IStorageFolder interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageFolder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageFolder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageFolder>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageFolder(py::wrapper::Windows::Storage::IStorageFolder* self) noexcept
     {
@@ -18282,7 +18320,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageFolder[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageFolder) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageFolder) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageFolder) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageFolder) },
@@ -18292,7 +18332,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageFolder",
         sizeof(py::wrapper::Windows::Storage::IStorageFolder),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageFolder};
 
     struct ImplementsIStorageFolder : py::ImplementsInterfaceT<ImplementsIStorageFolder, winrt::Windows::Storage::IStorageFolder>
@@ -18976,17 +19020,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageFolder",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageFolder};
 
     // ----- IStorageFolder2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageFolder2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageFolder2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageFolder2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageFolder2(py::wrapper::Windows::Storage::IStorageFolder2* self) noexcept
     {
@@ -19046,7 +19096,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageFolder2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageFolder2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageFolder2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageFolder2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageFolder2) },
@@ -19056,7 +19108,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageFolder2",
         sizeof(py::wrapper::Windows::Storage::IStorageFolder2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageFolder2};
 
     struct ImplementsIStorageFolder2 : py::ImplementsInterfaceT<ImplementsIStorageFolder2, winrt::Windows::Storage::IStorageFolder2>
@@ -19174,17 +19230,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageFolder2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageFolder2};
 
     // ----- IStorageItem interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageItem>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageItem(py::wrapper::Windows::Storage::IStorageItem* self) noexcept
     {
@@ -19580,7 +19642,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageItem[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItem) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItem) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItem) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItem) },
@@ -19590,7 +19654,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageItem",
         sizeof(py::wrapper::Windows::Storage::IStorageItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageItem};
 
     struct ImplementsIStorageItem : py::ImplementsInterfaceT<ImplementsIStorageItem, winrt::Windows::Storage::IStorageItem>
@@ -19948,17 +20016,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageItem",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageItem};
 
     // ----- IStorageItem2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageItem2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageItem2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageItem2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageItem2(py::wrapper::Windows::Storage::IStorageItem2* self) noexcept
     {
@@ -20438,7 +20512,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageItem2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItem2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItem2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItem2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItem2) },
@@ -20448,7 +20524,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageItem2",
         sizeof(py::wrapper::Windows::Storage::IStorageItem2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageItem2};
 
     struct ImplementsIStorageItem2 : py::ImplementsInterfaceT<ImplementsIStorageItem2, winrt::Windows::Storage::IStorageItem2>
@@ -20864,17 +20944,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageItem2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageItem2};
 
     // ----- IStorageItemProperties interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageItemProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageItemProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageItemProperties>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageItemProperties(py::wrapper::Windows::Storage::IStorageItemProperties* self) noexcept
     {
@@ -21147,7 +21233,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageItemProperties[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemProperties) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemProperties) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemProperties) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemProperties) },
@@ -21157,7 +21245,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageItemProperties",
         sizeof(py::wrapper::Windows::Storage::IStorageItemProperties),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageItemProperties};
 
     struct ImplementsIStorageItemProperties : py::ImplementsInterfaceT<ImplementsIStorageItemProperties, winrt::Windows::Storage::IStorageItemProperties>
@@ -21449,17 +21541,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageItemProperties",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageItemProperties};
 
     // ----- IStorageItemProperties2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageItemProperties2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageItemProperties2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageItemProperties2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageItemProperties2(py::wrapper::Windows::Storage::IStorageItemProperties2* self) noexcept
     {
@@ -21864,7 +21962,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageItemProperties2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemProperties2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemProperties2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemProperties2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemProperties2) },
@@ -21874,7 +21974,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageItemProperties2",
         sizeof(py::wrapper::Windows::Storage::IStorageItemProperties2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageItemProperties2};
 
     struct ImplementsIStorageItemProperties2 : py::ImplementsInterfaceT<ImplementsIStorageItemProperties2, winrt::Windows::Storage::IStorageItemProperties2>
@@ -22292,17 +22396,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageItemProperties2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageItemProperties2};
 
     // ----- IStorageItemPropertiesWithProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageItemPropertiesWithProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStorageItemPropertiesWithProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageItemPropertiesWithProvider(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider* self) noexcept
     {
@@ -22606,7 +22716,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStorageItemPropertiesWithProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemPropertiesWithProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemPropertiesWithProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemPropertiesWithProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemPropertiesWithProvider) },
@@ -22616,7 +22728,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStorageItemPropertiesWithProvider",
         sizeof(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageItemPropertiesWithProvider};
 
     struct ImplementsIStorageItemPropertiesWithProvider : py::ImplementsInterfaceT<ImplementsIStorageItemPropertiesWithProvider, winrt::Windows::Storage::IStorageItemPropertiesWithProvider>
@@ -22928,17 +23044,23 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStorageItemPropertiesWithProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageItemPropertiesWithProvider};
 
     // ----- IStreamedFileDataRequest interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStreamedFileDataRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::IStreamedFileDataRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::IStreamedFileDataRequest>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStreamedFileDataRequest(py::wrapper::Windows::Storage::IStreamedFileDataRequest* self) noexcept
     {
@@ -22999,7 +23121,9 @@ namespace py::cpp::Windows::Storage
         { }};
 
     static PyType_Slot _type_slots_IStreamedFileDataRequest[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStreamedFileDataRequest) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStreamedFileDataRequest) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStreamedFileDataRequest) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStreamedFileDataRequest) },
@@ -23009,7 +23133,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage._IStreamedFileDataRequest",
         sizeof(py::wrapper::Windows::Storage::IStreamedFileDataRequest),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStreamedFileDataRequest};
 
     struct ImplementsIStreamedFileDataRequest : py::ImplementsInterfaceT<ImplementsIStreamedFileDataRequest, winrt::Windows::Storage::IStreamedFileDataRequest>
@@ -23125,7 +23253,11 @@ namespace py::cpp::Windows::Storage
         "winrt._winrt_windows_storage.IStreamedFileDataRequest",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStreamedFileDataRequest};
 
     // ----- Windows.Storage Initialization --------------------

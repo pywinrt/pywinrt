@@ -1860,12 +1860,14 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IIterable interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IIterable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IIterable>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IIterable>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IIterable(py::wrapper::Windows::Foundation::Collections::IIterable* self) noexcept
     {
@@ -1895,7 +1897,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IIterable[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IIterable) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIterable) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIterable) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIterable) },
@@ -1906,7 +1910,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IIterable",
         sizeof(py::wrapper::Windows::Foundation::Collections::IIterable),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IIterable};
 
     static PyObject* _guid_ImplementsIIterable(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1959,17 +1967,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IIterable",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIIterable};
 
     // ----- IIterator interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IIterator>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IIterator(py::wrapper::Windows::Foundation::Collections::IIterator* self) noexcept
     {
@@ -2064,7 +2078,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IIterator[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IIterator) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IIterator) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IIterator) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IIterator) },
@@ -2076,7 +2092,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IIterator",
         sizeof(py::wrapper::Windows::Foundation::Collections::IIterator),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IIterator};
 
     static PyObject* _guid_ImplementsIIterator(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2129,17 +2149,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IIterator",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIIterator};
 
     // ----- IKeyValuePair interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IKeyValuePair(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IKeyValuePair>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IKeyValuePair>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IKeyValuePair(py::wrapper::Windows::Foundation::Collections::IKeyValuePair* self) noexcept
     {
@@ -2212,7 +2238,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IKeyValuePair[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IKeyValuePair) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IKeyValuePair) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IKeyValuePair) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IKeyValuePair) },
@@ -2222,7 +2250,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IKeyValuePair",
         sizeof(py::wrapper::Windows::Foundation::Collections::IKeyValuePair),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IKeyValuePair};
 
     static PyObject* _guid_ImplementsIKeyValuePair(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2275,17 +2307,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IKeyValuePair",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIKeyValuePair};
 
     // ----- IMapChangedEventArgs interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IMapChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IMapChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IMapChangedEventArgs>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IMapChangedEventArgs(py::wrapper::Windows::Foundation::Collections::IMapChangedEventArgs* self) noexcept
     {
@@ -2358,7 +2396,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IMapChangedEventArgs[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IMapChangedEventArgs) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMapChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMapChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMapChangedEventArgs) },
@@ -2368,7 +2408,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IMapChangedEventArgs",
         sizeof(py::wrapper::Windows::Foundation::Collections::IMapChangedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IMapChangedEventArgs};
 
     static PyObject* _guid_ImplementsIMapChangedEventArgs(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2421,17 +2465,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IMapChangedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIMapChangedEventArgs};
 
     // ----- IMapView interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IMapView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IMapView>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IMapView>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IMapView(py::wrapper::Windows::Foundation::Collections::IMapView* self) noexcept
     {
@@ -2521,7 +2571,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IMapView[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IMapView) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMapView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMapView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMapView) },
@@ -2535,7 +2587,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IMapView",
         sizeof(py::wrapper::Windows::Foundation::Collections::IMapView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IMapView};
 
     static PyObject* _guid_ImplementsIMapView(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2588,17 +2644,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IMapView",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIMapView};
 
     // ----- IMap interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IMap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IMap>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IMap>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IMap(py::wrapper::Windows::Foundation::Collections::IMap* self) noexcept
     {
@@ -2711,7 +2773,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IMap[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IMap) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMap) },
@@ -2726,7 +2790,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IMap",
         sizeof(py::wrapper::Windows::Foundation::Collections::IMap),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IMap};
 
     static PyObject* _guid_ImplementsIMap(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2779,17 +2847,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IMap",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIMap};
 
     // ----- IObservableMap interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IObservableMap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IObservableMap>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IObservableMap>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IObservableMap(py::wrapper::Windows::Foundation::Collections::IObservableMap* self) noexcept
     {
@@ -2956,7 +3030,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IObservableMap[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IObservableMap) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IObservableMap) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IObservableMap) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IObservableMap) },
@@ -2971,7 +3047,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IObservableMap",
         sizeof(py::wrapper::Windows::Foundation::Collections::IObservableMap),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IObservableMap};
 
     static PyObject* _guid_ImplementsIObservableMap(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3024,17 +3104,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IObservableMap",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIObservableMap};
 
     // ----- IObservableVector interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IObservableVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IObservableVector>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IObservableVector>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IObservableVector(py::wrapper::Windows::Foundation::Collections::IObservableVector* self) noexcept
     {
@@ -3231,7 +3317,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IObservableVector[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IObservableVector) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IObservableVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IObservableVector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IObservableVector) },
@@ -3246,7 +3334,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IObservableVector",
         sizeof(py::wrapper::Windows::Foundation::Collections::IObservableVector),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IObservableVector};
 
     static PyObject* _guid_ImplementsIObservableVector(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3299,17 +3391,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IObservableVector",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIObservableVector};
 
     // ----- IPropertySet interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IPropertySet(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Foundation::Collections::IPropertySet>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Collections::IPropertySet>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IPropertySet(py::wrapper::Windows::Foundation::Collections::IPropertySet* self) noexcept
     {
@@ -3854,7 +3952,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IPropertySet[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IPropertySet) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IPropertySet) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IPropertySet) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IPropertySet) },
@@ -3869,7 +3969,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IPropertySet",
         sizeof(py::wrapper::Windows::Foundation::Collections::IPropertySet),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IPropertySet};
 
     struct ImplementsIPropertySet : py::ImplementsInterfaceT<ImplementsIPropertySet, winrt::Windows::Foundation::Collections::IPropertySet>
@@ -4251,17 +4355,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IPropertySet",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIPropertySet};
 
     // ----- IVectorChangedEventArgs interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVectorChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVectorChangedEventArgs(py::wrapper::Windows::Foundation::Collections::IVectorChangedEventArgs* self) noexcept
     {
@@ -4340,7 +4450,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IVectorChangedEventArgs[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVectorChangedEventArgs) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVectorChangedEventArgs) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVectorChangedEventArgs) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVectorChangedEventArgs) },
@@ -4350,7 +4462,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IVectorChangedEventArgs",
         sizeof(py::wrapper::Windows::Foundation::Collections::IVectorChangedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVectorChangedEventArgs};
 
     struct ImplementsIVectorChangedEventArgs : py::ImplementsInterfaceT<ImplementsIVectorChangedEventArgs, winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>
@@ -4476,17 +4592,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IVectorChangedEventArgs",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVectorChangedEventArgs};
 
     // ----- IVectorView interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IVectorView>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IVectorView>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVectorView(py::wrapper::Windows::Foundation::Collections::IVectorView* self) noexcept
     {
@@ -4576,7 +4698,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IVectorView[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVectorView) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVectorView) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVectorView) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVectorView) },
@@ -4590,7 +4714,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IVectorView",
         sizeof(py::wrapper::Windows::Foundation::Collections::IVectorView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVectorView};
 
     static PyObject* _guid_ImplementsIVectorView(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4643,17 +4771,23 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IVectorView",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVectorView};
 
     // ----- IVector interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IVector>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IVector>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVector(py::wrapper::Windows::Foundation::Collections::IVector* self) noexcept
     {
@@ -4796,7 +4930,9 @@ namespace py::cpp::Windows::Foundation::Collections
         { }};
 
     static PyType_Slot _type_slots_IVector[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVector) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVector) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVector) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVector) },
@@ -4811,7 +4947,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections._IVector",
         sizeof(py::wrapper::Windows::Foundation::Collections::IVector),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVector};
 
     static PyObject* _guid_ImplementsIVector(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4864,7 +5004,11 @@ namespace py::cpp::Windows::Foundation::Collections
         "winrt._winrt_windows_foundation_collections.IVector",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVector};
 
     // ----- Windows.Foundation.Collections Initialization --------------------

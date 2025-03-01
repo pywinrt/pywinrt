@@ -2328,12 +2328,14 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- IStorageItemAccessList interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageItemAccessList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageItemAccessList(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self) noexcept
     {
@@ -3023,7 +3025,9 @@ namespace py::cpp::Windows::Storage::AccessCache
         { }};
 
     static PyType_Slot _type_slots_IStorageItemAccessList[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageItemAccessList) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageItemAccessList) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageItemAccessList) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageItemAccessList) },
@@ -3033,7 +3037,11 @@ namespace py::cpp::Windows::Storage::AccessCache
         "winrt._winrt_windows_storage_accesscache._IStorageItemAccessList",
         sizeof(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageItemAccessList};
 
     struct ImplementsIStorageItemAccessList : py::ImplementsInterfaceT<ImplementsIStorageItemAccessList, winrt::Windows::Storage::AccessCache::IStorageItemAccessList>
@@ -3671,7 +3679,11 @@ namespace py::cpp::Windows::Storage::AccessCache
         "winrt._winrt_windows_storage_accesscache.IStorageItemAccessList",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageItemAccessList};
 
     // ----- AccessListEntry struct --------------------

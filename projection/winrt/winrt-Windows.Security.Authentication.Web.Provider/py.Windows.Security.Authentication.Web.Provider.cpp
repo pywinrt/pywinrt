@@ -3816,12 +3816,14 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
     // ----- IWebAccountProviderBaseReportOperation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebAccountProviderBaseReportOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebAccountProviderBaseReportOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation* self) noexcept
     {
@@ -3924,7 +3926,9 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderBaseReportOperation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderBaseReportOperation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderBaseReportOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderBaseReportOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderBaseReportOperation) },
@@ -3934,7 +3938,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderBaseReportOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebAccountProviderBaseReportOperation};
 
     struct ImplementsIWebAccountProviderBaseReportOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderBaseReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>
@@ -4074,17 +4082,23 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderBaseReportOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebAccountProviderBaseReportOperation};
 
     // ----- IWebAccountProviderOperation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebAccountProviderOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebAccountProviderOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation* self) noexcept
     {
@@ -4132,7 +4146,9 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderOperation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderOperation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderOperation) },
@@ -4142,7 +4158,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebAccountProviderOperation};
 
     struct ImplementsIWebAccountProviderOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>
@@ -4248,17 +4268,23 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebAccountProviderOperation};
 
     // ----- IWebAccountProviderSilentReportOperation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebAccountProviderSilentReportOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebAccountProviderSilentReportOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation* self) noexcept
     {
@@ -4447,7 +4473,9 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderSilentReportOperation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderSilentReportOperation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderSilentReportOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderSilentReportOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderSilentReportOperation) },
@@ -4457,7 +4485,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderSilentReportOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebAccountProviderSilentReportOperation};
 
     struct ImplementsIWebAccountProviderSilentReportOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderSilentReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>
@@ -4651,17 +4683,23 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderSilentReportOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebAccountProviderSilentReportOperation};
 
     // ----- IWebAccountProviderTokenObjects interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebAccountProviderTokenObjects(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebAccountProviderTokenObjects(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects* self) noexcept
     {
@@ -4709,7 +4747,9 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderTokenObjects[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderTokenObjects) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderTokenObjects) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderTokenObjects) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderTokenObjects) },
@@ -4719,7 +4759,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderTokenObjects",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebAccountProviderTokenObjects};
 
     struct ImplementsIWebAccountProviderTokenObjects : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenObjects, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>
@@ -4825,17 +4869,23 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenObjects",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebAccountProviderTokenObjects};
 
     // ----- IWebAccountProviderTokenObjects2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebAccountProviderTokenObjects2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebAccountProviderTokenObjects2(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2* self) noexcept
     {
@@ -4914,7 +4964,9 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderTokenObjects2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderTokenObjects2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderTokenObjects2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderTokenObjects2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderTokenObjects2) },
@@ -4924,7 +4976,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderTokenObjects2",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebAccountProviderTokenObjects2};
 
     struct ImplementsIWebAccountProviderTokenObjects2 : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenObjects2, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>
@@ -5050,17 +5106,23 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenObjects2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebAccountProviderTokenObjects2};
 
     // ----- IWebAccountProviderTokenOperation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebAccountProviderTokenOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebAccountProviderTokenOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation* self) noexcept
     {
@@ -5240,7 +5302,9 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderTokenOperation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderTokenOperation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderTokenOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderTokenOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderTokenOperation) },
@@ -5250,7 +5314,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderTokenOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebAccountProviderTokenOperation};
 
     struct ImplementsIWebAccountProviderTokenOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderTokenOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>
@@ -5439,17 +5507,23 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderTokenOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebAccountProviderTokenOperation};
 
     // ----- IWebAccountProviderUIReportOperation interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWebAccountProviderUIReportOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWebAccountProviderUIReportOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation* self) noexcept
     {
@@ -5594,7 +5668,9 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { }};
 
     static PyType_Slot _type_slots_IWebAccountProviderUIReportOperation[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWebAccountProviderUIReportOperation) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWebAccountProviderUIReportOperation) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWebAccountProviderUIReportOperation) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWebAccountProviderUIReportOperation) },
@@ -5604,7 +5680,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider._IWebAccountProviderUIReportOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWebAccountProviderUIReportOperation};
 
     struct ImplementsIWebAccountProviderUIReportOperation : py::ImplementsInterfaceT<ImplementsIWebAccountProviderUIReportOperation, winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>
@@ -5768,7 +5848,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         "winrt._winrt_windows_security_authentication_web_provider.IWebAccountProviderUIReportOperation",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWebAccountProviderUIReportOperation};
 
     // ----- Windows.Security.Authentication.Web.Provider Initialization --------------------

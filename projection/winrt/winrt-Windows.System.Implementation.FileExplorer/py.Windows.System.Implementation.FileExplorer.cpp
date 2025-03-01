@@ -124,12 +124,14 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     // ----- ISysStorageProviderEventSource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISysStorageProviderEventSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISysStorageProviderEventSource(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource* self) noexcept
     {
@@ -213,7 +215,9 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Slot _type_slots_ISysStorageProviderEventSource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderEventSource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderEventSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderEventSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderEventSource) },
@@ -223,7 +227,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         "winrt._winrt_windows_system_implementation_fileexplorer._ISysStorageProviderEventSource",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISysStorageProviderEventSource};
 
     struct ImplementsISysStorageProviderEventSource : py::ImplementsInterfaceT<ImplementsISysStorageProviderEventSource, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>
@@ -371,17 +379,23 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISysStorageProviderEventSource};
 
     // ----- ISysStorageProviderHandlerFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISysStorageProviderHandlerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISysStorageProviderHandlerFactory(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory* self) noexcept
     {
@@ -485,7 +499,9 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Slot _type_slots_ISysStorageProviderHandlerFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderHandlerFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderHandlerFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderHandlerFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderHandlerFactory) },
@@ -495,7 +511,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         "winrt._winrt_windows_system_implementation_fileexplorer._ISysStorageProviderHandlerFactory",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISysStorageProviderHandlerFactory};
 
     struct ImplementsISysStorageProviderHandlerFactory : py::ImplementsInterfaceT<ImplementsISysStorageProviderHandlerFactory, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>
@@ -657,17 +677,23 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISysStorageProviderHandlerFactory};
 
     // ----- ISysStorageProviderHttpRequestProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISysStorageProviderHttpRequestProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISysStorageProviderHttpRequestProvider(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider* self) noexcept
     {
@@ -727,7 +753,9 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         { }};
 
     static PyType_Slot _type_slots_ISysStorageProviderHttpRequestProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISysStorageProviderHttpRequestProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISysStorageProviderHttpRequestProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISysStorageProviderHttpRequestProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISysStorageProviderHttpRequestProvider) },
@@ -737,7 +765,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         "winrt._winrt_windows_system_implementation_fileexplorer._ISysStorageProviderHttpRequestProvider",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISysStorageProviderHttpRequestProvider};
 
     struct ImplementsISysStorageProviderHttpRequestProvider : py::ImplementsInterfaceT<ImplementsISysStorageProviderHttpRequestProvider, winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>
@@ -855,7 +887,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
         "winrt._winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHttpRequestProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISysStorageProviderHttpRequestProvider};
 
     // ----- Windows.System.Implementation.FileExplorer Initialization --------------------

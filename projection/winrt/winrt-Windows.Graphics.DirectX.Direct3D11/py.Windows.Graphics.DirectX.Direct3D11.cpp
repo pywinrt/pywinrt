@@ -6,12 +6,14 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 {
     // ----- IDirect3DDevice interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IDirect3DDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IDirect3DDevice(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice* self) noexcept
     {
@@ -137,7 +139,9 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }};
 
     static PyType_Slot _type_slots_IDirect3DDevice[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IDirect3DDevice) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDirect3DDevice) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDirect3DDevice) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDirect3DDevice) },
@@ -147,7 +151,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         "winrt._winrt_windows_graphics_directx_direct3d11._IDirect3DDevice",
         sizeof(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IDirect3DDevice};
 
     struct ImplementsIDirect3DDevice : py::ImplementsInterfaceT<ImplementsIDirect3DDevice, winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
@@ -281,17 +289,23 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         "winrt._winrt_windows_graphics_directx_direct3d11.IDirect3DDevice",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIDirect3DDevice};
 
     // ----- IDirect3DSurface interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IDirect3DSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IDirect3DSurface(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface* self) noexcept
     {
@@ -406,7 +420,9 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         { }};
 
     static PyType_Slot _type_slots_IDirect3DSurface[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IDirect3DSurface) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDirect3DSurface) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDirect3DSurface) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDirect3DSurface) },
@@ -416,7 +432,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         "winrt._winrt_windows_graphics_directx_direct3d11._IDirect3DSurface",
         sizeof(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IDirect3DSurface};
 
     struct ImplementsIDirect3DSurface : py::ImplementsInterfaceT<ImplementsIDirect3DSurface, winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
@@ -546,7 +566,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         "winrt._winrt_windows_graphics_directx_direct3d11.IDirect3DSurface",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIDirect3DSurface};
 
     // ----- Direct3DMultisampleDescription struct --------------------

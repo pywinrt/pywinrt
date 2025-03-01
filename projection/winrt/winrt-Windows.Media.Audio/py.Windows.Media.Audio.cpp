@@ -17849,12 +17849,14 @@ namespace py::cpp::Windows::Media::Audio
 
     // ----- IAudioInputNode interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IAudioInputNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Audio::IAudioInputNode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::IAudioInputNode>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self) noexcept
     {
@@ -18518,7 +18520,9 @@ namespace py::cpp::Windows::Media::Audio
         { }};
 
     static PyType_Slot _type_slots_IAudioInputNode[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioInputNode) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioInputNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioInputNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioInputNode) },
@@ -18528,7 +18532,11 @@ namespace py::cpp::Windows::Media::Audio
         "winrt._winrt_windows_media_audio._IAudioInputNode",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioInputNode),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IAudioInputNode};
 
     struct ImplementsIAudioInputNode : py::ImplementsInterfaceT<ImplementsIAudioInputNode, winrt::Windows::Media::Audio::IAudioInputNode>
@@ -19018,17 +19026,23 @@ namespace py::cpp::Windows::Media::Audio
         "winrt._winrt_windows_media_audio.IAudioInputNode",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIAudioInputNode};
 
     // ----- IAudioInputNode2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IAudioInputNode2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Audio::IAudioInputNode2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::IAudioInputNode2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self) noexcept
     {
@@ -19723,7 +19737,9 @@ namespace py::cpp::Windows::Media::Audio
         { }};
 
     static PyType_Slot _type_slots_IAudioInputNode2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioInputNode2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioInputNode2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioInputNode2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioInputNode2) },
@@ -19733,7 +19749,11 @@ namespace py::cpp::Windows::Media::Audio
         "winrt._winrt_windows_media_audio._IAudioInputNode2",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioInputNode2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IAudioInputNode2};
 
     struct ImplementsIAudioInputNode2 : py::ImplementsInterfaceT<ImplementsIAudioInputNode2, winrt::Windows::Media::Audio::IAudioInputNode2>
@@ -20243,17 +20263,23 @@ namespace py::cpp::Windows::Media::Audio
         "winrt._winrt_windows_media_audio.IAudioInputNode2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIAudioInputNode2};
 
     // ----- IAudioNode interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IAudioNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Audio::IAudioNode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::IAudioNode>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self) noexcept
     {
@@ -20753,7 +20779,9 @@ namespace py::cpp::Windows::Media::Audio
         { }};
 
     static PyType_Slot _type_slots_IAudioNode[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioNode) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioNode) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioNode) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioNode) },
@@ -20763,7 +20791,11 @@ namespace py::cpp::Windows::Media::Audio
         "winrt._winrt_windows_media_audio._IAudioNode",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioNode),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IAudioNode};
 
     struct ImplementsIAudioNode : py::ImplementsInterfaceT<ImplementsIAudioNode, winrt::Windows::Media::Audio::IAudioNode>
@@ -21131,17 +21163,23 @@ namespace py::cpp::Windows::Media::Audio
         "winrt._winrt_windows_media_audio.IAudioNode",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIAudioNode};
 
     // ----- IAudioNodeWithListener interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IAudioNodeWithListener(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Audio::IAudioNodeWithListener>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::IAudioNodeWithListener>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self) noexcept
     {
@@ -21711,7 +21749,9 @@ namespace py::cpp::Windows::Media::Audio
         { }};
 
     static PyType_Slot _type_slots_IAudioNodeWithListener[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IAudioNodeWithListener) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAudioNodeWithListener) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAudioNodeWithListener) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAudioNodeWithListener) },
@@ -21721,7 +21761,11 @@ namespace py::cpp::Windows::Media::Audio
         "winrt._winrt_windows_media_audio._IAudioNodeWithListener",
         sizeof(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IAudioNodeWithListener};
 
     struct ImplementsIAudioNodeWithListener : py::ImplementsInterfaceT<ImplementsIAudioNodeWithListener, winrt::Windows::Media::Audio::IAudioNodeWithListener>
@@ -22132,7 +22176,11 @@ namespace py::cpp::Windows::Media::Audio
         "winrt._winrt_windows_media_audio.IAudioNodeWithListener",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIAudioNodeWithListener};
 
     // ----- Windows.Media.Audio Initialization --------------------

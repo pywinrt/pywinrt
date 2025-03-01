@@ -5749,12 +5749,14 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- IStorageProviderItemPropertySource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderItemPropertySource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderItemPropertySource(py::wrapper::Windows::Storage::Provider::IStorageProviderItemPropertySource* self) noexcept
     {
@@ -5814,7 +5816,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderItemPropertySource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderItemPropertySource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderItemPropertySource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderItemPropertySource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderItemPropertySource) },
@@ -5824,7 +5828,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderItemPropertySource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderItemPropertySource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderItemPropertySource};
 
     struct ImplementsIStorageProviderItemPropertySource : py::ImplementsInterfaceT<ImplementsIStorageProviderItemPropertySource, winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>
@@ -5942,17 +5950,23 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderItemPropertySource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderItemPropertySource};
 
     // ----- IStorageProviderKnownFolderSyncInfoSource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderKnownFolderSyncInfoSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderKnownFolderSyncInfoSource(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource* self) noexcept
     {
@@ -6077,7 +6091,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderKnownFolderSyncInfoSource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderKnownFolderSyncInfoSource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderKnownFolderSyncInfoSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderKnownFolderSyncInfoSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderKnownFolderSyncInfoSource) },
@@ -6087,7 +6103,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderKnownFolderSyncInfoSource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderKnownFolderSyncInfoSource};
 
     struct ImplementsIStorageProviderKnownFolderSyncInfoSource : py::ImplementsInterfaceT<ImplementsIStorageProviderKnownFolderSyncInfoSource, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>
@@ -6261,17 +6281,23 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSource};
 
     // ----- IStorageProviderKnownFolderSyncInfoSourceFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderKnownFolderSyncInfoSourceFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderKnownFolderSyncInfoSourceFactory(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory* self) noexcept
     {
@@ -6329,7 +6355,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderKnownFolderSyncInfoSourceFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderKnownFolderSyncInfoSourceFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderKnownFolderSyncInfoSourceFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderKnownFolderSyncInfoSourceFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderKnownFolderSyncInfoSourceFactory) },
@@ -6339,7 +6367,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderKnownFolderSyncInfoSourceFactory",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderKnownFolderSyncInfoSourceFactory};
 
     struct ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory : py::ImplementsInterfaceT<ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory, winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>
@@ -6451,17 +6483,23 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSourceFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderKnownFolderSyncInfoSourceFactory};
 
     // ----- IStorageProviderPropertyCapabilities interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderPropertyCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderPropertyCapabilities(py::wrapper::Windows::Storage::Provider::IStorageProviderPropertyCapabilities* self) noexcept
     {
@@ -6521,7 +6559,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderPropertyCapabilities[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderPropertyCapabilities) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderPropertyCapabilities) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderPropertyCapabilities) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderPropertyCapabilities) },
@@ -6531,7 +6571,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderPropertyCapabilities",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderPropertyCapabilities),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderPropertyCapabilities};
 
     struct ImplementsIStorageProviderPropertyCapabilities : py::ImplementsInterfaceT<ImplementsIStorageProviderPropertyCapabilities, winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>
@@ -6649,17 +6693,23 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderPropertyCapabilities",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderPropertyCapabilities};
 
     // ----- IStorageProviderShareLinkSource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderShareLinkSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderShareLinkSource(py::wrapper::Windows::Storage::Provider::IStorageProviderShareLinkSource* self) noexcept
     {
@@ -6805,7 +6855,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderShareLinkSource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderShareLinkSource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderShareLinkSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderShareLinkSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderShareLinkSource) },
@@ -6815,7 +6867,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderShareLinkSource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderShareLinkSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderShareLinkSource};
 
     struct ImplementsIStorageProviderShareLinkSource : py::ImplementsInterfaceT<ImplementsIStorageProviderShareLinkSource, winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>
@@ -6997,17 +7053,23 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderShareLinkSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderShareLinkSource};
 
     // ----- IStorageProviderStatusUISource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderStatusUISource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderStatusUISource(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISource* self) noexcept
     {
@@ -7132,7 +7194,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderStatusUISource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderStatusUISource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderStatusUISource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderStatusUISource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderStatusUISource) },
@@ -7142,7 +7206,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderStatusUISource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderStatusUISource};
 
     struct ImplementsIStorageProviderStatusUISource : py::ImplementsInterfaceT<ImplementsIStorageProviderStatusUISource, winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>
@@ -7316,17 +7384,23 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderStatusUISource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderStatusUISource};
 
     // ----- IStorageProviderStatusUISourceFactory interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderStatusUISourceFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderStatusUISourceFactory(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory* self) noexcept
     {
@@ -7386,7 +7460,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderStatusUISourceFactory[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderStatusUISourceFactory) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderStatusUISourceFactory) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderStatusUISourceFactory) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderStatusUISourceFactory) },
@@ -7396,7 +7472,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderStatusUISourceFactory",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderStatusUISourceFactory};
 
     struct ImplementsIStorageProviderStatusUISourceFactory : py::ImplementsInterfaceT<ImplementsIStorageProviderStatusUISourceFactory, winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>
@@ -7514,17 +7594,23 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderStatusUISourceFactory",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderStatusUISourceFactory};
 
     // ----- IStorageProviderUICommand interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderUICommand(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderUICommand(py::wrapper::Windows::Storage::Provider::IStorageProviderUICommand* self) noexcept
     {
@@ -7707,7 +7793,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderUICommand[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderUICommand) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderUICommand) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderUICommand) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderUICommand) },
@@ -7717,7 +7805,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderUICommand",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderUICommand),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderUICommand};
 
     struct ImplementsIStorageProviderUICommand : py::ImplementsInterfaceT<ImplementsIStorageProviderUICommand, winrt::Windows::Storage::Provider::IStorageProviderUICommand>
@@ -7907,17 +7999,23 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderUICommand",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderUICommand};
 
     // ----- IStorageProviderUriSource interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStorageProviderUriSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStorageProviderUriSource(py::wrapper::Windows::Storage::Provider::IStorageProviderUriSource* self) noexcept
     {
@@ -8024,7 +8122,9 @@ namespace py::cpp::Windows::Storage::Provider
         { }};
 
     static PyType_Slot _type_slots_IStorageProviderUriSource[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderUriSource) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderUriSource) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderUriSource) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderUriSource) },
@@ -8034,7 +8134,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider._IStorageProviderUriSource",
         sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderUriSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStorageProviderUriSource};
 
     struct ImplementsIStorageProviderUriSource : py::ImplementsInterfaceT<ImplementsIStorageProviderUriSource, winrt::Windows::Storage::Provider::IStorageProviderUriSource>
@@ -8204,7 +8308,11 @@ namespace py::cpp::Windows::Storage::Provider
         "winrt._winrt_windows_storage_provider.IStorageProviderUriSource",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStorageProviderUriSource};
 
     // ----- Windows.Storage.Provider Initialization --------------------

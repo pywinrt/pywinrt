@@ -69,12 +69,14 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IAnnotationProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IAnnotationProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IAnnotationProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider* self) noexcept
     {
@@ -246,7 +248,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IAnnotationProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IAnnotationProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IAnnotationProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IAnnotationProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IAnnotationProvider) },
@@ -256,7 +260,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IAnnotationProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IAnnotationProvider};
 
     struct ImplementsIAnnotationProvider : py::ImplementsInterfaceT<ImplementsIAnnotationProvider, winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>
@@ -442,17 +450,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IAnnotationProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIAnnotationProvider};
 
     // ----- ICustomNavigationProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ICustomNavigationProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ICustomNavigationProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider* self) noexcept
     {
@@ -512,7 +526,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ICustomNavigationProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ICustomNavigationProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ICustomNavigationProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ICustomNavigationProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ICustomNavigationProvider) },
@@ -522,7 +538,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ICustomNavigationProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ICustomNavigationProvider};
 
     struct ImplementsICustomNavigationProvider : py::ImplementsInterfaceT<ImplementsICustomNavigationProvider, winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>
@@ -640,17 +660,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ICustomNavigationProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsICustomNavigationProvider};
 
     // ----- IDockProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IDockProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IDockProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDockProvider* self) noexcept
     {
@@ -742,7 +768,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IDockProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IDockProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDockProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDockProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDockProvider) },
@@ -752,7 +780,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IDockProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDockProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IDockProvider};
 
     struct ImplementsIDockProvider : py::ImplementsInterfaceT<ImplementsIDockProvider, winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>
@@ -888,17 +920,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IDockProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIDockProvider};
 
     // ----- IDragProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IDragProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IDragProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDragProvider* self) noexcept
     {
@@ -1049,7 +1087,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IDragProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IDragProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDragProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDragProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDragProvider) },
@@ -1059,7 +1099,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IDragProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDragProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IDragProvider};
 
     struct ImplementsIDragProvider : py::ImplementsInterfaceT<ImplementsIDragProvider, winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>
@@ -1233,17 +1277,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IDragProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIDragProvider};
 
     // ----- IDropTargetProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IDropTargetProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IDropTargetProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider* self) noexcept
     {
@@ -1322,7 +1372,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IDropTargetProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IDropTargetProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDropTargetProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IDropTargetProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IDropTargetProvider) },
@@ -1332,7 +1384,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IDropTargetProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IDropTargetProvider};
 
     struct ImplementsIDropTargetProvider : py::ImplementsInterfaceT<ImplementsIDropTargetProvider, winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>
@@ -1459,17 +1515,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IDropTargetProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIDropTargetProvider};
 
     // ----- IExpandCollapseProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IExpandCollapseProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IExpandCollapseProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider* self) noexcept
     {
@@ -1601,7 +1663,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IExpandCollapseProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IExpandCollapseProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IExpandCollapseProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IExpandCollapseProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IExpandCollapseProvider) },
@@ -1611,7 +1675,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IExpandCollapseProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IExpandCollapseProvider};
 
     struct ImplementsIExpandCollapseProvider : py::ImplementsInterfaceT<ImplementsIExpandCollapseProvider, winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>
@@ -1765,17 +1833,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IExpandCollapseProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIExpandCollapseProvider};
 
     // ----- IGridItemProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IGridItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IGridItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IGridItemProvider* self) noexcept
     {
@@ -1947,7 +2021,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IGridItemProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IGridItemProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGridItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGridItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGridItemProvider) },
@@ -1957,7 +2033,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IGridItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IGridItemProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IGridItemProvider};
 
     struct ImplementsIGridItemProvider : py::ImplementsInterfaceT<ImplementsIGridItemProvider, winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>
@@ -2143,17 +2223,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IGridItemProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIGridItemProvider};
 
     // ----- IGridProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IGridProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IGridProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IGridProvider* self) noexcept
     {
@@ -2276,7 +2362,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IGridProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IGridProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IGridProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IGridProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IGridProvider) },
@@ -2286,7 +2374,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IGridProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IGridProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IGridProvider};
 
     struct ImplementsIGridProvider : py::ImplementsInterfaceT<ImplementsIGridProvider, winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>
@@ -2456,17 +2548,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IGridProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIGridProvider};
 
     // ----- IInvokeProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IInvokeProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IInvokeProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IInvokeProvider* self) noexcept
     {
@@ -2525,7 +2623,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IInvokeProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IInvokeProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IInvokeProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IInvokeProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IInvokeProvider) },
@@ -2535,7 +2635,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IInvokeProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IInvokeProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IInvokeProvider};
 
     struct ImplementsIInvokeProvider : py::ImplementsInterfaceT<ImplementsIInvokeProvider, winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>
@@ -2645,17 +2749,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IInvokeProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIInvokeProvider};
 
     // ----- IItemContainerProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IItemContainerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IItemContainerProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider* self) noexcept
     {
@@ -2717,7 +2827,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IItemContainerProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IItemContainerProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IItemContainerProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IItemContainerProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IItemContainerProvider) },
@@ -2727,7 +2839,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IItemContainerProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IItemContainerProvider};
 
     struct ImplementsIItemContainerProvider : py::ImplementsInterfaceT<ImplementsIItemContainerProvider, winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>
@@ -2863,17 +2979,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IItemContainerProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIItemContainerProvider};
 
     // ----- IMultipleViewProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IMultipleViewProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IMultipleViewProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider* self) noexcept
     {
@@ -3049,7 +3171,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IMultipleViewProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IMultipleViewProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IMultipleViewProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IMultipleViewProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IMultipleViewProvider) },
@@ -3059,7 +3183,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IMultipleViewProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IMultipleViewProvider};
 
     struct ImplementsIMultipleViewProvider : py::ImplementsInterfaceT<ImplementsIMultipleViewProvider, winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>
@@ -3254,17 +3382,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IMultipleViewProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIMultipleViewProvider};
 
     // ----- IObjectModelProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IObjectModelProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IObjectModelProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider* self) noexcept
     {
@@ -3322,7 +3456,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IObjectModelProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IObjectModelProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IObjectModelProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IObjectModelProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IObjectModelProvider) },
@@ -3332,7 +3468,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IObjectModelProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IObjectModelProvider};
 
     struct ImplementsIObjectModelProvider : py::ImplementsInterfaceT<ImplementsIObjectModelProvider, winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>
@@ -3444,17 +3584,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IObjectModelProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIObjectModelProvider};
 
     // ----- IRangeValueProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IRangeValueProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IRangeValueProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider* self) noexcept
     {
@@ -3701,7 +3847,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IRangeValueProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IRangeValueProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRangeValueProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IRangeValueProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IRangeValueProvider) },
@@ -3711,7 +3859,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IRangeValueProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IRangeValueProvider};
 
     struct ImplementsIRangeValueProvider : py::ImplementsInterfaceT<ImplementsIRangeValueProvider, winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>
@@ -3947,17 +4099,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IRangeValueProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIRangeValueProvider};
 
     // ----- IScrollItemProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IScrollItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IScrollItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider* self) noexcept
     {
@@ -4016,7 +4174,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IScrollItemProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollItemProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollItemProvider) },
@@ -4026,7 +4186,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IScrollItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IScrollItemProvider};
 
     struct ImplementsIScrollItemProvider : py::ImplementsInterfaceT<ImplementsIScrollItemProvider, winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>
@@ -4136,17 +4300,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IScrollItemProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIScrollItemProvider};
 
     // ----- IScrollProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IScrollProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IScrollProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IScrollProvider* self) noexcept
     {
@@ -4439,7 +4609,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IScrollProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IScrollProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IScrollProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IScrollProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IScrollProvider) },
@@ -4449,7 +4621,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IScrollProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IScrollProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IScrollProvider};
 
     struct ImplementsIScrollProvider : py::ImplementsInterfaceT<ImplementsIScrollProvider, winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>
@@ -4739,17 +4915,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IScrollProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIScrollProvider};
 
     // ----- ISelectionItemProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISelectionItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISelectionItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider* self) noexcept
     {
@@ -4954,7 +5136,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ISelectionItemProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionItemProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionItemProvider) },
@@ -4964,7 +5148,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ISelectionItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISelectionItemProvider};
 
     struct ImplementsISelectionItemProvider : py::ImplementsInterfaceT<ImplementsISelectionItemProvider, winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>
@@ -5162,17 +5350,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ISelectionItemProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISelectionItemProvider};
 
     // ----- ISelectionProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISelectionProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISelectionProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISelectionProvider* self) noexcept
     {
@@ -5292,7 +5486,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ISelectionProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISelectionProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISelectionProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISelectionProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISelectionProvider) },
@@ -5302,7 +5498,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ISelectionProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISelectionProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISelectionProvider};
 
     struct ImplementsISelectionProvider : py::ImplementsInterfaceT<ImplementsISelectionProvider, winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>
@@ -5455,17 +5655,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ISelectionProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISelectionProvider};
 
     // ----- ISpreadsheetItemProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISpreadsheetItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISpreadsheetItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider* self) noexcept
     {
@@ -5595,7 +5801,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ISpreadsheetItemProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpreadsheetItemProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpreadsheetItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpreadsheetItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpreadsheetItemProvider) },
@@ -5605,7 +5813,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ISpreadsheetItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISpreadsheetItemProvider};
 
     struct ImplementsISpreadsheetItemProvider : py::ImplementsInterfaceT<ImplementsISpreadsheetItemProvider, winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>
@@ -5765,17 +5977,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ISpreadsheetItemProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISpreadsheetItemProvider};
 
     // ----- ISpreadsheetProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISpreadsheetProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISpreadsheetProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider* self) noexcept
     {
@@ -5835,7 +6053,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ISpreadsheetProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISpreadsheetProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISpreadsheetProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISpreadsheetProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISpreadsheetProvider) },
@@ -5845,7 +6065,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ISpreadsheetProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISpreadsheetProvider};
 
     struct ImplementsISpreadsheetProvider : py::ImplementsInterfaceT<ImplementsISpreadsheetProvider, winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>
@@ -5963,17 +6187,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ISpreadsheetProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISpreadsheetProvider};
 
     // ----- IStylesProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IStylesProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IStylesProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IStylesProvider* self) noexcept
     {
@@ -6207,7 +6437,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IStylesProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IStylesProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStylesProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IStylesProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IStylesProvider) },
@@ -6217,7 +6449,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IStylesProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IStylesProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IStylesProvider};
 
     struct ImplementsIStylesProvider : py::ImplementsInterfaceT<ImplementsIStylesProvider, winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>
@@ -6443,17 +6679,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IStylesProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIStylesProvider};
 
     // ----- ISynchronizedInputProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ISynchronizedInputProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ISynchronizedInputProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider* self) noexcept
     {
@@ -6556,7 +6798,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ISynchronizedInputProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ISynchronizedInputProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ISynchronizedInputProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ISynchronizedInputProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ISynchronizedInputProvider) },
@@ -6566,7 +6810,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ISynchronizedInputProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ISynchronizedInputProvider};
 
     struct ImplementsISynchronizedInputProvider : py::ImplementsInterfaceT<ImplementsISynchronizedInputProvider, winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>
@@ -6706,17 +6954,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ISynchronizedInputProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsISynchronizedInputProvider};
 
     // ----- ITableItemProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITableItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITableItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITableItemProvider* self) noexcept
     {
@@ -6815,7 +7069,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITableItemProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITableItemProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITableItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITableItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITableItemProvider) },
@@ -6825,7 +7081,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITableItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITableItemProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITableItemProvider};
 
     struct ImplementsITableItemProvider : py::ImplementsInterfaceT<ImplementsITableItemProvider, winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>
@@ -6965,17 +7225,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITableItemProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITableItemProvider};
 
     // ----- ITableProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITableProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITableProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITableProvider* self) noexcept
     {
@@ -7105,7 +7371,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITableProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITableProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITableProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITableProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITableProvider) },
@@ -7115,7 +7383,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITableProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITableProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITableProvider};
 
     struct ImplementsITableProvider : py::ImplementsInterfaceT<ImplementsITableProvider, winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>
@@ -7275,17 +7547,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITableProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITableProvider};
 
     // ----- ITextChildProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITextChildProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITextChildProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextChildProvider* self) noexcept
     {
@@ -7364,7 +7642,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITextChildProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextChildProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextChildProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextChildProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextChildProvider) },
@@ -7374,7 +7654,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITextChildProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextChildProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITextChildProvider};
 
     struct ImplementsITextChildProvider : py::ImplementsInterfaceT<ImplementsITextChildProvider, winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>
@@ -7500,17 +7784,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITextChildProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITextChildProvider};
 
     // ----- ITextEditProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITextEditProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITextEditProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextEditProvider* self) noexcept
     {
@@ -7839,7 +8129,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITextEditProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextEditProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextEditProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextEditProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextEditProvider) },
@@ -7849,7 +8141,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITextEditProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextEditProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITextEditProvider};
 
     struct ImplementsITextEditProvider : py::ImplementsInterfaceT<ImplementsITextEditProvider, winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>
@@ -8145,17 +8441,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITextEditProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITextEditProvider};
 
     // ----- ITextProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITextProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITextProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextProvider* self) noexcept
     {
@@ -8402,7 +8704,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITextProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextProvider) },
@@ -8412,7 +8716,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITextProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITextProvider};
 
     struct ImplementsITextProvider : py::ImplementsInterfaceT<ImplementsITextProvider, winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>
@@ -8656,17 +8964,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITextProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITextProvider};
 
     // ----- ITextProvider2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITextProvider2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITextProvider2(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextProvider2* self) noexcept
     {
@@ -9012,7 +9326,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITextProvider2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextProvider2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextProvider2) },
@@ -9022,7 +9338,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITextProvider2",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextProvider2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITextProvider2};
 
     struct ImplementsITextProvider2 : py::ImplementsInterfaceT<ImplementsITextProvider2, winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>
@@ -9326,17 +9646,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITextProvider2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITextProvider2};
 
     // ----- ITextRangeProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITextRangeProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITextRangeProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider* self) noexcept
     {
@@ -10139,7 +10465,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITextRangeProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextRangeProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRangeProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRangeProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRangeProvider) },
@@ -10149,7 +10477,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITextRangeProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITextRangeProvider};
 
     struct ImplementsITextRangeProvider : py::ImplementsInterfaceT<ImplementsITextRangeProvider, winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>
@@ -10861,17 +11193,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITextRangeProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITextRangeProvider};
 
     // ----- ITextRangeProvider2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITextRangeProvider2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITextRangeProvider2(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2* self) noexcept
     {
@@ -11716,7 +12054,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITextRangeProvider2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITextRangeProvider2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITextRangeProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITextRangeProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITextRangeProvider2) },
@@ -11726,7 +12066,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITextRangeProvider2",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITextRangeProvider2};
 
     struct ImplementsITextRangeProvider2 : py::ImplementsInterfaceT<ImplementsITextRangeProvider2, winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>
@@ -12462,17 +12806,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITextRangeProvider2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITextRangeProvider2};
 
     // ----- IToggleProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IToggleProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IToggleProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IToggleProvider* self) noexcept
     {
@@ -12562,7 +12912,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IToggleProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IToggleProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IToggleProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IToggleProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IToggleProvider) },
@@ -12572,7 +12924,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IToggleProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IToggleProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IToggleProvider};
 
     struct ImplementsIToggleProvider : py::ImplementsInterfaceT<ImplementsIToggleProvider, winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>
@@ -12702,17 +13058,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IToggleProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIToggleProvider};
 
     // ----- ITransformProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITransformProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITransformProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITransformProvider* self) noexcept
     {
@@ -12956,7 +13318,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITransformProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITransformProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITransformProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITransformProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITransformProvider) },
@@ -12966,7 +13330,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITransformProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITransformProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITransformProvider};
 
     struct ImplementsITransformProvider : py::ImplementsInterfaceT<ImplementsITransformProvider, winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>
@@ -13226,17 +13594,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITransformProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITransformProvider};
 
     // ----- ITransformProvider2 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_ITransformProvider2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_ITransformProvider2(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITransformProvider2* self) noexcept
     {
@@ -13692,7 +14066,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_ITransformProvider2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_ITransformProvider2) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ITransformProvider2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_ITransformProvider2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ITransformProvider2) },
@@ -13702,7 +14078,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._ITransformProvider2",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITransformProvider2),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_ITransformProvider2};
 
     struct ImplementsITransformProvider2 : py::ImplementsInterfaceT<ImplementsITransformProvider2, winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>
@@ -14102,17 +14482,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.ITransformProvider2",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsITransformProvider2};
 
     // ----- IValueProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IValueProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IValueProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IValueProvider* self) noexcept
     {
@@ -14235,7 +14621,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IValueProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IValueProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IValueProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IValueProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IValueProvider) },
@@ -14245,7 +14633,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IValueProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IValueProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IValueProvider};
 
     struct ImplementsIValueProvider : py::ImplementsInterfaceT<ImplementsIValueProvider, winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>
@@ -14401,17 +14793,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IValueProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIValueProvider};
 
     // ----- IVirtualizedItemProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IVirtualizedItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IVirtualizedItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider* self) noexcept
     {
@@ -14470,7 +14868,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IVirtualizedItemProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IVirtualizedItemProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVirtualizedItemProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IVirtualizedItemProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IVirtualizedItemProvider) },
@@ -14480,7 +14880,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IVirtualizedItemProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IVirtualizedItemProvider};
 
     struct ImplementsIVirtualizedItemProvider : py::ImplementsInterfaceT<ImplementsIVirtualizedItemProvider, winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>
@@ -14590,17 +14994,23 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IVirtualizedItemProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIVirtualizedItemProvider};
 
     // ----- IWindowProvider interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IWindowProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IWindowProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IWindowProvider* self) noexcept
     {
@@ -14932,7 +15342,9 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         { }};
 
     static PyType_Slot _type_slots_IWindowProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IWindowProvider) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWindowProvider) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IWindowProvider) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IWindowProvider) },
@@ -14942,7 +15354,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider._IWindowProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::Provider::IWindowProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IWindowProvider};
 
     struct ImplementsIWindowProvider : py::ImplementsInterfaceT<ImplementsIWindowProvider, winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>
@@ -15234,7 +15650,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
         "winrt._winrt_windows_ui_xaml_automation_provider.IWindowProvider",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIWindowProvider};
 
     // ----- Windows.UI.Xaml.Automation.Provider Initialization --------------------

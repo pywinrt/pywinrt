@@ -666,12 +666,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     // ----- IToastNotificationManagerStatics3 interface --------------------
 
+    #if PY_VERSION_HEX < 0x030A0000
     static PyObject* _new_IToastNotificationManagerStatics3(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>::type_name);
         return nullptr;
     }
+    #endif
 
     static void _dealloc_IToastNotificationManagerStatics3(py::wrapper::Windows::Phone::StartScreen::IToastNotificationManagerStatics3* self) noexcept
     {
@@ -731,7 +733,9 @@ namespace py::cpp::Windows::Phone::StartScreen
         { }};
 
     static PyType_Slot _type_slots_IToastNotificationManagerStatics3[] = {
+        #if PY_VERSION_HEX < 0x030A0000
         { Py_tp_new, reinterpret_cast<void*>(_new_IToastNotificationManagerStatics3) },
+        #endif
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IToastNotificationManagerStatics3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_IToastNotificationManagerStatics3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_IToastNotificationManagerStatics3) },
@@ -741,7 +745,11 @@ namespace py::cpp::Windows::Phone::StartScreen
         "winrt._winrt_windows_phone_startscreen._IToastNotificationManagerStatics3",
         sizeof(py::wrapper::Windows::Phone::StartScreen::IToastNotificationManagerStatics3),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         _type_slots_IToastNotificationManagerStatics3};
 
     struct ImplementsIToastNotificationManagerStatics3 : py::ImplementsInterfaceT<ImplementsIToastNotificationManagerStatics3, winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
@@ -859,7 +867,11 @@ namespace py::cpp::Windows::Phone::StartScreen
         "winrt._winrt_windows_phone_startscreen.IToastNotificationManagerStatics3",
         0,
         0,
-        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
         type_slots_ImplementsIToastNotificationManagerStatics3};
 
     // ----- Windows.Phone.StartScreen Initialization --------------------

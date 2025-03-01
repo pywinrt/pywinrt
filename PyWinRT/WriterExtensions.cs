@@ -199,7 +199,22 @@ static class WriterExtensions
         }
 
         w.WriteLine("0,");
-        w.WriteLine($"Py_TPFLAGS_DEFAULT{(type.IsComposable ? " | Py_TPFLAGS_BASETYPE" : "")},");
+
+        if (type.Category == Category.Interface)
+        {
+            w.WriteLine("Py_TPFLAGS_DEFAULT");
+            w.WriteLine("#if PY_VERSION_HEX >= 0x030A0000");
+            w.WriteLine("| Py_TPFLAGS_DISALLOW_INSTANTIATION");
+            w.WriteLine("#endif");
+            w.WriteLine(",");
+        }
+        else
+        {
+            w.WriteLine(
+                $"Py_TPFLAGS_DEFAULT{(type.IsComposable ? " | Py_TPFLAGS_BASETYPE" : "")},"
+            );
+        }
+
         w.WriteLine($"_type_slots_{type.Name}}};");
         w.Indent--;
     }
@@ -211,7 +226,18 @@ static class WriterExtensions
         w.WriteBlankLine();
         w.WriteLine($"static PyType_Slot _type_slots_{name}[] = {{");
         w.Indent++;
+
+        if (type.Category == Category.Interface)
+        {
+            w.WriteLine("#if PY_VERSION_HEX < 0x030A0000");
+        }
+
         w.WriteLine($"{{ Py_tp_new, reinterpret_cast<void*>(_new_{name}) }},");
+
+        if (type.Category == Category.Interface)
+        {
+            w.WriteLine("#endif");
+        }
 
         if (!type.IsStatic)
         {
@@ -421,6 +447,7 @@ static class WriterExtensions
 
         if (type.Category == Category.Interface)
         {
+            w.WriteLine("#if PY_VERSION_HEX < 0x030A0000");
             w.WriteLine(
                 $"static PyObject* _new_{type.Name}(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept"
             );
@@ -434,6 +461,7 @@ static class WriterExtensions
                 );
                 w.WriteLine("return nullptr;");
             });
+            w.WriteLine("#endif");
         }
         else if (type.Category == Category.Class)
         {
