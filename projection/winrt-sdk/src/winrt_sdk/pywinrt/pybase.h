@@ -790,7 +790,7 @@ namespace py
     inline __declspec(noinline) void set_invalid_activation_error(
         const char* const type_name)
     {
-        PyErr_Format(PyExc_TypeError, "type '%s' is not activatable", type_name);
+        PyErr_Format(PyExc_TypeError, "cannot create '%s' instances", type_name);
     }
 
     inline __declspec(noinline) void set_arg_count_version_error(
