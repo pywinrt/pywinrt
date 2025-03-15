@@ -28,7 +28,7 @@ subprocess.check_call(["wheel", "unpack", wheel])
 
 # get name of extracted directory
 wheel_dir = glob.glob(
-    "winui3_Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap-*"
+    "winui3_microsoft_windows_applicationmodel_dynamicdependency_bootstrap-*"
 )[0]
 
 bootstrap_dll = os.fspath(
