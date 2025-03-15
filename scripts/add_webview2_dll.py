@@ -26,7 +26,7 @@ wheel_arch = wheel.split(".")[-2].split("-")[-1]
 subprocess.check_call(["wheel", "unpack", wheel])
 
 # get name of extracted directory
-wheel_dir = glob.glob("webivew2_Microsoft.Web.WebView2.Core-*")[0]
+wheel_dir = glob.glob("webivew2_microsoft_web_webview2_core-*")[0]
 
 dll = os.fspath(
     pathlib.Path(os.environ["WEBVIEW2_PATH"])
