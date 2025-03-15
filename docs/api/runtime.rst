@@ -21,7 +21,7 @@ Functions related to preparing the WinRT runtime for use.
     :param apartment_type: The apartment type to initialize the runtime in.
     :type apartment_type: ApartmentType
 
-    .. versionadded:: unreleased
+    .. versionadded:: 3.0
 
 .. function:: uninit_apartment() -> None
 
@@ -30,7 +30,7 @@ Functions related to preparing the WinRT runtime for use.
     Not necessary on thread exit, but can be used uninitalize and re-initalize
     a thread if needed.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 3.0
 
 
 .. class:: ApartmentType
@@ -45,4 +45,4 @@ Functions related to preparing the WinRT runtime for use.
 
         Multi-threaded apartment.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 3.0

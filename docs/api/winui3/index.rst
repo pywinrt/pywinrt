@@ -16,7 +16,7 @@ in :doc:`../../types` section.
 .. tip:: The packages include type hints so you can use those if
     you are unsure of a return type or a parameter type.
 
-.. versionchanged:: unreleased
+.. versionchanged:: 3.0
     The top-level package name has been changed from ``winrt`` to ``winui3``.
 
 ------------

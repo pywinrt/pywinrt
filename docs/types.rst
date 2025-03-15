@@ -138,7 +138,7 @@ Example::
     Changed ``__repr__`` implementation to give a representation that can be
     passed to ``eval()``.
 
-.. versionchanged:: unreleased
+.. versionchanged:: 3.0
 
     Structs are now immutable. In previous versions, attributes could be set.
     Added ``__replace__`` method to allow for use with :func:`copy.replace`.
