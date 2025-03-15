@@ -18,25 +18,19 @@ jobs:
       - name: Install winrt-sdk
         run: |
           $whl = (Get-ChildItem wheelhouse/winrt_sdk-*.whl | Select-Object -First 1).FullName
-          pip install $whl
-      - name: Build webview2-Microsoft.Web.WebView2.Core
-        run: pyproject-build --outdir wheelhouse projection/webview2/webview2-Microsoft.Web.WebView2.Core
-      - name: Install webview2-Microsoft.Web.WebView2.Core
-        run: |
-          $whl = (Get-ChildItem wheelhouse/webview2-Microsoft.Web.Webview2.Core-*.whl | Select-Object -First 1).FullName
-          pip install $whl
+          pip install --no-deps $whl
       - name: Build winrt-Microsoft.UI.Xaml
         run: pyproject-build --outdir wheelhouse projection/winrt-Microsoft.UI.Xaml
       - name: Install winrt-Microsoft.UI.Xaml
         run: |
           $whl = (Get-ChildItem wheelhouse/winrt_microsoft_ui_xaml-*.whl | Select-Object -First 1).FullName
-          pip install $whl
+          pip install --no-deps $whl
       - name: Build winrt-WindowsAppSDK
         run: pyproject-build --outdir wheelhouse projection/winrt-WindowsAppSDK
       - name: Install winrt-WindowsAppSDK
         run: |
           $whl = (Get-ChildItem wheelhouse/winrt_WindowsAppSDK-*.whl | Select-Object -First 1).FullName
-          pip install $whl
+          pip install --no-deps $whl
       - name: Build sdists
         run: python scripts/build-sdist.py
       - name: Upload wheels
