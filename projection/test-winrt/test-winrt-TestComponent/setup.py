@@ -22,7 +22,7 @@ setup(
     cmdclass = {'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
-            "winrt._test_winrt_testcomponent",
+            "test_winrt._test_winrt_testcomponent",
             sources=["py.TestComponent.cpp"],
             include_dirs=get_include_dirs() + ["./cppwinrt"],
             libraries=["windowsapp"],

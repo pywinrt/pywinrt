@@ -99,7 +99,7 @@ setup(
     cmdclass = {{'build_ext': build_ext_ex}},
     ext_modules=[
         Extension(
-            "winrt.{ext_module}",
+            "{root_package}.{ext_module}",
             sources=[{sources}],
             include_dirs=get_include_dirs(){extra_include_dirs},
             libraries=["windowsapp"{extra_libraries}],
@@ -110,7 +110,7 @@ setup(
 
 EXTRA_EXT_MODULES = """,
         Extension(
-            "winrt.{ext_module}",
+            "{root_package}.{ext_module}",
             sources=[{sources}],
             include_dirs=get_include_dirs(){extra_include_dirs},
             libraries=["windowsapp"],
@@ -272,6 +272,7 @@ def write_project_files(
     relative = "/".join([".."] * len(relative_package_path.parts))
     has_requirements = (package_path / "requirements.txt").exists()
     has_all_requirements = (package_path / "all-requirements.txt").exists()
+    root_package = module_name.split(".")[0]
 
     with open(package_path / "pyproject.toml", "w", newline="\n") as f:
         f.write(
@@ -333,6 +334,7 @@ def write_project_files(
                     extra_init=APP_SDK_INIT
                     if is_app_sdk_interop_package(package_name)
                     else "",
+                    root_package=root_package,
                     ext_module=ext_module_name,
                     sources=", ".join(f'"{x}"' for x in sources),
                     extra_imports="\nfrom winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs"
@@ -369,6 +371,7 @@ def write_project_files(
                     + (', "D3D11"' if is_direct3d11_package(package_name) else ""),
                     extra_extension=(
                         EXTRA_EXT_MODULES.format(
+                            root_package=root_package,
                             ext_module=f"{ext_module_name}_2",
                             sources=f'"{second_ext_source_file}"',
                             extra_include_dirs=(
