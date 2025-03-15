@@ -19,7 +19,7 @@ class build_ext_ex(build_ext):
 
 
 setup(
-    cmdclass = {'build_ext': build_ext_ex},
+    cmdclass={'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
             "webview2._webview2_microsoft_web_webview2_core",

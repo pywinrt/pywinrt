@@ -19,7 +19,7 @@ class build_ext_ex(build_ext):
 
 
 setup(
-    cmdclass = {'build_ext': build_ext_ex},
+    cmdclass={'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
             "winrt._winrt_windows_applicationmodel_wallet_system",
