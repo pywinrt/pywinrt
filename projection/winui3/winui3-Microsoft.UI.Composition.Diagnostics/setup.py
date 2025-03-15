@@ -20,7 +20,7 @@ class build_ext_ex(build_ext):
 
 
 setup(
-    cmdclass = {'build_ext': build_ext_ex},
+    cmdclass={'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
             "winui3._winui3_microsoft_ui_composition_diagnostics",
