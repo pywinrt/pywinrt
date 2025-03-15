@@ -10,4 +10,4 @@ def get_include_dirs() -> List[str]:
     ``setuptools.setup().``
     """
     package_dir = files("winrt_sdk")
-    return [package_dir.joinpath(d) for d in ["cppwinrt", "pywinrt"]]
+    return [package_dir.joinpath(d).name for d in ["cppwinrt", "pywinrt"]]
