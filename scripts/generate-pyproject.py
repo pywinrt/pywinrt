@@ -244,7 +244,7 @@ def is_windows_app_package(name: str) -> bool:
     return name.startswith("winui3-Microsoft.") or is_app_sdk_interop_package(name)
 
 
-def is_component_pacakge(name: str) -> bool:
+def is_component_package(name: str) -> bool:
     return name in ["test-winrt-TestComponent"] or is_webview2_package(name)
 
 
@@ -298,7 +298,7 @@ def write_project_files(
                 if (package_path / "src").exists()
                 else (
                     COMPONENT_PACKAGE_FIND_SRC
-                    if is_component_pacakge(package_name)
+                    if is_component_package(package_name)
                     else ""
                 ),
             )
@@ -352,7 +352,7 @@ def write_project_files(
                     )
                     + (
                         ' + ["./cppwinrt"]'
-                        if is_component_pacakge(package_name)
+                        if is_component_package(package_name)
                         else ""
                     ),
                     extra_build=APP_SDK_EXTRA_BUILD
