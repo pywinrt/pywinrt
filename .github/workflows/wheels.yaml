@@ -19,6 +19,12 @@ jobs:
         run: |
           $whl = (Get-ChildItem wheelhouse/winrt_sdk-*.whl | Select-Object -First 1).FullName
           pip install $whl
+      - name: Build winrt-Microsoft.Web.WebView2.Core
+        run: pyproject-build --outdir wheelhouse projection/winrt-Microsoft.Web.WebView2.Core
+      - name: Install winrt-Microsoft.Web.WebView2.Core
+        run: |
+          $whl = (Get-ChildItem wheelhouse/winrt_microsoft_web_webview2_core-*.whl | Select-Object -First 1).FullName
+          pip install $whl
       - name: Build winrt-Microsoft.UI.Xaml
         run: pyproject-build --outdir wheelhouse projection/winrt-Microsoft.UI.Xaml
       - name: Install winrt-Microsoft.UI.Xaml
