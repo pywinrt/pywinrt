@@ -17,6 +17,6 @@ def get_include_dirs() -> List[str]:
         # hack for building on CI without binary packages
         webview2_dir = package_dir.joinpath("..", "..", "..", "webview2")
 
-    return [package_dir.joinpath(d).name for d in ["cppwinrt", "pywinrt"]] + [
-        webview2_dir.joinpath(d).name for d in ["cppwinrt", "pywinrt"]
+    return [str(package_dir.joinpath(d)) for d in ["cppwinrt", "pywinrt"]] + [
+        str(webview2_dir.joinpath(d)) for d in ["cppwinrt", "pywinrt"]
     ]
