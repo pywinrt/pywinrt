@@ -17,11 +17,12 @@ os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
 
 try:
     import winrt_sdk  # noqa: F401
+    import webview2.microsoft.web.webview2.core  # noqa: F401
     import winrt_microsoft_ui_xaml  # noqa: F401
     import winrt_windows_app_sdk  # noqa: F401
 except ImportError:
     print(
-        "winrt-sdk, winrt-Microsoft.UI.Xaml and winrt-WindowsAppSDK must be installed first installed in order for build to succeed."
+        "winrt-sdk, webview2-Microsoft.Web.WebView2.Core, winrt-Microsoft.UI.Xaml and winrt-WindowsAppSDK must be installed first installed in order for build to succeed."
     )
     exit(1)
 
