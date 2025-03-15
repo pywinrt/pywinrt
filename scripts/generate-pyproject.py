@@ -36,7 +36,7 @@ version = {{ file = "pywinrt-version.txt" }}{dependencies}{optional_dependencies
 
 COMPONENT_PACKAGE_FIND_SRC = """
 [tool.setuptools.packages.find]
-exclude = ["cppwrint"]
+exclude = ["cppwrint", "pywinrt"]
 """
 
 SDK_PACKAGE_TEMPLATE = """\
@@ -351,7 +351,7 @@ def write_project_files(
                         else ""
                     )
                     + (
-                        ' + ["./cppwinrt"]'
+                        ' + ["./cppwinrt", "./pywinrt"]'
                         if is_component_package(package_name)
                         else ""
                     ),

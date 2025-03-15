@@ -24,7 +24,7 @@ setup(
         Extension(
             "test_winrt._test_winrt_testcomponent",
             sources=["py.TestComponent.cpp"],
-            include_dirs=get_include_dirs() + ["./cppwinrt"],
+            include_dirs=get_include_dirs() + ["./cppwinrt", "./pywinrt"],
             libraries=["windowsapp"],
         )
     ],
