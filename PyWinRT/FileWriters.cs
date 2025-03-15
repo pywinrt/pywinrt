@@ -40,8 +40,7 @@ static class FileWriters
             nsDir = new DirectoryInfo(Path.Combine(nsDir.FullName, segment));
         }
 
-        var headerDir =
-            headerPath ?? new DirectoryInfo(Path.Combine(nsPackageDir.FullName, "pywinrt"));
+        var headerDir = headerPath ?? new DirectoryInfo(Path.Combine(rootDir.FullName, "pywinrt"));
 
         var members = new Members(typeDefinitions);
 

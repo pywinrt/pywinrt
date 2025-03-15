@@ -36,7 +36,7 @@ version = {{ file = "pywinrt-version.txt" }}{dependencies}{optional_dependencies
 
 COMPONENT_PACKAGE_FIND_SRC = """
 [tool.setuptools.packages.find]
-exclude = ["cppwrint", "pywinrt"]
+exclude = ["cppwrint"]
 """
 
 SDK_PACKAGE_TEMPLATE = """\
@@ -46,7 +46,7 @@ SDK_PACKAGE_TEMPLATE = """\
 
 BINARY_PACKAGE_TEMPLATE = """\
 [tool.setuptools.package-data]
-"*" = ["*.pyi", "py.typed"]
+"*" = ["*.pyi", "py.typed"{component_package_data}]
 
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
@@ -309,6 +309,9 @@ def write_project_files(
         else:
             f.write(
                 BINARY_PACKAGE_TEMPLATE.format(
+                    component_package_data=', "*.h"'
+                    if is_component_package(package_name)
+                    else "",
                     relative=relative,
                     extra_python_path=f";{relative}/winrt-WindowsAppSDK/src"
                     if is_windows_app_package(package_name)
@@ -351,7 +354,7 @@ def write_project_files(
                         else ""
                     )
                     + (
-                        ' + ["./cppwinrt", "./pywinrt"]'
+                        f' + ["./{root_package}/cppwinrt", "./{root_package}/pywinrt"]'
                         if is_component_package(package_name)
                         else ""
                     ),
