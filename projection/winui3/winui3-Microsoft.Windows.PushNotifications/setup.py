@@ -23,7 +23,7 @@ setup(
     cmdclass = {'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
-            "winrt._winui3_microsoft_windows_pushnotifications",
+            "winui3._winui3_microsoft_windows_pushnotifications",
             sources=["py.Microsoft.Windows.PushNotifications.cpp"],
             include_dirs=get_include_dirs()+ get_app_sdk_include_dirs(),
             libraries=["windowsapp"],
