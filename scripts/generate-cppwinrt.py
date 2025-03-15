@@ -43,7 +43,11 @@ WEBVIEW2_PACKAGE_METADATA = (
 )
 
 WEBVIEW2_PACKAGE_PATH = (
-    PROJECTION_PATH / "webview2" / "webview2-Microsoft.Web.WebView2.Core" / "cppwinrt"
+    PROJECTION_PATH
+    / "webview2"
+    / "webview2-Microsoft.Web.WebView2.Core"
+    / "webview2"
+    / "cppwinrt"
 )
 
 shutil.rmtree(WEBVIEW2_PACKAGE_PATH, ignore_errors=True)
@@ -133,7 +137,11 @@ TEST_PACKAGE_METADATA = (
     / "TestComponent.winmd"
 )
 TEST_PACKAGE_PATH = (
-    PROJECTION_PATH / "test-winrt" / "test-winrt-TestComponent" / "cppwinrt"
+    PROJECTION_PATH
+    / "test-winrt"
+    / "test-winrt-TestComponent"
+    / "test_winrt"
+    / "cppwinrt"
 )
 
 shutil.rmtree(TEST_PACKAGE_PATH, ignore_errors=True)
