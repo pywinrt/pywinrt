@@ -119,7 +119,7 @@ function(pywinrt_add_namespace_package package)
 
 
     pywinrt_add_library(${package_target} "${package_sources}")
-    target_include_directories(${package_target} PRIVATE "${package}/cppwinrt" "${package}")
+    target_include_directories(${package_target} PRIVATE "${package}/cppwinrt" "${package}/pywinrt")
 
     install(TARGETS ${package_target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${package_root_dir}")
     install(DIRECTORY "${package}/${package_root_dir}/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${package_root_dir}")
@@ -128,7 +128,7 @@ function(pywinrt_add_namespace_package package)
         set(package_sources_2 "${package}/py.${package_namespace}_2.cpp")
 
         pywinrt_add_library(${package_target}_2 "${package_sources_2}")
-        target_include_directories(${package_target}_2 PRIVATE "${package}/cppwinrt" "${package}")
+        target_include_directories(${package_target}_2 PRIVATE "${package}/cppwinrt" "${package}/pywinrt")
 
         install(TARGETS ${package_target}_2 DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${package_root_dir}")
     endif()

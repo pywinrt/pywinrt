@@ -30,7 +30,7 @@ dependencies = { file = "requirements.txt" }
 optional-dependencies.all = { file = "all-requirements.txt" }
 
 [tool.setuptools.packages.find]
-exclude = ["cppwrint"]
+exclude = ["cppwrint", "pywinrt"]
 
 [tool.setuptools.package-data]
 "*" = ["*.pyi", "py.typed"]
