@@ -4,7 +4,7 @@
 
 APIs for bootstrapping the Windows App runtime.
 
-.. versionchanged:: unreleased
+.. versionchanged:: 3.0
     The top-level package name has been changed from ``winrt`` to ``winui3``.
 
 .. currentmodule:: winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap
