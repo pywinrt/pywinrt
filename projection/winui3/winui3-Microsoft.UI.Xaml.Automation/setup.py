@@ -23,7 +23,7 @@ setup(
     cmdclass = {'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
-            "winrt._winui3_microsoft_ui_xaml_automation",
+            "winui3._winui3_microsoft_ui_xaml_automation",
             sources=["py.Microsoft.UI.Xaml.Automation.cpp"],
             include_dirs=get_include_dirs()+ get_app_sdk_include_dirs(),
             libraries=["windowsapp"],

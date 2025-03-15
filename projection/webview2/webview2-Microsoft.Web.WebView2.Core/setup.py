@@ -22,7 +22,7 @@ setup(
     cmdclass = {'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
-            "winrt._webview2_microsoft_web_webview2_core",
+            "webview2._webview2_microsoft_web_webview2_core",
             sources=["py.Microsoft.Web.WebView2.Core.cpp"],
             include_dirs=get_include_dirs() + ["./cppwinrt"],
             libraries=["windowsapp"],

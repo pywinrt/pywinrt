@@ -23,7 +23,7 @@ setup(
     cmdclass = {'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
-            "winrt._winui3_microsoft_windows_applicationmodel_windowsappruntime",
+            "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime",
             sources=["py.Microsoft.Windows.ApplicationModel.WindowsAppRuntime.cpp"],
             include_dirs=get_include_dirs()+ get_app_sdk_include_dirs(),
             libraries=["windowsapp"],

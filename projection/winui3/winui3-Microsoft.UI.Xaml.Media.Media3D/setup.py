@@ -23,7 +23,7 @@ setup(
     cmdclass = {'build_ext': build_ext_ex},
     ext_modules=[
         Extension(
-            "winrt._winui3_microsoft_ui_xaml_media_media3d",
+            "winui3._winui3_microsoft_ui_xaml_media_media3d",
             sources=["py.Microsoft.UI.Xaml.Media.Media3D.cpp"],
             include_dirs=get_include_dirs()+ get_app_sdk_include_dirs(),
             libraries=["windowsapp"],
