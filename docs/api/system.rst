@@ -29,7 +29,7 @@ Fundamental types
         :type type: type
         :return: The object cast to the specified type.
 
-        .. versionadded:: unreleased
+        .. versionadded:: 3.0
 
     .. rubric:: Introspection attributes
 
@@ -127,7 +127,7 @@ be unboxed to get the original value.
 
         obj = PropertyValue.create_xyz(value)
 
-    .. versionadded:: unreleased
+    .. versionadded:: 3.0
 
 .. function:: unbox_boolean(value: Object) -> bool
     unbox_int8(value: Object) -> str
@@ -154,4 +154,4 @@ be unboxed to get the original value.
 
         value = obj.as_(IPropertyValue).get_xyz()
 
-    .. versionadded:: unreleased
+    .. versionadded:: 3.0

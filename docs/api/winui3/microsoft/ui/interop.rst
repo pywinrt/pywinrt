@@ -6,7 +6,7 @@ Exposes interop functions from the ``Microsoft.UI.Interop`` namespace.
 
 See: https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-microsoft.ui.interop/
 
-.. versionchanged:: unreleased
+.. versionchanged:: 3.0
     The top-level package name has been changed from ``winrt`` to ``winui3``.
 
 .. currentmodule:: winui3.microsoft.ui.interop
