@@ -19,10 +19,10 @@ for package_path in chain(
     [PROJECTION_PATH / "winrt-runtime"],
     (PROJECTION_PATH / "interop").glob("winrt-*"),
     (PROJECTION_PATH / "interop").glob("winui3-*"),
-    (PROJECTION_PATH / "winrt").glob("winrt-*"),
+    (PROJECTION_PATH / "webview2").glob("webview2-*"),
     (PROJECTION_PATH / "winui2").glob("winui2-*"),
     (PROJECTION_PATH / "winui3").glob("winui3-*"),
-    (PROJECTION_PATH / "webview2").glob("webview2-*"),
+    (PROJECTION_PATH / "winrt").glob("winrt-*"),
 ):
     subprocess.check_call(
         [
