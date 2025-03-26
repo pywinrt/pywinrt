@@ -1,9 +1,18 @@
+<image src="PyWinRT/nuget/icon.png" alt="logo" align="right" />
+
 # PyWinRT
 
-<image src="PyWinRT/nuget/icon.png" alt="logo" style="float:right" />
 Access Windows Runtime (WinRT) APIs directly from Python! 🚀
 
-Try it:
+## 🛠️ Overview
+
+What can you do with PyWinRT? 🤔
+
+- 🔌 Access hardware, like Bluetooth, USB, serial ports, cameras, and more from Python.
+- 🖥️ Access Windows OS features like notifications and screen capture from Python.
+- 🖌️ Write WinUI 2 or WinUI 3 apps using Python.
+
+Want to try it❓Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and run the following command to execute this example script:
 
 ```console
 uv run --script https://raw.githubusercontent.com/pywinrt/pywinrt/refs/heads/main/samples/text_to_speech.py
@@ -51,17 +60,6 @@ async def main():
 
 asyncio.run(main())
 ```
-
-<div style="clear:right"></div>
-
-
-## 🛠️ Overview
-
-What can you do with PyWinRT? 🤔
-
-- 🔌 Access hardware, like Bluetooth, USB, serial ports, cameras, and more from Python.
-- 🖥️ Access Windows OS features like notifications and screen capture from Python.
-- 🖌️ Write WinUI 2 or WinUI 3 apps using Python.
 
 ## 📚 Documentation
 
