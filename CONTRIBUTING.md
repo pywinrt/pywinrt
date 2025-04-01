@@ -14,7 +14,7 @@
 
 Once Nuget is installed, run:
 
-   .\scripts\fetch-tools.ps1
+    .\scripts\fetch-tools.ps1
 
 ### For building Python extension modules
 
