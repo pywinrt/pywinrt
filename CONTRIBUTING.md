@@ -54,11 +54,11 @@ Normally this is not needed unless we need to pull in changes from upstream.
 
 If the CppWinRT version is updated, run:
 
-   py .\scripts\generate-cppwinrt.py
+    py .\scripts\generate-cppwinrt.py
 
 If the pythoncapi compat headers are updated, run:
 
-   .\scripts\update-pythoncapi-compat.ps1
+    .\scripts\update-pythoncapi-compat.ps1
 
 ## Running tests
 
