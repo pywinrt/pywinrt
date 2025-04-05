@@ -6,14 +6,14 @@ PYPROJECT_TOML_TEMPLATE = """\
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools"{extra_requires}]
+requires = ["setuptools>=78"{extra_requires}]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "{package_name}"
 description = "{description}"
 readme = "README.md"
-license = {{ text = "MIT" }}
+license = "MIT"
 classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
