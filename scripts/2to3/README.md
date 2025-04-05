@@ -44,7 +44,7 @@ that can jump to the location in the source file.
   false positives.
 * Some methods may have overloads with the same number of arguments that are
   now exposed in the projection that previously weren't. In this case, check
-  the type hints to ensure the correct overload is being used base on the
+  the type hints to ensure the correct overload is being used based on the
   argument types.
 
 ## "Casting" WinRT object/interface types
