@@ -5,7 +5,6 @@
 #define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
 #include "pyruntime.h"
-#include "_winrt_box.h"
 #include <winrt/base.h>
 
 namespace py::cpp::_winrt
@@ -608,7 +607,40 @@ namespace py::cpp::_winrt
         std::destroy_at(&state->struct_from_tuple_cache);
     }
 
-    PyDoc_STRVAR(module_doc, "_winrt");
+    // Not using a header file for thes because setuptools doesn't have a nice
+    // way to pick up private header files.
+    PyObject* box_boolean(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_int8(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_uint8(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_int16(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_uint16(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_int32(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_uint32(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_int64(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_uint64(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_single(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_double(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_char16(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_string(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_guid(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_date_time(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* box_time_span(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_boolean(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_int8(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_uint8(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_int16(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_uint16(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_int32(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_uint32(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_int64(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_uint64(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_single(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_double(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_char16(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_string(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_guid(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_date_time(PyObject* /*unused*/, PyObject* obj) noexcept;
+    PyObject* unbox_time_span(PyObject* /*unused*/, PyObject* obj) noexcept;
 
     static PyMethodDef module_methods[]{
         {"init_apartment", init_apartment, METH_O, "initialize the apartment"},
@@ -675,6 +707,8 @@ namespace py::cpp::_winrt
          METH_O,
          PyDoc_STR("Unbox a Windows.Foundation.TimeSpan value")},
         {}};
+
+    PyDoc_STRVAR(module_doc, "_winrt");
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
