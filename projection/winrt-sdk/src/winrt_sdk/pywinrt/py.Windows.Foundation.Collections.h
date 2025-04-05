@@ -24,7 +24,6 @@ namespace py::proj::Windows::Foundation::Collections
         virtual PyObject* MoveNext(PyObject*) noexcept = 0;
         virtual PyObject* get_Current() noexcept = 0;
         virtual PyObject* get_HasCurrent() noexcept = 0;
-        virtual PyObject* dunder_iter() noexcept = 0;
         virtual PyObject* dunder_iternext() noexcept = 0;
     };
 
@@ -566,10 +565,6 @@ namespace py::impl::Windows::Foundation::Collections
                 py::to_PyErr();
                 return nullptr;
             }
-        }
-        PyObject* dunder_iter() noexcept override
-        {
-            return Py_NewRef(reinterpret_cast<PyObject*>(this));
         }
         PyObject* dunder_iternext() noexcept override
         {

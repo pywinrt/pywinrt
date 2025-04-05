@@ -674,7 +674,15 @@ static class WriterExtensions
             w.WriteLine(
                 $"static PyObject* _iterator_{type.Name}({type.CppPyWrapperType}* self) noexcept"
             );
-            writeBody("dunder_iter()", () => w.WriteDunderIterBody(type));
+
+            if (type.IsPyIterator)
+            {
+                w.WriteBlock(() => w.WriteDunderIterBody(type));
+            }
+            else
+            {
+                writeBody("dunder_iter()", () => w.WriteDunderIterBody(type));
+            }
         }
 
         if (type.IsPyIterator)

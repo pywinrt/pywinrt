@@ -2058,7 +2058,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     static PyObject* _iterator_IIterator(py::wrapper::Windows::Foundation::Collections::IIterator* self) noexcept
     {
-        return self->impl->dunder_iter();
+        return Py_NewRef(reinterpret_cast<PyObject*>(self));
     }
 
     static PyObject* _iterator_next_IIterator(py::wrapper::Windows::Foundation::Collections::IIterator* self) noexcept
