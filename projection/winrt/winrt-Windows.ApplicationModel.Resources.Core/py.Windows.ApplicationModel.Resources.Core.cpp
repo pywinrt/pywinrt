@@ -3343,7 +3343,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* _iterator_ResourceMapIterator(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapIterator* self) noexcept
     {
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(reinterpret_cast<PyObject*>(self));
     }
 
     static PyObject* _iterator_next_ResourceMapIterator(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapIterator* self) noexcept
@@ -3961,7 +3961,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static PyObject* _iterator_ResourceMapMapViewIterator(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator* self) noexcept
     {
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(reinterpret_cast<PyObject*>(self));
     }
 
     static PyObject* _iterator_next_ResourceMapMapViewIterator(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator* self) noexcept
