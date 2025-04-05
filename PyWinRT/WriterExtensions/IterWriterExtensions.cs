@@ -23,7 +23,7 @@ static class IterWriterExtensions
         else if (type.IsPyIterator)
         {
             var self = type.IsGeneric ? "this" : "self";
-            w.WriteLine($"return reinterpret_cast<PyObject*>({self});");
+            w.WriteLine($"return Py_NewRef(reinterpret_cast<PyObject*>({self}));");
         }
         else if (type.IsPyIterable)
         {

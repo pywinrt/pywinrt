@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed ``IIterator.__iter__()`` returning an object without taking a reference.
+
 ## [v3.0.0] - 2025-03-15
 
 ### Added

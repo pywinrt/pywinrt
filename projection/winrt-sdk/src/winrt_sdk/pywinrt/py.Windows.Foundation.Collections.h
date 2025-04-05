@@ -569,7 +569,7 @@ namespace py::impl::Windows::Foundation::Collections
         }
         PyObject* dunder_iter() noexcept override
         {
-            return reinterpret_cast<PyObject*>(this);
+            return Py_NewRef(reinterpret_cast<PyObject*>(this));
         }
         PyObject* dunder_iternext() noexcept override
         {

@@ -12017,7 +12017,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
 
     static PyObject* _iterator_CoreWebView2HttpHeadersCollectionIterator(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator* self) noexcept
     {
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(reinterpret_cast<PyObject*>(self));
     }
 
     static PyObject* _iterator_next_CoreWebView2HttpHeadersCollectionIterator(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2HttpHeadersCollectionIterator* self) noexcept

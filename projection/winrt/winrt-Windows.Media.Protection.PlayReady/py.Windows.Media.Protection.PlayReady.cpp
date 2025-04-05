@@ -3154,7 +3154,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _iterator_PlayReadyDomainIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator* self) noexcept
     {
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(reinterpret_cast<PyObject*>(self));
     }
 
     static PyObject* _iterator_next_PlayReadyDomainIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator* self) noexcept
@@ -6604,7 +6604,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _iterator_PlayReadyLicenseIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator* self) noexcept
     {
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(reinterpret_cast<PyObject*>(self));
     }
 
     static PyObject* _iterator_next_PlayReadyLicenseIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator* self) noexcept
@@ -8338,7 +8338,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyObject* _iterator_PlayReadySecureStopIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator* self) noexcept
     {
-        return reinterpret_cast<PyObject*>(self);
+        return Py_NewRef(reinterpret_cast<PyObject*>(self));
     }
 
     static PyObject* _iterator_next_PlayReadySecureStopIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator* self) noexcept
