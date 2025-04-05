@@ -4,13 +4,15 @@ static class IterWriterExtensions
 {
     public static void WriteIterGenericInterfaceImpl(this IndentedTextWriter w, ProjectedType type)
     {
-        w.WriteLine("PyObject* dunder_iter() noexcept override");
-        w.WriteBlock(() => w.WriteDunderIterBody(type));
-
         if (type.IsPyIterator)
         {
             w.WriteLine("PyObject* dunder_iternext() noexcept override");
             w.WriteBlock(() => w.WriteDunderIterNextBody(type));
+        }
+        else
+        {
+            w.WriteLine("PyObject* dunder_iter() noexcept override");
+            w.WriteBlock(() => w.WriteDunderIterBody(type));
         }
     }
 
@@ -22,8 +24,7 @@ static class IterWriterExtensions
         }
         else if (type.IsPyIterator)
         {
-            var self = type.IsGeneric ? "this" : "self";
-            w.WriteLine($"return Py_NewRef(reinterpret_cast<PyObject*>({self}));");
+            w.WriteLine("return Py_NewRef(reinterpret_cast<PyObject*>(self));");
         }
         else if (type.IsPyIterable)
         {

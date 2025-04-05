@@ -371,14 +371,13 @@ static class InterfaceWriterExtensions
                     w.WriteLine($"virtual PyObject* dunder_await() noexcept = 0;");
                 }
 
-                if (type.IsPyIterable)
-                {
-                    w.WriteLine("virtual PyObject* dunder_iter() noexcept = 0;");
-                }
-
                 if (type.IsPyIterator)
                 {
                     w.WriteLine("virtual PyObject* dunder_iternext() noexcept = 0;");
+                }
+                else if (type.IsPyIterable)
+                {
+                    w.WriteLine("virtual PyObject* dunder_iter() noexcept = 0;");
                 }
 
                 if (type.IsPySequence)

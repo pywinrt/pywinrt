@@ -1,3 +1,4 @@
+import sys
 import unittest
 
 import winrt.windows.data.json as wdj
@@ -43,6 +44,20 @@ class TestJson(unittest.TestCase):
         for x, v in enumerate(a):
             self.assertEqual(v.value_type, wdj.JsonValueType.NUMBER)
             self.assertEqual(v.get_number(), x + 1)
+
+    def test_JsonArray_iter(self):
+        # regression test to ensure that IIterator.__iter__ returns self with
+        # correct reference counting.
+
+        a = wdj.JsonArray.parse("[1,2,3,4,5]")
+
+        i = iter(a)
+        c = sys.getrefcount(i)
+        i2 = iter(i)
+        c2 = sys.getrefcount(i2)
+
+        self.assertIs(i2, i, "iter() should return self")
+        self.assertEqual(c2, c + 1, "iter() should return new reference")
 
     def test_JsonArray_remove_at(self):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")

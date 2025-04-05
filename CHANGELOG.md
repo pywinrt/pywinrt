@@ -6,6 +6,7 @@
 
 ### Fixed
 - Fixed ``IIterator.__iter__()`` returning an object without taking a reference.
+- Fixed ``IIterator.__iter__()`` returning an invalid object pointer, leading to a crash.
 
 ## [v3.0.0] - 2025-03-15
 
