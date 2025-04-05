@@ -1,2 +1,2 @@
-build==1.2.1
-setuptools==73.0.0
+build==1.2.2
+setuptools==78.1.0

@@ -1,14 +1,14 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools", "winrt-sdk"]
+requires = ["setuptools>=78", "winrt-sdk"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Windows.Media.Transcoding"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
 classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
