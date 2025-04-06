@@ -958,6 +958,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         IWindowVisibilityChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
         IWindowVisibilityChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IXamlIsland :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IXamlIsland>
+    {
+        IXamlIsland(std::nullptr_t = nullptr) noexcept {}
+        IXamlIsland(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IXamlIslandFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IXamlIslandFactory>
+    {
+        IXamlIslandFactory(std::nullptr_t = nullptr) noexcept {}
+        IXamlIslandFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IXamlResourceReferenceFailedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IXamlResourceReferenceFailedEventArgs>
@@ -985,6 +999,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     {
         IXamlRoot3(std::nullptr_t = nullptr) noexcept {}
         IXamlRoot3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IXamlRoot4 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IXamlRoot4>
+    {
+        IXamlRoot4(std::nullptr_t = nullptr) noexcept {}
+        IXamlRoot4(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IXamlRootChangedEventArgs :
         winrt::Windows::Foundation::IInspectable,

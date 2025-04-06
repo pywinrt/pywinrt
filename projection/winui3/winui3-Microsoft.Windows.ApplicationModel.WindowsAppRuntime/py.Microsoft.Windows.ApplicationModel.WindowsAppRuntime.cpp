@@ -541,6 +541,884 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
         Py_TPFLAGS_DEFAULT,
         _type_slots_DeploymentResult};
 
+    // ----- ReleaseInfo class --------------------
+
+    static PyObject* _new_ReleaseInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo>::type_name);
+        return nullptr;
+    }
+
+    static PyObject* ReleaseInfo_get_AsString(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo", L"AsString");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo::AsString();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReleaseInfo_get_Major(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo", L"Major");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo::Major();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReleaseInfo_get_Minor(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo", L"Minor");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo::Minor();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReleaseInfo_get_Patch(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo", L"Patch");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo::Patch();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReleaseInfo_get_VersionTag(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo", L"VersionTag");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo::VersionTag();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ReleaseInfo[] = {
+        { }};
+
+    static PyGetSetDef _getset_ReleaseInfo[] = {
+        { }};
+
+    static PyType_Slot _type_slots_ReleaseInfo[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ReleaseInfo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ReleaseInfo) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ReleaseInfo) },
+        { }};
+
+    static PyType_Spec type_spec_ReleaseInfo = {
+        "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.ReleaseInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ReleaseInfo};
+
+    static PyGetSetDef getset_ReleaseInfo_Static[] = {
+        { "as_string", reinterpret_cast<getter>(ReleaseInfo_get_AsString), nullptr, nullptr, nullptr },
+        { "major", reinterpret_cast<getter>(ReleaseInfo_get_Major), nullptr, nullptr, nullptr },
+        { "minor", reinterpret_cast<getter>(ReleaseInfo_get_Minor), nullptr, nullptr, nullptr },
+        { "patch", reinterpret_cast<getter>(ReleaseInfo_get_Patch), nullptr, nullptr, nullptr },
+        { "version_tag", reinterpret_cast<getter>(ReleaseInfo_get_VersionTag), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyMethodDef methods_ReleaseInfo_Static[] = {
+        { }};
+
+    static PyType_Slot type_slots_ReleaseInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ReleaseInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ReleaseInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ReleaseInfo_Static = {
+        "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.ReleaseInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ReleaseInfo_Static};
+
+    // ----- RuntimeCompatibilityOptions class --------------------
+
+    static PyObject* _new_RuntimeCompatibilityOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_RuntimeCompatibilityOptions(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* RuntimeCompatibilityOptions_Apply(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions", L"Apply", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.Apply();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RuntimeCompatibilityOptions_get_PatchLevel2(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions", L"PatchLevel2");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PatchLevel2();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RuntimeCompatibilityOptions_put_PatchLevel2(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions", L"PatchLevel2");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PatchLevel2(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RuntimeCompatibilityOptions_get_PatchLevel1(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions", L"PatchLevel1");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.PatchLevel1();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RuntimeCompatibilityOptions_put_PatchLevel1(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions", L"PatchLevel1");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.PatchLevel1(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RuntimeCompatibilityOptions_get_DisabledChanges(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions", L"DisabledChanges");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.DisabledChanges();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_RuntimeCompatibilityOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_RuntimeCompatibilityOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_RuntimeCompatibilityOptions[] = {
+        { "apply", reinterpret_cast<PyCFunction>(RuntimeCompatibilityOptions_Apply), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_RuntimeCompatibilityOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_RuntimeCompatibilityOptions), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_RuntimeCompatibilityOptions[] = {
+        { "patch_level2", reinterpret_cast<getter>(RuntimeCompatibilityOptions_get_PatchLevel2), reinterpret_cast<setter>(RuntimeCompatibilityOptions_put_PatchLevel2), nullptr, nullptr },
+        { "patch_level1", reinterpret_cast<getter>(RuntimeCompatibilityOptions_get_PatchLevel1), reinterpret_cast<setter>(RuntimeCompatibilityOptions_put_PatchLevel1), nullptr, nullptr },
+        { "disabled_changes", reinterpret_cast<getter>(RuntimeCompatibilityOptions_get_DisabledChanges), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_RuntimeCompatibilityOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_RuntimeCompatibilityOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RuntimeCompatibilityOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RuntimeCompatibilityOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_RuntimeCompatibilityOptions) },
+        { }};
+
+    static PyType_Spec type_spec_RuntimeCompatibilityOptions = {
+        "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.RuntimeCompatibilityOptions",
+        sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_RuntimeCompatibilityOptions};
+
+    // ----- RuntimeInfo class --------------------
+
+    static PyObject* _new_RuntimeInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeInfo>::type_name);
+        return nullptr;
+    }
+
+    static PyObject* RuntimeInfo_get_AsString(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeInfo", L"AsString");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeInfo::AsString();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* RuntimeInfo_get_Version(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeInfo", L"Version");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeInfo::Version();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_RuntimeInfo[] = {
+        { }};
+
+    static PyGetSetDef _getset_RuntimeInfo[] = {
+        { }};
+
+    static PyType_Slot _type_slots_RuntimeInfo[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_RuntimeInfo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RuntimeInfo) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_RuntimeInfo) },
+        { }};
+
+    static PyType_Spec type_spec_RuntimeInfo = {
+        "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.RuntimeInfo",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_RuntimeInfo};
+
+    static PyGetSetDef getset_RuntimeInfo_Static[] = {
+        { "as_string", reinterpret_cast<getter>(RuntimeInfo_get_AsString), nullptr, nullptr, nullptr },
+        { "version", reinterpret_cast<getter>(RuntimeInfo_get_Version), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyMethodDef methods_RuntimeInfo_Static[] = {
+        { }};
+
+    static PyType_Slot type_slots_RuntimeInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RuntimeInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RuntimeInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RuntimeInfo_Static = {
+        "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.RuntimeInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RuntimeInfo_Static};
+
+    // ----- WindowsAppRuntimeVersion struct --------------------
+
+    winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion WindowsAppRuntimeVersion_from_tuple(PyObject* tuple)
+    {
+        if (PyTuple_GET_SIZE(tuple) != 3)
+        {
+            PyErr_SetString(PyExc_TypeError, "Incorrect number of fields");
+            throw python_exception();
+        }
+
+        winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion result{};
+
+        result.Major = py::convert_to<uint32_t>(tuple, 0);
+        result.Minor = py::convert_to<uint32_t>(tuple, 1);
+        result.Patch = py::convert_to<uint32_t>(tuple, 2);
+
+        return result;
+    }
+
+    PyObject* _new_WindowsAppRuntimeVersion(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept
+    {
+        pyobj_handle self_obj{(subclass->tp_alloc(subclass, 0))};
+        if (!self_obj)
+        {
+            return nullptr;
+        }
+
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>*>(self_obj.get());
+        std::construct_at(&self->obj);
+
+        auto tuple_size = PyTuple_GET_SIZE(args);
+        if ((tuple_size == 0) && (!kwds))
+        {
+            return self_obj.detach();
+        }
+
+        uint32_t _Major{};
+        uint32_t _Minor{};
+        uint32_t _Patch{};
+
+        static const char* kwlist[] = {"major", "minor", "patch", nullptr};
+        if (!PyArg_ParseTupleAndKeywords(args, kwds, "|III", const_cast<char**>(kwlist), &_Major, &_Minor, &_Patch))
+        {
+            return nullptr;
+        }
+
+        try
+        {
+            self->obj.Major = _Major;
+            self->obj.Minor = _Minor;
+            self->obj.Patch = _Patch;
+
+            return self_obj.detach();
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_WindowsAppRuntimeVersion(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_WindowsAppRuntimeVersion(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    PyObject* _replace_WindowsAppRuntimeVersion(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        try
+        {
+            uint32_t _Major{self->obj.Major};
+            uint32_t _Minor{self->obj.Minor};
+            uint32_t _Patch{self->obj.Patch};
+
+            static const char* kwlist[] = {"major", "minor", "patch", nullptr};
+            if (!PyArg_ParseTupleAndKeywords(args, kwds, "|$III", const_cast<char**>(kwlist), &_Major, &_Minor, &_Patch))
+            {
+                return nullptr;
+            }
+
+            auto copy = self->obj;
+            copy.Major = _Major;
+            copy.Minor = _Minor;
+            copy.Patch = _Patch;
+
+            return convert(copy);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    PyObject* unpack_WindowsAppRuntimeVersion(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion* self, PyObject* /*unused*/) noexcept
+    {
+        py::pyobj_handle Major{convert(self->obj.Major)};
+        if (!Major)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Minor{convert(self->obj.Minor)};
+        if (!Minor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Patch{convert(self->obj.Patch)};
+        if (!Patch)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle tuple{PyTuple_New(3)};
+        if (!tuple)
+        {
+            return nullptr;
+        }
+
+        PyTuple_SET_ITEM(tuple.get(), 0, Major.detach());
+        PyTuple_SET_ITEM(tuple.get(), 1, Minor.detach());
+        PyTuple_SET_ITEM(tuple.get(), 2, Patch.detach());
+
+        return tuple.detach();
+    }
+
+    static PyMethodDef _methods_WindowsAppRuntimeVersion[] = {
+        { "_assign_array_", _assign_array_WindowsAppRuntimeVersion, METH_O | METH_STATIC, nullptr },
+        { "__replace__", reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(_replace_WindowsAppRuntimeVersion)), METH_VARARGS | METH_KEYWORDS, nullptr },
+        { "unpack", reinterpret_cast<PyCFunction>(unpack_WindowsAppRuntimeVersion), METH_NOARGS, nullptr },
+        { }};
+
+    static PyObject* WindowsAppRuntimeVersion_get_Major(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.Major);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowsAppRuntimeVersion_get_Minor(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.Minor);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowsAppRuntimeVersion_get_Patch(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.Patch);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyGetSetDef _getset_WindowsAppRuntimeVersion[] = {
+        { "major", reinterpret_cast<getter>(WindowsAppRuntimeVersion_get_Major), nullptr, nullptr, nullptr },
+        { "minor", reinterpret_cast<getter>(WindowsAppRuntimeVersion_get_Minor), nullptr, nullptr, nullptr },
+        { "patch", reinterpret_cast<getter>(WindowsAppRuntimeVersion_get_Patch), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyObject* _richcompare_WindowsAppRuntimeVersion(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion* self, PyObject* other, int op) noexcept
+    {
+        try
+        {
+            auto _other = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>(other);
+
+            if (op == Py_EQ)
+            {
+                if (self->obj == _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            if (op == Py_NE)
+            {
+                if (self->obj != _other)
+                {
+                    Py_RETURN_TRUE;
+                }
+
+                Py_RETURN_FALSE;
+            }
+
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _repr_WindowsAppRuntimeVersion(PyObject* self) noexcept
+    {
+        py::pyobj_handle Major{PyObject_GetAttrString(self, "major")};
+        if (!Major)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Minor{PyObject_GetAttrString(self, "minor")};
+        if (!Minor)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle Patch{PyObject_GetAttrString(self, "patch")};
+        if (!Patch)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("WindowsAppRuntimeVersion(major=%R, minor=%R, patch=%R)", Major.get(), Minor.get(), Patch.get());
+    }
+
+    static PyType_Slot _type_slots_WindowsAppRuntimeVersion[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WindowsAppRuntimeVersion) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowsAppRuntimeVersion) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowsAppRuntimeVersion) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowsAppRuntimeVersion) },
+        { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_WindowsAppRuntimeVersion) },
+        { Py_tp_repr, reinterpret_cast<void*>(_repr_WindowsAppRuntimeVersion) },
+        { }};
+
+    static PyType_Spec type_spec_WindowsAppRuntimeVersion = {
+        "winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.WindowsAppRuntimeVersion",
+        sizeof(py::wrapper::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WindowsAppRuntimeVersion};
+
     // ----- Microsoft.Windows.ApplicationModel.WindowsAppRuntime Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.Windows.ApplicationModel.WindowsAppRuntime");
@@ -622,6 +1500,64 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_applicationmodel_windowsapprunti
         return nullptr;
     }
 
+    py::pyobj_handle ReleaseInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!ReleaseInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ReleaseInfo_Static{PyType_FromSpecWithBases(&type_spec_ReleaseInfo_Static, ReleaseInfo_Static_bases.get())};
+    if (!type_ReleaseInfo_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ReleaseInfo_type{py::register_python_type(module.get(), &type_spec_ReleaseInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ReleaseInfo_Static.get()))};
+    if (!ReleaseInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RuntimeCompatibilityOptions_type{py::register_python_type(module.get(), &type_spec_RuntimeCompatibilityOptions, object_bases.get(), inspectable_meta_type)};
+    if (!RuntimeCompatibilityOptions_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RuntimeInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!RuntimeInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RuntimeInfo_Static{PyType_FromSpecWithBases(&type_spec_RuntimeInfo_Static, RuntimeInfo_Static_bases.get())};
+    if (!type_RuntimeInfo_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RuntimeInfo_type{py::register_python_type(module.get(), &type_spec_RuntimeInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RuntimeInfo_Static.get()))};
+    if (!RuntimeInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WindowsAppRuntimeVersion_type{py::register_python_type(module.get(), &type_spec_WindowsAppRuntimeVersion, nullptr, nullptr)};
+    if (!WindowsAppRuntimeVersion_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle WindowsAppRuntimeVersion_from_tuple_capsule{PyCapsule_New(reinterpret_cast<void*>(WindowsAppRuntimeVersion_from_tuple),"winui3._winui3_microsoft_windows_applicationmodel_windowsappruntime.WindowsAppRuntimeVersion_from_tuple", nullptr)};
+    if (!WindowsAppRuntimeVersion_from_tuple_capsule)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddObjectRef(module.get(), "WindowsAppRuntimeVersion_from_tuple", WindowsAppRuntimeVersion_from_tuple_capsule.get()) == -1)
+    {
+        return nullptr;
+    }
 
     return module.detach();
 }

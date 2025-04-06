@@ -9,11 +9,25 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
 
-from winui3.microsoft.windows.applicationmodel.windowsappruntime import DeploymentStatus
+from winui3.microsoft.windows.applicationmodel.windowsappruntime import DeploymentStatus, RuntimeCompatibilityChange
 
 Self = typing.TypeVar('Self')
+
+@typing.final
+class WindowsAppRuntimeVersion:
+    @_property
+    def major(self) -> winrt.system.UInt32: ...
+    @_property
+    def minor(self) -> winrt.system.UInt32: ...
+    @_property
+    def patch(self) -> winrt.system.UInt32: ...
+    def __new__(cls, major: winrt.system.UInt32 = 0, minor: winrt.system.UInt32 = 0, patch: winrt.system.UInt32 = 0) -> WindowsAppRuntimeVersion: ...
+    def __replace__(self, /, **changes: typing.Any) -> WindowsAppRuntimeVersion: ...
+    def unpack(self) -> typing.Tuple[winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
 class DeploymentInitializeOptions(winrt.system.Object):
@@ -55,4 +69,60 @@ class DeploymentResult(winrt.system.Object):
     # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult::get_Status()
     @_property
     def status(self) -> DeploymentStatus: ...
+
+@typing.final
+class ReleaseInfo_Static(winrt._winrt.IInspectable_Static):
+    # System.String Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo::get_AsString()
+    @_property
+    def as_string(cls) -> str: ...
+    # System.UInt16 Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo::get_Major()
+    @_property
+    def major(cls) -> winrt.system.UInt16: ...
+    # System.UInt16 Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo::get_Minor()
+    @_property
+    def minor(cls) -> winrt.system.UInt16: ...
+    # System.UInt16 Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo::get_Patch()
+    @_property
+    def patch(cls) -> winrt.system.UInt16: ...
+    # System.String Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo::get_VersionTag()
+    @_property
+    def version_tag(cls) -> str: ...
+
+@typing.final
+class ReleaseInfo(winrt.system.Object, metaclass=ReleaseInfo_Static):
+    pass
+
+@typing.final
+class RuntimeCompatibilityOptions(winrt.system.Object):
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions::Apply()
+    def apply(self) -> None: ...
+    # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions::get_PatchLevel2()
+    @_property
+    def patch_level2(self) -> WindowsAppRuntimeVersion: ...
+    # System.Void Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions::put_PatchLevel2(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion)
+    @patch_level2.setter
+    def patch_level2(self, value: typing.Union[WindowsAppRuntimeVersion, typing.Tuple[winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32]]) -> None: ...
+    # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions::get_PatchLevel1()
+    @_property
+    def patch_level1(self) -> WindowsAppRuntimeVersion: ...
+    # System.Void Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions::put_PatchLevel1(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion)
+    @patch_level1.setter
+    def patch_level1(self, value: typing.Union[WindowsAppRuntimeVersion, typing.Tuple[winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32]]) -> None: ...
+    # Windows.Foundation.Collections.IVector`1<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions::get_DisabledChanges()
+    @_property
+    def disabled_changes(self) -> typing.MutableSequence[RuntimeCompatibilityChange]: ...
+
+@typing.final
+class RuntimeInfo_Static(winrt._winrt.IInspectable_Static):
+    # System.String Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeInfo::get_AsString()
+    @_property
+    def as_string(cls) -> str: ...
+    # Windows.ApplicationModel.PackageVersion Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeInfo::get_Version()
+    @_property
+    def version(cls) -> windows_applicationmodel.PackageVersion: ...
+
+@typing.final
+class RuntimeInfo(winrt.system.Object, metaclass=RuntimeInfo_Static):
+    pass
 

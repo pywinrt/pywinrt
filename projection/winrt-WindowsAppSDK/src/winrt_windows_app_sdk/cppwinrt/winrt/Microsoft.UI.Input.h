@@ -720,6 +720,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics)->GetForSiteBridge(*(void**)(&site), &result));
         return winrt::Microsoft::UI::Input::InputFocusNavigationHost{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputFocusNavigationHostStatics2<D>::GetForSiteLink(winrt::Microsoft::UI::Content::IContentSiteLink const& contentSiteLink) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2)->GetForSiteLink(*(void**)(&contentSiteLink), &result));
+        return winrt::Microsoft::UI::Input::InputFocusNavigationHost{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Input_IInputKeyboardSource2<D>::GetCurrentKeyState(winrt::Windows::System::VirtualKey const& virtualKey) const
     {
         winrt::Microsoft::UI::Input::VirtualKeyStates result{};
@@ -2860,6 +2866,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2> : produce_base<D, winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2>
+    {
+        int32_t __stdcall GetForSiteLink(void* contentSiteLink, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Input::InputFocusNavigationHost>(this->shim().GetForSiteLink(*reinterpret_cast<winrt::Microsoft::UI::Content::IContentSiteLink const*>(&contentSiteLink)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IInputKeyboardSource> : produce_base<D, winrt::Microsoft::UI::Input::IInputKeyboardSource>
     {
     };
@@ -4494,6 +4514,10 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     {
         return impl::call_factory<InputFocusNavigationHost, IInputFocusNavigationHostStatics>([&](IInputFocusNavigationHostStatics const& f) { return f.GetForSiteBridge(site); });
     }
+    inline auto InputFocusNavigationHost::GetForSiteLink(winrt::Microsoft::UI::Content::IContentSiteLink const& contentSiteLink)
+    {
+        return impl::call_factory<InputFocusNavigationHost, IInputFocusNavigationHostStatics2>([&](IInputFocusNavigationHostStatics2 const& f) { return f.GetForSiteLink(contentSiteLink); });
+    }
     inline auto InputKeyboardSource::GetKeyStateForCurrentThread(winrt::Windows::System::VirtualKey const& virtualKey)
     {
         return impl::call_factory<InputKeyboardSource, IInputKeyboardSourceStatics>([&](IInputKeyboardSourceStatics const& f) { return f.GetKeyStateForCurrentThread(virtualKey); });
@@ -4561,6 +4585,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusControllerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusNavigationHost> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputFocusNavigationHostStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSource2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputKeyboardSourceStatics> : winrt::impl::hash_base {};

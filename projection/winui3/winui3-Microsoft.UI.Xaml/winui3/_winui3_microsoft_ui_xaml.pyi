@@ -3322,6 +3322,34 @@ class WindowVisibilityChangedEventArgs(winrt.system.Object):
     @_property
     def visible(self) -> bool: ...
 
+class XamlIsland_Static(winrt._winrt.IInspectable_Static):
+    pass
+
+class XamlIsland(winrt.system.Object, windows_foundation.IClosable, metaclass=XamlIsland_Static):
+    def __enter__(self: Self) -> Self: ...
+    def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ...
+    def __new__(cls: typing.Type[Self]) -> Self: ...
+    # System.Void Microsoft.UI.Xaml.XamlIsland::Close()
+    def close(self) -> None: ...
+    # Microsoft.UI.Xaml.Media.SystemBackdrop Microsoft.UI.Xaml.XamlIsland::get_SystemBackdrop()
+    @_property
+    def system_backdrop(self) -> microsoft_ui_xaml_media.SystemBackdrop: ...
+    # System.Void Microsoft.UI.Xaml.XamlIsland::put_SystemBackdrop(Microsoft.UI.Xaml.Media.SystemBackdrop)
+    @system_backdrop.setter
+    @typing.final
+    def system_backdrop(self, value: microsoft_ui_xaml_media.SystemBackdrop) -> None: ...
+    # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.XamlIsland::get_Content()
+    @_property
+    def content(self) -> UIElement: ...
+    # System.Void Microsoft.UI.Xaml.XamlIsland::put_Content(Microsoft.UI.Xaml.UIElement)
+    @content.setter
+    @typing.final
+    def content(self, value: UIElement) -> None: ...
+    # Microsoft.UI.Content.ContentIsland Microsoft.UI.Xaml.XamlIsland::get_ContentIsland()
+    @_property
+    @typing.final
+    def content_island(self) -> microsoft_ui_content.ContentIsland: ...
+
 @typing.final
 class XamlResourceReferenceFailedEventArgs(winrt.system.Object):
     # System.String Microsoft.UI.Xaml.XamlResourceReferenceFailedEventArgs::get_Message()
@@ -3352,6 +3380,9 @@ class XamlRoot(winrt.system.Object):
     # Microsoft.UI.Content.ContentCoordinateConverter Microsoft.UI.Xaml.XamlRoot::get_CoordinateConverter()
     @_property
     def coordinate_converter(self) -> microsoft_ui_content.ContentCoordinateConverter: ...
+    # Microsoft.UI.Content.ContentIsland Microsoft.UI.Xaml.XamlRoot::get_ContentIsland()
+    @_property
+    def content_island(self) -> microsoft_ui_content.ContentIsland: ...
 
 @typing.final
 class XamlRootChangedEventArgs(winrt.system.Object):

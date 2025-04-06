@@ -5,6 +5,8 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Microsoft.Windows.Widgets.h>
 
 #include <winrt/Microsoft.Windows.Widgets.Providers.h>
@@ -81,6 +83,38 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers.WidgetMessageReceivedArgs";
+        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
+        static constexpr const char* type_name = "WidgetMessageReceivedArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers.WidgetResourceRequest";
+        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
+        static constexpr const char* type_name = "WidgetResourceRequest";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers.WidgetResourceRequestedArgs";
+        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
+        static constexpr const char* type_name = "WidgetResourceRequestedArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers.WidgetResourceResponse";
+        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
+        static constexpr const char* type_name = "WidgetResourceResponse";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers.WidgetUpdateRequestOptions";
@@ -94,6 +128,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers._IWidgetManager";
         static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
         static constexpr const char* type_name = "_IWidgetManager";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers._IWidgetManager2";
+        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
+        static constexpr const char* type_name = "_IWidgetManager2";
     };
 
     template<>
@@ -127,10 +169,34 @@ namespace py
         static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
         static constexpr const char* type_name = "_IWidgetProviderErrors";
     };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers._IWidgetProviderMessage";
+        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
+        static constexpr const char* type_name = "_IWidgetProviderMessage";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.windows.widgets.providers._IWidgetResourceProvider";
+        static constexpr const char* module_name = "winui3.microsoft.windows.widgets.providers";
+        static constexpr const char* type_name = "_IWidgetResourceProvider";
+    };
 }
 
 #if __has_include("py.Windows.Foundation.h")
 #include "py.Windows.Foundation.h"
+#endif
+
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
+#if __has_include("py.Windows.Storage.Streams.h")
+#include "py.Windows.Storage.Streams.h"
 #endif
 
 #if __has_include("py.Microsoft.Windows.Widgets.h")
@@ -151,12 +217,19 @@ namespace py::wrapper::Microsoft::Windows::Widgets::Providers
     using WidgetErrorInfoReportedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetErrorInfoReportedArgs>;
     using WidgetInfo = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetInfo>;
     using WidgetManager = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetManager>;
+    using WidgetMessageReceivedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs>;
+    using WidgetResourceRequest = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest>;
+    using WidgetResourceRequestedArgs = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs>;
+    using WidgetResourceResponse = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse>;
     using WidgetUpdateRequestOptions = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions>;
     using IWidgetManager = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager>;
+    using IWidgetManager2 = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>;
     using IWidgetProvider = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider>;
     using IWidgetProvider2 = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider2>;
     using IWidgetProviderAnalytics = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderAnalytics>;
     using IWidgetProviderErrors = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderErrors>;
+    using IWidgetProviderMessage = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>;
+    using IWidgetResourceProvider = py::winrt_wrapper<winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>;
 }
 
 namespace py

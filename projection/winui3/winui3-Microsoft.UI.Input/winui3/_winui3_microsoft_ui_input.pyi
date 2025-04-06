@@ -469,6 +469,8 @@ class InputFocusController(InputObject, metaclass=InputFocusController_Static):
 class InputFocusNavigationHost_Static(InputObject_Static):
     # Microsoft.UI.Input.InputFocusNavigationHost Microsoft.UI.Input.InputFocusNavigationHost::GetForSiteBridge(Microsoft.UI.Content.IContentSiteBridge)
     def get_for_site_bridge(cls, site: microsoft_ui_content.IContentSiteBridge, /) -> InputFocusNavigationHost: ...
+    # Microsoft.UI.Input.InputFocusNavigationHost Microsoft.UI.Input.InputFocusNavigationHost::GetForSiteLink(Microsoft.UI.Content.IContentSiteLink)
+    def get_for_site_link(cls, content_site_link: microsoft_ui_content.IContentSiteLink, /) -> InputFocusNavigationHost: ...
 
 @typing.final
 class InputFocusNavigationHost(InputObject, metaclass=InputFocusNavigationHost_Static):

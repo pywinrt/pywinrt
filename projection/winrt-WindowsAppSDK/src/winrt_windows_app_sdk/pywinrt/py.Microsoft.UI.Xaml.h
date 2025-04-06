@@ -1061,6 +1061,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::XamlIsland>
+    {
+        static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.XamlIsland";
+        static constexpr const char* module_name = "winui3.microsoft.ui.xaml";
+        static constexpr const char* type_name = "XamlIsland";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::XamlResourceReferenceFailedEventArgs>
     {
         static constexpr std::string_view qualified_name = "winui3.microsoft.ui.xaml.XamlResourceReferenceFailedEventArgs";
@@ -1965,6 +1973,7 @@ namespace py::wrapper::Microsoft::UI::Xaml
     using WindowEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::WindowEventArgs>;
     using WindowSizeChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::WindowSizeChangedEventArgs>;
     using WindowVisibilityChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs>;
+    using XamlIsland = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::XamlIsland>;
     using XamlResourceReferenceFailedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::XamlResourceReferenceFailedEventArgs>;
     using XamlRoot = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::XamlRoot>;
     using XamlRootChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::XamlRootChangedEventArgs>;

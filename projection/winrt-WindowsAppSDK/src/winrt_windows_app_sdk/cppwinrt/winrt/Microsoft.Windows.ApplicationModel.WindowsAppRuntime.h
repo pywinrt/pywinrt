@@ -6,7 +6,9 @@
 #include "winrt/base.h"
 static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.240111.5"), "Mismatched C++/WinRT headers.");
 #define CPPWINRT_VERSION "2.0.240111.5"
+#include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
+#include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.2.h"
 namespace winrt::impl
 {
@@ -65,6 +67,78 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResultFactory)->CreateInstance(static_cast<int32_t>(status), impl::bind_in(extendedError), &value));
         return winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IReleaseInfoStatics<D>::Major() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics)->get_Major(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IReleaseInfoStatics<D>::Minor() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics)->get_Minor(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IReleaseInfoStatics<D>::Patch() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics)->get_Patch(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IReleaseInfoStatics<D>::VersionTag() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics)->get_VersionTag(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IReleaseInfoStatics<D>::AsString() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics)->get_AsString(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IRuntimeCompatibilityOptions<D>::PatchLevel1() const
+    {
+        winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions)->get_PatchLevel1(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IRuntimeCompatibilityOptions<D>::PatchLevel1(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions)->put_PatchLevel1(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IRuntimeCompatibilityOptions<D>::PatchLevel2() const
+    {
+        winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions)->get_PatchLevel2(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IRuntimeCompatibilityOptions<D>::PatchLevel2(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions)->put_PatchLevel2(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IRuntimeCompatibilityOptions<D>::DisabledChanges() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions)->get_DisabledChanges(&value));
+        return winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityChange>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IRuntimeCompatibilityOptions<D>::Apply() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions)->Apply());
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IRuntimeInfoStatics<D>::Version() const
+    {
+        winrt::Windows::ApplicationModel::PackageVersion value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeInfoStatics)->get_Version(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_IRuntimeInfoStatics<D>::AsString() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeInfoStatics)->get_AsString(&value));
+        return hstring{ value, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -177,6 +251,122 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics> : produce_base<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics>
+    {
+        int32_t __stdcall get_Major(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().Major());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Minor(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().Minor());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Patch(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().Patch());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_VersionTag(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().VersionTag());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AsString(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().AsString());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions> : produce_base<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions>
+    {
+        int32_t __stdcall get_PatchLevel1(struct struct_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_WindowsAppRuntimeVersion* value) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>(this->shim().PatchLevel1());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PatchLevel1(struct struct_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_WindowsAppRuntimeVersion value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PatchLevel1(*reinterpret_cast<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PatchLevel2(struct struct_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_WindowsAppRuntimeVersion* value) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion>(this->shim().PatchLevel2());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PatchLevel2(struct struct_Microsoft_Windows_ApplicationModel_WindowsAppRuntime_WindowsAppRuntimeVersion value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PatchLevel2(*reinterpret_cast<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::WindowsAppRuntimeVersion const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DisabledChanges(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVector<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityChange>>(this->shim().DisabledChanges());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Apply() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Apply();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeInfoStatics> : produce_base<D, winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeInfoStatics>
+    {
+        int32_t __stdcall get_Version(struct struct_Windows_ApplicationModel_PackageVersion* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::ApplicationModel::PackageVersion>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::ApplicationModel::PackageVersion>(this->shim().Version());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AsString(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().AsString());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 {
@@ -200,6 +390,38 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::ApplicationModel::WindowsAppRu
         DeploymentResult(impl::call_factory<DeploymentResult, IDeploymentResultFactory>([&](IDeploymentResultFactory const& f) { return f.CreateInstance(status, extendedError); }))
     {
     }
+    inline auto ReleaseInfo::Major()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IReleaseInfoStatics const&), ReleaseInfo, IReleaseInfoStatics>([](IReleaseInfoStatics const& f) { return f.Major(); });
+    }
+    inline auto ReleaseInfo::Minor()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IReleaseInfoStatics const&), ReleaseInfo, IReleaseInfoStatics>([](IReleaseInfoStatics const& f) { return f.Minor(); });
+    }
+    inline auto ReleaseInfo::Patch()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IReleaseInfoStatics const&), ReleaseInfo, IReleaseInfoStatics>([](IReleaseInfoStatics const& f) { return f.Patch(); });
+    }
+    inline auto ReleaseInfo::VersionTag()
+    {
+        return impl::call_factory_cast<hstring(*)(IReleaseInfoStatics const&), ReleaseInfo, IReleaseInfoStatics>([](IReleaseInfoStatics const& f) { return f.VersionTag(); });
+    }
+    inline auto ReleaseInfo::AsString()
+    {
+        return impl::call_factory_cast<hstring(*)(IReleaseInfoStatics const&), ReleaseInfo, IReleaseInfoStatics>([](IReleaseInfoStatics const& f) { return f.AsString(); });
+    }
+    inline RuntimeCompatibilityOptions::RuntimeCompatibilityOptions() :
+        RuntimeCompatibilityOptions(impl::call_factory_cast<RuntimeCompatibilityOptions(*)(winrt::Windows::Foundation::IActivationFactory const&), RuntimeCompatibilityOptions>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RuntimeCompatibilityOptions>(); }))
+    {
+    }
+    inline auto RuntimeInfo::Version()
+    {
+        return impl::call_factory_cast<winrt::Windows::ApplicationModel::PackageVersion(*)(IRuntimeInfoStatics const&), RuntimeInfo, IRuntimeInfoStatics>([](IRuntimeInfoStatics const& f) { return f.Version(); });
+    }
+    inline auto RuntimeInfo::AsString()
+    {
+        return impl::call_factory_cast<hstring(*)(IRuntimeInfoStatics const&), RuntimeInfo, IRuntimeInfoStatics>([](IRuntimeInfoStatics const& f) { return f.AsString(); });
+    }
 }
 namespace std
 {
@@ -210,9 +432,15 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentResultFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IReleaseInfoStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeCompatibilityOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IRuntimeInfoStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::ReleaseInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeCompatibilityOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::RuntimeInfo> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format
 #endif

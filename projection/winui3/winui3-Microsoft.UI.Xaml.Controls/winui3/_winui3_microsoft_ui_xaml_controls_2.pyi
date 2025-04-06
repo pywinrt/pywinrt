@@ -29,6 +29,7 @@ import winui3.microsoft.ui.composition as microsoft_ui_composition
 import winui3.microsoft.ui.input as microsoft_ui_input
 import winui3.microsoft.ui.text as microsoft_ui_text
 import winui3.microsoft.ui.xaml as microsoft_ui_xaml
+import winui3.microsoft.ui.xaml.automation.peers as microsoft_ui_xaml_automation_peers
 import winui3.microsoft.ui.xaml.controls.primitives as microsoft_ui_xaml_controls_primitives
 import winui3.microsoft.ui.xaml.data as microsoft_ui_xaml_data
 import winui3.microsoft.ui.xaml.documents as microsoft_ui_xaml_documents
@@ -309,6 +310,9 @@ from ._winui3_microsoft_ui_xaml_controls import (
     TimePickerFlyoutPresenter,
     TimePickerSelectedValueChangedEventArgs,
     TimePickerValueChangedEventArgs,
+    TitleBar,
+    TitleBarAutomationPeer,
+    TitleBarTemplateSettings,
     ToggleMenuFlyoutItem,
     ToggleSplitButton,
     ToggleSplitButtonIsCheckedChangedEventArgs,

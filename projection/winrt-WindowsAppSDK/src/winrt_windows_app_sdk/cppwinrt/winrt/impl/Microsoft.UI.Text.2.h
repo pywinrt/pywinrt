@@ -22,7 +22,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Text
         [[nodiscard]] static auto SemiLight();
         [[nodiscard]] static auto Thin();
     };
-    struct WINRT_IMPL_EMPTY_BASES RichEditTextDocument : winrt::Microsoft::UI::Text::ITextDocument
+    struct WINRT_IMPL_EMPTY_BASES RichEditTextDocument : winrt::Microsoft::UI::Text::ITextDocument,
+        impl::require<RichEditTextDocument, winrt::Microsoft::UI::Text::ITextDocument2>
     {
         RichEditTextDocument(std::nullptr_t) noexcept {}
         RichEditTextDocument(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Text::ITextDocument(ptr, take_ownership_from_abi) {}

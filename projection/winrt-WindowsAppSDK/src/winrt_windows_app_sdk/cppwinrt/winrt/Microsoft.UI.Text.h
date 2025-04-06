@@ -540,6 +540,24 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Text::ITextDocument)->ClearUndoRedoHistory());
     }
+    template <typename D> auto consume_Microsoft_UI_Text_ITextDocument2<D>::GetMathMode() const
+    {
+        winrt::Microsoft::UI::Text::RichEditMathMode result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Text::ITextDocument2)->GetMathMode(reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_UI_Text_ITextDocument2<D>::SetMathMode(winrt::Microsoft::UI::Text::RichEditMathMode const& mode) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Text::ITextDocument2)->SetMathMode(static_cast<int32_t>(mode)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Text_ITextDocument2<D>::GetMathML(hstring& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Text::ITextDocument2)->GetMathML(impl::bind_out(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Text_ITextDocument2<D>::SetMathML(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Text::ITextDocument2)->SetMathML(*(void**)(&value)));
+    }
     template <typename D> auto consume_Microsoft_UI_Text_ITextParagraphFormat<D>::Alignment() const
     {
         winrt::Microsoft::UI::Text::ParagraphAlignment value{};
@@ -1853,6 +1871,41 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Text::ITextDocument2> : produce_base<D, winrt::Microsoft::UI::Text::ITextDocument2>
+    {
+        int32_t __stdcall GetMathMode(int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Text::RichEditMathMode>(this->shim().GetMathMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetMathMode(int32_t mode) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetMathMode(*reinterpret_cast<winrt::Microsoft::UI::Text::RichEditMathMode const*>(&mode));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetMathML(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            this->shim().GetMathML(*reinterpret_cast<hstring*>(value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetMathML(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetMathML(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Text::ITextParagraphFormat> : produce_base<D, winrt::Microsoft::UI::Text::ITextParagraphFormat>
     {
@@ -2888,6 +2941,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Text::ITextCharacterFormat> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Text::ITextConstantsStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Text::ITextDocument> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Text::ITextDocument2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Text::ITextParagraphFormat> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Text::ITextRange> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Text::ITextSelection> : winrt::impl::hash_base {};

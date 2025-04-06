@@ -85,6 +85,7 @@ from winui3._winui3_microsoft_ui_xaml import (
     WindowEventArgs,
     WindowSizeChangedEventArgs,
     WindowVisibilityChangedEventArgs,
+    XamlIsland,
     XamlResourceReferenceFailedEventArgs,
     XamlRoot,
     XamlRootChangedEventArgs,
@@ -126,6 +127,7 @@ if TYPE_CHECKING:
         VisualStateManager_Static,
         VisualTransition_Static,
         Window_Static,
+        XamlIsland_Static,
     )
 
 if typing.TYPE_CHECKING:
@@ -248,6 +250,7 @@ __all__ = [
     "WindowEventArgs",
     "WindowSizeChangedEventArgs",
     "WindowVisibilityChangedEventArgs",
+    "XamlIsland",
     "XamlResourceReferenceFailedEventArgs",
     "XamlRoot",
     "XamlRootChangedEventArgs",

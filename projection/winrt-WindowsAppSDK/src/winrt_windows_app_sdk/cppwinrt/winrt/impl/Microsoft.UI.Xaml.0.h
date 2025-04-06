@@ -12,6 +12,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
 WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 {
     struct ContentCoordinateConverter;
+    struct ContentIsland;
     struct ContentIslandEnvironment;
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Dispatching
@@ -584,10 +585,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     struct IWindowSizeChangedEventArgs;
     struct IWindowStatics;
     struct IWindowVisibilityChangedEventArgs;
+    struct IXamlIsland;
+    struct IXamlIslandFactory;
     struct IXamlResourceReferenceFailedEventArgs;
     struct IXamlRoot;
     struct IXamlRoot2;
     struct IXamlRoot3;
+    struct IXamlRoot4;
     struct IXamlRootChangedEventArgs;
     struct IXamlServiceProvider;
     struct AdaptiveTrigger;
@@ -665,6 +669,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
     struct WindowEventArgs;
     struct WindowSizeChangedEventArgs;
     struct WindowVisibilityChangedEventArgs;
+    struct XamlIsland;
     struct XamlResourceReferenceFailedEventArgs;
     struct XamlRoot;
     struct XamlRootChangedEventArgs;
@@ -828,10 +833,13 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::IWindowSizeChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IWindowStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::IXamlIsland>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::IXamlIslandFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlRoot>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlRoot2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlRoot3>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::IXamlRoot4>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::IXamlServiceProvider>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::AdaptiveTrigger>{ using type = class_category; };
@@ -909,6 +917,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::WindowEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::WindowSizeChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::XamlIsland>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::XamlResourceReferenceFailedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::XamlRoot>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::XamlRootChangedEventArgs>{ using type = class_category; };
@@ -1043,6 +1052,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::WindowEventArgs> = L"Microsoft.UI.Xaml.WindowEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::WindowSizeChangedEventArgs> = L"Microsoft.UI.Xaml.WindowSizeChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs> = L"Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::XamlIsland> = L"Microsoft.UI.Xaml.XamlIsland";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::XamlResourceReferenceFailedEventArgs> = L"Microsoft.UI.Xaml.XamlResourceReferenceFailedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::XamlRoot> = L"Microsoft.UI.Xaml.XamlRoot";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::XamlRootChangedEventArgs> = L"Microsoft.UI.Xaml.XamlRootChangedEventArgs";
@@ -1223,10 +1233,13 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IWindowSizeChangedEventArgs> = L"Microsoft.UI.Xaml.IWindowSizeChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IWindowStatics> = L"Microsoft.UI.Xaml.IWindowStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs> = L"Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlIsland> = L"Microsoft.UI.Xaml.IXamlIsland";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlIslandFactory> = L"Microsoft.UI.Xaml.IXamlIslandFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs> = L"Microsoft.UI.Xaml.IXamlResourceReferenceFailedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlRoot> = L"Microsoft.UI.Xaml.IXamlRoot";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlRoot2> = L"Microsoft.UI.Xaml.IXamlRoot2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlRoot3> = L"Microsoft.UI.Xaml.IXamlRoot3";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlRoot4> = L"Microsoft.UI.Xaml.IXamlRoot4";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs> = L"Microsoft.UI.Xaml.IXamlRootChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::IXamlServiceProvider> = L"Microsoft.UI.Xaml.IXamlServiceProvider";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::ApplicationInitializationCallback> = L"Microsoft.UI.Xaml.ApplicationInitializationCallback";
@@ -1382,10 +1395,13 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IWindowSizeChangedEventArgs>{ 0x542F6F2C,0x4B64,0x5C72,{ 0xA7,0xA5,0x3A,0x7E,0x06,0x64,0xB8,0xFF } }; // 542F6F2C-4B64-5C72-A7A5-3A7E0664B8FF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IWindowStatics>{ 0x8CC985E3,0xA41A,0x5DF4,{ 0xB5,0x31,0xD3,0xA1,0x78,0x8D,0x86,0xC5 } }; // 8CC985E3-A41A-5DF4-B531-D3A1788D86C5
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs>{ 0x7BB24A6D,0x070C,0x5CB6,{ 0x8E,0x9C,0x54,0x79,0x05,0xBE,0x82,0x65 } }; // 7BB24A6D-070C-5CB6-8E9C-547905BE8265
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlIsland>{ 0x845A5C62,0xB0F3,0x5DB8,{ 0xB4,0xFF,0x41,0x42,0xBB,0xD8,0xA0,0x44 } }; // 845A5C62-B0F3-5DB8-B4FF-4142BBD8A044
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlIslandFactory>{ 0x267F707C,0x5E18,0x57B4,{ 0x9F,0xF7,0xD1,0x1D,0xA6,0x6E,0x4A,0x11 } }; // 267F707C-5E18-57B4-9FF7-D11DA66E4A11
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs>{ 0x1B175EE6,0xD08B,0x50FF,{ 0x8F,0x89,0xA1,0xFF,0x27,0xED,0xEF,0x66 } }; // 1B175EE6-D08B-50FF-8F89-A1FF27EDEF66
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlRoot>{ 0x60CB215A,0xAD15,0x520A,{ 0x8B,0x01,0x44,0x16,0x82,0x4F,0x04,0x41 } }; // 60CB215A-AD15-520A-8B01-4416824F0441
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlRoot2>{ 0xBDEE0F42,0x71CB,0x50C5,{ 0x82,0x9B,0x46,0x14,0xD9,0x8C,0x57,0x94 } }; // BDEE0F42-71CB-50C5-829B-4614D98C5794
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlRoot3>{ 0xB71DBF3B,0x2E0F,0x5DE0,{ 0xAC,0x68,0xF0,0xC1,0xF6,0x51,0x14,0xC8 } }; // B71DBF3B-2E0F-5DE0-AC68-F0C1F65114C8
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlRoot4>{ 0x377BEC22,0x632B,0x52BE,{ 0xB2,0x6F,0x5E,0xDF,0x78,0x38,0xE5,0xCA } }; // 377BEC22-632B-52BE-B26F-5EDF7838E5CA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs>{ 0x61D2C719,0xF8A1,0x515A,{ 0x90,0x2C,0xCF,0xA4,0x98,0xBA,0x7A,0x7F } }; // 61D2C719-F8A1-515A-902C-CFA498BA7A7F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::IXamlServiceProvider>{ 0x68B3A2DF,0x8173,0x539F,{ 0xB5,0x24,0xC8,0xA2,0x34,0x8F,0x5A,0xFB } }; // 68B3A2DF-8173-539F-B524-C8A2348F5AFB
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::ApplicationInitializationCallback>{ 0xD8EEF1C9,0x1234,0x56F1,{ 0x99,0x63,0x45,0xDD,0x9C,0x80,0xA6,0x61 } }; // D8EEF1C9-1234-56F1-9963-45DD9C80A661
@@ -1478,6 +1494,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::WindowEventArgs>{ using type = winrt::Microsoft::UI::Xaml::IWindowEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::WindowSizeChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::IWindowSizeChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::WindowVisibilityChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::IWindowVisibilityChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::XamlIsland>{ using type = winrt::Microsoft::UI::Xaml::IXamlIsland; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::XamlResourceReferenceFailedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::XamlRoot>{ using type = winrt::Microsoft::UI::Xaml::IXamlRoot; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::XamlRootChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs; };
@@ -3140,6 +3157,24 @@ namespace winrt::impl
             virtual int32_t __stdcall get_Visible(bool*) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::IXamlIsland>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Content(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Content(void*) noexcept = 0;
+            virtual int32_t __stdcall get_ContentIsland(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SystemBackdrop(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SystemBackdrop(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::IXamlIslandFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -3171,6 +3206,13 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall get_CoordinateConverter(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::IXamlRoot4>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ContentIsland(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs>
@@ -5341,6 +5383,28 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_IWindowVisibilityChangedEventArgs<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_IXamlIsland
+    {
+        [[nodiscard]] auto Content() const;
+        auto Content(winrt::Microsoft::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto ContentIsland() const;
+        [[nodiscard]] auto SystemBackdrop() const;
+        auto SystemBackdrop(winrt::Microsoft::UI::Xaml::Media::SystemBackdrop const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::IXamlIsland>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_IXamlIsland<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_IXamlIslandFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::IXamlIslandFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_IXamlIslandFactory<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_IXamlResourceReferenceFailedEventArgs
     {
         [[nodiscard]] auto Message() const;
@@ -5382,6 +5446,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::IXamlRoot3>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_IXamlRoot3<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_IXamlRoot4
+    {
+        [[nodiscard]] auto ContentIsland() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::IXamlRoot4>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_IXamlRoot4<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_IXamlRootChangedEventArgs

@@ -76,9 +76,17 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
         Tall = 1,
         Collapsed = 2,
     };
+    enum class TitleBarTheme : int32_t
+    {
+        Legacy = 0,
+        UseDefaultAppMode = 1,
+        Light = 2,
+        Dark = 3,
+    };
     struct IAppWindow;
     struct IAppWindow2;
     struct IAppWindow3;
+    struct IAppWindow4;
     struct IAppWindowChangedEventArgs;
     struct IAppWindowChangedEventArgs2;
     struct IAppWindowClosingEventArgs;
@@ -88,6 +96,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     struct IAppWindowStatics2;
     struct IAppWindowTitleBar;
     struct IAppWindowTitleBar2;
+    struct IAppWindowTitleBar3;
     struct IAppWindowTitleBarStatics;
     struct ICompactOverlayPresenter;
     struct ICompactOverlayPresenterStatics;
@@ -99,6 +108,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Windowing
     struct IFullScreenPresenterStatics;
     struct IOverlappedPresenter;
     struct IOverlappedPresenter2;
+    struct IOverlappedPresenter3;
     struct IOverlappedPresenterStatics;
     struct IOverlappedPresenterStatics2;
     struct AppWindow;
@@ -117,6 +127,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindow>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindow2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindow3>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindow4>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs>{ using type = interface_category; };
@@ -126,6 +137,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IAppWindowTitleBarStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::ICompactOverlayPresenter>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::ICompactOverlayPresenterStatics>{ using type = interface_category; };
@@ -137,6 +149,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Windowing::IFullScreenPresenterStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IOverlappedPresenter>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IOverlappedPresenter2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::AppWindow>{ using type = class_category; };
@@ -156,6 +169,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Windowing::IconShowOptions>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::OverlappedPresenterState>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Windowing::TitleBarHeightOption>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Windowing::TitleBarTheme>{ using type = enum_category; };
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindow> = L"Microsoft.UI.Windowing.AppWindow";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs> = L"Microsoft.UI.Windowing.AppWindowChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs> = L"Microsoft.UI.Windowing.AppWindowClosingEventArgs";
@@ -173,9 +187,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IconShowOptions> = L"Microsoft.UI.Windowing.IconShowOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::OverlappedPresenterState> = L"Microsoft.UI.Windowing.OverlappedPresenterState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::TitleBarHeightOption> = L"Microsoft.UI.Windowing.TitleBarHeightOption";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::TitleBarTheme> = L"Microsoft.UI.Windowing.TitleBarTheme";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindow> = L"Microsoft.UI.Windowing.IAppWindow";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindow2> = L"Microsoft.UI.Windowing.IAppWindow2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindow3> = L"Microsoft.UI.Windowing.IAppWindow3";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindow4> = L"Microsoft.UI.Windowing.IAppWindow4";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs> = L"Microsoft.UI.Windowing.IAppWindowChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2> = L"Microsoft.UI.Windowing.IAppWindowChangedEventArgs2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs> = L"Microsoft.UI.Windowing.IAppWindowClosingEventArgs";
@@ -185,6 +201,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowStatics2> = L"Microsoft.UI.Windowing.IAppWindowStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar> = L"Microsoft.UI.Windowing.IAppWindowTitleBar";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2> = L"Microsoft.UI.Windowing.IAppWindowTitleBar2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3> = L"Microsoft.UI.Windowing.IAppWindowTitleBar3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBarStatics> = L"Microsoft.UI.Windowing.IAppWindowTitleBarStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::ICompactOverlayPresenter> = L"Microsoft.UI.Windowing.ICompactOverlayPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::ICompactOverlayPresenterStatics> = L"Microsoft.UI.Windowing.ICompactOverlayPresenterStatics";
@@ -196,11 +213,13 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IFullScreenPresenterStatics> = L"Microsoft.UI.Windowing.IFullScreenPresenterStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenter> = L"Microsoft.UI.Windowing.IOverlappedPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenter2> = L"Microsoft.UI.Windowing.IOverlappedPresenter2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3> = L"Microsoft.UI.Windowing.IOverlappedPresenter3";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics> = L"Microsoft.UI.Windowing.IOverlappedPresenterStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics2> = L"Microsoft.UI.Windowing.IOverlappedPresenterStatics2";
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindow>{ 0xCFA788B3,0x643B,0x5C5E,{ 0xAD,0x4E,0x32,0x1D,0x48,0xA8,0x2A,0xCD } }; // CFA788B3-643B-5C5E-AD4E-321D48A82ACD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindow2>{ 0x6CD41292,0x794C,0x5CAC,{ 0x89,0x61,0x21,0x0D,0x01,0x2C,0x6E,0xBC } }; // 6CD41292-794C-5CAC-8961-210D012C6EBC
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindow3>{ 0x2F260CEA,0x193D,0x5DD6,{ 0xA9,0x04,0xD7,0x64,0x9A,0x60,0x8D,0x2F } }; // 2F260CEA-193D-5DD6-A904-D7649A608D2F
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindow4>{ 0x383BFB91,0xEA29,0x5414,{ 0x80,0xCD,0x6C,0x76,0xD9,0x81,0xEB,0x31 } }; // 383BFB91-EA29-5414-80CD-6C76D981EB31
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs>{ 0x2182BC5D,0xFDAC,0x5C3E,{ 0xBF,0x37,0x7D,0x8D,0x68,0x4E,0x9D,0x1D } }; // 2182BC5D-FDAC-5C3E-BF37-7D8D684E9D1D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs2>{ 0xA773AB4C,0xA5EC,0x50E8,{ 0x98,0xAC,0x24,0x7F,0xE6,0xCD,0x42,0x27 } }; // A773AB4C-A5EC-50E8-98AC-247FE6CD4227
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowClosingEventArgs>{ 0x0E09D90B,0x2261,0x590B,{ 0x9A,0xD1,0x85,0x04,0x99,0x1D,0x87,0x54 } }; // 0E09D90B-2261-590B-9AD1-8504991D8754
@@ -210,6 +229,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowStatics2>{ 0xCABC23DB,0x4606,0x5D6E,{ 0x89,0xA5,0x06,0xDE,0x1D,0x8B,0xD3,0xE2 } }; // CABC23DB-4606-5D6E-89A5-06DE1D8BD3E2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar>{ 0x5574EFA2,0xC91C,0x5700,{ 0xA3,0x63,0x53,0x9C,0x71,0xA7,0xAA,0xF4 } }; // 5574EFA2-C91C-5700-A363-539C71A7AAF4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2>{ 0x86FAED38,0x748A,0x5B4B,{ 0x9C,0xCF,0x3B,0xA0,0x49,0x6C,0x90,0x41 } }; // 86FAED38-748A-5B4B-9CCF-3BA0496C9041
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>{ 0x07146E74,0x0410,0x5597,{ 0xAB,0xA7,0x1A,0xF2,0x76,0xD2,0xAE,0x07 } }; // 07146E74-0410-5597-ABA7-1AF276D2AE07
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IAppWindowTitleBarStatics>{ 0x9E1DA52E,0x8B15,0x54D6,{ 0xA8,0x86,0xF7,0xB9,0xF9,0xD9,0x30,0xB2 } }; // 9E1DA52E-8B15-54D6-A886-F7B9F9D930B2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::ICompactOverlayPresenter>{ 0xEFEB0812,0x6FC7,0x5B7D,{ 0xBD,0x92,0xCC,0x8F,0x9A,0x64,0x54,0xC9 } }; // EFEB0812-6FC7-5B7D-BD92-CC8F9A6454C9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::ICompactOverlayPresenterStatics>{ 0xEAB93186,0x4F6A,0x52F9,{ 0x8C,0x03,0xDA,0x57,0xA1,0x52,0x2F,0x6E } }; // EAB93186-4F6A-52F9-8C03-DA57A1522F6E
@@ -221,6 +241,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IFullScreenPresenterStatics>{ 0x2EC0D2C1,0xE086,0x55BB,{ 0xA3,0xB2,0x44,0x94,0x2E,0x23,0x1C,0x67 } }; // 2EC0D2C1-E086-55BB-A3B2-44942E231C67
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenter>{ 0x21693970,0x4F4C,0x5172,{ 0x9E,0x9D,0x68,0x2A,0x2D,0x17,0x48,0x84 } }; // 21693970-4F4C-5172-9E9D-682A2D174884
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenter2>{ 0x5C6CCD93,0x4244,0x5CD2,{ 0xB3,0x55,0xED,0x5E,0xA3,0x4D,0xF7,0x30 } }; // 5C6CCD93-4244-5CD2-B355-ED5EA34DF730
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>{ 0x55D26138,0x4C38,0x57E7,{ 0xA0,0xC1,0xD4,0x67,0xB7,0x74,0xDB,0x8C } }; // 55D26138-4C38-57E7-A0C1-D467B774DB8C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics>{ 0x997225E4,0x7B00,0x5AEE,{ 0xA4,0xBE,0xD4,0x06,0x8D,0x19,0x99,0xE2 } }; // 997225E4-7B00-5AEE-A4BE-D4068D1999E2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics2>{ 0xED5C4F92,0x32F4,0x5D15,{ 0x80,0xD0,0xB2,0xA5,0xEF,0xA0,0x4D,0x39 } }; // ED5C4F92-32F4-5D15-80D0-B2A5EFA04D39
     template <> struct default_interface<winrt::Microsoft::UI::Windowing::AppWindow>{ using type = winrt::Microsoft::UI::Windowing::IAppWindow; };
@@ -286,6 +307,16 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall AssociateWithDispatcherQueue(void*) noexcept = 0;
             virtual int32_t __stdcall get_DispatcherQueue(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindow4>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall SetTaskbarIcon(void*) noexcept = 0;
+            virtual int32_t __stdcall SetTaskbarIconWithIconId(struct struct_Microsoft_UI_IconId) noexcept = 0;
+            virtual int32_t __stdcall SetTitleBarIcon(void*) noexcept = 0;
+            virtual int32_t __stdcall SetTitleBarIconWithIconId(struct struct_Microsoft_UI_IconId) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowChangedEventArgs>
@@ -391,6 +422,14 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_PreferredHeightOption(int32_t*) noexcept = 0;
             virtual int32_t __stdcall put_PreferredHeightOption(int32_t) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PreferredTheme(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_PreferredTheme(int32_t) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Windowing::IAppWindowTitleBarStatics>
@@ -507,6 +546,20 @@ namespace winrt::impl
             virtual int32_t __stdcall RestoreWithActivation(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PreferredMinimumHeight(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PreferredMinimumHeight(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PreferredMinimumWidth(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PreferredMinimumWidth(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PreferredMaximumWidth(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PreferredMaximumWidth(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PreferredMaximumHeight(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PreferredMaximumHeight(void*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Windowing::IOverlappedPresenterStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -590,6 +643,18 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindow3>
     {
         template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindow3<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Windowing_IAppWindow4
+    {
+        auto SetTaskbarIcon(param::hstring const& iconPath) const;
+        auto SetTaskbarIcon(winrt::Microsoft::UI::IconId const& iconId) const;
+        auto SetTitleBarIcon(param::hstring const& iconPath) const;
+        auto SetTitleBarIcon(winrt::Microsoft::UI::IconId const& iconId) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindow4>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindow4<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Windowing_IAppWindowChangedEventArgs
@@ -713,6 +778,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar2>
     {
         template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindowTitleBar2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Windowing_IAppWindowTitleBar3
+    {
+        [[nodiscard]] auto PreferredTheme() const;
+        auto PreferredTheme(winrt::Microsoft::UI::Windowing::TitleBarTheme const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Windowing::IAppWindowTitleBar3>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Windowing_IAppWindowTitleBar3<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Windowing_IAppWindowTitleBarStatics
@@ -859,6 +934,22 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Windowing::IOverlappedPresenter2>
     {
         template <typename D> using type = consume_Microsoft_UI_Windowing_IOverlappedPresenter2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Windowing_IOverlappedPresenter3
+    {
+        [[nodiscard]] auto PreferredMinimumHeight() const;
+        auto PreferredMinimumHeight(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto PreferredMinimumWidth() const;
+        auto PreferredMinimumWidth(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto PreferredMaximumWidth() const;
+        auto PreferredMaximumWidth(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+        [[nodiscard]] auto PreferredMaximumHeight() const;
+        auto PreferredMaximumHeight(winrt::Windows::Foundation::IReference<int32_t> const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Windowing::IOverlappedPresenter3>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Windowing_IOverlappedPresenter3<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Windowing_IOverlappedPresenterStatics

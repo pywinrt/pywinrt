@@ -14,9 +14,58 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.240111.5"), "Mismatche
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Foundation.Numerics.2.h"
 #include "winrt/impl/Windows.Graphics.2.h"
+#include "winrt/impl/Windows.UI.Composition.2.h"
 #include "winrt/impl/Microsoft.UI.Content.2.h"
 namespace winrt::impl
 {
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLink<D>::ActualSize() const
+    {
+        winrt::Windows::Foundation::Numerics::float2 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLink)->get_ActualSize(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLink<D>::ActualSize(winrt::Windows::Foundation::Numerics::float2 const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLink)->put_ActualSize(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLink<D>::DispatcherQueue() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLink)->get_DispatcherQueue(&value));
+        return winrt::Microsoft::UI::Dispatching::DispatcherQueue{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLink<D>::LocalToParentTransformMatrix() const
+    {
+        winrt::Windows::Foundation::Numerics::float4x4 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLink)->get_LocalToParentTransformMatrix(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLink<D>::LocalToParentTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4 const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLink)->put_LocalToParentTransformMatrix(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLink<D>::SiteView() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLink)->get_SiteView(&value));
+        return winrt::Microsoft::UI::Content::ContentSiteView{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLink<D>::Connect(winrt::Microsoft::UI::Content::ContentIsland const& content) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLink)->Connect(*(void**)(&content)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLinkStatics<D>::Create(winrt::Microsoft::UI::Content::ContentIsland const& parent, winrt::Microsoft::UI::Composition::ContainerVisual const& placementVisual) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLinkStatics)->Create(*(void**)(&parent), *(void**)(&placementVisual), &result));
+        return winrt::Microsoft::UI::Content::ChildSiteLink{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IChildSiteLinkStatics<D>::CreateForSystemVisual(winrt::Microsoft::UI::Content::ContentIsland const& parent, winrt::Windows::UI::Composition::ContainerVisual const& placementVisual) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IChildSiteLinkStatics)->CreateForSystemVisual(*(void**)(&parent), *(void**)(&placementVisual), &result));
+        return winrt::Microsoft::UI::Content::ChildSiteLink{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IContentCoordinateConverter<D>::ConvertLocalToScreen(winrt::Windows::Foundation::Point const& localPoint) const
     {
         winrt::Windows::Graphics::PointInt32 result{};
@@ -88,6 +137,12 @@ namespace winrt::impl
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs)->get_DidDisplayIdChange(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentEnvironmentStateChangedEventArgs2<D>::DidDisplayScaleChange() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2)->get_DidDisplayScaleChange(&value));
         return value;
     }
     template <typename D> auto consume_Microsoft_UI_Content_IContentIsland<D>::ActualSize() const
@@ -240,6 +295,72 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIsland)->remove_StateChanged(impl::bind_in(token));
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIsland2<D>::Children() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIsland2)->get_Children(&value));
+        return winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Content::ChildSiteLink>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIsland2<D>::LocalToClientTransformMatrix() const
+    {
+        winrt::Windows::Foundation::Numerics::float4x4 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIsland2)->get_LocalToClientTransformMatrix(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIsland2<D>::LocalToParentTransformMatrix() const
+    {
+        winrt::Windows::Foundation::Numerics::float4x4 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIsland2)->get_LocalToParentTransformMatrix(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIsland2<D>::Popups() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIsland2)->get_Popups(&value));
+        return winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIsland2<D>::ProcessesKeyboardInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIsland2)->get_ProcessesKeyboardInput(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIsland2<D>::ProcessesPointerInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIsland2)->get_ProcessesPointerInput(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandAutomation<D>::AutomationOption() const
+    {
+        winrt::Microsoft::UI::Content::ContentAutomationOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandAutomation)->get_AutomationOption(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandAutomation<D>::FragmentRootAutomationProvider() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandAutomation)->get_FragmentRootAutomationProvider(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandAutomation<D>::NextSiblingAutomationProvider() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandAutomation)->get_NextSiblingAutomationProvider(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandAutomation<D>::ParentAutomationProvider() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandAutomation)->get_ParentAutomationProvider(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandAutomation<D>::PreviousSiblingAutomationProvider() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandAutomation)->get_PreviousSiblingAutomationProvider(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IContentIslandAutomationProviderRequestedEventArgs<D>::AutomationProvider() const
     {
         void* value{};
@@ -300,6 +421,12 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandEnvironment)->remove_StateChanged(impl::bind_in(token));
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandEnvironment2<D>::DisplayScale() const
+    {
+        float value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandEnvironment2)->get_DisplayScale(&value));
+        return value;
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IContentIslandStateChangedEventArgs<D>::DidActualSizeChange() const
     {
         bool value{};
@@ -328,6 +455,18 @@ namespace winrt::impl
     {
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs)->get_DidRasterizationScaleChange(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandStateChangedEventArgs2<D>::DidLocalToClientTransformMatrixChange() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2)->get_DidLocalToClientTransformMatrixChange(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandStateChangedEventArgs2<D>::DidLocalToParentTransformMatrixChange() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2)->get_DidLocalToParentTransformMatrixChange(&value));
         return value;
     }
     template <typename D> auto consume_Microsoft_UI_Content_IContentIslandStatics<D>::Create(winrt::Microsoft::UI::Composition::Visual const& Root) const
@@ -360,6 +499,25 @@ namespace winrt::impl
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandStatics)->GetFromId(id, &result));
+        return winrt::Microsoft::UI::Content::ContentIsland{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandStatics2<D>::CreateForSystemVisual(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Windows::UI::Composition::Visual const& root) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandStatics2)->CreateForSystemVisual(*(void**)(&queue), *(void**)(&root), &result));
+        return winrt::Microsoft::UI::Content::ContentIsland{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandStatics2<D>::FindAllForSystemCompositor(winrt::Windows::UI::Composition::Compositor const& compositor) const
+    {
+        uint32_t result_impl_size{};
+        void** result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandStatics2)->FindAllForSystemCompositor(*(void**)(&compositor), &result_impl_size, &result));
+        return com_array<winrt::Microsoft::UI::Content::ContentIsland>{ result, result_impl_size, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentIslandStatics2<D>::GetBySystemVisual(winrt::Windows::UI::Composition::Visual const& child) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentIslandStatics2)->GetBySystemVisual(*(void**)(&child), &result));
         return winrt::Microsoft::UI::Content::ContentIsland{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Content_IContentSite<D>::ActualSize() const
@@ -504,6 +662,134 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSite)->remove_RequestedStateChanged(impl::bind_in(token));
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSite2<D>::LocalToClientTransformMatrix() const
+    {
+        winrt::Windows::Foundation::Numerics::float4x4 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSite2)->get_LocalToClientTransformMatrix(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSite2<D>::LocalToParentTransformMatrix() const
+    {
+        winrt::Windows::Foundation::Numerics::float4x4 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSite2)->get_LocalToParentTransformMatrix(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSite2<D>::LocalToParentTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4 const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSite2)->put_LocalToParentTransformMatrix(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSite2<D>::ProcessesKeyboardInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSite2)->get_ProcessesKeyboardInput(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSite2<D>::ProcessesKeyboardInput(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSite2)->put_ProcessesKeyboardInput(value));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSite2<D>::ProcessesPointerInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSite2)->get_ProcessesPointerInput(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSite2<D>::ProcessesPointerInput(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSite2)->put_ProcessesPointerInput(value));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::AutomationOption() const
+    {
+        winrt::Microsoft::UI::Content::ContentAutomationOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->get_AutomationOption(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::AutomationOption(winrt::Microsoft::UI::Content::ContentAutomationOptions const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->put_AutomationOption(static_cast<int32_t>(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::AutomationProvider() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->get_AutomationProvider(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::FragmentRootAutomationProviderRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->add_FragmentRootAutomationProviderRequested(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::FragmentRootAutomationProviderRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, FragmentRootAutomationProviderRequested_revoker>(this, FragmentRootAutomationProviderRequested(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::FragmentRootAutomationProviderRequested(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->remove_FragmentRootAutomationProviderRequested(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::NextSiblingAutomationProviderRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->add_NextSiblingAutomationProviderRequested(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::NextSiblingAutomationProviderRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, NextSiblingAutomationProviderRequested_revoker>(this, NextSiblingAutomationProviderRequested(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::NextSiblingAutomationProviderRequested(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->remove_NextSiblingAutomationProviderRequested(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::ParentAutomationProviderRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->add_ParentAutomationProviderRequested(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::ParentAutomationProviderRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, ParentAutomationProviderRequested_revoker>(this, ParentAutomationProviderRequested(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::ParentAutomationProviderRequested(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->remove_ParentAutomationProviderRequested(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::PreviousSiblingAutomationProviderRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->add_PreviousSiblingAutomationProviderRequested(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::PreviousSiblingAutomationProviderRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, PreviousSiblingAutomationProviderRequested_revoker>(this, PreviousSiblingAutomationProviderRequested(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomation<D>::PreviousSiblingAutomationProviderRequested(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomation)->remove_PreviousSiblingAutomationProviderRequested(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomationProviderRequestedEventArgs<D>::AutomationProvider() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs)->get_AutomationProvider(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomationProviderRequestedEventArgs<D>::AutomationProvider(winrt::Windows::Foundation::IInspectable const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs)->put_AutomationProvider(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomationProviderRequestedEventArgs<D>::Handled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs)->get_Handled(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteAutomationProviderRequestedEventArgs<D>::Handled(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs)->put_Handled(value));
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IContentSiteBridge<D>::DispatcherQueue() const
     {
         void* value{};
@@ -560,6 +846,16 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteEnvironment)->NotifySettingChanged(*(void**)(&setting)));
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironment2<D>::DisplayScale() const
+    {
+        float value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteEnvironment2)->get_DisplayScale(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironment2<D>::DisplayScale(float value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteEnvironment2)->put_DisplayScale(value));
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironmentView<D>::AppWindowId() const
     {
         winrt::Microsoft::UI::WindowId value{};
@@ -571,6 +867,38 @@ namespace winrt::impl
         winrt::Microsoft::UI::DisplayId value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteEnvironmentView)->get_DisplayId(put_abi(value)));
         return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteEnvironmentView2<D>::DisplayScale() const
+    {
+        float value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteEnvironmentView2)->get_DisplayScale(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteInput<D>::ProcessesKeyboardInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteInput)->get_ProcessesKeyboardInput(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteInput<D>::ProcessesKeyboardInput(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteInput)->put_ProcessesKeyboardInput(value));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteInput<D>::ProcessesPointerInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteInput)->get_ProcessesPointerInput(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteInput<D>::ProcessesPointerInput(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteInput)->put_ProcessesPointerInput(value));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteLink<D>::Parent() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteLink)->get_Parent(&value));
+        return winrt::Microsoft::UI::Content::ContentIsland{ value, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Content_IContentSiteRequestedStateChangedEventArgs<D>::DidRequestedSizeChange() const
     {
@@ -662,6 +990,58 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteView)->get_ShouldApplyRasterizationScale(&value));
         return value;
     }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteView2<D>::LocalToClientTransformMatrix() const
+    {
+        winrt::Windows::Foundation::Numerics::float4x4 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteView2)->get_LocalToClientTransformMatrix(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteView2<D>::LocalToParentTransformMatrix() const
+    {
+        winrt::Windows::Foundation::Numerics::float4x4 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteView2)->get_LocalToParentTransformMatrix(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteView2<D>::ProcessesKeyboardInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteView2)->get_ProcessesKeyboardInput(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteView2<D>::ProcessesPointerInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteView2)->get_ProcessesPointerInput(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IContentSiteViewAutomation<D>::AutomationOption() const
+    {
+        winrt::Microsoft::UI::Content::ContentAutomationOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IContentSiteViewAutomation)->get_AutomationOption(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopAttachedSiteBridge<D>::SiteView() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge)->get_SiteView(&value));
+        return winrt::Microsoft::UI::Content::ContentSiteView{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopAttachedSiteBridge<D>::WindowId() const
+    {
+        winrt::Microsoft::UI::WindowId value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge)->get_WindowId(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopAttachedSiteBridge<D>::Connect(winrt::Microsoft::UI::Content::ContentIsland const& content) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge)->Connect(*(void**)(&content)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopAttachedSiteBridgeStatics<D>::CreateFromWindowId(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Microsoft::UI::WindowId const& windowId) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridgeStatics)->CreateFromWindowId(*(void**)(&queue), impl::bind_in(windowId), &result));
+        return winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Content_IDesktopChildSiteBridge<D>::ResizePolicy() const
     {
         winrt::Microsoft::UI::Content::ContentSizePolicy value{};
@@ -683,6 +1063,78 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopChildSiteBridgeStatics)->Create(*(void**)(&compositor), impl::bind_in(parentWindowId), &result));
         return winrt::Microsoft::UI::Content::DesktopChildSiteBridge{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopChildSiteBridgeStatics2<D>::CreateWithDispatcherQueue(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Microsoft::UI::WindowId const& parentWindowId) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopChildSiteBridgeStatics2)->CreateWithDispatcherQueue(*(void**)(&queue), impl::bind_in(parentWindowId), &result));
+        return winrt::Microsoft::UI::Content::DesktopChildSiteBridge{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::IsEnabled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->get_IsEnabled(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::IsVisible() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->get_IsVisible(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::SiteView() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->get_SiteView(&value));
+        return winrt::Microsoft::UI::Content::ContentSiteView{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::WindowId() const
+    {
+        winrt::Microsoft::UI::WindowId value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->get_WindowId(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::Connect(winrt::Microsoft::UI::Content::ContentIsland const& content) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->Connect(*(void**)(&content)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::Disable() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->Disable());
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::Enable() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->Enable());
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::Hide() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->Hide());
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::MoveAndResize(winrt::Windows::Graphics::RectInt32 const& rect) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->MoveAndResize(impl::bind_in(rect)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::MoveInZOrderAtBottom() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->MoveInZOrderAtBottom());
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::MoveInZOrderAtTop() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->MoveInZOrderAtTop());
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::MoveInZOrderBelow(winrt::Microsoft::UI::WindowId const& windowId) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->MoveInZOrderBelow(impl::bind_in(windowId)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridge<D>::Show() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge)->Show());
+    }
+    template <typename D> auto consume_Microsoft_UI_Content_IDesktopPopupSiteBridgeStatics<D>::Create(winrt::Microsoft::UI::Content::ContentIsland const& parent) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopPopupSiteBridgeStatics)->Create(*(void**)(&parent), &result));
+        return winrt::Microsoft::UI::Content::DesktopPopupSiteBridge{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_UI_Content_IDesktopSiteBridge<D>::IsEnabled() const
     {
@@ -744,6 +1196,87 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Content::IDesktopSiteBridgeStatics)->IsSupported(&result));
         return result;
     }
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IChildSiteLink> : produce_base<D, winrt::Microsoft::UI::Content::IChildSiteLink>
+    {
+        int32_t __stdcall get_ActualSize(winrt::Windows::Foundation::Numerics::float2* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Numerics::float2>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Numerics::float2>(this->shim().ActualSize());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ActualSize(winrt::Windows::Foundation::Numerics::float2 value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ActualSize(*reinterpret_cast<winrt::Windows::Foundation::Numerics::float2 const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DispatcherQueue(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Dispatching::DispatcherQueue>(this->shim().DispatcherQueue());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_LocalToParentTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Numerics::float4x4>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Numerics::float4x4>(this->shim().LocalToParentTransformMatrix());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_LocalToParentTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4 value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().LocalToParentTransformMatrix(*reinterpret_cast<winrt::Windows::Foundation::Numerics::float4x4 const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SiteView(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentSiteView>(this->shim().SiteView());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Connect(void* content) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Connect(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&content));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IChildSiteLinkStatics> : produce_base<D, winrt::Microsoft::UI::Content::IChildSiteLinkStatics>
+    {
+        int32_t __stdcall Create(void* parent, void* placementVisual, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::ChildSiteLink>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&parent), *reinterpret_cast<winrt::Microsoft::UI::Composition::ContainerVisual const*>(&placementVisual)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateForSystemVisual(void* parent, void* placementVisual, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::ChildSiteLink>(this->shim().CreateForSystemVisual(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&parent), *reinterpret_cast<winrt::Windows::UI::Composition::ContainerVisual const*>(&placementVisual)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentCoordinateConverter> : produce_base<D, winrt::Microsoft::UI::Content::IContentCoordinateConverter>
@@ -868,6 +1401,19 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<bool>(this->shim().DidDisplayIdChange());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2> : produce_base<D, winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2>
+    {
+        int32_t __stdcall get_DidDisplayScaleChange(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().DidDisplayScaleChange());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1071,6 +1617,103 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentIsland2> : produce_base<D, winrt::Microsoft::UI::Content::IContentIsland2>
+    {
+        int32_t __stdcall get_Children(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Content::ChildSiteLink>>(this->shim().Children());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_LocalToClientTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Numerics::float4x4>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Numerics::float4x4>(this->shim().LocalToClientTransformMatrix());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_LocalToParentTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Numerics::float4x4>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Numerics::float4x4>(this->shim().LocalToParentTransformMatrix());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Popups(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge>>(this->shim().Popups());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ProcessesKeyboardInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ProcessesKeyboardInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ProcessesPointerInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ProcessesPointerInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentIslandAutomation> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandAutomation>
+    {
+        int32_t __stdcall get_AutomationOption(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentAutomationOptions>(this->shim().AutomationOption());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_FragmentRootAutomationProvider(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().FragmentRootAutomationProvider());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_NextSiblingAutomationProvider(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().NextSiblingAutomationProvider());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ParentAutomationProvider(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().ParentAutomationProvider());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PreviousSiblingAutomationProvider(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().PreviousSiblingAutomationProvider());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs>
     {
         int32_t __stdcall get_AutomationProvider(void** value) noexcept final try
@@ -1156,6 +1799,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentIslandEnvironment2> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandEnvironment2>
+    {
+        int32_t __stdcall get_DisplayScale(float* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<float>(this->shim().DisplayScale());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory>
     {
     };
@@ -1209,6 +1865,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2>
+    {
+        int32_t __stdcall get_DidLocalToClientTransformMatrixChange(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().DidLocalToClientTransformMatrixChange());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DidLocalToParentTransformMatrixChange(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().DidLocalToParentTransformMatrixChange());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentIslandStatics> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandStatics>
     {
         int32_t __stdcall Create(void* Root, void** result) noexcept final try
@@ -1248,6 +1924,36 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::UI::Content::ContentIsland>(this->shim().GetFromId(id));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentIslandStatics2> : produce_base<D, winrt::Microsoft::UI::Content::IContentIslandStatics2>
+    {
+        int32_t __stdcall CreateForSystemVisual(void* queue, void* root, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::ContentIsland>(this->shim().CreateForSystemVisual(*reinterpret_cast<winrt::Microsoft::UI::Dispatching::DispatcherQueue const*>(&queue), *reinterpret_cast<winrt::Windows::UI::Composition::Visual const*>(&root)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall FindAllForSystemCompositor(void* compositor, uint32_t* __resultSize, void*** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            std::tie(*__resultSize, *result) = detach_abi(this->shim().FindAllForSystemCompositor(*reinterpret_cast<winrt::Windows::UI::Composition::Compositor const*>(&compositor)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetBySystemVisual(void* child, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::ContentIsland>(this->shim().GetBySystemVisual(*reinterpret_cast<winrt::Windows::UI::Composition::Visual const*>(&child)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1449,6 +2155,180 @@ namespace winrt::impl
         }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSite2> : produce_base<D, winrt::Microsoft::UI::Content::IContentSite2>
+    {
+        int32_t __stdcall get_LocalToClientTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Numerics::float4x4>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Numerics::float4x4>(this->shim().LocalToClientTransformMatrix());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_LocalToParentTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Numerics::float4x4>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Numerics::float4x4>(this->shim().LocalToParentTransformMatrix());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_LocalToParentTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4 value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().LocalToParentTransformMatrix(*reinterpret_cast<winrt::Windows::Foundation::Numerics::float4x4 const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ProcessesKeyboardInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ProcessesKeyboardInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ProcessesKeyboardInput(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ProcessesKeyboardInput(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ProcessesPointerInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ProcessesPointerInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ProcessesPointerInput(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ProcessesPointerInput(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteAutomation> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteAutomation>
+    {
+        int32_t __stdcall get_AutomationOption(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentAutomationOptions>(this->shim().AutomationOption());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AutomationOption(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AutomationOption(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentAutomationOptions const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AutomationProvider(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().AutomationProvider());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_FragmentRootAutomationProviderRequested(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().FragmentRootAutomationProviderRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_FragmentRootAutomationProviderRequested(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().FragmentRootAutomationProviderRequested(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_NextSiblingAutomationProviderRequested(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().NextSiblingAutomationProviderRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_NextSiblingAutomationProviderRequested(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NextSiblingAutomationProviderRequested(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_ParentAutomationProviderRequested(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ParentAutomationProviderRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ParentAutomationProviderRequested(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ParentAutomationProviderRequested(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_PreviousSiblingAutomationProviderRequested(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().PreviousSiblingAutomationProviderRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::IContentSiteAutomation, winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_PreviousSiblingAutomationProviderRequested(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PreviousSiblingAutomationProviderRequested(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs>
+    {
+        int32_t __stdcall get_AutomationProvider(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().AutomationProvider());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AutomationProvider(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AutomationProvider(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Handled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Handled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Handled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Handled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteBridge> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteBridge>
     {
@@ -1543,6 +2423,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteEnvironment2> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteEnvironment2>
+    {
+        int32_t __stdcall get_DisplayScale(float* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<float>(this->shim().DisplayScale());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DisplayScale(float value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DisplayScale(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory>
     {
     };
@@ -1571,6 +2471,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentView2> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentView2>
+    {
+        int32_t __stdcall get_DisplayScale(float* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<float>(this->shim().DisplayScale());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory>
     {
     };
@@ -1581,6 +2494,50 @@ namespace winrt::impl
     {
     };
 #endif
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteInput> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteInput>
+    {
+        int32_t __stdcall get_ProcessesKeyboardInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ProcessesKeyboardInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ProcessesKeyboardInput(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ProcessesKeyboardInput(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ProcessesPointerInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ProcessesPointerInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ProcessesPointerInput(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ProcessesPointerInput(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteLink> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteLink>
+    {
+        int32_t __stdcall get_Parent(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentIsland>(this->shim().Parent());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteRequestedStateChangedEventArgs> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteRequestedStateChangedEventArgs>
@@ -1706,8 +2663,100 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteView2> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteView2>
+    {
+        int32_t __stdcall get_LocalToClientTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Numerics::float4x4>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Numerics::float4x4>(this->shim().LocalToClientTransformMatrix());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_LocalToParentTransformMatrix(winrt::Windows::Foundation::Numerics::float4x4* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::Numerics::float4x4>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Numerics::float4x4>(this->shim().LocalToParentTransformMatrix());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ProcessesKeyboardInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ProcessesKeyboardInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ProcessesPointerInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ProcessesPointerInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IContentSiteViewAutomation> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteViewAutomation>
+    {
+        int32_t __stdcall get_AutomationOption(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentAutomationOptions>(this->shim().AutomationOption());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Content::IContentSiteViewFactory> : produce_base<D, winrt::Microsoft::UI::Content::IContentSiteViewFactory>
     {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge> : produce_base<D, winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge>
+    {
+        int32_t __stdcall get_SiteView(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentSiteView>(this->shim().SiteView());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_WindowId(struct struct_Microsoft_UI_WindowId* value) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::UI::WindowId>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::WindowId>(this->shim().WindowId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Connect(void* content) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Connect(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&content));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridgeStatics> : produce_base<D, winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridgeStatics>
+    {
+        int32_t __stdcall CreateFromWindowId(void* queue, struct struct_Microsoft_UI_WindowId windowId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge>(this->shim().CreateFromWindowId(*reinterpret_cast<winrt::Microsoft::UI::Dispatching::DispatcherQueue const*>(&queue), *reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&windowId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -1747,6 +2796,133 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Composition::Compositor const*>(&compositor), *reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&parentWindowId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IDesktopChildSiteBridgeStatics2> : produce_base<D, winrt::Microsoft::UI::Content::IDesktopChildSiteBridgeStatics2>
+    {
+        int32_t __stdcall CreateWithDispatcherQueue(void* queue, struct struct_Microsoft_UI_WindowId parentWindowId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>(this->shim().CreateWithDispatcherQueue(*reinterpret_cast<winrt::Microsoft::UI::Dispatching::DispatcherQueue const*>(&queue), *reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&parentWindowId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge> : produce_base<D, winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge>
+    {
+        int32_t __stdcall get_IsEnabled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsEnabled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsVisible(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsVisible());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SiteView(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentSiteView>(this->shim().SiteView());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_WindowId(struct struct_Microsoft_UI_WindowId* value) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::UI::WindowId>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::WindowId>(this->shim().WindowId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Connect(void* content) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Connect(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&content));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Disable() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Disable();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Enable() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Enable();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Hide() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Hide();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall MoveAndResize(struct struct_Windows_Graphics_RectInt32 rect) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MoveAndResize(*reinterpret_cast<winrt::Windows::Graphics::RectInt32 const*>(&rect));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall MoveInZOrderAtBottom() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MoveInZOrderAtBottom();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall MoveInZOrderAtTop() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MoveInZOrderAtTop();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall MoveInZOrderBelow(struct struct_Microsoft_UI_WindowId windowId) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MoveInZOrderBelow(*reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&windowId));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Show() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Show();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Content::IDesktopPopupSiteBridgeStatics> : produce_base<D, winrt::Microsoft::UI::Content::IDesktopPopupSiteBridgeStatics>
+    {
+        int32_t __stdcall Create(void* parent, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge>(this->shim().Create(*reinterpret_cast<winrt::Microsoft::UI::Content::ContentIsland const*>(&parent)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1865,6 +3041,14 @@ namespace winrt::impl
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 {
+    inline auto ChildSiteLink::Create(winrt::Microsoft::UI::Content::ContentIsland const& parent, winrt::Microsoft::UI::Composition::ContainerVisual const& placementVisual)
+    {
+        return impl::call_factory<ChildSiteLink, IChildSiteLinkStatics>([&](IChildSiteLinkStatics const& f) { return f.Create(parent, placementVisual); });
+    }
+    inline auto ChildSiteLink::CreateForSystemVisual(winrt::Microsoft::UI::Content::ContentIsland const& parent, winrt::Windows::UI::Composition::ContainerVisual const& placementVisual)
+    {
+        return impl::call_factory<ChildSiteLink, IChildSiteLinkStatics>([&](IChildSiteLinkStatics const& f) { return f.CreateForSystemVisual(parent, placementVisual); });
+    }
     inline auto ContentCoordinateConverter::CreateForWindowId(winrt::Microsoft::UI::WindowId const& windowId)
     {
         return impl::call_factory<ContentCoordinateConverter, IContentCoordinateConverterStatics>([&](IContentCoordinateConverterStatics const& f) { return f.CreateForWindowId(windowId); });
@@ -1889,9 +3073,33 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
     {
         return impl::call_factory<ContentIsland, IContentIslandStatics>([&](IContentIslandStatics const& f) { return f.GetFromId(id); });
     }
+    inline auto ContentIsland::CreateForSystemVisual(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Windows::UI::Composition::Visual const& root)
+    {
+        return impl::call_factory<ContentIsland, IContentIslandStatics2>([&](IContentIslandStatics2 const& f) { return f.CreateForSystemVisual(queue, root); });
+    }
+    inline auto ContentIsland::FindAllForSystemCompositor(winrt::Windows::UI::Composition::Compositor const& compositor)
+    {
+        return impl::call_factory<ContentIsland, IContentIslandStatics2>([&](IContentIslandStatics2 const& f) { return f.FindAllForSystemCompositor(compositor); });
+    }
+    inline auto ContentIsland::GetBySystemVisual(winrt::Windows::UI::Composition::Visual const& child)
+    {
+        return impl::call_factory<ContentIsland, IContentIslandStatics2>([&](IContentIslandStatics2 const& f) { return f.GetBySystemVisual(child); });
+    }
+    inline auto DesktopAttachedSiteBridge::CreateFromWindowId(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Microsoft::UI::WindowId const& windowId)
+    {
+        return impl::call_factory<DesktopAttachedSiteBridge, IDesktopAttachedSiteBridgeStatics>([&](IDesktopAttachedSiteBridgeStatics const& f) { return f.CreateFromWindowId(queue, windowId); });
+    }
     inline auto DesktopChildSiteBridge::Create(winrt::Microsoft::UI::Composition::Compositor const& compositor, winrt::Microsoft::UI::WindowId const& parentWindowId)
     {
         return impl::call_factory<DesktopChildSiteBridge, IDesktopChildSiteBridgeStatics>([&](IDesktopChildSiteBridgeStatics const& f) { return f.Create(compositor, parentWindowId); });
+    }
+    inline auto DesktopChildSiteBridge::CreateWithDispatcherQueue(winrt::Microsoft::UI::Dispatching::DispatcherQueue const& queue, winrt::Microsoft::UI::WindowId const& parentWindowId)
+    {
+        return impl::call_factory<DesktopChildSiteBridge, IDesktopChildSiteBridgeStatics2>([&](IDesktopChildSiteBridgeStatics2 const& f) { return f.CreateWithDispatcherQueue(queue, parentWindowId); });
+    }
+    inline auto DesktopPopupSiteBridge::Create(winrt::Microsoft::UI::Content::ContentIsland const& parent)
+    {
+        return impl::call_factory<DesktopPopupSiteBridge, IDesktopPopupSiteBridgeStatics>([&](IDesktopPopupSiteBridgeStatics const& f) { return f.Create(parent); });
     }
     inline auto DesktopSiteBridge::IsSupported()
     {
@@ -1901,34 +3109,57 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Content
 namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::Microsoft::UI::Content::IChildSiteLink> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IChildSiteLinkStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentCoordinateConverter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentCoordinateConverterFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentCoordinateConverterStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentDeferral> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentEnvironmentSettingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentEnvironmentStateChangedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIsland> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentIsland2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandAutomation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandAutomationProviderRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandEnvironment> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandEnvironment2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandEnvironmentFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandStateChangedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentIslandStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSite> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSite2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteAutomation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteAutomationProviderRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironment> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironment2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentView2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteEnvironmentViewFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteInput> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteLink> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteRequestedStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteView2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteViewAutomation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IContentSiteViewFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IDesktopAttachedSiteBridgeStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopChildSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopChildSiteBridgeStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IDesktopChildSiteBridgeStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::IDesktopPopupSiteBridgeStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopSiteBridgeFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::IDesktopSiteBridgeStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ChildSiteLink> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentCoordinateConverter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentDeferral> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs> : winrt::impl::hash_base {};
@@ -1938,11 +3169,14 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Content::ContentIslandEnvironment> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentIslandStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentSite> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::ContentSiteAutomationProviderRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentSiteEnvironment> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::ContentSiteView> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::DesktopAttachedSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::DesktopChildSiteBridge> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Content::DesktopPopupSiteBridge> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Content::DesktopSiteBridge> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format

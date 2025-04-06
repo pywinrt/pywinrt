@@ -1014,6 +1014,36 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         }
     }
 
+    static PyObject* WidgetInfo_get_IsPlaceholderContent(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetInfo* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetInfo", L"IsPlaceholderContent");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlaceholderContent();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_WidgetInfo(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::WidgetInfo>>();
@@ -1049,6 +1079,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { "last_update_time", reinterpret_cast<getter>(WidgetInfo_get_LastUpdateTime), nullptr, nullptr, nullptr },
         { "template", reinterpret_cast<getter>(WidgetInfo_get_Template), nullptr, nullptr, nullptr },
         { "widget_context", reinterpret_cast<getter>(WidgetInfo_get_WidgetContext), nullptr, nullptr, nullptr },
+        { "is_placeholder_content", reinterpret_cast<getter>(WidgetInfo_get_IsPlaceholderContent), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_WidgetInfo[] = {
@@ -1287,6 +1318,50 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         }
     }
 
+    static PyObject* WidgetManager_SendMessageToContent(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetManager", L"SendMessageToContent", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMessageToContent(param0, param1);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* WidgetManager_UpdateWidget(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_GET_SIZE(args);
@@ -1359,6 +1434,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { "get_widget_ids", reinterpret_cast<PyCFunction>(WidgetManager_GetWidgetIds), METH_VARARGS, nullptr },
         { "get_widget_info", reinterpret_cast<PyCFunction>(WidgetManager_GetWidgetInfo), METH_VARARGS, nullptr },
         { "get_widget_infos", reinterpret_cast<PyCFunction>(WidgetManager_GetWidgetInfos), METH_VARARGS, nullptr },
+        { "send_message_to_content", reinterpret_cast<PyCFunction>(WidgetManager_SendMessageToContent), METH_VARARGS, nullptr },
         { "update_widget", reinterpret_cast<PyCFunction>(WidgetManager_UpdateWidget), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WidgetManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WidgetManager), METH_O | METH_STATIC, nullptr },
@@ -1402,6 +1478,845 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
         type_slots_WidgetManager_Static};
+
+    // ----- WidgetMessageReceivedArgs class --------------------
+
+    static PyObject* _new_WidgetMessageReceivedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_WidgetMessageReceivedArgs(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WidgetMessageReceivedArgs_get_Message(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs", L"Message");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Message();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WidgetMessageReceivedArgs_get_WidgetContext(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs", L"WidgetContext");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetContext();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WidgetMessageReceivedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WidgetMessageReceivedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WidgetMessageReceivedArgs[] = {
+        { "_assign_array_", _assign_array_WidgetMessageReceivedArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WidgetMessageReceivedArgs), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_WidgetMessageReceivedArgs[] = {
+        { "message", reinterpret_cast<getter>(WidgetMessageReceivedArgs_get_Message), nullptr, nullptr, nullptr },
+        { "widget_context", reinterpret_cast<getter>(WidgetMessageReceivedArgs_get_WidgetContext), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_WidgetMessageReceivedArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WidgetMessageReceivedArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WidgetMessageReceivedArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WidgetMessageReceivedArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WidgetMessageReceivedArgs) },
+        { }};
+
+    static PyType_Spec type_spec_WidgetMessageReceivedArgs = {
+        "winui3._winui3_microsoft_windows_widgets_providers.WidgetMessageReceivedArgs",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WidgetMessageReceivedArgs};
+
+    // ----- WidgetResourceRequest class --------------------
+
+    static PyObject* _new_WidgetResourceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_WidgetResourceRequest(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WidgetResourceRequest_get_Method(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequest", L"Method");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Method();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WidgetResourceRequest_put_Method(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequest", L"Method");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Method(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* WidgetResourceRequest_get_Content(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequest", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WidgetResourceRequest_put_Content(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequest", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Content(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* WidgetResourceRequest_get_Headers(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequest", L"Headers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WidgetResourceRequest_get_Uri(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequest", L"Uri");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Uri();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WidgetResourceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WidgetResourceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WidgetResourceRequest[] = {
+        { "_assign_array_", _assign_array_WidgetResourceRequest, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WidgetResourceRequest), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_WidgetResourceRequest[] = {
+        { "method", reinterpret_cast<getter>(WidgetResourceRequest_get_Method), reinterpret_cast<setter>(WidgetResourceRequest_put_Method), nullptr, nullptr },
+        { "content", reinterpret_cast<getter>(WidgetResourceRequest_get_Content), reinterpret_cast<setter>(WidgetResourceRequest_put_Content), nullptr, nullptr },
+        { "headers", reinterpret_cast<getter>(WidgetResourceRequest_get_Headers), nullptr, nullptr, nullptr },
+        { "uri", reinterpret_cast<getter>(WidgetResourceRequest_get_Uri), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_WidgetResourceRequest[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WidgetResourceRequest) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WidgetResourceRequest) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WidgetResourceRequest) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WidgetResourceRequest) },
+        { }};
+
+    static PyType_Spec type_spec_WidgetResourceRequest = {
+        "winui3._winui3_microsoft_windows_widgets_providers.WidgetResourceRequest",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequest),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WidgetResourceRequest};
+
+    // ----- WidgetResourceRequestedArgs class --------------------
+
+    static PyObject* _new_WidgetResourceRequestedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_WidgetResourceRequestedArgs(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WidgetResourceRequestedArgs_GetDeferral(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs", L"GetDeferral", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert([&]()
+                {
+                    auto _gil = release_gil();
+                    return self->obj.GetDeferral();
+                }());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WidgetResourceRequestedArgs_get_Response(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs", L"Response");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Response();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WidgetResourceRequestedArgs_put_Response(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs", L"Response");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.Response(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* WidgetResourceRequestedArgs_get_Request(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs", L"Request");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Request();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WidgetResourceRequestedArgs_get_WidgetContext(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs", L"WidgetContext");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.WidgetContext();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WidgetResourceRequestedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WidgetResourceRequestedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WidgetResourceRequestedArgs[] = {
+        { "get_deferral", reinterpret_cast<PyCFunction>(WidgetResourceRequestedArgs_GetDeferral), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_WidgetResourceRequestedArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WidgetResourceRequestedArgs), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_WidgetResourceRequestedArgs[] = {
+        { "response", reinterpret_cast<getter>(WidgetResourceRequestedArgs_get_Response), reinterpret_cast<setter>(WidgetResourceRequestedArgs_put_Response), nullptr, nullptr },
+        { "request", reinterpret_cast<getter>(WidgetResourceRequestedArgs_get_Request), nullptr, nullptr, nullptr },
+        { "widget_context", reinterpret_cast<getter>(WidgetResourceRequestedArgs_get_WidgetContext), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_WidgetResourceRequestedArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WidgetResourceRequestedArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WidgetResourceRequestedArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WidgetResourceRequestedArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WidgetResourceRequestedArgs) },
+        { }};
+
+    static PyType_Spec type_spec_WidgetResourceRequestedArgs = {
+        "winui3._winui3_microsoft_windows_widgets_providers.WidgetResourceRequestedArgs",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WidgetResourceRequestedArgs};
+
+    // ----- WidgetResourceResponse class --------------------
+
+    static PyObject* _new_WidgetResourceResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+        if (arg_count == 3)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+
+                winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse instance{param0, param1, param2};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_WidgetResourceResponse(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WidgetResourceResponse_get_Content(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceResponse", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Content();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WidgetResourceResponse_get_Headers(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceResponse", L"Headers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.Headers();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WidgetResourceResponse_get_ReasonPhrase(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceResponse", L"ReasonPhrase");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ReasonPhrase();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WidgetResourceResponse_get_StatusCode(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetResourceResponse", L"StatusCode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.StatusCode();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WidgetResourceResponse(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WidgetResourceResponse(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WidgetResourceResponse[] = {
+        { "_assign_array_", _assign_array_WidgetResourceResponse, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WidgetResourceResponse), METH_O | METH_STATIC, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_WidgetResourceResponse[] = {
+        { "content", reinterpret_cast<getter>(WidgetResourceResponse_get_Content), nullptr, nullptr, nullptr },
+        { "headers", reinterpret_cast<getter>(WidgetResourceResponse_get_Headers), nullptr, nullptr, nullptr },
+        { "reason_phrase", reinterpret_cast<getter>(WidgetResourceResponse_get_ReasonPhrase), nullptr, nullptr, nullptr },
+        { "status_code", reinterpret_cast<getter>(WidgetResourceResponse_get_StatusCode), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_WidgetResourceResponse[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WidgetResourceResponse) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WidgetResourceResponse) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WidgetResourceResponse) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WidgetResourceResponse) },
+        { }};
+
+    static PyType_Spec type_spec_WidgetResourceResponse = {
+        "winui3._winui3_microsoft_windows_widgets_providers.WidgetResourceResponse",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetResourceResponse),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WidgetResourceResponse};
 
     // ----- WidgetUpdateRequestOptions class --------------------
 
@@ -1681,6 +2596,75 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         }
     }
 
+    static PyObject* WidgetUpdateRequestOptions_get_IsPlaceholderContent(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"IsPlaceholderContent");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.IsPlaceholderContent();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WidgetUpdateRequestOptions_put_IsPlaceholderContent(py::wrapper::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions", L"IsPlaceholderContent");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.IsPlaceholderContent(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* WidgetUpdateRequestOptions_get_UnsetValue(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         try
@@ -1745,6 +2729,7 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         { "data", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_Data), reinterpret_cast<setter>(WidgetUpdateRequestOptions_put_Data), nullptr, nullptr },
         { "custom_state", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_CustomState), reinterpret_cast<setter>(WidgetUpdateRequestOptions_put_CustomState), nullptr, nullptr },
         { "widget_id", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_WidgetId), nullptr, nullptr, nullptr },
+        { "is_placeholder_content", reinterpret_cast<getter>(WidgetUpdateRequestOptions_get_IsPlaceholderContent), reinterpret_cast<setter>(WidgetUpdateRequestOptions_put_IsPlaceholderContent), nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_WidgetUpdateRequestOptions[] = {
@@ -2276,6 +3261,228 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         #endif
         ,
         type_slots_ImplementsIWidgetManager};
+
+    // ----- IWidgetManager2 interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IWidgetManager2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IWidgetManager2(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager2* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IWidgetManager2_SendMessageToContent(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetManager2", L"SendMessageToContent", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.SendMessageToContent(param0, param1);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IWidgetManager2[] = {
+        { "send_message_to_content", reinterpret_cast<PyCFunction>(IWidgetManager2_SendMessageToContent), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IWidgetManager2[] = {
+        { }};
+
+    static PyType_Slot _type_slots_IWidgetManager2[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IWidgetManager2) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWidgetManager2) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IWidgetManager2) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IWidgetManager2) },
+        { }};
+
+    static PyType_Spec type_spec_IWidgetManager2 = {
+        "winui3._winui3_microsoft_windows_widgets_providers._IWidgetManager2",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetManager2),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IWidgetManager2};
+
+    struct ImplementsIWidgetManager2 : py::ImplementsInterfaceT<ImplementsIWidgetManager2, winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>
+    {
+        ImplementsIWidgetManager2() = delete;
+        ImplementsIWidgetManager2(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWidgetManager2, winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>(py_obj, runtime_class)
+        {
+        }
+
+        auto SendMessageToContent(winrt::hstring const& param0, winrt::hstring const& param1)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "send_message_to_content")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param1{py::convert(param1)};
+                if (!py_param1)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle args{PyTuple_Pack(2, py_param0.get(), py_param1.get())};
+                if (!args)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallObject(method.get(), args.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IWidgetManager2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IWidgetManager2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIWidgetManager2(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Providers::IWidgetManager2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWidgetManager2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWidgetManager2>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWidgetManager2[] = {
+        { "_assign_array_", _assign_array_IWidgetManager2, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWidgetManager2), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWidgetManager2), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWidgetManager2), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIWidgetManager2[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWidgetManager2) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIWidgetManager2 = {
+        "winui3._winui3_microsoft_windows_widgets_providers.IWidgetManager2",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIWidgetManager2};
 
     // ----- IWidgetProvider interface --------------------
 
@@ -3496,6 +4703,424 @@ namespace py::cpp::Microsoft::Windows::Widgets::Providers
         ,
         type_slots_ImplementsIWidgetProviderErrors};
 
+    // ----- IWidgetProviderMessage interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IWidgetProviderMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IWidgetProviderMessage(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IWidgetProviderMessage_OnMessageReceived(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetProviderMessage", L"OnMessageReceived", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnMessageReceived(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IWidgetProviderMessage[] = {
+        { "on_message_received", reinterpret_cast<PyCFunction>(IWidgetProviderMessage_OnMessageReceived), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IWidgetProviderMessage[] = {
+        { }};
+
+    static PyType_Slot _type_slots_IWidgetProviderMessage[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IWidgetProviderMessage) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWidgetProviderMessage) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IWidgetProviderMessage) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IWidgetProviderMessage) },
+        { }};
+
+    static PyType_Spec type_spec_IWidgetProviderMessage = {
+        "winui3._winui3_microsoft_windows_widgets_providers._IWidgetProviderMessage",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IWidgetProviderMessage};
+
+    struct ImplementsIWidgetProviderMessage : py::ImplementsInterfaceT<ImplementsIWidgetProviderMessage, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>
+    {
+        ImplementsIWidgetProviderMessage() = delete;
+        ImplementsIWidgetProviderMessage(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWidgetProviderMessage, winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>(py_obj, runtime_class)
+        {
+        }
+
+        auto OnMessageReceived(winrt::Microsoft::Windows::Widgets::Providers::WidgetMessageReceivedArgs const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "on_message_received")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IWidgetProviderMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IWidgetProviderMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIWidgetProviderMessage(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Providers::IWidgetProviderMessage>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWidgetProviderMessage(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWidgetProviderMessage>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWidgetProviderMessage[] = {
+        { "_assign_array_", _assign_array_IWidgetProviderMessage, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWidgetProviderMessage), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWidgetProviderMessage), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWidgetProviderMessage), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIWidgetProviderMessage[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWidgetProviderMessage) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIWidgetProviderMessage = {
+        "winui3._winui3_microsoft_windows_widgets_providers.IWidgetProviderMessage",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIWidgetProviderMessage};
+
+    // ----- IWidgetResourceProvider interface --------------------
+
+    #if PY_VERSION_HEX < 0x030A0000
+    static PyObject* _new_IWidgetResourceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>::type_name);
+        return nullptr;
+    }
+    #endif
+
+    static void _dealloc_IWidgetResourceProvider(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IWidgetResourceProvider_OnResourceRequested(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Providers.IWidgetResourceProvider", L"OnResourceRequested", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs>(args, 0);
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.OnResourceRequested(param0);
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IWidgetResourceProvider[] = {
+        { "on_resource_requested", reinterpret_cast<PyCFunction>(IWidgetResourceProvider_OnResourceRequested), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_IWidgetResourceProvider[] = {
+        { }};
+
+    static PyType_Slot _type_slots_IWidgetResourceProvider[] = {
+        #if PY_VERSION_HEX < 0x030A0000
+        { Py_tp_new, reinterpret_cast<void*>(_new_IWidgetResourceProvider) },
+        #endif
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IWidgetResourceProvider) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IWidgetResourceProvider) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IWidgetResourceProvider) },
+        { }};
+
+    static PyType_Spec type_spec_IWidgetResourceProvider = {
+        "winui3._winui3_microsoft_windows_widgets_providers._IWidgetResourceProvider",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider),
+        0,
+        Py_TPFLAGS_DEFAULT
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        _type_slots_IWidgetResourceProvider};
+
+    struct ImplementsIWidgetResourceProvider : py::ImplementsInterfaceT<ImplementsIWidgetResourceProvider, winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>
+    {
+        ImplementsIWidgetResourceProvider() = delete;
+        ImplementsIWidgetResourceProvider(PyObject* py_obj, winrt::impl::inspectable_abi* runtime_class) : py::ImplementsInterfaceT<ImplementsIWidgetResourceProvider, winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>(py_obj, runtime_class)
+        {
+        }
+
+        auto OnResourceRequested(winrt::Microsoft::Windows::Widgets::Providers::WidgetResourceRequestedArgs const& param0)
+        {
+            try
+            {
+                py::pyobj_handle self{this->get_py_obj()};
+
+                py::pyobj_handle method{PyObject_GetAttrString(self.get(), "on_resource_requested")};
+                if (!method)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle py_param0{py::convert(param0)};
+                if (!py_param0)
+                {
+                    throw python_exception();
+                }
+
+                py::pyobj_handle return_value{PyObject_CallOneArg(method.get(), py_param0.get())};
+                if (!return_value)
+                {
+                    throw python_exception();
+                }
+            }
+            catch (python_exception)
+            {
+                py::write_unraisable_and_throw();
+            }
+        }
+    };
+
+    static PyObject* _assign_array_IWidgetResourceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IWidgetResourceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _guid_ImplementsIWidgetResourceProvider(PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(winrt::guid_of<winrt::Microsoft::Windows::Widgets::Providers::IWidgetResourceProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _make_ImplementsIWidgetResourceProvider(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            PyObject* py_obj;
+            winrt::impl::inspectable_abi* runtime_class;
+
+            if (!PyArg_ParseTuple(args, "On", &py_obj, &runtime_class))
+            {
+                return nullptr;
+            }
+
+            auto iface{std::make_unique<ImplementsIWidgetResourceProvider>(py_obj, runtime_class)};
+
+            return PyLong_FromVoidPtr(iface.release());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef methods_ImplementsIWidgetResourceProvider[] = {
+        { "_assign_array_", _assign_array_IWidgetResourceProvider, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IWidgetResourceProvider), METH_O | METH_STATIC, nullptr },
+        { "_guid_", reinterpret_cast<PyCFunction>(_guid_ImplementsIWidgetResourceProvider), METH_NOARGS | METH_STATIC, nullptr },
+        { "_make_", reinterpret_cast<PyCFunction>(_make_ImplementsIWidgetResourceProvider), METH_VARARGS | METH_STATIC, nullptr },
+        { }};
+
+    static PyType_Slot type_slots_ImplementsIWidgetResourceProvider[] = {
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImplementsIWidgetResourceProvider) },
+        { }};
+
+    static PyType_Spec type_spec_ImplementsIWidgetResourceProvider = {
+        "winui3._winui3_microsoft_windows_widgets_providers.IWidgetResourceProvider",
+        0,
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE
+        #if PY_VERSION_HEX >= 0x030A0000
+        | Py_TPFLAGS_DISALLOW_INSTANTIATION
+        #endif
+        ,
+        type_slots_ImplementsIWidgetResourceProvider};
+
     // ----- Microsoft.Windows.Widgets.Providers Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.Windows.Widgets.Providers");
@@ -3607,6 +5232,30 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_widgets_providers(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle WidgetMessageReceivedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetMessageReceivedArgs, object_bases.get(), inspectable_meta_type)};
+    if (!WidgetMessageReceivedArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WidgetResourceRequest_type{py::register_python_type(module.get(), &type_spec_WidgetResourceRequest, object_bases.get(), inspectable_meta_type)};
+    if (!WidgetResourceRequest_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WidgetResourceRequestedArgs_type{py::register_python_type(module.get(), &type_spec_WidgetResourceRequestedArgs, object_bases.get(), inspectable_meta_type)};
+    if (!WidgetResourceRequestedArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WidgetResourceResponse_type{py::register_python_type(module.get(), &type_spec_WidgetResourceResponse, object_bases.get(), inspectable_meta_type)};
+    if (!WidgetResourceResponse_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle WidgetUpdateRequestOptions_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
     if (!WidgetUpdateRequestOptions_Static_bases)
     {
@@ -3638,6 +5287,23 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_widgets_providers(void) noexcept
     }
 
     if (PyModule_AddType(module.get(), ImplementsIWidgetManager_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IWidgetManager2_type{py::register_python_type(module.get(), &type_spec_IWidgetManager2, object_bases.get(), nullptr)};
+    if (!IWidgetManager2_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWidgetManager2_type{py::register_python_type(module.get(), &type_spec_ImplementsIWidgetManager2, nullptr, inspectable_meta_type)};
+    if (!ImplementsIWidgetManager2_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWidgetManager2_type.get()) == -1)
     {
         return nullptr;
     }
@@ -3706,6 +5372,40 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_windows_widgets_providers(void) noexcept
     }
 
     if (PyModule_AddType(module.get(), ImplementsIWidgetProviderErrors_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IWidgetProviderMessage_type{py::register_python_type(module.get(), &type_spec_IWidgetProviderMessage, object_bases.get(), nullptr)};
+    if (!IWidgetProviderMessage_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWidgetProviderMessage_type{py::register_python_type(module.get(), &type_spec_ImplementsIWidgetProviderMessage, nullptr, inspectable_meta_type)};
+    if (!ImplementsIWidgetProviderMessage_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWidgetProviderMessage_type.get()) == -1)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IWidgetResourceProvider_type{py::register_python_type(module.get(), &type_spec_IWidgetResourceProvider, object_bases.get(), nullptr)};
+    if (!IWidgetResourceProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplementsIWidgetResourceProvider_type{py::register_python_type(module.get(), &type_spec_ImplementsIWidgetResourceProvider, nullptr, inspectable_meta_type)};
+    if (!ImplementsIWidgetResourceProvider_type)
+    {
+        return nullptr;
+    }
+
+    if (PyModule_AddType(module.get(), ImplementsIWidgetResourceProvider_type.get()) == -1)
     {
         return nullptr;
     }

@@ -83,6 +83,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<!U)IP(?=[A-Zv]|$)", "Ip");
         // Replace MD5 with Md5
         str = Regex.Replace(str, @"MD5", "Md5");
+        // Replace ML with Ml
+        str = Regex.Replace(str, @"ML", "Ml");
         // Replace NS with Ns
         str = Regex.Replace(str, @"NS", "Ns");
         // Replace NT with Nt

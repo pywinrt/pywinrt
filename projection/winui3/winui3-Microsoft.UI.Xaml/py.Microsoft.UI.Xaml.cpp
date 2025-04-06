@@ -40876,6 +40876,415 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_TPFLAGS_DEFAULT,
         _type_slots_WindowVisibilityChangedEventArgs};
 
+    // ----- XamlIsland class --------------------
+
+    struct PyWinrtXamlIsland;
+    using BasePyWinrtXamlIsland = winrt::Microsoft::UI::Xaml::XamlIslandT<PyWinrtXamlIsland, py::IPywinrtObject>;
+
+    struct PyWinrtXamlIsland : py::py_obj_ref, BasePyWinrtXamlIsland
+    {
+        PyWinrtXamlIsland(PyObject* py_obj) : py::py_obj_ref(py_obj), BasePyWinrtXamlIsland() {}
+
+        int32_t __stdcall GetPyObject(PyObject*& obj) override
+        {
+            obj = py::py_obj_ref::get_py_obj();
+            return 0;
+        }
+
+        int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override
+        {
+            inner = m_inner;
+            return winrt::impl::error_ok;
+        }
+
+        static void toggle_reference(PyWinrtXamlIsland* instance, bool is_last_reference)
+        {
+            py::py_obj_ref::toggle_reference(instance, is_last_reference);
+        }
+
+        int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override
+        {
+            return py::py_obj_ref::query_interface_tearoff(id, result);
+        }
+
+        std::vector<winrt::guid> get_iids_tearoff() const noexcept override
+        {
+            return py::py_obj_ref::get_iids_tearoff();
+        }
+    };
+
+    static PyObject* _new_XamlIsland(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        auto self_type = get_python_type_for<winrt::Microsoft::UI::Xaml::XamlIsland>();
+        if (!self_type)
+        {
+            return nullptr;
+        }
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                if (type != self_type)
+                {
+                    py::pyobj_handle self{type->tp_alloc(type, 0)};
+                    if (!self)
+                    {
+                        return nullptr;
+                    }
+
+                    std::construct_at(&reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj, nullptr);
+
+                    auto obj_impl = winrt::make_self<PyWinrtXamlIsland>(self.get());
+
+                    auto obj = py::make_py_obj<PyWinrtXamlIsland>(obj_impl, type, self.get());
+                    if (!obj)
+                    {
+                        return nullptr;
+                    }
+
+                    reinterpret_cast<py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>*>(self.get())->obj = std::move(obj);
+
+                    return self.detach();
+                }
+
+                winrt::Microsoft::UI::Xaml::XamlIsland instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_XamlIsland(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* XamlIsland_Close(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_GET_SIZE(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.XamlIsland", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                {
+                    auto _gil = release_gil();
+                    self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().Close();
+                }
+
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* XamlIsland_get_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlIsland", L"SystemBackdrop");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().SystemBackdrop();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int XamlIsland_put_SystemBackdrop(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlIsland", L"SystemBackdrop");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().SystemBackdrop(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* XamlIsland_get_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlIsland", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().Content();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int XamlIsland_put_Content(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (!arg)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlIsland", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
+
+            {
+                auto _gil = release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().Content(param0);
+            }
+
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* XamlIsland_get_ContentIsland(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlIsland", L"ContentIsland");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().ContentIsland();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_XamlIsland(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::XamlIsland>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_XamlIsland(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::XamlIsland>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _enter_XamlIsland(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
+    {
+        return Py_NewRef(self);
+    }
+
+    static PyObject* _exit_XamlIsland(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            {
+                auto _gil = py::release_gil();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::XamlIsland>().Close();
+            }
+
+            Py_RETURN_FALSE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_XamlIsland[] = {
+        { "close", reinterpret_cast<PyCFunction>(XamlIsland_Close), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_XamlIsland, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_XamlIsland), METH_O | METH_STATIC, nullptr },
+        { "__enter__", reinterpret_cast<PyCFunction>(_enter_XamlIsland), METH_NOARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_XamlIsland), METH_VARARGS, nullptr },
+        { }};
+
+    static PyGetSetDef _getset_XamlIsland[] = {
+        { "system_backdrop", reinterpret_cast<getter>(XamlIsland_get_SystemBackdrop), reinterpret_cast<setter>(XamlIsland_put_SystemBackdrop), nullptr, nullptr },
+        { "content", reinterpret_cast<getter>(XamlIsland_get_Content), reinterpret_cast<setter>(XamlIsland_put_Content), nullptr, nullptr },
+        { "content_island", reinterpret_cast<getter>(XamlIsland_get_ContentIsland), nullptr, nullptr, nullptr },
+        { }};
+
+    static PyType_Slot _type_slots_XamlIsland[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_XamlIsland) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_XamlIsland) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_XamlIsland) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_XamlIsland) },
+        { }};
+
+    static PyType_Spec type_spec_XamlIsland = {
+        "winui3._winui3_microsoft_ui_xaml.XamlIsland",
+        sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
+        0,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        _type_slots_XamlIsland};
+
+    static PyGetSetDef getset_XamlIsland_Static[] = {
+        { }};
+
+    static PyMethodDef methods_XamlIsland_Static[] = {
+        { }};
+
+    static PyType_Slot type_slots_XamlIsland_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlIsland_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlIsland_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlIsland_Static = {
+        "winui3._winui3_microsoft_ui_xaml.XamlIsland_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
+        type_slots_XamlIsland_Static};
+
     // ----- XamlResourceReferenceFailedEventArgs class --------------------
 
     static PyObject* _new_XamlResourceReferenceFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -41167,6 +41576,36 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* XamlRoot_get_ContentIsland(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"ContentIsland");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert([&]()
+            {
+                auto _gil = release_gil();
+                return self->obj.ContentIsland();
+            }());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* XamlRoot_add_Changed(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, PyObject* arg) noexcept
     {
         try
@@ -41270,6 +41709,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "size", reinterpret_cast<getter>(XamlRoot_get_Size), nullptr, nullptr, nullptr },
         { "content_island_environment", reinterpret_cast<getter>(XamlRoot_get_ContentIslandEnvironment), nullptr, nullptr, nullptr },
         { "coordinate_converter", reinterpret_cast<getter>(XamlRoot_get_CoordinateConverter), nullptr, nullptr, nullptr },
+        { "content_island", reinterpret_cast<getter>(XamlRoot_get_ContentIsland), nullptr, nullptr, nullptr },
         { }};
 
     static PyType_Slot _type_slots_XamlRoot[] = {
@@ -44387,6 +44827,24 @@ PyMODINIT_FUNC PyInit__winui3_microsoft_ui_xaml(void) noexcept
 
     py::pytype_handle WindowVisibilityChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowVisibilityChangedEventArgs, object_bases.get(), inspectable_meta_type)};
     if (!WindowVisibilityChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle XamlIsland_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(inspectable_meta_type))};
+    if (!XamlIsland_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlIsland_Static{PyType_FromSpecWithBases(&type_spec_XamlIsland_Static, XamlIsland_Static_bases.get())};
+    if (!type_XamlIsland_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle XamlIsland_type{py::register_python_type(module.get(), &type_spec_XamlIsland, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlIsland_Static.get()))};
+    if (!XamlIsland_type)
     {
         return nullptr;
     }

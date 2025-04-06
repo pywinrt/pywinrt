@@ -1661,6 +1661,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ITimePickerSelectedValueChangedEventArgs;
     struct ITimePickerStatics;
     struct ITimePickerValueChangedEventArgs;
+    struct ITitleBar;
+    struct ITitleBarAutomationPeer;
+    struct ITitleBarAutomationPeerFactory;
+    struct ITitleBarFactory;
+    struct ITitleBarStatics;
+    struct ITitleBarTemplateSettings;
+    struct ITitleBarTemplateSettingsFactory;
+    struct ITitleBarTemplateSettingsStatics;
     struct IToggleMenuFlyoutItem;
     struct IToggleMenuFlyoutItemFactory;
     struct IToggleMenuFlyoutItemStatics;
@@ -2042,6 +2050,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct TimePickerFlyoutPresenter;
     struct TimePickerSelectedValueChangedEventArgs;
     struct TimePickerValueChangedEventArgs;
+    struct TitleBar;
+    struct TitleBarAutomationPeer;
+    struct TitleBarTemplateSettings;
     struct ToggleMenuFlyoutItem;
     struct ToggleSplitButton;
     struct ToggleSplitButtonIsCheckedChangedEventArgs;
@@ -2737,6 +2748,14 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITimePickerSelectedValueChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITimePickerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITimePickerValueChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITitleBar>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeer>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeerFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITitleBarFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITitleBarStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettings>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItem>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItemFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItemStatics>{ using type = interface_category; };
@@ -3118,6 +3137,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyoutPresenter>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TimePickerValueChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TitleBar>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TitleBarAutomationPeer>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TitleBarTemplateSettings>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs>{ using type = class_category; };
@@ -3557,6 +3579,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyoutPresenter> = L"Microsoft.UI.Xaml.Controls.TimePickerFlyoutPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.TimePickerSelectedValueChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TimePickerValueChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.TimePickerValueChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TitleBar> = L"Microsoft.UI.Xaml.Controls.TitleBar";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TitleBarAutomationPeer> = L"Microsoft.UI.Xaml.Controls.TitleBarAutomationPeer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TitleBarTemplateSettings> = L"Microsoft.UI.Xaml.Controls.TitleBarTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem> = L"Microsoft.UI.Xaml.Controls.ToggleMenuFlyoutItem";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton> = L"Microsoft.UI.Xaml.Controls.ToggleSplitButton";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.ToggleSplitButtonIsCheckedChangedEventArgs";
@@ -4331,6 +4356,14 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITimePickerSelectedValueChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITimePickerSelectedValueChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITimePickerStatics> = L"Microsoft.UI.Xaml.Controls.ITimePickerStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITimePickerValueChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITimePickerValueChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBar> = L"Microsoft.UI.Xaml.Controls.ITitleBar";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeer> = L"Microsoft.UI.Xaml.Controls.ITitleBarAutomationPeer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeerFactory> = L"Microsoft.UI.Xaml.Controls.ITitleBarAutomationPeerFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarFactory> = L"Microsoft.UI.Xaml.Controls.ITitleBarFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarStatics> = L"Microsoft.UI.Xaml.Controls.ITitleBarStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettings> = L"Microsoft.UI.Xaml.Controls.ITitleBarTemplateSettings";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsFactory> = L"Microsoft.UI.Xaml.Controls.ITitleBarTemplateSettingsFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsStatics> = L"Microsoft.UI.Xaml.Controls.ITitleBarTemplateSettingsStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItem> = L"Microsoft.UI.Xaml.Controls.IToggleMenuFlyoutItem";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItemFactory> = L"Microsoft.UI.Xaml.Controls.IToggleMenuFlyoutItemFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItemStatics> = L"Microsoft.UI.Xaml.Controls.IToggleMenuFlyoutItemStatics";
@@ -5073,6 +5106,14 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITimePickerSelectedValueChangedEventArgs>{ 0x6ED7EDF1,0x9B0B,0x5E7B,{ 0x9E,0x10,0xF3,0x56,0x60,0xA2,0x9F,0xD2 } }; // 6ED7EDF1-9B0B-5E7B-9E10-F35660A29FD2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITimePickerStatics>{ 0x12BEF59E,0x4222,0x507B,{ 0x90,0x1E,0xEF,0xFD,0x04,0x62,0x0C,0x4F } }; // 12BEF59E-4222-507B-901E-EFFD04620C4F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITimePickerValueChangedEventArgs>{ 0x7B98953F,0xC24A,0x53C6,{ 0x8A,0x3A,0x52,0x05,0x58,0x50,0x8B,0x08 } }; // 7B98953F-C24A-53C6-8A3A-520558508B08
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBar>{ 0xC552714D,0x5D30,0x5A2B,{ 0x9C,0x7A,0xD6,0x8B,0xEA,0x3D,0xDE,0x8D } }; // C552714D-5D30-5A2B-9C7A-D68BEA3DDE8D
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeer>{ 0x945F8144,0x68F1,0x5731,{ 0xB8,0x50,0x3D,0x0E,0x66,0x46,0x99,0xEA } }; // 945F8144-68F1-5731-B850-3D0E664699EA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeerFactory>{ 0xFD01DFD8,0x41FF,0x5A4F,{ 0x96,0xAB,0xC5,0x08,0x22,0x62,0xAE,0xCD } }; // FD01DFD8-41FF-5A4F-96AB-C5082262AECD
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarFactory>{ 0xC4452799,0x4606,0x59EF,{ 0x93,0x92,0xA0,0x54,0x8D,0x48,0xB8,0x2E } }; // C4452799-4606-59EF-9392-A0548D48B82E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarStatics>{ 0xF9ADA39B,0x1F24,0x5955,{ 0x9B,0x5C,0xCA,0xCB,0xFE,0x9A,0x41,0xCF } }; // F9ADA39B-1F24-5955-9B5C-CACBFE9A41CF
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettings>{ 0xBE19011A,0x4957,0x5332,{ 0x98,0xB8,0x17,0x04,0x40,0x1B,0x6A,0x0E } }; // BE19011A-4957-5332-98B8-1704401B6A0E
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsFactory>{ 0xFCF9E48C,0xDFE4,0x55F3,{ 0xB1,0x79,0xB9,0x00,0xA7,0xAE,0x9C,0x25 } }; // FCF9E48C-DFE4-55F3-B179-B900A7AE9C25
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsStatics>{ 0xF568E19B,0xB9AF,0x5F1F,{ 0xA7,0x52,0x48,0x2F,0x12,0x88,0x74,0x34 } }; // F568E19B-B9AF-5F1F-A752-482F12887434
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItem>{ 0x1803F260,0x67E4,0x5BC1,{ 0xA6,0x3A,0x12,0x35,0x10,0x16,0x7B,0xB8 } }; // 1803F260-67E4-5BC1-A63A-123510167BB8
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItemFactory>{ 0x426DFD57,0x6CC9,0x570F,{ 0x95,0x0D,0x37,0x43,0x72,0x35,0xDC,0x89 } }; // 426DFD57-6CC9-570F-950D-37437235DC89
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItemStatics>{ 0x7411E854,0xC59A,0x5463,{ 0xBE,0xAB,0x64,0xDD,0xB0,0x52,0xC6,0xDC } }; // 7411E854-C59A-5463-BEAB-64DDB052C6DC
@@ -5467,6 +5508,9 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyoutPresenter>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITimePickerFlyoutPresenter; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TimePickerSelectedValueChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITimePickerSelectedValueChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TimePickerValueChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITimePickerValueChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TitleBar>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITitleBar; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TitleBarAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeer; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TitleBarTemplateSettings>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettings; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ToggleMenuFlyoutItem>{ using type = winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItem; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton>{ using type = winrt::Microsoft::UI::Xaml::Controls::IToggleSplitButton; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButtonIsCheckedChangedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::IToggleSplitButtonIsCheckedChangedEventArgs; };
@@ -13670,6 +13714,93 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_OldTime(int64_t*) noexcept = 0;
             virtual int32_t __stdcall get_NewTime(int64_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITitleBar>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Title(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Title(void*) noexcept = 0;
+            virtual int32_t __stdcall get_Subtitle(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Subtitle(void*) noexcept = 0;
+            virtual int32_t __stdcall get_IconSource(void**) noexcept = 0;
+            virtual int32_t __stdcall put_IconSource(void*) noexcept = 0;
+            virtual int32_t __stdcall get_LeftHeader(void**) noexcept = 0;
+            virtual int32_t __stdcall put_LeftHeader(void*) noexcept = 0;
+            virtual int32_t __stdcall get_Content(void**) noexcept = 0;
+            virtual int32_t __stdcall put_Content(void*) noexcept = 0;
+            virtual int32_t __stdcall get_RightHeader(void**) noexcept = 0;
+            virtual int32_t __stdcall put_RightHeader(void*) noexcept = 0;
+            virtual int32_t __stdcall get_IsBackButtonVisible(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsBackButtonVisible(bool) noexcept = 0;
+            virtual int32_t __stdcall get_IsBackButtonEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsBackButtonEnabled(bool) noexcept = 0;
+            virtual int32_t __stdcall get_IsPaneToggleButtonVisible(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsPaneToggleButtonVisible(bool) noexcept = 0;
+            virtual int32_t __stdcall get_TemplateSettings(void**) noexcept = 0;
+            virtual int32_t __stdcall add_BackRequested(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_BackRequested(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_PaneToggleRequested(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_PaneToggleRequested(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeer>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeerFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITitleBarFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITitleBarStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_TitleProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SubtitleProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_IconSourceProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_LeftHeaderProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_ContentProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_RightHeaderProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_IsBackButtonVisibleProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_IsBackButtonEnabledProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_IsPaneToggleButtonVisibleProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TemplateSettingsProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettings>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IconElement(void**) noexcept = 0;
+            virtual int32_t __stdcall put_IconElement(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IconElementProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IToggleMenuFlyoutItem>
@@ -24453,6 +24584,113 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITimePickerValueChangedEventArgs>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITimePickerValueChangedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITitleBar
+    {
+        [[nodiscard]] auto Title() const;
+        auto Title(param::hstring const& value) const;
+        [[nodiscard]] auto Subtitle() const;
+        auto Subtitle(param::hstring const& value) const;
+        [[nodiscard]] auto IconSource() const;
+        auto IconSource(winrt::Microsoft::UI::Xaml::Controls::IconSource const& value) const;
+        [[nodiscard]] auto LeftHeader() const;
+        auto LeftHeader(winrt::Microsoft::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto Content() const;
+        auto Content(winrt::Microsoft::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto RightHeader() const;
+        auto RightHeader(winrt::Microsoft::UI::Xaml::UIElement const& value) const;
+        [[nodiscard]] auto IsBackButtonVisible() const;
+        auto IsBackButtonVisible(bool value) const;
+        [[nodiscard]] auto IsBackButtonEnabled() const;
+        auto IsBackButtonEnabled(bool value) const;
+        [[nodiscard]] auto IsPaneToggleButtonVisible() const;
+        auto IsPaneToggleButtonVisible(bool value) const;
+        [[nodiscard]] auto TemplateSettings() const;
+        auto BackRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TitleBar, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using BackRequested_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ITitleBar, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ITitleBar>::remove_BackRequested>;
+        [[nodiscard]] auto BackRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TitleBar, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto BackRequested(winrt::event_token const& token) const noexcept;
+        auto PaneToggleRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TitleBar, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using PaneToggleRequested_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ITitleBar, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ITitleBar>::remove_PaneToggleRequested>;
+        [[nodiscard]] auto PaneToggleRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TitleBar, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto PaneToggleRequested(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITitleBar>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITitleBar<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITitleBarAutomationPeer
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeer>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITitleBarAutomationPeer<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITitleBarAutomationPeerFactory
+    {
+        auto CreateInstance(winrt::Microsoft::UI::Xaml::Controls::TitleBar const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITitleBarAutomationPeerFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITitleBarAutomationPeerFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITitleBarFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITitleBarFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITitleBarFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITitleBarStatics
+    {
+        [[nodiscard]] auto TitleProperty() const;
+        [[nodiscard]] auto SubtitleProperty() const;
+        [[nodiscard]] auto IconSourceProperty() const;
+        [[nodiscard]] auto LeftHeaderProperty() const;
+        [[nodiscard]] auto ContentProperty() const;
+        [[nodiscard]] auto RightHeaderProperty() const;
+        [[nodiscard]] auto IsBackButtonVisibleProperty() const;
+        [[nodiscard]] auto IsBackButtonEnabledProperty() const;
+        [[nodiscard]] auto IsPaneToggleButtonVisibleProperty() const;
+        [[nodiscard]] auto TemplateSettingsProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITitleBarStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITitleBarStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITitleBarTemplateSettings
+    {
+        [[nodiscard]] auto IconElement() const;
+        auto IconElement(winrt::Microsoft::UI::Xaml::Controls::IconElement const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettings>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITitleBarTemplateSettings<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITitleBarTemplateSettingsFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITitleBarTemplateSettingsFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITitleBarTemplateSettingsStatics
+    {
+        [[nodiscard]] auto IconElementProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITitleBarTemplateSettingsStatics>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITitleBarTemplateSettingsStatics<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IToggleMenuFlyoutItem

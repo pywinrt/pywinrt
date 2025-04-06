@@ -2,4 +2,5 @@
 
 winrt-runtime==0.0.0
 winui3-Microsoft.UI.Xaml==0.0.0
+winui3-Microsoft.UI.Xaml.Automation.Peers==0.0.0
 winui3-Microsoft.UI.Xaml.Controls.Primitives==0.0.0

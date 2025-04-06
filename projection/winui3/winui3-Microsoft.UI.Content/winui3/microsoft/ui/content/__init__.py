@@ -4,6 +4,7 @@ import enum
 
 import winrt.system
 from winui3._winui3_microsoft_ui_content import (
+    ChildSiteLink,
     ContentCoordinateConverter,
     ContentDeferral,
     ContentEnvironmentSettingChangedEventArgs,
@@ -13,14 +14,23 @@ from winui3._winui3_microsoft_ui_content import (
     ContentIslandEnvironment,
     ContentIslandStateChangedEventArgs,
     ContentSite,
+    ContentSiteAutomationProviderRequestedEventArgs,
     ContentSiteEnvironment,
     ContentSiteEnvironmentView,
     ContentSiteRequestedStateChangedEventArgs,
     ContentSiteView,
+    DesktopAttachedSiteBridge,
     DesktopChildSiteBridge,
+    DesktopPopupSiteBridge,
     DesktopSiteBridge,
+    _IContentSiteAutomation,
+    IContentSiteAutomation,
     _IContentSiteBridge,
     IContentSiteBridge,
+    _IContentSiteInput,
+    IContentSiteInput,
+    _IContentSiteLink,
+    IContentSiteLink,
 )
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -36,9 +46,11 @@ if TYPE_CHECKING:
     )
 
 __all__ = [
+    "ContentAutomationOptions",
     "ContentCoordinateRoundingMode",
     "ContentLayoutDirection",
     "ContentSizePolicy",
+    "ChildSiteLink",
     "ContentCoordinateConverter",
     "ContentDeferral",
     "ContentEnvironmentSettingChangedEventArgs",
@@ -48,14 +60,25 @@ __all__ = [
     "ContentIslandEnvironment",
     "ContentIslandStateChangedEventArgs",
     "ContentSite",
+    "ContentSiteAutomationProviderRequestedEventArgs",
     "ContentSiteEnvironment",
     "ContentSiteEnvironmentView",
     "ContentSiteRequestedStateChangedEventArgs",
     "ContentSiteView",
+    "DesktopAttachedSiteBridge",
     "DesktopChildSiteBridge",
+    "DesktopPopupSiteBridge",
     "DesktopSiteBridge",
+    "IContentSiteAutomation",
     "IContentSiteBridge",
+    "IContentSiteInput",
+    "IContentSiteLink",
 ]
+
+class ContentAutomationOptions(enum.IntEnum):
+    NONE = 0
+    FRAMEWORK_BASED = 1
+    FRAGMENT_BASED = 2
 
 class ContentCoordinateRoundingMode(enum.IntEnum):
     AUTO = 0
